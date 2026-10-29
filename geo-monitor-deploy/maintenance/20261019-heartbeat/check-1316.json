@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-10-19T13:16:36+08:00",
+  "deepseek_browser": {
+    "auth": "ready",
+    "captured": 6,
+    "processed": 6,
+    "target": 63,
+    "cursor": 6,
+    "phase": "rate_wait",
+    "next_send": "2026-10-19T13:17:40.090+08:00",
+    "receipt_pairs_equal": 6,
+    "pending_delivery": 0,
+    "services": "active"
+  },
+  "doubao_today": {
+    "doubao1": {
+      "processed": 105,
+      "target": 105,
+      "state": "complete",
+      "pending_delivery": 0
+    },
+    "doubao2": {
+      "processed": 105,
+      "target": 105,
+      "state": "complete",
+      "pending_delivery": 0,
+      "new_completion": true
+    }
+  },
+  "baidu_today": {
+    "processed": 104,
+    "target": 105,
+    "pending_delivery": 0,
+    "state": "collecting"
+  },
+  "wenxin_today": "waiting_for_baidu; no premature launch",
+  "yuanbao": "historical October18 batch complete, not newly completed today batch",
+  "daily_actor": "running and fresh",
+  "mutation": "none; no new batch or resends",
+  "notification": "today Doubao2 completed; both Doubao lanes today 210/210"
+}

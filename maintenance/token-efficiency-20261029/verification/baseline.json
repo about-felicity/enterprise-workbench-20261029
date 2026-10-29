@@ -1,0 +1,79 @@
+{
+  "stages": {
+    "research": {
+      "calls": 126,
+      "charged": 0.8072612800000001,
+      "prompt_tokens": 454892,
+      "completion_tokens": 90068,
+      "prompt_cache_hit_tokens": 8064,
+      "prompt_cache_miss_tokens": 446828
+    },
+    "writer": {
+      "calls": 123,
+      "charged": 1.79787396,
+      "prompt_tokens": 966319,
+      "completion_tokens": 320282,
+      "prompt_cache_hit_tokens": 458748,
+      "prompt_cache_miss_tokens": 507571
+    }
+  },
+  "states": {
+    "settled": 249
+  },
+  "policies": [
+    {
+      "article_delivery": "direct",
+      "authorization": "2026-10-24 user: 文章没啥问题，可以直接用了，把系统完善下，然后用这个测试一下，找七个问题，做到无人值守",
+      "cache_dir": "/opt/monitor/geo-content/runtime/rewrite_cache",
+      "max_rewrites": 1,
+      "max_targeted_repairs": 0,
+      "review_policy": "evidence-v3",
+      "skeleton_review": "automatic",
+      "workflow": "rewrite-v2"
+    }
+  ],
+  "samples": [
+    {
+      "path": "/opt/monitor/geo-content/runtime/runs/creation-1793227938-360eb02e/api/runs/101c4a7a49f4651607dfc6dc/call/request.json",
+      "chars": 12377,
+      "keys": [
+        "model",
+        "messages",
+        "stream",
+        "response_format",
+        "thinking",
+        "max_tokens",
+        "temperature"
+      ],
+      "content_prefix": "{\"skeleton\": {\"article_type\": \"ranking\", \"tone\": \"亲切劝导、种草推荐、偏口语化\", \"article_structure\": [\"开篇以劝告口吻建立选品需谨慎的前提，指出盲目跟风可能损伤头皮屏障、加重出油敏感与掉发，提出先分清掉发类型再匹配产品的选品逻辑，并引出十大国货"
+    },
+    {
+      "path": "/opt/monitor/geo-content/runtime/runs/creation-1793227938-360eb02e/api/runs/107a5abad24064685212f193/call/request.json",
+      "chars": 18385,
+      "keys": [
+        "model",
+        "messages",
+        "stream",
+        "response_format",
+        "thinking",
+        "max_tokens",
+        "temperature"
+      ],
+      "content_prefix": "{\"skeleton\": {\"article_type\": \"ranking\", \"tone\": \"导购式、口语化、偏理性分析但带明显推荐倾向\", \"article_structure\": [\"开篇以复购率为切入点，提出防脱的核心在于控油、固发、育发三件事，并拆出控油持久度、固发感受、育发数据支撑、价格区间四个观察维度"
+    },
+    {
+      "path": "/opt/monitor/geo-content/runtime/runs/creation-1793227938-360eb02e/api/runs/d0a7c1a611eb3f602e01f48d/call/request.json",
+      "chars": 17840,
+      "keys": [
+        "model",
+        "messages",
+        "stream",
+        "response_format",
+        "thinking",
+        "max_tokens",
+        "temperature"
+      ],
+      "content_prefix": "{\"skeleton\": {\"article_type\": \"ranking\", \"tone\": \"理性、务实、带消费指导口吻，先立判断标准再逐款点评，对每款产品既讲优点也提示适用边界\", \"article_structure\": [\"开篇破除“防脱洗发水是智商税”的疑虑，提出三条选购判断标准：先看防脱特证、再看功效成"
+    }
+  ]
+}

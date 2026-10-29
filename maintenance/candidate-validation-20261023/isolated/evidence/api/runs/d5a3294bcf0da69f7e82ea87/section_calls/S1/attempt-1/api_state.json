@@ -1,0 +1,17 @@
+{
+  "payload_sha256": "8d4b0b901b1210c0eb97c9fb58861021accec07bb1e67aaac90efc554048ee72",
+  "model": "deepseek-flash",
+  "reservation": "2a5eb7cbf3018b0d3a91dc1c9251987b7f1bcc75111d260091100e84bd55dcb8",
+  "state": "RESPONDED",
+  "finished_epoch": 1792662666.3512783,
+  "usage": {
+    "prompt_tokens": 4380,
+    "completion_tokens": 454,
+    "total_tokens": 4834,
+    "prompt_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "prompt_cache_hit_tokens": 4224,
+    "prompt_cache_miss_tokens": 156
+  }
+}

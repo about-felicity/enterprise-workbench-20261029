@@ -1,0 +1,289 @@
+{
+  "artifact_type": "download_verification_manifest",
+  "files": [
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/acceptance_summary.md",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/acceptance_summary.md",
+      "bytes": 4659,
+      "sha256": "c90bb6460803a06c00e68a6c7c3d9c3155cf76abbc1faeb95fd3d50b3f3b4840"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/api/balance.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/api/balance.json",
+      "bytes": 158,
+      "sha256": "9fc321176c2fe947bcaed2e029c91712ca3b02cf35bf40aebb36136b5c610355"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/research/research_input.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/research/research_input.json",
+      "bytes": 185290,
+      "sha256": "e2ebddf9ac5b943fbacd1fca72bd3451412ed28db01f4e4387ee8a811d154124"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/research/research_result.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/research/research_result.json",
+      "bytes": 30667,
+      "sha256": "9196637ae6ff09dafdd32e9bcc6673caa48a6fc874b429c9b4415c7e7a087f02"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/research/research_review.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/research/research_review.json",
+      "bytes": 138,
+      "sha256": "e26327ab99496a97bfd5a4236e4b4b8224fa41a5258d52441e2b8bdff3e12932"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/research/research_task.txt",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/research/research_task.txt",
+      "bytes": 2119,
+      "sha256": "0187fc836ac40e52b37cf606ea313124619a055a094197a73e8e30b7d71b9662"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/research/revision_note.txt",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/research/revision_note.txt",
+      "bytes": 119,
+      "sha256": "1eed6882f9d212033629fad9f9470321bb64a00a10e73f5e28ebd321dc0cdfd4"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/research/stage_job.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/research/stage_job.json",
+      "bytes": 215,
+      "sha256": "c259249ac7f469356e32aa3f6821c4fa765b56b1d8db622cc65f8be0097ac0ed"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/article_structure.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/article_structure.json",
+      "bytes": 74466,
+      "sha256": "dedd1d29e81e6489c8919ca72003cbbbd02a905aadf11a7715127b69f8de77ba"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/batch_rules.md",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/batch_rules.md",
+      "bytes": 602,
+      "sha256": "f3de0e2f5f3ff2dc78bf57068e48b1f7ecdb7d3834f56af2ab79a955da688e2b"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/category.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/category.json",
+      "bytes": 501,
+      "sha256": "bd571fcf5675db2be9ccb4ee16c4e9d577ba28bc4fd0e84dec2b75d0df199bbe"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/claim_ledger.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/claim_ledger.json",
+      "bytes": 18299,
+      "sha256": "a3970cb6c90083c3ced05e6affa576ec56417484d8315a88d7efc3e994bdd4eb"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/compilation.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/compilation.json",
+      "bytes": 62594,
+      "sha256": "76f2253a053e94c8ebc9d009cb2bc1cad0b13ac7f2fb49346c342cc7dd45d79a"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/evidence_matrix.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/evidence_matrix.json",
+      "bytes": 20766,
+      "sha256": "b688371fc42045044f6d50e19a40edfcf43a7bcd982f041f9ab142cc916e12b5"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/knowledge.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/knowledge.json",
+      "bytes": 20848,
+      "sha256": "cd0239ca1dd031f36b3d04368821af67e454a5f830017acb51064bb28ea59b9c"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/product.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/product.json",
+      "bytes": 6161,
+      "sha256": "4c7ecaec7c55fdb06708dc09dd2684362e34b4e0de1e478c073b5d470056afab"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/reasoning_outline.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/reasoning_outline.json",
+      "bytes": 17086,
+      "sha256": "29545ee477f793328fa6dcd83ab3d3e20fa92b9ed8b7e22d12cb463a11f8ba6e"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-0/answer.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-0/answer.json",
+      "bytes": 10685,
+      "sha256": "067a1c0ae7fc7f96498eda9e5ea97d250a06c2deda614f203833b6be7205151b"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-0/api_state.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-0/api_state.json",
+      "bytes": 342,
+      "sha256": "6ad24dabaa027b8d9fa570e4d8bf4d06908e2f18332277a8d652113ff03d085b"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-0/known_failure.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-0/known_failure.json",
+      "bytes": 60,
+      "sha256": "2f1c58496f9ccdd9b9c22fb5a07545423bd56a0c2c6ac6d3d641bbeea856c10e"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-0/request.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-0/request.json",
+      "bytes": 48735,
+      "sha256": "bfe9e07def295bb611bf0320c30711f0860be89299e760dab69abc750f99fcc0"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-1/answer.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-1/answer.json",
+      "bytes": 10489,
+      "sha256": "b6ab06726825ddf8ed0982ed3f6209b5fbedf910691e74c988fa04fe3fcb7c34"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-1/api_state.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-1/api_state.json",
+      "bytes": 343,
+      "sha256": "0a8705467e10bd5d6351574eb2d73586cf2a24c66fa723f4c098b29b2e372b22"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-1/known_failure.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-1/known_failure.json",
+      "bytes": 60,
+      "sha256": "2f1c58496f9ccdd9b9c22fb5a07545423bd56a0c2c6ac6d3d641bbeea856c10e"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-1/request.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-1/request.json",
+      "bytes": 48752,
+      "sha256": "0518e82856407b8dcb8e0890d0001997bd6e5606bc184298574dd9dea15590c8"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/topic_feasibility.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/topic_feasibility.json",
+      "bytes": 1348,
+      "sha256": "d0c3fbce90937565f8430b47e8086c5635b1b4a26916d4a8cbde2e6f89c89440"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/writing_job.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/writing_job.json",
+      "bytes": 368,
+      "sha256": "c46f5da2f088c31d852cfa3eafc3b532e2ceeb1509d8ff9aeb080fc5968176e2"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/writing_prompt.md",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/writing_prompt.md",
+      "bytes": 23261,
+      "sha256": "d44ab934493b68e3e7129e6f66e4401106b11e307c8608308bec5b178be0ea0c"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article/writer/writing_task.txt",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/writing_task.txt",
+      "bytes": 440,
+      "sha256": "afdb07ab180ba916b177e86684c39f51cdb3e6147aff7cd3a0929216cbf2525a"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/article_structure.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article_structure.json",
+      "bytes": 74466,
+      "sha256": "dedd1d29e81e6489c8919ca72003cbbbd02a905aadf11a7715127b69f8de77ba"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/candidate-sha256.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/candidate-sha256.json",
+      "bytes": 1497,
+      "sha256": "f9579440976f68759c9c8185c5f7404e27372cfe6f5140d98713e998d7486931"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/claim_ledger.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/claim_ledger.json",
+      "bytes": 18299,
+      "sha256": "a3970cb6c90083c3ced05e6affa576ec56417484d8315a88d7efc3e994bdd4eb"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/control.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/control.json",
+      "bytes": 101,
+      "sha256": "973ecd575874a058426932b23c5a0dba076215526dd52d6be0f366fcff77869c"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/cost_ledger.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/cost_ledger.json",
+      "bytes": 5131,
+      "sha256": "458bd64a5f6174584750f5d3c444b7e931af528bc2a37daf9d5754f490b5af69"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/execution-started.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/execution-started.json",
+      "bytes": 974,
+      "sha256": "118f6abfa02afd88b3609bd6827124e465972c67c6c8834bb1df24cbebc75c6c"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/failure.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/failure.json",
+      "bytes": 526,
+      "sha256": "65c456f2e94af9043befd2be031604111bde631be06ba65ae1012a3d7bdd4db9"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/final-audit.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/final-audit.json",
+      "bytes": 3245,
+      "sha256": "087f1f62a420b90cfe4fa6f544fe94ee78bf8fb524571d2a830cfbcb7848e967"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/job-effective-during-run.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/job-effective-during-run.json",
+      "bytes": 1593,
+      "sha256": "87bc4eebd8723c23b8a3019bff3246de5ee817bc8b2acf61634ed503887cc330"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/job.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/job.json",
+      "bytes": 1594,
+      "sha256": "6cafee0c48a2c78f5563341dbaa716ed1bfa56807953ce1a841564adbd7a5226"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/logs/2026-10-23.jsonl",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/logs/2026-10-23.jsonl",
+      "bytes": 872,
+      "sha256": "5666f5ac4b842f4084720a5452f0a3d9e162dd47cccf08562b9f6cb1889b4a04"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/preflight.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/preflight.json",
+      "bytes": 13363,
+      "sha256": "6510dae64908aa3bdf5d04bbbdc14f978719a4a043b7f56cafb6df3b64df4d08"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/reservation-audit.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/reservation-audit.json",
+      "bytes": 1029,
+      "sha256": "694ebf943c6b14dc6e93926a7352f00a20f0ef71a14554b75e17afc770866277"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/runner.log",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/runner.log",
+      "bytes": 1466,
+      "sha256": "87d7d40fab73ef474604d24b5a4547cc416d0a105c1590b360b12845966a4d02"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/settings.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/settings.json",
+      "bytes": 210,
+      "sha256": "001212144d87844eb891335c660aedeca3ec9f29370c02244d52732c0c63deff"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/SHA256.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/SHA256.json",
+      "bytes": 6577,
+      "sha256": "01c11dc2b8d139783e66b46e177230b036b262d4db2640ec0e80ede632ab18c8"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/status.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/status.json",
+      "bytes": 1170,
+      "sha256": "807b7c35316239aa65516399184c0d9041b21942f7c85f487374680386930be6"
+    },
+    {
+      "local_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-staged-20261023T120816-e50a98ac/summary.json",
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/summary.json",
+      "bytes": 1119,
+      "sha256": "17fea7dd6796e3a5b9f1e4b60be69561839c75fc48bbf8366ce10dd93bea7d41"
+    }
+  ],
+  "original_sha_manifest_verified": true,
+  "zip_crc_test": "passed"
+}

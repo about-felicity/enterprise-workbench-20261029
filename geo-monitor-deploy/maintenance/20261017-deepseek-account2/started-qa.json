@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "at": 1792216326.001583,
+  "second_lane_completed": 1,
+  "second_lane_planned": 63,
+  "primary_completed": 15,
+  "body_length": 1090,
+  "sources": 12,
+  "verified_native_matches_receipt": true,
+  "second_account_clicks": 1,
+  "next_interval_seconds": 1131,
+  "thinking_enabled": false,
+  "search_enabled": true,
+  "public_seven_channels": true,
+  "javascript_errors": [],
+  "production_test_writes": []
+}

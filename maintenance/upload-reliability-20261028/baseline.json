@@ -1,0 +1,867 @@
+{
+  "at": 1793181634.2846477,
+  "products": [
+    {
+      "id": "product-042c2551f5da4b1eb4f14a0b20d4b64a",
+      "name": "科熙本植萃奢护染发剂",
+      "brand": "科熙本",
+      "updated_at": 1793004385.2535284,
+      "source": "19fb8c14f548eab1b23c368d4576b5e498c36b4a3db65ce8c4da2a7b0cf61f49",
+      "file": "科熙本染发剂知识库.docx",
+      "facts": 29
+    },
+    {
+      "id": "product-48e0cab94cb34eca8f9e0e090dcf645a",
+      "name": "道和小绿瓶防脱洗发水",
+      "brand": "道和时尚",
+      "updated_at": 1792978809.5085912,
+      "source": "df61fc18e67a880af382eade2822aafaf019e067edebc10d24c543ba3ce43ee7",
+      "file": "2.道和小绿瓶防脱洗发水知识库.docx",
+      "facts": 15
+    },
+    {
+      "id": "product-66d919c046dd4a2cad49b4969a94dd4a",
+      "name": "道和小红瓶",
+      "brand": "道和",
+      "updated_at": 1793003754.2504683,
+      "source": "52acd91072065cf4bd9b35b866d35fe2b51e2de52cc2b85957781558efc0ac31",
+      "file": "道和小红瓶.docx",
+      "facts": 98
+    },
+    {
+      "id": "product-215fe900d3c24bbf8fd2579bc3deb678",
+      "name": "科熙本二硫化硒清爽去屑止痒洗发水",
+      "brand": "科熙本",
+      "updated_at": 1792144629.8860621,
+      "source": null,
+      "file": null,
+      "facts": 5
+    },
+    {
+      "id": "product-7fd5fad9bef04e4ca2b00045443ea372",
+      "name": "焕颜计小白罐美白精华霜",
+      "brand": "焕颜计",
+      "updated_at": 1792978809.483181,
+      "source": "8d01fcb941796e35f0290152e106927e781a0c77dedfe2476654896ca9fcfd74",
+      "file": "美白知识库新的.docx",
+      "facts": 89
+    },
+    {
+      "id": "product-ba56f6d7bacd4384801733b0045d99b4",
+      "name": "梵玢FBCY科萃养发洗发水",
+      "brand": "梵玢FBCY",
+      "updated_at": 1793003750.2152772,
+      "source": "52878b7bf4df5cfd0ff637fdf1f172c5880f244f0bd1e8e11c6132c410d87bd3",
+      "file": "2.梵玢FBCY科萃养发洗发水.docx",
+      "facts": 68
+    },
+    {
+      "id": "product-5da7a61b033d488ca272049e865ea184",
+      "name": "梵玢FBCY科萃焕活精华液",
+      "brand": "梵玢FBCY",
+      "updated_at": 1793003746.4315867,
+      "source": "d037b2bcb19d3dac47cc546a43ab181fd48fdc6b7926398596f204e4e62e4bc1",
+      "file": "梵玢FBCY科萃焕活精华液.docx",
+      "facts": 88
+    },
+    {
+      "id": "product-8aef16cc9c3d4e68a94b81911b14a47c",
+      "name": "梵玢FBCY植萃祛痘精华液",
+      "brand": "梵玢FBCY",
+      "updated_at": 1793003735.535385,
+      "source": "9e399e75d9234f60b44326e6a88d0f5583a5cb7880c279fc279d42dd6cceba01",
+      "file": "梵玢植萃祛痘精华液产品知识文档.docx",
+      "facts": 81
+    },
+    {
+      "id": "product-1bed01fe0cd540da8e578f4ac0ca8f78",
+      "name": "科熙本植物防脱赋活多效精华液",
+      "brand": "科熙本",
+      "updated_at": 1793003757.402582,
+      "source": "a936bc7e474edb3bf3141763276eea4f0a2da39d7580fe32eee8244af45264cb",
+      "file": "科熙本植物防脱赋活多效精华液.docx",
+      "facts": 63
+    },
+    {
+      "id": "product-61d95de1c1414daaa343604ac6baaa87",
+      "name": "姿生怡鱼子酱胶原塑颜面膜",
+      "brand": "姿生怡",
+      "updated_at": 1792553742.9641488,
+      "source": "a26f07bb51de9a3e9e48bc945f6ccaa104d158a92e8edc2a15d65e31fcfce516",
+      "file": "姿生怡鱼子酱胶原塑颜面膜.docx",
+      "facts": 14
+    },
+    {
+      "id": "product-3a0148248056499a82fefe5d59e3d166",
+      "name": "梵玢FBCY植萃奢护染发剂",
+      "brand": "梵玢FBCY",
+      "updated_at": 1793151162.3634367,
+      "source": "7e1e3da11ea20f896215a9d930f04b2c8bab27653e4743dff05fa01694f4604b",
+      "file": "把这篇链接里面的第一款产品换成梵玢fbcy植萃奢护染发剂.docx",
+      "facts": 47
+    },
+    {
+      "id": "product-697871a4be224716adebdaf53562bb45",
+      "name": "科熙本鱼子酱修护柔顺护发素",
+      "brand": "科熙本",
+      "updated_at": 1792978809.4707427,
+      "source": "190f81cb85ecb0d3090b587fb6c0c5801be93e3d2a6890946612f818c9037524",
+      "file": "护发素知识库.docx",
+      "facts": 61
+    },
+    {
+      "id": "product-69afe943267d4946a5a30c2dc5212cd7",
+      "name": "梵玢FBCY龙胆黑钻护发精油",
+      "brand": "梵玢FBCY",
+      "updated_at": 1793004376.5569017,
+      "source": "b52551fd51ae43be5ed07375715ad09ae101173fa164e02322ca95a58bc35079",
+      "file": "护发精油知识库.docx",
+      "facts": 26
+    },
+    {
+      "id": "product-0e4dde223a8c40ec9a28e7d722ab180a",
+      "name": "姿生怡奢养铂金紧塑抗皱眼霜",
+      "brand": "姿生怡",
+      "updated_at": 1792978809.4948719,
+      "source": "b683d0ddf7c829d440fbf48534f45e4d55e1a4f59a053a5e71970291451d4002",
+      "file": "姿生怡眼霜知识库.docx",
+      "facts": 8
+    },
+    {
+      "id": "product-ccf47d2a6afe4e3e8fa2d805938195aa",
+      "name": "梵玢FBCY睫毛精华液",
+      "brand": "梵玢FBCY",
+      "updated_at": 1793003762.256216,
+      "source": "aed4d116cba9505ea92a9dc6fe6851eef11ba0812121ff32a66cb3e7653fbba7",
+      "file": "梵玢FBCY睫毛精华液知识库.docx",
+      "facts": 99
+    },
+    {
+      "id": "product-9ab355a28b4a4a06bd8ba9deea2e00b6",
+      "name": "科熙本控油蓬松洗发水",
+      "brand": "科熙本",
+      "updated_at": 1793003737.6505904,
+      "source": "8760abac2d54894534e195138f0c1c6322e1db465efe80086f2a32c6cec74a5e",
+      "file": "科熙本控油蓬松洗发水知识库.docx",
+      "facts": 22
+    },
+    {
+      "id": "product-6f2e88db39204069b4215344b861a9fd",
+      "name": "科熙本控油蓬松造型喷雾",
+      "brand": "科熙本",
+      "updated_at": 1793003742.5096626,
+      "source": "8ca6cab88c4199e79323330b9f5f20d6438716f0a125875567168b3ebaf92cac",
+      "file": "科熙本控油蓬松造型喷雾知识库.docx",
+      "facts": 46
+    },
+    {
+      "id": "product-e75e49c909804f7b9dd5227a8151197d",
+      "name": "姿生怡阿尔卑斯冰川焕肤精粹水",
+      "brand": "姿生怡",
+      "updated_at": 1792978809.4572384,
+      "source": "b9d3af3b82033082e1ed467db397d84ec602ef319e1b037105d73a80a1b8e3a2",
+      "file": "姿生怡阿尔卑斯冰川焕肤精粹水知识库.docx",
+      "facts": 72
+    },
+    {
+      "id": "product-cbdab5bf17454acaa1996253f6c50ac9",
+      "name": "梵玢FBCY眉毛精华液",
+      "brand": "梵玢FBCY",
+      "updated_at": 1792805648.188837,
+      "source": "b3b66d3d9ca59cdae673de82c686ac81e7356eaf041bb57f4ddd54ac3844051e",
+      "file": "新眉毛产品库信息.docx",
+      "facts": 220
+    }
+  ],
+  "library": [
+    {
+      "library_id": "library-dddbfbae554645c0bbfd731445cc1bb6",
+      "product_id": "",
+      "name": "梵玢FBCY睫毛精华液",
+      "updated_at": 1792821335.3715622,
+      "uploads": [
+        {
+          "import_id": "upload-af83efa18c8943248796a99b7acc7702",
+          "filename": "梵玢FBCY睫毛精华液知识库.docx",
+          "sha256": "0ca1196b0cb19a74bf78c1e96228e487a899196be57a0aa329fb9200a50a3e5c",
+          "bytes": 21960,
+          "paragraphs": 103,
+          "uploaded_at": 1792821335.3715622,
+          "revision": 1,
+          "status": "pending",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "library_id": "library-b2cd26866c304df8b18bdece8dbe7924",
+      "product_id": "product-ccf47d2a6afe4e3e8fa2d805938195aa",
+      "name": "梵玢FBCY睫毛精华液",
+      "updated_at": 1793003762.262164,
+      "uploads": [
+        {
+          "import_id": "upload-3820bf05a3d54402bb812d6bce7b80cc",
+          "filename": "梵玢FBCY睫毛精华液知识库.docx",
+          "sha256": "aed4d116cba9505ea92a9dc6fe6851eef11ba0812121ff32a66cb3e7653fbba7",
+          "bytes": 21994,
+          "paragraphs": 103,
+          "uploaded_at": 1793003760.318027,
+          "revision": 1,
+          "status": "published",
+          "notes": "用户于2026-10-26提供的产品文档；按原文归档，同产品保留一个当前知识库。",
+          "analyzed_at": 1793003762.2617328,
+          "reviewer": "Codex：产品归属及原文整理（非独立功效核验）",
+          "product_version": "82972c115c9c56763c3c5a4247602802a24fd7be7b3a8af610fcf9a1ab276a52"
+        }
+      ]
+    },
+    {
+      "library_id": "library-5f7731ab993b4c0c982cc555e3d6cf32",
+      "product_id": "product-6f2e88db39204069b4215344b861a9fd",
+      "name": "科熙本控油蓬松造型喷雾",
+      "updated_at": 1793003742.5143306,
+      "uploads": [
+        {
+          "import_id": "upload-4fbda83e9ac2442c845bb5795646f1c9",
+          "filename": "科熙本控油蓬松造型喷雾知识库.docx",
+          "sha256": "8ca6cab88c4199e79323330b9f5f20d6438716f0a125875567168b3ebaf92cac",
+          "bytes": 12866,
+          "paragraphs": 52,
+          "uploaded_at": 1793003741.9081008,
+          "revision": 1,
+          "status": "published",
+          "notes": "用户于2026-10-26提供的产品文档；按原文归档，同产品保留一个当前知识库。",
+          "analyzed_at": 1793003742.5141149,
+          "reviewer": "Codex：产品归属及原文整理（非独立功效核验）",
+          "product_version": "00495ef98dd8954fe90eb4b8a42a276b6b1e10ea1d768dffc8d3e61d9f2b78e9"
+        }
+      ]
+    },
+    {
+      "library_id": "library-917f633b29504d4384316a8e15c79f80",
+      "product_id": "product-9ab355a28b4a4a06bd8ba9deea2e00b6",
+      "name": "科熙本控油蓬松洗发水",
+      "updated_at": 1793003737.6548052,
+      "uploads": [
+        {
+          "import_id": "upload-b5ef034020e946d9b7ce357cbff06f87",
+          "filename": "科熙本控油蓬松洗发水知识库.docx",
+          "sha256": "8760abac2d54894534e195138f0c1c6322e1db465efe80086f2a32c6cec74a5e",
+          "bytes": 14394,
+          "paragraphs": 22,
+          "uploaded_at": 1793003737.117402,
+          "revision": 1,
+          "status": "published",
+          "notes": "用户于2026-10-26提供的产品文档；按原文归档，同产品保留一个当前知识库。",
+          "analyzed_at": 1793003737.6546342,
+          "reviewer": "Codex：产品归属及原文整理（非独立功效核验）",
+          "product_version": "1f8fab8c74ecdea97c1a214456d9001d8d5c31aff498cedeea38b80773c0b88a"
+        }
+      ]
+    },
+    {
+      "library_id": "library-bccdb2bf452146a0a67313527d906338",
+      "product_id": "",
+      "name": "科熙本控油蓬松造型喷雾",
+      "updated_at": 1792821076.095071,
+      "uploads": [
+        {
+          "import_id": "upload-3a0bc4b507994e9293a94e93a22f1868",
+          "filename": "科熙本控油蓬松造型喷雾知识库.docx",
+          "sha256": "8ca6cab88c4199e79323330b9f5f20d6438716f0a125875567168b3ebaf92cac",
+          "bytes": 12866,
+          "paragraphs": 52,
+          "uploaded_at": 1792821076.095071,
+          "revision": 1,
+          "status": "pending",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "library_id": "library-2b05ceed3d7840e185fb91a166a7243f",
+      "product_id": "product-69afe943267d4946a5a30c2dc5212cd7",
+      "name": "梵玢FBCY龙胆黑钻护发精油",
+      "updated_at": 1793004376.5660944,
+      "uploads": [
+        {
+          "import_id": "upload-98f64f14d08c4abfac140d7c588bd2dc",
+          "filename": "护发精油知识库.docx",
+          "sha256": "b52551fd51ae43be5ed07375715ad09ae101173fa164e02322ca95a58bc35079",
+          "bytes": 2423,
+          "paragraphs": 26,
+          "uploaded_at": 1793004375.065609,
+          "revision": 1,
+          "status": "published",
+          "notes": "用户于2026-10-26提供的产品文档；按原文归档，同产品保留一个当前知识库。",
+          "analyzed_at": 1793004376.5658429,
+          "reviewer": "Codex：产品归属及原文整理（非独立功效核验）",
+          "product_version": "5b77fddf38df868e45fa4418817aee54355d6f0b0507eb8c32910185ddd61139"
+        }
+      ]
+    },
+    {
+      "library_id": "library-78ccbc48478b42f3af227a7c753a635c",
+      "product_id": "product-215fe900d3c24bbf8fd2579bc3deb678",
+      "name": "科熙本二硫化硒清爽去屑止痒洗发水",
+      "updated_at": 1792144629.8860621,
+      "uploads": []
+    },
+    {
+      "library_id": "library-66e70aa086d847eea61da251afcbbfd2",
+      "product_id": "product-cbdab5bf17454acaa1996253f6c50ac9",
+      "name": "梵玢FBCY眉毛精华液",
+      "updated_at": 1792821165.8152027,
+      "uploads": [
+        {
+          "import_id": "upload-69be4d0a361a4a749ad0e5a0b75895fe",
+          "filename": "新眉毛产品库信息.docx",
+          "sha256": "b3b66d3d9ca59cdae673de82c686ac81e7356eaf041bb57f4ddd54ac3844051e",
+          "bytes": null,
+          "paragraphs": 220,
+          "uploaded_at": 1792805648.183899,
+          "revision": 1,
+          "status": "published",
+          "product_version": "ef3ab5d013aed6503068e9be4f0888d9e361f13501512a71ca8571525ac81725",
+          "notes": "此前已有的知识库原文件"
+        },
+        {
+          "import_id": "upload-130a4846582c4554a075a7c073be5fe8",
+          "filename": "梵玢FBCY眉毛精华液产品库.docx",
+          "sha256": "4cc6c003459a243b52e786c54c6752250d1b49c4f74c1938d8c9bae8377e6cba",
+          "bytes": 23003,
+          "paragraphs": 217,
+          "uploaded_at": 1792821165.8152027,
+          "revision": 2,
+          "status": "pending",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "library_id": "library-13a3bfbc08e3441c935b75752f4c2540",
+      "product_id": "",
+      "name": "梵玢FBCY植萃祛痘精华液",
+      "updated_at": 1792821458.5078168,
+      "uploads": [
+        {
+          "import_id": "upload-83be22433b264b73acd96f00b5c90722",
+          "filename": "梵玢植萃祛痘精华液产品知识文档.docx",
+          "sha256": "9e399e75d9234f60b44326e6a88d0f5583a5cb7880c279fc279d42dd6cceba01",
+          "bytes": 18680,
+          "paragraphs": 81,
+          "uploaded_at": 1792821458.5078168,
+          "revision": 1,
+          "status": "pending",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "library_id": "library-73273ff108e0496aa875852a76d96145",
+      "product_id": "",
+      "name": "梵玢FBCY科萃养发洗发水",
+      "updated_at": 1792821234.7813513,
+      "uploads": [
+        {
+          "import_id": "upload-3a921122b0e04abd9173c547e5189d16",
+          "filename": "2.梵玢FBCY科萃养发洗发水.docx",
+          "sha256": "52878b7bf4df5cfd0ff637fdf1f172c5880f244f0bd1e8e11c6132c410d87bd3",
+          "bytes": 20113,
+          "paragraphs": 68,
+          "uploaded_at": 1792821234.7813513,
+          "revision": 1,
+          "status": "pending",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "library_id": "library-98e8f363255342c5a83867659be0d91a",
+      "product_id": "product-0e4dde223a8c40ec9a28e7d722ab180a",
+      "name": "姿生怡奢养铂金紧塑抗皱眼霜",
+      "updated_at": 1792978809.4996932,
+      "uploads": [
+        {
+          "import_id": "upload-4e3b62e2f92a46689e01576214a97bbe",
+          "filename": "姿生怡眼霜知识库.docx",
+          "sha256": "b683d0ddf7c829d440fbf48534f45e4d55e1a4f59a053a5e71970291451d4002",
+          "bytes": 31753,
+          "paragraphs": 174,
+          "uploaded_at": 1792821221.673316,
+          "revision": 1,
+          "status": "published",
+          "notes": "",
+          "analyzed_at": 1792978809.4993951,
+          "reviewer": "Codex：原文件SHA256完全一致，复用已有人工分析",
+          "product_version": "75c536c1beebe8e8d2c5a6da72e982f81fdd5b2522f6fe103dea6ac9fcbbdbd3"
+        }
+      ]
+    },
+    {
+      "library_id": "library-1ec41916a4274125af9ee1b01a694631",
+      "product_id": "",
+      "name": "科熙本染发剂",
+      "updated_at": 1792821454.958373,
+      "uploads": [
+        {
+          "import_id": "upload-0a8c3c129ed749a0979393e7ae913b10",
+          "filename": "把这篇链接里面的第一款产品换成科熙本植萃奢护染发剂.docx",
+          "sha256": "9d4444a447f04d7f7264fc57b39069a8af0270804b9d75457cce12e7d581fd77",
+          "bytes": 13600,
+          "paragraphs": 30,
+          "uploaded_at": 1792821454.958373,
+          "revision": 1,
+          "status": "pending",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "library_id": "library-1478fbfa5de447708c03b9c513163bdf",
+      "product_id": "product-ba56f6d7bacd4384801733b0045d99b4",
+      "name": "梵玢FBCY科萃养发洗发水",
+      "updated_at": 1793003750.2234333,
+      "uploads": [
+        {
+          "import_id": "upload-6ffff57e52ce4289869da0b169529a24",
+          "filename": "2.梵玢FBCY科萃养发洗发水.docx",
+          "sha256": "52878b7bf4df5cfd0ff637fdf1f172c5880f244f0bd1e8e11c6132c410d87bd3",
+          "bytes": 20113,
+          "paragraphs": 68,
+          "uploaded_at": 1793003748.087993,
+          "revision": 1,
+          "status": "published",
+          "notes": "用户于2026-10-26提供的产品文档；按原文归档，同产品保留一个当前知识库。",
+          "analyzed_at": 1793003750.2231033,
+          "reviewer": "Codex：产品归属及原文整理（非独立功效核验）",
+          "product_version": "68f915d8391a08f20157367a28897123a8b5c595266f56b34a2cf1672c9bee35"
+        }
+      ]
+    },
+    {
+      "library_id": "library-baf45976889845ef8458cfc887f2f850",
+      "product_id": "product-8aef16cc9c3d4e68a94b81911b14a47c",
+      "name": "梵玢FBCY植萃祛痘精华液",
+      "updated_at": 1793003735.5415783,
+      "uploads": [
+        {
+          "import_id": "upload-2c71a14393bc4c72a8ec6e1c934c9375",
+          "filename": "梵玢植萃祛痘精华液产品知识文档.docx",
+          "sha256": "9e399e75d9234f60b44326e6a88d0f5583a5cb7880c279fc279d42dd6cceba01",
+          "bytes": 18680,
+          "paragraphs": 81,
+          "uploaded_at": 1793003735.0007012,
+          "revision": 1,
+          "status": "published",
+          "notes": "用户于2026-10-26提供的产品文档；按原文归档，同产品保留一个当前知识库。",
+          "analyzed_at": 1793003735.5411665,
+          "reviewer": "Codex：产品归属及原文整理（非独立功效核验）",
+          "product_version": "249655ffc5792fc00f09b3615ac6d031a062d22e9b6472778e897a11b5499ee2"
+        }
+      ]
+    },
+    {
+      "library_id": "library-81f59dbbdb8a4d6da83464c368cacdbd",
+      "product_id": "",
+      "name": "梵玢染发剂",
+      "updated_at": 1792821263.3151567,
+      "uploads": [
+        {
+          "import_id": "upload-18de536600074111aa05df35592f4c82",
+          "filename": "把这篇链接里面的第一款产品换成梵玢fbcy植萃奢护染发剂.docx",
+          "sha256": "7e1e3da11ea20f896215a9d930f04b2c8bab27653e4743dff05fa01694f4604b",
+          "bytes": 14600,
+          "paragraphs": 49,
+          "uploaded_at": 1792821263.3151567,
+          "revision": 1,
+          "status": "pending",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "library_id": "library-3e3a558b9ef4409bbbcd2560fbefc51c",
+      "product_id": "",
+      "name": "梵玢护发精油",
+      "updated_at": 1792821511.610223,
+      "uploads": [
+        {
+          "import_id": "upload-584f9c59d4634173b01e65247dfbc426",
+          "filename": "简单介绍护发精油.docx",
+          "sha256": "28774f45e780f203e62c63099bc1a2e6d6250e4c80e48ae90346b98f7c259bac",
+          "bytes": 13457,
+          "paragraphs": 27,
+          "uploaded_at": 1792821511.610223,
+          "revision": 1,
+          "status": "pending",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "library_id": "library-20560278289641a180f541045060c315",
+      "product_id": "product-66d919c046dd4a2cad49b4969a94dd4a",
+      "name": "道和小红瓶",
+      "updated_at": 1793003754.2581544,
+      "uploads": [
+        {
+          "import_id": "upload-7d654ea0fa634078bb2a101bbc718968",
+          "filename": "道和小红瓶.docx",
+          "sha256": "52acd91072065cf4bd9b35b866d35fe2b51e2de52cc2b85957781558efc0ac31",
+          "bytes": 21074,
+          "paragraphs": 98,
+          "uploaded_at": 1793003752.7317417,
+          "revision": 1,
+          "status": "published",
+          "notes": "用户于2026-10-26提供的产品文档；按原文归档，同产品保留一个当前知识库。",
+          "analyzed_at": 1793003754.2578428,
+          "reviewer": "Codex：产品归属及原文整理（非独立功效核验）",
+          "product_version": "f7cb8f435b067eb0db9c97906c25213f221ca9232899175bcab28e9a4e9f7d3b"
+        }
+      ]
+    },
+    {
+      "library_id": "library-25dabbf3d0864da8ae39a92771674b26",
+      "product_id": "",
+      "name": "科熙本控油蓬松洗发水",
+      "updated_at": 1792820960.963722,
+      "uploads": [
+        {
+          "import_id": "upload-3f2e27b55e464072918467b59a3876d6",
+          "filename": "科熙本控油蓬松洗发水知识库.docx",
+          "sha256": "8760abac2d54894534e195138f0c1c6322e1db465efe80086f2a32c6cec74a5e",
+          "bytes": 14394,
+          "paragraphs": 22,
+          "uploaded_at": 1792820960.963722,
+          "revision": 1,
+          "status": "pending",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "library_id": "library-150bf8432e1444b49542366df56cbda2",
+      "product_id": "product-697871a4be224716adebdaf53562bb45",
+      "name": "科熙本鱼子酱修护柔顺护发素",
+      "updated_at": 1792978809.4760997,
+      "uploads": [
+        {
+          "import_id": "upload-7de791accb9d4d559b7f0169b5a6f18f",
+          "filename": "护发素知识库.docx",
+          "sha256": "190f81cb85ecb0d3090b587fb6c0c5801be93e3d2a6890946612f818c9037524",
+          "bytes": 17820,
+          "paragraphs": 61,
+          "uploaded_at": 1792821952.0919178,
+          "revision": 1,
+          "status": "published",
+          "notes": "",
+          "analyzed_at": 1792978809.4755847,
+          "reviewer": "Codex：原文件SHA256完全一致，复用已有人工分析",
+          "product_version": "c85b840297aa4faa1dc86e7446a2f6a329bd8f4d006ab904c1ccdff0f96c467e"
+        }
+      ]
+    },
+    {
+      "library_id": "library-ab4176dd4bd5475681a2903423eed81d",
+      "product_id": "",
+      "name": "梵玢FBCY科萃焕活精华液",
+      "updated_at": 1792821208.425443,
+      "uploads": [
+        {
+          "import_id": "upload-2af6ff46c91a404f8f12c5a246c6f1bd",
+          "filename": "梵玢FBCY科萃焕活精华液.docx",
+          "sha256": "d037b2bcb19d3dac47cc546a43ab181fd48fdc6b7926398596f204e4e62e4bc1",
+          "bytes": 19805,
+          "paragraphs": 88,
+          "uploaded_at": 1792821208.425443,
+          "revision": 1,
+          "status": "pending",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "library_id": "library-a0f274f70e4c4c868353ebb7212cebd7",
+      "product_id": "",
+      "name": "道和小红瓶防脱精华液",
+      "updated_at": 1792821159.2126858,
+      "uploads": [
+        {
+          "import_id": "upload-68966f844539434484e01be76a7ac9bc",
+          "filename": "道和小红瓶.docx",
+          "sha256": "52acd91072065cf4bd9b35b866d35fe2b51e2de52cc2b85957781558efc0ac31",
+          "bytes": 21074,
+          "paragraphs": 98,
+          "uploaded_at": 1792821159.2126858,
+          "revision": 1,
+          "status": "pending",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "library_id": "library-aa5566e67a2142209d07d177451671bf",
+      "product_id": "product-042c2551f5da4b1eb4f14a0b20d4b64a",
+      "name": "科熙本植萃奢护染发剂",
+      "updated_at": 1793004385.2714205,
+      "uploads": [
+        {
+          "import_id": "upload-a8c5e9d3387949f3b7fe149c3b411c79",
+          "filename": "科熙本染发剂知识库.docx",
+          "sha256": "19fb8c14f548eab1b23c368d4576b5e498c36b4a3db65ce8c4da2a7b0cf61f49",
+          "bytes": 3207,
+          "paragraphs": 29,
+          "uploaded_at": 1793004383.3730876,
+          "revision": 1,
+          "status": "published",
+          "notes": "用户于2026-10-26提供的产品文档；按原文归档，同产品保留一个当前知识库。",
+          "analyzed_at": 1793004385.2712204,
+          "reviewer": "Codex：产品归属及原文整理（非独立功效核验）",
+          "product_version": "65eb1eda750c4f35e5a17ea90b955a6815fb709a4d487fb43065a87d0c192434"
+        }
+      ]
+    },
+    {
+      "library_id": "library-76e7f97c756145118eb13940080881db",
+      "product_id": "",
+      "name": "姿生怡手部保湿修护霜",
+      "updated_at": 1793155272.8087234,
+      "uploads": [
+        {
+          "import_id": "upload-9061081b558548c3b6f012fcdab5ac1a",
+          "filename": "姿生怡手部保湿修护霜知识库新.docx",
+          "sha256": "22c1edb431a044d2517c20b6d42b585e1b8b702e29168c6cfab9d87e79ace135",
+          "bytes": 24964,
+          "paragraphs": 114,
+          "uploaded_at": 1792821486.6236513,
+          "revision": 1,
+          "status": "pending",
+          "notes": ""
+        },
+        {
+          "import_id": "upload-afd4f0c4df2f42ddb103fc2b97ef7c01",
+          "filename": "姿生怡手部保湿修护霜知识库新.docx",
+          "sha256": "22c1edb431a044d2517c20b6d42b585e1b8b702e29168c6cfab9d87e79ace135",
+          "bytes": 24964,
+          "paragraphs": 114,
+          "uploaded_at": 1793155272.8087234,
+          "revision": 2,
+          "status": "pending",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "library_id": "library-7f8ed58881d94768aae8ea40bc1ff004",
+      "product_id": "product-e75e49c909804f7b9dd5227a8151197d",
+      "name": "姿生怡阿尔卑斯冰川焕肤精粹水",
+      "updated_at": 1792978809.4625716,
+      "uploads": [
+        {
+          "import_id": "upload-b8a69ae4a7d040a99258dd2900b0ffd3",
+          "filename": "姿生怡阿尔卑斯冰川焕肤精粹水知识库.docx",
+          "sha256": "b9d3af3b82033082e1ed467db397d84ec602ef319e1b037105d73a80a1b8e3a2",
+          "bytes": 19525,
+          "paragraphs": 72,
+          "uploaded_at": 1792822060.083541,
+          "revision": 1,
+          "status": "published",
+          "notes": "",
+          "analyzed_at": 1792978809.4621437,
+          "reviewer": "Codex：原文件SHA256完全一致，复用已有人工分析",
+          "product_version": "e764b293e13f9ad71c30d59bf71d3e49cd3d13e41d57e14802c5419a019bac42"
+        }
+      ]
+    },
+    {
+      "library_id": "library-0ef40d1a86024419bcbe395de38fd03b",
+      "product_id": "product-5da7a61b033d488ca272049e865ea184",
+      "name": "梵玢FBCY科萃焕活精华液",
+      "updated_at": 1793003746.4391568,
+      "uploads": [
+        {
+          "import_id": "upload-8190a94f8e2c4e3c93128ac4297fc04a",
+          "filename": "梵玢FBCY科萃焕活精华液.docx",
+          "sha256": "d037b2bcb19d3dac47cc546a43ab181fd48fdc6b7926398596f204e4e62e4bc1",
+          "bytes": 19805,
+          "paragraphs": 88,
+          "uploaded_at": 1793003745.910667,
+          "revision": 1,
+          "status": "published",
+          "notes": "用户于2026-10-26提供的产品文档；按原文归档，同产品保留一个当前知识库。",
+          "analyzed_at": 1793003746.4389129,
+          "reviewer": "Codex：产品归属及原文整理（非独立功效核验）",
+          "product_version": "550c7814a63fec531a4bec5563aa741af4ec430fc0ff2f44d342194e2613d440"
+        }
+      ]
+    },
+    {
+      "library_id": "library-1a11b9665229426d98771b355b615e81",
+      "product_id": "product-48e0cab94cb34eca8f9e0e090dcf645a",
+      "name": "道和小绿瓶防脱洗发水",
+      "updated_at": 1792978809.5124614,
+      "uploads": [
+        {
+          "import_id": "upload-c8e513231c154232979b7087c24258ba",
+          "filename": "2.道和小绿瓶防脱洗发水知识库.docx",
+          "sha256": "df61fc18e67a880af382eade2822aafaf019e067edebc10d24c543ba3ce43ee7",
+          "bytes": 22588,
+          "paragraphs": 83,
+          "uploaded_at": 1792821013.0720034,
+          "revision": 1,
+          "status": "published",
+          "notes": "",
+          "analyzed_at": 1792978809.512173,
+          "reviewer": "Codex：原文件SHA256完全一致，复用已有人工分析",
+          "product_version": "71d979a617d0986a9c88904203e349ed5a27aa00319e749c0b800273f5426ae1"
+        }
+      ]
+    },
+    {
+      "library_id": "library-ebb3ccf161d24bca996167829911a1bb",
+      "product_id": "product-61d95de1c1414daaa343604ac6baaa87",
+      "name": "姿生怡鱼子酱胶原塑颜面膜",
+      "updated_at": 1792553742.9641488,
+      "uploads": [
+        {
+          "import_id": "upload-574da63702694debb1f55aafd51c0cfe",
+          "filename": "姿生怡鱼子酱胶原塑颜面膜.docx",
+          "sha256": "a26f07bb51de9a3e9e48bc945f6ccaa104d158a92e8edc2a15d65e31fcfce516",
+          "bytes": null,
+          "paragraphs": 136,
+          "uploaded_at": 1792553742.959122,
+          "revision": 1,
+          "status": "published",
+          "product_version": "b7c9837d532b1c18807acc0916a43e8b4d199aec0fd9496754330e12f29fa427",
+          "notes": "已有产品原知识库，整理时补齐统一入口"
+        }
+      ]
+    },
+    {
+      "library_id": "library-65b599680cb74dabb192a6e86dcbef09",
+      "product_id": "product-3a0148248056499a82fefe5d59e3d166",
+      "name": "梵玢FBCY植萃奢护染发剂",
+      "updated_at": 1793151162.3702543,
+      "uploads": [
+        {
+          "import_id": "upload-7777ee88c13d4e3694d0c80898e701b2",
+          "filename": "梵玢染发剂.docx",
+          "sha256": "c5576513e4ff16872b2b5cb7bb11b470ea812166fefeaf527e3ea8d1ad32f3a5",
+          "bytes": 4097,
+          "paragraphs": 49,
+          "uploaded_at": 1793004378.5077202,
+          "revision": 1,
+          "status": "published",
+          "notes": "用户于2026-10-26提供的产品文档；按原文归档，同产品保留一个当前知识库。",
+          "analyzed_at": 1793004379.1625445,
+          "reviewer": "Codex：产品归属及原文整理（非独立功效核验）",
+          "product_version": "323a07e377b6bc7ddc910f42abba2bd9dc3352c4d867521d32251823a248c28f"
+        },
+        {
+          "import_id": "upload-7de56a47d1804113bc7553deeb0f541b",
+          "filename": "把这篇链接里面的第一款产品换成梵玢fbcy植萃奢护染发剂.docx",
+          "sha256": "7e1e3da11ea20f896215a9d930f04b2c8bab27653e4743dff05fa01694f4604b",
+          "bytes": 14600,
+          "paragraphs": 49,
+          "uploaded_at": 1793151162.3354373,
+          "revision": 2,
+          "status": "published",
+          "notes": "用户要求以新文档更新现有产品知识库；原文件保留，首尾写作指令不纳入产品资料。",
+          "analyzed_at": 1793151162.3696175,
+          "reviewer": "Codex：按用户要求核对产品归属、区分写作指令与产品资料",
+          "product_version": "9057661bc3a380d15ff98a10dec4d21db07b7fbc47af1115e20adbc6b49059c9"
+        }
+      ]
+    },
+    {
+      "library_id": "library-240ea3d2569b40c3a56381ec6741823c",
+      "product_id": "product-7fd5fad9bef04e4ca2b00045443ea372",
+      "name": "焕颜计小白罐美白精华霜",
+      "updated_at": 1792978809.4887424,
+      "uploads": [
+        {
+          "import_id": "upload-0b75a0d955a84f6dbd2fc55dadf8874c",
+          "filename": "美白知识库新的.docx",
+          "sha256": "8d01fcb941796e35f0290152e106927e781a0c77dedfe2476654896ca9fcfd74",
+          "bytes": 18859,
+          "paragraphs": 89,
+          "uploaded_at": 1792821305.8786237,
+          "revision": 1,
+          "status": "published",
+          "notes": "",
+          "analyzed_at": 1792978809.488249,
+          "reviewer": "Codex：原文件SHA256完全一致，复用已有人工分析",
+          "product_version": "7032fc5c4ac3538ad3f1f9aa5fc153ed02f3a2f14c7fb8c42548754a6261ab4a"
+        }
+      ]
+    },
+    {
+      "library_id": "library-f882754963754235a5676d1435013652",
+      "product_id": "product-1bed01fe0cd540da8e578f4ac0ca8f78",
+      "name": "科熙本植物防脱赋活多效精华液",
+      "updated_at": 1793003757.4101422,
+      "uploads": [
+        {
+          "import_id": "upload-8ff6f70356a449c48bdff7f6ac8ce317",
+          "filename": "科熙本植物防脱赋活多效精华液｜合作推广产品简介.docx",
+          "sha256": "bec29fe0a7437b849c953c1ae9711377b7c989b0f71fac158f610efe264e479b",
+          "bytes": null,
+          "paragraphs": 63,
+          "uploaded_at": 1792486288.6743288,
+          "revision": 1,
+          "status": "published",
+          "product_version": "1a9fa63457f4a5492a3120025d1b69291ae3fab1ef3b429433dd81e79833723d",
+          "notes": "此前已有的知识库原文件"
+        },
+        {
+          "import_id": "upload-17d8a422782c496aa5ea87e4349b8cd3",
+          "filename": "科熙本植物防脱赋活多效精华液｜合作推广产品简介.docx",
+          "sha256": "a936bc7e474edb3bf3141763276eea4f0a2da39d7580fe32eee8244af45264cb",
+          "bytes": 428506,
+          "paragraphs": 63,
+          "uploaded_at": 1792821078.0111754,
+          "revision": 2,
+          "status": "pending",
+          "notes": ""
+        },
+        {
+          "import_id": "upload-3b7e40d638004bcc9787d45caf964049",
+          "filename": "科熙本植物防脱赋活多效精华液.docx",
+          "sha256": "a936bc7e474edb3bf3141763276eea4f0a2da39d7580fe32eee8244af45264cb",
+          "bytes": 428506,
+          "paragraphs": 63,
+          "uploaded_at": 1793003756.8017876,
+          "revision": 3,
+          "status": "published",
+          "notes": "用户于2026-10-26提供的产品文档；按原文归档，同产品保留一个当前知识库。",
+          "analyzed_at": 1793003757.4098654,
+          "reviewer": "Codex：产品归属及原文整理（非独立功效核验）",
+          "product_version": "8b92a86c88aab90ced596635476feae28976e8aca5448af5aa71b85d5f0bbb51"
+        }
+      ]
+    }
+  ],
+  "hashes": {
+    "runtime.py": "b4379a69e199dfed2852ff4872af555d3c2388fb3d639a1676ac18450e527ddc",
+    "product_images.py": "3fa99d866b2d7f372e740681942775a96386607f5eb3fd36222f5189c1d94296",
+    "library.js": "cfe7a1b01278f6534420f844013627293eba4dcc955aea6ae210a4b8bb4f775a",
+    "knowledge_library.py": "9b2de7f5f2b4aa09c8fc0ef34d2b3f310ef131e02ad28fd7db35306ada212390",
+    "studio.py": "997e9b36198e9112c81c755d6d448f9947df9c1db46dfaa3f7fa10ae06a22a6a",
+    "panel.html": "62513df5d58870de02b10c6034722078a791e8093b8da2010adf6be9e03f998e",
+    "service.py": "69d9bae49ca1fa14c5e2defb2607e66def7febb64688aec6659c60962e9a6adb"
+  },
+  "gateway_sha": "6d19c72a028cfffd71ab4a39a6cc2a726758563df4537d235be0543ead167294",
+  "processes": "MainPID=31144\nId=geo-content-api.service\n\nMainPID=52378\nId=geo-content-worker.service\n\nMainPID=4885\nId=geo-creation-studio.service\n",
+  "http://127.0.0.1:8804/api/panel": {
+    "seconds": 3.69,
+    "bytes": 3626104,
+    "http": 200
+  },
+  "http://127.0.0.1:3000/api/geo-creation/panel": {
+    "seconds": 1.56,
+    "bytes": 3626103,
+    "http": 200
+  },
+  "public_error": "No module named 'vps_geo_access'"
+}

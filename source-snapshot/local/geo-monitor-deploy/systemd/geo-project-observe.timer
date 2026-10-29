@@ -1,0 +1,12 @@
+[Unit]
+Description=Bounded 15-minute real-work observation without recovery actions
+
+[Timer]
+OnCalendar=2026-10-21 *:00/15:00 Asia/Shanghai
+OnCalendar=2026-10-22 00..17:00/15:00 Asia/Shanghai
+AccuracySec=10s
+Persistent=true
+Unit=geo-project-observe.service
+
+[Install]
+WantedBy=timers.target

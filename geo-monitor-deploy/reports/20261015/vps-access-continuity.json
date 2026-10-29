@@ -1,0 +1,83 @@
+{
+  "checked_at": 1792036663.27163,
+  "non_frontend_containers_unchanged": true,
+  "collectors_editorial_and_tunnel_unchanged": true,
+  "same_batches_progress_preserved": true,
+  "collectors": [
+    {
+      "name": "豆包 1",
+      "service": "geo-native@geo-panel-doubao1-20261015-102126-041120bd.service",
+      "service_state": "active",
+      "status": "running",
+      "batch": "geo-panel-doubao1-20261015-102126-041120bd",
+      "planned": 420,
+      "captured": 92,
+      "processed": 92,
+      "unique_processed": 92,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792036661.9065487
+    },
+    {
+      "name": "豆包 2",
+      "service": "geo-native@geo-panel-doubao2-20261015-102128-d6e56b0a.service",
+      "service_state": "active",
+      "status": "running",
+      "batch": "geo-panel-doubao2-20261015-102128-d6e56b0a",
+      "planned": 420,
+      "captured": 94,
+      "processed": 94,
+      "unique_processed": 94,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792036662.2416363
+    },
+    {
+      "name": "DeepSeek",
+      "service": "geo-capture-deepseek.service",
+      "service_state": "failed",
+      "status": "waiting_login",
+      "batch": "geo-deepseek-21x3-20261015",
+      "planned": 63,
+      "captured": 0,
+      "processed": 0,
+      "unique_processed": 0,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792026816.408962
+    },
+    {
+      "name": "文心卡片",
+      "service": "geo-capture-wenxin-card.service",
+      "service_state": "active",
+      "status": "running",
+      "batch": "geo-wenxin_card-21x6-20261015",
+      "planned": 126,
+      "captured": 65,
+      "processed": 65,
+      "unique_processed": 65,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792036660.5914488
+    },
+    {
+      "name": "百度卡片",
+      "service": "geo-capture-baidu-ai.service",
+      "service_state": "active",
+      "status": "running",
+      "batch": "geo-baidu_ai-21x5-20261015",
+      "planned": 105,
+      "captured": 75,
+      "processed": 75,
+      "unique_processed": 26,
+      "duplicates": 49,
+      "unavailable": 6,
+      "delivery_errors": 0,
+      "updated_at": 1792036660.482968
+    }
+  ]
+}

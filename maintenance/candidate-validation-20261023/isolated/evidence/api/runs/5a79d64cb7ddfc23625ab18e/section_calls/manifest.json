@@ -1,0 +1,22 @@
+{
+  "input_sha256": "cdc004078bdf3f32443f19febaefea85a7f4cdf8bd41ee3710dbe10d0a9bcc71",
+  "status": "incomplete",
+  "components": {
+    "INTRO": {
+      "status": "complete",
+      "attempt": 0,
+      "sha256": "8c78952687125c1ffef1021914dae7a0dc50c733ef51cc11875981af23d1bfbc"
+    },
+    "S1": {
+      "status": "complete",
+      "attempt": 2,
+      "sha256": "8f288b3efd41a95622858bccbfbd970181a9c6df127a4d32b359001a026c3035"
+    },
+    "S2": {
+      "status": "retry_pending",
+      "attempt": 2,
+      "error": "Section body substantially shorter than its task"
+    }
+  },
+  "failed_component": "S2"
+}

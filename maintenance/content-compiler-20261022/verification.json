@@ -1,0 +1,33 @@
+{
+  "at": 1792641811.962753,
+  "services": [
+    "active",
+    "active",
+    "active"
+  ],
+  "original_unknown_ids_unchanged": true,
+  "original_unknown_count": 3,
+  "budgets_changed": false,
+  "trial_controls": {
+    "creation-1792575159-0a8f9221": {
+      "paused": true,
+      "reason": "compiler_small_sample",
+      "message": "两篇小样本已收尾；保留批量暂停、预算和所有结果，待处理正文问题与剩余复审",
+      "revision": 23,
+      "paused_epoch": 1792641575.3754613
+    },
+    "creation-1792576129-389f575e": {
+      "paused": true,
+      "reason": "compiler_small_sample",
+      "message": "按用户要求暂停14篇批量返修，先验证可写性、结论账本与小样本闭环",
+      "revision": 14,
+      "paused_epoch": 1792639859.7089531
+    }
+  },
+  "source_files": 48,
+  "tests": {
+    "engine": 172,
+    "creation": 74
+  },
+  "unattended_accepted": false
+}

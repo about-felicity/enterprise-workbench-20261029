@@ -1,0 +1,67 @@
+{
+  "checked_at": 1792464380.0511744,
+  "batch": "geo-panel-doubao2-20261020-090001-6bcafb90",
+  "local_completed": 20,
+  "postgres_verified": 20,
+  "verified_tail": [
+    {
+      "ordinal": 16,
+      "body_length": 525,
+      "sources": 11,
+      "capture_retries": 0
+    },
+    {
+      "ordinal": 17,
+      "body_length": 600,
+      "sources": 11,
+      "capture_retries": 0
+    },
+    {
+      "ordinal": 18,
+      "body_length": 478,
+      "sources": 12,
+      "capture_retries": 1
+    },
+    {
+      "ordinal": 19,
+      "body_length": 542,
+      "sources": 12,
+      "capture_retries": 0
+    },
+    {
+      "ordinal": 20,
+      "body_length": 487,
+      "sources": 10,
+      "capture_retries": 0
+    }
+  ],
+  "rejected_context_not_in_pg": true,
+  "original_task17_was_not_resent": true,
+  "panel_recovery_labels_served": true,
+  "memory_limit": 4294967296,
+  "memory_swap_limit": 7516192768,
+  "health": {
+    "batch": "geo-panel-doubao2-20261020-090001-6bcafb90",
+    "planned": 105,
+    "prompt_mode": "question_only",
+    "model": "doubao2",
+    "captured": 20,
+    "geo_processed": 20,
+    "delivery_errors": [],
+    "unavailable": 0,
+    "time": 1792464372.7604756,
+    "heartbeat_expires_at": 1792464522.7604759,
+    "bridge_pid": 1767,
+    "tasks": {
+      "completed": 20,
+      "pending": 85
+    },
+    "status": "running",
+    "progress": {
+      "phase": "sending_once",
+      "task_id": "42728940-b7e7-52cd-aa35-19fcd4bac273",
+      "ordinal": 21,
+      "changed_at": 1792464372.7604723
+    }
+  }
+}

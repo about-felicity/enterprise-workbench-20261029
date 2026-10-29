@@ -1,0 +1,21 @@
+{
+  "apply": true,
+  "projection_rows": 632,
+  "days": {
+    "2026-10-15": 359,
+    "2026-10-16": 105,
+    "2026-10-17": 168
+  },
+  "reanalysis": {
+    "retry_after_native_text_repair": 173,
+    "category_or_instruction_filtered": 1,
+    "today_native_text_reanalysis": 168
+  },
+  "total_reanalysis": 342,
+  "empty_text_skipped": [],
+  "other_models_proven_negative_products": 0,
+  "other_negative_examples": [],
+  "backup": "/app/geo-capture/maintenance/20261017-yuanbao-text-audit/database-before-1792217517.jsonl",
+  "applied": 632,
+  "other_requeued": 0
+}

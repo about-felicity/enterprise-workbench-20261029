@@ -1,0 +1,29 @@
+[
+  {
+    "key": "conditioner",
+    "cache_key": "fd10c06a84b618fd099e62c0b80d4fbf3ebbcc5005791b844bd626a83dc98b2a",
+    "expected_sha256": "29a09dd610d9fc8e746fb175196b43156d23b7c86d320b78c8e6a0059f28d40a",
+    "source_url": "https://baijiahao.baidu.com/s?id=1855612103641886191&wfr=spider&for=pc",
+    "product_sha256": "c85b840297aa4faa1dc86e7446a2f6a329bd8f4d006ab904c1ccdff0f96c467e",
+    "proposal_sha256": "230c6778ac6ebcddc9bdc8e687e995e88b5073a5c98f9f6d32d8933a0ed0f0e6",
+    "approved": false
+  },
+  {
+    "key": "essence",
+    "cache_key": "622ceb2a1233e4322a69eeee8a40aa58572b64634024d0d2f866eff719bcf0e3",
+    "expected_sha256": "e6b6160fde9275bc9b7672ff324d7423af040a7d75a8bc4abb71bc7883df8bee",
+    "source_url": "https://www.sohu.com/a/1066073207_121081803",
+    "product_sha256": "e764b293e13f9ad71c30d59bf71d3e49cd3d13e41d57e14802c5419a019bac42",
+    "proposal_sha256": "1ed1e6b3bd879164af99be14f9b9f4fe8031189fdab1881256449bede281d246",
+    "approved": false
+  },
+  {
+    "key": "cream",
+    "cache_key": "6ddadc62da4eaaad5b46e31ce624c2d92e3bd01392900c2437bb14c6b8d512fd",
+    "expected_sha256": "e5837803541a13137d5b900f924dea497976be3998fb6c4f1675c5bbd1d1a5e0",
+    "source_url": "https://m.bjnews.com.cn/detail/1789986281129938.html",
+    "product_sha256": "7032fc5c4ac3538ad3f1f9aa5fc153ed02f3a2f14c7fb8c42548754a6261ab4a",
+    "proposal_sha256": "8218526fe49685524d8d820bfde3d5cf8f4e3b56299d0510bfc261199fbf7497",
+    "approved": false
+  }
+]

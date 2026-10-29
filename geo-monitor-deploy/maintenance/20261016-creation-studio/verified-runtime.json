@@ -1,0 +1,14 @@
+{
+  "private_questions": 16,
+  "historical_observations": 294,
+  "questions_with_historical_data": 16,
+  "today_private_questions_in_main_geo": [],
+  "next_run": "2026-10-17T01:00:00+08:00",
+  "health": {
+    "at": 1792142461.8031256,
+    "day": "2026-10-16",
+    "status": "scheduled",
+    "active_channels": []
+  },
+  "collectors_unchanged": true
+}

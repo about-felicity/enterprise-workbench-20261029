@@ -1,0 +1,5 @@
+{
+  "enabled": false,
+  "receiver_url": "http://YOUR-RECEIVER:PORT",
+  "token": "REPLACE_WITH_PRIVATE_TOKEN"
+}

@@ -1,0 +1,409 @@
+{
+  "checked_at": "2026-10-15T11:40:47+08:00",
+  "day": "2026-10-15",
+  "current_batches": [
+    {
+      "model": "doubao1",
+      "batch": "geo-panel-doubao1-20261015-102126-041120bd"
+    },
+    {
+      "model": "doubao2",
+      "batch": "geo-panel-doubao2-20261015-102128-d6e56b0a"
+    },
+    {
+      "model": "deepseek",
+      "batch": "geo-deepseek-21x3-20261015"
+    },
+    {
+      "model": "wenxin_card",
+      "batch": "geo-wenxin_card-21x6-20261015"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-baidu_ai-21x5-20261015"
+    }
+  ],
+  "today_product_analysis": [
+    {
+      "model_id": "doubao",
+      "review_status": "ai_pending",
+      "runs": 152,
+      "retry_exhausted": 0,
+      "cooling_down": 28,
+      "oldest": "2026-10-15T10:21:56.75852+08:00",
+      "latest_update": "2026-10-15T11:40:16.306593+08:00"
+    },
+    {
+      "model_id": "wenxin",
+      "review_status": "ai_pending",
+      "runs": 75,
+      "retry_exhausted": 0,
+      "cooling_down": 19,
+      "oldest": "2026-10-15T09:13:51+08:00",
+      "latest_update": "2026-10-15T11:39:39.858162+08:00"
+    },
+    {
+      "model_id": "wenxin",
+      "review_status": "ai_verified",
+      "runs": 3,
+      "retry_exhausted": 0,
+      "cooling_down": 0,
+      "oldest": "2026-10-15T09:17:03+08:00",
+      "latest_update": "2026-10-15T10:59:52.443357+08:00"
+    }
+  ],
+  "global_pending_product_analysis": [
+    {
+      "model_id": "deepseek",
+      "review_status": "ai_pending",
+      "runs": 10,
+      "retry_exhausted": 6,
+      "cooling_down": 3,
+      "oldest": "2026-09-22T16:15:41.505+08:00",
+      "latest_update": "2026-10-15T10:12:32.963252+08:00"
+    },
+    {
+      "model_id": "doubao",
+      "review_status": "ai_pending",
+      "runs": 157,
+      "retry_exhausted": 3,
+      "cooling_down": 30,
+      "oldest": "2026-09-01T23:48:28+08:00",
+      "latest_update": "2026-10-15T11:40:16.306593+08:00"
+    },
+    {
+      "model_id": "quark",
+      "review_status": "ai_pending",
+      "runs": 35,
+      "retry_exhausted": 33,
+      "cooling_down": 2,
+      "oldest": "2026-08-25T19:20:03.765+08:00",
+      "latest_update": "2026-10-15T08:20:07.232967+08:00"
+    },
+    {
+      "model_id": "wenxin",
+      "review_status": "ai_pending",
+      "runs": 89,
+      "retry_exhausted": 8,
+      "cooling_down": 25,
+      "oldest": "2026-09-22T14:58:10+08:00",
+      "latest_update": "2026-10-15T11:39:39.858162+08:00"
+    },
+    {
+      "model_id": "yuanbao",
+      "review_status": "ai_pending",
+      "runs": 49,
+      "retry_exhausted": 46,
+      "cooling_down": 3,
+      "oldest": "2026-08-19T11:39:55+08:00",
+      "latest_update": "2026-10-15T09:36:18.188734+08:00"
+    }
+  ],
+  "current_batch_product_analysis": [
+    {
+      "batch": "geo-baidu_ai-21x5-20261015",
+      "model_id": "wenxin",
+      "review_status": "ai_pending",
+      "unique_runs": 18,
+      "retry_exhausted": 0
+    },
+    {
+      "batch": "geo-baidu_ai-21x5-20261015",
+      "model_id": "wenxin",
+      "review_status": "ai_verified",
+      "unique_runs": 3,
+      "retry_exhausted": 0
+    },
+    {
+      "batch": "geo-panel-doubao1-20261015-102126-041120bd",
+      "model_id": "doubao",
+      "review_status": "ai_pending",
+      "unique_runs": 75,
+      "retry_exhausted": 0
+    },
+    {
+      "batch": "geo-panel-doubao2-20261015-102128-d6e56b0a",
+      "model_id": "doubao",
+      "review_status": "ai_pending",
+      "unique_runs": 77,
+      "retry_exhausted": 0
+    },
+    {
+      "batch": "geo-wenxin_card-21x6-20261015",
+      "model_id": "wenxin",
+      "review_status": "ai_pending",
+      "unique_runs": 57,
+      "retry_exhausted": 0
+    }
+  ],
+  "recent_product_updates": [
+    {
+      "model_id": "doubao",
+      "review_status": "ai_pending",
+      "updated_rows": 133
+    },
+    {
+      "model_id": "wenxin",
+      "review_status": "ai_pending",
+      "updated_rows": 46
+    },
+    {
+      "model_id": "wenxin",
+      "review_status": "ai_verified",
+      "updated_rows": 1
+    }
+  ],
+  "today_products": [
+    {
+      "model_id": "wenxin",
+      "extracted_product_rows": 14,
+      "answers_with_products": 3
+    }
+  ],
+  "provider_incidents": [
+    {
+      "incident_type": "provider_unavailable",
+      "status": "completed",
+      "incidents": 3,
+      "affected_runs": 4750,
+      "last_failure": "2026-09-30T13:21:11.21655+08:00"
+    },
+    {
+      "incident_type": "provider_unavailable",
+      "status": "reviewing",
+      "incidents": 1,
+      "affected_runs": 4724,
+      "last_failure": "2026-10-06T09:16:57.004572+08:00"
+    }
+  ],
+  "global_archived_bodies": [
+    {
+      "status": "blocked",
+      "unique_urls": 4127,
+      "last_fetched": "2026-10-15 11:39:08"
+    },
+    {
+      "status": "empty",
+      "unique_urls": 8495,
+      "last_fetched": "2026-10-15 11:38:12"
+    },
+    {
+      "status": "error",
+      "unique_urls": 3072,
+      "last_fetched": "2026-10-15 11:40:33"
+    },
+    {
+      "status": "ok",
+      "unique_urls": 86337,
+      "last_fetched": "2026-10-15 11:39:55"
+    },
+    {
+      "status": "unsupported",
+      "unique_urls": 478,
+      "last_fetched": "2026-10-15 11:26:15"
+    }
+  ],
+  "today_source_bodies_by_type": [
+    {
+      "group": "doubao",
+      "source_type": "视频",
+      "unique_urls": 545,
+      "statuses": {
+        "ok": 146,
+        "not_archived": 384,
+        "error": 15
+      }
+    },
+    {
+      "group": "doubao",
+      "source_type": "文章",
+      "unique_urls": 58,
+      "statuses": {
+        "ok": 41,
+        "unsupported": 9,
+        "blocked": 8
+      }
+    },
+    {
+      "group": "doubao",
+      "source_type": "电商",
+      "unique_urls": 11,
+      "statuses": {
+        "not_archived": 11
+      }
+    },
+    {
+      "group": "wenxin",
+      "source_type": "文章",
+      "unique_urls": 697,
+      "statuses": {
+        "ok": 509,
+        "error": 67,
+        "not_archived": 58,
+        "empty": 39,
+        "blocked": 24
+      }
+    },
+    {
+      "group": "wenxin",
+      "source_type": "电商",
+      "unique_urls": 9,
+      "statuses": {
+        "not_archived": 9
+      }
+    },
+    {
+      "group": "wenxin",
+      "source_type": "视频",
+      "unique_urls": 2,
+      "statuses": {
+        "not_archived": 2
+      }
+    },
+    {
+      "group": "wenxin",
+      "source_type": "社交",
+      "unique_urls": 2,
+      "statuses": {
+        "ok": 2
+      }
+    }
+  ],
+  "current_batch_source_bodies_by_type": [
+    {
+      "group": "geo-baidu_ai-21x5-20261015",
+      "source_type": "文章",
+      "unique_urls": 78,
+      "statuses": {
+        "ok": 76,
+        "blocked": 1,
+        "not_archived": 1
+      }
+    },
+    {
+      "group": "geo-baidu_ai-21x5-20261015",
+      "source_type": "电商",
+      "unique_urls": 4,
+      "statuses": {
+        "not_archived": 4
+      }
+    },
+    {
+      "group": "geo-baidu_ai-21x5-20261015",
+      "source_type": "视频",
+      "unique_urls": 2,
+      "statuses": {
+        "not_archived": 2
+      }
+    },
+    {
+      "group": "geo-panel-doubao1-20261015-102126-041120bd",
+      "source_type": "文章",
+      "unique_urls": 47,
+      "statuses": {
+        "ok": 31,
+        "blocked": 8,
+        "unsupported": 8
+      }
+    },
+    {
+      "group": "geo-panel-doubao1-20261015-102126-041120bd",
+      "source_type": "电商",
+      "unique_urls": 10,
+      "statuses": {
+        "not_archived": 10
+      }
+    },
+    {
+      "group": "geo-panel-doubao1-20261015-102126-041120bd",
+      "source_type": "视频",
+      "unique_urls": 328,
+      "statuses": {
+        "not_archived": 233,
+        "ok": 84,
+        "error": 11
+      }
+    },
+    {
+      "group": "geo-panel-doubao2-20261015-102128-d6e56b0a",
+      "source_type": "文章",
+      "unique_urls": 34,
+      "statuses": {
+        "ok": 25,
+        "blocked": 2,
+        "unsupported": 7
+      }
+    },
+    {
+      "group": "geo-panel-doubao2-20261015-102128-d6e56b0a",
+      "source_type": "电商",
+      "unique_urls": 5,
+      "statuses": {
+        "not_archived": 5
+      }
+    },
+    {
+      "group": "geo-panel-doubao2-20261015-102128-d6e56b0a",
+      "source_type": "视频",
+      "unique_urls": 429,
+      "statuses": {
+        "not_archived": 310,
+        "ok": 105,
+        "error": 14
+      }
+    },
+    {
+      "group": "geo-wenxin_card-21x6-20261015",
+      "source_type": "文章",
+      "unique_urls": 631,
+      "statuses": {
+        "empty": 39,
+        "error": 67,
+        "ok": 445,
+        "not_archived": 57,
+        "blocked": 23
+      }
+    },
+    {
+      "group": "geo-wenxin_card-21x6-20261015",
+      "source_type": "电商",
+      "unique_urls": 5,
+      "statuses": {
+        "not_archived": 5
+      }
+    },
+    {
+      "group": "geo-wenxin_card-21x6-20261015",
+      "source_type": "社交",
+      "unique_urls": 2,
+      "statuses": {
+        "ok": 2
+      }
+    }
+  ],
+  "product_worker_last_hour": {
+    "events": {
+      "llm_batch_error": 6,
+      "ai_verified": 1
+    },
+    "accepted_rows_logged": 1,
+    "deferred_attempt_rows": 72,
+    "errors": {
+      "timeout": 3,
+      "json_parse": 3
+    },
+    "last_event": {
+      "at": "2026-10-15 11:36:54",
+      "status": "llm_batch_error"
+    }
+  },
+  "product_worker_rate": {
+    "configured_limit": 120,
+    "reservations_last_hour": 6
+  },
+  "content_worker_last_lines": [
+    "2026-10-15 11:39:24 pass processed=1 remaining=0 total=15472 states={'ok': 86336, 'empty': 8495, 'error': 3071, 'unsupported': 478, 'blocked': 4128}",
+    "2026-10-15 11:40:02 pass processed=1 remaining=0 total=15473 states={'ok': 86337, 'empty': 8495, 'error': 3071, 'unsupported': 478, 'blocked': 4128}",
+    "2026-10-15 11:40:49 pass processed=1 remaining=0 total=15473 states={'ok': 86337, 'empty': 8495, 'error': 3072, 'unsupported': 478, 'blocked': 4127}"
+  ]
+}

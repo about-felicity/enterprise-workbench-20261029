@@ -1,0 +1,9 @@
+{
+  "changed": {
+    "geo-source-card-collectors/geo_source_cards/cli.py": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/cli.py",
+    "geo-source-card-collectors/geo_source_cards/search_profiles.py": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/search_profiles.py",
+    "geo-source-card-collectors/tests/test_search_profiles.py": "/opt/monitor/geo-capture/maintenance/20261023-wenxin-start/profile-stage/engine/tests/test_search_profiles.py"
+  },
+  "mapping_count": 219,
+  "other_candidate_writing_sources_not_repackaged": true
+}

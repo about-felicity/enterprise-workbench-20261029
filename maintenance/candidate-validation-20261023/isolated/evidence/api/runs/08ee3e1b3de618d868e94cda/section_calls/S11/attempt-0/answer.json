@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S11\",\"heading\":\"Bodyaid 防脱生姜洗发水\",\"paragraphs\":[{\"text\":\"按现有记录，Bodyaid 防脱生姜洗发水将生姜作为配方的主打方向，其配方中添加了高活性生姜根提取物，同时添加了控油成分。这两项已知信息指向的是配方构成层面的选择，记录本身并未提供使用后的实际表现数据，因此不宜据此推断它对某类头皮一定有效，或把“添加了某种提取物”直接等同于“具备相应的成品效果”。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0009\",\"CL0034\",\"CL0035\"]},{\"text\":\"形态方面，现有记录显示其为淡黄色的乳液质地，这属于可观察的产品外观描述，同样不构成功效说明。至于起泡情况、冲洗感受、香气，以及部分产品介绍中常提及的温热感，现有记录均未提供，本段不作补充或想象。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0036\"]},{\"text\":\"在本节已分配的资料范围内，并没有完整成分表、表活体系、清洁力强弱、实测数据、价格或使用人群说明。因此关于“是否清洁力偏强、适合哪种发质”的判断，现有证据不足以支撑；若你倾向含生姜与控油成分的配方，稳妥的做法是先把这些已知构成项与自己头皮的实际出油情况对照，再小范围试用，观察清洁力度和头皮反应是否合意，然后决定是否长期使用。\",\"statement_type\":\"general_advice\",\"claim_ids\":[]},{\"text\":\"从这份清单的阅读顺序看，Bodyaid 是以生姜与控油成分为记录重点的一款；如果更在意配方中被明确写出的这类成分，可以把它留作进一步核对的候选，而不要仅凭成分名称就预先判定它在同类中的位置。\",\"statement_type\":\"general_advice\",\"claim_ids\":[]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4619,
+    "completion_tokens": 403,
+    "total_tokens": 5022,
+    "prompt_tokens_details": {
+      "cached_tokens": 2432
+    },
+    "prompt_cache_hit_tokens": 2432,
+    "prompt_cache_miss_tokens": 2187
+  },
+  "request_id": "24a72ce9-d9f9-4c10-a29d-fe1462923f6c",
+  "model": "deepseek-flash"
+}

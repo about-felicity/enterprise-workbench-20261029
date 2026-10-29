@@ -1,0 +1,375 @@
+{
+  "source": "existing local redroid-deploy source, unchanged file bytes",
+  "files": [
+    {
+      "path": "redroid-deploy/.gitignore",
+      "sha256": "da5788d00762e92bf3a3dc1a32d85d0f1418bcf3928b6a09a256f027c95baad5",
+      "bytes": 146
+    },
+    {
+      "path": "redroid-deploy/acceptance_snapshot.py",
+      "sha256": "2605fe42a89da4cc5ca54bb7bfaeb93cc15755a414fc28f4c4bd40a87baa0d25",
+      "bytes": 3032
+    },
+    {
+      "path": "redroid-deploy/audit_messages.py",
+      "sha256": "e2633eb2bec0b7fbb9712f0d3fd4f153a258037aaac11c38f9374dc7fb5e7ab1",
+      "bytes": 1605
+    },
+    {
+      "path": "redroid-deploy/backup_android13_volume.py",
+      "sha256": "1b54231ff3a33ca9f398001f71f785b55ad667ff266be7666c47377611eb1e3e",
+      "bytes": 2102
+    },
+    {
+      "path": "redroid-deploy/backup_hpe14_release.py",
+      "sha256": "3102e1640044199189f3ac50f90693c79e374e104c5d3334b61e4fd03646217b",
+      "bytes": 2469
+    },
+    {
+      "path": "redroid-deploy/build_hpe14_13.py",
+      "sha256": "5da8220670fff1f142ae4eee379a00e241ccd223e6dc8430649d75c648bbb0ce",
+      "bytes": 1063
+    },
+    {
+      "path": "redroid-deploy/build_hpe14_test.py",
+      "sha256": "f267f3e0068ba2612a53716f1fec1419b4c048db11667e1d22a664b2fa3ed086",
+      "bytes": 2357
+    },
+    {
+      "path": "redroid-deploy/capture_hpe_errors.py",
+      "sha256": "5808061413d1e6d202f338a632e4ba40b5b92bb625d67a599298da4e2e85f809",
+      "bytes": 552
+    },
+    {
+      "path": "redroid-deploy/check-host.sh",
+      "sha256": "bd625d8a78d6dcbd759d7982a854067155d202e30d100371dab6b0cdfc01bc17",
+      "bytes": 808
+    },
+    {
+      "path": "redroid-deploy/check_image_backup.py",
+      "sha256": "2c554b3e207ed236b8ecd5e39c154d4de29866b931be7c854f1cfaa96b6484a0",
+      "bytes": 444
+    },
+    {
+      "path": "redroid-deploy/clean_server_project.py",
+      "sha256": "7f38a1010dcc9948e325cb2a2b505a16a295163a693de230ba2600fe9806e64f",
+      "bytes": 5635
+    },
+    {
+      "path": "redroid-deploy/compose.android15.yaml",
+      "sha256": "5f8df2f719c8e97751d6b4fc2042c3a1d8ac523ff8907a19f3dd5c5e4e001847",
+      "bytes": 744
+    },
+    {
+      "path": "redroid-deploy/compose.houdini13.yaml",
+      "sha256": "8a0c5970f0e97960e1583498fd67569501681313ae00341aebe746c4c6c7becb",
+      "bytes": 741
+    },
+    {
+      "path": "redroid-deploy/compose.hpe14.yaml",
+      "sha256": "217f187ce070f87bcddac11f02fdb38064ff049db7f62484f5499736b989b043",
+      "bytes": 795
+    },
+    {
+      "path": "redroid-deploy/compose.yaml",
+      "sha256": "5f8df2f719c8e97751d6b4fc2042c3a1d8ac523ff8907a19f3dd5c5e4e001847",
+      "bytes": 744
+    },
+    {
+      "path": "redroid-deploy/deploy.sh",
+      "sha256": "56618cd57c5012c4f89d5ef5a0e868a8ac8b6ea42a16916c14a0f27c7f506469",
+      "bytes": 1011
+    },
+    {
+      "path": "redroid-deploy/doubao_loop.py",
+      "sha256": "42685da7b0d6ba9ad88e11cbba4277551a26fce6a45c2c2ad982aa1272b7482f",
+      "bytes": 14637
+    },
+    {
+      "path": "redroid-deploy/export_chat_store.py",
+      "sha256": "0b38cd4f23fbcb60873598bcaa10c6348ab71207918aea8882cf1c5fa5f5fe76",
+      "bytes": 4592
+    },
+    {
+      "path": "redroid-deploy/fetch_hpe.py",
+      "sha256": "cc46704b80ef9d6f2665b57ae5ff57d64bc74a347396d4aa184566e92089513b",
+      "bytes": 551
+    },
+    {
+      "path": "redroid-deploy/fetch_image.py",
+      "sha256": "d89dd2aa81c32b21547a5b60c9ef3f440691d79113c5b98f992c28405397086f",
+      "bytes": 6614
+    },
+    {
+      "path": "redroid-deploy/fix_hpe_namespace.py",
+      "sha256": "6d117fd4abc0ca2563491f85af66ff24e7b9b822b6d518d28f5c4b130b43f436",
+      "bytes": 850
+    },
+    {
+      "path": "redroid-deploy/hpe14-questions.json",
+      "sha256": "68f110a260529a4e5eae94e6f39156a1327e6f5d87918261ff7358e8f143911b",
+      "bytes": 549
+    },
+    {
+      "path": "redroid-deploy/hpe14-soak-questions.json",
+      "sha256": "0a1ff5041c31fe8cf20be73c26363a3bffaa9c977794bd84de28017e2053d611",
+      "bytes": 9160
+    },
+    {
+      "path": "redroid-deploy/HPE14_FIX.md",
+      "sha256": "eee834eb06f9cd960d3061e44b4be8dfaf6f82b4d21ac76cc4ada979123b2ffc",
+      "bytes": 12552
+    },
+    {
+      "path": "redroid-deploy/hpe14_report.py",
+      "sha256": "8c9cbee2506b7265ca047a65f62ad20f2b8003a1cddc8d4c647aa66638c1d31a",
+      "bytes": 4002
+    },
+    {
+      "path": "redroid-deploy/inspect_chat_store.py",
+      "sha256": "1c37c8ca395df11dfe0c5c26c7a18031dff7ca1503f06f6738625eb155cec7e5",
+      "bytes": 585
+    },
+    {
+      "path": "redroid-deploy/inspect_device.py",
+      "sha256": "8cc053d5da7589fd0e655360e181fa6f44e7af338d46b945f68da6973ac15435",
+      "bytes": 983
+    },
+    {
+      "path": "redroid-deploy/inspect_prepared.py",
+      "sha256": "b57a3c05414a65b86abb563116e78147068cc4c90bba38d72710829a0db03ec9",
+      "bytes": 1174
+    },
+    {
+      "path": "redroid-deploy/install_worker_runtime.py",
+      "sha256": "9be1f4f65742620427519cb034c38a2a37608e1a4abf5e5e0460786024d2861e",
+      "bytes": 696
+    },
+    {
+      "path": "redroid-deploy/make_test_report.py",
+      "sha256": "a47f53c7a19f424d0cd9b32c8826e6ea72d6d328d7d997e2e19a440afa43bdd1",
+      "bytes": 3315
+    },
+    {
+      "path": "redroid-deploy/migrate_test_app.py",
+      "sha256": "ad96ff1b194d1a0fe00f7665c8b585d52aee1eb0e9dffabcedf4844cd5d5ba44",
+      "bytes": 1070
+    },
+    {
+      "path": "redroid-deploy/open-doubao.ps1",
+      "sha256": "369b09472cd2e2a8f3828f0415c1e93c8e9a53ec55478d536517964ab5fcd3a3",
+      "bytes": 2238
+    },
+    {
+      "path": "redroid-deploy/package_hpe14_results.py",
+      "sha256": "2303fcf5ef2d72c28174ce3e520ce04916bb6be6a5d42a00613df41b69868d45",
+      "bytes": 1979
+    },
+    {
+      "path": "redroid-deploy/prepare_worker_tools.py",
+      "sha256": "5c6733443b5a48011ece2b6c42d3bf29d05e75be3f434a8919ba4be80f9bb9aa",
+      "bytes": 619
+    },
+    {
+      "path": "redroid-deploy/probe_hpe14.py",
+      "sha256": "bb6e646e542251d49ff8ad2f208f695930d3504345ace8739d75549b237e55e8",
+      "bytes": 1515
+    },
+    {
+      "path": "redroid-deploy/probe_hpe14_13.py",
+      "sha256": "93b5932a30f7d31f171eb280b3fc8a3afa9928eb1407157aed9a490661fe4f8f",
+      "bytes": 1215
+    },
+    {
+      "path": "redroid-deploy/PROJECT_GUIDE.md",
+      "sha256": "f4a6f314586773b855537bebf7539018241575c4b7fbcb19db3f415ec3cf82fd",
+      "bytes": 42795
+    },
+    {
+      "path": "redroid-deploy/PROJECT_TREE.md",
+      "sha256": "15e41bb77d80ae3dde153cd59ceaa5fc6430196cc4029b601dd361d20ee8a2d5",
+      "bytes": 2117
+    },
+    {
+      "path": "redroid-deploy/read_crash_debugger.py",
+      "sha256": "cd904929fb882978fca50ae3cef9e0d11d867a4291ff91741a8cfefe1e4674f4",
+      "bytes": 459
+    },
+    {
+      "path": "redroid-deploy/read_hpe13_crash.py",
+      "sha256": "d40f099c90d96c2e0c2660d1ad4a79ccfca14fda911b8ab995cdf6f988a95715",
+      "bytes": 385
+    },
+    {
+      "path": "redroid-deploy/read_hpe_crash.py",
+      "sha256": "8312f90fc200af3986d38c837c569eb4d6853dce6f1ff5ebb453f534017716db",
+      "bytes": 424
+    },
+    {
+      "path": "redroid-deploy/read_probe_ui.py",
+      "sha256": "4cf0f1cfe65eba4508dba5822ef08208882be436e4caa027c58bd2527c18121d",
+      "bytes": 427
+    },
+    {
+      "path": "redroid-deploy/read_send_faults.py",
+      "sha256": "1c64387dc420dd227a216a41003ea3cfdf075feeb542cb6606177e69b22614c4",
+      "bytes": 256
+    },
+    {
+      "path": "redroid-deploy/README.before-hpe14.md",
+      "sha256": "82ffa7f9968df4ae81568c1d2e84caa133c2a1b5b4a84dd74d054695a97148d5",
+      "bytes": 9035
+    },
+    {
+      "path": "redroid-deploy/README.md",
+      "sha256": "99b6b6b99d524535cbc8dbd27ae5ea2fdc3c13b289d4119606354ffc703d2c14",
+      "bytes": 2625
+    },
+    {
+      "path": "redroid-deploy/redroid-doubao-hpe14-worker.service",
+      "sha256": "94fc3dc2ae6b0f138444429c55860344bfc071ed4d352e1e03ce24ca5ae19314",
+      "bytes": 880
+    },
+    {
+      "path": "redroid-deploy/redroid-doubao-native-log.service",
+      "sha256": "d50e332db0643c617e010ebb0fb221ae5670d085161c2d7e2b478a356e35c2cf",
+      "bytes": 558
+    },
+    {
+      "path": "redroid-deploy/redroid-doubao-soak24h.service",
+      "sha256": "e68c882c90b721b99cac40b5027d1db16f9a0b53ddf9f8524db7a3fb6805f918",
+      "bytes": 500
+    },
+    {
+      "path": "redroid-deploy/redroid-doubao-worker.service",
+      "sha256": "42cce1a026d3a2409eed187dc7667c6883f4508838c66799dcc4032174f1c40d",
+      "bytes": 624
+    },
+    {
+      "path": "redroid-deploy/remote.py",
+      "sha256": "ddf28af7773ea98a4a75177bf3adb280e7671d7a0a491e846fc275348620958b",
+      "bytes": 3397
+    },
+    {
+      "path": "redroid-deploy/requirements.txt",
+      "sha256": "afbabbed250a7a1903b74a7c9f4aaa8b33c7e5e8fb1c03198eeb5b9d48c0f1b3",
+      "bytes": 36
+    },
+    {
+      "path": "redroid-deploy/research_houdini.py",
+      "sha256": "a5bb61e59c2fb7f069ee0447ff3e6a43b725db256b76807f6e0e175d8c86a116",
+      "bytes": 497
+    },
+    {
+      "path": "redroid-deploy/research_hpe.py",
+      "sha256": "351379272da6582c9372a884d7274647e78b5fa0644570ae36200b56cee8fcce",
+      "bytes": 454
+    },
+    {
+      "path": "redroid-deploy/research_patch.py",
+      "sha256": "be0aaa0528994e0050d8bcd0a696286a1d669708440947a975cfde3fca3260bd",
+      "bytes": 627
+    },
+    {
+      "path": "redroid-deploy/research_translation.py",
+      "sha256": "2f7082d482b5f193d1a62520e27ca75eb7a4594befe21649430c222e19387bfd",
+      "bytes": 726
+    },
+    {
+      "path": "redroid-deploy/runtime_preflight.py",
+      "sha256": "60a4408f9d23b630497b33598a9506c616ac932487550a6fbae455194728547e",
+      "bytes": 2359
+    },
+    {
+      "path": "redroid-deploy/soak_monitor.py",
+      "sha256": "1bebbc5fe07367e91de058fda67c760674dd3b9b1ad391dee1b2056f08329a59",
+      "bytes": 4540
+    },
+    {
+      "path": "redroid-deploy/soak_sequence.py",
+      "sha256": "fe90fd94ec609e11d25a343f1289c8fbb76a75be7dbc05cec27d65898067a088",
+      "bytes": 2351
+    },
+    {
+      "path": "redroid-deploy/switch_soak_frequency.py",
+      "sha256": "32042ffc2b686b14608c76eb0447170618e0f45b1c64da55a534900219710524",
+      "bytes": 1781
+    },
+    {
+      "path": "redroid-deploy/test-android15.sh",
+      "sha256": "6780d0b0a4ee8e7343b4e4e060aeced0e758e57671447d9474294b715eddd485",
+      "bytes": 1213
+    },
+    {
+      "path": "redroid-deploy/test_phase_recovery_live.py",
+      "sha256": "c5648912e148d3f6fa3558fd7c5f178de2c7163000ec3f3a1be020a2ff7053ad",
+      "bytes": 1766
+    },
+    {
+      "path": "redroid-deploy/test_questions.json",
+      "sha256": "1751088943a88afb8a561539231a6ea5dc7ad62934ee2e81dd4e1daf782a4142",
+      "bytes": 394
+    },
+    {
+      "path": "redroid-deploy/test_soak_sequence.py",
+      "sha256": "b2962669ce39f1a420eee7ebd985adce72cc24b7f31a503db7e75171a7c9f78f",
+      "bytes": 1527
+    },
+    {
+      "path": "redroid-deploy/test_unattended.py",
+      "sha256": "418460b4a3941c7c486ad378b470544550e7619590e41a8e533b1ad82c0c30ec",
+      "bytes": 11611
+    },
+    {
+      "path": "redroid-deploy/transfer_artifact.py",
+      "sha256": "649f7ca986180d873d77738238c3fab6f31d6b06f651336a6cfb56e04dd3527c",
+      "bytes": 3550
+    },
+    {
+      "path": "redroid-deploy/tunnel.py",
+      "sha256": "02acaa9e06d60b1e3b238e91fd3ec66d8eb8e2fe4554a4483063fe905eda4bfa",
+      "bytes": 1400
+    },
+    {
+      "path": "redroid-deploy/UNATTENDED.before-hpe14.md",
+      "sha256": "a550d4c74060f07a66dc47f7a9453b781ac4bee886221a109cb009def5b44af4",
+      "bytes": 9690
+    },
+    {
+      "path": "redroid-deploy/UNATTENDED.md",
+      "sha256": "ef6ad3cc87a90a32c28fd1f7cdf2dae2078f20f8c7c976926721f732cbe60c6e",
+      "bytes": 4503
+    },
+    {
+      "path": "redroid-deploy/unattended_core.py",
+      "sha256": "bb973a7776e27d846206296cdcb411c6b9ea8d9e32a9a02d7191d6bc6819727e",
+      "bytes": 13282
+    },
+    {
+      "path": "redroid-deploy/unattended_worker.py",
+      "sha256": "c9d6ef707efcdf43b51d8900fd9c6d84769ef3440e4f454b79b5df1e8c013b23",
+      "bytes": 13106
+    },
+    {
+      "path": "redroid-deploy/watchdog_smoke.py",
+      "sha256": "37028aacd26a6c40208d6ec06475ccbf415992269989f04936b0ecc5e56f8009",
+      "bytes": 94
+    }
+  ],
+  "excluded": [
+    ".venv",
+    "__pycache__",
+    "artifacts",
+    "test-results",
+    "server_known_hosts",
+    "*.tar.gz",
+    "local_server.txt",
+    "Android login volumes",
+    "chat databases"
+  ],
+  "upstream": {
+    "url": "https://github.com/ERSTT/redroid.git",
+    "commit": "e32446b85e112b64354d6e9a0e511a89a2419c95"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "content": "{\n  \"id\": \"S1\",\n  \"paragraphs\": [\n    {\n      \"text\": \"这份榜单能帮你缩小范围：把九款防脱洗发水按成分信息放在一起对照，省去逐款翻找资料的时间。但它不能替你判断哪款适合自己，排行里的洗感描述只是编辑整理与资料转述，不能当作实测结论。\",\n      \"statement_type\": \"general_advice\",\n      \"claim_ids\": [\"CL0007\"]\n    },\n    {\n      \"text\": \"更稳妥的做法是拿榜单当起点，结合自身发质和连续四周的掉发记录来筛选，再对照成分表确认标注是否清晰。这样榜单解决的是信息筛选，判断权仍在你手里。\",\n      \"statement_type\": \"general_advice\",\n      \"claim_ids\": [\"CL0007\"]\n    }\n  ]\n}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4262,
+    "completion_tokens": 182,
+    "total_tokens": 4444,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 4262
+  },
+  "request_id": "46f46a33-d0bc-4187-b973-cd204c3ce5b5",
+  "model": "deepseek-flash"
+}

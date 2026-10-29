@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S10\",\"heading\":\"施华蔻防脱洗发水\",\"paragraphs\":[{\"text\":\"接着看施华蔻防脱洗发水。就现有测评记录而言，它被描述为体现专业水准、配方体系完整的产品，因此适合注重洗护品质、愿意为专业配方投入的人。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0005\",\"CL0020\",\"CL0021\"]},{\"text\":\"需要说明的是，这里的配方体系完整属于对现有测评记录的状态描述，不等于对实际效果、成分来源或单品优劣的确认。\",\"statement_type\":\"inference\",\"claim_ids\":[]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4904,
+    "completion_tokens": 134,
+    "total_tokens": 5038,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 4904
+  },
+  "request_id": "d9b42475-d4d3-4111-af1f-beabfc1a99aa",
+  "model": "deepseek-flash"
+}

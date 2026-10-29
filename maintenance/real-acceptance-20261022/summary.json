@@ -1,0 +1,34 @@
+{
+  "at": 1792664241.5245965,
+  "state": "failed_acceptance",
+  "accepted_articles": 0,
+  "selected_articles": 2,
+  "content_revisions_exhausted": true,
+  "articles": [
+    {
+      "category": "排行类",
+      "number": 1,
+      "new_calls": 46,
+      "new_estimated_cny": 0.3761765199999999,
+      "cumulative_estimated_cny": 0.65319432,
+      "remaining_authorized_article_cap_cny": 1.3468056800000001,
+      "accepted": false,
+      "max_content_revision": 2
+    },
+    {
+      "category": "测评类",
+      "number": 2,
+      "new_calls": 34,
+      "new_estimated_cny": 0.5369552000000001,
+      "cumulative_estimated_cny": 0.82063976,
+      "remaining_authorized_article_cap_cny": 1.1793602399999998,
+      "accepted": false,
+      "max_content_revision": 2
+    }
+  ],
+  "new_estimated_cny": 0.9131317199999999,
+  "independent_fact_and_logic_executed": true,
+  "arbitration_complete": false,
+  "candidate_fix_deployed": false,
+  "further_paid_work_disabled": true
+}

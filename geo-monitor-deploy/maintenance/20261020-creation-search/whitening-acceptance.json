@@ -1,0 +1,42 @@
+{
+  "plan_id": "plan-6334cde812bd49549df6efd87a51e3b3",
+  "articles": [
+    {
+      "title": "美白面霜涂了没变化？2026年8款美白淡斑面霜选购参考",
+      "category": "排行类",
+      "primary_reference": {
+        "url": "https://baijiahao.baidu.com/s?for=pc&id=1878753529012963302&wfr=spider",
+        "title": "2026年美白淡斑面霜避坑指南：从百元到千元，哪些值得真金白银投入？",
+        "raw_title": "2026年美白淡斑面霜避坑指南：从百元到千元，哪些值得真金白银投入？icon_voice_onicon_voice",
+        "domain": "baijiahao.baidu.com",
+        "media": "百家号内容平台（包含自媒体）",
+        "author": "原素材未提供",
+        "published_at": "原素材未提供",
+        "official_account": "未核实，不根据域名推断"
+      },
+      "word_sha256": "72034c59438b333adb139ad15fe5a9f6dd4710973426603fecb38d99e81294e2",
+      "body_chars": 4974
+    },
+    {
+      "title": "熬夜暗沉、色斑反复怎么选面霜？2026年5款淡斑美白面霜选购参考",
+      "category": "排行类",
+      "primary_reference": {
+        "url": "https://baijiahao.baidu.com/s?for=pc&id=1878839006348011090&wfr=spider",
+        "title": "2026实测5款热门淡斑美白面霜｜熬夜暗沉色斑肌必看，精准匹配不同面部肌肤需求",
+        "raw_title": "2026实测5款热门淡斑美白面霜｜熬夜暗沉色斑肌必看，精准匹配不同面部肌肤需求icon_voice_onicon_voice",
+        "domain": "baijiahao.baidu.com",
+        "media": "百家号内容平台（包含自媒体）",
+        "author": "原素材未提供",
+        "published_at": "原素材未提供",
+        "official_account": "未核实，不根据域名推断"
+      },
+      "word_sha256": "0f694ba6f1064b64671af81298b8dda3df12ca4efc8609e3ac0282587bb26a8e",
+      "body_chars": 4580
+    }
+  ],
+  "count": 2,
+  "bundle": "/tmp/whitening-e2e-20261020.zip",
+  "bundle_sha256": "2661a8cc71e9cda7a43d4ef23ded7d3c61847052e049b00554b5f65b1a9894e6",
+  "original_observations_preserved": true,
+  "scope": "creation_only"
+}

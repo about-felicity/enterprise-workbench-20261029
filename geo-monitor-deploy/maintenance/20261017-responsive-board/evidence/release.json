@@ -1,0 +1,36 @@
+{
+  "original_image": "sha256:ecb5660d96fe39d85454a90451b9a272ccac4ac00bea2cc89e1ae123aa536d9e",
+  "rollback": "monitor-dashboard:before-responsive-1792222026",
+  "image": "monitor-dashboard:responsive-board-20261017",
+  "before_containers": {
+    "deepseek-hpe14-account2": "2026-10-17T05:38:34.865467372Z",
+    "deepseek-hpe14-android13": "2026-10-17T01:37:36.0326689Z",
+    "yuanbao-hpe14-android13": "2026-10-15T06:35:03.318897147Z",
+    "doubao-hpe14-account2": "2026-10-15T06:04:38.99143872Z",
+    "doubao-hpe14-13-test": "2026-10-15T06:01:17.197943187Z",
+    "monitor-product-worker": "2026-10-17T06:24:37.845440239Z",
+    "monitor-dashboard-api": "2026-10-17T06:25:32.694422208Z",
+    "monitor-doubao-receiver": "2026-10-15T05:58:39.481423763Z",
+    "monitor-result-receiver": "2026-10-17T06:25:22.468131671Z",
+    "monitor-content-worker": "2026-10-15T06:00:25.219738969Z",
+    "monitor-postgres": "2026-10-15T05:58:32.803336239Z",
+    "monitor-redis": "2026-10-15T05:58:39.154126641Z"
+  },
+  "at": 1792222028.4889276,
+  "status": "published",
+  "published_at": 1792222474.0697224,
+  "after_containers": {
+    "deepseek-hpe14-account2": "2026-10-17T05:38:34.865467372Z",
+    "deepseek-hpe14-android13": "2026-10-17T01:37:36.0326689Z",
+    "yuanbao-hpe14-android13": "2026-10-15T06:35:03.318897147Z",
+    "doubao-hpe14-account2": "2026-10-15T06:04:38.99143872Z",
+    "doubao-hpe14-13-test": "2026-10-15T06:01:17.197943187Z",
+    "monitor-product-worker": "2026-10-17T06:24:37.845440239Z",
+    "monitor-dashboard-api": "2026-10-17T06:25:32.694422208Z",
+    "monitor-doubao-receiver": "2026-10-15T05:58:39.481423763Z",
+    "monitor-result-receiver": "2026-10-17T06:25:22.468131671Z",
+    "monitor-content-worker": "2026-10-15T06:00:25.219738969Z",
+    "monitor-postgres": "2026-10-15T05:58:32.803336239Z",
+    "monitor-redis": "2026-10-15T05:58:39.154126641Z"
+  }
+}

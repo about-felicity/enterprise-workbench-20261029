@@ -1,0 +1,46 @@
+"""Document measured recovery; never treats unit tests as unattended acceptance."""
+import json
+from datetime import datetime,timezone,timedelta
+from pathlib import Path
+W=Path(__file__).resolve().parents[2];D=Path(__file__).parent
+v=json.loads((D/'verification.json').read_text('utf8'));stamp=datetime.fromtimestamp(v['at'],timezone(timedelta(hours=8))).strftime('%Y-%m-%d %H:%M:%S')
+rows={r['model']:r for r in v['batches']};n=lambda m:rows[m]['counts'].get('completed',0)
+summary=f'**{stamp}（北京时间）：元宝、豆包实际卡点已修复并继续原批次。豆包1 {n("doubao1")}/105、元宝 {n("yuanbao")}/168均已收到processed回执且与PostgreSQL一致；豆包2 105/105正常完成。119项相关回归通过，210份恢复映射全部与服务器SHA一致。已验证多题继续推进，整批及跨日无人值守尚未验收；创作试验仍0篇合格、原批量继续暂停。见[采集修复报告](maintenance/native-stall-20261022/REPORT.md)。**'
+for name in ('PROJECT_STATUS.md','CURRENT_PROJECT_HANDOFF.md'):
+ p=W/name;p.write_text('> '+summary+'\n\n'+p.read_text('utf8'),encoding='utf8')
+p=W/'README.md';text=p.read_text('utf8');first=text.index('\n');text=text[:first+1]+'\n> '+summary+'\n'+text[first+1:];p.write_text(text,encoding='utf8')
+report=f'''# 元宝与豆包原生采集停滞修复
+
+记录时间：{stamp}（北京时间）。本轮目标是修复现有原生采集，没有启动文章批量写作，没有修改写作预算或重发3笔未知付费请求。
+
+## 实际状态
+
+| 通道 | 初始完成/入库 | 本次实测完成/入库 | 运行状态 |
+| --- | --- | --- | --- |
+| 豆包1 | 21/105 | {n('doubao1')}/105 | 原批次继续运行 |
+| 元宝 | 101/168 | {n('yuanbao')}/168 | 原批次继续运行 |
+| 豆包2 | 105/105 | 105/105 | 正常完成，未重新启动 |
+
+本地队列、processed回执、PostgreSQL成功记录一致。豆包与元宝每日计划保留原21题、5/8轮、45秒间隔，批次和revision未改；运行中的旧登录/回执错误已清除。未清空任务、登录或App数据库。
+
+## 根因与最终代码行为
+
+1. 元宝第102题：48条信源中有1条网址/docId完整、原标题为空。旧校验无限拒绝整篇。现在保留全部信源及原始对象，仅为显示补上“未提供标题（消费日报网）”，同时保留original_title为空及title_missing标记。缺网址/docId仍拦截。原正文1757字符、原会话0RRQofIMlYu、原trace及SHA均保持，processed正文去首尾空白后1756字符。
+2. 豆包第22题：初始UI点击有记录，但问题仍在新对话输入框，三个原生数据库均无新请求。未能证明最初点击失败的具体触控原因。新增两次完整基线/输入框核对、至少10秒间隔和持久化限次恢复，只提交原草稿一次；发现本地未确认请求也禁止再次点击。恢复提交纳入设备发送间隔，重启后仍不能重复恢复。真实结果422字符、12条信源；一个原生请求，capture_retries=0。
+3. 豆包缓存：同一完成答案在wire与hydrated格式间变化，原始对象会补齐空图标/摘要等默认值、移除patch_type。现在仅在完成判定摘要中归一化已确认的默认值；正文、来源身份、非空元数据、未知字段变化仍重新核对，保存的原始对象不改动。已用真实两份故障快照回放验证。
+4. 豆包第26题：可选“在豆包内使用抖音商城”登录框被误认为豆包账号掉线。现在只对完整匹配的商城弹窗选择“不登录”，账号登录或安全验证仍停止。必须先绑定原请求才允许操作，并预先记录拒绝意图。App会自动续跑同一问题；该题已验证得到301字符、0网页信源的完成答案。原请求4fd4c675-36b0-46e9-a627-f7d4258f17e6、App续跑请求7060ead6-2f0a-4896-a7ce-ec575aaf9050及原权限卡片全部保留，first_user_turn明确为false，不能声称只有一个原生请求或将续跑伪装成普通首轮。普通多轮、换题、缺少拒绝记录或不匹配权限卡片仍拒绝。
+5. 元宝第112题：恢复后应用被Android以LOW_MEMORY终止，退出记录PSS约1.5GB。原代码只重连读取器，无法恢复已退出App。新增限次唤起原App，并从新版history_conversation.db核对CID和可见列表顺序后打开原会话；旧内存Session模型和旧ChatConversationDetail均不包含这条记录。已真实补回原请求2891字符、50条信源，原CID/trace保持，没有重发该问题。
+6. 元宝加入现有内存维护框架：连续高压采样、冷却和次数预算；只在当前题完成且回执确认后的下一题边界维护App。生成中、原请求未知、回传待确认或用户暂停时禁止回收。真实恢复后内存采样有效，无probe_error；本轮没有人为制造OOM来验收预防性回收。
+7. 控制器内部收尾标记与用户暂停分开识别。前者允许继续原请求恢复，后者禁止自动UI恢复。长退避等待改为可响应停止，心跳覆盖已声明退避时间；健康且同版本的原批次运行后，会清除过期登录/回执警告；未确认回执时仍保留错误。
+
+## 验证与恢复
+
+- Linux隔离目录：豆包38项、元宝38项、控制器/回执/稳定性43项，合计119项通过；真实wire/hydrated快照回放通过。
+- 四个实际故障点（元宝102、112；豆包22、26）均已完成，随后多题继续推进，回执与数据库一致。不是只检查systemd存活。
+- 恢复映射210/210文件SHA与服务器一致。源码快照534文件、530个唯一校验路径；生产导出296文件。快照不包含登录、队列、凭据或完整运行依赖。
+- 原始诊断、部署备份和完整证据保存在服务器`/opt/monitor/geo-capture/maintenance/20261022-native-stall`。本地[实测证据](verification.json)、[原生回归](test-results.json)、[控制器回归](controller-test-results.json)用于复核。
+- 最后原生部署只替换经SHA核对的源码，保留原任务。部署过程中发现的长sleep停止超时已经改成可响应停止；不要继续使用旧手工重置/盲重发脚本。
+
+当前已修复所观测的停滞并恢复执行。剩余整批任务及跨日无人值守还没有完成真实验收，不能把本轮测试描述成以后永不卡住。
+'''
+(D/'REPORT.md').write_text(report,encoding='utf8');print(json.dumps({'at':stamp,'doubao1':n('doubao1'),'yuanbao':n('yuanbao')}))

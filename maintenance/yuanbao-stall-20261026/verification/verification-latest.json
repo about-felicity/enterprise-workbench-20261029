@@ -1,0 +1,255 @@
+{
+  "at": 1792977783.5038493,
+  "health": {
+    "batch": "geo-panel-yuanbao-20261025-090004-5b28fa76",
+    "planned": 168,
+    "prompt_mode": "question_only",
+    "model": "yuanbao",
+    "captured": 87,
+    "geo_processed": 87,
+    "delivery_errors": [],
+    "nontext_observations": 0,
+    "nontext_processed": 0,
+    "nontext_pending": 0,
+    "unavailable": 0,
+    "time": 1792977776.1164353,
+    "heartbeat_expires_at": 1792977926.1164355,
+    "bridge_pid": 63262,
+    "tasks": {
+      "completed": 87,
+      "pending": 81
+    },
+    "status": "running",
+    "memory": {
+      "app_alive": true,
+      "pid": 6755,
+      "java_alloc_kib": 34896,
+      "java_size_kib": 133200,
+      "java_limit_kib": 524288,
+      "java_fraction": 0.066558837890625,
+      "native_alloc_kib": 281788,
+      "app_pss_kib": 881090,
+      "container_bytes": 1796026368,
+      "container_working_bytes": 1303490560,
+      "container_limit_bytes": 4294967296,
+      "container_fraction": 0.30349254608154297,
+      "app_pss_fraction": 0.2100682258605957,
+      "sampled_at": 1792977753.607149,
+      "last_exit": {
+        "pid": 4403,
+        "reason": "low_memory"
+      },
+      "pending": "",
+      "high_samples": 0
+    },
+    "progress": {
+      "phase": "rate_wait",
+      "task_id": "38e21206-8685-5f32-b0f8-871c594e238e",
+      "ordinal": 88,
+      "changed_at": 1792977769.3134327,
+      "next_at": 1792977777.855465
+    }
+  },
+  "cases": [
+    {
+      "ordinal": 84,
+      "state": "completed",
+      "request_id": "e13263dfb608010d5fc336a594694d23",
+      "answer_id": "0RWMKU4pn1M_2",
+      "capture_retries": 0,
+      "body_chars": 2784,
+      "sources": 19,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "native_app_relaunch_for_readback": 1,
+        "native_original_history_restored_after_exit": 1,
+        "read_transport_failure": 288,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 85,
+      "state": "completed",
+      "request_id": "aa2fcdf4a911295ae003bda72ad7a1fa",
+      "answer_id": "0RXxexTvTMG_2",
+      "capture_retries": 0,
+      "body_chars": 2358,
+      "sources": 48,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 86,
+      "state": "completed",
+      "request_id": "fc86bf1d3a07304beaed7417e981a89e",
+      "answer_id": "0RXxexTvTMH_2",
+      "capture_retries": 0,
+      "body_chars": 1661,
+      "sources": 39,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 87,
+      "state": "completed",
+      "request_id": "0078d78384091decfa90841420454152",
+      "answer_id": "0RXxexTvTMI_2",
+      "capture_retries": 0,
+      "body_chars": 1800,
+      "sources": 12,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 88,
+      "state": "pending",
+      "request_id": null,
+      "answer_id": null,
+      "capture_retries": 0,
+      "body_chars": 0,
+      "sources": 0,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "enqueued": 1
+      }
+    },
+    {
+      "ordinal": 89,
+      "state": "pending",
+      "request_id": null,
+      "answer_id": null,
+      "capture_retries": 0,
+      "body_chars": 0,
+      "sources": 0,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "enqueued": 1
+      }
+    },
+    {
+      "ordinal": 90,
+      "state": "pending",
+      "request_id": null,
+      "answer_id": null,
+      "capture_retries": 0,
+      "body_chars": 0,
+      "sources": 0,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "enqueued": 1
+      }
+    }
+  ],
+  "postgres": [
+    {
+      "status": "success",
+      "n": 87
+    }
+  ],
+  "mapping_files": 8,
+  "mapping_mismatches": [],
+  "app_pid": "6755",
+  "memory_events": "low 0\nhigh 0\nmax 47802\noom 7\noom_kill 4\noom_group_kill 0",
+  "service": "active",
+  "nontext_receipts": 0,
+  "deployment": {
+    "at": 1792977270.485255,
+    "files": [
+      {
+        "source": "redroid-deploy/question_only_adapters.py",
+        "server": "/home/user/redroid-doubao/geo-batch-code/question_only_adapters.py",
+        "before": "638f2e5bbc08473e38691b09211ff9f58fd4f04ea33bf232ff31f69e080a269c",
+        "sha256": "3b3e344c088e9c243312116c3e29dc851e714cacc9edf827ac85215b8104a462"
+      },
+      {
+        "source": "redroid-deploy/question_only_worker.py",
+        "server": "/home/user/redroid-doubao/geo-batch-code/question_only_worker.py",
+        "before": "ffaa12abbf8a7835b9dbe811a277db3cd7f9b2eb2ca8512bcd08e4b5f60e7695",
+        "sha256": "2e0c5422f61129473e7c03559764566329f6ef0931adc3c36e3f4c4984af368d"
+      },
+      {
+        "source": "yuanbao-deploy/history_refresh.py",
+        "server": "/home/user/redroid-yuanbao/history_refresh.py",
+        "before": "103103912a82dd564a10fc5743344ef1e54b11a109a626fa9b19f0b05fae3a03",
+        "sha256": "d149469c32992e84e495c86c5093a76fdd3eb86ed6e8836e5d863b191bd3a4e6"
+      },
+      {
+        "source": "yuanbao-deploy/initial_binding.py",
+        "server": "/home/user/redroid-yuanbao/initial_binding.py",
+        "before": null,
+        "sha256": "0cf1d9bd2bef518a694a19cb7064006458a4de0a1ad988043b6f2402b5b90550"
+      },
+      {
+        "source": "yuanbao-deploy/tests/test_initial_binding.py",
+        "server": "/home/user/redroid-yuanbao/tests/test_initial_binding.py",
+        "before": null,
+        "sha256": "233e54a51ffb2877f3dc3d15100f03291418c350932614f988ae4b866731f16f"
+      },
+      {
+        "source": "yuanbao-deploy/native_client.py",
+        "server": "/home/user/redroid-yuanbao/native_client.py",
+        "sha256": "98614925264d4ef31d347ecf55b749f51b04a32167130cc2421da32b289f12de"
+      },
+      {
+        "source": "yuanbao-deploy/tests/test_history_refresh.py",
+        "server": "/home/user/redroid-yuanbao/tests/test_history_refresh.py",
+        "sha256": "3ff4e81099af1f75b6be54c8a4b588d088e2968693c10314041510f8b1812df4"
+      },
+      {
+        "source": "yuanbao-deploy/tests/test_native_client_recovery.py",
+        "server": "/home/user/redroid-yuanbao/tests/test_native_client_recovery.py",
+        "sha256": "fb2e2de1d367914c4d62b49de452d7fd3a2f9c59d5c1bc428ef710a07a851e14"
+      }
+    ],
+    "queue_reset": false,
+    "app_restarted": false,
+    "only_reader_restarted": "geo-native@geo-panel-yuanbao-20261025-090004-5b28fa76.service",
+    "tests": {
+      "yuanbao": 68,
+      "shared": 96,
+      "failures": 0
+    }
+  },
+  "regression": {
+    "yuanbao_tests": 60,
+    "new_tests": 14,
+    "shared_tests": 96,
+    "passed": 156,
+    "failures": 0,
+    "new_model_questions_in_tests": 0
+  },
+  "original_recovered": true
+}

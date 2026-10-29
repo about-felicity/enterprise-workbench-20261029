@@ -1,0 +1,22 @@
+{
+  "at": 1792084182.039985,
+  "test_id": "creation-soak6h-rosterfix-1792062355",
+  "scope": "Existing shared ledger conservative estimates, not provider invoice. Window is reservation creation time.",
+  "jobs": [
+    {
+      "job_id": "creation-1792060761-3c2baae0",
+      "batch_total": {
+        "calls": 48,
+        "settled_estimate_cny": 0.536386,
+        "outstanding_reservation_cny": 0,
+        "usage_unknown_or_reserved": 0
+      },
+      "window_new_calls": {
+        "calls": 1,
+        "settled_estimate_cny": 0.013517,
+        "outstanding_reservation_cny": 0,
+        "usage_unknown_or_reserved": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+import json
+from pathlib import Path
+p=Path('geo-monitor-deploy/panel.html');html=p.read_text(encoding='utf-8')
+assert 'id="scheduleTime"' not in html
+editor='''</section><section class="card schedule-editor"><div><h2>每日定时配置</h2><p class="subtle">统一设置所有模型每天的启动时间。百度采完后启动文心；各模型轮数和提问间隔在下方分别配置。</p></div><div class="schedule-fields"><label class="schedule-switch"><input id="scheduleEnabled" type="checkbox" onchange="markScheduleDirty()">启用每日定时</label><label for="scheduleTime">每天开始时间（北京时间）<input id="scheduleTime" type="time" required onchange="markScheduleDirty()"></label><button id="scheduleSave" class="primary" onclick="saveSchedule()" disabled>保存每日定时</button></div><p id="scheduleNext" class="subtle" role="status">正在读取定时计划…</p><p class="hint">保存后从下次定时起生效，当前采集继续运行；关闭定时不会停止正在执行的任务。</p></section><div class="workspace">'''
+html=html.replace('</section><div class="workspace">',editor,1)
+assert 'id="scheduleTime"' in html
+css='''.schedule-editor{margin:18px 0}.schedule-fields{display:flex;align-items:end;gap:24px;flex-wrap:wrap}.schedule-fields label{display:grid;gap:6px}.schedule-fields input[type=time]{padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:white;min-width:150px}.schedule-fields .schedule-switch{display:flex;align-items:center;gap:8px;padding-bottom:10px}.schedule-switch input{accent-color:var(--green);width:18px;height:18px}.model-logo{width:30px;height:30px;object-fit:contain;flex-shrink:0}.model-identity{display:inline-flex;align-items:center;gap:9px;min-width:0}.card-head h2{display:flex;align-items:center;gap:10px}.daily-model .model-identity{margin-bottom:5px}@media(max-width:650px){.schedule-fields{gap:14px}.schedule-fields>label:not(.schedule-switch){flex:1}.schedule-fields input[type=time]{width:100%}.schedule-fields button{width:100%}.model-logo{width:26px;height:26px}}
+'''
+html=html.replace('</style>',css+'</style>',1)
+logos=json.loads(Path('geo-monitor-deploy/maintenance/20261016-schedule-logos/model-logos.json').read_text())
+js='const modelLogos='+json.dumps(logos,separators=(',',':'))+''';
+function modelLogo(id){const img=node('img',undefined,'model-logo');img.src=modelLogos[id.startsWith('doubao')?'doubao':id];img.alt=({doubao1:'豆包',doubao2:'豆包',deepseek:'DeepSeek',wenxin_card:'文心',baidu_ai:'百度',yuanbao:'元宝'})[id]+' Logo';return img}
+function modelIdentity(m){const span=node('span',undefined,'model-identity');span.append(modelLogo(m.id),node('strong',m.name));return span}
+let scheduleDirty=false,scheduleWorking=false,scheduleRevision=0;
+let schedulePending=JSON.parse(sessionStorage.getItem('geo.capture.schedule.pending')||'null');
+function markScheduleDirty(){scheduleDirty=true;$('scheduleSave').disabled=scheduleWorking||!connected;$('scheduleNext').textContent='定时设置尚未保存'}
+function renderSchedule(s){if(!s)return;if(!scheduleDirty&&!schedulePending){scheduleRevision=s.revision||0;$('scheduleTime').value=s.time||'05:00';$('scheduleEnabled').checked=!!s.enabled;$('scheduleNext').textContent=s.enabled?'下次启动：'+(s.next_run?new Date(s.next_run).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',hour12:false}):'按每日计划')+'（北京时间）':'每日定时已关闭；当前任务继续运行'}$('scheduleSave').textContent=schedulePending?'核对并重试定时保存':scheduleWorking?'正在保存…':'保存每日定时';$('scheduleSave').disabled=scheduleWorking||!connected||(!scheduleDirty&&!schedulePending);$('scheduleTime').disabled=scheduleWorking||!!schedulePending;$('scheduleEnabled').disabled=scheduleWorking||!!schedulePending;$('dailyScheduleInfo').textContent=s.enabled?'北京时间 '+s.time+' · 百度采完后启动文心':'每日定时已关闭 · 可手动开始或继续任务';$('dailySchedule').textContent=s.enabled?'每天北京时间 '+s.time+' 启动 · 百度采完后启动文心 · 跑满设置轮数正常结束':'每日定时已关闭；当前采集继续运行'}
+async function saveSchedule(){if(scheduleWorking||!connected)return;const body=schedulePending?.body||{enabled:$('scheduleEnabled').checked,time:$('scheduleTime').value,revision:scheduleRevision};if(!/^([01]\\d|2[0-3]):[0-5]\\d$/.test(body.time)){notify('请选择有效的每天开始时间',true);return}schedulePending=schedulePending||{body,key:Array.from(crypto.getRandomValues(new Uint8Array(16))).map(x=>x.toString(16).padStart(2,'0')).join('')};sessionStorage.setItem('geo.capture.schedule.pending',JSON.stringify(schedulePending));scheduleWorking=true;$('scheduleSave').disabled=true;try{const r=await fetch('/api/control/'+'schedule',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':csrf,'X-Action-Id':schedulePending.key},body:JSON.stringify(schedulePending.body),signal:AbortSignal.timeout(30000)});const result=await r.json();if(r.status<500){schedulePending=null;sessionStorage.removeItem('geo.capture.schedule.pending')}if(!r.ok||!result.ok)throw Error(result.message||'定时保存结果待核对，请重试');scheduleDirty=false;renderSchedule(result.schedule);notify(result.message);await refresh()}catch(e){notify(e.message,true)}finally{scheduleWorking=false;$('scheduleSave').textContent=schedulePending?'核对并重试定时保存':'保存每日定时';$('scheduleSave').disabled=!connected||(!scheduleDirty&&!schedulePending);$('scheduleTime').disabled=!!schedulePending;$('scheduleEnabled').disabled=!!schedulePending}}
+'''
+html=html.replace('function render(){',js+'\nfunction render(){',1)
+html=html.replace("node('strong',m.name)","modelIdentity(m)")
+# Avoid replacing the helper's own strong node, which would recurse.
+html=html.replace('span.append(modelLogo(m.id),modelIdentity(m))',"span.append(modelLogo(m.id),node('strong',m.name))")
+html=html.replace("node('span',item.id.startsWith('doubao')?'豆':item.name[0],'nav-icon')","modelLogo(item.id)")
+html=html.replace("$('modelTitle').textContent=m.name+' · 当前执行批次'","$('modelTitle').replaceChildren(modelLogo(m.id),node('span',m.name+' · 当前执行批次'))")
+html=html.replace('connected=true;if(!selected','connected=true;renderSchedule(data.schedule);if(!selected')
+p.write_text(html,encoding='utf-8')
+print('Schedule editor and five embedded logo assets added')

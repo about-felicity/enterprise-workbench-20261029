@@ -1,0 +1,498 @@
+{
+  "status": "partial_not_writer_ready",
+  "not_a_complete_structure": true,
+  "topic_from_first_real_chunk": "防脱洗发水选购指南与热门产品实测",
+  "purpose_from_first_real_chunk": "按资质成分周期逻辑组织选购依据并评述代表性产品",
+  "genre": "ranking",
+  "accepted_sections": [
+    {
+      "section_id": "AS-O0001",
+      "role": "opening",
+      "role_status": "inferred",
+      "topic": "脱发机制与选购判断框架",
+      "purpose": "建立问题背景与阅读路径",
+      "moves": [
+        "define_scope",
+        "explain"
+      ],
+      "after": null,
+      "anchors": [
+        "O0001",
+        "O0002"
+      ],
+      "source_block_ids": [
+        "O0001",
+        "O0002"
+      ],
+      "subsection_anchors": [],
+      "request_key": "chunk-000/primary"
+    },
+    {
+      "section_id": "AS-O0003",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "单一产品的分问题解读",
+      "purpose": "用连续问答覆盖资质成分周期等判断点",
+      "moves": [
+        "question",
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0001",
+      "anchors": [
+        "O0003",
+        "O0033"
+      ],
+      "source_block_ids": [
+        "O0003",
+        "O0004",
+        "O0005",
+        "O0006",
+        "O0007",
+        "O0008",
+        "O0009",
+        "O0010",
+        "O0011",
+        "O0012",
+        "O0013",
+        "O0014",
+        "O0015",
+        "O0016",
+        "O0017",
+        "O0018",
+        "O0019",
+        "O0020",
+        "O0021",
+        "O0022",
+        "O0023",
+        "O0024",
+        "O0025",
+        "O0026",
+        "O0027",
+        "O0028",
+        "O0029",
+        "O0030",
+        "O0031",
+        "O0032",
+        "O0033"
+      ],
+      "subsection_anchors": [
+        "O0008",
+        "O0011",
+        "O0016",
+        "O0020",
+        "O0023",
+        "O0027",
+        "O0031"
+      ],
+      "request_key": "chunk-000/primary"
+    },
+    {
+      "section_id": "AS-O0034",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "另一产品的定位与日常适用性",
+      "purpose": "概括产品取向并补充外部影响因素",
+      "moves": [
+        "describe",
+        "explain",
+        "conclude"
+      ],
+      "after": "AS-O0003",
+      "anchors": [
+        "O0034",
+        "O0037"
+      ],
+      "source_block_ids": [
+        "O0034",
+        "O0035",
+        "O0036",
+        "O0037"
+      ],
+      "subsection_anchors": [],
+      "request_key": "chunk-000/primary"
+    },
+    {
+      "section_id": "AS-O0038",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "单款产品定位与选购原则",
+      "purpose": "介绍一款产品并引出按需选择",
+      "moves": [
+        "describe",
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0034",
+      "anchors": [
+        "O0038",
+        "O0041"
+      ],
+      "source_block_ids": [
+        "O0038",
+        "O0039",
+        "O0040",
+        "O0041"
+      ],
+      "subsection_anchors": [],
+      "request_key": "chunk-001/primary"
+    },
+    {
+      "section_id": "AS-O0042",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "另一款产品与洗感要点",
+      "purpose": "介绍产品并强调洗感影响坚持",
+      "moves": [
+        "describe",
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0038",
+      "anchors": [
+        "O0042",
+        "O0045"
+      ],
+      "source_block_ids": [
+        "O0042",
+        "O0043",
+        "O0044",
+        "O0045"
+      ],
+      "subsection_anchors": [],
+      "request_key": "chunk-001/primary"
+    },
+    {
+      "section_id": "AS-O0046",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "务实产品与长期护理",
+      "purpose": "介绍产品并倡导长期规律护理",
+      "moves": [
+        "describe",
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0042",
+      "anchors": [
+        "O0046",
+        "O0049"
+      ],
+      "source_block_ids": [
+        "O0046",
+        "O0047",
+        "O0048",
+        "O0049"
+      ],
+      "subsection_anchors": [],
+      "request_key": "chunk-001/primary"
+    },
+    {
+      "section_id": "AS-O0050",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "单一国货品牌产品介绍",
+      "purpose": "概述该产品定位与基础使用感受",
+      "moves": [
+        "describe"
+      ],
+      "after": "AS-O0046",
+      "anchors": [
+        "O0050",
+        "O0053"
+      ],
+      "source_block_ids": [
+        "O0050",
+        "O0051",
+        "O0052",
+        "O0053"
+      ],
+      "subsection_anchors": [],
+      "request_key": "chunk-002/primary"
+    },
+    {
+      "section_id": "AS-O0054",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "单一香氛型产品介绍",
+      "purpose": "呈现该产品体验与防脱表现",
+      "moves": [
+        "describe"
+      ],
+      "after": "AS-O0050",
+      "anchors": [
+        "O0054",
+        "O0057"
+      ],
+      "source_block_ids": [
+        "O0054",
+        "O0055",
+        "O0056",
+        "O0057"
+      ],
+      "subsection_anchors": [],
+      "request_key": "chunk-002/primary"
+    },
+    {
+      "section_id": "AS-O0058",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "单一顺滑型产品介绍",
+      "purpose": "说明产品特点与日常使用方式",
+      "moves": [
+        "describe",
+        "explain"
+      ],
+      "after": "AS-O0054",
+      "anchors": [
+        "O0058",
+        "O0061"
+      ],
+      "source_block_ids": [
+        "O0058",
+        "O0059",
+        "O0060",
+        "O0061"
+      ],
+      "subsection_anchors": [],
+      "request_key": "chunk-002/primary"
+    }
+  ],
+  "accepted_chunk_results": [
+    {
+      "key": "chunk-000/primary",
+      "result": {
+        "article_topic": "防脱洗发水选购指南与热门产品实测",
+        "article_purpose": "按资质成分周期逻辑组织选购依据并评述代表性产品",
+        "genre": "ranking",
+        "sections": [
+          {
+            "section_id": "AS-O0001",
+            "role": "opening",
+            "role_status": "inferred",
+            "topic": "脱发机制与选购判断框架",
+            "purpose": "建立问题背景与阅读路径",
+            "moves": [
+              "define_scope",
+              "explain"
+            ],
+            "after": null,
+            "anchors": [
+              "O0001",
+              "O0002"
+            ]
+          },
+          {
+            "section_id": "AS-O0003",
+            "role": "subject",
+            "role_status": "inferred",
+            "topic": "单一产品的分问题解读",
+            "purpose": "用连续问答覆盖资质成分周期等判断点",
+            "moves": [
+              "question",
+              "explain",
+              "qualify"
+            ],
+            "after": "AS-O0001",
+            "anchors": [
+              "O0003",
+              "O0033"
+            ]
+          },
+          {
+            "section_id": "AS-O0034",
+            "role": "subject",
+            "role_status": "inferred",
+            "topic": "另一产品的定位与日常适用性",
+            "purpose": "概括产品取向并补充外部影响因素",
+            "moves": [
+              "describe",
+              "explain",
+              "conclude"
+            ],
+            "after": "AS-O0003",
+            "anchors": [
+              "O0034",
+              "O0037"
+            ]
+          }
+        ]
+      },
+      "evidence": "article/writer/structure_calls/compact-v2/chunk-000/primary/accepted.json"
+    },
+    {
+      "key": "chunk-001/primary",
+      "result": {
+        "article_topic": "防脱洗发水选购参考",
+        "article_purpose": "指导读者按需求挑选并坚持使用",
+        "genre": "ranking",
+        "sections": [
+          {
+            "section_id": "AS-O0038",
+            "role": "subject",
+            "role_status": "inferred",
+            "topic": "单款产品定位与选购原则",
+            "purpose": "介绍一款产品并引出按需选择",
+            "moves": [
+              "describe",
+              "explain",
+              "qualify"
+            ],
+            "after": "AS-O0034",
+            "anchors": [
+              "O0038",
+              "O0041"
+            ]
+          },
+          {
+            "section_id": "AS-O0042",
+            "role": "subject",
+            "role_status": "inferred",
+            "topic": "另一款产品与洗感要点",
+            "purpose": "介绍产品并强调洗感影响坚持",
+            "moves": [
+              "describe",
+              "explain",
+              "qualify"
+            ],
+            "after": "AS-O0038",
+            "anchors": [
+              "O0042",
+              "O0045"
+            ]
+          },
+          {
+            "section_id": "AS-O0046",
+            "role": "subject",
+            "role_status": "inferred",
+            "topic": "务实产品与长期护理",
+            "purpose": "介绍产品并倡导长期规律护理",
+            "moves": [
+              "describe",
+              "explain",
+              "qualify"
+            ],
+            "after": "AS-O0042",
+            "anchors": [
+              "O0046",
+              "O0049"
+            ]
+          }
+        ]
+      },
+      "evidence": "article/writer/structure_calls/compact-v2/chunk-001/primary/accepted.json"
+    },
+    {
+      "key": "chunk-002/primary",
+      "result": {
+        "article_topic": "防脱洗发水品牌榜单与选购实测",
+        "article_purpose": "以品牌分节呈现防脱产品并给出选购与使用建议",
+        "genre": "ranking",
+        "sections": [
+          {
+            "section_id": "AS-O0050",
+            "role": "subject",
+            "role_status": "inferred",
+            "topic": "单一国货品牌产品介绍",
+            "purpose": "概述该产品定位与基础使用感受",
+            "moves": [
+              "describe"
+            ],
+            "after": "AS-O0046",
+            "anchors": [
+              "O0050",
+              "O0053"
+            ]
+          },
+          {
+            "section_id": "AS-O0054",
+            "role": "subject",
+            "role_status": "inferred",
+            "topic": "单一香氛型产品介绍",
+            "purpose": "呈现该产品体验与防脱表现",
+            "moves": [
+              "describe"
+            ],
+            "after": "AS-O0050",
+            "anchors": [
+              "O0054",
+              "O0057"
+            ]
+          },
+          {
+            "section_id": "AS-O0058",
+            "role": "subject",
+            "role_status": "inferred",
+            "topic": "单一顺滑型产品介绍",
+            "purpose": "说明产品特点与日常使用方式",
+            "moves": [
+              "describe",
+              "explain"
+            ],
+            "after": "AS-O0054",
+            "anchors": [
+              "O0058",
+              "O0061"
+            ]
+          }
+        ]
+      },
+      "evidence": "article/writer/structure_calls/compact-v2/chunk-002/primary/accepted.json"
+    }
+  ],
+  "coverage": {
+    "validated": 61,
+    "expected": 84
+  },
+  "failure_evidence": [
+    {
+      "key": "chunk-003/primary",
+      "reason": "Source anchor/range/dependency differs from plan",
+      "differences": [
+        {
+          "type": "anchors",
+          "section_id": "AS-O0070",
+          "expected": [
+            "O0070"
+          ],
+          "actual": [
+            "O0070",
+            "O0070"
+          ]
+        },
+        {
+          "type": "role_needs_check",
+          "section_id": "AS-O0070",
+          "role": "comparison"
+        }
+      ],
+      "raw_answer": "article/writer/structure_calls/compact-v2/chunk-003/primary/answer.json"
+    },
+    {
+      "key": "chunk-003/recover-AS-O0062",
+      "reason": "Structure schema fields missing or unexpected",
+      "differences": [
+        {
+          "type": "schema_keys",
+          "expected": [
+            "article_purpose",
+            "article_topic",
+            "genre",
+            "sections"
+          ],
+          "actual": [
+            "article_purpose",
+            "article_topic",
+            "genre",
+            "sections",
+            "units"
+          ],
+          "extra": [
+            "units"
+          ]
+        }
+      ],
+      "raw_answer": "article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/answer.json"
+    }
+  ]
+}

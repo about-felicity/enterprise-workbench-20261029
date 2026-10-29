@@ -1,0 +1,59 @@
+{
+  "input_sha256": "f1393aa9bc91501f19ab2fb9c14fcf43937bcd8dc58d41343df78bcaebf20eff",
+  "result_sha256": "6dcfdc9499eade9f1ba49568eb9a12920ef9f7fa0da4131e5022337bc6aba782",
+  "result": {
+    "article_topic": "可用资料的组织方式",
+    "article_purpose": "以同一问题组织已有资料",
+    "genre": "ranking",
+    "sections": [
+      {
+        "section_id": "AS-O0038",
+        "role": "subject",
+        "role_status": "inferred",
+        "topic": "说明当前部分",
+        "purpose": "解释前提并承接下文",
+        "moves": [
+          "explain",
+          "qualify"
+        ],
+        "after": "AS-O0034",
+        "anchors": [
+          "O0038",
+          "O0041"
+        ]
+      },
+      {
+        "section_id": "AS-O0042",
+        "role": "subject",
+        "role_status": "inferred",
+        "topic": "说明当前部分",
+        "purpose": "解释前提并承接下文",
+        "moves": [
+          "explain",
+          "qualify"
+        ],
+        "after": "AS-O0038",
+        "anchors": [
+          "O0042",
+          "O0045"
+        ]
+      },
+      {
+        "section_id": "AS-O0046",
+        "role": "subject",
+        "role_status": "inferred",
+        "topic": "说明当前部分",
+        "purpose": "解释前提并承接下文",
+        "moves": [
+          "explain",
+          "qualify"
+        ],
+        "after": "AS-O0042",
+        "anchors": [
+          "O0046",
+          "O0049"
+        ]
+      }
+    ]
+  }
+}

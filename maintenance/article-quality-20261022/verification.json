@@ -1,0 +1,298 @@
+{
+  "at": 1792660753.6234179,
+  "services": {
+    "geo-content-api": "active",
+    "geo-content-worker": "active",
+    "geo-creation-studio": "active"
+  },
+  "api_http_status": 200,
+  "frontend_http_status": 200,
+  "frontend_matches_deployed_source": true,
+  "browser_acceptance": false,
+  "source_sha_verified": 44,
+  "deployment_drain_controls_restored": true,
+  "worker_heartbeat_recent": true,
+  "costs": [
+    [
+      "2026-10-21",
+      2.8020491200000004,
+      0
+    ],
+    [
+      "2026-10-22",
+      0.9096056000000002,
+      0
+    ]
+  ],
+  "new_cost_cny": 0,
+  "unknown_ids_unchanged": true,
+  "unknown_count": 3,
+  "original_controls_match_initial_snapshot": {
+    "creation-1792060761-3c2baae0": true,
+    "creation-1792060415-1e4e3a8d": true,
+    "creation-1792487912-b64bc49a": true,
+    "creation-1792475798-478ca528": true,
+    "creation-1792621034-c569469d": true,
+    "creation-1792475798-7d2fc250": true,
+    "creation-1792576129-389f575e": false,
+    "creation-1792636960-aa0d6ec9": true,
+    "creation-1792575159-0a8f9221": false,
+    "creation-1792526406-06126e43": true,
+    "creation-1792479954-8a96bc88": true,
+    "creation-1792526406-8f93ccca": true,
+    "creation-1792556219-bbc55e13": true,
+    "creation-1792487019-ffa40955": true,
+    "creation-1792575864-f2f8afb2": false,
+    "creation-1792620783-e9ce20db": true
+  },
+  "jobs": [
+    {
+      "id": "creation-1792636960-aa0d6ec9",
+      "health": "complete_with_failures",
+      "active": false,
+      "paused": false,
+      "queue": {
+        "writer:revision_requested": 33,
+        "writer:accepted": 37,
+        "research:accepted": 15,
+        "review:revision_requested": 33,
+        "review:accepted": 2,
+        "review:needs_attention": 4,
+        "writer:needs_attention": 9,
+        "taxonomy:accepted": 1
+      },
+      "approved_articles": 2
+    },
+    {
+      "id": "creation-1792621034-c569469d",
+      "health": "completed_with_failures",
+      "active": false,
+      "paused": true,
+      "queue": {
+        "review:revision_requested": 44,
+        "research:accepted": 15,
+        "writer:accepted": 52,
+        "writer:revision_requested": 41,
+        "research:revision_requested": 3,
+        "writer:needs_attention": 7,
+        "review:accepted": 1,
+        "review:needs_attention": 7,
+        "taxonomy:accepted": 1
+      },
+      "approved_articles": 1
+    },
+    {
+      "id": "creation-1792620783-e9ce20db",
+      "health": "response_saved",
+      "active": true,
+      "paused": true,
+      "queue": {
+        "research:accepted": 7,
+        "writer:revision_requested": 13,
+        "research:pending": 7,
+        "review:revision_requested": 18,
+        "writer:needs_attention": 5,
+        "writer:accepted": 20,
+        "review:needs_attention": 1,
+        "taxonomy:accepted": 1,
+        "research:revision_requested": 1,
+        "review:claimed": 1
+      },
+      "approved_articles": 0
+    },
+    {
+      "id": "creation-1792576129-389f575e",
+      "health": "complete_with_failures",
+      "active": false,
+      "paused": false,
+      "queue": {
+        "writer:accepted": 2,
+        "research:revision_requested": 5,
+        "writer:revision_requested": 10,
+        "research:accepted": 2,
+        "taxonomy:accepted": 1,
+        "writer:needs_attention": 2,
+        "review:revision_requested": 2
+      },
+      "approved_articles": 0
+    },
+    {
+      "id": "creation-1792575864-f2f8afb2",
+      "health": "idle",
+      "active": false,
+      "paused": false,
+      "queue": {
+        "taxonomy:accepted": 1
+      },
+      "approved_articles": 0
+    },
+    {
+      "id": "creation-1792575159-0a8f9221",
+      "health": "complete_with_failures",
+      "active": false,
+      "paused": false,
+      "queue": {
+        "writer:revision_requested": 75,
+        "review:revision_requested": 30,
+        "research:accepted": 12,
+        "research:revision_requested": 3,
+        "writer:accepted": 28,
+        "writer:needs_attention": 10,
+        "review:needs_attention": 4,
+        "taxonomy:accepted": 1
+      },
+      "approved_articles": 0
+    },
+    {
+      "id": "creation-1792556219-bbc55e13",
+      "health": "complete",
+      "active": false,
+      "paused": false,
+      "queue": {
+        "writer:revision_requested": 37,
+        "review:accepted": 14,
+        "research:revision_requested": 4,
+        "research:accepted": 19,
+        "writer:accepted": 15,
+        "review:revision_requested": 2,
+        "taxonomy:accepted": 1
+      },
+      "approved_articles": 14
+    },
+    {
+      "id": "creation-1792526406-8f93ccca",
+      "health": "complete",
+      "active": false,
+      "paused": false,
+      "queue": {
+        "writer:accepted": 15,
+        "writer:revision_requested": 20,
+        "review:accepted": 14,
+        "research:accepted": 15,
+        "review:revision_requested": 1,
+        "research:revision_requested": 1,
+        "taxonomy:accepted": 1
+      },
+      "approved_articles": 15
+    },
+    {
+      "id": "creation-1792526406-06126e43",
+      "health": "complete",
+      "active": false,
+      "paused": false,
+      "queue": {
+        "writer:revision_requested": 12,
+        "writer:accepted": 15,
+        "review:accepted": 15,
+        "research:accepted": 15,
+        "taxonomy:accepted": 1,
+        "research:revision_requested": 1
+      },
+      "approved_articles": 15
+    },
+    {
+      "id": "creation-1792487912-b64bc49a",
+      "health": "completed_with_failures",
+      "active": false,
+      "paused": true,
+      "queue": {
+        "research:revision_requested": 3,
+        "research:accepted": 4,
+        "writer:accepted": 4,
+        "taxonomy:accepted": 1,
+        "review:accepted": 3,
+        "review:revision_requested": 1,
+        "writer:revision_requested": 4,
+        "writer:needs_attention": 1
+      },
+      "approved_articles": 3
+    },
+    {
+      "id": "creation-1792487019-ffa40955",
+      "health": "complete",
+      "active": false,
+      "paused": false,
+      "queue": {
+        "review:accepted": 15,
+        "research:accepted": 15,
+        "writer:revision_requested": 8,
+        "research:revision_requested": 8,
+        "writer:accepted": 15,
+        "taxonomy:accepted": 1
+      },
+      "approved_articles": 15
+    },
+    {
+      "id": "creation-1792479954-8a96bc88",
+      "health": "complete",
+      "active": false,
+      "paused": false,
+      "queue": {
+        "research:accepted": 15,
+        "writer:accepted": 18,
+        "review:revision_requested": 5,
+        "review:accepted": 14,
+        "writer:revision_requested": 27,
+        "research:revision_requested": 3,
+        "taxonomy:accepted": 1
+      },
+      "approved_articles": 15
+    },
+    {
+      "id": "creation-1792475798-7d2fc250",
+      "health": "complete",
+      "active": false,
+      "paused": false,
+      "queue": {
+        "research:accepted": 1,
+        "taxonomy:accepted": 1,
+        "review:accepted": 1,
+        "writer:accepted": 1
+      },
+      "approved_articles": 1
+    },
+    {
+      "id": "creation-1792475798-478ca528",
+      "health": "complete",
+      "active": false,
+      "paused": false,
+      "queue": {
+        "research:accepted": 1,
+        "taxonomy:accepted": 1,
+        "review:accepted": 1,
+        "writer:accepted": 1
+      },
+      "approved_articles": 1
+    },
+    {
+      "id": "creation-1792060761-3c2baae0",
+      "health": "complete",
+      "active": false,
+      "paused": true,
+      "queue": {
+        "writer:accepted": 11,
+        "research:accepted": 10,
+        "review:accepted": 10,
+        "writer:revision_requested": 9,
+        "research:revision_requested": 7,
+        "review:revision_requested": 1,
+        "taxonomy:accepted": 1
+      },
+      "approved_articles": 10
+    },
+    {
+      "id": "creation-1792060415-1e4e3a8d",
+      "health": "complete",
+      "active": false,
+      "paused": false,
+      "queue": {
+        "review:accepted": 2,
+        "writer:accepted": 2,
+        "writer:revision_requested": 2,
+        "research:accepted": 2,
+        "taxonomy:accepted": 1
+      },
+      "approved_articles": 2
+    }
+  ]
+}

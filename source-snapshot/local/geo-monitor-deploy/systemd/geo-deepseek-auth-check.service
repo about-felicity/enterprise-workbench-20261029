@@ -1,0 +1,11 @@
+[Unit]
+Description=GEO DeepSeek account status read-only inspection
+After=docker.service geo-monitor-status.service
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/monitor/geo-capture
+ExecStart=/opt/monitor/geo-capture/venv/bin/python -B /opt/monitor/geo-capture/deepseek_auth_monitor.py
+MemoryMax=256M
+TasksMax=64
+TimeoutStartSec=110
+UMask=0077

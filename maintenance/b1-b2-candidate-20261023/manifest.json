@@ -1,0 +1,119 @@
+{
+  "version": "candidate-b1-b2-v1-20261023",
+  "at": "2026-10-23T10:21:13.587255+08:00",
+  "files": {
+    "creation/runtime.py": {
+      "sha256": "abba3c1084e0953740a00916c03987efab9d71e1d60afc7aee0a637772cbfb8d",
+      "baseline_sha256": "559b40f1ef1a62639d2128a665dcbd39fe1c7c235692fba666ef1d8fe3375322",
+      "change": "modified"
+    },
+    "geo_source_cards/consumer_prompts.py": {
+      "sha256": "d4f906ade8e9850ed7c7b5e4da388d25159867b00a15b7541904debd1871d2b0",
+      "baseline_sha256": "d4f906ade8e9850ed7c7b5e4da388d25159867b00a15b7541904debd1871d2b0",
+      "change": "unchanged"
+    },
+    "geo_source_cards/daily_editorial.py": {
+      "sha256": "c98993370318ea24f0fdf2d72e7f62f64148503bd13570f43f5fbe7548d12c75",
+      "baseline_sha256": "067e4c0d2d7b2bbdaa5578e779cea02d5b1056411d77dd165bf3f7e458d9e311",
+      "change": "modified"
+    },
+    "geo_source_cards/repair_router.py": {
+      "sha256": "1b2bdde41f9ad5ac9b6e1b9998c66172be19a18c71c35bba4afa95f33f043c0c",
+      "baseline_sha256": "827746fd8810f7acbdcb7bc65e8166701d540ba4275acc4efd5d7a2dde9271f8",
+      "change": "modified"
+    },
+    "geo_source_cards/review_arbitration.py": {
+      "sha256": "03aed7119d9d8cac26937e620c3c6710656b85dcddd875c517ec870aea6cdf7e",
+      "baseline_sha256": "a605e907b4276a4810e4f47b053d46d65f3b2fd1edaa5f303b31f7af63d08c7e",
+      "change": "modified"
+    },
+    "geo_source_cards/review_inputs.py": {
+      "sha256": "c8ff98708204ef2ce176c6dd2eeb7c9702e4421e5ef583c05895f612ca80a5ec",
+      "baseline_sha256": null,
+      "change": "added"
+    },
+    "geo_source_cards/review_quality.py": {
+      "sha256": "5da64b2cd498a58c3dffc83eb89da1d39d0629f8c420317dfe190728815d8dcf",
+      "baseline_sha256": "6bab1df74021cbf483191de397a960c5d6d6541d27185929deab5a346f6ad10a",
+      "change": "modified"
+    },
+    "geo_source_cards/section_writer.py": {
+      "sha256": "c96957d1b2c6e82487841f487ac079df0b7c68fbbc6ac45f43debe189599d22c",
+      "baseline_sha256": "c96957d1b2c6e82487841f487ac079df0b7c68fbbc6ac45f43debe189599d22c",
+      "change": "unchanged"
+    },
+    "geo_source_cards/structure_analyzer.py": {
+      "sha256": "f4f213e49d18bc7f99855e1cc545779d3fa42db61c04043d569ee8605915eede",
+      "baseline_sha256": "295a0f6a863030c69b4104a83151ac032e9c318cc69d4c66994ee9acd613990e",
+      "change": "modified"
+    },
+    "tests/test_arbitration_batches.py": {
+      "sha256": "6f0835d15c3b695f9f236e2650a00768b655cd72ef1935b8d3963c9f8dd61185",
+      "baseline_sha256": "6f0835d15c3b695f9f236e2650a00768b655cd72ef1935b8d3963c9f8dd61185",
+      "change": "unchanged"
+    },
+    "tests/test_b1_b2_offline.py": {
+      "sha256": "be144ebe82a5e10dbda1b229a7da2851e5ecca6e06a3f9992e7cced1bc561267",
+      "baseline_sha256": null,
+      "change": "added"
+    },
+    "tests/test_section_budget_revision.py": {
+      "sha256": "a3a475c6dae2915772b5b24d968d9d0ac0c351e594c4e9b7e4c3e8edf81a7b7c",
+      "baseline_sha256": "a3a475c6dae2915772b5b24d968d9d0ac0c351e594c4e9b7e4c3e8edf81a7b7c",
+      "change": "unchanged"
+    },
+    "tests/test_three_agent_quality.py": {
+      "sha256": "7c4bb8ece75ce4a68aa77213a5403d91337eba1eac8d6cd62aa49a99caeee83e",
+      "baseline_sha256": "3e7c16446477fa3260f1c6bf55bec7c5b187da09104c88316569cffbb770cfef",
+      "change": "modified"
+    }
+  },
+  "protected_prior_files": 33,
+  "prior_evidence_and_frozen_sha_unchanged": true,
+  "tracked_git_status_unchanged": true,
+  "existing_test_assertions_unchanged": true,
+  "tests": {
+    "new": {
+      "suite": "new",
+      "tests": 20,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "external_network_attempts": 0,
+      "real_api_calls": 0,
+      "synthetic_routing_not_real_model_acceptance": true
+    },
+    "engine": {
+      "suite": "engine",
+      "tests": 288,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "external_network_attempts": 0,
+      "real_api_calls": 0,
+      "synthetic_routing_not_real_model_acceptance": true
+    },
+    "creation": {
+      "suite": "creation",
+      "tests": 78,
+      "failures": 0,
+      "errors": 4,
+      "skips": 0,
+      "external_network_attempts": 0,
+      "real_api_calls": 0,
+      "synthetic_routing_not_real_model_acceptance": true
+    },
+    "creation_existing_platform_errors": [
+      "test_legacy_word_and_bundle_preserve_original_bytes (creation.test_materials.MaterialTests.test_legacy_word_and_bundle_preserve_original_bytes)",
+      "test_recovery_progress_reports_safe_fields_without_captcha_urls (creation.test_materials.MaterialTests.test_recovery_progress_reports_safe_fields_without_captcha_urls)",
+      "test_package_has_task_date_category_provenance_logs_and_original_word (creation.test_workflow.WorkflowTests.test_package_has_task_date_category_provenance_logs_and_original_word)",
+      "test_private_browser_identity_isolated_between_products (creation.test_workflow.WorkflowTests.test_private_browser_identity_isolated_between_products)"
+    ]
+  },
+  "real_api_calls": 0,
+  "balance_api_calls": 0,
+  "external_service_calls": 0,
+  "deployment": false,
+  "budget_changed": false,
+  "real_article_acceptance": "NOT_PERFORMED"
+}

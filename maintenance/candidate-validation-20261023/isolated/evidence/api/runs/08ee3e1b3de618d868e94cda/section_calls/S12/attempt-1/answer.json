@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S12\",\"heading\":\"云康防脱洗发水\",\"paragraphs\":[{\"text\":\"云康防脱洗发水目前可核对的信息集中在配方构成这一层：记录显示其配方中添加了侧柏叶、何首乌、当归等草本植萃成分，同时搭配泛醇成分，属于草本植萃与泛醇并行的组合思路。需要说明的是，这些只是配方中被写出的成分名称，并不等于对成品使用效果的验证，也不能据此推断它适合哪类头皮或发质。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0010\",\"CL0037\",\"CL0038\"]},{\"text\":\"质地方面，现有记录提到它的配方质地轻盈，另有记录将其描述为透明啫喱质地。两者指向的是同一个观察角度，即这款产品在形态上不走厚重路线，至于这种轻盈质地在实际清洗时是否带来具体的冲洗或蓬松表现，资料中没有更多可依据的内容，不宜代为延伸。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0010\",\"CL0039\"]},{\"text\":\"作为这份清单的收尾一款，云康更适合被当作需要自行补充信息的候选来对待。若你关注草本植萃与泛醇这类被明确写出的成分，可以把它列入进一步比对的名单；但在完整成分表、清洁体系细节与实际使用反馈尚未掌握之前，不建议仅凭成分名称就替它预设位置，选购时仍以自己能看到的产品标签与官方信息为准。\",\"statement_type\":\"general_advice\",\"claim_ids\":[]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4539,
+    "completion_tokens": 326,
+    "total_tokens": 4865,
+    "prompt_tokens_details": {
+      "cached_tokens": 4352
+    },
+    "prompt_cache_hit_tokens": 4352,
+    "prompt_cache_miss_tokens": 187
+  },
+  "request_id": "009075dd-4851-4cfa-a203-2906a143a076",
+  "model": "deepseek-flash"
+}

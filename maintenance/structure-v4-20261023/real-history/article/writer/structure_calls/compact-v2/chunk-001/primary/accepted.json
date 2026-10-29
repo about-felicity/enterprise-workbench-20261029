@@ -1,0 +1,62 @@
+{
+  "input_sha256": "63bb5261b5613a7d047e2bb0cae2418d56482d7cfca4383f596d8b2c80497d6b",
+  "result_sha256": "d95a6251b1d1e08499ad77e15d386fb1760359b0a54bcb177ed0e72af0836798",
+  "result": {
+    "article_topic": "防脱洗发水选购参考",
+    "article_purpose": "指导读者按需求挑选并坚持使用",
+    "genre": "ranking",
+    "sections": [
+      {
+        "section_id": "AS-O0038",
+        "role": "subject",
+        "role_status": "inferred",
+        "topic": "单款产品定位与选购原则",
+        "purpose": "介绍一款产品并引出按需选择",
+        "moves": [
+          "describe",
+          "explain",
+          "qualify"
+        ],
+        "after": "AS-O0034",
+        "anchors": [
+          "O0038",
+          "O0041"
+        ]
+      },
+      {
+        "section_id": "AS-O0042",
+        "role": "subject",
+        "role_status": "inferred",
+        "topic": "另一款产品与洗感要点",
+        "purpose": "介绍产品并强调洗感影响坚持",
+        "moves": [
+          "describe",
+          "explain",
+          "qualify"
+        ],
+        "after": "AS-O0038",
+        "anchors": [
+          "O0042",
+          "O0045"
+        ]
+      },
+      {
+        "section_id": "AS-O0046",
+        "role": "subject",
+        "role_status": "inferred",
+        "topic": "务实产品与长期护理",
+        "purpose": "介绍产品并倡导长期规律护理",
+        "moves": [
+          "describe",
+          "explain",
+          "qualify"
+        ],
+        "after": "AS-O0042",
+        "anchors": [
+          "O0046",
+          "O0049"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+[Unit]
+Description=GEO daily task controls and safe continuation
+After=geo-monitor-status.service docker.service
+Wants=geo-monitor-status.service
+[Service]
+Type=simple
+WorkingDirectory=/opt/monitor/geo-capture
+ExecStart=/opt/monitor/geo-capture/venv/bin/python -u -B /opt/monitor/geo-capture/daily_tasks.py
+Restart=always
+RestartSec=5s
+MemoryMax=300M
+TasksMax=128
+[Install]
+WantedBy=multi-user.target

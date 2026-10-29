@@ -1,0 +1,103 @@
+{
+  "index": 1,
+  "question": "请联网检索：中国国家博物馆的官方地址和开放时间是什么？请简洁回答，并提供官方信源链接。",
+  "time": "2026-10-06T17:42:32.710023+08:00",
+  "transport": "ADB",
+  "app": "com.larus.nova",
+  "headless": true,
+  "body_ui": "官方地址：北京市东城区东长安街16号（天安门广场东侧） \n开放时间：9:00‑17:30（16:30停止入馆）；每周一闭馆，法定节假日除外；6‑10月执行该夏令时间，其余年份常规：9:00‑17:00（16:00停止入馆） \n官方信源：https://www.chnmuseum.cn/cg/ \n \n提示：实行实名预约参观，免费入馆 。",
+  "body_with_citation_labels": "官方地址：北京市东城区东长安街16号（天安门广场东侧）[(中国国家博...)]\n开放时间：9:00‑17:30（16:30停止入馆）；每周一闭馆，法定节假日除外；6‑10月执行该夏令时间，其余年份常规：9:00‑17:00（16:00停止入馆）[(中国国家博...)]\n官方信源：https://www.chnmuseum.cn/cg/[(中国国家博...)]\n \n提示：实行实名预约参观，免费入馆[(中国国家博...)]。",
+  "body": "官方地址：北京市东城区东长安街16号（天安门广场东侧） \n开放时间：9:00‑17:30（16:30停止入馆）；每周一闭馆，法定节假日除外；6‑10月执行该夏令时间，其余年份常规：9:00‑17:00（16:00停止入馆） \n官方信源：https://www.chnmuseum.cn/cg/ \n \n提示：实行实名预约参观，免费入馆 。",
+  "sources": [
+    {
+      "index": 1,
+      "title": "服务_中国国家博物馆官方网站",
+      "url": "https://www.chnmuseum.cn/cg/?eqid=a3920ff90000629800000003647448c2",
+      "raw_url": "https://seclink.bytedance.com/?app_version=null&channel=null&seclink_version=1.1.0&scene=im&target=https%3A%2F%2Fwww.chnmuseum.cn%2Fcg%2F%3Feqid%3Da3920ff90000629800000003647448c2%26use_xbridge3%3Dtrue%26loader_name%3Dforest%26need_sec_link%3D1%26sec_link_scene%3Dim%26theme%3Dlight&sec_link_biz_tag=argus&seclink_settings_version=B350AFCAB4F3218AF5D74ADC624143E2&jumper_version=1&device_platform=android&os_name=android&lang=cn&app_id=482431&aid=482431&did=null",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 2,
+      "title": "中国国家博物馆官方网站",
+      "url": "https://www.chnmuseum.cn/?from=www.13dh.com",
+      "raw_url": "https://www.chnmuseum.cn/?from=www.13dh.com&use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 3,
+      "title": "参观导览 - 启蒙的艺术 - 中国国家博物馆",
+      "url": "https://www.chnmuseum.cn/Portals/0/web/zt/qimeng/cn/visit.html",
+      "raw_url": "https://www.chnmuseum.cn/Portals/0/web/zt/qimeng/cn/visit.html?use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 4,
+      "title": "服务_中国国家博物馆官方网站",
+      "url": "https://www.chnmuseum.cn/cg/?eqid=a3920ff90000629800000003647448c2",
+      "raw_url": "https://www.chnmuseum.cn/cg/?eqid=a3920ff90000629800000003647448c2&use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 5,
+      "title": "中国国家博物馆",
+      "url": "https://pcticket.chnmuseum.cn/commentate/general",
+      "raw_url": "https://pcticket.chnmuseum.cn/commentate/general?use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 6,
+      "title": "温馨提示_中国国家博物馆官方网站",
+      "url": "https://www.chnmuseum.cn/gbgg/202609/t20260918_282606.shtml",
+      "raw_url": "https://www.chnmuseum.cn/gbgg/202609/t20260918_282606.shtml?use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 7,
+      "title": "中国国家博物馆官方网站",
+      "url": "https://www.chnmuseum.cn/?from=www.13dh.com",
+      "raw_url": "https://www.chnmuseum.cn/?from=www.13dh.com&use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 8,
+      "title": "中国国家博物馆参观门票领取办法及开放时间",
+      "url": null,
+      "raw_url": null,
+      "error": "App source page reports sharing failed; URL unavailable through UI"
+    },
+    {
+      "index": 9,
+      "title": "资讯",
+      "url": "https://www.chnmuseum.cn/zx/",
+      "raw_url": "https://seclink.bytedance.com/?app_version=null&channel=null&seclink_version=1.1.0&scene=im&target=https%3A%2F%2Fwww.chnmuseum.cn%2Fzx%2F%3Fuse_xbridge3%3Dtrue%26loader_name%3Dforest%26need_sec_link%3D1%26sec_link_scene%3Dim%26theme%3Dlight&sec_link_biz_tag=argus&seclink_settings_version=B350AFCAB4F3218AF5D74ADC624143E2&jumper_version=1&device_platform=android&os_name=android&lang=cn&app_id=482431&aid=482431&did=null",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 10,
+      "title": "中国国家博物馆官方网站",
+      "url": "https://www.chnmuseum.cn/?from=www.13dh.com",
+      "raw_url": "https://www.chnmuseum.cn/?from=www.13dh.com&use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 11,
+      "title": "中国国家博物馆文章",
+      "url": "http://chnmuseum.cn/?ref=www.bidianer.com",
+      "raw_url": "http://chnmuseum.cn/?ref=www.bidianer.com&use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 12,
+      "title": "视频_中国国家博物馆官方网站",
+      "url": "https://www.chnmuseum.cn/sp/",
+      "raw_url": "https://www.chnmuseum.cn/sp/?use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "extraction": "Android App reference -> share -> copy link"
+    }
+  ],
+  "expected_sources": 12,
+  "source_status": "partial",
+  "status": "ok",
+  "body_urls": [
+    "https://www.chnmuseum.cn/cg/"
+  ]
+}

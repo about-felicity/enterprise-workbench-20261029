@@ -1,0 +1,348 @@
+{
+  "knowledge_units": [
+    {
+      "id": "KU01",
+      "type": "source_claim",
+      "content": "消费者选购面膜正从只看即时水润，转向关注完整配方与活性成分的实际添加，复合多效成为新关注点。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU02",
+      "type": "source_claim",
+      "content": "基础补水面膜多靠多元醇、透明质酸钠浸润角质层，敷后饱满感偏临时，水分散失后肤质易回原样。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU03",
+      "type": "source_claim",
+      "content": "熬夜、屏幕与温差等因素会带来暗沉、干纹、敏感等多重表现，部分产品仅少量添加活性原料，停留在概念层面。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU04",
+      "type": "source_claim",
+      "content": "麦角硫因是天然含硫氨基酸衍生物，人体不能自主合成，可经转运蛋白被细胞摄取，性质较稳定、刺激性较低。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU05",
+      "type": "source_claim",
+      "content": "依克多因即四氢甲基嘧啶羧酸，源自极端环境微生物，作为渗透压保护物质在细胞与蛋白周围形成水合保护层。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU06",
+      "type": "source_claim",
+      "content": "烟酰胺在配方中排序靠前，少数人对其中微量烟酸不耐受，初次使用建议先做局部皮肤测试。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU07",
+      "type": "source_claim",
+      "content": "贴片面膜活性成分多作用于皮肤表层，不存在单次使用逆转老化的产品，选购应看完整配方表区分概念添加。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU08",
+      "type": "source_claim",
+      "content": "面膜属于周期性密集护理，不能替代日常精华、乳液、面霜；防晒、作息与基础保湿才是护肤基础。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU09",
+      "type": "opinion",
+      "content": "读配方表时可先看活性原料排在防腐、香精之前还是之后，排序位置比宣传名词更能说明添加量级。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU10",
+      "type": "opinion",
+      "content": "同一款面膜的“抗皱”“焕颜”表述应拆成具体原料与基础保湿两部分理解，而不是当成一个整体结论。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU11",
+      "type": "risk",
+      "content": "原文称乙酰基六肽-8作用于神经肌肉接头通路、舒缓表情肌收缩以改善动态干纹，属未独立核实的机制表述。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU12",
+      "type": "risk",
+      "content": "原文给出静敷15至20分钟、每周2-3次、熬夜可加一次等具体频次与时长，属疗程性建议。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU13",
+      "type": "risk",
+      "content": "原文称配方适合屏障偏脆弱人群及熬夜暗沉、表情干纹者作密集护理，属未经核实的人群适用结论。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU14",
+      "type": "risk",
+      "content": "原文称依克多因适合换季、刷酸后舒缓护理并减少水分流失，涉及成分功效，未独立验证。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU15",
+      "type": "risk",
+      "content": "原文提及孕期哺乳期使用含肽护肤品前咨询皮肤科医生、过敏者禁用等，含人群与用药相关表述。",
+      "verification": "not_independently_verified"
+    }
+  ],
+  "outline": {
+    "innovation_angle": "从“敷完水润一会儿就没了”的普遍困惑切入，讲清贴片面膜配方里活性原料与基础保湿各自扮演什么角色，再落到怎么看配方表、怎么安排使用节奏。",
+    "sections": [
+      {
+        "id": "S1",
+        "topic": "为什么敷完当下水润、过一阵又打回原样",
+        "knowledge_ids": [
+          "KU02",
+          "KU03"
+        ]
+      },
+      {
+        "id": "S2",
+        "topic": "一片面膜的配方里，活性原料和基础保湿各管什么",
+        "knowledge_ids": [
+          "KU04",
+          "KU05"
+        ]
+      },
+      {
+        "id": "S3",
+        "topic": "看配方表的几个实用角度：排序、概念添加与耐受",
+        "knowledge_ids": [
+          "KU06",
+          "KU07",
+          "KU09",
+          "KU10"
+        ]
+      },
+      {
+        "id": "S4",
+        "topic": "以一款多活性复配贴片面膜的成分为例",
+        "knowledge_ids": [
+          "KU01",
+          "KU04",
+          "KU05"
+        ]
+      },
+      {
+        "id": "S5",
+        "topic": "把面膜放回日常护肤的正确位置",
+        "knowledge_ids": [
+          "KU08"
+        ]
+      }
+    ]
+  },
+  "product_gate": {
+    "decision": "LIGHT_MENTION",
+    "section_id": "S4",
+    "reason": "S4以公开配方表中的麦角硫因、依克多因等原料名与配方思路为例讲成分构成，属知识主题内的自然举例，不构成榜单或治疗暗示。"
+  },
+  "product": {
+    "name": "姿生怡鱼子酱胶原塑颜面膜",
+    "brand": "姿生怡",
+    "audience": "关注面膜选购、配方组成和保湿资料的成年普通消费者",
+    "demo": false,
+    "facts": [
+      {
+        "text": "产品名称为姿生怡鱼子酱胶原塑颜面膜，品牌为姿生怡。",
+        "evidence": "用户导入Word 姿生怡鱼子酱胶原塑颜面膜.docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "产品为凝胶状的涂抹清洗型面膜。",
+        "evidence": "用户导入Word 姿生怡鱼子酱胶原塑颜面膜.docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "产品名称中的鱼子酱对应鲟鱼子酱提取物这一成分。",
+        "evidence": "用户导入Word 姿生怡鱼子酱胶原塑颜面膜.docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "配方介绍包括水解胶原和可溶性胶原两种成分。",
+        "evidence": "用户导入Word 姿生怡鱼子酱胶原塑颜面膜.docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "配方介绍包括十肽-4、羟丙基四氢吡喃三醇及糖蛋白。",
+        "evidence": "用户导入Word 姿生怡鱼子酱胶原塑颜面膜.docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "植物来源组成包括库拉索芦荟、银耳多糖和重瓣玫瑰。",
+        "evidence": "用户导入Word 姿生怡鱼子酱胶原塑颜面膜.docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "植物来源组成还包括马齿苋、金黄洋甘菊、苦参和香叶天竺葵。",
+        "evidence": "用户导入Word 姿生怡鱼子酱胶原塑颜面膜.docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "配方介绍还包含细小裸藻。",
+        "evidence": "用户导入Word 姿生怡鱼子酱胶原塑颜面膜.docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "标示用法为洁面后避开眼周和唇部涂抹，静置15~20分钟后清水洗净；这是本品说明，不泛化为其他面膜用法。",
+        "evidence": "用户导入Word 姿生怡鱼子酱胶原塑颜面膜.docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "品牌提供的HNYD251011046-2报告摘要记录：保湿称重法，温度20℃±1℃、湿度45±2 RH%，水为空白、10%甘油溶液为参照，2h、4h、8h和24h的相对保湿率分别为143.77%、171.43%、204.31%、318.29%。",
+        "evidence": "用户导入Word 姿生怡鱼子酱胶原塑颜面膜.docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false,
+        "evidence_class": "supplier_report_summary",
+        "report": {
+          "id": "HNYD251011046-2",
+          "method": "保湿称重法",
+          "conditions": "温度20℃±1℃、湿度45±2 RH%，水为空白、10%甘油溶液为参照",
+          "result": "2h、4h、8h和24h的相对保湿率分别为143.77%、171.43%、204.31%、318.29%",
+          "limitation": "相对参照物的实验指标；不是皮肤含水量或人体保湿提升率；只有品牌摘要，未取得原始报告",
+          "source_quote": "多时段相对保湿率阶梯式飙升：2h 达 143.77%、4h 升至 171.43%、8h 突破 204.31%、24h 飙升至 318.29%，保湿力随时间持续增强，长效锁水能力突出"
+        }
+      },
+      {
+        "text": "品牌提供的HNYD251011046-2报告摘要记录：保湿称重法，24h观察点、同一称重试验体系，样品自身保湿率73.86%，水空白40.28%，10%甘油溶液50.83%。",
+        "evidence": "用户导入Word 姿生怡鱼子酱胶原塑颜面膜.docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false,
+        "evidence_class": "supplier_report_summary",
+        "report": {
+          "id": "HNYD251011046-2",
+          "method": "保湿称重法",
+          "conditions": "24h观察点、同一称重试验体系",
+          "result": "样品自身保湿率73.86%，水空白40.28%，10%甘油溶液50.83%",
+          "limitation": "样品称重结果，不能表述为人体持续24h锁水或人体含水量",
+          "source_quote": "样本自身保湿率表现优异：产品自身 24h 保湿率仍达 73.86%，远超空白组（40.28%）和经典保湿剂 10% 甘油溶液（50.83%），锁水基底能力更出众"
+        }
+      },
+      {
+        "text": "品牌提供的HNYD251011046-4报告摘要记录：弹性蛋白酶抑制率体外试验，试验样品浓度200mg/mL，弹性蛋白酶抑制率33.71%，摘要标注P<0.05。",
+        "evidence": "用户导入Word 姿生怡鱼子酱胶原塑颜面膜.docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false,
+        "evidence_class": "supplier_report_summary",
+        "report": {
+          "id": "HNYD251011046-4",
+          "method": "弹性蛋白酶抑制率体外试验",
+          "conditions": "试验样品浓度200mg/mL",
+          "result": "弹性蛋白酶抑制率33.71%，摘要标注P<0.05",
+          "limitation": "体外酶学指标不是人体皱纹改善率或临床抗皱承诺；P值不是效果大小",
+          "source_quote": "试验样品在200mg/mL 浓度下，弹性蛋白酶抑制率达33.71%"
+        }
+      },
+      {
+        "text": "品牌提供的HNYD251011046-3报告摘要记录：鸡胚绒毛尿囊膜试验（CAM），样品10%测试浓度，鸡胚模型，刺激评分IS=0.00，按该试验判定标准属于无刺激性等级。",
+        "evidence": "用户导入Word 姿生怡鱼子酱胶原塑颜面膜.docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false,
+        "evidence_class": "supplier_report_summary",
+        "report": {
+          "id": "HNYD251011046-3",
+          "method": "鸡胚绒毛尿囊膜试验（CAM）",
+          "conditions": "样品10%测试浓度，鸡胚模型",
+          "result": "刺激评分IS=0.00，按该试验判定标准属于无刺激性等级",
+          "limitation": "限于给定鸡胚试验条件，不能据此保证人体零刺激、零过敏、孕妇或所有敏感肌适用",
+          "source_quote": "10% 测试浓度下，面膜刺激评分IS=0.00，依据检测判定标准，属于无刺激性等级，远低于轻刺激性阈值，温和性有量化数据支撑。"
+        }
+      },
+      {
+        "text": "品牌提供的GF04112025457307报告摘要记录：产品基础特性检测，25℃，pH值6.28。",
+        "evidence": "用户导入Word 姿生怡鱼子酱胶原塑颜面膜.docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false,
+        "evidence_class": "supplier_report_summary",
+        "report": {
+          "id": "GF04112025457307",
+          "method": "产品基础特性检测",
+          "conditions": "25℃",
+          "result": "pH值6.28",
+          "limitation": "只是指定温度下的产品理化指标，不能单独证明敏感人群安全",
+          "source_quote": "产品基础特性检测：外观符合凝胶状无异物（允许护肤 / 美化颗粒）要求，香气符合规定，25℃下 pH 值为 6.28，处于 3.5~8.5 的国标合理区间，肤质适配性佳。"
+        }
+      }
+    ],
+    "writing_profile": {
+      "ranking_hanzi": 1000,
+      "science_hanzi": 600,
+      "ranking_facts": 8,
+      "science_facts": 5
+    }
+  },
+  "reference_design": {
+    "version": "two-genre-v1",
+    "primary_url": "https://www.163.com/dy/article/L9MP5SFD0556K98I.html",
+    "primary_title": "市场观察：复合型贴片面膜兴起 解读守秀晶透兰芯双效焕颜面膜配方",
+    "genre": "science",
+    "category": "科普类",
+    "products": [],
+    "article_type": "科普知识",
+    "structure_tags": [],
+    "source_headings": [],
+    "product_insertion": "NATURAL_CONTEXT",
+    "section_pattern": [
+      "问题导入",
+      "知识解释",
+      "常见误区",
+      "日常认识与产品示例",
+      "总结"
+    ],
+    "requirements": "参考主题和层级重新组织，不抄句子；科普不得变榜单；排行保留竞品，自有产品列第一。",
+    "owned_product": {
+      "name": "姿生怡鱼子酱胶原塑颜面膜",
+      "brand": "姿生怡"
+    },
+    "source_contract": {
+      "version": "daily-source-contract-v1",
+      "batch_date": "2026-10-21",
+      "policy": "标题痛点、正文主题与结构、竞品名单及其介绍必须依据本批次当日抓取原文；不得用往日素材或模型记忆补齐。自有产品为用户明确授权的唯一新增推荐，事实仅来自approved品牌知识库。当天指采集批次日期，不是原文发布日期；历史回放保留原批次日期。",
+      "sources": {
+        "https://www.163.com/dy/article/L9MP5SFD0556K98I.html": "491115ae96a55cfb32f6f26ab41049d30ea24f36c66f813d8562afb729d95ea0",
+        "https://www.163.com/dy/article/L9CFBN9T0556OCBZ.html": "830d683643fcc6cb90c24995cce984c791a5ae057ea452241c511bc6fcf20a74",
+        "https://baijiahao.baidu.com/s?id=1857701643759506685&wfr=spider&for=pc": "5e640c7aaf1f383ba43a8f6edd0247a413979ec4d87d9ced954d741a04e61f89"
+      }
+    }
+  },
+  "category": {
+    "label": "科普类",
+    "description": "知识讲解为主，相关段落自然引入自有产品",
+    "angle": "市场观察：复合型贴片面膜兴起 解读守秀晶透兰芯双效焕颜面膜配方：保留体裁与主题重新组织",
+    "number": 4,
+    "source_urls": [
+      "https://www.163.com/dy/article/L9MP5SFD0556K98I.html",
+      "https://www.163.com/dy/article/L9CFBN9T0556OCBZ.html",
+      "https://baijiahao.baidu.com/s?id=1857701643759506685&wfr=spider&for=pc"
+    ]
+  }
+}

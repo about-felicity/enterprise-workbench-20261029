@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>企业资产管理系统</title>
+<style>
+/* ========== RESET & BASE ========== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:#f1f5f9;color:#1f2937;line-height:1.5}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:inherit}
+input,select,textarea{font-family:inherit;font-size:inherit}
+table{border-collapse:collapse;width:100%}
+/* ========== DISPLAY ========== */
+.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}
+.block{display:block}.inline-block{display:inline-block}.hidden{display:none!important}
+/* ========== POSITION ========== */
+.relative{position:relative}.absolute{position:absolute}.fixed{position:fixed}
+.bottom-0{bottom:0}.top-0{top:0}.right-0{right:0}.inset-0{inset:0}
+/* ========== FLEX ========== */
+.flex-1{flex:1 1 0%}
+.items-center{align-items:center}
+.justify-center{justify-content:center}
+.justify-between{justify-content:space-between}
+.justify-end{justify-content:flex-end}
+.flex-wrap{flex-wrap:wrap}
+.flex-col{flex-direction:column}
+/* ========== GRID ========== */
+.grid-cols-1{grid-template-columns:repeat(1,1fr)}
+.grid-cols-2{grid-template-columns:repeat(2,1fr)}
+.grid-cols-3{grid-template-columns:repeat(3,1fr)}
+@media(min-width:768px){.md\:grid-cols-4{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:1024px){.lg\:grid-cols-2{grid-template-columns:repeat(2,1fr)}}
+/* ========== SIZING ========== */
+.w-full{width:100%}.w-auto{width:auto}
+.w-5{width:20px}.w-10{width:40px}.w-16{width:64px}
+.h-5{height:20px}.h-10{height:40px}.h-16{height:64px}
+.min-h-screen{min-height:100vh}
+.max-w-md{max-width:28rem}
+/* ========== SPACING ========== */
+.p-3{padding:12px}.p-4{padding:16px}.p-5{padding:20px}.p-6{padding:24px}.p-8{padding:32px}
+.px-5{padding-left:20px;padding-right:20px}
+.py-2{padding-top:8px;padding-bottom:8px}
+.py-3{padding-top:12px;padding-bottom:12px}
+.pt-3{padding-top:12px}.pr-2{padding-right:8px}
+.mb-1{margin-bottom:4px}.mb-4{margin-bottom:16px}.mb-6{margin-bottom:24px}
+.mt-1{margin-top:4px}.mt-auto{margin-top:auto}.mx-auto{margin:0 auto}
+.gap-1{gap:4px}.gap-2{gap:8px}.gap-3{gap:12px}.gap-4{gap:16px}.gap-6{gap:24px}
+.space-y-2>*+*{margin-top:8px}
+.space-y-3>*+*{margin-top:12px}
+.space-y-4>*+*{margin-top:16px}
+/* ========== TYPOGRAPHY ========== */
+.text-xs{font-size:12px}.text-sm{font-size:14px}.text-base{font-size:16px}
+.text-lg{font-size:18px}.text-xl{font-size:20px}.text-2xl{font-size:24px}
+.text-center{text-align:center}
+.whitespace-nowrap{white-space:nowrap}
+.leading-none{line-height:1}
+.font-medium{font-weight:500}.font-semibold{font-weight:600}.font-bold{font-weight:700}
+/* ========== TEXT COLORS ========== */
+.text-white{color:#fff}
+.text-gray-300{color:#d1d5db}.text-gray-400{color:#9ca3af}
+.text-gray-500{color:#6b7280}.text-gray-600{color:#4b5563}
+.text-gray-700{color:#374151}.text-gray-800{color:#1f2937}
+.text-blue-500{color:#3b82f6}.text-blue-600{color:#2563eb}
+.text-green-500{color:#10b981}.text-green-600{color:#059669}
+.text-red-500{color:#ef4444}.text-indigo-600{color:#4f46e5}
+/* ========== BACKGROUNDS ========== */
+.bg-white{background:#fff}
+.bg-gray-50{background:#f9fafb}.bg-gray-100{background:#f3f4f6}.bg-gray-200{background:#e5e7eb}
+.bg-blue-500{background:#3b82f6}.bg-blue-600{background:#2563eb}
+.bg-green-500{background:#10b981}.bg-red-500{background:#ef4444}
+.bg-yellow-500{background:#f59e0b}.bg-indigo-50{background:#eef2ff}
+/* ========== GRADIENT (login page) ========== */
+.bg-login{background:linear-gradient(135deg,#eff6ff 0%,#e0e7ff 100%)}
+/* ========== BORDERS ========== */
+.border{border:1px solid #e5e7eb}
+.border-b{border-bottom:1px solid #e5e7eb}
+.border-t{border-top:1px solid #e5e7eb}
+.border-gray-50{border-color:#f9fafb}
+.border-gray-600{border-color:#4b5563}
+.rounded{border-radius:4px}.rounded-lg{border-radius:8px}
+.rounded-xl{border-radius:12px}.rounded-2xl{border-radius:16px}.rounded-full{border-radius:9999px}
+/* ========== SHADOWS ========== */
+.shadow-sm{box-shadow:0 1px 2px rgba(0,0,0,0.05)}
+.shadow-lg{box-shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -4px rgba(0,0,0,0.1)}
+/* ========== OVERFLOW ========== */
+.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}
+.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* ========== TRANSITION ========== */
+.transition{transition:all 0.15s}.transition-all{transition:all 0.2s}
+/* ========== Z-INDEX ========== */
+.z-10{z-index:10}.z-50{z-index:50}
+/* ========== HOVER ========== */
+.hover\:bg-gray-700:hover{background:#374151}
+/* ========== OPACITY BORDER ========== */
+.border-black\/10{border-color:rgba(0,0,0,0.1)}
+/* ========== CUSTOM COMPONENTS ========== */
+.card{background:#fff;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,0.08)}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;border:none;transition:all 0.2s;text-decoration:none}
+.btn-primary{background:#3b82f6;color:#fff}.btn-primary:hover{background:#2563eb}
+.btn-success{background:#10b981;color:#fff}.btn-success:hover{background:#059669}
+.btn-danger{background:#ef4444;color:#fff}.btn-danger:hover{background:#dc2626}
+.btn-warning{background:#f59e0b;color:#fff}.btn-warning:hover{background:#d97706}
+.btn-outline{background:#fff;color:#374151;border:1px solid #d1d5db}.btn-outline:hover{background:#f9fafb}
+.btn-sm{padding:4px 10px;font-size:12px;border-radius:6px}
+.input{width:100%;padding:8px 12px;border:1px solid #d1d5db;border-radius:8px;font-size:14px;outline:none;transition:border 0.2s}
+.input:focus{border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,0.1)}
+.select{padding:8px 12px;border:1px solid #d1d5db;border-radius:8px;font-size:14px;outline:none;background:#fff}
+.table th{padding:12px 16px;text-align:left;font-size:13px;font-weight:600;color:#6b7280;background:#f9fafb;border-bottom:1px solid #e5e7eb;white-space:nowrap}
+.table td{padding:10px 16px;font-size:14px;color:#374151;border-bottom:1px solid #f3f4f6}
+.table tr:hover td{background:#f9fafb}
+.badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:12px;font-weight:500}
+.badge-green{background:#d1fae5;color:#065f46}
+.badge-blue{background:#dbeafe;color:#1e40af}
+.badge-yellow{background:#fef3c7;color:#92400e}
+.badge-red{background:#fee2e2;color:#991b1b}
+.badge-gray{background:#f3f4f6;color:#4b5563}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center;z-index:1000}
+.modal{background:#fff;border-radius:16px;padding:24px;width:90%;max-width:560px;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.15)}
+.tabs{display:flex;gap:4px;background:#f1f5f9;padding:4px;border-radius:10px}
+.tab{padding:8px 20px;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;border:none;background:transparent;color:#6b7280;transition:all 0.2s}
+.tab.active{background:#fff;color:#3b82f6;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
+.stat-card{background:#fff;border-radius:12px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.08)}
+.stat-value{font-size:28px;font-weight:700}
+.stat-label{font-size:13px;color:#6b7280;margin-top:4px}
+#toast{position:fixed;top:20px;right:20px;z-index:9999;transition:all 0.3s}
+.sidebar{width:240px;min-width:240px;background:#1e293b;color:#fff;min-height:100vh;position:relative}
+.sidebar-footer{position:absolute;bottom:0;left:0;right:0;padding:16px;border-top:1px solid rgba(255,255,255,0.1)}
+.nav-item{display:flex;align-items:center;gap:10px;padding:12px 20px;color:#94a3b8;cursor:pointer;font-size:14px;transition:all 0.15s;border-left:3px solid transparent}
+.nav-item:hover{color:#fff;background:rgba(255,255,255,0.05)}
+.nav-item.active{color:#fff;background:rgba(59,130,246,0.2);border-left-color:#3b82f6}
+.page{}
+.empty-state{text-align:center;padding:40px;color:#9ca3af}
+.empty-state-icon{font-size:48px;margin-bottom:12px;display:block;opacity:0.5}
+/* ========== ICONS (inline SVG style) ========== */
+.icon{width:16px;height:16px;display:inline-block;vertical-align:-2px;fill:currentColor;flex-shrink:0}
+.icon-lg{width:20px;height:20px}
+.icon-xl{width:24px;height:24px}
+/* ========== TOAST COLORS ========== */
+.toast-success{background:#10b981;color:#fff;padding:12px 20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.2);font-size:14px;font-weight:500}
+.toast-error{background:#ef4444;color:#fff;padding:12px 20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.2);font-size:14px;font-weight:500}
+.toast-info{background:#3b82f6;color:#fff;padding:12px 20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.2);font-size:14px;font-weight:500}
+.toast-warning{background:#f59e0b;color:#fff;padding:12px 20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.2);font-size:14px;font-weight:500}
+</style>
+</head>
+<body>
+
+<!-- ====== SVG ICONS SPRITE ====== -->
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="i-building" viewBox="0 0 512 512"><path d="M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v320c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160c15.2 0 27.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224h64v64h-64v-64zm0 96h64v64h-64v-64zm96-96h64v64h-64v-64zm0 96h64v64h-64v-64zm96-96h64v64h-64v-64zm0 96h64v64h-64v-64zM96 472v-72h320v72H96z" fill-rule="evenodd"/></symbol>
+    <symbol id="i-pie" viewBox="0 0 512 512"><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256-96v96h96c0-53-43-96-96-96z"/></symbol>
+    <symbol id="i-desktop" viewBox="0 0 576 512"><path d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64H240l-10.7 32H160c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H346.7L336 416H512c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM512 64V288H64V64H512z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 640 512"><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-2-22.3c13.6-6.2 28.8-9.7 44.7-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"/></symbol>
+    <symbol id="i-exchange" viewBox="0 0 512 512"><path d="M406.6 374.6l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224l-41.4 0-118.6 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l118.6 0 41.4 0-41.4 41.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0zM105.4 137.4l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288l41.4 0 118.6 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-118.6 0-41.4 0 41.4-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 512 512"><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8z"/></symbol>
+    <symbol id="i-signout" viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 384 512"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0z"/></symbol>
+    <symbol id="i-link" viewBox="0 0 640 512"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></symbol>
+    <symbol id="i-rotate" viewBox="0 0 512 512"><path d="M142.9 142.9c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5c0 0 0 0 0 0H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5c7.7-21.8 20.2-42.3 37.8-59.8zM486.4 286.6c-16.7-5.9-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.2 62.2-162.7 62.5-225.3 1L185 329c6.9-6.9 8.9-17.2 5.2-26.2s-12.5-14.8-22.2-14.8H48.5c0 0 0 0 0 0H40c-13.3 0-24 10.7-24 24V432c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2l41.6-41.6c87.6 86.5 228.7 86.2 315.8-1c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8z"/></symbol>
+    <symbol id="i-undo" viewBox="0 0 512 512"><path d="M125.7 160H176c17.7 0 32 14.3 32 32s-14.3 32-32 32H48c-17.7 0-32-14.3-32-32V64c0-17.7 14.3-32 32-32s32 14.3 32 32v51.2L97.6 97.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0L125.7 160z"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 512 512"><path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 448 512"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"/></symbol>
+    <symbol id="i-ban" viewBox="0 0 512 512"><path d="M367.2 412.5L99.5 144.8C77.1 176.1 64 214.5 64 256c0 106 86 192 192 192c41.5 0 79.9-13.1 111.2-35.5zm45.3-45.3C434.9 335.9 448 297.5 448 256c0-106-86-192-192-192c-41.5 0-79.9 13.1-111.2 35.5L412.5 367.2zM512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 448 512"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></symbol>
+    <symbol id="i-key" viewBox="0 0 512 512"><path d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zm40-176a40 40 0 1 0 -80 0 40 40 0 1 0 80 0z"/></symbol>
+    <symbol id="i-up" viewBox="0 0 384 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></symbol>
+  </defs>
+</svg>
+
+<div id="app">
+  <!-- ====== LOGIN PAGE ====== -->
+  <div id="login-page" class="min-h-screen flex items-center justify-center bg-login">
+    <div class="card w-full max-w-md p-8">
+      <div class="text-center mb-6">
+        <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <svg class="icon icon-xl" style="fill:#fff"><use href="#i-building"/></svg>
+        </div>
+        <h1 class="text-2xl font-bold text-gray-800">企业资产管理系统</h1>
+        <p class="text-gray-500 text-sm mt-1">设备管理 · 员工管理 · 资产追踪</p>
+      </div>
+      <div class="tabs mb-6" id="auth-tabs">
+        <button class="tab active flex-1" data-tab="login">登录</button>
+        <button class="tab flex-1" data-tab="register">注册</button>
+      </div>
+      <form id="login-form">
+        <div class="space-y-4">
+          <div><label class="text-sm font-medium text-gray-700 mb-1 block">用户名</label>
+            <input type="text" class="input" id="login-username" placeholder="请输入用户名" required></div>
+          <div><label class="text-sm font-medium text-gray-700 mb-1 block">密码</label>
+            <input type="password" class="input" id="login-password" placeholder="请输入密码" required></div>
+          <div id="login-error" class="text-red-500 text-sm hidden"></div>
+          <button type="submit" class="btn btn-primary w-full justify-center py-3 text-base">登录</button>
+        </div>
+      </form>
+      <form id="register-form" class="hidden">
+        <div class="space-y-3">
+          <div><label class="text-sm font-medium text-gray-700 mb-1 block">用户名</label>
+            <input type="text" class="input" id="reg-username" placeholder="设置用户名" required></div>
+          <div><label class="text-sm font-medium text-gray-700 mb-1 block">密码</label>
+            <input type="password" class="input" id="reg-password" placeholder="设置密码（至少4位）" required></div>
+          <div><label class="text-sm font-medium text-gray-700 mb-1 block">姓名</label>
+            <input type="text" class="input" id="reg-name" placeholder="请输入姓名" required></div>
+          <div><label class="text-sm font-medium text-gray-700 mb-1 block">电话</label>
+            <input type="text" class="input" id="reg-phone" placeholder="请输入电话号码"></div>
+          <div class="grid grid-cols-2 gap-3">
+            <div><label class="text-sm font-medium text-gray-700 mb-1 block">部门</label>
+              <input type="text" class="input" id="reg-dept" placeholder="部门"></div>
+            <div><label class="text-sm font-medium text-gray-700 mb-1 block">职位</label>
+              <input type="text" class="input" id="reg-position" placeholder="职位"></div>
+          </div>
+          <div id="reg-error" class="text-red-500 text-sm hidden"></div>
+          <div id="reg-success" class="text-green-600 text-sm hidden"></div>
+          <button type="submit" class="btn btn-primary w-full justify-center py-3 text-base">注册</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ====== MAIN APP ====== -->
+  <div id="main-app" class="hidden min-h-screen flex">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="p-5 border-b" style="border-color:rgba(255,255,255,0.1)">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center">
+            <svg class="icon icon-lg" style="fill:#fff"><use href="#i-building"/></svg>
+          </div>
+          <div><div class="font-semibold text-sm">资产管理系统</div><div class="text-xs text-gray-400" id="sidebar-role"></div></div>
+        </div>
+      </div>
+      <nav class="py-3">
+        <div class="nav-item active" data-page="dashboard"><svg class="icon"><use href="#i-pie"/></svg> 仪表盘</div>
+        <div class="nav-item" data-page="devices"><svg class="icon"><use href="#i-desktop"/></svg> 设备管理</div>
+        <div class="nav-item admin-only hidden" data-page="employees"><svg class="icon"><use href="#i-users"/></svg> 员工管理</div>
+        <div class="nav-item" data-page="assignments"><svg class="icon"><use href="#i-exchange"/></svg> 分配记录</div>
+        <div class="nav-item admin-only hidden" data-page="users"><svg class="icon"><use href="#i-shield"/></svg> 用户管理</div>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="text-xs text-gray-400 mb-1" id="sidebar-user"></div>
+        <button class="btn btn-outline btn-sm w-full justify-center text-gray-300 hover:bg-gray-700" style="border-color:#4b5563" onclick="logout()">
+          <svg class="icon"><use href="#i-signout"/></svg> 退出登录</button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 overflow-auto p-6">
+      <!-- Dashboard -->
+      <div id="page-dashboard" class="page">
+        <h2 class="text-xl font-bold text-gray-800 mb-6">仪表盘</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6" id="dashboard-stats"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="card p-5"><h3 class="font-semibold text-gray-700 mb-4">设备类型分布</h3><div id="type-chart" class="space-y-2"></div></div>
+          <div class="card p-5"><h3 class="font-semibold text-gray-700 mb-4">最近操作记录</h3><div id="recent-ops" class="space-y-2"></div></div>
+        </div>
+      </div>
+
+      <!-- Devices -->
+      <div id="page-devices" class="page hidden">
+        <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
+          <h2 class="text-xl font-bold text-gray-800">设备管理</h2>
+          <div class="flex gap-2 flex-wrap">
+            <button class="btn btn-primary" onclick="showDeviceModal()"><svg class="icon"><use href="#i-plus"/></svg> 添加设备</button>
+            <button class="btn btn-success" onclick="exportData('devices')"><svg class="icon"><use href="#i-file"/></svg> 导出设备清单</button>
+          </div>
+        </div>
+        <div class="card p-4 mb-4">
+          <div class="flex gap-3 flex-wrap">
+            <input type="text" class="input flex-1" style="min-width:200px" id="device-search" placeholder="搜索设备编码/品牌/型号..." oninput="loadDevices()">
+            <select class="select" id="device-type-filter" onchange="loadDevices()">
+              <option value="">全部类型</option><option value="台式机">台式机</option><option value="笔记本">笔记本</option>
+              <option value="显示器">显示器</option><option value="鼠标">鼠标</option><option value="键盘">键盘</option>
+              <option value="打印机">打印机</option><option value="手机">手机</option><option value="平板">平板</option>
+              <option value="路由器">路由器</option><option value="交换机">交换机</option><option value="服务器">服务器</option><option value="其他">其他</option></select>
+            <select class="select" id="device-status-filter" onchange="loadDevices()">
+              <option value="">全部状态</option><option value="空闲">空闲</option><option value="使用中">使用中</option>
+              <option value="维修中">维修中</option><option value="已报废">已报废</option></select>
+          </div>
+        </div>
+        <div class="card overflow-auto"><table class="table w-full" id="devices-table"><thead><tr>
+          <th>设备编码</th><th>类型</th><th>品牌</th><th>型号</th><th>规格</th><th>数量</th><th>状态</th><th>当前使用者</th><th>采购日期</th><th>备注</th><th>操作</th></tr></thead><tbody id="devices-tbody"></tbody></table></div>
+      </div>
+
+      <!-- Employees -->
+      <div id="page-employees" class="page hidden">
+        <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
+          <h2 class="text-xl font-bold text-gray-800">员工管理</h2>
+          <div class="flex gap-2 flex-wrap">
+            <button class="btn btn-primary" onclick="showEmployeeModal()"><svg class="icon"><use href="#i-plus"/></svg> 添加员工</button>
+            <button class="btn btn-success" onclick="exportData('employees')"><svg class="icon"><use href="#i-file"/></svg> 导出员工清单</button>
+          </div>
+        </div>
+        <div class="card p-4 mb-4">
+          <div class="flex gap-3 flex-wrap">
+            <input type="text" class="input flex-1" style="min-width:200px" id="employee-search" placeholder="搜索姓名/电话/部门..." oninput="loadEmployees()">
+            <select class="select" id="employee-status-filter" onchange="loadEmployees()">
+              <option value="">全部状态</option><option value="在职">在职</option><option value="离职">离职</option></select>
+          </div>
+        </div>
+        <div class="card overflow-auto"><table class="table w-full" id="employees-table"><thead><tr>
+          <th>姓名</th><th>电话</th><th>部门</th><th>职位</th><th>状态</th><th>持有设备</th><th>操作</th></tr></thead><tbody id="employees-tbody"></tbody></table></div>
+      </div>
+
+      <!-- Assignments -->
+      <div id="page-assignments" class="page hidden">
+        <h2 class="text-xl font-bold text-gray-800 mb-6">分配记录</h2>
+        <div class="flex gap-3 mb-6 flex-wrap">
+          <button class="btn btn-primary admin-only hidden" onclick="showAssignModal()"><svg class="icon"><use href="#i-link"/></svg> 分配设备</button>
+          <button class="btn btn-warning admin-only hidden" onclick="showTransferModal()"><svg class="icon"><use href="#i-exchange"/></svg> 设备转移/交接</button>
+          <button class="btn btn-danger admin-only hidden" onclick="showReplaceModal()"><svg class="icon"><use href="#i-rotate"/></svg> 设备更换</button>
+          <button class="btn btn-outline admin-only hidden" onclick="showReturnModal()"><svg class="icon"><use href="#i-undo"/></svg> 归还设备</button>
+          <button class="btn btn-success" onclick="exportData('assignments')"><svg class="icon"><use href="#i-file"/></svg> 导出分配记录</button>
+        </div>
+        <div class="card p-4 mb-4">
+          <label class="flex items-center gap-2 text-sm"><input type="checkbox" id="active-only" onchange="loadAssignments()"> 仅显示活跃记录</label>
+        </div>
+        <div class="card overflow-auto"><table class="table w-full" id="assignments-table"><thead><tr>
+          <th>设备编码</th><th>设备类型</th><th>员工</th><th>操作类型</th><th>操作人</th><th>分配时间</th><th>归还时间</th><th>备注</th></tr></thead><tbody id="assignments-tbody"></tbody></table></div>
+      </div>
+
+      <!-- Users -->
+      <div id="page-users" class="page hidden">
+        <h2 class="text-xl font-bold text-gray-800 mb-6">用户管理</h2>
+        <div class="card overflow-auto"><table class="table w-full" id="users-table"><thead><tr>
+          <th>用户名</th><th>角色</th><th>是否激活</th><th>注册权限</th><th>创建时间</th><th>操作</th></tr></thead><tbody id="users-tbody"></tbody></table></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+// ========== STATE ==========
+const API = '';
+let token = localStorage.getItem('ams_token') || '';
+let currentUser = null;
+
+// 恢复保存的用户信息
+try {
+  var savedUser = localStorage.getItem('ams_user');
+  if (savedUser) currentUser = JSON.parse(savedUser);
+} catch(e) {}
+
+// ========== HELPERS ==========
+function $(id) { return document.getElementById(id); }
+
+function saveSession(tk, user) {
+  token = tk;
+  currentUser = user;
+  localStorage.setItem('ams_token', tk);
+  localStorage.setItem('ams_user', JSON.stringify(user));
+}
+
+function clearSession() {
+  token = '';
+  currentUser = null;
+  localStorage.removeItem('ams_token');
+  localStorage.removeItem('ams_user');
+}
+function qs(sel) { return document.querySelector(sel); }
+
+async function api(url, options = {}) {
+  const headers = { 'Content-Type': 'application/json', ...options.headers };
+  if (token) headers['Authorization'] = 'Bearer ' + token;
+  const res = await fetch(API + url, { ...options, headers });
+  if (res.status === 401) { logout(); throw new Error('Unauthorized'); }
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.detail || '请求失败');
+  return data;
+}
+
+function toast(msg, type) {
+  type = type || 'info';
+  var el = $('toast');
+  el.innerHTML = '<div class="toast-' + type + '">' + msg + '</div>';
+  setTimeout(function(){ el.innerHTML = ''; }, 3000);
+}
+
+function statusBadge(status) {
+  var m = {'空闲':'badge-green','使用中':'badge-blue','维修中':'badge-yellow','已报废':'badge-red','在职':'badge-green','离职':'badge-red'};
+  return '<span class="badge ' + (m[status] || 'badge-gray') + '">' + status + '</span>';
+}
+
+function formatDate(d) { return d ? new Date(d).toLocaleString('zh-CN') : '-'; }
+
+// ========== AUTH ==========
+var authTab = 'login';
+qs('#auth-tabs').addEventListener('click', function(e) {
+  if (e.target.classList.contains('tab')) {
+    authTab = e.target.dataset.tab;
+    qs('#auth-tabs .tab.active').classList.remove('active');
+    e.target.classList.add('active');
+    $('login-form').classList.toggle('hidden', authTab !== 'login');
+    $('register-form').classList.toggle('hidden', authTab !== 'register');
+    $('login-error').classList.add('hidden');
+    $('reg-error').classList.add('hidden');
+    $('reg-success').classList.add('hidden');
+  }
+});
+
+$('login-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  $('login-error').classList.add('hidden');
+  try {
+    var data = await api('/api/auth/login', { method: 'POST', body: JSON.stringify({
+      username: $('login-username').value, password: $('login-password').value
+    })});
+    token = data.access_token;
+    currentUser = data.user;
+    saveSession(data.access_token, data.user);
+    if (data.need_bind_phone) {
+      showBindPhoneModal();
+    } else {
+      showMain();
+      toast('登录成功', 'success');
+    }
+  } catch (err) { $('login-error').textContent = err.message; $('login-error').classList.remove('hidden'); }
+});
+
+$('register-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  $('reg-error').classList.add('hidden');
+  $('reg-success').classList.add('hidden');
+  try {
+    await api('/api/auth/register', { method: 'POST', body: JSON.stringify({
+      username: $('reg-username').value, password: $('reg-password').value,
+      name: $('reg-name').value, phone: $('reg-phone').value,
+      department: $('reg-dept').value, position: $('reg-position').value
+    })});
+    $('reg-success').textContent = '注册成功！请切换到登录页面进行登录。';
+    $('reg-success').classList.remove('hidden');
+    $('register-form').reset();
+  } catch (err) { $('reg-error').textContent = err.message; $('reg-error').classList.remove('hidden'); }
+});
+
+function logout() { clearSession(); $('login-page').classList.remove('hidden'); $('main-app').classList.add('hidden'); }
+
+function showMain() {
+  $('login-page').classList.add('hidden');
+  $('main-app').classList.remove('hidden');
+  $('sidebar-role').textContent = currentUser.role === 'admin' ? '管理员' : '员工';
+  $('sidebar-user').textContent = currentUser.username;
+  if (currentUser.role === 'admin') {
+    var els = document.querySelectorAll('.admin-only');
+    for (var i = 0; i < els.length; i++) els[i].classList.remove('hidden');
+  }
+  navigate('dashboard');
+}
+
+// ========== 手机号绑定 ==========
+function showBindPhoneModal() {
+  $('login-page').classList.add('hidden');
+  var html = '<div class="modal-overlay" id="bind-phone-overlay"><div class="modal" style="text-align:center">' +
+    '<div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">' +
+    '<svg class="icon icon-xl" style="fill:#fff"><use href="#i-building"/></svg></div>' +
+    '<h3 class="text-lg font-bold text-gray-800 mb-2">首次登录 · 绑定手机号</h3>' +
+    '<p class="text-sm text-gray-500 mb-6">为保障账号安全，管理员首次登录需要绑定手机号</p>' +
+    '<form id="bind-phone-form" class="space-y-4">' +
+    '<div><label class="text-sm font-medium text-gray-700 mb-1 block text-left">手机号码 *</label>' +
+    '<input type="tel" class="input text-center text-lg" id="bind-phone" placeholder="请输入手机号" required autofocus></div>' +
+    '<div id="bind-phone-error" class="text-red-500 text-sm hidden"></div>' +
+    '<button type="submit" class="btn btn-primary w-full justify-center py-3 text-base">确认绑定</button></form></div></div>';
+  document.body.insertAdjacentHTML('beforeend', html);
+  $('bind-phone-overlay').addEventListener('click', function(e) { if (e.target === $('bind-phone-overlay')) {} });
+  $('bind-phone-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    $('bind-phone-error').classList.add('hidden');
+    try {
+      await api('/api/auth/bind-phone', { method: 'POST', body: JSON.stringify({ phone: $('bind-phone').value }) });
+      closeModal('bind-phone-overlay');
+      showMain();
+      toast('手机号绑定成功', 'success');
+    } catch (err) { $('bind-phone-error').textContent = err.message; $('bind-phone-error').classList.remove('hidden'); }
+  });
+}
+
+// ========== NAVIGATION ==========
+function navigate(page) {
+  var pages = document.querySelectorAll('.page');
+  for (var i = 0; i < pages.length; i++) pages[i].classList.add('hidden');
+  $('page-' + page).classList.remove('hidden');
+  var items = document.querySelectorAll('.nav-item');
+  for (var i = 0; i < items.length; i++) items[i].classList.remove('active');
+  document.querySelector('.nav-item[data-page="' + page + '"]').classList.add('active');
+  if (page === 'dashboard') loadDashboard();
+  else if (page === 'devices') loadDevices();
+  else if (page === 'employees') loadEmployees();
+  else if (page === 'assignments') loadAssignments();
+  else if (page === 'users') loadUsers();
+}
+document.querySelectorAll('.nav-item').forEach(function(item) {
+  item.addEventListener('click', function() { navigate(item.dataset.page); });
+});
+
+// ========== DASHBOARD ==========
+async function loadDashboard() {
+  try {
+    var d = await api('/api/dashboard');
+    $('dashboard-stats').innerHTML =
+      '<div class="stat-card"><div class="stat-value text-blue-600">' + d.total_devices + '</div><div class="stat-label">设备总数</div></div>' +
+      '<div class="stat-card"><div class="stat-value text-green-600">' + d.idle_devices + '</div><div class="stat-label">空闲设备</div></div>' +
+      '<div class="stat-card"><div class="stat-value text-indigo-600">' + d.in_use_devices + '</div><div class="stat-label">使用中</div></div>' +
+      '<div class="stat-card"><div class="stat-value text-gray-700">' + d.total_employees + '</div><div class="stat-label">员工总数</div></div>';
+
+    var chart = '';
+    Object.entries(d.device_type_distribution).forEach(function(e) {
+      var pct = d.total_devices ? (e[1]/d.total_devices*100) : 0;
+      chart += '<div class="flex items-center gap-3"><span class="text-sm text-gray-600" style="width:4rem">' + e[0] + '</span>' +
+        '<div class="flex-1 bg-gray-200 rounded-full" style="height:20px"><div class="bg-blue-500 rounded-full text-xs text-white flex items-center justify-end pr-2" style="height:20px;width:' + pct + '%">' + e[1] + '</div></div></div>';
+    });
+    $('type-chart').innerHTML = chart;
+
+    var ops = '';
+    if (d.recent_assignments.length) {
+      d.recent_assignments.slice(0, 6).forEach(function(a) {
+        ops += '<div class="flex items-center justify-between py-2 border-b border-gray-50 text-sm">' +
+          '<span>' + a.device_code + ' → ' + a.employee_name + '</span>' +
+          '<span class="badge badge-blue">' + a.event_type + '</span>' +
+          '<span class="text-gray-400 text-xs">' + formatDate(a.assigned_at) + '</span></div>';
+      });
+    } else {
+      ops = '<div class="empty-state text-sm">暂无操作记录</div>';
+    }
+    $('recent-ops').innerHTML = ops;
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+// ========== DEVICES ==========
+async function loadDevices() {
+  var p = new URLSearchParams();
+  var s = $('device-search').value, t = $('device-type-filter').value, st = $('device-status-filter').value;
+  if (s) p.set('search', s); if (t) p.set('device_type', t); if (st) p.set('status', st);
+  try {
+    var devices = await api('/api/devices?' + p);
+    var html = '';
+    if (devices.length) {
+      devices.forEach(function(d) {
+        html += '<tr><td class="font-medium">' + d.device_code + '</td><td>' + d.device_type + '</td><td>' + d.brand + '</td>' +
+          '<td>' + d.model + '</td><td class="text-sm text-gray-500" style="max-width:120px"><div class="truncate">' + d.specs + '</div></td>' +
+          '<td class="text-center">' + (d.quantity || 1) + '</td>' +
+          '<td>' + statusBadge(d.status) + '</td><td>' + (d.current_user || '-') + '</td>' +
+          '<td>' + (d.purchase_date || '-') + '</td>' +
+          '<td class="text-sm text-gray-500" style="max-width:100px"><div class="truncate">' + (d.notes || '-') + '</div></td>' +
+          '<td><div class="flex gap-1">' + (currentUser.role === 'admin' ?
+            '<button class="btn btn-outline btn-sm" onclick="editDevice(' + d.id + ')"><svg class="icon"><use href="#i-edit"/></svg></button>' +
+            '<button class="btn btn-danger btn-sm" onclick="deleteDevice(' + d.id + ')"><svg class="icon"><use href="#i-trash"/></svg></button>' : '-') +
+          '</div></td></tr>';
+      });
+    } else { html = '<tr><td colspan="11" class="empty-state">暂无设备数据</td></tr>'; }
+    $('devices-tbody').innerHTML = html;
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function showDeviceModal(device) {
+  var isEdit = !!device;
+  var devTypes = ['台式机','笔记本','显示器','鼠标','键盘','打印机','手机','平板','路由器','交换机','服务器','其他'];
+  var typeOpts = devTypes.map(function(t){ return '<option value="'+t+'">'+t+'</option>'; }).join('');
+  var curType = isEdit ? device.device_type : '';
+  var statusOpts = ['空闲','使用中','维修中','已报废'].map(function(s){
+    var sel = isEdit ? (device.status===s) : (s==='使用中');
+    return '<option value="'+s+'"'+(sel?' selected':'')+'>'+s+'</option>';
+  }).join('');
+  var html = '<div class="modal-overlay" id="device-modal-overlay"><div class="modal">' +
+    '<h3 class="text-lg font-bold mb-4">' + (isEdit?'编辑设备':'添加设备') + '</h3>' +
+    '<form id="device-form" class="space-y-3">' +
+    (isEdit?'<input type="hidden" id="d-id" value="'+device.id+'">':'') +
+    '<div class="grid grid-cols-2 gap-3">' +
+    '<div><label class="text-sm font-medium mb-1 block">设备编码 *</label><input class="input" id="d-code" value="'+(isEdit?device.device_code:'')+'" required></div>' +
+    '<div><label class="text-sm font-medium mb-1 block">设备类型 <span class="text-xs text-gray-400">(可选或输入)</span></label><input class="input" id="d-type" list="device-types" value="'+curType+'" placeholder="选择或输入类型"></div>' +
+    '<datalist id="device-types">'+typeOpts+'</datalist>' +
+    '<div><label class="text-sm font-medium mb-1 block">品牌</label><input class="input" id="d-brand" value="'+(isEdit?device.brand:'')+'"></div>' +
+    '<div><label class="text-sm font-medium mb-1 block">型号</label><input class="input" id="d-model" value="'+(isEdit?device.model:'')+'"></div></div>' +
+    '<div><label class="text-sm font-medium mb-1 block">规格配置</label><input class="input" id="d-specs" value="'+(isEdit?device.specs:'')+'"></div>' +
+    '<div class="grid grid-cols-3 gap-3">' +
+    '<div><label class="text-sm font-medium mb-1 block">数量</label><input type="number" class="input" id="d-quantity" value="'+(isEdit?device.quantity:1)+'" min="1"></div>' +
+    '<div><label class="text-sm font-medium mb-1 block">采购日期</label><input type="date" class="input" id="d-purchase" value="'+(isEdit?device.purchase_date:'')+'"></div>' +
+    '<div><label class="text-sm font-medium mb-1 block">保修截止</label><input type="date" class="input" id="d-warranty" value="'+(isEdit?device.warranty_expiry:'')+'"></div></div>' +
+    '<div><label class="text-sm font-medium mb-1 block">备注</label><input class="input" id="d-notes" value="'+(isEdit?device.notes:'')+'"></div>' +
+    '<div><label class="text-sm font-medium mb-1 block">状态</label><select class="input" id="d-status">'+statusOpts+'</select></div>' +
+    '<div class="flex justify-end gap-2 pt-3">' +
+    '<button type="button" class="btn btn-outline" onclick="closeModal(\'device-modal-overlay\')">取消</button>' +
+    '<button type="submit" class="btn btn-primary">'+(isEdit?'保存':'添加')+'</button></div></form></div></div>';
+  document.body.insertAdjacentHTML('beforeend', html);
+  $('device-modal-overlay').addEventListener('click', function(e) { if (e.target === $('device-modal-overlay')) closeModal('device-modal-overlay'); });
+  $('device-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    var body = { device_code: $('d-code').value, device_type: $('d-type').value, brand: $('d-brand').value,
+      model: $('d-model').value, specs: $('d-specs').value, quantity: parseInt($('d-quantity').value)||1,
+      status: $('d-status').value,
+      purchase_date: $('d-purchase').value, warranty_expiry: $('d-warranty').value, notes: $('d-notes').value };
+    try {
+      await api(isEdit ? '/api/devices/'+device.id : '/api/devices', { method: isEdit?'PUT':'POST', body: JSON.stringify(body) });
+      closeModal('device-modal-overlay'); loadDevices(); toast(isEdit?'设备更新成功':'设备添加成功', 'success');
+    } catch(err) { toast(err.message, 'error'); }
+  });
+}
+
+function editDevice(id) { api('/api/devices/'+id).then(function(d){ showDeviceModal(d); }).catch(function(e){ toast(e.message,'error'); }); }
+async function deleteDevice(id) { if (confirm('确定删除该设备？')) { try { await api('/api/devices/'+id, {method:'DELETE'}); loadDevices(); toast('删除成功','success'); } catch(e) { toast(e.message,'error'); } } }
+
+// ========== EMPLOYEES ==========
+async function loadEmployees() {
+  var p = new URLSearchParams();
+  var s = $('employee-search').value, st = $('employee-status-filter').value;
+  if (s) p.set('search', s); if (st) p.set('status', st);
+  try {
+    var emps = await api('/api/employees?' + p);
+    var html = '';
+    if (emps.length) {
+      emps.forEach(function(emp) {
+        var devs = '';
+        if (emp.current_devices && emp.current_devices.length) {
+          devs = emp.current_devices.map(function(d){ return d.device_code+'('+d.device_type+')'; }).join('、');
+        }
+        html += '<tr><td class="font-medium">' + emp.name + '</td><td>' + (emp.phone || '-') + '</td><td>' + (emp.department || '-') + '</td>' +
+          '<td>' + (emp.position || '-') + '</td><td>' + statusBadge(emp.status) + '</td>' +
+          '<td class="text-sm">' + (devs || '-') + '</td>' +
+          '<td><div class="flex gap-1">' + (currentUser.role === 'admin' ?
+            '<button class="btn btn-outline btn-sm" onclick="editEmployee('+emp.id+')"><svg class="icon"><use href="#i-edit"/></svg></button>' +
+            (emp.id !== currentUser.employee_id ? '<button class="btn btn-danger btn-sm" onclick="deleteEmployee('+emp.id+')"><svg class="icon"><use href="#i-trash"/></svg></button>' : '') : '-') +
+          '</div></td></tr>';
+      });
+    } else { html = '<tr><td colspan="7" class="empty-state">暂无员工数据</td></tr>'; }
+    $('employees-tbody').innerHTML = html;
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function showEmployeeModal(employee) {
+  var isEdit = !!employee;
+  var html = '<div class="modal-overlay" id="emp-modal-overlay"><div class="modal">' +
+    '<h3 class="text-lg font-bold mb-4">' + (isEdit?'编辑员工':'添加员工') + '</h3>' +
+    '<form id="emp-form" class="space-y-3">' +
+    (isEdit?'<input type="hidden" id="e-id" value="'+employee.id+'">':'') +
+    '<div><label class="text-sm font-medium mb-1 block">姓名 *</label><input class="input" id="e-name" value="'+(isEdit?employee.name:'')+'" required></div>' +
+    '<div><label class="text-sm font-medium mb-1 block">电话</label><input class="input" id="e-phone" value="'+(isEdit?employee.phone:'')+'"></div>' +
+    '<div class="grid grid-cols-2 gap-3">' +
+    '<div><label class="text-sm font-medium mb-1 block">部门</label><input class="input" id="e-dept" value="'+(isEdit?employee.department:'')+'"></div>' +
+    '<div><label class="text-sm font-medium mb-1 block">职位</label><input class="input" id="e-position" value="'+(isEdit?employee.position:'')+'"></div></div>' +
+    (isEdit?'<div><label class="text-sm font-medium mb-1 block">状态</label><select class="input" id="e-status"><option value="在职"'+(employee.status==='在职'?' selected':'')+'>在职</option><option value="离职"'+(employee.status==='离职'?' selected':'')+'>离职</option></select></div>':'') +
+    '<div class="flex justify-end gap-2 pt-3">' +
+    '<button type="button" class="btn btn-outline" onclick="closeModal(\'emp-modal-overlay\')">取消</button>' +
+    '<button type="submit" class="btn btn-primary">'+(isEdit?'保存':'添加')+'</button></div></form></div></div>';
+  document.body.insertAdjacentHTML('beforeend', html);
+  $('emp-modal-overlay').addEventListener('click', function(e) { if (e.target === $('emp-modal-overlay')) closeModal('emp-modal-overlay'); });
+  $('emp-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    var body = { name: $('e-name').value, phone: $('e-phone').value, department: $('e-dept').value, position: $('e-position').value };
+    if (isEdit) body.status = $('e-status').value;
+    try {
+      await api(isEdit ? '/api/employees/'+employee.id : '/api/employees', { method: isEdit?'PUT':'POST', body: JSON.stringify(body) });
+      closeModal('emp-modal-overlay'); loadEmployees(); toast(isEdit?'员工更新成功':'员工添加成功', 'success');
+    } catch(err) { toast(err.message, 'error'); }
+  });
+}
+
+function editEmployee(id) { api('/api/employees/'+id).then(function(emp){ showEmployeeModal(emp); }).catch(function(e){ toast(e.message,'error'); }); }
+async function deleteEmployee(id) { if (confirm('确定删除该员工？')) { try { await api('/api/employees/'+id, {method:'DELETE'}); loadEmployees(); toast('删除成功','success'); } catch(e) { toast(e.message,'error'); } } }
+
+// ========== ASSIGNMENTS ==========
+async function loadAssignments() {
+  var p = new URLSearchParams();
+  if ($('active-only').checked) p.set('active_only', 'true');
+  try {
+    var records = await api('/api/assignments?' + p);
+    var html = '';
+    if (records.length) {
+      records.forEach(function(a) {
+        html += '<tr><td class="font-medium">' + (a.device_code || '-') + '</td><td>' + (a.device_type || '-') + '</td>' +
+          '<td>' + (a.employee_name || '-') + '</td><td><span class="badge badge-blue">' + a.event_type + '</span></td>' +
+          '<td>' + (a.assigner_name || '-') + '</td><td class="text-sm">' + formatDate(a.assigned_at) + '</td>' +
+          '<td class="text-sm">' + (a.returned_at ? formatDate(a.returned_at) : '-') + '</td>' +
+          '<td class="text-sm text-gray-500">' + (a.notes || '-') + '</td></tr>';
+      });
+    } else { html = '<tr><td colspan="8" class="empty-state">暂无分配记录</td></tr>'; }
+    $('assignments-tbody').innerHTML = html;
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function showAssignModal() {
+  try {
+    var res = await Promise.all([api('/api/employees?status=在职'), api('/api/devices?status=空闲')]);
+    var emps = res[0], devs = res[1];
+    if (!devs.length) { toast('没有空闲设备可供分配','warning'); return; }
+    if (!emps.length) { toast('没有在职员工','warning'); return; }
+    var eOpts = emps.map(function(e){ return '<option value="'+e.id+'">'+e.name+' - '+(e.department||'')+'</option>'; }).join('');
+    var dOpts = devs.map(function(d){ return '<option value="'+d.id+'">'+d.device_code+' ('+d.device_type+') - '+d.brand+' '+d.model+'</option>'; }).join('');
+    var html = '<div class="modal-overlay" id="assign-modal-overlay"><div class="modal">' +
+      '<h3 class="text-lg font-bold mb-4">分配设备</h3><form id="assign-form" class="space-y-3">' +
+      '<div><label class="text-sm font-medium mb-1 block">选择设备 *</label><select class="input" id="a-device" required><option value="">请选择设备</option>'+dOpts+'</select></div>' +
+      '<div><label class="text-sm font-medium mb-1 block">分配给员工 *</label><select class="input" id="a-employee" required><option value="">请选择员工</option>'+eOpts+'</select></div>' +
+      '<div><label class="text-sm font-medium mb-1 block">备注</label><input class="input" id="a-notes" placeholder="分配备注"></div>' +
+      '<div class="flex justify-end gap-2 pt-3"><button type="button" class="btn btn-outline" onclick="closeModal(\'assign-modal-overlay\')">取消</button>' +
+      '<button type="submit" class="btn btn-primary">确认分配</button></div></form></div></div>';
+    document.body.insertAdjacentHTML('beforeend', html);
+    $('assign-modal-overlay').addEventListener('click', function(e) { if (e.target === $('assign-modal-overlay')) closeModal('assign-modal-overlay'); });
+    $('assign-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      try {
+        await api('/api/assignments/assign', { method:'POST', body:JSON.stringify({device_id:+$('a-device').value, employee_id:+$('a-employee').value, notes:$('a-notes').value}) });
+        closeModal('assign-modal-overlay'); loadAssignments(); loadDevices(); toast('设备分配成功','success');
+      } catch(err) { toast(err.message, 'error'); }
+    });
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function showTransferModal() {
+  try {
+    var res = await Promise.all([api('/api/employees?status=在职'), api('/api/assignments?active_only=true')]);
+    var emps = res[0], records = res[1];
+    var eOpts = emps.map(function(e){ return '<option value="'+e.id+'">'+e.name+' - '+(e.department||'')+'</option>'; }).join('');
+    var aOpts = records.map(function(a){ return '<option value="'+a.device_id+'|'+a.employee_id+'">'+a.device_code+' (当前: '+a.employee_name+')</option>'; }).join('');
+    if (!aOpts) { toast('没有活跃的分配记录','warning'); return; }
+    var html = '<div class="modal-overlay" id="transfer-modal-overlay"><div class="modal">' +
+      '<h3 class="text-lg font-bold mb-4">设备转移/交接</h3><form id="transfer-form" class="space-y-3">' +
+      '<div><label class="text-sm font-medium mb-1 block">选择设备 *</label><select class="input" id="t-device" required><option value="">请选择</option>'+aOpts+'</select></div>' +
+      '<div><label class="text-sm font-medium mb-1 block">转移给 *</label><select class="input" id="t-employee" required><option value="">请选择目标员工</option>'+eOpts+'</select></div>' +
+      '<div><label class="text-sm font-medium mb-1 block">备注</label><input class="input" id="t-notes" placeholder="转移/交接说明"></div>' +
+      '<div class="flex justify-end gap-2 pt-3"><button type="button" class="btn btn-outline" onclick="closeModal(\'transfer-modal-overlay\')">取消</button>' +
+      '<button type="submit" class="btn btn-primary">确认转移</button></div></form></div></div>';
+    document.body.insertAdjacentHTML('beforeend', html);
+    $('transfer-modal-overlay').addEventListener('click', function(e) { if (e.target === $('transfer-modal-overlay')) closeModal('transfer-modal-overlay'); });
+    $('transfer-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      var parts = $('t-device').value.split('|');
+      try {
+        await api('/api/assignments/transfer', { method:'POST', body:JSON.stringify({
+          device_id: +parts[0], from_employee_id: +parts[1], to_employee_id: +$('t-employee').value, notes: $('t-notes').value
+        })});
+        closeModal('transfer-modal-overlay'); loadAssignments(); loadDevices(); toast('设备转移成功','success');
+      } catch(err) { toast(err.message, 'error'); }
+    });
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function showReplaceModal() {
+  try {
+    var res = await Promise.all([api('/api/employees?status=在职'), api('/api/assignments?active_only=true'), api('/api/devices?status=空闲')]);
+    var emps = res[0], records = res[1], idleDevs = res[2];
+    var eOpts = emps.map(function(e){ return '<option value="'+e.id+'">'+e.name+'</option>'; }).join('');
+    var aOpts = records.map(function(a){ return '<option value="'+a.device_id+'|'+a.employee_id+'">'+a.device_code+' ('+a.employee_name+')</option>'; }).join('');
+    var nOpts = idleDevs.map(function(d){ return '<option value="'+d.id+'">'+d.device_code+' ('+d.device_type+')</option>'; }).join('');
+    if (!aOpts) { toast('没有活跃设备','warning'); return; }
+    var html = '<div class="modal-overlay" id="replace-modal-overlay"><div class="modal">' +
+      '<h3 class="text-lg font-bold mb-4">设备更换</h3><form id="replace-form" class="space-y-3">' +
+      '<div><label class="text-sm font-medium mb-1 block">旧设备 *</label><select class="input" id="r-old-device" required><option value="">请选择</option>'+aOpts+'</select></div>' +
+      '<div><label class="text-sm font-medium mb-1 block">新设备 *</label><select class="input" id="r-new-device" required><option value="">请选择新设备</option>'+nOpts+'</select></div>' +
+      '<div><label class="text-sm font-medium mb-1 block">更换员工 *</label><select class="input" id="r-employee" required><option value="">请选择</option>'+eOpts+'</select></div>' +
+      '<div><label class="text-sm font-medium mb-1 block">备注</label><input class="input" id="r-notes" placeholder="更换原因"></div>' +
+      '<div class="flex justify-end gap-2 pt-3"><button type="button" class="btn btn-outline" onclick="closeModal(\'replace-modal-overlay\')">取消</button>' +
+      '<button type="submit" class="btn btn-primary">确认更换</button></div></form></div></div>';
+    document.body.insertAdjacentHTML('beforeend', html);
+    $('replace-modal-overlay').addEventListener('click', function(e) { if (e.target === $('replace-modal-overlay')) closeModal('replace-modal-overlay'); });
+    $('replace-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      var oldDevId = +$('r-old-device').value.split('|')[0];
+      try {
+        await api('/api/assignments/replace', { method:'POST', body:JSON.stringify({
+          old_device_id: oldDevId, new_device_id: +$('r-new-device').value,
+          employee_id: +$('r-employee').value, notes: $('r-notes').value
+        })});
+        closeModal('replace-modal-overlay'); loadAssignments(); loadDevices(); toast('设备更换成功','success');
+      } catch(err) { toast(err.message, 'error'); }
+    });
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function showReturnModal() {
+  try {
+    var records = await api('/api/assignments?active_only=true');
+    var opts = records.map(function(a){ return '<option value="'+a.device_id+'">'+a.device_code+' ('+a.employee_name+')</option>'; }).join('');
+    if (!opts) { toast('没有需要归还的设备','warning'); return; }
+    var html = '<div class="modal-overlay" id="return-modal-overlay"><div class="modal">' +
+      '<h3 class="text-lg font-bold mb-4">归还设备</h3><form id="return-form" class="space-y-3">' +
+      '<div><label class="text-sm font-medium mb-1 block">选择设备 *</label><select class="input" id="ret-device" required><option value="">请选择</option>'+opts+'</select></div>' +
+      '<div><label class="text-sm font-medium mb-1 block">备注</label><input class="input" id="ret-notes" placeholder="归还说明"></div>' +
+      '<div class="flex justify-end gap-2 pt-3"><button type="button" class="btn btn-outline" onclick="closeModal(\'return-modal-overlay\')">取消</button>' +
+      '<button type="submit" class="btn btn-primary">确认归还</button></div></form></div></div>';
+    document.body.insertAdjacentHTML('beforeend', html);
+    $('return-modal-overlay').addEventListener('click', function(e) { if (e.target === $('return-modal-overlay')) closeModal('return-modal-overlay'); });
+    $('return-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      try {
+        await api('/api/assignments/return', { method:'POST', body:JSON.stringify({device_id:+$('ret-device').value, notes:$('ret-notes').value}) });
+        closeModal('return-modal-overlay'); loadAssignments(); loadDevices(); toast('设备归还成功','success');
+      } catch(err) { toast(err.message, 'error'); }
+    });
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+// ========== USERS ==========
+async function loadUsers() {
+  try {
+    var users = await api('/api/auth/users');
+    var html = '';
+    users.forEach(function(u) {
+      html += '<tr><td class="font-medium">'+u.username+'</td>' +
+        '<td><span class="badge '+(u.role==='admin'?'badge-red':'badge-blue')+'">'+(u.role==='admin'?'管理员':'员工')+'</span></td>' +
+        '<td><span class="badge '+(u.is_active?'badge-green':'badge-red')+'">'+(u.is_active?'是':'否')+'</span></td>' +
+        '<td><button class="btn '+(u.can_register?'btn-success':'btn-outline')+' btn-sm" onclick="toggleRegister('+u.id+')">'+(u.can_register?'已开放':'已关闭')+'</button></td>' +
+        '<td class="text-sm">'+formatDate(u.created_at)+'</td>' +
+        '<td><div class="flex gap-1">' +
+        '<button class="btn btn-outline btn-sm" onclick="toggleUserStatus('+u.id+','+u.is_active+')"><svg class="icon"><use href="'+(u.is_active?'#i-ban':'#i-check')+'"/></svg></button>' +
+        '<button class="btn btn-outline btn-sm" onclick="resetPassword('+u.id+')"><svg class="icon"><use href="#i-key"/></svg></button>' +
+        (u.role!=='admin'?'<button class="btn btn-warning btn-sm" onclick="promoteUser('+u.id+')"><svg class="icon"><use href="#i-up"/></svg></button>':'') +
+        '</div></td></tr>';
+    });
+    $('users-tbody').innerHTML = html;
+  } catch(e) { toast(e.message, 'error'); }
+}
+
+async function toggleRegister(uid) { try { var r = await api('/api/auth/toggle-register/'+uid, {method:'POST'}); loadUsers(); toast(r.can_register?'已开放注册':'已关闭注册','success'); } catch(e) { toast(e.message,'error'); } }
+async function toggleUserStatus(uid, cur) { try { await api('/api/auth/users/'+uid, {method:'PUT', body:JSON.stringify({is_active:cur?0:1})}); loadUsers(); toast(cur?'用户已禁用':'用户已启用','success'); } catch(e) { toast(e.message,'error'); } }
+async function promoteUser(uid) { if (confirm('确认将该用户提升为管理员？')) { try { await api('/api/auth/users/'+uid, {method:'PUT', body:JSON.stringify({role:'admin'})}); loadUsers(); toast('已提升为管理员','success'); } catch(e) { toast(e.message,'error'); } } }
+async function resetPassword(uid) {
+  var pwd = prompt('请输入新密码（至少4位）：');
+  if (pwd && pwd.length >= 4) { try { await api('/api/auth/users/'+uid, {method:'PUT', body:JSON.stringify({password:pwd})}); toast('密码重置成功','success'); } catch(e) { toast(e.message,'error'); } }
+  else if (pwd) { toast('密码至少需要4位','warning'); }
+}
+
+// ========== EXPORT ==========
+function exportData(type) {
+  window.open(API + '/api/export/' + type + '?token=' + token, '_blank');
+}
+
+// ========== MODAL HELPER ==========
+function closeModal(id) { var el = $(id); if (el) el.remove(); }
+
+// ========== INIT ==========
+(async function autoLogin() {
+  if (token && currentUser) {
+    try {
+      var me = await api('/api/auth/me');
+      currentUser = me;
+      saveSession(token, me);
+      showMain();
+      return;
+    } catch(e) {
+      clearSession();
+    }
+  }
+  $('login-page').classList.remove('hidden');
+})();
+</script>
+</body>
+</html>

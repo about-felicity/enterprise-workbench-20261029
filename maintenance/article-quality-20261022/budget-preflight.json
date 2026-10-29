@@ -1,0 +1,33 @@
+{
+  "at": 1792658700.430977,
+  "samples": [
+    {
+      "category": "测评类",
+      "number": 2,
+      "remaining_cny": 0.06631543999999995,
+      "initial_output_reservation_lower_bound_cny": 0.166624,
+      "input_and_repair_cost_not_included": true,
+      "planned_initial_calls": 18,
+      "allowed_to_start": false,
+      "actual_generation_calls": 0,
+      "actual_review_calls": 0,
+      "actual_repair_calls": 0
+    },
+    {
+      "category": "排行类",
+      "number": 1,
+      "remaining_cny": 0.07298219999999994,
+      "initial_output_reservation_lower_bound_cny": 0.163824,
+      "input_and_repair_cost_not_included": true,
+      "planned_initial_calls": 17,
+      "allowed_to_start": false,
+      "actual_generation_calls": 0,
+      "actual_review_calls": 0,
+      "actual_repair_calls": 0
+    }
+  ],
+  "actual_new_calls": 0,
+  "actual_new_cost_cny": 0,
+  "real_end_to_end_acceptance": "not_started_budget_insufficient",
+  "limits_changed": false
+}

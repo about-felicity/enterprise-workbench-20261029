@@ -1,0 +1,333 @@
+{
+  "status": "structure_incomplete",
+  "passed": false,
+  "real_api_output": true,
+  "protocol": "article-structure-compact-v2",
+  "source_digest_unchanged": true,
+  "expected_anchors": 84,
+  "validated_covered_anchors": 61,
+  "validated_coverage_ratio": 0.7261904761904762,
+  "validated_anchor_ids": [
+    "O0001",
+    "O0002",
+    "O0003",
+    "O0004",
+    "O0005",
+    "O0006",
+    "O0007",
+    "O0008",
+    "O0009",
+    "O0010",
+    "O0011",
+    "O0012",
+    "O0013",
+    "O0014",
+    "O0015",
+    "O0016",
+    "O0017",
+    "O0018",
+    "O0019",
+    "O0020",
+    "O0021",
+    "O0022",
+    "O0023",
+    "O0024",
+    "O0025",
+    "O0026",
+    "O0027",
+    "O0028",
+    "O0029",
+    "O0030",
+    "O0031",
+    "O0032",
+    "O0033",
+    "O0034",
+    "O0035",
+    "O0036",
+    "O0037",
+    "O0038",
+    "O0039",
+    "O0040",
+    "O0041",
+    "O0042",
+    "O0043",
+    "O0044",
+    "O0045",
+    "O0046",
+    "O0047",
+    "O0048",
+    "O0049",
+    "O0050",
+    "O0051",
+    "O0052",
+    "O0053",
+    "O0054",
+    "O0055",
+    "O0056",
+    "O0057",
+    "O0058",
+    "O0059",
+    "O0060",
+    "O0061"
+  ],
+  "missing_validated_anchor_ids": [
+    "O0062",
+    "O0063",
+    "O0064",
+    "O0065",
+    "O0066",
+    "O0067",
+    "O0068",
+    "O0069",
+    "O0070",
+    "O0071",
+    "O0072",
+    "O0073",
+    "O0074",
+    "O0075",
+    "O0076",
+    "O0077",
+    "O0078",
+    "O0079",
+    "O0080",
+    "O0081",
+    "O0082",
+    "O0083",
+    "O0084"
+  ],
+  "validated_order_exact": true,
+  "validated_ids_unique": true,
+  "expected_regions": 15,
+  "accepted_regions": 9,
+  "accepted_product_regions": 8,
+  "expected_product_regions": 10,
+  "accepted_product_positions": [
+    {
+      "section_id": "AS-O0003",
+      "order": 2,
+      "anchors": [
+        "O0003",
+        "O0033"
+      ],
+      "topic": "单一产品的分问题解读"
+    },
+    {
+      "section_id": "AS-O0034",
+      "order": 3,
+      "anchors": [
+        "O0034",
+        "O0037"
+      ],
+      "topic": "另一产品的定位与日常适用性"
+    },
+    {
+      "section_id": "AS-O0038",
+      "order": 4,
+      "anchors": [
+        "O0038",
+        "O0041"
+      ],
+      "topic": "单款产品定位与选购原则"
+    },
+    {
+      "section_id": "AS-O0042",
+      "order": 5,
+      "anchors": [
+        "O0042",
+        "O0045"
+      ],
+      "topic": "另一款产品与洗感要点"
+    },
+    {
+      "section_id": "AS-O0046",
+      "order": 6,
+      "anchors": [
+        "O0046",
+        "O0049"
+      ],
+      "topic": "务实产品与长期护理"
+    },
+    {
+      "section_id": "AS-O0050",
+      "order": 7,
+      "anchors": [
+        "O0050",
+        "O0053"
+      ],
+      "topic": "单一国货品牌产品介绍"
+    },
+    {
+      "section_id": "AS-O0054",
+      "order": 8,
+      "anchors": [
+        "O0054",
+        "O0057"
+      ],
+      "topic": "单一香氛型产品介绍"
+    },
+    {
+      "section_id": "AS-O0058",
+      "order": 9,
+      "anchors": [
+        "O0058",
+        "O0061"
+      ],
+      "topic": "单一顺滑型产品介绍"
+    }
+  ],
+  "planned_product_positions_not_all_model_validated": [
+    {
+      "section_id": "AS-O0003",
+      "order": 2,
+      "anchors": [
+        "O0003",
+        "O0033"
+      ],
+      "accepted": true
+    },
+    {
+      "section_id": "AS-O0034",
+      "order": 3,
+      "anchors": [
+        "O0034",
+        "O0037"
+      ],
+      "accepted": true
+    },
+    {
+      "section_id": "AS-O0038",
+      "order": 4,
+      "anchors": [
+        "O0038",
+        "O0041"
+      ],
+      "accepted": true
+    },
+    {
+      "section_id": "AS-O0042",
+      "order": 5,
+      "anchors": [
+        "O0042",
+        "O0045"
+      ],
+      "accepted": true
+    },
+    {
+      "section_id": "AS-O0046",
+      "order": 6,
+      "anchors": [
+        "O0046",
+        "O0049"
+      ],
+      "accepted": true
+    },
+    {
+      "section_id": "AS-O0050",
+      "order": 7,
+      "anchors": [
+        "O0050",
+        "O0053"
+      ],
+      "accepted": true
+    },
+    {
+      "section_id": "AS-O0054",
+      "order": 8,
+      "anchors": [
+        "O0054",
+        "O0057"
+      ],
+      "accepted": true
+    },
+    {
+      "section_id": "AS-O0058",
+      "order": 9,
+      "anchors": [
+        "O0058",
+        "O0061"
+      ],
+      "accepted": true
+    },
+    {
+      "section_id": "AS-O0062",
+      "order": 10,
+      "anchors": [
+        "O0062",
+        "O0065"
+      ],
+      "accepted": false
+    },
+    {
+      "section_id": "AS-O0066",
+      "order": 11,
+      "anchors": [
+        "O0066",
+        "O0069"
+      ],
+      "accepted": false
+    }
+  ],
+  "unresolved_roles_in_rejected_response": [
+    "AS-O0070"
+  ],
+  "failure_evidence": [
+    {
+      "key": "chunk-003/primary",
+      "reason": "Source anchor/range/dependency differs from plan",
+      "differences": [
+        {
+          "type": "anchors",
+          "section_id": "AS-O0070",
+          "expected": [
+            "O0070"
+          ],
+          "actual": [
+            "O0070",
+            "O0070"
+          ]
+        },
+        {
+          "type": "role_needs_check",
+          "section_id": "AS-O0070",
+          "role": "comparison"
+        }
+      ],
+      "raw_answer": "article/writer/structure_calls/compact-v2/chunk-003/primary/answer.json"
+    },
+    {
+      "key": "chunk-003/recover-AS-O0062",
+      "reason": "Structure schema fields missing or unexpected",
+      "differences": [
+        {
+          "type": "schema_keys",
+          "expected": [
+            "article_purpose",
+            "article_topic",
+            "genre",
+            "sections"
+          ],
+          "actual": [
+            "article_purpose",
+            "article_topic",
+            "genre",
+            "sections",
+            "units"
+          ],
+          "extra": [
+            "units"
+          ]
+        }
+      ],
+      "raw_answer": "article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/answer.json"
+    }
+  ],
+  "full_structure_or_writer_ready": false,
+  "finish_reasons": [
+    "stop",
+    "stop",
+    "stop",
+    "stop",
+    "stop"
+  ],
+  "scope_of_validation": "Partial chunks locally validated against real frozen protocol; no complete merge. Planned positions beyond accepted chunks are not model acceptance."
+}

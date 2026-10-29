@@ -1,0 +1,7 @@
+{
+  "job_id": "d25465ff41737afa0e470adc",
+  "status": "waiting_writer",
+  "prompt_sha256": "d44ab934493b68e3e7129e6f66e4401106b11e307c8608308bec5b178be0ea0c",
+  "knowledge_sha256": "95ea84e9a674333282ae4b37f03433d70161a1b18702d384d6adc61a5eb2e918",
+  "publication_approved": false
+}

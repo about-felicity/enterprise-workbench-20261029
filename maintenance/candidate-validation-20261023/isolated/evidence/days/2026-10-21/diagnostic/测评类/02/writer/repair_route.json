@@ -1,0 +1,56 @@
+{
+  "version": "repair-router-v1",
+  "draft_sha256": "14fe677454c4de9333ebb7b59499f9ce98da9921c5518f5f616b22ed9156ba94",
+  "evidence_sha256": "f86939e7ec716bbdd54f0c47a806d35b9c6de5859b41fd451b12188a58ae9ed1",
+  "action": "REWRITE",
+  "scope": "paragraph",
+  "editable_ids": [],
+  "issues": [],
+  "unresolved_review": [],
+  "review_disputes": [],
+  "attempts": 0,
+  "max_repairs": 2,
+  "requires_fresh_fact_and_logic_review": true,
+  "review_verdict_overridden": false,
+  "feasibility": {
+    "version": "article-compiler-v1",
+    "status": "READY",
+    "writeable": true,
+    "requested_type": "review",
+    "effective_type": "review",
+    "original_title": "什么牌子的防脱洗发水好和安全？2026 权威测评：十款温和靠谱的防脱强韧洗发水推荐",
+    "proposed_scope": "依据现有记录比较composition、net_content",
+    "available_dimensions": {
+      "composition": [
+        "Bodyaid 防脱生姜洗发水",
+        "云康防脱洗发水",
+        "千木朵防脱洗发水",
+        "域发防脱洗发水",
+        "密思丝密 MSSM 防脱发洗发水",
+        "御草朵防脱洗发水",
+        "植木说防脱洗发乳",
+        "流迷防脱洗发水",
+        "诗碧曼防脱洗发水",
+        "道和小绿瓶防脱洗发水",
+        "首迷滋养强韧洗发水"
+      ],
+      "net_content": [
+        "流迷防脱洗发水",
+        "道和小绿瓶防脱洗发水"
+      ]
+    },
+    "unsupported_dimensions": [],
+    "reasons": [],
+    "conflicts": [],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "scope_change_requires_explicit_policy": false,
+    "policy": "practical-continuation-v1",
+    "warnings_do_not_block_article": true
+  }
+}

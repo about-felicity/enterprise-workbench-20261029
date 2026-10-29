@@ -1,0 +1,18 @@
+{
+  "started_at": 1792062494.8488479,
+  "port": 3000,
+  "public": true,
+  "public_auth_preserved": true,
+  "creation_loaded_from_GEO_with_original_budget": true,
+  "authenticated_write_reaches_creation_validation": true,
+  "foreign_write_rejected": true,
+  "public_real_pause_resume_completed_acceptance_only": true,
+  "new_button_prefixed_without_extra_paid_task": true,
+  "Word_download_byte_hash_verified": true,
+  "creation_cookie_secure_and_prefixed": true,
+  "mobile_no_horizontal_overflow": true,
+  "six_capture_controls_still_loaded": true,
+  "passed": true,
+  "finished_at": 1792062540.086709,
+  "browser_errors": []
+}

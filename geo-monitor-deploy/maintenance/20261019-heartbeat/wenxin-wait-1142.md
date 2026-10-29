@@ -1,0 +1,7 @@
+# 文心慢速查询，2026-10-19 11:42北京时间
+
+今日文心真实进度0/168，daily waiting_for_baidu，尚未启动。面板current complete168是10月18日旧批次，不代表今天已执行。百度今天批次geo-panel-baidu-ai-20261019-090003-5bc10c7d真实回执64/105，无待回传，读任务17/问题“推荐一款爽肤水”反复进入完整卡片校验失败后退避。
+
+search_recovery.json最后检查记录：read_error，attempt13，cycle6，退避约300秒，错误“百度 AI 卡片未完整呈现，已保存页面观测，不能用文心卡片代替”。无安全验证标记，不能据此称账号掉登录。最近diagnostics baidu-card-1792381235719324358.json：ok/cardPresent为true、folded为false、readyState complete、query正确、正文534字、citationCount0、tpl new_baikan_index。因此确实有正文，不能解释为该问题无卡片；当前不满足严格完整采集门禁。StrictBaiduCardCollector降级路径仅在稳定正文且公开引用完整，或确认无公开引用(body_only)时返回；其他情况持续重试。现有diagnostic未保存public_card_references与最终正文对比，不能断言具体是引用抽屉选择器、公开数量不匹配还是抽屉操作后正文变化，需要补充证据才能进一步定因。
+
+本次只读，没有启动文心绕过百度、没有把文心数据冒作百度、没有缩短间隔/清退避/丢失任务。向用户说明排队与百度重复校验是慢的直接原因，不声称文心自身运行故障。快照原文件位于该百度批次collector/diagnostics；前次recovery_evidence/5fd2ddf1508bea09debb8cd88d1a7f495b60597d85a79eb5dad346b66aec86f3/1792380898570574504中pageText有完整卡片但截图处于下方商品列表，不能仅据截图判断没有卡片。

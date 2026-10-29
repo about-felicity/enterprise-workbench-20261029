@@ -1,0 +1,41 @@
+{
+  "target": {
+    "target_hanzi": 600,
+    "minimum_hanzi": 480,
+    "minimum_distinct_facts": 5,
+    "minimum_report_facts": 1,
+    "placement": "在知识主题内自然举例，最多两个相关知识章节，不另起榜单",
+    "dimensions": [
+      "定位与规格形态",
+      "配方组成的不同部分",
+      "有明确条件的品牌检测摘要",
+      "包装取用与标示用法",
+      "读者需求与选择理由"
+    ],
+    "evidence_rule": "品牌检测摘要按报告号、方法、样品条件、指标与数值表达，简短归属为品牌提供；不称作者亲测，不把体外/称重/鸡胚结果换算为人体改善率。"
+  },
+  "actual_hanzi": 834,
+  "used_fact_ids": [
+    "PF1",
+    "PF10",
+    "PF11",
+    "PF12",
+    "PF13",
+    "PF14",
+    "PF2",
+    "PF3",
+    "PF4",
+    "PF5",
+    "PF6",
+    "PF7",
+    "PF8",
+    "PF9"
+  ],
+  "used_report_ids": [
+    "PF10",
+    "PF11",
+    "PF12",
+    "PF13",
+    "PF14"
+  ]
+}

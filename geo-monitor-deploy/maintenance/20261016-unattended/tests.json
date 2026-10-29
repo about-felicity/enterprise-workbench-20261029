@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "tests": 167,
+  "suites": [
+    {
+      "suite": "test_capture_bridge.py",
+      "passed": true,
+      "tests": 12
+    },
+    {
+      "suite": "test_capture_recovery.py",
+      "passed": true,
+      "tests": 10
+    },
+    {
+      "suite": "test_collectors.py",
+      "passed": true,
+      "tests": 8
+    },
+    {
+      "suite": "test_completion_fence.py",
+      "passed": true,
+      "tests": 3
+    },
+    {
+      "suite": "test_control_panel.py",
+      "passed": true,
+      "tests": 19
+    },
+    {
+      "suite": "test_daily_dispatch.py",
+      "passed": true,
+      "tests": 4
+    },
+    {
+      "suite": "test_native_worker_reliability.py",
+      "passed": true,
+      "tests": 5
+    },
+    {
+      "suite": "test_preflight_recovery.py",
+      "passed": true,
+      "tests": 9
+    },
+    {
+      "suite": "test_question_only.py",
+      "passed": true,
+      "tests": 9
+    },
+    {
+      "suite": "test_round_cycle.py",
+      "passed": true,
+      "tests": 1
+    },
+    {
+      "suite": "test_runtime_reliability.py",
+      "passed": true,
+      "tests": 6
+    },
+    {
+      "suite": "test_search_recovery.py",
+      "passed": true,
+      "tests": 12
+    },
+    {
+      "suite": "test_send_position_recheck.py",
+      "passed": true,
+      "tests": 2
+    },
+    {
+      "suite": "test_session_watch.py",
+      "passed": true,
+      "tests": 18
+    },
+    {
+      "suite": "test_unattended.py",
+      "passed": true,
+      "tests": 44
+    },
+    {
+      "suite": "test_unattended_capture.py",
+      "passed": true,
+      "tests": 5
+    }
+  ]
+}

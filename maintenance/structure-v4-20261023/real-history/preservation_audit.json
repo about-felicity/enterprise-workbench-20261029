@@ -1,0 +1,10 @@
+{
+  "protected_unchanged": true,
+  "old_ledger_rows_unchanged": true,
+  "new_rows_only_this_run": true,
+  "unknown_preserved": true,
+  "new_unknown": [],
+  "no_writer_reviewer_repair_deploy": true,
+  "original_job_id": "creation-1792575159-0a8f9221",
+  "scope": "plan-33e7bfca8bb6497da10b28f0444a693b"
+}

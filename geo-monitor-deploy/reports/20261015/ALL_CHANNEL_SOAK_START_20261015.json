@@ -1,0 +1,107 @@
+{
+  "exported_at": 1792057217.1522918,
+  "test": {
+    "test_id": "all-channel-soak2h-1792056244",
+    "root": "/opt/monitor/geo-capture/soak/all-channel-soak2h-1792056244",
+    "service": "geo-all-channel-soak2h-1792056244.service",
+    "deadline_timer": "geo-all-channel-soak2h-1792056244-deadline.timer",
+    "started_at": 1792056293.950234,
+    "deadline": 1792063493.950234,
+    "duration_seconds": 7200
+  },
+  "models": {
+    "doubao1": {
+      "batch": "geo-panel-doubao1-20261015-172454-e5bec1f9",
+      "state": "running",
+      "service_state": "active",
+      "captured": 7,
+      "processed": 7,
+      "unique_processed": 7,
+      "duplicates": 0,
+      "unavailable": 0,
+      "updated_at": 1792057216.379416,
+      "default_settings_restored": true
+    },
+    "doubao2": {
+      "batch": "geo-panel-doubao2-20261015-172455-301bb730",
+      "state": "running",
+      "service_state": "active",
+      "captured": 8,
+      "processed": 8,
+      "unique_processed": 8,
+      "duplicates": 0,
+      "unavailable": 0,
+      "updated_at": 1792057214.0248158,
+      "default_settings_restored": true
+    },
+    "deepseek": {
+      "batch": "geo-panel-deepseek-20261015-172455-856bd963",
+      "state": "running",
+      "service_state": "active",
+      "captured": 2,
+      "processed": 2,
+      "unique_processed": 2,
+      "duplicates": 0,
+      "unavailable": 0,
+      "updated_at": 1792057216.716049,
+      "default_settings_restored": true
+    },
+    "wenxin_card": {
+      "batch": "geo-panel-wenxin-card-20261015-172456-6bcd4c30",
+      "state": "running",
+      "service_state": "active",
+      "captured": 8,
+      "processed": 8,
+      "unique_processed": 8,
+      "duplicates": 0,
+      "unavailable": 0,
+      "updated_at": 1792057216.989749,
+      "default_settings_restored": true
+    },
+    "baidu_ai": {
+      "batch": "geo-panel-baidu-ai-20261015-172457-03cf4503",
+      "state": "running",
+      "service_state": "active",
+      "captured": 7,
+      "processed": 7,
+      "unique_processed": 2,
+      "duplicates": 5,
+      "unavailable": 0,
+      "updated_at": 1792057216.7915888,
+      "default_settings_restored": true
+    },
+    "yuanbao": {
+      "batch": "geo-panel-yuanbao-20261015-172455-b45ba5d3",
+      "state": "running",
+      "service_state": "active",
+      "captured": 17,
+      "processed": 17,
+      "unique_processed": 17,
+      "duplicates": 0,
+      "unavailable": 0,
+      "updated_at": 1792057215.77013,
+      "default_settings_restored": true
+    }
+  },
+  "historical_doubao": {
+    "geo-products-21x5-account1-20261014": {
+      "captured": 105,
+      "processed": 105
+    },
+    "geo-products-21x5-account2-relogin-20261013": {
+      "captured": 105,
+      "processed": 105
+    }
+  },
+  "containers_unchanged_since_start": true,
+  "deadline_timer_active": true,
+  "projection_enabled": false,
+  "test_complete": false,
+  "anomalies": [
+    "sample_failed:OperationalError",
+    "doubao1:unexpected_state:needs_attention",
+    "doubao2:unexpected_state:needs_attention",
+    "sample_failed:ValueError"
+  ],
+  "scope": "Live startup snapshot only. Startup recorder gaps and two Doubao pre-send failures are retained. No two-hour pass claimed."
+}

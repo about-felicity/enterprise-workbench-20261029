@@ -1,0 +1,13 @@
+{
+  "http_ok": true,
+  "unique_product_cards": 20,
+  "available_products": 9,
+  "library_records": 20,
+  "images": 27,
+  "pending_latest": 13,
+  "duplicates": [],
+  "health": {
+    "at": 1792978838.543734,
+    "status": "ready"
+  }
+}

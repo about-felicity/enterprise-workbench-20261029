@@ -1,0 +1,222 @@
+{
+  "at": 1792638711.8854058,
+  "articles": [
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 1,
+      "state": "needs_attention",
+      "stage": "writer",
+      "error": "API generation rejected: article_budget_exceeded",
+      "approved": false,
+      "ticket": "b379251bb2341eedf0bc994a"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 2,
+      "state": "needs_attention",
+      "stage": "review",
+      "error": "API generation rejected: article_budget_exceeded",
+      "approved": false,
+      "ticket": "8fbf060dd5b07d48daf9528a"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 3,
+      "state": "needs_attention",
+      "stage": "writer",
+      "error": "API generation rejected: article_budget_exceeded",
+      "approved": false,
+      "ticket": "38e3c928ce6512dcf515a44f"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 4,
+      "state": "needs_attention",
+      "stage": "writer",
+      "error": "API generation rejected: article_budget_exceeded",
+      "approved": false,
+      "ticket": "6add8dc11bb4beed81feb899"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 5,
+      "state": "needs_attention",
+      "stage": "writer",
+      "error": "API generation rejected: article_budget_exceeded",
+      "approved": false,
+      "ticket": "24e6402f8f1ca17965ca4633"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 6,
+      "state": "needs_attention",
+      "stage": "writer",
+      "error": "Draft checks rejected: 标题款数与自有产品加竞品总数不一致",
+      "approved": false,
+      "ticket": "5be72aa4bba378be95cdc315"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 7,
+      "state": "needs_attention",
+      "stage": "writer",
+      "error": "API generation rejected: article_budget_exceeded",
+      "approved": false,
+      "ticket": "32f304f3d1d3712c11aa3deb"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 1,
+      "state": "needs_attention",
+      "stage": "writer",
+      "error": "API generation rejected: article_budget_exceeded",
+      "approved": false,
+      "ticket": "1f5db3283bed611d2df3a1f3"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 2,
+      "state": "needs_attention",
+      "stage": "writer",
+      "error": "API generation rejected: article_budget_exceeded",
+      "approved": false,
+      "ticket": "82aba9b6273505991d934ef8"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 3,
+      "state": "needs_attention",
+      "stage": "writer",
+      "error": "API generation rejected: article_budget_exceeded",
+      "approved": false,
+      "ticket": "d7f1f93f7e22f918a3a9958c"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 4,
+      "state": "needs_attention",
+      "stage": "review",
+      "error": "API generation rejected: article_budget_exceeded",
+      "approved": false,
+      "ticket": "358090cd8ac62d0702752820"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 5,
+      "state": "needs_attention",
+      "stage": "review",
+      "error": "API generation rejected: article_budget_exceeded",
+      "approved": false,
+      "ticket": "bde5f162760f59292242331d"
+    },
+    {
+      "job": "creation-1792576129-389f575e",
+      "category": "测评类",
+      "number": 1,
+      "state": "needs_attention",
+      "stage": "writer",
+      "error": "API generation rejected: article_budget_exceeded",
+      "approved": false,
+      "ticket": "39c23af8db30d182a99eaa93"
+    },
+    {
+      "job": "creation-1792576129-389f575e",
+      "category": "测评类",
+      "number": 2,
+      "state": "needs_attention",
+      "stage": "writer",
+      "error": "API generation rejected: article_budget_exceeded",
+      "approved": false,
+      "ticket": "eda1a427c06d1f289534abca"
+    }
+  ],
+  "approved": 0,
+  "jobs": [
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "control": {
+        "paused": false,
+        "revision": 20,
+        "resumed_epoch": 1792638072.6678188
+      },
+      "worker": {
+        "at": 1792638697.2710674,
+        "result": {
+          "status": "completed_with_failures",
+          "date": "2026-10-21",
+          "failed_tickets": 12,
+          "historical_failed_tickets": 0
+        }
+      },
+      "active": {},
+      "budget_limits": {
+        "article_budget_cny": 0.35,
+        "task_budget_cny": 5.25
+      }
+    },
+    {
+      "job": "creation-1792576129-389f575e",
+      "control": {
+        "paused": false,
+        "revision": 13,
+        "resumed_epoch": 1792638564.4462855
+      },
+      "worker": {
+        "at": 1792638697.2822769,
+        "result": {
+          "status": "completed_with_failures",
+          "date": "2026-10-21",
+          "failed_tickets": 2,
+          "historical_failed_tickets": 0
+        }
+      },
+      "active": {},
+      "budget_limits": {
+        "article_budget_cny": 0.35,
+        "task_budget_cny": 5.25
+      }
+    }
+  ],
+  "costs_by_charge_date": [
+    [
+      "2026-10-21",
+      2.8020491200000004,
+      0
+    ],
+    [
+      "2026-10-22",
+      0.8293434400000003,
+      0
+    ]
+  ],
+  "original_unknown_ids_unchanged": true,
+  "original_unknown_count": 3,
+  "services": [
+    "active",
+    "active",
+    "active"
+  ],
+  "deployment": {
+    "at": 1792638351.587698,
+    "backup": "/opt/monitor/geo-capture/maintenance/20261022-content-unattended/source-before-1792638351529867408",
+    "engine_tests": 154,
+    "creation_tests": 74,
+    "budget_changed": false,
+    "task_control_changed": false
+  },
+  "recovery_mapping_files": 197,
+  "budget_changed": false,
+  "unattended_cross_day_verified": false
+}

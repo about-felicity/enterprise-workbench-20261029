@@ -1,0 +1,22 @@
+{
+  "input_sha256": "3353d92e30af1911a6a7e4276970de21a6096460cf66ad7183e6affa7ebe5028",
+  "status": "incomplete",
+  "components": {
+    "INTRO": {
+      "status": "complete",
+      "attempt": 0,
+      "sha256": "6014ad40355279b55548b502ddf793dbabdaa1e68ade6bd9e4f3150cd595000e"
+    },
+    "S1": {
+      "status": "complete",
+      "attempt": 0,
+      "sha256": "82a640571d667663ead61593fd5632f38643068d53bea785481fa36139c7d427"
+    },
+    "S2": {
+      "status": "retry_pending",
+      "attempt": 2,
+      "error": "Unassigned section claim"
+    }
+  },
+  "failed_component": "S2"
+}

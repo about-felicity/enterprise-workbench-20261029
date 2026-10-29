@@ -1,0 +1,22 @@
+{
+  "question": "推荐一款适合烫染后干枯毛躁的护发素",
+  "model": "wenxin_card",
+  "source": {
+    "url": "http://www.wanliiot.net/aften/0819/9139419_21625.htm",
+    "title": "什么牌子的护发素好用？2026全发质适配选购指南！六款温和修护好物深度测评 [深度]-www.wanliiot.net",
+    "media": "",
+    "article": {
+      "status": "failed",
+      "requested_url": "http://www.wanliiot.net/aften/0819/9139419_21625.htm",
+      "text": "",
+      "attempts": [
+        {
+          "backend": "http",
+          "status": "failed",
+          "error": "Too little article text; dynamic content or access restriction remains"
+        }
+      ],
+      "error": "All enabled Scrapling readers failed; inspect attempts or provide a permitted source copy"
+    }
+  }
+}

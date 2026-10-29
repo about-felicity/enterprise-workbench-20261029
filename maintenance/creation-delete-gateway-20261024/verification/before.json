@@ -1,0 +1,15 @@
+{
+  "dialog_bounds": {
+    "x": 578.0625,
+    "y": -828.328125,
+    "width": 480,
+    "height": 219.640625
+  },
+  "viewport_height": 950,
+  "dialog_outside_visible_viewport": true,
+  "delete_http_status": 404,
+  "delete_response": {
+    "ok": false,
+    "message": "创作接口不存在"
+  }
+}

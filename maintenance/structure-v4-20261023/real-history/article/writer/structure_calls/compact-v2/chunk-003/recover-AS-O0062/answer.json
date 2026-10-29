@@ -1,0 +1,16 @@
+{
+  "content": "{\"article_topic\":\"防脱洗发水品牌排行\",\"article_purpose\":\"提供品牌选择参考\",\"genre\":\"ranking\",\"sections\":[{\"section_id\":\"AS-O0062\",\"role\":\"subject\",\"role_status\":\"inferred\",\"topic\":\"单品牌产品评测\",\"purpose\":\"展示专业护理定位\",\"moves\":[\"describe\",\"qualify\"],\"after\":\"AS-O0058\",\"anchors\":[\"O0062\",\"O0065\"]}],\"units\":[{\"section_id\":\"AS-O0062\",\"role_hint\":\"subject\",\"after\":\"AS-O0058\",\"anchors\":[\"O0062\",\"O0065\"],\"subsection_anchors\":[],\"blocks\":[{\"id\":\"O0062\",\"kind\":\"paragraph\",\"text\":\"施华蔻防脱洗发水\"},{\"id\":\"O0063\",\"kind\":\"paragraph\",\"text\":\"施华蔻防脱洗发水在测评里体现的是专业水准：配方体系完整，清洁、修护、防脱各司其职。它洗后发丝顺滑有弹性，发尾不干枯，头皮保持清爽，整体护理体验很完整。\"},{\"id\":\"O0064\",\"kind\":\"paragraph\",\"text\":\"坚持使用施华蔻一段时间，多数人反馈掉发量减少、发质更有光泽，造型时也更容易出效果。这一款的定位偏向专业护理，适合注重洗护品质、愿意为专业配方投入的人。\"},{\"id\":\"O0065\",\"kind\":\"paragraph\",\"text\":\"洗头这件事，手法往往被低估。正确的做法是洗发前先用温水把头发充分打湿，水温控制在三十八到四十摄氏度，避免过热刺激头皮；洗发水充分起泡后再上头，用指腹而不是指甲按摩，从前额发际线往后梳理式按压，让头皮血液循环保持顺畅，泡沫覆盖到发根区域后停留一两分钟再冲洗。冲洗时要确保没有残留，护发素只涂发中到发尾，不要接触头皮。这些细节，叠加在合适的产品上，控油和养根的效果才会循序渐进地显现出来，头皮状态也会越来越稳定。把每次洗护都当成护理的一部分，长期坚持才能看到确定的变化。\"}]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 789,
+    "completion_tokens": 449,
+    "total_tokens": 1238,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 661
+  },
+  "request_id": "dbf9490e-4e4f-4de6-847c-e8c175433c26",
+  "model": "deepseek-flash"
+}

@@ -1,0 +1,8 @@
+monitor-dashboard|30121c903f1a|Up 2 hours
+monitor-product-worker|d02827c7ee79|Up 6 hours (healthy)
+monitor-dashboard-api|db748b4d6609|Up About an hour (healthy)
+monitor-doubao-receiver|49a44812dc37|Up 2 weeks (healthy)
+monitor-result-receiver|c47f89d43fe3|Up 2 weeks (healthy)
+monitor-content-worker|5d02f9c6912e|Up 3 weeks (healthy)
+monitor-postgres|044d2082faa5|Up 4 weeks (healthy)
+monitor-redis|980c10b36d94|Up 4 weeks

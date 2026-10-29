@@ -1,0 +1,105 @@
+{
+  "containers_unchanged": true,
+  "container_changes": {},
+  "business_services_unchanged": true,
+  "service_changes": {},
+  "intentionally_retired_observers": {
+    "geo-editorial-acceptance-current.service": {
+      "before": {
+        "MainPID": "64801",
+        "NRestarts": "0",
+        "ExecMainStartTimestampMonotonic": "3296167934174",
+        "ActiveState": "active",
+        "SubState": "running"
+      },
+      "after": {
+        "MainPID": "0",
+        "NRestarts": "0",
+        "ExecMainStartTimestampMonotonic": "0",
+        "ActiveState": "inactive",
+        "SubState": "dead"
+      }
+    }
+  },
+  "docker_images_unchanged": true,
+  "docker_volumes_unchanged": true,
+  "disk_free_increase_bytes": 3500670976,
+  "at_beijing": "2026-10-15T13:36:21+08:00",
+  "collectors": [
+    {
+      "name": "豆包 1",
+      "service": "geo-native@geo-panel-doubao1-20261015-102126-041120bd.service",
+      "service_state": "inactive",
+      "status": "stopped",
+      "batch": "geo-panel-doubao1-20261015-102126-041120bd",
+      "planned": 420,
+      "captured": 116,
+      "processed": 116,
+      "unique_processed": 116,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792038105.3846984
+    },
+    {
+      "name": "豆包 2",
+      "service": "geo-native@geo-panel-doubao2-20261015-102128-d6e56b0a.service",
+      "service_state": "inactive",
+      "status": "stopped",
+      "batch": "geo-panel-doubao2-20261015-102128-d6e56b0a",
+      "planned": 420,
+      "captured": 119,
+      "processed": 119,
+      "unique_processed": 119,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792038100.352838
+    },
+    {
+      "name": "DeepSeek",
+      "service": "geo-capture-deepseek.service",
+      "service_state": "failed",
+      "status": "waiting_login",
+      "batch": "geo-deepseek-21x3-20261015",
+      "planned": 63,
+      "captured": 0,
+      "processed": 0,
+      "unique_processed": 0,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792026816.408962
+    },
+    {
+      "name": "文心卡片",
+      "service": "geo-capture-wenxin-card.service",
+      "service_state": "active",
+      "status": "running",
+      "batch": "geo-wenxin_card-21x6-20261015",
+      "planned": 126,
+      "captured": 125,
+      "processed": 125,
+      "unique_processed": 125,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792042580.9272735
+    },
+    {
+      "name": "百度卡片",
+      "service": "geo-capture-baidu-ai.service",
+      "service_state": "failed",
+      "status": "needs_attention",
+      "batch": "geo-baidu_ai-21x5-20261015",
+      "planned": 105,
+      "captured": 84,
+      "processed": 84,
+      "unique_processed": 28,
+      "duplicates": 56,
+      "unavailable": 6,
+      "delivery_errors": 0,
+      "updated_at": 1792037826.2105784
+    }
+  ]
+}

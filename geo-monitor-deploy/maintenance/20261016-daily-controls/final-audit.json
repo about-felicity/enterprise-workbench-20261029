@@ -1,0 +1,85 @@
+{
+  "views": [
+    {
+      "width": 1600,
+      "six_daily_models": true,
+      "save_control": true,
+      "parent_overflow": false
+    },
+    {
+      "width": 390,
+      "six_daily_models": true,
+      "save_control": true,
+      "parent_overflow": false
+    }
+  ],
+  "page_errors": [],
+  "jobs_before": {
+    "geo-web@geo-panel-baidu-ai-20261016-095851-ff407fd3.service": "MainPID=0\nActiveEnterTimestampMonotonic=3872556375360",
+    "geo-web@geo-panel-deepseek-20261016-094039-dc64b7e1.service": "MainPID=19602\nActiveEnterTimestampMonotonic=3877888406932",
+    "geo-native@geo-panel-doubao1-20261015-181820-3d82b024.service": "MainPID=0\nActiveEnterTimestampMonotonic=3828657659110",
+    "geo-native@geo-panel-doubao2-20261015-181821-6fa7c803.service": "MainPID=0\nActiveEnterTimestampMonotonic=3828657917305",
+    "geo-web@geo-panel-wenxin-card-20261016-112430-9f29da9d.service": "MainPID=0\nActiveEnterTimestampMonotonic=3877695351549",
+    "geo-native@geo-panel-yuanbao-20261016-100013-89d43fdd.service": "MainPID=0\nActiveEnterTimestampMonotonic=3872638967568"
+  },
+  "jobs_after": {
+    "geo-web@geo-panel-baidu-ai-20261016-095851-ff407fd3.service": "MainPID=0\nActiveEnterTimestampMonotonic=3872556375360",
+    "geo-web@geo-panel-deepseek-20261016-094039-dc64b7e1.service": "MainPID=41728\nActiveEnterTimestampMonotonic=3885233810305",
+    "geo-native@geo-panel-doubao1-20261015-181820-3d82b024.service": "MainPID=0\nActiveEnterTimestampMonotonic=3828657659110",
+    "geo-native@geo-panel-doubao2-20261015-181821-6fa7c803.service": "MainPID=0\nActiveEnterTimestampMonotonic=3828657917305",
+    "geo-web@geo-panel-wenxin-card-20261016-112430-9f29da9d.service": "MainPID=0\nActiveEnterTimestampMonotonic=3877695351549",
+    "geo-native@geo-panel-yuanbao-20261016-100013-89d43fdd.service": "MainPID=0\nActiveEnterTimestampMonotonic=3872638967568"
+  },
+  "collectors_unchanged": false,
+  "other_containers_unchanged": true,
+  "actor": "active",
+  "daily_rows": [
+    {
+      "model": "baidu_ai",
+      "day": "2026-10-16",
+      "desired": "observing",
+      "status": "not_started",
+      "revision": 8
+    },
+    {
+      "model": "deepseek",
+      "day": "2026-10-16",
+      "desired": "observing",
+      "status": "not_started",
+      "revision": 6
+    },
+    {
+      "model": "doubao1",
+      "day": "2026-10-16",
+      "desired": "observing",
+      "status": "not_started",
+      "revision": 11
+    },
+    {
+      "model": "doubao2",
+      "day": "2026-10-16",
+      "desired": "observing",
+      "status": "not_started",
+      "revision": 10
+    },
+    {
+      "model": "wenxin_card",
+      "day": "2026-10-16",
+      "desired": "observing",
+      "status": "not_started",
+      "revision": 8
+    },
+    {
+      "model": "yuanbao",
+      "day": "2026-10-16",
+      "desired": "observing",
+      "status": "not_started",
+      "revision": 8
+    }
+  ],
+  "launch_count": 0,
+  "actor_health": {
+    "status": "running",
+    "time": 1792135640.6436949
+  }
+}

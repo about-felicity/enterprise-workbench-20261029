@@ -1,0 +1,294 @@
+<!DOCTYPE html><html translate="no" yb-theme="3.0" yb-contact="" yb-theme-mode="system" class=""><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width" data-next-head=""/><title data-next-head="">登录</title><script>window.__PAGE_START__=Date.now();</script><script>
+            (function () {
+              try {
+                var ua = navigator.userAgent;
+
+                // ===== UA AB 解析器：yb_ab/<实验key>=<桶值>(;<实验key>=<桶值>)* =====
+                function parseAb(ua) {
+                  var m = /yb_ab\/([^\s]+)/.exec(ua);
+                  if (!m) return {};
+                  var ab = {};
+                  m[1].split(';').forEach(function (kv) {
+                    var i = kv.indexOf('=');
+                    if (i > 0) ab[kv.slice(0, i)] = kv.slice(i + 1);
+                  });
+                  return ab;
+                }
+
+                // ===== UA app_version 版本比较：UA 含 app_version/<x.y.z.w> 时，>= minVersion 返回 true =====
+                function isAppVersionAtLeast(ua, minVersion) {
+                  var m = /app_version\/(\d+(?:\.\d+)*)/i.exec(ua);
+                  if (!m) return false;
+                  var cur = m[1].split('.');
+                  var min = minVersion.split('.');
+                  var len = Math.max(cur.length, min.length);
+                  for (var i = 0; i < len; i++) {
+                    var c = parseInt(cur[i], 10) || 0;
+                    var mn = parseInt(min[i], 10) || 0;
+                    if (c > mn) return true;
+                    if (c < mn) return false;
+                  }
+                  return true;
+                }
+
+                // ===== 实验注册表：每条实验一个块（key / 命中桶值 / 前置条件 / 应用动作）=====
+                // uaDirect 可选：UA 直发通道正则，命中即视为实验组（与 AB 桶值任一命中即生效）
+                var EXPERIMENTS = [
+                  {
+                    // 中性色实验（元宝主端背景色改版）
+                    // 命中路径一：AB 桶值 A=exp_..._ingot_A（原色对照组） B=exp_..._ingot_B（中性色实验组）
+                    // 命中路径二：UA 直发 app_theme_version/neutral（客户端声明直接走新版）
+                    // 命中路径三：UA app_version >= 2.82.0.0（客户端版本达标即走新版）
+                    key: 'exp_requirements_for_changing_the_background_color_of_the_main_end_of_ingot',
+                    bucket: 'B',
+                    uaDirect: /app_theme_version\/neutral/i,
+                    uaVersionMin: '2.82.0.0',
+                    // dark 与 neutral 不再互斥：深色用户也走 neutral，token 值由 colors.scss
+                    // 中 light-only 的 neutral 覆盖块 + 既有 dark 块共同决定（深色取既有 dark 值）
+                    apply: function () {
+                      document.documentElement.setAttribute('yb-color-theme', 'neutral');
+                    }
+                  }
+                  // 新增实验在此追加一个块即可
+                ];
+
+                var ab = parseAb(ua);
+                EXPERIMENTS.forEach(function (exp) {
+                  var hit = ab[exp.key] === exp.bucket
+                    || (exp.uaDirect && exp.uaDirect.test(ua))
+                    || (exp.uaVersionMin && isAppVersionAtLeast(ua, exp.uaVersionMin));
+                  if (hit && (!exp.shouldApply || exp.shouldApply(ua))) {
+                    exp.apply();
+                  }
+                });
+              } catch (e) {}
+            })();
+          </script><script>
+            (function() {
+              try {
+                // ===== globalThis polyfill =====
+                if (typeof globalThis === "undefined") {
+                  if (typeof self !== "undefined") self.globalThis = self;
+                  else if (typeof window !== "undefined") window.globalThis = window;
+                }
+
+                // ===== 配置 =====
+                var MAX_QUEUE_SIZE = 20;    // 队列最多积压 20 条，超出丢弃最早的
+                var MAX_REPORT_COUNT = 50;  // 单次页面生命周期最多上报 50 条
+                var FLUSH_INTERVAL = 3000;  // 兜底定时器间隔 3s
+                var MAX_FLUSH_RETRY = 5;   // 兜底定时器最多重试 5 次（共 15s）
+                var reportedCount = 0;
+                var flushTimer = null;
+                var flushRetryCount = 0;
+                var isFlushing = false; // 防止上报过程中触发 onerror 导致递归
+
+                // ===== 错误队列 =====
+                window.__YB_EMBED_ERR_Q__ = [];
+
+                // ===== 上报通道检测 =====
+                function isAegisReady() {
+                  return window.nextAegis && typeof window.nextAegis.infoAll === "function";
+                }
+                function isJsbReady() {
+                  return window.jsb && typeof window.jsb.invoke === "function";
+                }
+
+                // ===== 格式化错误信息 =====
+                function formatMsg(errInfo) {
+                  if (errInfo.type === "unhandledrejection") {
+                    return "[UnhandledRejection] " + errInfo.msg + " | url: " + (errInfo.url || "") + (errInfo.stack ? " | stack: " + errInfo.stack : "");
+                  }
+                  return "[GlobalError] " + errInfo.msg + " at " + (errInfo.url || "") + ":" + (errInfo.line || "") + ":" + (errInfo.col || "") + (errInfo.stack ? " | stack: " + errInfo.stack : "");
+                }
+
+                // ===== 单条上报（双通道独立） =====
+                function reportOne(errInfo) {
+                  // 已达上报上限，直接标记完成
+                  if (reportedCount >= MAX_REPORT_COUNT) {
+                    errInfo._aegisDone = true;
+                    errInfo._jsbDone = true;
+                    return true;
+                  }
+
+                  var msg = formatMsg(errInfo);
+
+                  // Aegis 上报
+                  if (!errInfo._aegisDone) {
+                    if (isAegisReady()) {
+                      try { window.nextAegis.infoAll(msg); } catch(e) {}
+                      errInfo._aegisDone = true;
+                    }
+                  }
+
+                  // 客户端日志上报
+                  if (!errInfo._jsbDone) {
+                    if (isJsbReady()) {
+                      try { window.jsb.invoke("Common.log", { level: 4, msg: msg }, function(){}); } catch(e) {}
+                      errInfo._jsbDone = true;
+                    }
+                  }
+
+                  var done = errInfo._aegisDone && errInfo._jsbDone;
+                  if (done) reportedCount++;
+                  return done;
+                }
+
+                // ===== 兜底定时器 =====
+                function ensureFallbackTimer() {
+                  if (flushTimer) return;
+                  if (flushRetryCount >= MAX_FLUSH_RETRY) return;
+                  flushRetryCount++;
+                  flushTimer = setTimeout(function() {
+                    flushTimer = null;
+                    tryFlush();
+                    if (window.__YB_EMBED_ERR_Q__.length > 0 && reportedCount < MAX_REPORT_COUNT) {
+                      ensureFallbackTimer();
+                    }
+                  }, FLUSH_INTERVAL);
+                }
+                function clearFallbackTimer() {
+                  if (flushTimer) {
+                    clearTimeout(flushTimer);
+                    flushTimer = null;
+                  }
+                }
+
+                // ===== 尝试清空队列 =====
+                function tryFlush() {
+                  if (isFlushing) return; // 防止递归
+                  if (window.__YB_EMBED_ERR_Q__.length === 0) return;
+
+                  isFlushing = true;
+                  try {
+                    var remaining = [];
+                    for (var i = 0; i < window.__YB_EMBED_ERR_Q__.length; i++) {
+                      var done = reportOne(window.__YB_EMBED_ERR_Q__[i]);
+                      if (!done) {
+                        remaining.push(window.__YB_EMBED_ERR_Q__[i]);
+                      }
+                    }
+                    window.__YB_EMBED_ERR_Q__ = remaining;
+
+                    if (remaining.length > 0) {
+                      ensureFallbackTimer();
+                    } else {
+                      clearFallbackTimer();
+                    }
+                  } catch(e) {}
+                  isFlushing = false;
+                }
+
+                // ===== 错误捕获 =====
+                window.onerror = function(msg, url, line, col, err) {
+                  if (reportedCount >= MAX_REPORT_COUNT) return;
+                  if (window.__YB_EMBED_ERR_Q__.length >= MAX_QUEUE_SIZE) {
+                    window.__YB_EMBED_ERR_Q__.shift();
+                  }
+                  window.__YB_EMBED_ERR_Q__.push({
+                    msg: msg, url: url, line: line, col: col,
+                    stack: err && err.stack, ua: navigator.userAgent, ts: Date.now(),
+                    _aegisDone: false, _jsbDone: false
+                  });
+                  console.log("[YBEmbedError-GlobalError]", msg, "at", url + ":" + line + ":" + col);
+                  tryFlush();
+                };
+
+                window.addEventListener("unhandledrejection", function(e) {
+
+                  if (reportedCount >= MAX_REPORT_COUNT) return;
+                  if (window.__YB_EMBED_ERR_Q__.length >= MAX_QUEUE_SIZE) {
+                    window.__YB_EMBED_ERR_Q__.shift();
+                  }
+                  var reason = e.reason || {};
+                  window.__YB_EMBED_ERR_Q__.push({
+                    msg: reason.message || String(reason), stack: reason.stack,
+                    url: location.href,
+                    type: "unhandledrejection", ua: navigator.userAgent, ts: Date.now(),
+                    _aegisDone: false, _jsbDone: false
+                  });
+                  console.log("[YBEmbedError-UnhandledRejection]", reason.message || String(reason));
+                  tryFlush();
+                });
+
+              } catch (e) {
+                console.log(e);
+              }
+            })()
+          </script><meta charSet="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="color-scheme" content="light dark"/><meta name="robots" content="noindex"/><meta name="apple-mobile-web-app-capable" content="yes"/><link rel="icon" type="image/png" href="https://static.yuanbao.tencent.com/m/yuanbao-web/favicon_new@32.png"/><meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,width=device-width,viewport-fit=cover"/><link rel="dns-prefetch" href="//static.yuanbao.tencent.com" crossorigin="anonymous"/><link rel="preconnect" href="https://static.yuanbao.tencent.com" crossorigin="anonymous"/><link rel="preconnect" href="https://cdn-hybrid-prod.hunyuan.tencent.com" crossorigin="anonymous"/><script>
+            // 定义语言映射
+            var languagesMap = {
+              'zh-CN': ['zh-cn', 'zh-hans-cn', 'zh'],
+              'zh-HK': ['zh-ts', 'zh-tw', 'zh-tc', 'zh-hant-tw', 'zh-hk'],
+              en: ['en-us', 'en-uk', 'en'],
+            };
+
+            /**
+            * 从 LocalStorage 中获取语言
+            * @param key - 可选，LocalStorage 中存储语言的键名，默认为 'app_lang'
+            * @returns 匹配到的语言键值，未匹配到则返回空字符串
+            */
+            function getLangFromLocalStorage(key) {
+              key = key || 'app_lang'; // 默认参数
+              // 确保在浏览器环境下运行
+              if (typeof window === 'undefined') {
+                return '';
+              }
+              // 从 LocalStorage 中获取语言值
+              var langValue = window.localStorage.getItem(key);
+              if (langValue) {
+                var langLow = langValue.toLowerCase().replace('_', '-');
+                for (var key in languagesMap) {
+                  if (languagesMap.hasOwnProperty(key)) {
+                    var values = languagesMap[key];
+                    if (values.indexOf(langLow) !== -1) {
+                      return key;
+                    }
+                  }
+                }
+              }
+
+              // 默认返回空字符串
+              return '';
+            }
+
+            /**
+            * 从浏览器语言偏好中获取语言
+            * @returns 匹配到的语言键值，未匹配到则返回空字符串
+            */
+            function getLangFromNavigator() {
+              // 确保在浏览器环境下运行
+              if (typeof window === 'undefined') {
+                return '';
+              }
+
+              // 获取浏览器的语言偏好列表
+              var browserLanguages = navigator.languages || [navigator.language];
+
+              // 遍历浏览器的语言偏好列表
+              for (var i = 0; i < browserLanguages.length; i++) {
+                var lang = browserLanguages[i];
+                var langLow = lang.toLowerCase().replace('_', '-');
+                for (var key in languagesMap) {
+                  if (languagesMap.hasOwnProperty(key)) {
+                    var values = languagesMap[key];
+                    if (values.indexOf(langLow) !== -1) {
+                      return key;
+                    }
+                  }
+                }
+              }
+
+              // 默认返回空字符串
+              return '';
+            }
+
+            // 获取当前语言
+            var currentLang = getLangFromLocalStorage() || getLangFromNavigator();
+            if (currentLang) {
+              document.cookie = 'REDACTED_CONFIGURE_LOCALLY' + currentLang + '; path=/; max-age=31536000';
+            }
+            </script><link rel="stylesheet" href="https://cdn-bot.hunyuan.tencent.com/_next/static/css/pages/_app.c243db50f7ffb36f.css" crossorigin="anonymous" data-n-g=""/><link rel="stylesheet" href="https://cdn-bot.hunyuan.tencent.com/_next/static/css/67236.8ef36ae48da92133.css" crossorigin="anonymous"/><link rel="stylesheet" href="https://cdn-bot.hunyuan.tencent.com/_next/static/css/14370.9a9286d4e38f0899.css" crossorigin="anonymous" data-n-p=""/><link rel="stylesheet" href="https://cdn-bot.hunyuan.tencent.com/_next/static/css/pages/login.7880222ed20b1acb.css" crossorigin="anonymous" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" crossorigin="anonymous" nomodule="" src="https://cdn-bot.hunyuan.tencent.com/_next/static/chunks/polyfills-42372ed130431b0a.js"></script><style id="__jsx-7391aa37fbf353e6">*::-webkit-scrollbar{display:none}*{scrollbar-width:none}</style><style id="__jsx-bf264b20ab59c62b">*{-webkit-user-select:none;-moz-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}input,textarea{-webkit-user-select:text;-moz-user-select:text;user-select:text}:root{--hy-font-family:PingFang SC, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu,
+            Helvetica Neue, Helvetica, Arial, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei,
+            Source Han Sans CN, sans-serif;--page-max-width:765px}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}sub,sup{margin:0;padding:0;border:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1;font-family:var(--hy-font-family)!important;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}button{font-family:var(--hy-font-family)!important}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}table{border-collapse:collapse;border-spacing:0}html{-ms-touch-action:manipulation;touch-action:manipulation}input[type="number"]{-webkit-appearance:textfield;-moz-appearance:textfield}input::-webkit-contacts-auto-fill-button{opacity:0!important;visibility:hidden!important;pointer-events:none!important}</style></head><body id="hunyuan-bot"><div id="__next"></div><script id="__NEXT_DATA__" type="application/json" crossorigin="anonymous">{"props":{"pageProps":{}},"page":"/login","query":{},"buildId":"2nWdzP3TmjtUntEEk7qzG","assetPrefix":"https://cdn-bot.hunyuan.tencent.com","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script><noscript data-n-css=""></noscript><script defer="" crossorigin="anonymous" nomodule="" src="https://cdn-bot.hunyuan.tencent.com/_next/static/chunks/polyfills-42372ed130431b0a.js"></script><script src="https://cdn-bot.hunyuan.tencent.com/_next/static/chunks/runtime-401d7ae6f4f8a3f9.js" defer="" crossorigin="anonymous"></script><script src="https://cdn-bot.hunyuan.tencent.com/_next/static/chunks/framework-83c3eccb5216e31a.js" defer="" crossorigin="anonymous"></script><script src="https://cdn-bot.hunyuan.tencent.com/_next/static/chunks/main-e16043fc956edc81.js" defer="" crossorigin="anonymous"></script><script src="https://cdn-bot.hunyuan.tencent.com/_next/static/chunks/pages/_app-c6c667e508591417.js" defer="" crossorigin="anonymous"></script><script src="https://cdn-bot.hunyuan.tencent.com/_next/static/chunks/84715-3379511c86c0539c.js" defer="" crossorigin="anonymous"></script><script src="https://cdn-bot.hunyuan.tencent.com/_next/static/chunks/51396-bd8e0bf73c5a1c09.js" defer="" crossorigin="anonymous"></script><script src="https://cdn-bot.hunyuan.tencent.com/_next/static/chunks/17103-feaaddd1f2ec28ba.js" defer="" crossorigin="anonymous"></script><script src="https://cdn-bot.hunyuan.tencent.com/_next/static/chunks/77952-efebae0b6e547fb0.js" defer="" crossorigin="anonymous"></script><script src="https://cdn-bot.hunyuan.tencent.com/_next/static/chunks/40805-daae67b1ff1bce23.js" defer="" crossorigin="anonymous"></script><script src="https://cdn-bot.hunyuan.tencent.com/_next/static/chunks/42423-a1aeefdff6120a21.js" defer="" crossorigin="anonymous"></script><script src="https://cdn-bot.hunyuan.tencent.com/_next/static/chunks/51537-ce7974f70f4e3a6d.js" defer="" crossorigin="anonymous"></script><script src="https://cdn-bot.hunyuan.tencent.com/_next/static/chunks/40967-762f5a57c63ab29b.js" defer="" crossorigin="anonymous"></script><script src="https://cdn-bot.hunyuan.tencent.com/_next/static/chunks/pages/login-880db6a6fc6705f3.js" defer="" crossorigin="anonymous"></script><script src="https://cdn-bot.hunyuan.tencent.com/_next/static/2nWdzP3TmjtUntEEk7qzG/_buildManifest.js" defer="" crossorigin="anonymous"></script><script src="https://cdn-bot.hunyuan.tencent.com/_next/static/2nWdzP3TmjtUntEEk7qzG/_ssgManifest.js" defer="" crossorigin="anonymous"></script><style id="__jsx-7391aa37fbf353e6">*::-webkit-scrollbar{display:none}*{scrollbar-width:none}</style><style id="__jsx-bf264b20ab59c62b">*{-webkit-user-select:none;-moz-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}input,textarea{-webkit-user-select:text;-moz-user-select:text;user-select:text}:root{--hy-font-family:PingFang SC, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu,
+            Helvetica Neue, Helvetica, Arial, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei,
+            Source Han Sans CN, sans-serif;--page-max-width:765px}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}sub,sup{margin:0;padding:0;border:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1;font-family:var(--hy-font-family)!important;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}button{font-family:var(--hy-font-family)!important}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}table{border-collapse:collapse;border-spacing:0}html{-ms-touch-action:manipulation;touch-action:manipulation}input[type="number"]{-webkit-appearance:textfield;-moz-appearance:textfield}input::-webkit-contacts-auto-fill-button{opacity:0!important;visibility:hidden!important;pointer-events:none!important}</style></body></html>

@@ -1,0 +1,62 @@
+{
+  "action_id": "2bbf5be6d85f44a49656e927f6d44f38",
+  "before": {
+    "model": "baidu_ai",
+    "name": "百度卡片",
+    "batch": "geo-baidu_ai-21x5-20261015",
+    "service_state": "failed",
+    "state": "needs_attention",
+    "planned": 105,
+    "captured": 84,
+    "processed": 84,
+    "unique_processed": 28,
+    "duplicates": 56,
+    "unavailable": 6,
+    "delivery_errors": 0,
+    "tasks": {
+      "completed": 90,
+      "failed_deferred": 1,
+      "pending": 14
+    },
+    "needs_review": 1,
+    "updated_at": 1792037826.2105784,
+    "created_at": 1792026928.2443814,
+    "config": {
+      "model": "baidu_ai",
+      "rounds": 5,
+      "questions": [
+        "推荐一款护发精油",
+        "推荐一款护发素",
+        "推荐一款控油蓬松洗发水",
+        "推荐一款二硫化硒洗发水",
+        "推荐一款沐浴精油",
+        "推荐一款眉毛增长液",
+        "推荐一款祛痘精华液",
+        "推荐一款美白面霜",
+        "推荐一款造型喷雾",
+        "推荐一款染发剂",
+        "推荐一款睫毛增长液",
+        "推荐一款防脱洗发水",
+        "推荐一款防脱精华液",
+        "推荐一款面膜",
+        "推荐一款眼霜",
+        "推荐一款卸妆油",
+        "推荐一款爽肤水",
+        "推荐一款洗面奶",
+        "推荐一款身体乳",
+        "推荐一款护手霜",
+        "推荐一款防晒霜"
+      ],
+      "batch": "geo-baidu_ai-21x5-20261015",
+      "device": "geo-headless-baidu_ai",
+      "interval": 60
+    },
+    "stop_requested": false
+  },
+  "at": "2026-10-15T14:10:06+08:00",
+  "result": {
+    "ok": true,
+    "message": "正在继续原任务，已完成题目不会重发",
+    "batch": "geo-baidu_ai-21x5-20261015"
+  }
+}

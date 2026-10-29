@@ -1,0 +1,50 @@
+{
+  "batch": "geo-panel-yuanbao-20261027-090005-e7c7269a",
+  "planned": 168,
+  "prompt_mode": "question_only",
+  "model": "yuanbao",
+  "captured": 36,
+  "geo_processed": 36,
+  "delivery_errors": [],
+  "nontext_observations": 0,
+  "nontext_processed": 0,
+  "nontext_pending": 0,
+  "unavailable": 0,
+  "time": 1793069698.6899009,
+  "heartbeat_expires_at": 1793069848.689901,
+  "bridge_pid": 53973,
+  "tasks": {
+    "completed": 36,
+    "pending": 132
+  },
+  "status": "running",
+  "memory": {
+    "app_alive": true,
+    "pid": 5522,
+    "java_alloc_kib": 36134,
+    "java_size_kib": 134438,
+    "java_limit_kib": 524288,
+    "java_fraction": 0.06892013549804688,
+    "native_alloc_kib": 284192,
+    "app_pss_kib": 889525,
+    "container_bytes": 1548955648,
+    "container_working_bytes": 1354338304,
+    "container_limit_bytes": 4294967296,
+    "container_fraction": 0.31533145904541016,
+    "app_pss_fraction": 0.21207928657531738,
+    "sampled_at": 1793069698.6899142,
+    "last_exit": {
+      "pid": 30236,
+      "reason": "low_memory"
+    },
+    "pending": "",
+    "high_samples": 0
+  },
+  "progress": {
+    "phase": "delivery",
+    "task_id": null,
+    "ordinal": null,
+    "changed_at": 1793069693.6776383,
+    "pending_delivery": 1
+  }
+}

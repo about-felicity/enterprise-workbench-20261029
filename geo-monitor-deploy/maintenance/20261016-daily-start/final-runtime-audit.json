@@ -1,0 +1,177 @@
+{
+  "at": 1792122446.278013,
+  "board": {
+    "at": 1792121888.309213,
+    "products": 24,
+    "questions": 21,
+    "missing": [],
+    "passed": true,
+    "browser_cells_verified": 48,
+    "page_errors": []
+  },
+  "daily_plan": {
+    "enabled": true,
+    "time": "05:00",
+    "timezone": "Asia/Shanghai",
+    "start_date": "2026-10-17",
+    "models": [
+      "doubao1",
+      "doubao2",
+      "baidu_ai",
+      "wenxin_card",
+      "yuanbao",
+      "deepseek"
+    ],
+    "normal_completion": true,
+    "card_order": "baidu_complete_then_wenxin",
+    "question_count": 21,
+    "rounds": {
+      "doubao1": 10,
+      "doubao2": 10,
+      "wenxin_card": 8,
+      "baidu_ai": 5,
+      "yuanbao": 8,
+      "deepseek": 3
+    }
+  },
+  "deepseek_original_readback": {
+    "task_id": "9f96af3a38898f895b10cdaf349ec22e6fcf629d34091d2cce7e615132e58094",
+    "processed": true,
+    "sources": 12,
+    "body_length": 967,
+    "submitted_again": false
+  },
+  "models": [
+    {
+      "model": "doubao1",
+      "questions": 21,
+      "rounds": 10,
+      "interval": 45,
+      "current": {
+        "batch": "geo-panel-doubao1-20261015-181820-3d82b024",
+        "state": "paused",
+        "service_state": "failed",
+        "planned": 1512,
+        "captured": 760,
+        "processed": 760,
+        "pending_delivery": 0,
+        "needs_review": 1,
+        "progress": {
+          "phase": "generating",
+          "ordinal": 761,
+          "changed_at": 1792108827.8198333,
+          "deadline_at": 1792109723.7705364,
+          "reason": ""
+        }
+      }
+    },
+    {
+      "model": "doubao2",
+      "questions": 21,
+      "rounds": 10,
+      "interval": 45,
+      "current": {
+        "batch": "geo-panel-doubao2-20261015-181821-6fa7c803",
+        "state": "paused",
+        "service_state": "failed",
+        "planned": 1512,
+        "captured": 310,
+        "processed": 310,
+        "pending_delivery": 0,
+        "needs_review": 1,
+        "progress": {
+          "phase": "generating",
+          "ordinal": 311,
+          "changed_at": 1792078578.8043494,
+          "deadline_at": 1792079475.172502,
+          "reason": ""
+        }
+      }
+    },
+    {
+      "model": "deepseek",
+      "questions": 21,
+      "rounds": 3,
+      "interval": 600,
+      "current": {
+        "batch": "geo-panel-deepseek-20261016-094039-dc64b7e1",
+        "state": "running",
+        "service_state": "active",
+        "planned": 63,
+        "captured": 10,
+        "processed": 10,
+        "pending_delivery": 0,
+        "needs_review": 0,
+        "progress": {
+          "phase": "rate_wait",
+          "ordinal": 11,
+          "changed_at": 1792122367.7986398,
+          "next_at": 1792122941.8438358,
+          "pending_delivery": 0
+        }
+      }
+    },
+    {
+      "model": "wenxin_card",
+      "questions": 21,
+      "rounds": 8,
+      "interval": 60,
+      "current": {
+        "batch": "geo-panel-wenxin-card-20261016-112430-9f29da9d",
+        "state": "complete",
+        "service_state": "inactive",
+        "planned": 8,
+        "captured": 8,
+        "processed": 8,
+        "pending_delivery": 0,
+        "needs_review": 0,
+        "progress": {
+          "phase": "complete",
+          "pending_delivery": 0
+        }
+      }
+    },
+    {
+      "model": "baidu_ai",
+      "questions": 21,
+      "rounds": 5,
+      "interval": 60,
+      "current": {
+        "batch": "geo-panel-baidu-ai-20261016-095851-ff407fd3",
+        "state": "complete",
+        "service_state": "inactive",
+        "planned": 15,
+        "captured": 15,
+        "processed": 15,
+        "pending_delivery": 0,
+        "needs_review": 0,
+        "progress": {
+          "phase": "complete",
+          "pending_delivery": 0
+        }
+      }
+    },
+    {
+      "model": "yuanbao",
+      "questions": 21,
+      "rounds": 8,
+      "interval": 45,
+      "current": {
+        "batch": "geo-panel-yuanbao-20261016-100013-89d43fdd",
+        "state": "complete",
+        "service_state": "inactive",
+        "planned": 105,
+        "captured": 105,
+        "processed": 105,
+        "pending_delivery": 0,
+        "needs_review": 0,
+        "progress": {
+          "phase": "delivery",
+          "ordinal": null,
+          "changed_at": 1792121481.2456002,
+          "pending_delivery": 1
+        }
+      }
+    }
+  ]
+}

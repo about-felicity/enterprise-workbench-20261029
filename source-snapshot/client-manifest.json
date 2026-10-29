@@ -1,0 +1,196 @@
+{
+  "files": [
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/.upstream.json",
+      "source": "deepseek-browser-deploy/public_client/.upstream.json",
+      "sha256": "c0daf9c6ef3fe0980039608f413a01a25f126937f241789e53097a03d02e0c50",
+      "bytes": 119
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/build_single_file.py",
+      "source": "deepseek-browser-deploy/public_client/build_single_file.py",
+      "sha256": "e9647e6b49e28b6ceb72f92f8304f00dbaf011edd1bd34ff34b8fe7a8c44a012",
+      "bytes": 3802
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/build_standard_windows.py",
+      "source": "deepseek-browser-deploy/public_client/build_standard_windows.py",
+      "sha256": "24416bf013bc98431fb1aa76b28662abc03aa1d9b859a5057a5fa436eb228920",
+      "bytes": 6328
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/enrollment.py",
+      "source": "deepseek-browser-deploy/public_client/enrollment.py",
+      "sha256": "1d4f0c44077ead03f44d80370e93b6167dce14338ef97854f8eebaf55df5608e",
+      "bytes": 2567
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/ensure_python.ps1",
+      "source": "deepseek-browser-deploy/public_client/ensure_python.ps1",
+      "sha256": "079dd07651d00579b4d59d3cc61934eb6ce84deb61a77aee486c20946914f3bb",
+      "bytes": 4340
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/extension/background.js",
+      "source": "deepseek-browser-deploy/public_client/extension/background.js",
+      "sha256": "bc8e291ba0035e559c44a069ee05ff9b629175ba50f4d3a6f5a77aeef6e3aa72",
+      "bytes": 30759
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/extension/content.js",
+      "source": "deepseek-browser-deploy/public_client/extension/content.js",
+      "sha256": "9b5f38ad0e51b506b7c019eba78ae80f94855e0f8367883ef1c29cd23013bb54",
+      "bytes": 60043
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/extension/core.js",
+      "source": "deepseek-browser-deploy/public_client/extension/core.js",
+      "sha256": "9e1112d102c8a830568a753cafa2bd62491d37a863fb4025d572824de87f875e",
+      "bytes": 14608
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/extension/injected.js",
+      "source": "deepseek-browser-deploy/public_client/extension/injected.js",
+      "sha256": "356ee1ea3faa137c6caed0b6eaa9787abcb800eca8bb76626a5338a9262cb3a2",
+      "bytes": 4520
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/extension/manifest.json",
+      "source": "deepseek-browser-deploy/public_client/extension/manifest.json",
+      "sha256": "e68e1ac2f4911cc83fb8921e765ef657cbbdca076fcd53ea4b59b748c8bfaf92",
+      "bytes": 1055
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/extension/popup.html",
+      "source": "deepseek-browser-deploy/public_client/extension/popup.html",
+      "sha256": "a1c153ef5e4d0d82e21ad978c4d71c21461a69de2e6dde41668701a16bfb0c9e",
+      "bytes": 5557
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/extension/popup.js",
+      "source": "deepseek-browser-deploy/public_client/extension/popup.js",
+      "sha256": "a4f1ce593fad95c8e70eb600e61b02979332f024598a23db644e14f7d1a7a35e",
+      "bytes": 29280
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/extension/ui.css",
+      "source": "deepseek-browser-deploy/public_client/extension/ui.css",
+      "sha256": "63fc1a465db818b24d9efe509640691e6cdf18de9ddfc6779a768e394c41e42c",
+      "bytes": 7808
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/local_receiver.py",
+      "source": "deepseek-browser-deploy/public_client/local_receiver.py",
+      "sha256": "cd4121d2542137a1b7673b5adfcfca8bad8c7b136c58dd9005911f48392dab7f",
+      "bytes": 18130
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/questions.txt",
+      "source": "deepseek-browser-deploy/public_client/questions.txt",
+      "sha256": "5fc2d557f4185903364f9913e021e645c37807888116b0c40c022a1487e76d39",
+      "bytes": 522
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/README.md",
+      "source": "deepseek-browser-deploy/public_client/README.md",
+      "sha256": "9aaad047995f17f0253807205b617c49be2eb8171d7c5da9bff2c5b56344b4de",
+      "bytes": 4006
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/remote_sync.py",
+      "source": "deepseek-browser-deploy/public_client/remote_sync.py",
+      "sha256": "a9a54eb2970a86e9fedfb7a20f7b5c923d2dc00313f7ec61dad3a02f57d314fd",
+      "bytes": 13133
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/restart_receiver.ps1",
+      "source": "deepseek-browser-deploy/public_client/restart_receiver.ps1",
+      "sha256": "2bdfb54970090ac6c63631c5e9c908cdc6d1f8c1ce8c32b2cc3c693e87fd6467",
+      "bytes": 1055
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/START.cmd",
+      "source": "deepseek-browser-deploy/public_client/START.cmd",
+      "sha256": "db49ed2409ae5344976bbce136e3886a607c667b86a0cccf3ab4ac9fc5429189",
+      "bytes": 885
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/start_monitor.ps1",
+      "source": "deepseek-browser-deploy/public_client/start_monitor.ps1",
+      "sha256": "78b8e3585631da04ba6dafb6cfde661bfe114beb4c3cf701f0ebe3b9c5ecb7ab",
+      "bytes": 3129
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/tests/extension_self_test.html",
+      "source": "deepseek-browser-deploy/public_client/tests/extension_self_test.html",
+      "sha256": "bc52ebd8e086855bddf7d9021d4714f7500b398386bf4d919f68d301ce91b7b7",
+      "bytes": 16437
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/tests/run_tests.ps1",
+      "source": "deepseek-browser-deploy/public_client/tests/run_tests.ps1",
+      "sha256": "fcd6caa81432e932f34fcbae86b5afeecfb768c8c5bb470ecab1454e031155a1",
+      "bytes": 2110
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/tests/test_bootstrap.ps1",
+      "source": "deepseek-browser-deploy/public_client/tests/test_bootstrap.ps1",
+      "sha256": "5baa062bec1886ea16c1e527b207b27a58b880240537a58b0b12e111c8a4fd16",
+      "bytes": 3720
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/tests/test_probe_access.ps1",
+      "source": "deepseek-browser-deploy/public_client/tests/test_probe_access.ps1",
+      "sha256": "0f3527231d473c84a50c1a172cbcad5f29576e2c8cc5c03b9f27c5b386631307",
+      "bytes": 1387
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/tests/test_receiver.py",
+      "source": "deepseek-browser-deploy/public_client/tests/test_receiver.py",
+      "sha256": "256df09ee739c4976f46f17e51383fc02e6f8df6739a50e85589f36acb4bffe5",
+      "bytes": 6824
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/tests/test_remote_sync.py",
+      "source": "deepseek-browser-deploy/public_client/tests/test_remote_sync.py",
+      "sha256": "666dfde87bfaf68e6c36aedc5782ab78206222b80cb1cfd58597e1c2bf292043",
+      "bytes": 3923
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/tools/build_source_title_cache.py",
+      "source": "deepseek-browser-deploy/public_client/tools/build_source_title_cache.py",
+      "sha256": "635d98113ee198146232bdbfd3316d8f94c03512186a83050e47643dcb3a5441",
+      "bytes": 12195
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/tools/normalize_results.py",
+      "source": "deepseek-browser-deploy/public_client/tools/normalize_results.py",
+      "sha256": "dd6338e6fe75800373711037ded7282ad175f3fe14347632a4258ea6b3bb2467",
+      "bytes": 5307
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/windows_bootstrap.py",
+      "source": "deepseek-browser-deploy/public_client/windows_bootstrap.py",
+      "sha256": "bfc94881f786ae3672669219a2f6591f9c843d82696acde61207c4dd5d4fd0d3",
+      "bytes": 5245
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/一键启动DeepSeek监控.cmd",
+      "source": "deepseek-browser-deploy/public_client/一键启动DeepSeek监控.cmd",
+      "sha256": "db49ed2409ae5344976bbce136e3886a607c667b86a0cccf3ab4ac9fc5429189",
+      "bytes": 885
+    },
+    {
+      "snapshot": "client/deepseek-browser-deploy/public_client/使用说明.txt",
+      "source": "deepseek-browser-deploy/public_client/使用说明.txt",
+      "sha256": "fdc7730ecb131b4e099de485806dd21b138dcfe3f92f1d05cf4ec7525624b5f4",
+      "bytes": 3539
+    }
+  ],
+  "excluded": [
+    "config/",
+    "data/",
+    "device/upload/enrollment credentials"
+  ],
+  "scope": "Reviewed local DeepSeek public client source; bootstrap credentials remain private"
+}

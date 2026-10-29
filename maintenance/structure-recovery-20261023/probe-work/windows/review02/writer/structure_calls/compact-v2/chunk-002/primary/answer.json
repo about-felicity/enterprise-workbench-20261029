@@ -1,0 +1,4 @@
+{
+  "content": "{\"article_topic\": \"可用资料的组织方式\", \"article_purpose\": \"以同一问题组织已有资料\", \"genre\": \"review\", \"sections\": [{\"section_id\": \"AS-O0029\", \"role\": \"subject\", \"role_status\": \"inferred\", \"topic\": \"说明当前部分\", \"purpose\": \"解释前提并承接下文\", \"moves\": [\"explain\", \"qualify\"], \"after\": \"AS-O0024\", \"anchors\": [\"O0029\", \"O0033\"]}, {\"section_id\": \"AS-O0034\", \"role\": \"subject\", \"role_status\": \"inferred\", \"topic\": \"说明当前部分\", \"purpose\": \"解释前提并承接下文\", \"moves\": [\"explain\", \"qualify\"], \"after\": \"AS-O0029\", \"anchors\": [\"O0034\", \"O0038\"]}, {\"section_id\": \"AS-O0039\", \"role\": \"subject\", \"role_status\": \"inferred\", \"topic\": \"说明当前部分\", \"purpose\": \"解释前提并承接下文\", \"moves\": [\"explain\", \"qualify\"], \"after\": \"AS-O0034\", \"anchors\": [\"O0039\", \"O0043\"]}]}",
+  "finish_reason": "stop"
+}

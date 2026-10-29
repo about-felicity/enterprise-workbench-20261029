@@ -1,0 +1,9 @@
+{
+  "type": "offline_mock_regressions",
+  "tests": 280,
+  "failures": 0,
+  "errors": 2,
+  "skipped": 0,
+  "blocked_network_attempts": 0,
+  "new_api_calls": 0
+}

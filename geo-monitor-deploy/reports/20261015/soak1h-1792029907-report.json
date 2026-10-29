@@ -1,0 +1,215 @@
+{
+  "test_id": "soak1h-1792029907",
+  "started_at": 1792029907.8351557,
+  "deadline": 1792033507.8351557,
+  "duration_seconds": 3600,
+  "baseline": [
+    {
+      "model": "doubao1",
+      "batch": "geo-products-21x5-account1-20261014",
+      "state": "complete",
+      "service_state": "inactive",
+      "planned": 105,
+      "captured": 105,
+      "processed": 105,
+      "unique_processed": 105,
+      "unavailable": 0,
+      "duplicates": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792026807.4144652,
+      "login": "locally_logged_in"
+    },
+    {
+      "model": "doubao2",
+      "batch": "geo-products-21x5-account2-relogin-20261013",
+      "state": "complete",
+      "service_state": "inactive",
+      "planned": 105,
+      "captured": 105,
+      "processed": 105,
+      "unique_processed": 105,
+      "unavailable": 0,
+      "duplicates": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792026807.4144504,
+      "login": "unchecked"
+    },
+    {
+      "model": "deepseek",
+      "batch": "geo-deepseek-21x3-20261015",
+      "state": "waiting_login",
+      "service_state": "failed",
+      "planned": 63,
+      "captured": 0,
+      "processed": 0,
+      "unique_processed": 0,
+      "unavailable": 0,
+      "duplicates": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792026816.408962,
+      "login": "login_required"
+    },
+    {
+      "model": "wenxin_card",
+      "batch": "geo-wenxin_card-21x6-20261015",
+      "state": "running",
+      "service_state": "active",
+      "planned": 126,
+      "captured": 21,
+      "processed": 21,
+      "unique_processed": 21,
+      "unavailable": 0,
+      "duplicates": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792029907.4454346,
+      "login": "unchecked"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-baidu_ai-21x5-20261015",
+      "state": "running",
+      "service_state": "active",
+      "planned": 105,
+      "captured": 21,
+      "processed": 21,
+      "unique_processed": 6,
+      "unavailable": 1,
+      "duplicates": 15,
+      "delivery_errors": 0,
+      "updated_at": 1792029906.734106,
+      "login": "unchecked"
+    }
+  ],
+  "scope": "文心/百度连续采集；已完成豆包仅验证保活与历史记录；DeepSeek登录未恢复则列为阻塞",
+  "finished_at": 1792033508.213335,
+  "elapsed_seconds": 3600.378179698717,
+  "samples": 61,
+  "verdict": "failed",
+  "deltas": {
+    "doubao1": {
+      "captured": 40,
+      "processed": 40,
+      "unique_processed": 40,
+      "unavailable": 0
+    },
+    "doubao2": {
+      "captured": 41,
+      "processed": 41,
+      "unique_processed": 41,
+      "unavailable": 0
+    },
+    "deepseek": {
+      "captured": 0,
+      "processed": 0,
+      "unique_processed": 0,
+      "unavailable": 0
+    },
+    "wenxin_card": {
+      "captured": 22,
+      "processed": 22,
+      "unique_processed": 22,
+      "unavailable": 0
+    },
+    "baidu_ai": {
+      "captured": 36,
+      "processed": 36,
+      "unique_processed": 11,
+      "unavailable": 1
+    }
+  },
+  "verified_new_receipts": 114,
+  "tested_capture_channels": [
+    "doubao1",
+    "doubao2",
+    "wenxin_card",
+    "baidu_ai"
+  ],
+  "blocked_channels": [
+    "deepseek"
+  ],
+  "monitor_only": [],
+  "anomalies": [
+    {
+      "at": 1792032131.4584627,
+      "kind": "needs_attention",
+      "model": "wenxin_card"
+    }
+  ],
+  "final": [
+    {
+      "model": "doubao1",
+      "batch": "geo-panel-doubao1-20261015-102126-041120bd",
+      "state": "running",
+      "service_state": "active",
+      "planned": 420,
+      "captured": 40,
+      "processed": 40,
+      "unique_processed": 40,
+      "unavailable": 0,
+      "duplicates": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792033504.7320786,
+      "login": "locally_logged_in"
+    },
+    {
+      "model": "doubao2",
+      "batch": "geo-panel-doubao2-20261015-102128-d6e56b0a",
+      "state": "running",
+      "service_state": "active",
+      "planned": 420,
+      "captured": 41,
+      "processed": 41,
+      "unique_processed": 41,
+      "unavailable": 0,
+      "duplicates": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792033504.730529,
+      "login": "locally_logged_in"
+    },
+    {
+      "model": "deepseek",
+      "batch": "geo-deepseek-21x3-20261015",
+      "state": "waiting_login",
+      "service_state": "failed",
+      "planned": 63,
+      "captured": 0,
+      "processed": 0,
+      "unique_processed": 0,
+      "unavailable": 0,
+      "duplicates": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792026816.408962,
+      "login": "login_required"
+    },
+    {
+      "model": "wenxin_card",
+      "batch": "geo-wenxin_card-21x6-20261015",
+      "state": "running",
+      "service_state": "active",
+      "planned": 126,
+      "captured": 43,
+      "processed": 43,
+      "unique_processed": 43,
+      "unavailable": 0,
+      "duplicates": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792033507.2865937,
+      "login": "unchecked"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-baidu_ai-21x5-20261015",
+      "state": "running",
+      "service_state": "active",
+      "planned": 105,
+      "captured": 57,
+      "processed": 57,
+      "unique_processed": 17,
+      "unavailable": 2,
+      "duplicates": 40,
+      "delivery_errors": 0,
+      "updated_at": 1792033507.2741132,
+      "login": "unchecked"
+    }
+  ]
+}

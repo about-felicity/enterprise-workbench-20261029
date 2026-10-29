@@ -1,0 +1,462 @@
+[
+  {
+    "index": 1,
+    "question": "请联网检索：中国国家博物馆的官方地址和开放时间是什么？请简洁回答，并提供官方信源链接。",
+    "extraction": "emulator SQLite read-only transaction",
+    "status": "ok",
+    "finished": true,
+    "body_markdown": "**官方地址**：北京市东城区东长安街16号（天安门广场东侧）\n**开放时间**：9:00‑17:30（16:30停止入馆）；每周一闭馆，法定节假日除外；6‑10月执行该夏令时间，其余年份常规：9:00‑17:00（16:00停止入馆）\n**官方信源**：https://www.chnmuseum.cn/cg/\n\n>提示：实行实名预约参观，免费入馆。",
+    "body_text": "**官方地址**：北京市东城区东长安街16号（天安门广场东侧）\n**开放时间**：9:00‑17:30（16:30停止入馆）；每周一闭馆，法定节假日除外；6‑10月执行该夏令时间，其余年份常规：9:00‑17:00（16:00停止入馆）\n**官方信源**：https://www.chnmuseum.cn/cg/\n\n>提示：实行实名预约参观，免费入馆。",
+    "sources": [
+      {
+        "index": 1,
+        "title": "服务_中国国家博物馆官方网站",
+        "url": "https://www.chnmuseum.cn/cg/?eqid=a3920ff90000629800000003647448c2",
+        "doc_id": "d8b690f88eb3edc7-c0a339898354d3b0"
+      },
+      {
+        "index": 2,
+        "title": "中国国家博物馆官方网站",
+        "url": "https://www.chnmuseum.cn/?from=www.13dh.com",
+        "doc_id": "da14975b9e537c77-63f86fe6113db750"
+      },
+      {
+        "index": 3,
+        "title": "参观导览 - 启蒙的艺术 - 中国国家博物馆",
+        "url": "https://www.chnmuseum.cn/Portals/0/web/zt/qimeng/cn/visit.html",
+        "doc_id": "b54f5304a33efdc8-c5fbc82e00c780be"
+      },
+      {
+        "index": 4,
+        "title": "服务_中国国家博物馆官方网站",
+        "url": "https://www.chnmuseum.cn/cg/?eqid=c6d7fda500032b200000000664454925",
+        "doc_id": "6231ab12ebd4a500-daad9b8550d24467"
+      },
+      {
+        "index": 5,
+        "title": "中国国家博物馆",
+        "url": "https://pcticket.chnmuseum.cn/commentate/general",
+        "doc_id": "f9767ffde4224361-55653cc21c9a6bc8"
+      },
+      {
+        "index": 6,
+        "title": "温馨提示_中国国家博物馆官方网站",
+        "url": "https://www.chnmuseum.cn/gbgg/202609/t20260918_282606.shtml",
+        "doc_id": "9b77798ae3e2b53e-ea2623e099fcfaeb"
+      },
+      {
+        "index": 7,
+        "title": "中国国家博物馆官方网站",
+        "url": "http://www.chnmuseum.cn/",
+        "doc_id": "4b8e160ae7fd7312-0ea9a0744c7bf993"
+      },
+      {
+        "index": 8,
+        "title": "中国国家博物馆参观门票领取办法及开放时间",
+        "url": "https://m.chnmuseum.cn/Portals/0/web/exhibition/zx/201703.pdf",
+        "doc_id": "ea9b722b211f6bb0-ff1367af9e943a65"
+      },
+      {
+        "index": 9,
+        "title": "资讯",
+        "url": "https://www.chnmuseum.cn/zx/",
+        "doc_id": "7d5c72a4d128ce4c-d872863490b5fdc5"
+      },
+      {
+        "index": 10,
+        "title": "中国国家博物馆官方网站",
+        "url": "https://www.chnmuseum.cn/?from=owdir.com",
+        "doc_id": "88b2898bdf067948-3e266f3aa048bcc3"
+      },
+      {
+        "index": 11,
+        "title": "中国国家博物馆文章",
+        "url": "http://chnmuseum.cn/?ref=www.bidianer.com",
+        "doc_id": "f6da9b3ef8b29778-79129d28af4460d8"
+      },
+      {
+        "index": 12,
+        "title": "视频_中国国家博物馆官方网站",
+        "url": "https://www.chnmuseum.cn/sp/",
+        "doc_id": "40d3dc93de40cd87-a2af268e4475a82f"
+      }
+    ],
+    "citations": [
+      {
+        "pos": [
+          81
+        ],
+        "insert_text": "(中国国家博...)",
+        "title": "服务_中国国家博物馆官方网站",
+        "url": "https://www.chnmuseum.cn/cg/?eqid=a3920ff90000629800000003647448c2&f_link_type=f_linkinlinenote&flow_extra=eyJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowLCJkb2NfaWQiOiJkOGI2OTBmODhlYjNlZGM3LWMwYTMzOTg5ODM1NGQzYjAifQ%3D%3D",
+        "doc_id": "d8b690f88eb3edc7-c0a339898354d3b0",
+        "summary": "## 开放时间\n\n09:00 ",
+        "website_name": "中国国家博物馆",
+        "authority": "official_org_site"
+      },
+      {
+        "pos": [
+          270
+        ],
+        "insert_text": "(中国国家博...)",
+        "title": "服务_中国国家博物馆官方网站",
+        "url": "https://www.chnmuseum.cn/cg/?eqid=a3920ff90000629800000003647448c2&f_link_type=f_linkinlinenote&flow_extra=eyJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowLCJkb2NfaWQiOiJkOGI2OTBmODhlYjNlZGM3LWMwYTMzOTg5ODM1NGQzYjAifQ%3D%3D",
+        "doc_id": "d8b690f88eb3edc7-c0a339898354d3b0",
+        "summary": "## 开放时间\n\n09:00 ",
+        "website_name": "中国国家博物馆",
+        "authority": "official_org_site"
+      },
+      {
+        "pos": [
+          318
+        ],
+        "insert_text": "(中国国家博...)",
+        "title": "服务_中国国家博物馆官方网站",
+        "url": "https://www.chnmuseum.cn/cg/?eqid=a3920ff90000629800000003647448c2&f_link_type=f_linkinlinenote&flow_extra=eyJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowLCJkb2NfaWQiOiJkOGI2OTBmODhlYjNlZGM3LWMwYTMzOTg5ODM1NGQzYjAifQ%3D%3D",
+        "doc_id": "d8b690f88eb3edc7-c0a339898354d3b0",
+        "summary": "## 开放时间\n\n09:00 ",
+        "website_name": "中国国家博物馆",
+        "authority": "official_org_site"
+      },
+      {
+        "pos": [
+          369
+        ],
+        "insert_text": "(中国国家博...)",
+        "title": "温馨提示_中国国家博物馆官方网站",
+        "url": "https://www.chnmuseum.cn/gbgg/202609/t20260918_282606.shtml?f_link_type=f_linkinlinenote&flow_extra=eyJkb2NfcG9zaXRpb24iOjAsImRvY19pZCI6IjliNzc3OThhZTNlMmI1M2UtZWEyNjIzZTA5OWZjZmFlYiIsImlubGluZV9kaXNwbGF5X3Bvc2l0aW9uIjowfQ%3D%3D",
+        "doc_id": "9b77798ae3e2b53e-ea2623e099fcfaeb",
+        "summary": "温馨提示\n2026-09-18",
+        "website_name": "中国国家博物馆",
+        "authority": "official_org_site"
+      }
+    ],
+    "search_queries": [
+      "中国国家博物馆 官方地址 开放时间 官网链接",
+      "中国国家博物馆官网"
+    ],
+    "source_count": 12,
+    "citation_count": 4
+  },
+  {
+    "index": 2,
+    "question": "请联网检索：故宫博物院的官方购票预约入口是什么？用三句话回答并附官方信源。",
+    "extraction": "emulator SQLite read-only transaction",
+    "status": "ok",
+    "finished": true,
+    "body_markdown": "故宫博物院主要官方购票预约入口为微信端的“故宫博物院”小程序，同时官网设有在线订票页面ticket.dpm.org.cn跳转该预约渠道。\n该院并未授权任何第三方机构、个人代办门票预约，全部观众都需要实名在此官方渠道完成购票预约。\n门票会在参观日前7天的20点开放预约，景区不售卖当日现场门票。\n官方信源：故宫博物院官网在线订票页面 http://ticket.dpm.org.cn/",
+    "body_text": "故宫博物院主要官方购票预约入口为微信端的“故宫博物院”小程序，同时官网设有在线订票页面ticket.dpm.org.cn跳转该预约渠道。\n该院并未授权任何第三方机构、个人代办门票预约，全部观众都需要实名在此官方渠道完成购票预约。\n门票会在参观日前7天的20点开放预约，景区不售卖当日现场门票。\n官方信源：故宫博物院官网在线订票页面 http://ticket.dpm.org.cn/",
+    "sources": [
+      {
+        "index": 1,
+        "title": "在线订票 - 故宫博物院",
+        "url": "http://ticket.dpm.org.cn/",
+        "doc_id": "f61f1a5d7015a36d-3ffa925e2527d51f"
+      },
+      {
+        "index": 2,
+        "title": "故宫博物院",
+        "url": "https://www.dpm.org.cn/Home.html#!/xh",
+        "doc_id": "7872cb8e0cfed573-57b09a6a8ca1d08f"
+      },
+      {
+        "index": 3,
+        "title": "关于2026年故宫博物院年票发售的公告 - 故宫博物院",
+        "url": "https://www.dpm.org.cn/announce_detail/372863.html",
+        "doc_id": "075d2876c40f9bb5-c402624d59752863"
+      },
+      {
+        "index": 4,
+        "title": "故宫博物院参观须知 - 故宫博物院",
+        "url": "https://www.dpm.org.cn/singles_detail/259831.html",
+        "doc_id": "e7ff4a33115f5960-cd7fde6ad66c1c79"
+      },
+      {
+        "index": 5,
+        "title": "故宫博物院",
+        "url": "https://www.dpm.org.cn/home.htm/",
+        "doc_id": "2bc69de709d88c43-2610dfd10f7b2d27"
+      },
+      {
+        "index": 6,
+        "title": "导览 - 故宫博物院",
+        "url": "https://www.dpm.org.cn/Visit.html?ivk_sa=1024320u",
+        "doc_id": "0bb19415e8861733-95d95de80de5f92f"
+      },
+      {
+        "index": 7,
+        "title": "在线订票 - 故宫博物院",
+        "url": "https://www.dpm.org.cn/subject_booking/",
+        "doc_id": "e439cc82ccb4f372-035e44c3dcdfd2ea"
+      },
+      {
+        "index": 8,
+        "title": "故宫博物院",
+        "url": "https://www.dpm.org.cn/Home.html#!/h",
+        "doc_id": "b9f4be7112a6f141-98f4818686707fc6"
+      },
+      {
+        "index": 9,
+        "title": "故宫博物院关于2026年7月27日开放的公告 - 故宫博物院",
+        "url": "https://www.dpm.org.cn/announce_detail/379398.html",
+        "doc_id": "f35ff8c67f81f525-79f1ee9169261e34"
+      }
+    ],
+    "citations": [
+      {
+        "pos": [
+          167
+        ],
+        "insert_text": "(故宫博物院)",
+        "title": "在线订票 - 故宫博物院",
+        "url": "http://ticket.dpm.org.cn/?f_link_type=f_linkinlinenote&flow_extra=eyJkb2NfcG9zaXRpb24iOjAsImRvY19pZCI6ImY2MWYxYTVkNzAxNWEzNmQtM2ZmYTkyNWUyNTI3ZDUxZiIsImlubGluZV9kaXNwbGF5X3Bvc2l0aW9uIjowfQ%3D%3D",
+        "doc_id": "f61f1a5d7015a36d-3ffa925e2527d51f",
+        "summary": "# 订票须知\n\n---\n## ",
+        "website_name": "故宫博物院",
+        "authority": "official_org_site"
+      },
+      {
+        "pos": [
+          303
+        ],
+        "insert_text": "(故宫博物院)",
+        "title": "故宫博物院参观须知 - 故宫博物院",
+        "url": "https://www.dpm.org.cn/singles_detail/259831.html?f_link_type=f_linkinlinenote&flow_extra=eyJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowLCJkb2NfaWQiOiJlN2ZmNGEzMzExNWY1OTYwLWNkN2ZkZTZhZDY2YzFjNzkifQ%3D%3D",
+        "doc_id": "e7ff4a33115f5960-cd7fde6ad66c1c79",
+        "summary": "## （一）订票、检票须知\n\n",
+        "website_name": "故宫博物院",
+        "authority": "official_org_site"
+      },
+      {
+        "pos": [
+          391
+        ],
+        "insert_text": "(故宫博物院)",
+        "title": "在线订票 - 故宫博物院",
+        "url": "https://www.dpm.org.cn/subject_booking/?f_link_type=f_linkinlinenote&flow_extra=eyJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowLCJkb2NfaWQiOiJlNDM5Y2M4MmNjYjRmMzcyLTAzNWU0NGMzZGNkZmQyZWEifQ%3D%3D",
+        "doc_id": "e439cc82ccb4f372-035e44c3dcdfd2ea",
+        "summary": "## 故宫博物院票务政策\n\n#",
+        "website_name": "故宫博物院",
+        "authority": "official_org_site"
+      },
+      {
+        "pos": [
+          475
+        ],
+        "insert_text": "(故宫博物院)",
+        "title": "在线订票 - 故宫博物院",
+        "url": "http://ticket.dpm.org.cn/?f_link_type=f_linkinlinenote&flow_extra=eyJkb2NfcG9zaXRpb24iOjAsImRvY19pZCI6ImY2MWYxYTVkNzAxNWEzNmQtM2ZmYTkyNWUyNTI3ZDUxZiIsImlubGluZV9kaXNwbGF5X3Bvc2l0aW9uIjowfQ%3D%3D",
+        "doc_id": "f61f1a5d7015a36d-3ffa925e2527d51f",
+        "summary": "# 订票须知\n\n---\n## ",
+        "website_name": "故宫博物院",
+        "authority": "official_org_site"
+      }
+    ],
+    "search_queries": [
+      "故宫博物院官方购票预约入口 官网",
+      "故宫博物院购票官方信源"
+    ],
+    "source_count": 9,
+    "citation_count": 4
+  },
+  {
+    "index": 3,
+    "question": "请联网检索：Python 官方文档中列表和元组有什么区别？请用三点简洁说明，并附官方文档信源链接。",
+    "extraction": "emulator SQLite read-only transaction",
+    "status": "ok",
+    "finished": true,
+    "body_markdown": "### Python官方文档：列表(list)与元组(tuple)三点区别\n1. **可变性不同**：列表是**可变(mutable)**序列，可以修改、增删内部元素；元组是**不可变(immutable)**序列，不支持对单个元素赋值修改。\n2. **典型存储元素类型不同**：列表通常存放**同质（同类型）**元素；元组通常存放**异质（不同类型）**元素，常配合解包使用。\n3. **语法字面量不同**：列表使用方括号`[]`构建；元组使用圆括号`()`（括号可省略，单元素元组必须带尾随逗号）构建。\n\n> 官方中文信源链接：\n> https://docs.python.org/zh-cn/3.13/tutorial/datastructures.html\n\n> 官方内置类型参考链接：\n> https://docs.python.org/zh-cn/3.13/library/stdtypes.html\n\n引用原文片段：\n> 元组是 immutable（不可变的），一般可包含异质元素序列，通过解包或索引访问。列表是 mutable（可变的），列表元素一般为同质类型，可迭代访问。",
+    "body_text": "### Python官方文档：列表(list)与元组(tuple)三点区别\n1. **可变性不同**：列表是**可变(mutable)**序列，可以修改、增删内部元素；元组是**不可变(immutable)**序列，不支持对单个元素赋值修改。\n2. **典型存储元素类型不同**：列表通常存放**同质（同类型）**元素；元组通常存放**异质（不同类型）**元素，常配合解包使用。\n3. **语法字面量不同**：列表使用方括号`[]`构建；元组使用圆括号`()`（括号可省略，单元素元组必须带尾随逗号）构建。\n\n> 官方中文信源链接：\n> https://docs.python.org/zh-cn/3.13/tutorial/datastructures.html\n\n> 官方内置类型参考链接：\n> https://docs.python.org/zh-cn/3.13/library/stdtypes.html\n\n引用原文片段：\n> 元组是 immutable（不可变的），一般可包含异质元素序列，通过解包或索引访问。列表是 mutable（可变的），列表元素一般为同质类型，可迭代访问。",
+    "sources": [
+      {
+        "index": 1,
+        "title": "5. 数据结构 — Python 3.13.15 文档",
+        "url": "https://docs.python.org/zh-cn/3.13/tutorial/datastructures.html",
+        "doc_id": "cd20dbe0d7e3b646-694d98bc4491e64f"
+      },
+      {
+        "index": 2,
+        "title": "5. Data Structures",
+        "url": "https://docs.python.org/3/tutorial/datastructures.html?highlight=tuple",
+        "doc_id": "b70ef4f2b972fee6-b6cf2e13f1aa4284"
+      },
+      {
+        "index": 3,
+        "title": "5. Struktur Data",
+        "url": "https://docs.python.org/id/3.11/tutorial/datastructures.html",
+        "doc_id": "c6c78a36836f43e0-75c81f42b2ce3bcc"
+      },
+      {
+        "index": 4,
+        "title": "5. Struktur Data",
+        "url": "https://docs.python.org/id/3.5/tutorial/datastructures.html",
+        "doc_id": "31506d99226f8069-055134aa8acc7f07"
+      },
+      {
+        "index": 5,
+        "title": "内置类型 — Python 3.13.15 文档",
+        "url": "https://docs.python.org/zh-cn/3.13/library/stdtypes.html",
+        "doc_id": "f0e0cb341a83b20c-ee36efb6149814a9"
+      },
+      {
+        "index": 6,
+        "title": "Built-in Types",
+        "url": "https://docs.python.org/3.12/library/stdtypes.html?highlight=__dict__",
+        "doc_id": "94870b4acfbf1ff3-e6440e3350df3542"
+      },
+      {
+        "index": 7,
+        "title": "5. 数据结构 — Python 3.14.7 文档",
+        "url": "https://docs.python.org/zh-cn/3/tutorial/datastructures.html?highlight=%E5%88%97%E8%A1%A8",
+        "doc_id": "79c150714fe2401a-0a32ebabcd1d9304"
+      },
+      {
+        "index": 8,
+        "title": "5. Data Structures",
+        "url": "https://docs.python.org/3/tutorial/datastructures.html?highlight=list+comprehension",
+        "doc_id": "af2ebed5b1741106-ece4b4543bc56b88"
+      },
+      {
+        "index": 9,
+        "title": "5. Estruturas de dados",
+        "url": "https://docs.python.org/pt-br/3.10/tutorial/datastructures.html",
+        "doc_id": "ad3c8abd0bb94404-9bd8df882b901e5b"
+      },
+      {
+        "index": 10,
+        "title": "5. Structures de données",
+        "url": "https://docs.python.org/fr/3.13/tutorial/datastructures.html",
+        "doc_id": "36848a4373a1eecb-0125af2853d38d06"
+      },
+      {
+        "index": 11,
+        "title": "5. データ構造",
+        "url": "https://docs.python.org/ja/3/tutorial/datastructures.html?highlight=remove",
+        "doc_id": "1da290335a20f3d3-9840414c8a32f5a1"
+      },
+      {
+        "index": 12,
+        "title": "5. Struktury danych",
+        "url": "https://docs.python.org/pl/3.11/tutorial/datastructures.html",
+        "doc_id": "f88e4786cb1bc3ec-b36867be1460237a"
+      },
+      {
+        "index": 13,
+        "title": "Built-in Types",
+        "url": "https://docs.python.org/3/library/stdtypes.html?highlight=truth",
+        "doc_id": "cd438a54f1433184-a87561b77be4357c"
+      },
+      {
+        "index": 14,
+        "title": "内置类型 — Python 3.11.15 文档",
+        "url": "https://docs.python.org/zh-cn/3.11/library/stdtypes.html",
+        "doc_id": "1e38a2aa5d73d439-dcc80dc2e3f5ec7d"
+      },
+      {
+        "index": 15,
+        "title": "5. Data Structures",
+        "url": "https://docs.python.org/3.16/tutorial/datastructures.html",
+        "doc_id": "6d2ad6675e0d365d-550bcc9ee2204e78"
+      },
+      {
+        "index": 16,
+        "title": "5. 资料结构 — Python 3.13.15 说明文件",
+        "url": "https://docs.python.org/zh-tw/3.13/tutorial/datastructures.html",
+        "doc_id": "7890790fcdace203-a183ecc086bf5011"
+      }
+    ],
+    "citations": [
+      {
+        "pos": [
+          65
+        ],
+        "insert_text": "(Python)",
+        "title": "5. 数据结构 — Python 3.13.15 文档",
+        "url": "https://docs.python.org/zh-cn/3.13/tutorial/datastructures.html?f_link_type=f_linkinlinenote&flow_extra=eyJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowLCJkb2NfaWQiOiJjZDIwZGJlMGQ3ZTNiNjQ2LTY5NGQ5OGJjNDQ5MWU2NGYifQ%3D%3D",
+        "doc_id": "cd20dbe0d7e3b646-694d98bc4491e64f",
+        "summary": "```\n'), (1, 2, ",
+        "website_name": "Python",
+        "authority": "official_org_site"
+      },
+      {
+        "pos": [
+          242
+        ],
+        "insert_text": "(Python)",
+        "title": "5. 数据结构 — Python 3.13.15 文档",
+        "url": "https://docs.python.org/zh-cn/3.13/tutorial/datastructures.html?f_link_type=f_linkinlinenote&flow_extra=eyJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowLCJkb2NfaWQiOiJjZDIwZGJlMGQ3ZTNiNjQ2LTY5NGQ5OGJjNDQ5MWU2NGYifQ%3D%3D",
+        "doc_id": "cd20dbe0d7e3b646-694d98bc4491e64f",
+        "summary": "```\n'), (1, 2, ",
+        "website_name": "Python",
+        "authority": "official_org_site"
+      },
+      {
+        "pos": [
+          414
+        ],
+        "insert_text": "(Python)",
+        "title": "5. 数据结构 — Python 3.13.15 文档",
+        "url": "https://docs.python.org/zh-cn/3.13/tutorial/datastructures.html?f_link_type=f_linkinlinenote&flow_extra=eyJkb2NfcG9zaXRpb24iOjAsImRvY19pZCI6ImNkMjBkYmUwZDdlM2I2NDYtNjk0ZDk4YmM0NDkxZTY0ZiIsImlubGluZV9kaXNwbGF5X3Bvc2l0aW9uIjowfQ%3D%3D",
+        "doc_id": "cd20dbe0d7e3b646-694d98bc4491e64f",
+        "summary": "```\n'), (1, 2, ",
+        "website_name": "Python",
+        "authority": "official_org_site"
+      },
+      {
+        "pos": [
+          574
+        ],
+        "insert_text": "(Python)",
+        "title": "5. 数据结构 — Python 3.13.15 文档",
+        "url": "https://docs.python.org/zh-cn/3.13/tutorial/datastructures.html?f_link_type=f_linkinlinenote&flow_extra=eyJkb2NfaWQiOiJjZDIwZGJlMGQ3ZTNiNjQ2LTY5NGQ5OGJjNDQ5MWU2NGYiLCJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowfQ%3D%3D",
+        "doc_id": "cd20dbe0d7e3b646-694d98bc4491e64f",
+        "summary": "```\n'), (1, 2, ",
+        "website_name": "Python",
+        "authority": "official_org_site"
+      },
+      {
+        "pos": [
+          674
+        ],
+        "insert_text": "(Python)",
+        "title": "5. 数据结构 — Python 3.13.15 文档",
+        "url": "https://docs.python.org/zh-cn/3.13/tutorial/datastructures.html?f_link_type=f_linkinlinenote&flow_extra=eyJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowLCJkb2NfaWQiOiJjZDIwZGJlMGQ3ZTNiNjQ2LTY5NGQ5OGJjNDQ5MWU2NGYifQ%3D%3D",
+        "doc_id": "cd20dbe0d7e3b646-694d98bc4491e64f",
+        "summary": "```\n'), (1, 2, ",
+        "website_name": "Python",
+        "authority": "official_org_site"
+      },
+      {
+        "pos": [
+          770
+        ],
+        "insert_text": "(Python)",
+        "title": "内置类型 — Python 3.13.15 文档",
+        "url": "https://docs.python.org/zh-cn/3.13/library/stdtypes.html?f_link_type=f_linkinlinenote&flow_extra=eyJkb2NfaWQiOiJmMGUwY2IzNDFhODNiMjBjLWVlMzZlZmI2MTQ5ODE0YTkiLCJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowfQ%3D%3D",
+        "doc_id": "f0e0cb341a83b20c-ee36efb6149814a9",
+        "summary": "## 元组\n\n元组是不可变序列",
+        "website_name": "Python",
+        "authority": "official_org_site"
+      },
+      {
+        "pos": [
+          988
+        ],
+        "insert_text": "(Python)",
+        "title": "5. 数据结构 — Python 3.13.15 文档",
+        "url": "https://docs.python.org/zh-cn/3.13/tutorial/datastructures.html?f_link_type=f_linkinlinenote&flow_extra=eyJkb2NfaWQiOiJjZDIwZGJlMGQ3ZTNiNjQ2LTY5NGQ5OGJjNDQ5MWU2NGYiLCJpbmxpbmVfZGlzcGxheV9wb3NpdGlvbiI6MCwiZG9jX3Bvc2l0aW9uIjowfQ%3D%3D",
+        "doc_id": "cd20dbe0d7e3b646-694d98bc4491e64f",
+        "summary": "```\n'), (1, 2, ",
+        "website_name": "Python",
+        "authority": "official_org_site"
+      }
+    ],
+    "search_queries": [
+      "Python官方文档 列表list和元组tuple区别",
+      "python official docs list vs tuple differences",
+      "Python docs 内置类型 list tuple 链接"
+    ],
+    "source_count": 16,
+    "citation_count": 7
+  }
+]

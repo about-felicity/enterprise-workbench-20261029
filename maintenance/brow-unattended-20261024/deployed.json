@@ -1,0 +1,146 @@
+{
+  "at": 1792810728.8782508,
+  "files": [
+    {
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/api_worker.py",
+      "sha256": "edf34dc53c04c7e1f4e5694169246e011ae206be2f0e7cbec5e4d573d39b656a",
+      "previous_sha256": "1b332de0d73924f2917c7a1f2e95831a3cd3055a70737c56b642b6e31cb6b9c1"
+    },
+    {
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/auto_repair.py",
+      "sha256": "a86b3c8441e584a1318c5a120732eba9f458d3ed7348e34a548c5ce16ff88f87",
+      "previous_sha256": "6155fc374cd717b9128175f33d4335db4462a1537298ec263113938b76709fa6"
+    },
+    {
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/daily_editorial.py",
+      "sha256": "7c34743b12c76a39605b9c29214b48b7e10a396ffc9e131d96e291ab7e6bc0f3",
+      "previous_sha256": "067e4c0d2d7b2bbdaa5578e779cea02d5b1056411d77dd165bf3f7e458d9e311"
+    },
+    {
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/deepseek_api.py",
+      "sha256": "2094811a3395554d06cbca981a46a67bf2da9289c4c9e9d5f3cc540f92c1f5e6",
+      "previous_sha256": "dce8fee74f6c0efffb3ea771c9158d982b05020e3568713b4413729d93b69554"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/article_export.py",
+      "sha256": "90193a70ddaef4bc9e55be446bacb0c97f36007e2f4157a5dad45f4cab881963",
+      "previous_sha256": "655a4e45b56ab2de4a494ca6ad8ecbf24a4ec1000bd91c4a8de080611e6b882d"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/editorial_status.py",
+      "sha256": "6332b29608725248aadd2e98e5dd282b45070e696a38b7e9a5e5c730bd687501",
+      "previous_sha256": "fde251c283dd54d93d0089d4878ddc901d2999959c9deb6a866e9bbfc37f9f29"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/quality_repair.py",
+      "sha256": "90f0eb74de95a076c0df9c68c4bbdd9968db23c9c1882a99d7a06c9c7daf4f43",
+      "previous_sha256": "f87476442c775b14fc93b3fc1a364114e3410c148bc08e91be50326d9bb52e84"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/runtime.py",
+      "sha256": "d88e8365c83283a572639a08efbb24276e419dff994b3e3234b30beeb184b23c",
+      "previous_sha256": "559b40f1ef1a62639d2128a665dcbd39fe1c7c235692fba666ef1d8fe3375322"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/studio.py",
+      "sha256": "69d9a3f790a8479b9c83e173ec840cc16dddbfd4cd71adb7d4cd0a10ef5f802a",
+      "previous_sha256": "f23094d2a5e3cdca505f5335f085e9ca3b880dccf1f954273af593d83f030f1a"
+    },
+    {
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/rewrite_v2/__init__.py",
+      "sha256": "0e40fbe08c6caaabd058353f44f94b29431977bc294ee57a928fb794a8ce573f",
+      "previous_sha256": null
+    },
+    {
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/rewrite_v2/full_writer.py",
+      "sha256": "43df10c9aa08d6b2a74656982e3c8950c3cadffca3eb9f78b147cdd6365772f1",
+      "previous_sha256": null
+    },
+    {
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/rewrite_v2/targeted_repair.py",
+      "sha256": "4d9354c4b8343ed3e9185760cf6eb197301ba9b99ed37dd340464512e1fedd8d",
+      "previous_sha256": null
+    },
+    {
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/rewrite_v2/__main__.py",
+      "sha256": "fd906e687ca2e8944087682567edced06a47a8dfa0949fd03e9e8cc4601d3fea",
+      "previous_sha256": null
+    },
+    {
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/rewrite_v2/structure_parser.py",
+      "sha256": "7a08e030ac233f4fc53e95ff609f7a05fba8f99e865c2c6acafed5571f1cf2f5",
+      "previous_sha256": null
+    },
+    {
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/rewrite_v2/common.py",
+      "sha256": "af826a7f52649153c1a2a0a90dd30031e9dc0eccc6ec8410438e6ccf15d38a81",
+      "previous_sha256": null
+    },
+    {
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/rewrite_v2/integration.py",
+      "sha256": "93892e346b21e4a1c44407b9d5b52cdff2dc82d14aaa73693eb2b503a2fccbe8",
+      "previous_sha256": null
+    },
+    {
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/rewrite_v2/material_manager.py",
+      "sha256": "bff04ecc481d9197d09ea929b87ac333d9d4b01c934c4465cc24e38fb9e452a7",
+      "previous_sha256": null
+    },
+    {
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/rewrite_v2/quality_reviewer.py",
+      "sha256": "48eeb80e3402b3103137757ae85bc610a2528d2691bdee77f06f523126e97bec",
+      "previous_sha256": null
+    },
+    {
+      "server": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/search_profiles.py",
+      "sha256": "1700f15357a413d53a0d1215755eb9ec4c9ca0d114a0595091c22180ba221e0d",
+      "previous_sha256": "ff262079914f849ad9813f85dad44550ec214de617f1df14cdd15b18d6a01309"
+    }
+  ],
+  "regression": {
+    "tests_run": 192,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+    "platform": "linux",
+    "success": true,
+    "network": "only loopback allowed",
+    "real_model_calls": 0,
+    "modules": [
+      "tests.test_rewrite_v2",
+      "tests.test_api_worker",
+      "tests.test_deepseek_api",
+      "tests.test_daily_editorial",
+      "tests.test_execution_runs",
+      "tests.test_auto_repair",
+      "tests.test_cost_controls",
+      "tests.test_genre_pools",
+      "tests.test_three_agent_quality",
+      "tests.test_staged_editorial",
+      "tests.test_word_layout",
+      "creation.test_workflow",
+      "creation.test_studio",
+      "creation.test_download_service",
+      "creation.test_article_export",
+      "creation.test_worker_recovery",
+      "creation.test_editorial_health",
+      "creation.test_client",
+      "creation.test_unattended_recovery"
+    ]
+  },
+  "real_acceptance": {
+    "at": 1792810573.151885,
+    "phase": "finished",
+    "job_id": "creation-1792807286-eb504495",
+    "delivered": 7,
+    "result": {
+      "status": "idle",
+      "date": "2026-10-24",
+      "failed_tickets": 0,
+      "historical_failed_tickets": 0
+    },
+    "day_status": "complete"
+  },
+  "ui_changed": false
+}

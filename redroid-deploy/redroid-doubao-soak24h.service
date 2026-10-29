@@ -1,0 +1,19 @@
+[Unit]
+Description=Doubao 1-hour high-frequency acceptance gated before 24-hour acceptance
+After=docker.service redroid-doubao-hpe14-worker.service
+Wants=redroid-doubao-hpe14-worker.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/user/redroid-doubao
+ExecStart=/home/user/redroid-doubao/worker-venv/bin/python -u /home/user/redroid-doubao/soak_sequence.py
+Restart=on-failure
+RestartSec=20
+RuntimeMaxSec=94000
+UMask=0077
+CPUQuota=20%
+MemoryMax=64M
+
+[Install]
+WantedBy=multi-user.target

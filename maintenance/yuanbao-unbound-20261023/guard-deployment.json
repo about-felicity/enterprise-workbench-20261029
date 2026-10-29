@@ -1,0 +1,11 @@
+{
+  "at": 1792723282.4125369,
+  "backup": "/opt/monitor/geo-capture/maintenance/20261023-yuanbao-unbound/guard-before-1792723280540918151",
+  "files": {
+    "/home/user/redroid-yuanbao/unbound_history.py": "86bfe31179d028828ed493abf337087800d6e34734b017196b67cd0452afd4d4",
+    "/home/user/redroid-yuanbao/tests/test_unbound_history.py": "aee9fe27fe6b21cb66a23a6274242e8469698c14917251a642c9425d3df8b864"
+  },
+  "tests_exit": 0,
+  "app_stopped": false,
+  "question_resent": false
+}

@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S9\",\"heading\":\"诗碧曼防脱洗发水\",\"paragraphs\":[{\"text\":\"诗碧曼这款防脱洗发水在本节资料中可核对的是草本方向与质地两项信息，品牌历史、传承脉络一类说法没有对应记录，因此不作补写。按可查到的描述，它的配方中精选了人参、何首乌、当归、侧柏叶等十余种草本植物提取物，多个成分集中在传统认知里的养发方向。需要说明的是，这只说明配方中出现了这些提取物，不能据此推出成品效果，也不能由部分成分摘录去评价整个配方的长短；成分表是否完整，现有记录同样不足以支撑判断。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0007\",\"CL0029\"]},{\"text\":\"质地方面，资料记录它为深棕色的啫喱状，颜色和形态与前面提到的草本提取物方向相互呼应。除此之外，关于它的泡沫、冲洗难易、香气与清凉感等在所给资料中没有对应记录，这里不替它补充使用体验描述。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0030\"]},{\"text\":\"如果你正在一份候选清单里逐款比对，可以把诗碧曼的已知项——草本植物提取物组成、深棕色啫喱质地——和自己真正在意的维度放在一起看，而不是只凭草本成分的存在就认定它适合某种头皮或发质。更稳妥的做法是先小范围试用，观察头皮与发丝的真实反应，再决定是否长期使用。\",\"statement_type\":\"general_advice\",\"claim_ids\":[]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4303,
+    "completion_tokens": 339,
+    "total_tokens": 4642,
+    "prompt_tokens_details": {
+      "cached_tokens": 2432
+    },
+    "prompt_cache_hit_tokens": 2432,
+    "prompt_cache_miss_tokens": 1871
+  },
+  "request_id": "9b2e6e1d-e3bc-4893-be3f-1fdda1914e44",
+  "model": "deepseek-flash"
+}

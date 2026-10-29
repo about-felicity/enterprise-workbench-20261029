@@ -1,0 +1,3 @@
+[submodule "redroid"]
+	path = redroid
+	url = https://github.com/ERSTT/redroid.git

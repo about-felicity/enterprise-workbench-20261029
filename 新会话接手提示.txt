@@ -1,0 +1,1 @@
+工作区 C:/Users/78567/Desktop/隐身浏览器，项目名企业工作台。先读 PROJECT_STATUS.md、CURRENT_PROJECT_HANDOFF.md（2026-10-28 更新），再按用户当前问题用 redroid-deploy/remote.py 核对现场。旧文档已归档，勿按历史脚本盲恢复。防脱精华9篇、盖白染发剂3篇已完成；自动补采与产品配图已上线，但还有其他部分失败和历史素材不足。保留登录、原请求、费用预留、原稿及用户暂停；不盲重发未知API，不擅自调高预算，不输出凭据。面板/资产/主后端是Docker，创作API/worker/studio是systemd。源码快照不是完整业务数据备份。然后继续用户新请求。

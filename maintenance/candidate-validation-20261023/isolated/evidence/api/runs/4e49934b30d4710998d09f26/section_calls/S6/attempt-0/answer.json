@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S6\",\"heading\":\"六神防脱洗发水\",\"paragraphs\":[{\"text\":\"六神这款防脱洗发水已有记录里，两条都指向同一个特点：它的配方走清爽路线。若你不喜欢洗后发根发闷、头皮黏腻的体感，清爽路线可以作为一个优先考察的方向；但配方路线只说明设计取向，不等于使用后一定达到某种效果。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0003\",\"CL0015\"]},{\"text\":\"另外，六神这款的价格一直很亲民。价格亲民是记录里的一项属性，适合预算有限的人把它列入候选，但不宜由价格多数值比较或功效高低；同一把尺子看，你仍要对照成分标识是否清楚，并用自己的使用记录判断是否合适。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0016\"]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4808,
+    "completion_tokens": 188,
+    "total_tokens": 4996,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 4808
+  },
+  "request_id": "192ffcf8-c6f9-4dff-a2e5-8d863076bfcc",
+  "model": "deepseek-flash"
+}

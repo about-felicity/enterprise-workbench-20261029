@@ -1,0 +1,17 @@
+{
+  "input_sha256": "633674167a1f77a69d0c562951c7746ea91bb1f92477c1c9b639f023e1091658",
+  "status": "incomplete",
+  "components": {
+    "INTRO": {
+      "status": "complete",
+      "attempt": 0,
+      "sha256": "7e7896d76d019fd0365b947ef9bb5ec235764de38aface13a91f0a1bccf19c4a"
+    },
+    "S1": {
+      "status": "retry_pending",
+      "attempt": 2,
+      "error": "Section exceeds allocated article character budget: received 317, maximum 249; compress, do not expand"
+    }
+  },
+  "failed_component": "S1"
+}

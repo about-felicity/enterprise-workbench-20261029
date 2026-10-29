@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/wenxin_retry.py",
+      "server": "/opt/monitor/geo-capture/wenxin_retry.py",
+      "sha256": "4af5e0acf23b03b122eecdca6517479091bee6863433caab5781c824ab637fcb"
+    },
+    {
+      "source": "geo-monitor-deploy/wenxin_readiness_probe.py",
+      "server": "/opt/monitor/geo-capture/wenxin_readiness_probe.py",
+      "sha256": "f531f60ee4073135c92c8490dabe033fdfec9eed5ed005aedd39d11c425af151"
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/geo-wenxin-retry.service",
+      "server": "/etc/systemd/system/geo-wenxin-retry.service",
+      "sha256": "5fb3dcbd2fff57519676c7d2db4e84bad9333d307fcc69ed078ebcb85a3e971c"
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/geo-wenxin-retry.timer",
+      "server": "/etc/systemd/system/geo-wenxin-retry.timer",
+      "sha256": "13aa433fc21f557c1bab3edcaa1c02a9168795d450cf2f718bd7fcea23f3ca03"
+    }
+  ]
+}

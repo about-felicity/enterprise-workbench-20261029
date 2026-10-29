@@ -1,0 +1,52 @@
+{
+  "unrelated_model_bodies_unchanged": 500,
+  "today_yuanbao_cleaned": 168,
+  "remaining_internal_token_types": {},
+  "board": [
+    {
+      "date": "2026-10-17",
+      "question": "眉毛增长液推荐",
+      "product": "梵玢眉毛精华液",
+      "brand": "梵玢",
+      "models": {
+        "yuanbao": {
+          "state": "listed",
+          "eligible_runs": 8,
+          "reviewed_runs": 8,
+          "pending_runs": 0,
+          "recommendation_runs": 4,
+          "body_match_runs": 4,
+          "structured_match_runs": 4,
+          "recommendation_rate": 50.0,
+          "previous_day_rate": 60.0,
+          "day_over_day_change": -10.0
+        }
+      },
+      "listed_model_count": 1
+    }
+  ],
+  "api_keys": [
+    "generated_at",
+    "filters",
+    "models",
+    "model_catalog",
+    "questions",
+    "dates",
+    "common_owned_sources",
+    "two_model_owned_sources",
+    "owned_product_daily",
+    "owned_product_summary",
+    "employee_performance",
+    "competitor_brands",
+    "common_competitor_sources",
+    "two_model_competitor_sources",
+    "common_all_competitor_sources",
+    "two_model_all_competitor_sources",
+    "doubao_owned_video_category_share",
+    "analysis_method",
+    "cache_status",
+    "owned_product_summary_month",
+    "owned_product_summary_months",
+    "owned_brands"
+  ]
+}

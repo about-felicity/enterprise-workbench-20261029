@@ -1,0 +1,314 @@
+{
+  "article_topic": "可用资料的组织方式",
+  "article_purpose": "以同一问题组织已有资料",
+  "genre": "review",
+  "sections": [
+    {
+      "section_id": "AS-O0001",
+      "role": "opening",
+      "role_status": "inferred",
+      "topic": "说明当前部分",
+      "purpose": "解释前提并承接下文",
+      "moves": [
+        "explain",
+        "qualify"
+      ],
+      "after": null,
+      "anchors": [
+        "O0001",
+        "O0002"
+      ],
+      "id": "AS-O0001",
+      "order": 1,
+      "source_block_ids": [
+        "O0001",
+        "O0002"
+      ],
+      "subsection_anchors": [],
+      "subject_anchor": null
+    },
+    {
+      "section_id": "AS-O0003",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "说明当前部分",
+      "purpose": "解释前提并承接下文",
+      "moves": [
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0001",
+      "anchors": [
+        "O0003",
+        "O0008"
+      ],
+      "id": "AS-O0003",
+      "order": 2,
+      "source_block_ids": [
+        "O0003",
+        "O0004",
+        "O0005",
+        "O0006",
+        "O0007",
+        "O0008"
+      ],
+      "subsection_anchors": [],
+      "subject_anchor": "O0003"
+    },
+    {
+      "section_id": "AS-O0009",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "说明当前部分",
+      "purpose": "解释前提并承接下文",
+      "moves": [
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0003",
+      "anchors": [
+        "O0009",
+        "O0013"
+      ],
+      "id": "AS-O0009",
+      "order": 3,
+      "source_block_ids": [
+        "O0009",
+        "O0010",
+        "O0011",
+        "O0012",
+        "O0013"
+      ],
+      "subsection_anchors": [],
+      "subject_anchor": "O0009"
+    },
+    {
+      "section_id": "AS-O0014",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "说明当前部分",
+      "purpose": "解释前提并承接下文",
+      "moves": [
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0009",
+      "anchors": [
+        "O0014",
+        "O0018"
+      ],
+      "id": "AS-O0014",
+      "order": 4,
+      "source_block_ids": [
+        "O0014",
+        "O0015",
+        "O0016",
+        "O0017",
+        "O0018"
+      ],
+      "subsection_anchors": [],
+      "subject_anchor": "O0014"
+    },
+    {
+      "section_id": "AS-O0019",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "说明当前部分",
+      "purpose": "解释前提并承接下文",
+      "moves": [
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0014",
+      "anchors": [
+        "O0019",
+        "O0023"
+      ],
+      "id": "AS-O0019",
+      "order": 5,
+      "source_block_ids": [
+        "O0019",
+        "O0020",
+        "O0021",
+        "O0022",
+        "O0023"
+      ],
+      "subsection_anchors": [],
+      "subject_anchor": "O0019"
+    },
+    {
+      "section_id": "AS-O0024",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "说明当前部分",
+      "purpose": "解释前提并承接下文",
+      "moves": [
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0019",
+      "anchors": [
+        "O0024",
+        "O0028"
+      ],
+      "id": "AS-O0024",
+      "order": 6,
+      "source_block_ids": [
+        "O0024",
+        "O0025",
+        "O0026",
+        "O0027",
+        "O0028"
+      ],
+      "subsection_anchors": [],
+      "subject_anchor": "O0024"
+    },
+    {
+      "section_id": "AS-O0029",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "说明当前部分",
+      "purpose": "解释前提并承接下文",
+      "moves": [
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0024",
+      "anchors": [
+        "O0029",
+        "O0033"
+      ],
+      "id": "AS-O0029",
+      "order": 7,
+      "source_block_ids": [
+        "O0029",
+        "O0030",
+        "O0031",
+        "O0032",
+        "O0033"
+      ],
+      "subsection_anchors": [],
+      "subject_anchor": "O0029"
+    },
+    {
+      "section_id": "AS-O0034",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "说明当前部分",
+      "purpose": "解释前提并承接下文",
+      "moves": [
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0029",
+      "anchors": [
+        "O0034",
+        "O0038"
+      ],
+      "id": "AS-O0034",
+      "order": 8,
+      "source_block_ids": [
+        "O0034",
+        "O0035",
+        "O0036",
+        "O0037",
+        "O0038"
+      ],
+      "subsection_anchors": [],
+      "subject_anchor": "O0034"
+    },
+    {
+      "section_id": "AS-O0039",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "说明当前部分",
+      "purpose": "解释前提并承接下文",
+      "moves": [
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0034",
+      "anchors": [
+        "O0039",
+        "O0043"
+      ],
+      "id": "AS-O0039",
+      "order": 9,
+      "source_block_ids": [
+        "O0039",
+        "O0040",
+        "O0041",
+        "O0042",
+        "O0043"
+      ],
+      "subsection_anchors": [],
+      "subject_anchor": "O0039"
+    },
+    {
+      "section_id": "AS-O0044",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "说明当前部分",
+      "purpose": "解释前提并承接下文",
+      "moves": [
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0039",
+      "anchors": [
+        "O0044",
+        "O0048"
+      ],
+      "id": "AS-O0044",
+      "order": 10,
+      "source_block_ids": [
+        "O0044",
+        "O0045",
+        "O0046",
+        "O0047",
+        "O0048"
+      ],
+      "subsection_anchors": [],
+      "subject_anchor": "O0044"
+    },
+    {
+      "section_id": "AS-O0049",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "说明当前部分",
+      "purpose": "解释前提并承接下文",
+      "moves": [
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0044",
+      "anchors": [
+        "O0049",
+        "O0055"
+      ],
+      "id": "AS-O0049",
+      "order": 11,
+      "source_block_ids": [
+        "O0049",
+        "O0050",
+        "O0051",
+        "O0052",
+        "O0053",
+        "O0054",
+        "O0055"
+      ],
+      "subsection_anchors": [],
+      "subject_anchor": "O0049"
+    }
+  ],
+  "version": "article-structure-compact-v2",
+  "status": "structure_ready",
+  "degraded": false,
+  "input_sha256": "b0d1838e88be8011672feeb65dfaa3d2aaf2c4404892bbace8513b3b0c16d717",
+  "source_ref": {
+    "writer_location": "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/probe-work/linux/review02/writer",
+    "sha256": "29b4b2dcd319e02d6c4cb81995b8f41e5b648642d747e80801e2f39c7dc3acbe",
+    "original_url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc"
+  },
+  "sha256": "783a2d9126d0fe40bce7897d4dc4b106809e7cb2c6c26ce446f4d506783da0cf"
+}

@@ -1,0 +1,9 @@
+{
+  "container": "yuanbao-hpe14-android13",
+  "memory_bytes": 4294967296,
+  "memory_swap_total_bytes": 6442450944,
+  "swap_allowance_bytes": 2147483648,
+  "effective_at": 1792725138.3063035,
+  "applied_by": "docker update; persisted in existing container HostConfig",
+  "recreate_note": "Recreate only with the existing named data volume and current approved image/command; reapply these limits. Historical provision scripts are not current recovery instructions."
+}

@@ -1,0 +1,16 @@
+{
+  "content": "{\"article_topic\":\"防脱洗发水品牌榜单与选购参考\",\"article_purpose\":\"以测评榜单形式帮助读者了解热门产品并避开选购误区\",\"genre\":\"ranking\",\"sections\":[{\"section_id\":\"AS-O0062\",\"role\":\"subject\",\"role_status\":\"inferred\",\"topic\":\"专业洗护定位产品的单独评述\",\"purpose\":\"完整呈现该产品的护理体验与适用人群\",\"moves\":[\"describe\",\"explain\"],\"after\":\"AS-O0058\",\"anchors\":[\"O0062\",\"O0065\"]},{\"section_id\":\"AS-O0066\",\"role\":\"subject\",\"role_status\":\"inferred\",\"topic\":\"头皮护理思路产品的单独评述\",\"purpose\":\"说明其头皮导向思路与实际使用反馈\",\"moves\":[\"describe\",\"explain\"],\"after\":\"AS-O0062\",\"anchors\":[\"O0066\",\"O0069\"]},{\"section_id\":\"AS-O0070\",\"role\":\"comparison\",\"role_status\":\"needs_check\",\"topic\":\"多维度评分对比的引入\",\"purpose\":\"引出该产品的分项评分对照\",\"moves\":[\"compare\",\"define_scope\"],\"after\":\"AS-O0066\",\"anchors\":[\"O0070\",\"O0070\"]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 1218,
+    "completion_tokens": 255,
+    "total_tokens": 1473,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 962
+  },
+  "request_id": "729fd7df-b6be-4f28-a0a2-bd00372c5edf",
+  "model": "deepseek-flash"
+}

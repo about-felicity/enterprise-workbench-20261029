@@ -1,0 +1,21 @@
+{
+  "job_id": "creation-1792807286-eb504495",
+  "articles_visible": 7,
+  "recurring_plan_id": "plan-9b827648df6c4bf9b5648db2eaf6079e",
+  "questions": [
+    "眉毛天生稀疏，日常养眉用什么眉毛精华液比较合适？",
+    "眉毛精华液怎么选，哪些成分值得关注？",
+    "眉毛精华液一般用多久，怎么观察护理效果？",
+    "眉毛精华液怎么用，早晚护肤时放在哪一步？",
+    "经常画眉和卸妆，眉毛精华液怎么搭配使用？",
+    "眉毛细软、容易断，选眉毛护理产品要注意什么？",
+    "眉毛精华液哪个牌子性价比高，选购时怎么比较容量和价格？"
+  ],
+  "capture_time": "01:00",
+  "writing_time": "04:00",
+  "changes_take_effect": "next daily capture; existing daily snapshots retained",
+  "result": {
+    "plan_id": "plan-9b827648df6c4bf9b5648db2eaf6079e",
+    "message": "任务已保存并加入队列，将按设定时间执行"
+  }
+}

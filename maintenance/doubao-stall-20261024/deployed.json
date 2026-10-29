@@ -1,0 +1,36 @@
+{
+  "at": 1792812720.1475623,
+  "files": [
+    {
+      "server": "/home/user/redroid-doubao/geo-batch-code/question_only_adapters.py",
+      "sha256": "638f2e5bbc08473e38691b09211ff9f58fd4f04ea33bf232ff31f69e080a269c",
+      "previous_sha256": "f01cfb70c2a827b304bc951742667d8ec52d52ada92d5a44e8f14cf0552ab477"
+    },
+    {
+      "server": "/home/user/redroid-doubao/geo-batch-code/draft_submission_recovery.py",
+      "sha256": "63a57f31bd931de06de9d6c80d199861d7cc98c4a051ff1298050d33c668f7f7",
+      "previous_sha256": "897c9e2c0d6c799a036cef2f5be9cd40a0be27741a710674145eb438da48a868"
+    },
+    {
+      "server": "/home/user/redroid-doubao/geo-batch-code/tests/test_draft_submission_recovery.py",
+      "sha256": "612abc4d44d08f9e6637d94bc0f9acf95f8273b409b80e65eafb34b7b0751aab",
+      "previous_sha256": "55f8153ea9aa4c67e3b28eedad8c0794ca39e494da880d68061ec373ab0a07ce",
+      "kind": "regression_test"
+    },
+    {
+      "server": "/home/user/redroid-doubao/geo-batch-code/tests/test_send_layout_guard.py",
+      "sha256": "13680df7d1f3fa51edaab96bddf1ba0539e175defb52e05b18036443e4308874",
+      "previous_sha256": null,
+      "kind": "regression_test"
+    }
+  ],
+  "service": "geo-native@geo-panel-doubao1-20261024-090002-8e65185c.service",
+  "queue_reset": false,
+  "app_restarted": false,
+  "tests": {
+    "tests": 37,
+    "success": true,
+    "failures": 0,
+    "errors": 0
+  }
+}

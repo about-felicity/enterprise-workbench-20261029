@@ -1,0 +1,243 @@
+{
+  "rows": [
+    {
+      "name": "文心＋百度专用素材采集",
+      "date": "2026-10-24",
+      "before": "scheduled",
+      "after": "scheduled",
+      "allowed_actions": []
+    },
+    {
+      "name": "姿生怡鱼子酱面膜产品详解每日测试",
+      "date": "2026-10-24",
+      "before": "needs_attention",
+      "after": "needs_attention",
+      "allowed_actions": [
+        "day_resume"
+      ]
+    },
+    {
+      "name": "梵玢FBCY眉毛精华液 V2七问题无人值守验收",
+      "date": "2026-10-24",
+      "before": "complete",
+      "after": "complete",
+      "allowed_actions": []
+    },
+    {
+      "name": "姿生怡眼霜每日创作测试",
+      "date": "2026-10-24",
+      "before": "needs_attention",
+      "after": "needs_attention",
+      "allowed_actions": [
+        "day_resume"
+      ]
+    },
+    {
+      "name": "梵玢FBCY眉毛精华液每日创作测试",
+      "date": "2026-10-24",
+      "before": "paused",
+      "after": "paused",
+      "allowed_actions": [
+        "day_resume"
+      ]
+    },
+    {
+      "name": "文心＋百度专用素材采集",
+      "date": "2026-10-23",
+      "before": "scheduled",
+      "after": "scheduled",
+      "allowed_actions": []
+    },
+    {
+      "name": "姿生怡鱼子酱面膜产品详解每日测试",
+      "date": "2026-10-23",
+      "before": "needs_attention",
+      "after": "needs_attention",
+      "allowed_actions": [
+        "day_resume"
+      ]
+    },
+    {
+      "name": "科熙本鱼子酱修护柔顺护发素 V2两渠道单轮测试",
+      "date": "2026-10-23",
+      "before": "complete",
+      "after": "complete",
+      "allowed_actions": []
+    },
+    {
+      "name": "姿生怡眼霜每日创作测试",
+      "date": "2026-10-23",
+      "before": "needs_attention",
+      "after": "needs_attention",
+      "allowed_actions": [
+        "day_resume"
+      ]
+    },
+    {
+      "name": "姿生怡阿尔卑斯冰川焕肤精粹水 V2两渠道单轮测试",
+      "date": "2026-10-23",
+      "before": "complete",
+      "after": "complete",
+      "allowed_actions": []
+    },
+    {
+      "name": "梵玢FBCY眉毛精华液每日创作测试",
+      "date": "2026-10-23",
+      "before": "needs_attention",
+      "after": "needs_attention",
+      "allowed_actions": [
+        "day_resume"
+      ]
+    },
+    {
+      "name": "焕颜计小白罐美白精华霜 V2两渠道单轮测试",
+      "date": "2026-10-23",
+      "before": "complete",
+      "after": "complete",
+      "allowed_actions": []
+    },
+    {
+      "name": "文心＋百度专用素材采集",
+      "date": "2026-10-22",
+      "before": "scheduled",
+      "after": "scheduled",
+      "allowed_actions": []
+    },
+    {
+      "name": "姿生怡鱼子酱面膜产品详解每日测试",
+      "date": "2026-10-22",
+      "before": "needs_attention",
+      "after": "needs_attention",
+      "allowed_actions": [
+        "day_resume"
+      ]
+    },
+    {
+      "name": "姿生怡眼霜每日创作测试",
+      "date": "2026-10-22",
+      "before": "needs_attention",
+      "after": "needs_attention",
+      "allowed_actions": [
+        "day_resume"
+      ]
+    },
+    {
+      "name": "梵玢FBCY眉毛精华液每日创作测试",
+      "date": "2026-10-22",
+      "before": "complete_with_failures",
+      "after": "complete_with_failures",
+      "allowed_actions": []
+    },
+    {
+      "name": "文心＋百度专用素材采集",
+      "date": "2026-10-21",
+      "before": "complete",
+      "after": "complete",
+      "allowed_actions": []
+    },
+    {
+      "name": "姿生怡鱼子酱面膜产品详解每日测试",
+      "date": "2026-10-21",
+      "before": "complete",
+      "after": "complete",
+      "allowed_actions": []
+    },
+    {
+      "name": "姿生怡眼霜每日创作测试",
+      "date": "2026-10-21",
+      "before": "complete",
+      "after": "complete",
+      "allowed_actions": []
+    },
+    {
+      "name": "梵玢FBCY眉毛精华液每日创作测试",
+      "date": "2026-10-21",
+      "before": "complete",
+      "after": "complete",
+      "allowed_actions": []
+    },
+    {
+      "name": "科熙本二硫化硒清爽去屑止痒洗发水创作任务",
+      "date": "2026-10-21",
+      "before": "paused",
+      "after": "paused",
+      "allowed_actions": [
+        "day_resume"
+      ]
+    },
+    {
+      "name": "道和小绿瓶 排行与测评各7篇一次测试",
+      "date": "2026-10-21",
+      "before": "complete_with_failures",
+      "after": "complete_with_failures",
+      "allowed_actions": []
+    },
+    {
+      "name": "文心＋百度专用素材采集",
+      "date": "2026-10-20",
+      "before": "paused",
+      "after": "paused",
+      "allowed_actions": [
+        "day_resume"
+      ]
+    },
+    {
+      "name": "姿生怡眼霜每日创作测试",
+      "date": "2026-10-20",
+      "before": "complete",
+      "after": "complete",
+      "allowed_actions": []
+    },
+    {
+      "name": "梵玢FBCY眉毛精华液每日创作测试",
+      "date": "2026-10-20",
+      "before": "complete",
+      "after": "complete",
+      "allowed_actions": []
+    },
+    {
+      "name": "科熙本二硫化硒清爽去屑止痒洗发水创作任务",
+      "date": "2026-10-20",
+      "before": "paused",
+      "after": "paused",
+      "allowed_actions": [
+        "day_resume"
+      ]
+    },
+    {
+      "name": "科熙本防脱精华测试1",
+      "date": "2026-10-20",
+      "before": "needs_attention",
+      "after": "needs_attention",
+      "allowed_actions": [
+        "day_resume"
+      ]
+    },
+    {
+      "name": "焕颜计美白面霜全流程测试",
+      "date": "2026-10-20",
+      "before": "complete",
+      "after": "complete",
+      "allowed_actions": []
+    },
+    {
+      "name": "科熙本二硫化硒清爽去屑止痒洗发水创作任务",
+      "date": "2026-10-19",
+      "before": "paused",
+      "after": "paused",
+      "allowed_actions": [
+        "day_resume"
+      ]
+    },
+    {
+      "name": "科熙本二硫化硒清爽去屑止痒洗发水创作任务",
+      "date": "2026-10-24",
+      "before": "capture_only",
+      "after": "capture_only",
+      "allowed_actions": []
+    }
+  ],
+  "plans": 12,
+  "jobs": 23,
+  "articles": 101
+}

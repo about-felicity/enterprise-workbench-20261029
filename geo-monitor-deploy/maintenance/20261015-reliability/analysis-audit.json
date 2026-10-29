@@ -1,0 +1,137 @@
+{
+  "at": 1792064757.8610113,
+  "product_grounding": {
+    "verified_answers": {
+      "deepseek": 121,
+      "doubao": 786,
+      "wenxin": 693,
+      "yuanbao": 400,
+      "quark": 84
+    },
+    "verified_product_rows": 5873,
+    "failed": [],
+    "scope": "Stored ai_verified product evidence/name grounding and negation checks; not a claim of perfect semantic classification."
+  },
+  "body_fidelity": {
+    "records_checked": 795,
+    "mismatches": []
+  },
+  "analysis_status": [
+    {
+      "model_id": "wenxin",
+      "status": "ai_pending",
+      "answers": 1
+    },
+    {
+      "model_id": "doubao",
+      "status": "ai_pending",
+      "answers": 3
+    },
+    {
+      "model_id": "deepseek",
+      "status": "ai_verified",
+      "answers": 11
+    },
+    {
+      "model_id": "wenxin",
+      "status": "ai_verified",
+      "answers": 215
+    },
+    {
+      "model_id": "doubao",
+      "status": "ai_verified",
+      "answers": 426
+    },
+    {
+      "model_id": "yuanbao",
+      "status": "ai_verified",
+      "answers": 88
+    },
+    {
+      "model_id": "yuanbao",
+      "status": "ai_pending",
+      "answers": 51
+    }
+  ],
+  "historical_dashboard_counts": {
+    "database": [
+      {
+        "model_id": "deepseek",
+        "answers": 58
+      },
+      {
+        "model_id": "doubao",
+        "answers": 153
+      },
+      {
+        "model_id": "quark",
+        "answers": 42
+      },
+      {
+        "model_id": "wenxin",
+        "answers": 211
+      },
+      {
+        "model_id": "yuanbao",
+        "answers": 207
+      }
+    ],
+    "api": [
+      {
+        "id": "deepseek",
+        "runs": 58,
+        "product_analysis_pending_runs": null
+      },
+      {
+        "id": "doubao",
+        "runs": 153,
+        "product_analysis_pending_runs": null
+      },
+      {
+        "id": "quark",
+        "runs": 42,
+        "product_analysis_pending_runs": null
+      },
+      {
+        "id": "wenxin",
+        "runs": 211,
+        "product_analysis_pending_runs": null
+      },
+      {
+        "id": "yuanbao",
+        "runs": 207,
+        "product_analysis_pending_runs": null
+      }
+    ],
+    "payload_keys": [
+      "generated_at",
+      "filters",
+      "models",
+      "model_catalog",
+      "questions",
+      "dates",
+      "common_owned_sources",
+      "two_model_owned_sources",
+      "owned_product_daily",
+      "owned_product_summary",
+      "employee_performance",
+      "competitor_brands",
+      "common_competitor_sources",
+      "two_model_competitor_sources",
+      "common_all_competitor_sources",
+      "two_model_all_competitor_sources",
+      "doubao_owned_video_category_share",
+      "analysis_method",
+      "cache_status",
+      "owned_brands"
+    ],
+    "filters": {
+      "model": "",
+      "question": "",
+      "date": "2026-10-13",
+      "view": "brands"
+    },
+    "same_production_completeness_scope": true
+  },
+  "passed_structural_checks": true
+}

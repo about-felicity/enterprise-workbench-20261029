@@ -1,0 +1,240 @@
+{
+  "scope": "Current non-secret changed runtime source; not a blind installer. Original creation engine snapshot and protected private configs remain on server.",
+  "files": [
+    {
+      "source": "redroid-deploy/question_only_core.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/question_only_core.py",
+      "sha256": "7d3462faa67db0e530d1a350b6d953cba908e153e77273c06ee403917c156198",
+      "bytes": 14339
+    },
+    {
+      "source": "redroid-deploy/question_only_adapters.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/question_only_adapters.py",
+      "sha256": "689fe7f38121f522ff3ee85d0c80c04ec7ddbad2b23f6b9e02a24a4feb7d61c5",
+      "bytes": 7993
+    },
+    {
+      "source": "redroid-deploy/question_only_delivery.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/question_only_delivery.py",
+      "sha256": "080a93aad3e9721eecee4da90542709b2abf3d9c7154e7712efc125332aee305",
+      "bytes": 4359
+    },
+    {
+      "source": "redroid-deploy/question_only_worker.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/question_only_worker.py",
+      "sha256": "5c39b6d8cabaaaead00350ddb1b7e4513eaaa2b9d2330944dae3dc96d930e0da",
+      "bytes": 13982
+    },
+    {
+      "source": "yuanbao-deploy/delivery.py",
+      "server": "/home/user/redroid-yuanbao/delivery.py",
+      "sha256": "59a343ebd6234a10d4bff9850a5e34669771809295de5de6956e2a12c092b3fc",
+      "bytes": 10048
+    },
+    {
+      "source": "yuanbao-deploy/native_core.py",
+      "server": "/home/user/redroid-yuanbao/native_core.py",
+      "sha256": "8dcdfefcf05db8239611d1413135f172f5f8417375636e17b94c1db80ace2b8e",
+      "bytes": 9558
+    },
+    {
+      "source": "yuanbao-deploy/native_client.py",
+      "server": "/home/user/redroid-yuanbao/native_client.py",
+      "sha256": "00902be7418c8b2c3dde602177f4e593d825848a9e06a65c73e87882139282a7",
+      "bytes": 4895
+    },
+    {
+      "source": "geo-monitor-deploy/control_panel.py",
+      "server": "/opt/monitor/geo-capture/control_panel.py",
+      "sha256": "9e6bf650a8d151248fc0de3f85fa4f8e9e73a2294d7929572736d4b8d13ac4bb",
+      "bytes": 24074
+    },
+    {
+      "source": "geo-monitor-deploy/native_entry.py",
+      "server": "/opt/monitor/geo-capture/native_entry.py",
+      "sha256": "d95ca3dd4af16fe97f0f4b5f2a2860c110ac49475edffe7f16109e95c6407445",
+      "bytes": 1877
+    },
+    {
+      "source": "geo-monitor-deploy/panel.html",
+      "server": "/opt/monitor/geo-capture/panel.html",
+      "sha256": "bcbf7407595d2dc510ecc765fd037c62f48d54528762a00969aa36fd6f5afe14",
+      "bytes": 26400
+    },
+    {
+      "source": "geo-monitor-deploy/all_channel_soak.py",
+      "server": "/opt/monitor/geo-capture/all_channel_soak.py",
+      "sha256": "40b40963fa1c444527ba897c8ec4f1650f4462fe9f0162a9da030b6a7d50081b",
+      "bytes": 17716
+    },
+    {
+      "source": "geo-monitor-deploy/capture_bridge.py",
+      "server": "/opt/monitor/geo-capture/capture_bridge.py",
+      "sha256": "4c21292369740049eb988630ce45fe3b7424d583b2d311895a0d1f4af6a03fb5",
+      "bytes": 15661
+    },
+    {
+      "source": "geo-monitor-deploy/runtime_reliability.py",
+      "server": "/opt/monitor/geo-capture/runtime_reliability.py",
+      "sha256": "c4cf3a52411322fcdc2c06170bd0ffa51bcaf1d37cdaec6ea91cc0c383065ea2",
+      "bytes": 4911
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/doubao_dashboard_server.py",
+      "server": "/opt/monitor/doubao_dashboard_server.py",
+      "sha256": "bc7040e7f756877959965916b8c552e9cdf8ea7194f1035b4b468cc3df51b5b7",
+      "bytes": 456109
+    },
+    {
+      "source": "geo-source-card-collectors/web_collectors/collector.py",
+      "server": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/web_collectors/collector.py",
+      "sha256": "65fe16585ce1593878f6aebbfdf6502dd8888d46597fc190a1cb2d259dbcc5cb",
+      "bytes": 34614
+    },
+    {
+      "source": "geo-source-card-collectors/wenxin_monitor/controller.py",
+      "server": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/wenxin_monitor/controller.py",
+      "sha256": "20ecf70a49f3afe74b2abe0af8007992c7d85ed7c22469c22043cb6bc2a851fc",
+      "bytes": 52004
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/journal.py",
+      "server": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/journal.py",
+      "sha256": "c23d2b5916f9c58a3af7d85fe3e98315ee586cc8d83439f10d9ec58a105637a5",
+      "bytes": 6544
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/cli.py",
+      "server": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/cli.py",
+      "sha256": "e5d6e2f6fd95721d4f94ff9c8416073eb59d05b29d4d5bf36c2ab3030c910606",
+      "bytes": 30317
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/reference_design.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/reference_design.py",
+      "sha256": "eda8f321f570e625a27e3b0dccd29edd6b22fd9f1c1e5a3a3570a5cacf65c517",
+      "bytes": 10863
+    },
+    {
+      "source": "geo-monitor-deploy/creation/client.py",
+      "server": "/opt/monitor/geo-content/creation/client.py",
+      "sha256": "a1ddc1eb988947f3ab5b802e3781961ff05a5d5c8d33ee7aae4b69c1bae4b823",
+      "bytes": 567
+    },
+    {
+      "source": "geo-monitor-deploy/creation/panel.html",
+      "server": "/opt/monitor/geo-content/creation/panel.html",
+      "sha256": "38beabca3591d651501cc75c8a6532e0b7410781f6c5bc7f96cd0b547d44da50",
+      "bytes": 7835
+    },
+    {
+      "source": "geo-monitor-deploy/creation/README.md",
+      "server": "/opt/monitor/geo-content/creation/README.md",
+      "sha256": "8333f508d5b10bcb59ee72ff35043c988acc91c129573d1a8e5762e9a406587f",
+      "bytes": 2332
+    },
+    {
+      "source": "geo-monitor-deploy/creation/runtime.py",
+      "server": "/opt/monitor/geo-content/creation/runtime.py",
+      "sha256": "739fde8d4236550768f9f4d9e6f0fdb0c9dbf5b188544b11fd279b2a32791451",
+      "bytes": 8612
+    },
+    {
+      "source": "geo-monitor-deploy/creation/service.py",
+      "server": "/opt/monitor/geo-content/creation/service.py",
+      "sha256": "f5d38dcfaf922db277554700af9b359ebcb3ee9c990d0091ac00bfa6c1bc09cd",
+      "bytes": 4518
+    },
+    {
+      "source": "geo-monitor-deploy/creation/soak.py",
+      "server": "/opt/monitor/geo-content/creation/soak.py",
+      "sha256": "90446e1f44b70fc4f7162896c9e0a821bc45ee6120c06632f28b591275085f59",
+      "bytes": 6092
+    },
+    {
+      "source": "geo-monitor-deploy/creation/source_adapter.py",
+      "server": "/opt/monitor/geo-content/creation/source_adapter.py",
+      "sha256": "307d193e95814642a5789e18df4eb5944f395cf7618c0fdc576c48dcd325f622",
+      "bytes": 6715
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_client.py",
+      "server": "/opt/monitor/geo-content/creation/test_client.py",
+      "sha256": "b89eb31f694aefe8346caac31dbfbd8254c1f8eaed456ae106c748fb695e1919",
+      "bytes": 1004
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_source_adapter.py",
+      "server": "/opt/monitor/geo-content/creation/test_source_adapter.py",
+      "sha256": "577e714a4c36c6956d1d2614f48b3621f012d4811b8b7689fac5114ccbe28bee",
+      "bytes": 2935
+    },
+    {
+      "source": "geo-monitor-deploy/creation/worker.py",
+      "server": "/opt/monitor/geo-content/creation/worker.py",
+      "sha256": "17a65945c9c3c2f04e10fda854a4d98fa27e9107e2494a378f724982e548db56",
+      "bytes": 2256
+    },
+    {
+      "source": "geo-monitor-deploy/creation/__init__.py",
+      "server": "/opt/monitor/geo-content/creation/__init__.py",
+      "sha256": "047d05e2a69364e12b508814d3a267520ad0ed8f269557bdb28ddc6898c32ce9",
+      "bytes": 91
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/CaptureControl.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/CaptureControl.tsx",
+      "sha256": "e178a3945c2519ed565122f4eec92a584b35a73aca36cd376662869c6fe02ec6",
+      "bytes": 2059
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/CreationControl.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/CreationControl.tsx",
+      "sha256": "c7bd2bf17dd3dafd433593a4d2fdcd3fe961a83b385421c2ac069821e0352b25",
+      "bytes": 1207
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/Dashboard.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/Dashboard.tsx",
+      "sha256": "d7f09e2c27032743969e8b50734d12cdfa47de16c44b230a1d8994b8de31a202",
+      "bytes": 120374
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/dashboardPaths.ts",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/dashboardPaths.ts",
+      "sha256": "bb850895d405d253e014b8c6ece09c9466c336f45dd6f237a7bb9c41b215da3c",
+      "bytes": 256
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/globals.css",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/globals.css",
+      "sha256": "d5ef6d0b9e3218c582f0fd113131df2c9cf57ca9a13be11e3ab951f585477165",
+      "bytes": 60568
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/api/geo-creation/[...path]/route.ts",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/api/geo-creation/[...path]/route.ts",
+      "sha256": "77882a16701715be66cd01ec009efed6f34975975cf39fe5351734df3a271b20",
+      "bytes": 3550
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/api/geo-capture/[...path]/route.ts",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/api/geo-capture/[...path]/route.ts",
+      "sha256": "66ad91ad341b88c6380937c5cfca6e5bb3827a2dc3729149bd3801e471112588",
+      "bytes": 5874
+    },
+    {
+      "source": "geo-monitor-deploy/runtime_reliability.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/runtime_reliability.py",
+      "sha256": "c4cf3a52411322fcdc2c06170bd0ffa51bcaf1d37cdaec6ea91cc0c383065ea2",
+      "bytes": 4911
+    },
+    {
+      "source": "geo-monitor-deploy/runtime_reliability.py",
+      "server": "/home/user/redroid-yuanbao/runtime_reliability.py",
+      "sha256": "c4cf3a52411322fcdc2c06170bd0ffa51bcaf1d37cdaec6ea91cc0c383065ea2",
+      "bytes": 4911
+    }
+  ],
+  "zip_sha256": "1cc090bbca7d06d6b89066bcc43f6973ffe92272cf0e0ee85fe389415051896c"
+}

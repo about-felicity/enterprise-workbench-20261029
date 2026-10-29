@@ -1,0 +1,99 @@
+{
+  "at": 1792072231.370597,
+  "test": {
+    "test_id": "question-only-soak12h-rowidfix-1792072084",
+    "started_at": 1792072084.674704,
+    "deadline": 1792115284.674704,
+    "duration_seconds": 43200,
+    "root": "/opt/monitor/geo-capture/soak/question-only-soak12h-rowidfix-1792072084",
+    "service": "geo-question-only-soak12h-rowidfix-1792072084.service",
+    "deadline_timer": "geo-question-only-soak12h-rowidfix-1792072084-deadline.timer"
+  },
+  "models": {
+    "doubao1": {
+      "state": "running",
+      "processed_total": 191,
+      "post_fix_completed": [
+        {
+          "ordinal": 189,
+          "clicks": 1,
+          "body_length": 380,
+          "sources": 12
+        },
+        {
+          "ordinal": 190,
+          "clicks": 1,
+          "body_length": 472,
+          "sources": 12
+        },
+        {
+          "ordinal": 191,
+          "clicks": 1,
+          "body_length": 390,
+          "sources": 12
+        }
+      ],
+      "PG_fidelity": true,
+      "verified_unique_receipts": 191,
+      "timing": {
+        "send_clicks": 191,
+        "window_send_clicks": 3,
+        "min_send_interval": 60.99284505844116,
+        "batch_min_send_interval": 57.53057265281677,
+        "duplicate_native_requests": 0,
+        "failed_attempts": 0,
+        "failed_attempts_table_present": true,
+        "first_start": 1792072054.216597,
+        "last_start": 1792072176.818173,
+        "duplicate_send_clicks": 0
+      }
+    },
+    "doubao2": {
+      "state": "running",
+      "processed_total": 203,
+      "post_fix_completed": [
+        {
+          "ordinal": 201,
+          "clicks": 1,
+          "body_length": 540,
+          "sources": 12
+        },
+        {
+          "ordinal": 202,
+          "clicks": 1,
+          "body_length": 591,
+          "sources": 12
+        },
+        {
+          "ordinal": 203,
+          "clicks": 1,
+          "body_length": 501,
+          "sources": 11
+        }
+      ],
+      "PG_fidelity": true,
+      "verified_unique_receipts": 203,
+      "timing": {
+        "send_clicks": 204,
+        "window_send_clicks": 4,
+        "min_send_interval": 57.877264976501465,
+        "batch_min_send_interval": 56.401859998703,
+        "duplicate_native_requests": 0,
+        "failed_attempts": 0,
+        "failed_attempts_table_present": true,
+        "first_start": 1792072056.356061,
+        "last_start": 1792072234.486358,
+        "duplicate_send_clicks": 0
+      }
+    }
+  },
+  "failures": [],
+  "recovered_original_task": {
+    "ordinal": 188,
+    "state": "completed",
+    "clicks": 1,
+    "PG_fidelity": true
+  },
+  "core_android_unchanged_from_before_fix": true,
+  "minimum_three_new_per_doubao": true
+}

@@ -1,0 +1,64 @@
+{
+  "batch": "geo-yuanbao-21x5-20261015",
+  "verified_at": 1792054617.5298567,
+  "states": {
+    "completed": 3,
+    "pending": 102
+  },
+  "captured": 3,
+  "processed": 3,
+  "send_clicks": 3,
+  "min_send_interval": 52.80386304855347,
+  "duplicate_send_clicks": false,
+  "duplicate_conversations": false,
+  "all_processed_database_fidelity": true,
+  "body_characters": 5041,
+  "sources": 97,
+  "citations": 24,
+  "verified": [
+    {
+      "request_id": "3c09b76cd5c095abad121bd637bacc252e7b61e6a692c660e783a4ff45ab6678",
+      "task_id": "055c3479-43ca-56e2-9b48-623201d89ece",
+      "conversation_id": "0RGAqnKJ9UH",
+      "answer_id": "0RGAqnKJ9UH_2",
+      "body_length": 1622,
+      "body_sha256": "64134efdf1814159b4aec650beef855e9de6733b8cacb8365da0ba68b93e9dfd",
+      "sources": 42,
+      "citations": 8,
+      "native_eof": true,
+      "original_prompt_preserved": true,
+      "search_queries_exposed": false,
+      "database_fidelity": true
+    },
+    {
+      "request_id": "b25f4e81a8da49c74691aa2cc0614ac7324549429b716e50b6ef61d2ec2a212b",
+      "task_id": "820da1fd-a5d3-5050-ba08-99a650c28cc8",
+      "conversation_id": "0RGAqnKJ9UG",
+      "answer_id": "0RGAqnKJ9UG_2",
+      "body_length": 2122,
+      "body_sha256": "85e0cbc9e3f8ab44ec3dd32fa3d4db82218ffcf1c9711dd748bca43f7f3c4f6a",
+      "sources": 41,
+      "citations": 10,
+      "native_eof": true,
+      "original_prompt_preserved": true,
+      "search_queries_exposed": false,
+      "database_fidelity": true
+    },
+    {
+      "request_id": "cc28eed29c148a7c2896ffca775ff6a04e1be490e927c93d4e67a6a98f6c5036",
+      "task_id": "8fce6620-eba8-52e0-8e4e-e01ba22f8a46",
+      "conversation_id": "0RGAqnKJ9UI",
+      "answer_id": "0RGAqnKJ9UI_2",
+      "body_length": 1297,
+      "body_sha256": "84a04a53867851d68f6038da664d93eb32550cb0beb90c3727f6cdecd90ed5af",
+      "sources": 14,
+      "citations": 6,
+      "native_eof": true,
+      "original_prompt_preserved": true,
+      "search_queries_exposed": false,
+      "database_fidelity": true
+    }
+  ],
+  "pause_marker": true,
+  "scope": "Processed confirms capture ingestion. GEO canonicalizes recommendation question labels and preserves the original prompt. Product/source analysis is asynchronous. Native search queries are not exposed; none fabricated."
+}

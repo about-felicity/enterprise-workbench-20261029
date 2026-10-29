@@ -1,0 +1,82 @@
+{
+  "status": "technical_failure",
+  "model_calls": [
+    {
+      "path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-0",
+      "finish_reason": "length",
+      "max_tokens": 2400,
+      "usage": {
+        "prompt_tokens": 11100,
+        "completion_tokens": 2399,
+        "total_tokens": 13499,
+        "prompt_tokens_details": {
+          "cached_tokens": 10880
+        },
+        "prompt_cache_hit_tokens": 10880,
+        "prompt_cache_miss_tokens": 220
+      },
+      "partial_structure_ids": [
+        "AS001",
+        "AS002",
+        "AS003",
+        "AS004",
+        "AS005",
+        "AS006",
+        "AS007",
+        "AS008",
+        "AS009",
+        "AS010",
+        "AS011",
+        "AS012",
+        "AS013",
+        "AS014"
+      ],
+      "response_characters": 4912,
+      "response_tail": "变化通常需要两到三个月的持续积累\"},{\"id\":\"AS014\",\"order\":14,\"purpose\":\"转述蜂花的经典基础养护定位，并插入温和安全与试敏建议。\",\"required_content\":[\"清洁与基础养护重心、洗感温和冲洗容易\",\"家庭长期使用与出油改善\",\"温和表活、舒缓修护成分、防脱特证可核对\",\"耳后手腕试敏与不适暂停\"],\"argument_step\":\"先述产品风格与"
+    },
+    {
+      "path": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-1",
+      "finish_reason": "length",
+      "max_tokens": 2400,
+      "usage": {
+        "prompt_tokens": 11103,
+        "completion_tokens": 2400,
+        "total_tokens": 13503,
+        "prompt_tokens_details": {
+          "cached_tokens": 10880
+        },
+        "prompt_cache_hit_tokens": 10880,
+        "prompt_cache_miss_tokens": 223
+      },
+      "partial_structure_ids": [
+        "AS001",
+        "AS002",
+        "AS003",
+        "AS004",
+        "AS005",
+        "AS006",
+        "AS007",
+        "AS008",
+        "AS009",
+        "AS010",
+        "AS011",
+        "AS012",
+        "AS013",
+        "AS014"
+      ],
+      "response_characters": 4785,
+      "response_tail": "馈与价格→引出长期护理思路→周期与记录方法\",\"transition\":\"由长期护理习惯过渡到同样走稳定路线的国货\",\"source_block_ids\":[\"O0047\",\"O0048\",\"O0049\"],\"source_quote\":\"长期护理的思路，是把防脱当作一项日常习惯而不是一次短跑\"},{\"id\":\"AS014\",\"order\":14,\"purpose\":\"转述蜂花的经典务实路线并补充"
+    }
+  ],
+  "reason": "Both actual structure responses reached the frozen analyzer output cap and were incomplete; bounded known-failure retry also truncated. The local fallback is explicitly degraded and cannot satisfy the required real structure-analysis acceptance.",
+  "fallback_is_not_model_result": true,
+  "article_generated": false,
+  "facts_review_executed": false,
+  "logic_review_executed": false,
+  "arbitration_executed": false,
+  "new_unknown_requests": 0,
+  "protected_inputs_reverified": true,
+  "settings_restore_reverified": true,
+  "isolated_job_limits_restored_to_original": true,
+  "no_further_api_calls_by_audit": true
+}

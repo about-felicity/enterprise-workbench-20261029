@@ -1,0 +1,29 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/creation/studio.py",
+      "server": "/opt/monitor/geo-content/creation/studio.py",
+      "sha256": "2b57c4eb8a720d644984ac3ed20038ea6cd6d8dabea43d1f9a88172fc00e35fb"
+    },
+    {
+      "source": "geo-monitor-deploy/creation/panel.html",
+      "server": "/opt/monitor/geo-content/creation/panel.html",
+      "sha256": "f04719482e57f33ee36c2c3228c8222dcfab67f9b17189a63ac117fcbc2cf387"
+    }
+  ],
+  "workers_unchanged": true,
+  "task_rows": 48,
+  "supplementing": [
+    {
+      "name": "科熙本造型喷雾",
+      "date": "2026-10-29",
+      "status": "supplementing",
+      "supplement": {
+        "status": "waiting",
+        "question": "推荐一款敏感头皮可以用的造型喷雾",
+        "attempt": 10,
+        "next_at": 1793240957.4237287
+      }
+    }
+  ]
+}

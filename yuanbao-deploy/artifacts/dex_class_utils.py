@@ -1,0 +1,14 @@
+import zipfile,struct
+from loguru import logger
+logger.disable('androguard')
+from androguard.core.dex import DEX
+targets={'Lcom/tencent/wcdb/core/Database;':{'g'},'Lcom/tencent/wcdb/core/Handle;':{'r','u'},'Lcom/tencent/wcdb/core/PreparedStatement;':{'y','B','i0','r','v','w'},'Lcom/tencent/wcdb/base/CppObject;':{'a'}}
+def classes(b):
+    ns,so=struct.unpack_from('<II',b,56);nt,to=struct.unpack_from('<II',b,64);nc,co=struct.unpack_from('<II',b,96)
+    def string(i):
+        p=struct.unpack_from('<I',b,so+4*i)[0]
+        while b[p]&128:p+=1
+        p+=1
+        return b[p:b.index(0,p)].decode('utf8',errors='replace')
+    return {string(struct.unpack_from('<I',b,to+4*struct.unpack_from('<I',b,co+32*i)[0])[0]) for i in range(nc)}
+

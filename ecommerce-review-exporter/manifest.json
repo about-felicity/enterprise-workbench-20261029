@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "淘宝京东评论导出助手",
+  "version": "1.0.4",
+  "description": "展开淘宝/天猫、京东商品的全部评价，按最大条数采集并导出 Excel。",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.taobao.com/*",
+    "*://*.tmall.com/*",
+    "*://*.jd.com/*"
+  ],
+  "action": {
+    "default_title": "评论导出助手",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.taobao.com/*",
+        "*://*.tmall.com/*",
+        "*://*.jd.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

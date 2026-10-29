@@ -1,0 +1,13 @@
+{
+  "suite": "engine",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "tests": 288,
+  "failures": [],
+  "errors": [],
+  "skips": [],
+  "blocked_network_attempts": 0,
+  "real_api_calls": 0,
+  "balance_queries": 0,
+  "external_service_calls": 0
+}

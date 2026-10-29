@@ -1,0 +1,8 @@
+仅使用本地电脑，在 /opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/jobs/测评类/02/writer 内读写。读取writing_prompt.md并完成规定输出。最后创建writer_done.json：
+{
+  "job_id": "b990b21fde407127ba73e3c5",
+  "prompt_sha256": "70d456fa3fe867a5ad76dc6ef379765aa2490f6e7ee8d1b83fff6971f5e21edf",
+  "status": "completed",
+  "draft_file": "draft.md",
+  "word_file": "article.docx"
+}

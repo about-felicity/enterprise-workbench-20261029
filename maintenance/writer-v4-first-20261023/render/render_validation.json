@@ -1,0 +1,10 @@
+{
+  "renderer": "Microsoft Word native ExportAsFixedFormat + bundled pypdfium2",
+  "canonical_renderer_unavailable": "LibreOffice soffice.exe not installed",
+  "pages": [
+    {
+      "page": 1,
+      "characters": 936
+    }
+  ]
+}

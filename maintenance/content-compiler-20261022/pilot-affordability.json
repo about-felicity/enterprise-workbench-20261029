@@ -1,0 +1,132 @@
+{
+  "at": 1792640593.852875,
+  "new_paid_calls": 0,
+  "candidates": [
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 1,
+      "input_byte_bound": 19318,
+      "writer_reservation_upper": 0.08663599999999999,
+      "remaining_original_article_budget": 0.09321219999999997,
+      "affordable_writer": true
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 2,
+      "input_byte_bound": 23611,
+      "writer_reservation_upper": 0.095222,
+      "remaining_original_article_budget": 0.09900067999999995,
+      "affordable_writer": true
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 3,
+      "input_byte_bound": 21325,
+      "writer_reservation_upper": 0.09065000000000001,
+      "remaining_original_article_budget": 0.07861256,
+      "affordable_writer": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 4,
+      "input_byte_bound": 23583,
+      "writer_reservation_upper": 0.095166,
+      "remaining_original_article_budget": 0.07162336000000002,
+      "affordable_writer": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 5,
+      "input_byte_bound": 24273,
+      "writer_reservation_upper": 0.09654599999999999,
+      "remaining_original_article_budget": 0.08893336000000002,
+      "affordable_writer": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 6,
+      "input_byte_bound": 24600,
+      "writer_reservation_upper": 0.09720000000000001,
+      "remaining_original_article_budget": 0.07508183999999996,
+      "affordable_writer": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 7,
+      "input_byte_bound": 26284,
+      "writer_reservation_upper": 0.10056799999999999,
+      "remaining_original_article_budget": 0.10403223999999997,
+      "affordable_writer": true
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 1,
+      "input_byte_bound": 25805,
+      "writer_reservation_upper": 0.09961,
+      "remaining_original_article_budget": 0.08779039999999994,
+      "affordable_writer": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 2,
+      "input_byte_bound": 24994,
+      "writer_reservation_upper": 0.09798799999999999,
+      "remaining_original_article_budget": 0.12634759999999995,
+      "affordable_writer": true
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 3,
+      "input_byte_bound": 25294,
+      "writer_reservation_upper": 0.09858800000000001,
+      "remaining_original_article_budget": 0.12771427999999993,
+      "affordable_writer": true
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 4,
+      "input_byte_bound": 18549,
+      "writer_reservation_upper": 0.08509800000000001,
+      "remaining_original_article_budget": 0.06682279999999996,
+      "affordable_writer": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 5,
+      "input_byte_bound": 25764,
+      "writer_reservation_upper": 0.099528,
+      "remaining_original_article_budget": 0.07017731999999999,
+      "affordable_writer": false
+    },
+    {
+      "job": "creation-1792576129-389f575e",
+      "category": "测评类",
+      "number": 1,
+      "input_byte_bound": 18965,
+      "writer_reservation_upper": 0.08593,
+      "remaining_original_article_budget": 0.08632815999999999,
+      "affordable_writer": true
+    },
+    {
+      "job": "creation-1792576129-389f575e",
+      "category": "测评类",
+      "number": 2,
+      "input_byte_bound": 18174,
+      "writer_reservation_upper": 0.084348,
+      "remaining_original_article_budget": 0.09293063999999995,
+      "affordable_writer": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-23 13:49:18",
+  "tests_passed": 151,
+  "new_tests": 14,
+  "real_original_request_recovered": true,
+  "processed_total": 131,
+  "original_send_count": 1,
+  "capture_retries": 0,
+  "mapping_files": 224,
+  "mapping_mismatches": 0,
+  "snapshot_files": 557,
+  "snapshot_errors": 0,
+  "article_budget_and_candidate_unchanged": true,
+  "article_api_calls": 0,
+  "new_extra_batches": 0,
+  "container_or_app_restarted": false,
+  "reader_restarted": true,
+  "all_day_acceptance_complete": false
+}

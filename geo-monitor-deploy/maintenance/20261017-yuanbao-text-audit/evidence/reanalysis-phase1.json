@@ -1,0 +1,11 @@
+{
+  "status": "waiting_existing_retry_window",
+  "time": 1792218042.6114578,
+  "started": 1792217608.5518057,
+  "calls": 30,
+  "verified": 340,
+  "remaining": {
+    "2026-10-16": 2,
+    "2026-10-17": 1
+  }
+}

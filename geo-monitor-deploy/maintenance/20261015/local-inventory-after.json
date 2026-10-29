@@ -1,0 +1,73 @@
+{
+  "verified_removed_or_compacted_files": 877,
+  "files_after": 8823,
+  "bytes_after": 1386794744,
+  "bytes_before": 6697551556,
+  "net_workspace_bytes_reduced": 5310756812,
+  "top_after": [
+    [
+      "redroid-deploy",
+      696227584
+    ],
+    [
+      "outputs",
+      365371169
+    ],
+    [
+      "deliverables",
+      268712815
+    ],
+    [
+      "geo-monitor-deploy",
+      36411392
+    ],
+    [
+      "Scrapling",
+      16556446
+    ],
+    [
+      "redroid",
+      2172765
+    ],
+    [
+      "geo-source-card-collectors",
+      900373
+    ],
+    [
+      "doubao-headless-technical-docs",
+      317462
+    ],
+    [
+      "ecommerce-review-exporter",
+      55417
+    ],
+    [
+      "PROJECT_HANDOFF.md",
+      41940
+    ],
+    [
+      "taobao-jd-review-exporter-v1.0.4.zip",
+      21295
+    ],
+    [
+      "README.md",
+      5202
+    ],
+    [
+      "视频 - 快捷方式.lnk",
+      702
+    ],
+    [
+      "启动内容工作台.cmd",
+      85
+    ],
+    [
+      "vps_config.txt",
+      53
+    ],
+    [
+      "local_server.txt",
+      44
+    ]
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "at": 1792736172.768458,
+  "shared": {
+    "start_time": "05:00",
+    "max_per_category": 10,
+    "deepseek_interval": 600,
+    "search_interval": 60,
+    "article_budget_cny": 1.02,
+    "daily_budget_cny": 10,
+    "test_budget_cny": 1.3,
+    "max_revisions": 1
+  },
+  "job": {
+    "job_id": "creation-1792575159-0a8f9221",
+    "created_at": 1792575159.5652778,
+    "input_sha256": "cd8efe5f7162efb2b278633342f696b102c88040e825f78e79f61b903ffd31aa",
+    "date": "2026-10-21",
+    "question": "任务问题汇总",
+    "channels": [
+      "baidu_ai",
+      "wenxin_card"
+    ],
+    "max_per_category": 7,
+    "material_counts": {
+      "geo_observations": 0,
+      "private_observations": 14,
+      "full_articles": 117
+    },
+    "platform_questions_sent": 0,
+    "prepared": {
+      "date": "2026-10-21",
+      "input_sha256": "cff4b4cb9311db50e158f94cf0eaa3463cba867875bf4e726324e3e6bce25069",
+      "media_articles": 101,
+      "max_per_category": 14,
+      "status": "waiting_taxonomy"
+    },
+    "material_source": "dedicated",
+    "studio_plan_id": "plan-33e7bfca8bb6497da10b28f0444a693b",
+    "task_name": "道和小绿瓶 排行与测评各7篇一次测试",
+    "budget_limits": {
+      "article_budget_cny": 1.02,
+      "task_budget_cny": 5.25
+    },
+    "preparation": "ready",
+    "questions": [
+      "防脱洗发水有哪些值得参考的品牌，普通消费者怎么选？",
+      "头皮容易出油又担心掉发，防脱洗发水怎么挑？",
+      "100到200元预算的防脱洗发水有哪些选择？",
+      "草本防脱洗发水横向测评应该比较哪些维度？",
+      "道和小绿瓶防脱洗发水怎么样，成分和规格有哪些特点？",
+      "防脱洗发水测评里的检测数据和真实使用感受该怎么看？",
+      "防脱洗发水和普通洗发水怎么比较，选购时要注意什么？"
+    ],
+    "article_target": 14,
+    "genre_targets": {
+      "排行类": 7,
+      "测评类": 7
+    }
+  },
+  "remaining_cny": 0.33498,
+  "required_upper_cny": 0.33498,
+  "activity": [
+    {
+      "root": "/home/user/geo-editorial/runtime-api",
+      "paused": true,
+      "active_state": "SUBMITTED",
+      "pending_claimed": 5,
+      "preparation": null,
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792060415-1e4e3a8d",
+      "paused": false,
+      "active_state": null,
+      "pending_claimed": 0,
+      "preparation": null,
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792060761-3c2baae0",
+      "paused": true,
+      "active_state": null,
+      "pending_claimed": 0,
+      "preparation": null,
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792475798-478ca528",
+      "paused": false,
+      "active_state": null,
+      "pending_claimed": 0,
+      "preparation": "ready",
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792475798-7d2fc250",
+      "paused": false,
+      "active_state": null,
+      "pending_claimed": 0,
+      "preparation": "ready",
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792479954-8a96bc88",
+      "paused": false,
+      "active_state": null,
+      "pending_claimed": 0,
+      "preparation": "ready",
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792487019-ffa40955",
+      "paused": false,
+      "active_state": null,
+      "pending_claimed": 0,
+      "preparation": "ready",
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792487912-b64bc49a",
+      "paused": true,
+      "active_state": null,
+      "pending_claimed": 0,
+      "preparation": "ready",
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-06126e43",
+      "paused": false,
+      "active_state": null,
+      "pending_claimed": 0,
+      "preparation": "ready",
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca",
+      "paused": false,
+      "active_state": null,
+      "pending_claimed": 0,
+      "preparation": "ready",
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792556219-bbc55e13",
+      "paused": false,
+      "active_state": null,
+      "pending_claimed": 0,
+      "preparation": "ready",
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221",
+      "paused": false,
+      "active_state": null,
+      "pending_claimed": 0,
+      "preparation": "ready",
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792575864-f2f8afb2",
+      "paused": false,
+      "active_state": null,
+      "pending_claimed": 0,
+      "preparation": "ready",
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792576129-389f575e",
+      "paused": false,
+      "active_state": null,
+      "pending_claimed": 0,
+      "preparation": "ready",
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792620783-e9ce20db",
+      "paused": true,
+      "active_state": "RESPONDED",
+      "pending_claimed": 8,
+      "preparation": "ready",
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792621034-c569469d",
+      "paused": true,
+      "active_state": null,
+      "pending_claimed": 0,
+      "preparation": "ready",
+      "blocks": false
+    },
+    {
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792636960-aa0d6ec9",
+      "paused": false,
+      "active_state": null,
+      "pending_claimed": 0,
+      "preparation": "ready",
+      "blocks": false
+    }
+  ]
+}

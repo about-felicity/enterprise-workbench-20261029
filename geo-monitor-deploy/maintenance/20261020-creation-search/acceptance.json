@@ -1,0 +1,84 @@
+{
+  "at": 1792474990.152064,
+  "plan_id": "plan-fbb1750d49ea45cb8d3a490b44a19e32",
+  "health": {
+    "at": 1792474986.9140646,
+    "day": "2026-10-20",
+    "status": "running",
+    "geo_ingest_enabled": false,
+    "search_resource_pool": "creation_only",
+    "active_channels": [
+      "baidu_ai"
+    ]
+  },
+  "channels": {
+    "baidu_ai": {
+      "counts": {
+        "completed": 1,
+        "pending": 15
+      },
+      "results": [
+        {
+          "model": "baidu_ai",
+          "question": "我是油头还有头屑选什么头皮清洁产品合适",
+          "body_capture_complete": true,
+          "source_capture_complete": true,
+          "availability": null,
+          "task_id": "7a4b385969a5c1ff8a8682b279cfe04280368240e38caffb5f008dc8cb2a6bca",
+          "body_length": 907,
+          "sources": 5
+        }
+      ]
+    },
+    "wenxin_card": {
+      "counts": {},
+      "results": []
+    }
+  },
+  "panel_task": {
+    "daily_task_id": "plan-fbb1750d49ea45cb8d3a490b44a19e32--2026-10-20",
+    "name": "文心＋百度专用素材采集",
+    "frequency": "daily",
+    "task_type": "capture_only",
+    "enabled": true,
+    "article_budget_cny": 0.35,
+    "task_budget_cny": 10.0,
+    "plan_id": "plan-fbb1750d49ea45cb8d3a490b44a19e32",
+    "date": "2026-10-20",
+    "product": {
+      "name": "科熙本二硫化硒清爽去屑止痒洗发水",
+      "id": "a0d8624e2a147f5ba0fceddf6b323f9a2ba2985130cc93f83cf178428f798bf9"
+    },
+    "status": "collecting",
+    "capture_time": "01:00",
+    "writing_time": "04:00",
+    "questions": 16,
+    "target_per_model": 16,
+    "progress": [
+      {
+        "id": "baidu_ai",
+        "name": "百度卡片",
+        "completed": 1,
+        "counts": {
+          "completed": 1,
+          "pending": 15
+        },
+        "blocked": {}
+      },
+      {
+        "id": "wenxin_card",
+        "name": "文心卡片",
+        "completed": 0,
+        "counts": {},
+        "blocked": {}
+      }
+    ],
+    "writing_jobs": 0,
+    "writing_complete": 0,
+    "articles": 0,
+    "stages": {},
+    "error": "",
+    "jobs": {}
+  },
+  "no_geo_receiver": true
+}

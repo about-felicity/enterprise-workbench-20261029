@@ -1,0 +1,257 @@
+{
+  "at": 1792641575.2437809,
+  "new_paid_calls": 0,
+  "real_articles": [
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 1,
+      "status": "READY_WITH_LIMITS",
+      "reasons": [
+        "缺少可追溯的真实实测记录，不能称为亲测或实测"
+      ],
+      "requested_type": "hands_on",
+      "dimensions": [
+        "composition"
+      ],
+      "facts": 35,
+      "repair_action": "REWRITE",
+      "compiler_sha256": "d575ec7c1e7cff0128eb885300235654a46210ab8c7e391a6c4f8c4b622a454b"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 2,
+      "status": "READY_WITH_LIMITS",
+      "reasons": [
+        "部分产品不能进入任何共有维度比较：菲诗蔻防脱洗发水"
+      ],
+      "requested_type": "ranking",
+      "dimensions": [
+        "composition"
+      ],
+      "facts": 47,
+      "repair_action": "PATCH",
+      "compiler_sha256": "1d46d285050273093a8439dd5ac35f1ef60f1773bb26142ccea17b3c044560d5"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 3,
+      "status": "READY",
+      "reasons": [],
+      "requested_type": "ranking",
+      "dimensions": [
+        "composition",
+        "net_content",
+        "price"
+      ],
+      "facts": 42,
+      "repair_action": "PATCH",
+      "compiler_sha256": "5642cee43423f4047c8e64d4fe8b2fcb215fb47a9662f6dd34f65c7c482082af"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 4,
+      "status": "READY",
+      "reasons": [],
+      "requested_type": "ranking",
+      "dimensions": [
+        "composition"
+      ],
+      "facts": 47,
+      "repair_action": "REWRITE",
+      "compiler_sha256": "fa9aa69398fdf75406e0e903ee6c51db304e0194ee362ba356c8508c642242ae"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 5,
+      "status": "READY",
+      "reasons": [],
+      "requested_type": "ranking",
+      "dimensions": [
+        "composition"
+      ],
+      "facts": 49,
+      "repair_action": "PATCH",
+      "compiler_sha256": "93a5a1f1ecc0f07eff0deb3f037dc0feed67247d9b3fbf78236e89287c02f1ca"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 6,
+      "status": "READY_WITH_LIMITS",
+      "reasons": [
+        "缺少可追溯的真实实测记录，不能称为亲测或实测"
+      ],
+      "requested_type": "hands_on",
+      "dimensions": [
+        "composition"
+      ],
+      "facts": 49,
+      "repair_action": "PATCH",
+      "compiler_sha256": "dbcc73d9cba7f9ed6516a244b366f30f7bfac1e354dfa1519ce808b03eb8b84f"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 7,
+      "status": "READY_WITH_LIMITS",
+      "reasons": [
+        "缺少可追溯的真实实测记录，不能称为亲测或实测"
+      ],
+      "requested_type": "hands_on",
+      "dimensions": [
+        "composition",
+        "net_content"
+      ],
+      "facts": 54,
+      "repair_action": "PATCH",
+      "compiler_sha256": "ecbff3c424e6786a56ba56e49e9a81ba2c1207591c073e67cd764ad4bc6701f1"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 1,
+      "status": "READY",
+      "reasons": [],
+      "requested_type": "review",
+      "dimensions": [
+        "composition"
+      ],
+      "facts": 54,
+      "repair_action": "PATCH",
+      "compiler_sha256": "ce2eace745de24c6e032485e609c38c8f17d0953574e19d35a003938f8dd3567"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 2,
+      "status": "READY",
+      "reasons": [],
+      "requested_type": "review",
+      "dimensions": [
+        "composition",
+        "net_content"
+      ],
+      "facts": 50,
+      "repair_action": "REWRITE",
+      "compiler_sha256": "04ebe0de965cc30ec2d3438c2fcb1b2127ee09fa15762a552ff05be880303c90"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 3,
+      "status": "READY",
+      "reasons": [],
+      "requested_type": "review",
+      "dimensions": [
+        "composition",
+        "net_content"
+      ],
+      "facts": 51,
+      "repair_action": "REVIEW_DISPUTED",
+      "compiler_sha256": "8aa522de2ffbaa350f51da14b3bb7d6d301ab21c0e97462199ee40711d5f4fcb"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 4,
+      "status": "READY_WITH_LIMITS",
+      "reasons": [
+        "以下产品缺少可用于介绍的属性：十月天使产后防脱洗发水、沙宣修护防脱洗发水",
+        "部分产品不能进入任何共有维度比较：十月天使产后防脱洗发水、沙宣修护防脱洗发水"
+      ],
+      "requested_type": "review",
+      "dimensions": [
+        "composition",
+        "price"
+      ],
+      "facts": 33,
+      "repair_action": "REVIEW_DISPUTED",
+      "compiler_sha256": "eec324c722a76aacd91163b0f72f4b7cedfda86cb68f4a5c39b9f15a7640c840"
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 5,
+      "status": "READY_WITH_LIMITS",
+      "reasons": [
+        "以下产品缺少可用于介绍的属性：紫吕防脱洗发水、国颐堂防脱洗发水",
+        "部分产品不能进入任何共有维度比较：紫吕防脱洗发水、国颐堂防脱洗发水"
+      ],
+      "requested_type": "review",
+      "dimensions": [
+        "composition"
+      ],
+      "facts": 52,
+      "repair_action": "REVIEW_DISPUTED",
+      "compiler_sha256": "74852d430d18c703cfcd82b35d240f73cf286029567841055c81465037d68d92"
+    },
+    {
+      "job": "creation-1792576129-389f575e",
+      "category": "测评类",
+      "number": 1,
+      "status": "READY_WITH_LIMITS",
+      "reasons": [
+        "缺少可追溯的真实实测记录，不能称为亲测或实测"
+      ],
+      "requested_type": "hands_on",
+      "dimensions": [
+        "composition",
+        "price",
+        "packaging"
+      ],
+      "facts": 34,
+      "repair_action": "REWRITE",
+      "compiler_sha256": "1e313dfb00e6aca1c359af0ee5d3d409f55a31a34bbdd991d37f60982a508839"
+    },
+    {
+      "job": "creation-1792576129-389f575e",
+      "category": "测评类",
+      "number": 2,
+      "status": "READY_WITH_LIMITS",
+      "reasons": [
+        "以下产品缺少可用于介绍的属性：云溪漫洗发水、风禾语洗发水、知夏安洗发水、秋白韵洗发水、书瑶集洗发水",
+        "缺少可追溯的真实实测记录，不能称为亲测或实测"
+      ],
+      "requested_type": "hands_on",
+      "dimensions": [
+        "composition"
+      ],
+      "facts": 34,
+      "repair_action": "PATCH",
+      "compiler_sha256": "e4bd47f3b35771066f006ddc42874e964bc54a0dbe360ea13bd5dd1b40d204be"
+    }
+  ],
+  "golden": [
+    {
+      "case": "A",
+      "synthetic": true,
+      "status": "READY"
+    },
+    {
+      "case": "B",
+      "synthetic": true,
+      "status": "READY_WITH_LIMITS"
+    },
+    {
+      "case": "C",
+      "synthetic": true,
+      "status": "READY"
+    },
+    {
+      "case": "D",
+      "synthetic": true,
+      "status": "READY"
+    },
+    {
+      "case": "E",
+      "synthetic": true,
+      "status": "READY_WITH_LIMITS"
+    }
+  ],
+  "article_acceptance_verified": false
+}

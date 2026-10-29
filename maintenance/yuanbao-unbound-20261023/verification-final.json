@@ -1,0 +1,314 @@
+{
+  "at": 1792723407.8750277,
+  "health": {
+    "batch": "geo-panel-yuanbao-20261023-090004-d6b66215",
+    "planned": 168,
+    "prompt_mode": "question_only",
+    "model": "yuanbao",
+    "captured": 22,
+    "geo_processed": 22,
+    "delivery_errors": [],
+    "nontext_observations": 0,
+    "nontext_processed": 0,
+    "nontext_pending": 0,
+    "unavailable": 0,
+    "time": 1792723407.1091378,
+    "heartbeat_expires_at": 1792723557.1091378,
+    "bridge_pid": 22962,
+    "tasks": {
+      "completed": 22,
+      "pending": 146
+    },
+    "status": "running",
+    "memory": {
+      "app_alive": true,
+      "pid": 4403,
+      "java_alloc_kib": 33459,
+      "java_size_kib": 131763,
+      "java_limit_kib": 524288,
+      "java_fraction": 0.06381797790527344,
+      "native_alloc_kib": 300435,
+      "app_pss_kib": 751484,
+      "container_bytes": 1652482048,
+      "container_working_bytes": 1397145600,
+      "container_limit_bytes": 3221225472,
+      "container_fraction": 0.4337310791015625,
+      "app_pss_fraction": 0.23889032999674478,
+      "sampled_at": 1792723392.3541167,
+      "last_exit": {
+        "pid": 17671,
+        "reason": "low_memory"
+      },
+      "pending": "",
+      "high_samples": 0
+    },
+    "progress": {
+      "phase": "rate_wait",
+      "task_id": "7f96841d-c691-5ebd-adde-a4a5b4c5ebb9",
+      "ordinal": 23,
+      "changed_at": 1792723403.6846194,
+      "next_at": 1792723408.5760314
+    }
+  },
+  "counts": {
+    "completed": 22,
+    "pending": 146
+  },
+  "cases": [
+    {
+      "ordinal": 13,
+      "state": "completed",
+      "request_id": "7ea3f684ee9095b55cf3bbeb09954e14",
+      "capture_retries": 0,
+      "body_chars": 1710,
+      "sources": 45,
+      "conversation_id": "0RSyGTvuBZg",
+      "body_sha256": "54bcb62650bd38d73b8dded7547113c3f321db434cf7f5e2ea7bebe7cbade4e8",
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "native_app_relaunch_for_readback": 2,
+        "native_unbound_history_opened": 1,
+        "read_transport_failure": 3,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 14,
+      "state": "completed",
+      "request_id": "84af0ae83696257210829710a997b9e1",
+      "capture_retries": 0,
+      "body_chars": 2244,
+      "sources": 39,
+      "conversation_id": "0RT2PdZYruS",
+      "body_sha256": "526a048e1d9fa80ab9f99d87b096b204f95508fb5f7512a8b169557b134dcfcb",
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "native_unbound_history_opened": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 15,
+      "state": "completed",
+      "request_id": "6ffb79823175a4a61e0eaf6c29c283fa",
+      "capture_retries": 0,
+      "body_chars": 2240,
+      "sources": 43,
+      "conversation_id": "0RT2PdZYruT",
+      "body_sha256": "058bcce2897df3e4d77f44a73c217f17f953fa21745091eb072c97ab3d72ce3f",
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 16,
+      "state": "completed",
+      "request_id": "2531f54de741eec11cbeb593c2637694",
+      "capture_retries": 0,
+      "body_chars": 2421,
+      "sources": 40,
+      "conversation_id": "0RT2PdZYruU",
+      "body_sha256": "1e2a8bf4c078f32e14a4a09524f33f77876eed69e8a79edfe01c55605b567d2c",
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 17,
+      "state": "completed",
+      "request_id": "fca18a52f6fe5e1e4d303a1f00af75b2",
+      "capture_retries": 0,
+      "body_chars": 2102,
+      "sources": 46,
+      "conversation_id": "0RT4XHLaCpc",
+      "body_sha256": "49e5aa55c2832b69d33551f6a619b4707e242eed1c23beb15603f92c4b08f1fe",
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 18,
+      "state": "completed",
+      "request_id": "f4078d4e1f96006084bc1bef081e516b",
+      "capture_retries": 0,
+      "body_chars": 1884,
+      "sources": 47,
+      "conversation_id": "0RT4bYLpjN2",
+      "body_sha256": "328bf78a169139e2f719f9b2ade116d92ec5f3515f171be9311612484bc0c982",
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 19,
+      "state": "completed",
+      "request_id": "c1f5e9c0ea2ec551462ca957c53b20bf",
+      "capture_retries": 0,
+      "body_chars": 2770,
+      "sources": 22,
+      "conversation_id": "0RT4fJKX7BY",
+      "body_sha256": "30fdc7a531dce944d78832acea295aeb8ea674df447039cbc925af34c9bf94b8",
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 20,
+      "state": "completed",
+      "request_id": "239ea1297bc1b70735177ecd07d8d3b7",
+      "capture_retries": 0,
+      "body_chars": 1784,
+      "sources": 39,
+      "conversation_id": "0RT4j2nYtPM",
+      "body_sha256": "34689b9b90abcf7855bd4971605fe0cb25946c9cbd5616d170e0e7d15ab81681",
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 21,
+      "state": "completed",
+      "request_id": "542546c4b1cf9cdb9e3b224d5832e28e",
+      "capture_retries": 0,
+      "body_chars": 1168,
+      "sources": 13,
+      "conversation_id": "0RT4mmQF2qu",
+      "body_sha256": "2f19ed5cde20b9e5b792b72f62e7729e12e289e8517af7d1cf98887f9b34c0f5",
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 22,
+      "state": "completed",
+      "request_id": "1b5f1c04854ef781ee89c4801d4d01c6",
+      "capture_retries": 0,
+      "body_chars": 1892,
+      "sources": 20,
+      "conversation_id": "0RT4qWdp28m",
+      "body_sha256": "972d5f44460b5dc840bbb62237d00d163ece72bb41610e34e7a3a4f98aa947cf",
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 23,
+      "state": "pending",
+      "request_id": null,
+      "capture_retries": 0,
+      "body_chars": 0,
+      "sources": 0,
+      "conversation_id": null,
+      "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "events": {
+        "enqueued": 1
+      }
+    },
+    {
+      "ordinal": 24,
+      "state": "pending",
+      "request_id": null,
+      "capture_retries": 0,
+      "body_chars": 0,
+      "sources": 0,
+      "conversation_id": null,
+      "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "events": {
+        "enqueued": 1
+      }
+    },
+    {
+      "ordinal": 25,
+      "state": "pending",
+      "request_id": null,
+      "capture_retries": 0,
+      "body_chars": 0,
+      "sources": 0,
+      "conversation_id": null,
+      "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "events": {
+        "enqueued": 1
+      }
+    }
+  ],
+  "postgres": [
+    {
+      "batch": "geo-panel-yuanbao-20261023-090004-d6b66215",
+      "n": 22,
+      "success": 22
+    }
+  ],
+  "services": {
+    "geo-native@geo-panel-yuanbao-20261023-090004-d6b66215.service": "active",
+    "geo-daily-control.service": "active"
+  },
+  "recovery_mapping": {
+    "files": 221,
+    "mismatches": []
+  },
+  "guard_deployment": {
+    "at": 1792723282.4125369,
+    "backup": "/opt/monitor/geo-capture/maintenance/20261023-yuanbao-unbound/guard-before-1792723280540918151",
+    "files": {
+      "/home/user/redroid-yuanbao/unbound_history.py": "86bfe31179d028828ed493abf337087800d6e34734b017196b67cd0452afd4d4",
+      "/home/user/redroid-yuanbao/tests/test_unbound_history.py": "aee9fe27fe6b21cb66a23a6274242e8469698c14917251a642c9425d3df8b864"
+    },
+    "tests_exit": 0,
+    "app_stopped": false,
+    "question_resent": false
+  },
+  "lightweight_live": {
+    "ids": [
+      "0RSyGTvuBZg"
+    ],
+    "loaded_from_stage": true
+  }
+}

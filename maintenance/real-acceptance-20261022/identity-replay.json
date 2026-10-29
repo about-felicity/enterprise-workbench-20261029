@@ -1,0 +1,54 @@
+[
+  {
+    "category": "排行类",
+    "number": 1,
+    "original_knowledge_sha256": "cd0239ca1dd031f36b3d04368821af67e454a5f830017acb51064bb28ea59b9c",
+    "old_owned_slots": [],
+    "candidate_owned_slots": [
+      "S2"
+    ],
+    "candidate_own_sources": [
+      "PF1",
+      "PF10",
+      "PF11",
+      "PF2",
+      "PF3",
+      "PF4",
+      "PF5",
+      "PF6",
+      "PF7",
+      "PF8",
+      "PF9"
+    ],
+    "candidate_feasibility": "READY_WITH_LIMITS",
+    "source_material_unchanged": true,
+    "paid_request": false
+  },
+  {
+    "category": "测评类",
+    "number": 2,
+    "original_knowledge_sha256": "0ea4522952f4a8ebb090f75eb3bf83176e6685e09662106886a711a1f5de292f",
+    "old_owned_slots": [
+      "S2"
+    ],
+    "candidate_owned_slots": [
+      "S2"
+    ],
+    "candidate_own_sources": [
+      "PF1",
+      "PF10",
+      "PF11",
+      "PF2",
+      "PF3",
+      "PF4",
+      "PF5",
+      "PF6",
+      "PF7",
+      "PF8",
+      "PF9"
+    ],
+    "candidate_feasibility": "READY",
+    "source_material_unchanged": true,
+    "paid_request": false
+  }
+]

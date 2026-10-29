@@ -1,0 +1,82 @@
+{
+  "test_id": "soak1h-1792029907",
+  "started_at_beijing": "2026-10-15T10:05:07+08:00",
+  "finished_at_beijing": "2026-10-15T11:05:08+08:00",
+  "elapsed_seconds": 3600.378179698717,
+  "samples": 61,
+  "max_sample_interval_seconds": 60.2272207736969,
+  "verdict": "failed",
+  "verdict_reason": "文心首页导航ERR_NETWORK_CHANGED导致中断，已修复恢复；不能视为连续一小时通过",
+  "new_capture_deltas": {
+    "doubao1": {
+      "captured": 40,
+      "processed": 40,
+      "unique_processed": 40,
+      "unavailable": 0
+    },
+    "doubao2": {
+      "captured": 41,
+      "processed": 41,
+      "unique_processed": 41,
+      "unavailable": 0
+    },
+    "deepseek": {
+      "captured": 0,
+      "processed": 0,
+      "unique_processed": 0,
+      "unavailable": 0
+    },
+    "wenxin_card": {
+      "captured": 22,
+      "processed": 22,
+      "unique_processed": 22,
+      "unavailable": 0
+    },
+    "baidu_ai": {
+      "captured": 36,
+      "processed": 36,
+      "unique_processed": 11,
+      "unavailable": 1
+    }
+  },
+  "verified_database_records_by_model": {
+    "wenxin_card": 22,
+    "baidu_ai": 11,
+    "doubao1": 40,
+    "doubao2": 41
+  },
+  "verified_database_records_total": 114,
+  "all_verified_body_and_sources_match": true,
+  "new_baidu_duplicate_observations": 25,
+  "new_baidu_unavailable_observations": 1,
+  "original_docker_and_emulators_unchanged": true,
+  "editorial_services_unchanged": true,
+  "historical_doubao": [
+    {
+      "batch": "geo-products-21x5-account1-20261014",
+      "captured": 105,
+      "processed": 105,
+      "unchanged_105": true
+    },
+    {
+      "batch": "geo-products-21x5-account2-relogin-20261013",
+      "captured": 105,
+      "processed": 105,
+      "unchanged_105": true
+    }
+  ],
+  "blocked_channels": [
+    "deepseek"
+  ],
+  "anomalies": [
+    {
+      "at": 1792032131.4584627,
+      "kind": "needs_attention",
+      "model": "wenxin_card"
+    }
+  ],
+  "native_scope_note": "双豆包原105/105历史记录保持；10:21用户另行启动两小时新批次，仅与本小时后约44分钟重叠，本报告不是其两小时验收",
+  "wenxin_recovery_note": "10:57归档原失败题并恢复原批次，第40/41条连续processed，小时结束时43条processed；原39条记录未改变",
+  "sampler_only_finished": true,
+  "capture_services_not_paused_by_hour_report": true
+}

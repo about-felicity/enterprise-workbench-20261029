@@ -1,0 +1,16 @@
+{
+  "content": "{\"article_topic\":\"防脱洗发水品牌榜单与选购实测\",\"article_purpose\":\"以品牌分节呈现防脱产品并给出选购与使用建议\",\"genre\":\"ranking\",\"sections\":[{\"section_id\":\"AS-O0050\",\"role\":\"subject\",\"role_status\":\"inferred\",\"topic\":\"单一国货品牌产品介绍\",\"purpose\":\"概述该产品定位与基础使用感受\",\"moves\":[\"describe\"],\"after\":\"AS-O0046\",\"anchors\":[\"O0050\",\"O0053\"]},{\"section_id\":\"AS-O0054\",\"role\":\"subject\",\"role_status\":\"inferred\",\"topic\":\"单一香氛型产品介绍\",\"purpose\":\"呈现该产品体验与防脱表现\",\"moves\":[\"describe\"],\"after\":\"AS-O0050\",\"anchors\":[\"O0054\",\"O0057\"]},{\"section_id\":\"AS-O0058\",\"role\":\"subject\",\"role_status\":\"inferred\",\"topic\":\"单一顺滑型产品介绍\",\"purpose\":\"说明产品特点与日常使用方式\",\"moves\":[\"describe\",\"explain\"],\"after\":\"AS-O0054\",\"anchors\":[\"O0058\",\"O0061\"]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 1529,
+    "completion_tokens": 243,
+    "total_tokens": 1772,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 1273
+  },
+  "request_id": "73648bf2-f43d-4707-aefb-f32667bddc64",
+  "model": "deepseek-flash"
+}

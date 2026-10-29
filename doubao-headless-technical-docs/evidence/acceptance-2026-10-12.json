@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-12T17:42:45+08:00",
+  "evidence_kind": "sanitized_summary_of_existing_server_report_and_status_files",
+  "new_live_requests_performed": false,
+  "worker_restarted": false,
+  "queue": {"completed": 562, "needs_attention": 1},
+  "export": {"completed_records": 562, "unique_request_ids": 562, "source_records": 5740, "citations": 1619},
+  "attention_error": "Required sources are missing",
+  "short_test": {"status": "passed", "duration_seconds": 3600, "interval_seconds": 180, "planned": 20, "enqueued": 20, "completed": 20, "observed_seconds": 3605.1547518181615},
+  "long_test_last_stage_snapshot": {"status": "failed", "duration_seconds": 86400, "interval_seconds": 180, "planned": 480, "enqueued": 426, "completed": 425, "prepared": 1, "observed_seconds": 76593.94987583393, "error": "Worker service is not active"},
+  "worker_service": {"active_state": "failed", "result": "exit-code", "automatic_restarts": 0},
+  "container": {"oom_killed": false, "automatic_restarts": 0},
+  "reported_native_fault_line_count": 0,
+  "reported_business_containers_running": true,
+  "reported_business_container_ids_unchanged": true,
+  "limits": ["Stage snapshot and current queue were sampled at different times.", "No native fault lines in the retained report is not proof of absence for all time.", "24-hour validation did not pass.", "Task IDs, account state, private network address and raw chat data are deliberately excluded."]
+}

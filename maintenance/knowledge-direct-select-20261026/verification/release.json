@@ -1,0 +1,14 @@
+{
+  "at": 1792979770.0792572,
+  "files": [
+    {
+      "server": "/opt/monitor/geo-content/creation/panel.html",
+      "sha256": "0357005f562b9b4955ffaca4a58315a9246706a73cc7be34ff0738c4b880fd9f"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/wizard.js",
+      "sha256": "cb04b5a4e86a0eb68906e52dc169e3c47e51d8ffe4942dd9d75f7a0efded38b3"
+    }
+  ],
+  "services_restarted": false
+}

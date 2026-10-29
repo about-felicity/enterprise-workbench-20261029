@@ -1,0 +1,2 @@
+**2026-10-17 15:58 第一台DeepSeek重新登录已恢复、投屏已关闭：** 用户确认登录并要求关闭投屏。auth ready，daily actor自动启动同一原批次，PID30871，19/63真实processed（新第19题1162字/12来源），无待回传；第二台9/63持续running。仅验证serial后关闭scrcpy18920和15560→5560专用隧道，模拟器/ADB/第二台不动。掉登录原因核查：容器09:37起持续running、RestartCount0/OOMfalse，原/data持久卷在；14:35–14:55内核无OOM；Android窗口2838行无可证HTTP401/403/过期/踢出原因。exit-info的ISOLATED NOT NEEDED只是隔离进程回收，不能称主App崩溃。采集代码无退出账号/清数据动作。能证明App真的回到登录首页并触发77，不能确定服务端为什么让会话失效，勿编造风控/异地登录或保证永久不掉。只读脱敏诊断见maintenance/20261017-deepseek-health/logout-diagnostics.json和REPORT.md，无生产代码/间隔变更。旧等待登录记录由本条覆盖。
+

@@ -1,0 +1,723 @@
+{
+  "test_id": "question-only-soak12h-rowidfix-1792072084",
+  "status": "complete",
+  "verdict": "failed",
+  "adjudication_scope": "Manifest-owned original batches only; all are inactive/failed and have zero delivery backlog. No request or worker mutation performed by this exporter.",
+  "started_at": 1792072084.674704,
+  "deadline": 1792115284.674704,
+  "final_audit_at": 1792115546.7592742,
+  "started_beijing": "2026-10-15T21:48:04.674+08:00",
+  "deadline_beijing": "2026-10-16T09:48:04.674+08:00",
+  "final_audit_beijing": "2026-10-16T09:52:26.759+08:00",
+  "planned_window_seconds": 43200,
+  "recorder_last_sample_elapsed_seconds": 43516.90812635422,
+  "first_post_deadline_sample_at": 1792115296.1562486,
+  "first_post_deadline_sample_elapsed_seconds": 43211.48154449463,
+  "models": {
+    "doubao1": {
+      "batch": "geo-panel-doubao1-20261015-181820-3d82b024",
+      "baseline": {
+        "captured": 189,
+        "processed": 188,
+        "unique_processed": 188,
+        "duplicates": 0,
+        "unavailable": 0
+      },
+      "batch_cumulative": {
+        "captured": 760,
+        "processed": 760,
+        "unique_processed": 760,
+        "duplicates": 0,
+        "unavailable": 0
+      },
+      "window_delta": {
+        "captured": 571,
+        "processed": 572,
+        "unique_processed": 572,
+        "duplicates": 0,
+        "unavailable": 0,
+        "verified_unique_receipts": 572
+      },
+      "completed_body_all_sources_citations_raw_PG_fidelity": true,
+      "verified_unique_receipts": 760,
+      "original_service_state": "failed",
+      "original_health_state": "needs_attention",
+      "original_queue_states": {
+        "completed": 760,
+        "needs_attention": 1,
+        "pending": 751
+      },
+      "pending_delivery": 0,
+      "non_question_prompt_rows": 0,
+      "queue_metrics_since_window_start": {
+        "send_clicks": 767,
+        "window_send_clicks": 578,
+        "min_send_interval": 57.66627550125122,
+        "batch_min_send_interval": 57.53057265281677,
+        "duplicate_native_requests": 0,
+        "failed_attempts": 6,
+        "failed_attempts_table_present": true,
+        "first_start": 1792072115.8253279,
+        "last_start": 1792108823.770573,
+        "duplicate_send_clicks": 6
+      },
+      "planned_window_send_starts": 578,
+      "planned_window_min_start_interval": 57.66627550125122,
+      "configured_interval": 45,
+      "first_blocked_sample_at": 1792109743.2836337,
+      "superseded_by_operator": false,
+      "current_unrelated_batch": null,
+      "current_unrelated_service_state": null,
+      "deadline_result": "paused",
+      "nontext_audit": null,
+      "completed_full_observations_started_in_window": 571,
+      "carry_in_completed_observation_delta": 0,
+      "processed_delta_minus_new_full_observations": 1
+    },
+    "doubao2": {
+      "batch": "geo-panel-doubao2-20261015-181821-6fa7c803",
+      "baseline": {
+        "captured": 200,
+        "processed": 200,
+        "unique_processed": 200,
+        "duplicates": 0,
+        "unavailable": 0
+      },
+      "batch_cumulative": {
+        "captured": 310,
+        "processed": 310,
+        "unique_processed": 310,
+        "duplicates": 0,
+        "unavailable": 0
+      },
+      "window_delta": {
+        "captured": 110,
+        "processed": 110,
+        "unique_processed": 110,
+        "duplicates": 0,
+        "unavailable": 0,
+        "verified_unique_receipts": 110
+      },
+      "completed_body_all_sources_citations_raw_PG_fidelity": true,
+      "verified_unique_receipts": 310,
+      "original_service_state": "failed",
+      "original_health_state": "needs_attention",
+      "original_queue_states": {
+        "completed": 310,
+        "needs_attention": 1,
+        "pending": 1201
+      },
+      "pending_delivery": 0,
+      "non_question_prompt_rows": 0,
+      "queue_metrics_since_window_start": {
+        "send_clicks": 311,
+        "window_send_clicks": 110,
+        "min_send_interval": 53.08204531669617,
+        "batch_min_send_interval": 53.08204531669617,
+        "duplicate_native_requests": 0,
+        "failed_attempts": 0,
+        "failed_attempts_table_present": true,
+        "first_start": 1792072115.097984,
+        "last_start": 1792078575.1725197,
+        "duplicate_send_clicks": 0
+      },
+      "planned_window_send_starts": 110,
+      "planned_window_min_start_interval": 53.08204531669617,
+      "configured_interval": 45,
+      "first_blocked_sample_at": 1792079482.8467155,
+      "superseded_by_operator": false,
+      "current_unrelated_batch": null,
+      "current_unrelated_service_state": null,
+      "deadline_result": "paused",
+      "nontext_audit": null,
+      "completed_full_observations_started_in_window": 109,
+      "carry_in_completed_observation_delta": 1,
+      "processed_delta_minus_new_full_observations": 1
+    },
+    "yuanbao": {
+      "batch": "geo-panel-yuanbao-20261015-181821-d56b0d20",
+      "baseline": {
+        "captured": 218,
+        "processed": 218,
+        "unique_processed": 218,
+        "duplicates": 0,
+        "unavailable": 1
+      },
+      "batch_cumulative": {
+        "captured": 320,
+        "processed": 320,
+        "unique_processed": 320,
+        "duplicates": 0,
+        "unavailable": 1
+      },
+      "window_delta": {
+        "captured": 102,
+        "processed": 102,
+        "unique_processed": 102,
+        "duplicates": 0,
+        "unavailable": 0,
+        "verified_unique_receipts": 102
+      },
+      "completed_body_all_sources_citations_raw_PG_fidelity": true,
+      "verified_unique_receipts": 320,
+      "original_service_state": "failed",
+      "original_health_state": "needs_attention",
+      "original_queue_states": {
+        "completed": 320,
+        "completed_nontext": 1,
+        "needs_attention": 1,
+        "pending": 1190
+      },
+      "pending_delivery": 0,
+      "non_question_prompt_rows": 0,
+      "queue_metrics_since_window_start": {
+        "send_clicks": 322,
+        "window_send_clicks": 102,
+        "min_send_interval": 49.93138408660889,
+        "batch_min_send_interval": 49.79456281661987,
+        "duplicate_native_requests": 0,
+        "failed_attempts": 0,
+        "failed_attempts_table_present": true,
+        "first_start": 1792072128.3243613,
+        "last_start": 1792077280.4618108,
+        "duplicate_send_clicks": 0
+      },
+      "planned_window_send_starts": 102,
+      "planned_window_min_start_interval": 49.93138408660889,
+      "configured_interval": 45,
+      "first_blocked_sample_at": 1792078187.9646146,
+      "superseded_by_operator": false,
+      "current_unrelated_batch": null,
+      "current_unrelated_service_state": null,
+      "deadline_result": "paused",
+      "nontext_audit": {
+        "observations": 1,
+        "processed": 1,
+        "database_fidelity": true,
+        "scope": "Raw audit events; excluded from full-text counts and product statistics"
+      },
+      "completed_full_observations_started_in_window": 101,
+      "carry_in_completed_observation_delta": 1,
+      "processed_delta_minus_new_full_observations": 1
+    },
+    "deepseek": {
+      "batch": "geo-panel-deepseek-20261015-181821-879aca5d",
+      "baseline": {
+        "captured": 20,
+        "processed": 20,
+        "unique_processed": 20,
+        "duplicates": 0,
+        "unavailable": 0
+      },
+      "batch_cumulative": {
+        "captured": 21,
+        "processed": 21,
+        "unique_processed": 21,
+        "duplicates": 0,
+        "unavailable": 0
+      },
+      "window_delta": {
+        "captured": 1,
+        "processed": 1,
+        "unique_processed": 1,
+        "duplicates": 0,
+        "unavailable": 0,
+        "verified_unique_receipts": 1
+      },
+      "completed_body_all_sources_citations_raw_PG_fidelity": true,
+      "verified_unique_receipts": 21,
+      "original_service_state": "failed",
+      "original_health_state": "needs_attention",
+      "original_queue_states": {
+        "completed": 21,
+        "pending": 399
+      },
+      "pending_delivery": 0,
+      "non_question_prompt_rows": 0,
+      "queue_metrics_since_window_start": {
+        "starts": 21,
+        "window_starts": 1,
+        "min_send_interval": null,
+        "batch_min_send_interval": 600.0417845249176,
+        "first_start": 1792072632.8786173,
+        "last_start": 1792072632.8786173,
+        "duplicate_conversations": 0,
+        "queue_states": {
+          "completed": 21,
+          "pending": 399
+        },
+        "interval_evidence": "capture journal start after rate-slot acquisition; native uses durable click intent"
+      },
+      "planned_window_send_starts": 1,
+      "planned_window_min_start_interval": null,
+      "configured_interval": 600,
+      "first_blocked_sample_at": 1792073272.2140973,
+      "superseded_by_operator": true,
+      "current_unrelated_batch": "geo-panel-deepseek-20261016-094039-dc64b7e1",
+      "current_unrelated_service_state": "active",
+      "deadline_result": "superseded_by_operator",
+      "nontext_audit": null,
+      "old_batch_pause_marker": {
+        "requested_at": 1792114839.59107,
+        "source": "control_panel",
+        "action": "superseded_by_new_task"
+      },
+      "completed_full_observations_started_in_window": 1,
+      "carry_in_completed_observation_delta": 0,
+      "processed_delta_minus_new_full_observations": 0
+    },
+    "wenxin_card": {
+      "batch": "geo-panel-wenxin-card-20261015-181822-d5a69c59",
+      "baseline": {
+        "captured": 73,
+        "processed": 73,
+        "unique_processed": 73,
+        "duplicates": 0,
+        "unavailable": 0
+      },
+      "batch_cumulative": {
+        "captured": 325,
+        "processed": 325,
+        "unique_processed": 325,
+        "duplicates": 0,
+        "unavailable": 0
+      },
+      "window_delta": {
+        "captured": 252,
+        "processed": 252,
+        "unique_processed": 252,
+        "duplicates": 0,
+        "unavailable": 0,
+        "verified_unique_receipts": 252
+      },
+      "completed_body_all_sources_citations_raw_PG_fidelity": true,
+      "verified_unique_receipts": 325,
+      "original_service_state": "inactive",
+      "original_health_state": "paused",
+      "original_queue_states": {
+        "completed": 325,
+        "pending": 95
+      },
+      "pending_delivery": 0,
+      "non_question_prompt_rows": 0,
+      "queue_metrics_since_window_start": {
+        "starts": 325,
+        "window_starts": 251,
+        "min_send_interval": 148.36339783668518,
+        "batch_min_send_interval": 78.85885810852051,
+        "first_start": 1792072243.7512422,
+        "last_start": 1792115059.1704953,
+        "duplicate_conversations": null,
+        "queue_states": {
+          "completed": 325,
+          "pending": 95
+        },
+        "interval_evidence": "capture journal start after rate-slot acquisition; native uses durable click intent"
+      },
+      "planned_window_send_starts": 251,
+      "planned_window_min_start_interval": 148.36339783668518,
+      "configured_interval": 60,
+      "first_blocked_sample_at": null,
+      "superseded_by_operator": false,
+      "current_unrelated_batch": null,
+      "current_unrelated_service_state": null,
+      "deadline_result": "paused",
+      "nontext_audit": null,
+      "completed_full_observations_started_in_window": 251,
+      "carry_in_completed_observation_delta": 1,
+      "processed_delta_minus_new_full_observations": 1
+    },
+    "baidu_ai": {
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "baseline": {
+        "captured": 77,
+        "processed": 77,
+        "unique_processed": 26,
+        "duplicates": 51,
+        "unavailable": 6
+      },
+      "batch_cumulative": {
+        "captured": 298,
+        "processed": 298,
+        "unique_processed": 64,
+        "duplicates": 234,
+        "unavailable": 37
+      },
+      "window_delta": {
+        "captured": 221,
+        "processed": 221,
+        "unique_processed": 38,
+        "duplicates": 183,
+        "unavailable": 31,
+        "verified_unique_receipts": 38
+      },
+      "completed_body_all_sources_citations_raw_PG_fidelity": true,
+      "verified_unique_receipts": 64,
+      "original_service_state": "inactive",
+      "original_health_state": "paused",
+      "original_queue_states": {
+        "completed": 335,
+        "pending": 85
+      },
+      "pending_delivery": 0,
+      "non_question_prompt_rows": 0,
+      "queue_metrics_since_window_start": {
+        "starts": 335,
+        "window_starts": 252,
+        "min_send_interval": 140.27313351631165,
+        "batch_min_send_interval": 58.87065505981445,
+        "first_start": 1792072159.9998071,
+        "last_start": 1792115231.052174,
+        "duplicate_conversations": null,
+        "queue_states": {
+          "completed": 335,
+          "pending": 85
+        },
+        "interval_evidence": "capture journal start after rate-slot acquisition; native uses durable click intent"
+      },
+      "planned_window_send_starts": 252,
+      "planned_window_min_start_interval": 140.27313351631165,
+      "configured_interval": 60,
+      "first_blocked_sample_at": null,
+      "superseded_by_operator": false,
+      "current_unrelated_batch": null,
+      "current_unrelated_service_state": null,
+      "deadline_result": "paused",
+      "nontext_audit": null,
+      "unavailable_reasons": {
+        "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.baidu.com/\nCall log:\n  - navigating to \"https://www.baidu.com/\", waiting until \"domcontentloaded\"\n": 2,
+        "百度 AI 卡片未完整呈现，已保存页面观测，不能用文心卡片代替": 35
+      },
+      "completed_full_observations_started_in_window": 221,
+      "carry_in_completed_observation_delta": 0,
+      "processed_delta_minus_new_full_observations": 0
+    }
+  },
+  "raw_recorder_status": {
+    "test_id": "question-only-soak12h-rowidfix-1792072084",
+    "status": "draining",
+    "at": 1792115601.5828304,
+    "started_at": 1792072084.674704,
+    "deadline": 1792115284.674704,
+    "elapsed_seconds": 43516.908126831055,
+    "models": {
+      "doubao1": {
+        "batch": "geo-panel-doubao1-20261015-181820-3d82b024",
+        "state": "paused",
+        "service_state": "failed",
+        "captured": 760,
+        "processed": 760,
+        "unique_processed": 760,
+        "duplicates": 0,
+        "unavailable": 0,
+        "delivery_errors": 0,
+        "updated_at": 1792109726.7802904,
+        "verified_unique_receipts": 760,
+        "send_clicks": 767,
+        "window_send_clicks": 578,
+        "min_send_interval": 57.66627550125122,
+        "batch_min_send_interval": 57.53057265281677,
+        "duplicate_native_requests": 0,
+        "failed_attempts": 6,
+        "failed_attempts_table_present": true,
+        "first_start": 1792072115.8253279,
+        "last_start": 1792108823.770573,
+        "duplicate_send_clicks": 6,
+        "nontext_audit": null,
+        "window_counts": {
+          "captured": 571,
+          "processed": 572,
+          "unique_processed": 572,
+          "duplicates": 0,
+          "verified_unique_receipts": 572
+        }
+      },
+      "doubao2": {
+        "batch": "geo-panel-doubao2-20261015-181821-6fa7c803",
+        "state": "paused",
+        "service_state": "failed",
+        "captured": 310,
+        "processed": 310,
+        "unique_processed": 310,
+        "duplicates": 0,
+        "unavailable": 0,
+        "delivery_errors": 0,
+        "updated_at": 1792079475.6843493,
+        "verified_unique_receipts": 310,
+        "send_clicks": 311,
+        "window_send_clicks": 110,
+        "min_send_interval": 53.08204531669617,
+        "batch_min_send_interval": 53.08204531669617,
+        "duplicate_native_requests": 0,
+        "failed_attempts": 0,
+        "failed_attempts_table_present": true,
+        "first_start": 1792072115.097984,
+        "last_start": 1792078575.1725197,
+        "duplicate_send_clicks": 0,
+        "nontext_audit": null,
+        "window_counts": {
+          "captured": 110,
+          "processed": 110,
+          "unique_processed": 110,
+          "duplicates": 0,
+          "verified_unique_receipts": 110
+        }
+      },
+      "yuanbao": {
+        "batch": "geo-panel-yuanbao-20261015-181821-d56b0d20",
+        "state": "paused",
+        "service_state": "failed",
+        "captured": 320,
+        "processed": 320,
+        "unique_processed": 320,
+        "duplicates": 0,
+        "unavailable": 1,
+        "delivery_errors": 0,
+        "updated_at": 1792078181.344985,
+        "verified_unique_receipts": 320,
+        "send_clicks": 322,
+        "window_send_clicks": 102,
+        "min_send_interval": 49.93138408660889,
+        "batch_min_send_interval": 49.79456281661987,
+        "duplicate_native_requests": 0,
+        "failed_attempts": 0,
+        "failed_attempts_table_present": true,
+        "first_start": 1792072128.3243613,
+        "last_start": 1792077280.4618108,
+        "duplicate_send_clicks": 0,
+        "nontext_audit": {
+          "observations": 1,
+          "processed": 1,
+          "database_fidelity": true,
+          "scope": "Raw audit events; excluded from full-text counts and product statistics"
+        },
+        "window_counts": {
+          "captured": 102,
+          "processed": 102,
+          "unique_processed": 102,
+          "duplicates": 0,
+          "verified_unique_receipts": 102
+        }
+      },
+      "deepseek": {
+        "batch": "geo-panel-deepseek-20261016-094039-dc64b7e1",
+        "state": "running",
+        "service_state": "active",
+        "captured": 2,
+        "processed": 2,
+        "unique_processed": 2,
+        "duplicates": 0,
+        "unavailable": 0,
+        "delivery_errors": 0,
+        "updated_at": 1792115599.4646978,
+        "verified_unique_receipts": 21,
+        "starts": 21,
+        "window_starts": 1,
+        "min_send_interval": null,
+        "batch_min_send_interval": 600.0417845249176,
+        "first_start": 1792072632.8786173,
+        "last_start": 1792072632.8786173,
+        "duplicate_conversations": 0,
+        "queue_states": {
+          "completed": 21,
+          "pending": 399
+        },
+        "interval_evidence": "capture journal start after rate-slot acquisition; native uses durable click intent",
+        "nontext_audit": null,
+        "window_counts": {
+          "captured": 0,
+          "processed": 0,
+          "unique_processed": 0,
+          "duplicates": 0,
+          "verified_unique_receipts": 1
+        }
+      },
+      "wenxin_card": {
+        "batch": "geo-panel-wenxin-card-20261015-181822-d5a69c59",
+        "state": "paused",
+        "service_state": "inactive",
+        "captured": 325,
+        "processed": 325,
+        "unique_processed": 325,
+        "duplicates": 0,
+        "unavailable": 0,
+        "delivery_errors": 0,
+        "updated_at": 1792115290.461188,
+        "verified_unique_receipts": 325,
+        "starts": 325,
+        "window_starts": 251,
+        "min_send_interval": 148.36339783668518,
+        "batch_min_send_interval": 78.85885810852051,
+        "first_start": 1792072243.7512422,
+        "last_start": 1792115059.1704953,
+        "duplicate_conversations": null,
+        "queue_states": {
+          "completed": 325,
+          "pending": 95
+        },
+        "interval_evidence": "capture journal start after rate-slot acquisition; native uses durable click intent",
+        "nontext_audit": null,
+        "window_counts": {
+          "captured": 252,
+          "processed": 252,
+          "unique_processed": 252,
+          "duplicates": 0,
+          "verified_unique_receipts": 252
+        }
+      },
+      "baidu_ai": {
+        "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+        "state": "paused",
+        "service_state": "inactive",
+        "captured": 298,
+        "processed": 298,
+        "unique_processed": 64,
+        "duplicates": 234,
+        "unavailable": 37,
+        "delivery_errors": 0,
+        "updated_at": 1792115289.844105,
+        "verified_unique_receipts": 64,
+        "starts": 335,
+        "window_starts": 252,
+        "min_send_interval": 140.27313351631165,
+        "batch_min_send_interval": 58.87065505981445,
+        "first_start": 1792072159.9998071,
+        "last_start": 1792115231.052174,
+        "duplicate_conversations": null,
+        "queue_states": {
+          "completed": 335,
+          "pending": 85
+        },
+        "interval_evidence": "capture journal start after rate-slot acquisition; native uses durable click intent",
+        "nontext_audit": null,
+        "window_counts": {
+          "captured": 221,
+          "processed": 221,
+          "unique_processed": 38,
+          "duplicates": 183,
+          "verified_unique_receipts": 38
+        }
+      }
+    },
+    "anomalies": [
+      "deepseek:unexpected_state:waiting_login",
+      "yuanbao:unexpected_state:needs_attention",
+      "doubao2:unexpected_state:needs_attention",
+      "doubao1:duplicate_request_or_conversation",
+      "doubao1:unexpected_state:needs_attention",
+      "deepseek:unexpected_state:needs_attention",
+      "deepseek:batch_changed_by_operator"
+    ]
+  },
+  "metrics": {
+    "total_samples": 2151,
+    "samples_at_or_before_deadline": 2135,
+    "first_at": 1792072091.8529932,
+    "last_at": 1792115601.5828304,
+    "max_gap_seconds": 21.896893978118896,
+    "max_gap_from": 1792072620.353132,
+    "max_gap_to": 1792072642.250026,
+    "sample_error_counts": {}
+  },
+  "anomalies": [
+    "deepseek:unexpected_state:waiting_login",
+    "yuanbao:unexpected_state:needs_attention",
+    "doubao2:unexpected_state:needs_attention",
+    "doubao1:duplicate_request_or_conversation",
+    "doubao1:unexpected_state:needs_attention",
+    "deepseek:unexpected_state:needs_attention",
+    "deepseek:batch_changed_by_operator"
+  ],
+  "independent_deadline_execution": "Result=success\nExecMainStartTimestamp=Fri 2026-10-16 01:48:05 UTC\nExecMainExitTimestamp=Fri 2026-10-16 01:48:05 UTC",
+  "latest_deadline_marker": {
+    "at": 1792115520.0600595,
+    "results": {
+      "doubao1": "paused",
+      "doubao2": "paused",
+      "yuanbao": "paused",
+      "deepseek": "superseded_by_operator",
+      "wenxin_card": "paused",
+      "baidu_ai": "paused"
+    }
+  },
+  "container_changes_against_manifest": {},
+  "known_operator_frontend_rebuilds": [
+    "2026-10-16 09:21 no-quark-20261016",
+    "2026-10-16 09:33 board-layout-20261016"
+  ],
+  "limitations": [
+    "This is not six-channel continuous 12-hour collection success. Both Doubao lanes and Yuanbao have unresolved original requests; original DeepSeek was login-blocked and later superseded.",
+    "Six completed transient-error attempts and six tasks with two clicks are retained; no claim of zero failures or one click for every task.",
+    "Doubao1 captured delta 571 versus processed delta 572 includes one carry-in receipt; do not call all processed deltas newly sent questions.",
+    "Baidu full observations, unique processed receipts, duplicate observations and unavailable page observations are separate.",
+    "A new DeepSeek batch started by the operator is excluded; the deadline deliberately skips it.",
+    "Raw recorder counters after the DeepSeek switch mix the current panel lane with the old manifest. This report reconstructs old-batch counters from last matching samples and independently audits its original receipts.",
+    "The raw recorder waits for the unrelated new active lane; this independent final audit instead verifies all original batch services and queues without stopping that new lane.",
+    "Client SSH monitoring failed during the 08:04 heartbeat; recorder gaps and sample errors are reported separately, without inventing a successful client audit.",
+    "Structural and source fidelity does not establish perpetual semantic correctness; pending analyses and incomplete answers are not negative product evidence."
+  ],
+  "recorder_closed_at": 1792115612.4696198,
+  "recorder_closed_beijing": "2026-10-16T09:53:32.469+08:00",
+  "recorder_wall_elapsed_seconds": 43527.79491567612,
+  "recorder_closure": {
+    "test_id": "question-only-soak12h-rowidfix-1792072084",
+    "at": 1792115612.4696198,
+    "recorder_unit": "geo-question-only-soak12h-rowidfix-1792072084.service",
+    "recorder_state": "inactive",
+    "action": "Stopped only the expired monitoring recorder after manifest-owned batch audit; no capture/creation worker stopped by this script.",
+    "panel_batch_and_service_states_before": {
+      "doubao1": {
+        "batch": "geo-panel-doubao1-20261015-181820-3d82b024",
+        "service_state": "failed"
+      },
+      "doubao2": {
+        "batch": "geo-panel-doubao2-20261015-181821-6fa7c803",
+        "service_state": "failed"
+      },
+      "yuanbao": {
+        "batch": "geo-panel-yuanbao-20261015-181821-d56b0d20",
+        "service_state": "failed"
+      },
+      "deepseek": {
+        "batch": "geo-panel-deepseek-20261016-094039-dc64b7e1",
+        "service_state": "active"
+      },
+      "wenxin_card": {
+        "batch": "geo-panel-wenxin-card-20261015-181822-d5a69c59",
+        "service_state": "inactive"
+      },
+      "baidu_ai": {
+        "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+        "service_state": "inactive"
+      }
+    },
+    "panel_batch_and_service_states_after": {
+      "doubao1": {
+        "batch": "geo-panel-doubao1-20261015-181820-3d82b024",
+        "service_state": "failed"
+      },
+      "doubao2": {
+        "batch": "geo-panel-doubao2-20261015-181821-6fa7c803",
+        "service_state": "failed"
+      },
+      "yuanbao": {
+        "batch": "geo-panel-yuanbao-20261015-181821-d56b0d20",
+        "service_state": "failed"
+      },
+      "deepseek": {
+        "batch": "geo-panel-deepseek-20261016-094039-dc64b7e1",
+        "service_state": "active"
+      },
+      "wenxin_card": {
+        "batch": "geo-panel-wenxin-card-20261015-181822-d5a69c59",
+        "service_state": "inactive"
+      },
+      "baidu_ai": {
+        "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+        "service_state": "inactive"
+      }
+    },
+    "raw_recorder_finalization_limit": "Raw recorder stayed draining because its all-lane busy condition included the operator new DeepSeek batch. Raw evidence retained; independent adjudication closes only original batch scope."
+  },
+  "finalized_by": "Independent manifest-owned batch audit; original supervisor evidence preserved unchanged"
+}

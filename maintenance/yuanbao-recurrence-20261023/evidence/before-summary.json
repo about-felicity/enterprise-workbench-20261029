@@ -1,0 +1,113 @@
+{
+  "at": 1792733594.027885,
+  "health": {
+    "batch": "geo-panel-yuanbao-20261023-090004-d6b66215",
+    "planned": 168,
+    "prompt_mode": "question_only",
+    "model": "yuanbao",
+    "captured": 124,
+    "geo_processed": 124,
+    "delivery_errors": [],
+    "nontext_observations": 0,
+    "nontext_processed": 0,
+    "nontext_pending": 0,
+    "unavailable": 0,
+    "time": 1792733593.9914932,
+    "heartbeat_expires_at": 1792733743.9914935,
+    "bridge_pid": 22962,
+    "tasks": {
+      "completed": 124,
+      "pending": 43,
+      "prepared": 1
+    },
+    "status": "running",
+    "memory": {
+      "app_alive": true,
+      "pid": 4403,
+      "java_alloc_kib": 47359,
+      "java_size_kib": 145663,
+      "java_limit_kib": 524288,
+      "java_fraction": 0.09033012390136719,
+      "native_alloc_kib": 235869,
+      "app_pss_kib": 911326,
+      "container_bytes": 1320693760,
+      "container_working_bytes": 1193082880,
+      "container_limit_bytes": 4294967296,
+      "container_fraction": 0.2777862548828125,
+      "app_pss_fraction": 0.21727705001831055,
+      "sampled_at": 1792733563.077183,
+      "last_exit": {
+        "pid": 17671,
+        "reason": "low_memory"
+      },
+      "pending": "",
+      "high_samples": 0
+    },
+    "progress": {
+      "phase": "awaiting_original_result",
+      "task_id": "35ba58b5-b2f3-543f-a327-ae1c5b0d400f",
+      "ordinal": 125,
+      "changed_at": 1792729495.582213,
+      "next_at": 1792733593.988217,
+      "reason": "original_request_stalled",
+      "deadline_at": 1792729494.2069974
+    }
+  },
+  "task125": {
+    "task_id": "35ba58b5-b2f3-543f-a327-ae1c5b0d400f",
+    "batch": "geo-panel-yuanbao-20261023-090004-d6b66215",
+    "ordinal": 125,
+    "question": "推荐一款护手霜",
+    "wire_question": "推荐一款护手霜",
+    "require_sources": 1,
+    "state": "prepared",
+    "attempts": 0,
+    "prepared_at": 1792728594.2069974,
+    "request_id": "876a3acdca7609a26c7eb286254afba7",
+    "answer_id": null,
+    "error": null,
+    "capture_retries": 0,
+    "not_before": 0.0,
+    "base_wire_question": "推荐一款护手霜",
+    "events": [
+      {
+        "id": 807,
+        "task_id": "35ba58b5-b2f3-543f-a327-ae1c5b0d400f",
+        "time": 1792728594.2750416,
+        "event": "send_tap_returned",
+        "detail": ""
+      },
+      {
+        "id": 806,
+        "task_id": "35ba58b5-b2f3-543f-a327-ae1c5b0d400f",
+        "time": 1792728594.207036,
+        "event": "send_click_intent_committed",
+        "detail": ""
+      },
+      {
+        "id": 805,
+        "task_id": "35ba58b5-b2f3-543f-a327-ae1c5b0d400f",
+        "time": 1792728592.01707,
+        "event": "send_protocol_v2",
+        "detail": ""
+      },
+      {
+        "id": 804,
+        "task_id": "35ba58b5-b2f3-543f-a327-ae1c5b0d400f",
+        "time": 1792728592.017055,
+        "event": "send_intent_committed",
+        "detail": ""
+      },
+      {
+        "id": 125,
+        "task_id": "35ba58b5-b2f3-543f-a327-ae1c5b0d400f",
+        "time": 1792717204.856436,
+        "event": "enqueued",
+        "detail": "question-only-v1"
+      }
+    ]
+  },
+  "app_pid": "4403",
+  "memory_limit": 4294967296,
+  "memory_events": "low 0\nhigh 0\nmax 47802\noom 7\noom_kill 4\noom_group_kill 0"
+}

@@ -1,0 +1,40 @@
+{
+  "version": "article-compiler-v1",
+  "status": "READY_WITH_LIMITS",
+  "writeable": true,
+  "requested_type": "hands_on",
+  "effective_type": "review",
+  "original_title": "哪个牌子的防脱洗发水好?2026热门高口碑榜防脱实测，码住不踩雷",
+  "proposed_scope": "依据现有记录比较composition",
+  "available_dimensions": {
+    "composition": [
+      "EHD防脱洗发水",
+      "伊卡璐防脱洗发水",
+      "六神防脱洗发水",
+      "施华蔻防脱洗发水",
+      "植观防脱洗发水",
+      "菲诗蔻防脱洗发水",
+      "薇姿防脱洗发水",
+      "蜂花防脱洗发水",
+      "道和小绿瓶防脱洗发水",
+      "飘柔防脱洗发水"
+    ]
+  },
+  "unsupported_dimensions": [
+    "缺少可追溯的真实实测记录，不能称为亲测或实测"
+  ],
+  "reasons": [
+    "缺少可追溯的真实实测记录，不能称为亲测或实测"
+  ],
+  "conflicts": [],
+  "forbidden_conclusions": [
+    "不从成分存在推出效果或适用人群",
+    "不从部分成分摘录评价完整配方长短",
+    "不由未知价格推出性价比",
+    "不由编辑顺序推出客观性能排名",
+    "不把供应商或媒体自述写成独立验证"
+  ],
+  "scope_change_requires_explicit_policy": false,
+  "policy": "practical-continuation-v1",
+  "warnings_do_not_block_article": true
+}

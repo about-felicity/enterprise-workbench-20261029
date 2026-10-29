@@ -1,0 +1,22 @@
+{
+  "question": "敏感肌想改善暗沉，有什么美白面霜推荐",
+  "model": "baidu_ai",
+  "source": {
+    "url": "https://zhuanlan.zhihu.com/p/2094114427205318269",
+    "title": "2026 年适合敏感肌的美白提亮护肤品怎么选?暗沉、痘印、色沉实测选择",
+    "media": "知乎",
+    "article": {
+      "status": "failed",
+      "requested_url": "https://zhuanlan.zhihu.com/p/2094114427205318269",
+      "text": "",
+      "attempts": [
+        {
+          "backend": "http",
+          "status": "failed",
+          "error": "HTTP 403"
+        }
+      ],
+      "error": "All enabled Scrapling readers failed; inspect attempts or provide a permitted source copy"
+    }
+  }
+}

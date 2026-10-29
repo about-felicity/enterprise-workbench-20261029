@@ -1,0 +1,771 @@
+{
+  "at": 1792644426.4753752,
+  "batches": [
+    {
+      "model": "doubao1",
+      "batch": "geo-panel-doubao1-20261022-090003-0fe844d7",
+      "counts": {
+        "completed": 30,
+        "pending": 75
+      },
+      "health": {
+        "status": "running",
+        "captured": 30,
+        "geo_processed": 30,
+        "delivery_errors": [],
+        "progress": {
+          "phase": "preparing",
+          "task_id": "f5389fb0-f61d-59f7-9a8c-28f37e3ea23b",
+          "ordinal": 31,
+          "changed_at": 1792644414.98658
+        },
+        "time": 1792644414.9865818,
+        "memory": {}
+      },
+      "current": {
+        "ordinal": 31,
+        "state": "pending",
+        "request_id": null,
+        "capture_retries": 0,
+        "error": null
+      },
+      "pause": {},
+      "recovered_cases": [
+        {
+          "ordinal": 22,
+          "state": "completed",
+          "request_id": "e63d8a27-d38c-4711-87be-5cb557baedc2",
+          "body_length": 422,
+          "sources": 12,
+          "conversation_id": "38448625449030402",
+          "first_user_turn": true,
+          "continuation_request_id": null,
+          "native_request_confirmed": true,
+          "capture_retries": 0,
+          "events": {
+            "completed": 1,
+            "enqueued": 1,
+            "native_existing_draft_submit_intent": 1,
+            "native_existing_draft_submit_returned": 1,
+            "send_click_intent_committed": 1,
+            "send_intent_committed": 1,
+            "send_protocol_v2": 1,
+            "send_tap_returned": 1
+          }
+        },
+        {
+          "ordinal": 26,
+          "state": "completed",
+          "request_id": "4fd4c675-36b0-46e9-a627-f7d4258f17e6",
+          "body_length": 301,
+          "sources": 0,
+          "conversation_id": "38448538557719298",
+          "first_user_turn": false,
+          "continuation_request_id": "7060ead6-2f0a-4896-a7ce-ec575aaf9050",
+          "native_request_confirmed": true,
+          "capture_retries": 0,
+          "events": {
+            "completed": 1,
+            "enqueued": 1,
+            "native_optional_commerce_login_dismissed": 1,
+            "native_validation_backoff": 8,
+            "send_click_intent_committed": 1,
+            "send_intent_committed": 1,
+            "send_protocol_v2": 1,
+            "send_tap_returned": 1
+          }
+        }
+      ],
+      "original": {
+        "task_id": "13658081-ac56-593d-9d0e-bc75ac275efd",
+        "ordinal": 22,
+        "state": "completed",
+        "request_id": "e63d8a27-d38c-4711-87be-5cb557baedc2",
+        "capture_retries": 0,
+        "error": null,
+        "body_length": 422,
+        "body_sha256": "cb957160ed7609783863cb500d9b52fd4803f9de15b3ff7c63218b3e5c5885ff",
+        "sources": 12,
+        "conversation_id": "38448625449030402",
+        "missing_titles": [],
+        "events": [
+          {
+            "event": "enqueued",
+            "time": 1792630804.2964208,
+            "detail": "question-only-v1"
+          },
+          {
+            "event": "send_intent_committed",
+            "time": 1792632783.4043002,
+            "detail": ""
+          },
+          {
+            "event": "send_protocol_v2",
+            "time": 1792632783.4043057,
+            "detail": ""
+          },
+          {
+            "event": "send_click_intent_committed",
+            "time": 1792632792.5938168,
+            "detail": ""
+          },
+          {
+            "event": "send_tap_returned",
+            "time": 1792632796.180176,
+            "detail": ""
+          },
+          {
+            "event": "native_existing_draft_submit_intent",
+            "time": 1792642887.7995465,
+            "detail": "Two stable original-baseline/SQLite/composer checks; no native request found; bounded one tap"
+          },
+          {
+            "event": "native_existing_draft_submit_returned",
+            "time": 1792642891.7351499,
+            "detail": "Await original local/server acknowledgement; no further tap permitted"
+          },
+          {
+            "event": "completed",
+            "time": 1792642956.657774,
+            "detail": ""
+          }
+        ],
+        "draft_recovery": {
+          "first_observed": 1792642801.4773307,
+          "next_probe": 1792642869.6172895,
+          "proof": "<two baseline comparisons persisted>",
+          "attempted": true,
+          "attempted_at": 1792642882.488796,
+          "request_observed": false,
+          "question_unchanged": true
+        },
+        "receipts": [
+          {
+            "request_id": "bcab99c2aca4d8e0db2c7e5d0521cc7759b0ff754778c88ff23a52f9172eece2",
+            "receipt_present": true,
+            "run_id": "doubao-bcab99c2aca4d8e0db2c",
+            "analysis": {
+              "answer_length": 422,
+              "source_count": 12,
+              "answer_present": true,
+              "source_capture_complete": true,
+              "body_capture_complete": null,
+              "quarantined": null
+            }
+          }
+        ]
+      },
+      "service": "active"
+    },
+    {
+      "model": "doubao2",
+      "batch": "geo-panel-doubao2-20261022-090004-564a33f1",
+      "counts": {
+        "completed": 105
+      },
+      "health": {
+        "status": "complete",
+        "captured": 105,
+        "geo_processed": 105,
+        "delivery_errors": [],
+        "progress": {
+          "phase": "delivery",
+          "task_id": null,
+          "ordinal": null,
+          "changed_at": 1792638122.8287542,
+          "pending_delivery": 1
+        },
+        "time": 1792638127.8427646,
+        "memory": {
+          "app_alive": true,
+          "pid": 3782,
+          "java_alloc_kib": 127571,
+          "java_size_kib": 225875,
+          "java_limit_kib": 524288,
+          "java_fraction": 0.24332237243652344,
+          "native_alloc_kib": 349375,
+          "app_pss_kib": 1254046,
+          "container_bytes": 2163458048,
+          "container_working_bytes": 1655107584,
+          "container_limit_bytes": 4294967296,
+          "container_fraction": 0.3853597640991211,
+          "app_pss_fraction": 0.29898786544799805,
+          "sampled_at": 1792638099.0693183,
+          "last_exit": {
+            "pid": 50087,
+            "reason": "user_requested"
+          },
+          "pending": "",
+          "high_samples": 0
+        }
+      },
+      "current": null,
+      "pause": {},
+      "recovered_cases": [],
+      "service": "inactive"
+    },
+    {
+      "model": "yuanbao",
+      "batch": "geo-panel-yuanbao-20261022-090005-705819fb",
+      "counts": {
+        "completed": 116,
+        "pending": 51,
+        "prepared": 1
+      },
+      "health": {
+        "status": "running",
+        "captured": 116,
+        "geo_processed": 116,
+        "delivery_errors": [],
+        "progress": {
+          "phase": "generating",
+          "task_id": "c3114ed4-bd04-560d-a742-cfabd9eaf3e8",
+          "ordinal": 117,
+          "changed_at": 1792644412.9767747,
+          "reason": "",
+          "deadline_at": 1792645295.8012116
+        },
+        "time": 1792644417.1961575,
+        "memory": {
+          "app_alive": true,
+          "pid": 43594,
+          "java_alloc_kib": 35791,
+          "java_size_kib": 134095,
+          "java_limit_kib": 524288,
+          "java_fraction": 0.06826591491699219,
+          "native_alloc_kib": 287587,
+          "app_pss_kib": 707856,
+          "container_bytes": 1331531776,
+          "container_working_bytes": 1083547648,
+          "container_limit_bytes": 3221225472,
+          "container_fraction": 0.33637746175130206,
+          "app_pss_fraction": 0.2250213623046875,
+          "sampled_at": 1792644415.9802759,
+          "pending": "",
+          "high_samples": 0
+        }
+      },
+      "current": {
+        "ordinal": 117,
+        "state": "prepared",
+        "request_id": "8b53d75faeaf36499688ee599d350e68",
+        "capture_retries": 0,
+        "error": null
+      },
+      "pause": {},
+      "recovered_cases": [
+        {
+          "ordinal": 102,
+          "state": "completed",
+          "request_id": "c8f6cc09adf12d940c4391a6c95f9f84",
+          "body_length": 1757,
+          "sources": 48,
+          "conversation_id": "0RRQofIMlYu",
+          "first_user_turn": true,
+          "continuation_request_id": null,
+          "native_request_confirmed": true,
+          "capture_retries": 0,
+          "events": {
+            "completed": 1,
+            "enqueued": 1,
+            "native_validation_backoff": 76,
+            "send_click_intent_committed": 1,
+            "send_intent_committed": 1,
+            "send_protocol_v2": 1,
+            "send_tap_returned": 1
+          }
+        },
+        {
+          "ordinal": 112,
+          "state": "completed",
+          "request_id": "d77f89b632a18c3e2b45cb69120119ca",
+          "body_length": 2891,
+          "sources": 50,
+          "conversation_id": "0RRX0UA4Ogq",
+          "first_user_turn": true,
+          "continuation_request_id": null,
+          "native_request_confirmed": true,
+          "capture_retries": 0,
+          "events": {
+            "completed": 1,
+            "enqueued": 1,
+            "native_app_relaunch_for_readback": 1,
+            "native_original_history_restored_after_exit": 1,
+            "read_transport_failure": 14,
+            "send_click_intent_committed": 1,
+            "send_intent_committed": 1,
+            "send_protocol_v2": 1,
+            "send_tap_returned": 1
+          }
+        }
+      ],
+      "original": {
+        "task_id": "04720572-4777-5930-8a8b-4774c8805235",
+        "ordinal": 102,
+        "state": "completed",
+        "request_id": "c8f6cc09adf12d940c4391a6c95f9f84",
+        "capture_retries": 0,
+        "error": null,
+        "body_length": 1757,
+        "body_sha256": "e267e36b89aaf56a63547d929cacb5cd593ecff4b3d49a57bd6e0bfc3deddba3",
+        "sources": 48,
+        "conversation_id": "0RRQofIMlYu",
+        "missing_titles": [
+          {
+            "title": "未提供标题（消费日报网）",
+            "original_title": "",
+            "title_missing": true,
+            "title_origin": "explicit_missing_title_label",
+            "url": "https://www.xfrb.com.cn/content/202608/24/c637168.html"
+          }
+        ],
+        "events": [
+          {
+            "event": "enqueued",
+            "time": 1792630805.332901,
+            "detail": "question-only-v1"
+          },
+          {
+            "event": "send_intent_committed",
+            "time": 1792637702.7535486,
+            "detail": ""
+          },
+          {
+            "event": "send_protocol_v2",
+            "time": 1792637702.753555,
+            "detail": ""
+          },
+          {
+            "event": "send_click_intent_committed",
+            "time": 1792637704.903811,
+            "detail": ""
+          },
+          {
+            "event": "send_tap_returned",
+            "time": 1792637704.9642086,
+            "detail": ""
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792637739.3487442,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792637801.0084395,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792637862.4111981,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792637923.9073777,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792637985.5017564,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638046.9859679,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638108.249929,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638169.63336,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638230.9770854,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638292.2633348,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638353.6628659,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638415.0061774,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638476.3209717,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638537.631752,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638599.0818415,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638660.4332132,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638721.7718246,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638783.029353,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638844.4545622,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638905.7918031,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792638967.0686944,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639028.345403,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639089.653694,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639150.9397826,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639212.2584167,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639273.6350965,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639334.981375,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639396.2450225,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639457.588099,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639519.01761,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639580.4035745,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639641.8500233,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639703.1577866,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639764.5603392,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639825.9019692,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639887.332224,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792639948.8498724,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640010.236908,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640071.5769186,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640132.9035091,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640194.373267,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640255.736127,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640317.212541,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640378.631787,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640439.9260814,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640501.1503122,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640562.5690928,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640623.8880084,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640685.2014089,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640746.5595,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640807.985642,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640869.2885711,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640930.5497413,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792640991.8829837,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641053.203875,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641114.5996146,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641175.9955432,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641237.2568748,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641298.7012715,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641360.101396,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641421.4739664,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641482.985486,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641544.3698795,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641605.8592598,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641667.7446945,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641729.082699,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641790.487918,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641852.042722,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641913.4268308,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792641974.7603433,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792642036.0791562,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792642097.505,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792642158.847089,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792642220.2862146,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792642281.5623255,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "native_validation_backoff",
+            "time": 1792642342.986038,
+            "detail": "NativeDataError"
+          },
+          {
+            "event": "completed",
+            "time": 1792642414.127555,
+            "detail": ""
+          }
+        ],
+        "draft_recovery": {},
+        "receipts": [
+          {
+            "request_id": "e40757cdcf4046a4145008d3ee8c8083a52ef1b9b2d7e77309a18ffa0324a537",
+            "receipt_present": true,
+            "run_id": "e6ea3da7894327a51f57",
+            "analysis": {
+              "answer_length": 1756,
+              "source_count": 48,
+              "answer_present": true,
+              "source_capture_complete": true,
+              "body_capture_complete": true,
+              "quarantined": false
+            }
+          }
+        ]
+      },
+      "service": "active"
+    }
+  ],
+  "postgres": [
+    {
+      "batch": "geo-panel-doubao1-20261022-090003-0fe844d7",
+      "n": 30,
+      "success": 30
+    },
+    {
+      "batch": "geo-panel-doubao2-20261022-090004-564a33f1",
+      "n": 105,
+      "success": 105
+    },
+    {
+      "batch": "geo-panel-yuanbao-20261022-090005-705819fb",
+      "n": 116,
+      "success": 116
+    }
+  ]
+}

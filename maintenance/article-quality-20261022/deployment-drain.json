@@ -1,0 +1,123 @@
+{
+  "at": 1792660351.3419504,
+  "paused": [
+    {
+      "job": "creation-1792060415-1e4e3a8d",
+      "before": {
+        "paused": false,
+        "revision": 9,
+        "resumed_epoch": 1792072232.4577825
+      },
+      "pause_revision": 10
+    },
+    {
+      "job": "creation-1792475798-478ca528",
+      "before": {
+        "paused": false,
+        "revision": 1,
+        "resumed_epoch": 1792475798.5861423
+      },
+      "pause_revision": 2
+    },
+    {
+      "job": "creation-1792475798-7d2fc250",
+      "before": {
+        "paused": false,
+        "revision": 1,
+        "resumed_epoch": 1792475798.4125826
+      },
+      "pause_revision": 2
+    },
+    {
+      "job": "creation-1792576129-389f575e",
+      "before": {
+        "paused": false,
+        "revision": 15,
+        "resumed_epoch": 1792656727.530073
+      },
+      "pause_revision": 16
+    },
+    {
+      "job": "creation-1792636960-aa0d6ec9",
+      "before": {
+        "paused": false,
+        "revision": 1,
+        "resumed_epoch": 1792636961.063664
+      },
+      "pause_revision": 2
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "before": {
+        "paused": false,
+        "revision": 24,
+        "resumed_epoch": 1792656726.9786563
+      },
+      "pause_revision": 25
+    },
+    {
+      "job": "creation-1792526406-06126e43",
+      "before": {
+        "paused": false,
+        "revision": 1,
+        "resumed_epoch": 1792526406.7576106
+      },
+      "pause_revision": 2
+    },
+    {
+      "job": "creation-1792479954-8a96bc88",
+      "before": {
+        "paused": false,
+        "revision": 16,
+        "resumed_epoch": 1792550267.205236
+      },
+      "pause_revision": 17
+    },
+    {
+      "job": "creation-1792526406-8f93ccca",
+      "before": {
+        "paused": false,
+        "revision": 3,
+        "resumed_epoch": 1792550377.4152882
+      },
+      "pause_revision": 4
+    },
+    {
+      "job": "creation-1792556219-bbc55e13",
+      "before": {
+        "paused": false,
+        "revision": 6,
+        "resumed_epoch": 1792557832.7236297,
+        "resolved_system_pause": {
+          "paused": true,
+          "reason": "document_projection_maintenance",
+          "message": "等待正在执行的请求安全收尾，修正三级标题与结构化段落兼容；不发送新请求",
+          "revision": 5,
+          "paused_epoch": 1792557712.4321377
+        },
+        "reason": "document_and_evidence_projection_fixed"
+      },
+      "pause_revision": 7
+    },
+    {
+      "job": "creation-1792487019-ffa40955",
+      "before": {
+        "paused": false,
+        "revision": 13,
+        "resumed_epoch": 1792491165.793582
+      },
+      "pause_revision": 14
+    },
+    {
+      "job": "creation-1792575864-f2f8afb2",
+      "before": {
+        "paused": false,
+        "revision": 4,
+        "resumed_epoch": 1792656727.7977443
+      },
+      "pause_revision": 5
+    }
+  ],
+  "restored": true,
+  "restored_at": 1792660419.9814239
+}

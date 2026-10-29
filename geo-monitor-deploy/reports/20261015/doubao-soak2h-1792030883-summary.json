@@ -1,0 +1,146 @@
+{
+  "test_id": "doubao-soak2h-1792030883",
+  "verified_at_beijing": "2026-10-15T12:31:57+08:00",
+  "verdict": "passed",
+  "started_at_beijing": "2026-10-15T10:21:23+08:00",
+  "deadline_beijing": "2026-10-15T12:21:23+08:00",
+  "finished_at_beijing": "2026-10-15T12:22:00+08:00",
+  "scheduled_seconds": 7200,
+  "elapsed_including_drain_seconds": 7237.462106704712,
+  "drain_seconds": 37.462106704711914,
+  "samples": 360,
+  "max_sample_gap_seconds": 21.309953927993774,
+  "models": {
+    "doubao1": {
+      "batch": "geo-panel-doubao1-20261015-102126-041120bd",
+      "state": "paused",
+      "service_state": "inactive",
+      "captured": 116,
+      "processed": 116,
+      "tasks": {
+        "completed": 116,
+        "pending": 304
+      },
+      "delivery_errors": 0,
+      "updated_at": 1792038105.3846984,
+      "verified_receipts": 116,
+      "send_clicks": 116,
+      "min_send_interval": 53.00409150123596,
+      "duplicate_native_requests": 0,
+      "failed_attempts": 0,
+      "final_reaudit_database_records": 116,
+      "first_click_beijing": "2026-10-15T10:21:43+08:00",
+      "last_click_beijing": "2026-10-15T12:21:23+08:00",
+      "send_span_seconds": 7180.167596817017,
+      "clicks_after_deadline": 1,
+      "queue_states_now": {
+        "completed": 116,
+        "pending": 304
+      },
+      "pause_operation_recorded": true,
+      "body_characters": 18291,
+      "source_entries": 1165,
+      "deadline_click_evidence": [
+        {
+          "click_seconds_after_deadline": 0.15379929542541504,
+          "send_intent_seconds_before_deadline": 13.261926651000977
+        }
+      ]
+    },
+    "doubao2": {
+      "batch": "geo-panel-doubao2-20261015-102128-d6e56b0a",
+      "state": "paused",
+      "service_state": "inactive",
+      "captured": 119,
+      "processed": 119,
+      "tasks": {
+        "completed": 119,
+        "pending": 301
+      },
+      "delivery_errors": 0,
+      "updated_at": 1792038100.352838,
+      "verified_receipts": 119,
+      "send_clicks": 119,
+      "min_send_interval": 56.33199763298035,
+      "duplicate_native_requests": 0,
+      "failed_attempts": 0,
+      "final_reaudit_database_records": 119,
+      "first_click_beijing": "2026-10-15T10:21:53+08:00",
+      "last_click_beijing": "2026-10-15T12:21:05+08:00",
+      "send_span_seconds": 7152.695244312286,
+      "clicks_after_deadline": 0,
+      "queue_states_now": {
+        "completed": 119,
+        "pending": 301
+      },
+      "pause_operation_recorded": true,
+      "body_characters": 43553,
+      "source_entries": 1266,
+      "deadline_click_evidence": []
+    }
+  },
+  "verified_total": 235,
+  "all_records_reaudited_against_postgres": true,
+  "database_fields_compared": [
+    "question",
+    "answerText",
+    "items",
+    "citations",
+    "search_queries",
+    "native_result",
+    "batch_id",
+    "round"
+  ],
+  "deadline_pause": {
+    "at": 1792038120.6433938,
+    "results": {
+      "doubao1": "paused",
+      "doubao2": "paused"
+    }
+  },
+  "anomalies": [],
+  "container_start_unchanged": {
+    "/monitor-dashboard": false,
+    "/monitor-dashboard-api": true,
+    "/monitor-result-receiver": true,
+    "/monitor-doubao-receiver": true,
+    "/monitor-product-worker": true,
+    "/monitor-content-worker": true,
+    "/monitor-postgres": true,
+    "/monitor-redis": true,
+    "/doubao-hpe14-13-test": true,
+    "/doubao-hpe14-account2": true
+  },
+  "non_frontend_containers_unchanged": true,
+  "frontend_restart_note": "Frontend intentionally replaced for user-authorized dashboard and public-prefix integration; capture and analysis containers unchanged.",
+  "editorial_services_unchanged": true,
+  "historical_doubao": [
+    {
+      "batch": "geo-products-21x5-account1-20261014",
+      "captured": 105,
+      "processed": 105,
+      "unchanged_105": true
+    },
+    {
+      "batch": "geo-products-21x5-account2-relogin-20261013",
+      "captured": 105,
+      "processed": 105,
+      "unchanged_105": true
+    }
+  ],
+  "scope_note": "Two new native capture batches only; processed confirms capture ingestion, not downstream product AI completion. Emulators remain running; only these batches are paused.",
+  "deadline_service_started_beijing": "2026-10-15T12:21:23+08:00",
+  "deadline_service_exited_beijing": "2026-10-15T12:21:24+08:00",
+  "unrelated_baidu_status_at_final_check": {
+    "state": "needs_attention",
+    "captured": 84,
+    "processed": 84,
+    "unique_processed": 28,
+    "duplicates": 56,
+    "unavailable": 6,
+    "task_state": "failed_deferred",
+    "attempts": 2,
+    "confirmed_error": "百度 AI 卡片未完整呈现，已保存页面观测，不能用文心卡片代替",
+    "action": "Evidence retained; did not reset exhausted retry or resend during native-only acceptance."
+  }
+}

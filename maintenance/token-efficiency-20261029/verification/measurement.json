@@ -1,0 +1,11 @@
+{
+  "requests": 123,
+  "before_chars": 1350513,
+  "after_chars": 1342047,
+  "same_data": true,
+  "same_suffix": true,
+  "prefix_before_chars": 5186,
+  "prefix_after_chars": 489541,
+  "removed_format_chars": 8466,
+  "note": "Offline character counts, not billed tokens or measured provider cache savings. All source data and instructions retained; no paid calls."
+}

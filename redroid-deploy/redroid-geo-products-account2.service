@@ -1,0 +1,25 @@
+[Unit]
+Description=Doubao account2 21 questions five rounds with GEO delivery
+After=docker.service network-online.target
+Requires=docker.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/user/redroid-doubao
+Environment=DOUBAO_BATCH=geo-products-21x5-account2-relogin-20261013
+Environment=DOUBAO_CONTAINER=doubao-hpe14-account2
+Environment=DOUBAO_SERIAL=127.0.0.1:5558
+Environment=DOUBAO_ANSWER_TIMEOUT=900
+Environment=DOUBAO_SEND_INTERVAL=45
+ExecStartPre=/home/user/redroid-doubao/worker-venv/bin/python /home/user/redroid-doubao/runtime_preflight.py --container doubao-hpe14-account2
+ExecStart=/home/user/redroid-doubao/worker-venv/bin/python -u /home/user/redroid-doubao/geo-batch-code/geo_batch_bridge.py
+ExecStopPost=/home/user/redroid-doubao/worker-venv/bin/python /home/user/redroid-doubao/geo-batch-code/geo_batch_bridge.py --mark-stopped
+Restart=on-failure
+RestartPreventExitStatus=2
+RestartSec=30
+TimeoutStopSec=30
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

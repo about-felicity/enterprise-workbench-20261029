@@ -1,0 +1,108 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>DeepSeek · scrcpy 登录投屏</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#f3f7f5;color:#183b30;font:14px system-ui;padding:14px}main{max-width:520px;margin:auto}header{display:flex;align-items:center;justify-content:space-between;gap:12px}h1{font-size:18px;margin:0}p{line-height:1.6;color:#617b71;font-size:12px}button,input{font:inherit}button{border:1px solid #bed4ca;border-radius:8px;padding:8px 12px;color:#166b50;background:white;cursor:pointer}button:disabled{opacity:.45;cursor:default}#message{padding:9px 12px;margin:12px 0;border:1px solid #d6e5de;background:white;border-radius:9px;font-size:12px;line-height:1.5}#message.blocked{border-color:#e6b778;color:#9f5426;background:#fff6e9}.viewport{display:flex;justify-content:center;overflow:hidden;background:#e9efeb;border-radius:12px;border:1px solid #d3e0d8}#screen{display:block;width:auto;max-width:100%;height:min(680px,calc(100dvh - 255px));min-height:260px;aspect-ratio:9/16;object-fit:contain;background:white;touch-action:none;user-select:none;outline:none}form{display:flex;gap:8px;margin-top:12px}input{min-width:0;flex:1;padding:10px;border:1px solid #bed4ca;border-radius:8px;background:white}.tools{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-top:8px;font-size:12px}.tools button{padding:6px 10px}#finish{display:none;padding:28px 20px;background:white;border:1px solid #d3e0d8;border-radius:14px;text-align:center;margin-top:25px}a{color:#12755b}.hint{margin:8px 0} @media(max-width:400px){body{padding:10px}h1{font-size:16px}form{gap:5px}button{padding:8px}#screen{height:calc(100dvh - 270px)}}
+</style></head><body><main><header><h1 id="heading">DeepSeek · scrcpy 登录投屏</h1><button id="close" type="button">关闭</button></header><p class="hint">画面来自服务器模拟器的真实 scrcpy 视频流。请手动登录或完成平台验证；出现封禁、账号限制时不会判定成功。</p><div id="message" role="status">正在建立投屏连接…</div><section id="login"><div class="viewport"><img id="screen" width="720" height="1280" tabindex="0" alt="DeepSeek 官方App scrcpy实时投屏"></div><form id="textForm"><input id="textInput" aria-label="输入手机号、验证码或密码后点击发送" placeholder="手机号 / 验证码 / 密码" autocomplete="off" autocapitalize="off" spellcheck="false"><button id="send" type="submit">发送输入</button></form><div class="tools"><button type="button" id="backspace">退格</button><button type="button" id="back">返回</button><button type="button" id="reconnect">重连画面</button><label><input type="checkbox" id="mask">隐藏输入</label></div></section><section id="finish"><h1>正常登录已确认</h1><p>账号与对话界面已通过校验，投屏已关闭。原任务将自动继续；手动暂停的任务保持暂停。</p><a id="return" href="/">返回采集面板</a></section></main>
+<script>
+'use strict';
+const prefix=location.pathname.replace(/ui$/,''),model=location.pathname.includes('/deepseek2/')?'deepseek2':'deepseek';
+const testing=location.pathname.includes('/deepseek_test/');
+const canvasVideo=typeof createImageBitmap==='function'&&typeof ReadableStream==='function';
+const screen=(()=>{const original=document.getElementById('screen');if(!canvasVideo)return original;const canvas=document.createElement('canvas');for(const attribute of original.attributes)canvas.setAttribute(attribute.name,attribute.value);canvas.setAttribute('aria-label','DeepSeek scrcpy实时投屏');canvas.naturalWidth=0;original.replaceWith(canvas);return canvas})(),message=document.getElementById('message'),textInput=document.getElementById('textInput');
+let csrf='',flow='',finished=false,waiting=false,streamFlow='',sending=Promise.resolve(),pointer=false,lastMove=0;
+const key=()=>Array.from(crypto.getRandomValues(new Uint8Array(16))).map(v=>v.toString(16).padStart(2,'0')).join('');
+document.getElementById('heading').textContent=(model==='deepseek2'?'DeepSeek 2':'DeepSeek')+' · scrcpy 登录投屏';
+if(testing){
+ document.title='DeepSeek · 独立手动测试';
+ document.getElementById('heading').textContent='DeepSeek · 独立手动测试';
+ document.querySelector('.hint').textContent='独立测试模拟器，所有问题由你手动发送。不会进入每日采集、GEO统计或创作素材；登录后保持投屏，每次投屏最长一小时。';
+ textInput.placeholder='手动输入问题、手机号或验证码';
+ const open=document.createElement('button');open.textContent='打开 / 重开测试投屏';open.id='testOpen';
+ open.onclick=async()=>{open.disabled=true;try{const r=await fetch(prefix+'open',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':csrf,'X-Action-Id':key()},body:'{}'});if(!r.ok)throw Error('打开失败，请稍后重试');flow='';streamFlow='';message.textContent='正在启动测试投屏…'}catch(e){message.textContent=e.message}finally{open.disabled=false}};
+ document.getElementById('message').before(open);
+}
+const mount=location.pathname.split('/api/')[0];document.getElementById('return').href=mount+'/#capture/'+model;
+document.getElementById('close').onclick=()=>window.close();
+function finish(){if(finished)return;finished=true;waiting=false;stopVideo();screen.removeAttribute('src');document.getElementById('login').hidden=true;document.getElementById('finish').style.display='block';textInput.value='';message.textContent='正常登录与对话校验已通过，scrcpy投屏已关闭。';try{localStorage.setItem('geo.capture.login.detected',JSON.stringify({model,at:Date.now()}))}catch(e){}if(window.opener)window.opener.postMessage({type:'geo-login:detected',model},location.origin);window.close()}
+// input-queue start
+let inputEvents=[],inputBusy=false,inputTimer=null,inputPaused=false;
+function input(value){
+ if(finished||!csrf||!waiting||inputPaused)return;
+ const last=inputEvents[inputEvents.length-1];
+ if(value.type==='touch'&&value.action===2&&last?.type==='touch'&&last.action===2)inputEvents[inputEvents.length-1]=value;
+ else if(value.type==='text'&&last?.type==='text'&&last.text.length+value.text.length<=4096)last.text+=value.text;
+ else if(value.type==='scroll'&&last?.type==='scroll')last.delta=Math.max(-1000,Math.min(1000,last.delta+value.delta));
+ else inputEvents.push(value);
+ if(inputEvents.length>128){inputEvents=[];inputPaused=true;message.textContent='输入积压，请重连画面后继续；未发送的输入已清除。';return}
+ if(!inputBusy&&!inputTimer)inputTimer=setTimeout(flushInput,value.type==='text'?20:0);
+}
+async function flushInput(){
+ inputTimer=null;if(inputBusy||inputPaused||!inputEvents.length)return;
+ if(finished||!waiting){inputEvents=[];return}
+ let events=[],bytes=0;
+ while(inputEvents.length&&events.length<16){const size=new TextEncoder().encode(JSON.stringify(inputEvents[0])).length;if(events.length&&bytes+size>18000)break;events.push(inputEvents.shift());bytes+=size}
+ const currentFlow=flow;inputBusy=true;
+ try{
+  const value=events.length===1?events[0]:{type:'batch',events};
+  const r=await fetch(prefix+'input',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':csrf,'X-Action-Id':key()},body:JSON.stringify({...value,flow:currentFlow}),signal:AbortSignal.timeout(12000)});
+  if(!r.ok)throw Error('输入结果未确认，请重连画面后再操作；不会自动重复发送');
+  if(currentFlow!==flow)throw Error('投屏会话已变化，请重连画面后继续');
+ }catch(e){inputEvents=[];inputPaused=true;message.textContent=e.message}
+ finally{inputBusy=false;if(inputEvents.length&&!inputPaused)inputTimer=setTimeout(flushInput,0)}
+}
+// input-queue end
+let gesture=null,holdTimer=null;
+function point(e){const r=screen.getBoundingClientRect();return{x:Math.max(0,Math.min(719,(e.clientX-r.left)*720/r.width)),y:Math.max(0,Math.min(1279,(e.clientY-r.top)*1280/r.height))}}
+function startGesture(){if(!gesture||gesture.started)return;gesture.started=true;input({type:'touch',action:0,...gesture.start})}
+screen.addEventListener('pointerdown',e=>{if(!waiting||inputPaused)return;e.preventDefault();screen.focus();screen.setPointerCapture(e.pointerId);gesture={start:point(e),started:false};holdTimer=setTimeout(startGesture,70)});
+screen.addEventListener('pointermove',e=>{if(!gesture)return;e.preventDefault();const p=point(e);if(Math.hypot(p.x-gesture.start.x,p.y-gesture.start.y)<4&&!gesture.started)return;clearTimeout(holdTimer);startGesture();input({type:'touch',action:2,...p})});
+for(const name of ['pointerup','pointercancel'])screen.addEventListener(name,e=>{if(!gesture)return;clearTimeout(holdTimer);const p=point(e);if(gesture.started)input({type:'touch',action:1,...p});else if(name==='pointerup')input({type:'click',...p});gesture=null});
+
+screen.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='v')return;if(e.key.length===1&&!e.ctrlKey&&!e.metaKey&&!e.altKey){e.preventDefault();input({type:'text',text:e.key})}else if(['Enter','Tab','Backspace','Delete','Escape','ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(e.key)){e.preventDefault();input({type:'key',key:e.key})}});
+screen.addEventListener('paste',e=>{e.preventDefault();const text=e.clipboardData.getData('text/plain');if(text)input({type:'text',text})});
+screen.addEventListener('wheel',e=>{e.preventDefault();input({type:'scroll',delta:Math.max(-1000,Math.min(1000,e.deltaY))})},{passive:false});
+document.getElementById('textForm').onsubmit=e=>{e.preventDefault();const text=textInput.value;if(text){input({type:'text',text});textInput.value=''}};
+document.getElementById('mask').onchange=e=>textInput.type=e.target.checked?'password':'text';
+document.getElementById('backspace').onclick=()=>input({type:'key',key:'Backspace'});document.getElementById('back').onclick=()=>input({type:'key',key:'Escape'});
+document.getElementById('reconnect').onclick=()=>{inputPaused=false;inputEvents=[];clearTimeout(inputTimer);inputTimer=null;streamFlow='';connectStream()};
+// scrcpy-video start
+let videoConnection=null,latestJpeg=null,painting=false;
+function stopVideo(){if(videoConnection)videoConnection.abort();videoConnection=null;latestJpeg=null}
+function jpegParser(deliver){
+ let pending=new Uint8Array(0);
+ return chunk=>{
+  const merged=new Uint8Array(pending.length+chunk.length);merged.set(pending);merged.set(chunk,pending.length);pending=merged;
+  if(pending.length>4000000)throw Error('投屏帧过大，请重连');
+  for(;;){
+   let begin=-1,end=-1;
+   for(let i=0;i<pending.length-1;i++)if(pending[i]===255&&pending[i+1]===216){begin=i;break}
+   if(begin<0){pending=pending.slice(-1);return}
+   for(let i=begin+2;i<pending.length-1;i++)if(pending[i]===255&&pending[i+1]===217){end=i+2;break}
+   if(end<0){pending=pending.slice(begin);return}
+   deliver(pending.slice(begin,end));pending=pending.slice(end);
+  }
+ };
+}
+async function paintLatest(connection){
+ if(painting)return;painting=true;
+ try{
+  while(latestJpeg&&videoConnection===connection){
+   const bytes=latestJpeg;latestJpeg=null;
+   const bitmap=await createImageBitmap(new Blob([bytes],{type:'image/jpeg'}));
+   try{if(videoConnection!==connection)return;if(screen.width!==bitmap.width||screen.height!==bitmap.height){screen.width=bitmap.width;screen.height=bitmap.height}screen.getContext('2d',{alpha:false}).drawImage(bitmap,0,0);screen.naturalWidth=bitmap.width}finally{bitmap.close()}
+  }
+ }finally{painting=false;if(latestJpeg&&videoConnection&&!finished)paintLatest(videoConnection)}
+}
+async function startCanvasVideo(url){
+ stopVideo();const connection=new AbortController();videoConnection=connection;
+ try{
+  const response=await fetch(url,{cache:'no-store',signal:connection.signal});if(!response.ok||!response.body)throw Error('投屏连接未就绪');
+  const reader=response.body.getReader();
+  const parse=jpegParser(bytes=>{latestJpeg=bytes;paintLatest(connection).catch(()=>{message.textContent='画面解码失败，请重连画面'})});
+  try{while(videoConnection===connection){const {done,value}=await reader.read();if(done)throw Error('投屏连接已中断');parse(value)}}finally{reader.cancel().catch(()=>{})}
+ }catch(e){if(connection.signal.aborted||videoConnection!==connection)return;streamFlow='';if(waiting&&!finished){message.textContent='投屏连接中断，正在重连画面…';setTimeout(connectStream,1500)}}
+}
+// scrcpy-video end
+
+function connectStream(){if(!flow||!waiting||streamFlow===flow)return;streamFlow=flow;const url=prefix+'stream?flow='+flow+'&t='+Date.now();if(canvasVideo)startCanvasVideo(url);else screen.src=url}
+async function refresh(){if(finished)return;try{const r=await fetch(prefix+'state',{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error('登录连接已过期，请回面板重新打开');const s=await r.json();if(flow&&flow!==s.id&&!testing){waiting=false;stopVideo();screen.removeAttribute('src');throw Error('登录流程已变化，请回面板重新打开')}if(flow&&flow!==s.id){inputEvents=[];inputPaused=false}flow=s.id||'';csrf=s.csrf||csrf;waiting=['waiting_login','risk_blocked','verification_required'].includes(s.status);message.textContent=testing&&['closed','failed'].includes(s.status)?'点击上方按钮打开测试投屏；账号数据会保留。':testing&&s.status==='waiting_login'?'手动测试投屏已连接；登录后不会自动关闭。':s.message||'正在建立scrcpy投屏…';message.className=['risk_blocked','verification_required'].includes(s.status)?'blocked':'';document.getElementById('send').disabled=!waiting;textInput.disabled=!waiting;if(s.status==='ready'&&!testing){finish();return}if(s.status==='failed'){waiting=false;stopVideo();screen.removeAttribute('src');return}if(waiting)connectStream()}catch(e){if(!message.classList.contains('blocked'))message.textContent=e.name==='TimeoutError'||e.name==='TypeError'?'状态更新暂时延迟，画面和输入保持原状态；不会重复发送输入':e.message}setTimeout(refresh,1000)}
+refresh();
+</script></body></html>

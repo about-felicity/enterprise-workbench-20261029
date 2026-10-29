@@ -1,0 +1,53 @@
+from __future__ import annotations
+
+import os
+from dataclasses import dataclass, replace
+
+
+@dataclass(frozen=True)
+class SiteConfig:
+    id: str
+    name: str
+    home_url: str
+    port: int
+    internal_hosts: tuple[str, ...]
+    input_selectors: tuple[str, ...]
+    answer_selectors: tuple[str, ...]
+    login_markers: tuple[str, ...] = ()
+
+
+COMMON_INPUTS = (
+    "textarea:not([disabled])",
+    "[contenteditable='true'][role='textbox']",
+    "[contenteditable='true']",
+    "input[type='text']:not([disabled])",
+)
+
+SITES = {
+    "deepseek": SiteConfig(
+        "deepseek",
+        "DeepSeek",
+        "https://chat.deepseek.com/",
+        9314,
+        ("deepseek.com",),
+        COMMON_INPUTS,
+        (
+            ".ds-markdown",
+            "[class*='ds-markdown']",
+            "main [class*='markdown']",
+            "[class*='message'] [class*='markdown']",
+        ),
+        ("登录", "Sign in", "Log in"),
+    ),
+}
+
+
+def site_config(model: str) -> SiteConfig:
+    try:
+        site = SITES[str(model).strip().casefold()]
+        port = int(os.environ.get("GEO_DEEPSEEK_PORT", site.port))
+        if not 1024 <= port <= 65535:
+            raise ValueError("GEO_DEEPSEEK_PORT must be between 1024 and 65535")
+        return replace(site, port=port)
+    except KeyError as exc:
+        raise ValueError(f"不支持的网页模型：{model}") from exc

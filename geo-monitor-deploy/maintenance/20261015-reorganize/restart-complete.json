@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-15T14:05:05+08:00",
+  "containers": [
+    "monitor-postgres",
+    "monitor-redis",
+    "monitor-doubao-receiver",
+    "monitor-result-receiver",
+    "monitor-dashboard-api",
+    "monitor-product-worker",
+    "monitor-content-worker",
+    "monitor-dashboard",
+    "doubao-hpe14-13-test",
+    "doubao-hpe14-account2"
+  ],
+  "services": [
+    "geo-editorial-scheduler.service",
+    "geo-editorial-api-worker.service",
+    "geo-editorial-coordinator.service",
+    "geo-editorial-session-watch.service",
+    "geo-monitor-status.service",
+    "redroid-doubao-native-log.service",
+    "monitor-live-display.service",
+    "monitor-vps2-tunnel.service"
+  ],
+  "paused_jobs_not_resumed": true,
+  "deepseek_waits_for_user_login": true,
+  "startup_check_recovered_without_repeating_completed_restart": true
+}

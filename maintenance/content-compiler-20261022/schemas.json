@@ -1,0 +1,302 @@
+{
+  "Evidence": {
+    "type": "object",
+    "required": [
+      "id",
+      "source_id",
+      "text",
+      "subjects",
+      "statement_type",
+      "verification",
+      "dimensions",
+      "source_kind",
+      "source_refs"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "source_id": {
+        "type": "string"
+      },
+      "text": {
+        "type": "string"
+      },
+      "subjects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "statement_type": {
+        "enum": [
+          "product_fact",
+          "comparative_fact",
+          "general_advice",
+          "inference",
+          "opinion",
+          "transition"
+        ]
+      },
+      "verification": {
+        "type": "string"
+      },
+      "dimensions": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "source_kind": {
+        "enum": [
+          "supplier",
+          "retrieved_source"
+        ]
+      },
+      "source_refs": {
+        "type": "array"
+      }
+    }
+  },
+  "Claim": {
+    "type": "object",
+    "required": [
+      "id",
+      "text",
+      "statement_type",
+      "evidence_ids",
+      "source_ids",
+      "subjects",
+      "allowed",
+      "reasoning"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "text": {
+        "type": "string"
+      },
+      "statement_type": {
+        "type": "string"
+      },
+      "allowed": {
+        "enum": [
+          true
+        ]
+      },
+      "evidence_ids": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string"
+        }
+      },
+      "source_ids": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string"
+        }
+      },
+      "subjects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "reasoning": {
+        "type": "object",
+        "required": [
+          "operation",
+          "premises",
+          "scope"
+        ]
+      }
+    }
+  },
+  "Section": {
+    "type": "object",
+    "required": [
+      "id",
+      "topic",
+      "role",
+      "claim_ids",
+      "evidence_ids",
+      "reasoning",
+      "depends_on_claims",
+      "reads_previous_section"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "topic": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string"
+      },
+      "claim_ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "evidence_ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "reasoning": {
+        "type": "object",
+        "required": [
+          "premises",
+          "operation",
+          "conclusion_scope"
+        ]
+      },
+      "depends_on_claims": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "reads_previous_section": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  },
+  "Issue": {
+    "type": "object",
+    "required": [
+      "issue_id",
+      "type",
+      "severity",
+      "text",
+      "paragraph_ids",
+      "reason",
+      "origin",
+      "repair_scope",
+      "affected_sections"
+    ],
+    "properties": {
+      "issue_id": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "severity": {
+        "enum": [
+          "major",
+          "minor"
+        ]
+      },
+      "text": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "paragraph_ids": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string"
+        }
+      },
+      "reason": {
+        "type": "string"
+      },
+      "origin": {
+        "enum": [
+          "deterministic",
+          "fact_review",
+          "logic_review"
+        ]
+      },
+      "repair_scope": {
+        "enum": [
+          "sentence",
+          "paragraph",
+          "section",
+          "multi-section",
+          "outline",
+          "replan"
+        ]
+      },
+      "affected_sections": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "Repair": {
+    "type": "object",
+    "required": [
+      "version",
+      "draft_sha256",
+      "evidence_sha256",
+      "action",
+      "editable_ids",
+      "issues",
+      "unresolved_review",
+      "attempts",
+      "max_repairs",
+      "review_verdict_overridden"
+    ],
+    "properties": {
+      "version": {
+        "type": "string"
+      },
+      "draft_sha256": {
+        "type": "string"
+      },
+      "evidence_sha256": {
+        "type": "string"
+      },
+      "action": {
+        "enum": [
+          "PATCH",
+          "REWRITE",
+          "REPLAN",
+          "NEED_MORE_EVIDENCE",
+          "REVIEW_DISPUTED",
+          "REPAIR_EXHAUSTED"
+        ]
+      },
+      "editable_ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "issues": {
+        "type": "array"
+      },
+      "unresolved_review": {
+        "type": "array"
+      },
+      "attempts": {
+        "type": "integer"
+      },
+      "max_repairs": {
+        "enum": [
+          2
+        ]
+      },
+      "review_verdict_overridden": {
+        "enum": [
+          false
+        ]
+      }
+    }
+  }
+}

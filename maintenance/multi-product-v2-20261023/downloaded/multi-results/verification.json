@@ -1,0 +1,137 @@
+[
+  {
+    "key": "conditioner",
+    "original_word_preserved": true,
+    "raw_chars": 3635,
+    "material_cache_key": "c8389b17c641c4d4cbbef92d82cad339e26786ce089b9dc6f9ef9ac0b01f6d1e",
+    "skeleton_cache_key": "fd10c06a84b618fd099e62c0b80d4fbf3ebbcc5005791b844bd626a83dc98b2a",
+    "cache_reuse_model_calls": 0,
+    "approval_recorded": false,
+    "captures": [
+      {
+        "model": "baidu_ai",
+        "question": "推荐一款适合烫染后干枯毛躁的护发素",
+        "body_chars": 799,
+        "source_count": 4,
+        "task_id": "8b20b1a89ca4fe5025b2c1bf44232505daacb08745ba40368780ff608aeeb3d0",
+        "captured_at": "2026-10-23T18:13:38+08:00"
+      },
+      {
+        "model": "baidu_ai",
+        "question": "细软发用护发素容易塌，怎么选护发素",
+        "body_chars": 820,
+        "source_count": 4,
+        "task_id": "edaeebf004736b83e026402d1e22fe51f19deca45528a9daa0be8b3c7fc232f8",
+        "captured_at": "2026-10-23T18:22:16+08:00"
+      },
+      {
+        "model": "wenxin_card",
+        "question": "推荐一款适合烫染后干枯毛躁的护发素",
+        "body_chars": 445,
+        "source_count": 35,
+        "task_id": "032806488ef20c3d86d6e0aa2da772a6d4dd174afec4b758b828beb2dfea7a11",
+        "captured_at": "2026-10-23T18:14:57+08:00"
+      },
+      {
+        "model": "wenxin_card",
+        "question": "细软发用护发素容易塌，怎么选护发素",
+        "body_chars": 737,
+        "source_count": 30,
+        "task_id": "a7faf08aacabac7aeae4cb3a70d2ca8532b9aba163b305a05f1350e1c800a5fb",
+        "captured_at": "2026-10-23T18:23:36+08:00"
+      }
+    ],
+    "expected_captures": 4,
+    "capture_complete": true
+  },
+  {
+    "key": "essence",
+    "original_word_preserved": true,
+    "raw_chars": 2851,
+    "material_cache_key": "f518c1e6c553920116501574366a7d20adfac3549dec95bae85075636e2273aa",
+    "skeleton_cache_key": "622ceb2a1233e4322a69eeee8a40aa58572b64634024d0d2f866eff719bcf0e3",
+    "cache_reuse_model_calls": 0,
+    "approval_recorded": false,
+    "captures": [
+      {
+        "model": "baidu_ai",
+        "question": "推荐一款适合皮肤干燥紧绷的精粹水",
+        "body_chars": 760,
+        "source_count": 5,
+        "task_id": "8b20b1a89ca4fe5025b2c1bf44232505daacb08745ba40368780ff608aeeb3d0",
+        "captured_at": "2026-10-23T18:34:25+08:00"
+      },
+      {
+        "model": "baidu_ai",
+        "question": "精粹水和普通爽肤水有什么区别，怎么选",
+        "body_chars": 621,
+        "source_count": 7,
+        "task_id": "edaeebf004736b83e026402d1e22fe51f19deca45528a9daa0be8b3c7fc232f8",
+        "captured_at": "2026-10-23T18:32:58+08:00"
+      },
+      {
+        "model": "wenxin_card",
+        "question": "推荐一款适合皮肤干燥紧绷的精粹水",
+        "body_chars": 384,
+        "source_count": 35,
+        "task_id": "032806488ef20c3d86d6e0aa2da772a6d4dd174afec4b758b828beb2dfea7a11",
+        "captured_at": "2026-10-23T18:17:56+08:00"
+      },
+      {
+        "model": "wenxin_card",
+        "question": "精粹水和普通爽肤水有什么区别，怎么选",
+        "body_chars": 736,
+        "source_count": 32,
+        "task_id": "a7faf08aacabac7aeae4cb3a70d2ca8532b9aba163b305a05f1350e1c800a5fb",
+        "captured_at": "2026-10-23T18:28:32+08:00"
+      }
+    ],
+    "expected_captures": 4,
+    "capture_complete": true
+  },
+  {
+    "key": "cream",
+    "original_word_preserved": true,
+    "raw_chars": 4781,
+    "material_cache_key": "19c6a0d1adaffe95231d2865edfde8d54b354118db6107c27ab6b24ead8aa142",
+    "skeleton_cache_key": "6ddadc62da4eaaad5b46e31ce624c2d92e3bd01392900c2437bb14c6b8d512fd",
+    "cache_reuse_model_calls": 0,
+    "approval_recorded": false,
+    "captures": [
+      {
+        "model": "baidu_ai",
+        "question": "敏感肌想改善暗沉，有什么美白面霜推荐",
+        "body_chars": 657,
+        "source_count": 4,
+        "task_id": "8b20b1a89ca4fe5025b2c1bf44232505daacb08745ba40368780ff608aeeb3d0",
+        "captured_at": "2026-10-23T18:19:22+08:00"
+      },
+      {
+        "model": "baidu_ai",
+        "question": "选美白面霜应该看哪些成分和功效数据",
+        "body_chars": 1030,
+        "source_count": 5,
+        "task_id": "edaeebf004736b83e026402d1e22fe51f19deca45528a9daa0be8b3c7fc232f8",
+        "captured_at": "2026-10-23T18:30:04+08:00"
+      },
+      {
+        "model": "wenxin_card",
+        "question": "敏感肌想改善暗沉，有什么美白面霜推荐",
+        "body_chars": 965,
+        "source_count": 37,
+        "task_id": "032806488ef20c3d86d6e0aa2da772a6d4dd174afec4b758b828beb2dfea7a11",
+        "captured_at": "2026-10-23T18:20:48+08:00"
+      },
+      {
+        "model": "wenxin_card",
+        "question": "选美白面霜应该看哪些成分和功效数据",
+        "body_chars": 918,
+        "source_count": 34,
+        "task_id": "a7faf08aacabac7aeae4cb3a70d2ca8532b9aba163b305a05f1350e1c800a5fb",
+        "captured_at": "2026-10-23T18:31:26+08:00"
+      }
+    ],
+    "expected_captures": 4,
+    "capture_complete": true
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "source": "redroid-deploy/question_only_adapters.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/question_only_adapters.py",
+      "before": "638f2e5bbc08473e38691b09211ff9f58fd4f04ea33bf232ff31f69e080a269c",
+      "sha256": "3b3e344c088e9c243312116c3e29dc851e714cacc9edf827ac85215b8104a462"
+    },
+    {
+      "source": "redroid-deploy/question_only_worker.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/question_only_worker.py",
+      "before": "ffaa12abbf8a7835b9dbe811a277db3cd7f9b2eb2ca8512bcd08e4b5f60e7695",
+      "sha256": "2e0c5422f61129473e7c03559764566329f6ef0931adc3c36e3f4c4984af368d"
+    },
+    {
+      "source": "yuanbao-deploy/history_refresh.py",
+      "server": "/home/user/redroid-yuanbao/history_refresh.py",
+      "before": "103103912a82dd564a10fc5743344ef1e54b11a109a626fa9b19f0b05fae3a03",
+      "sha256": "d149469c32992e84e495c86c5093a76fdd3eb86ed6e8836e5d863b191bd3a4e6"
+    },
+    {
+      "source": "yuanbao-deploy/initial_binding.py",
+      "server": "/home/user/redroid-yuanbao/initial_binding.py",
+      "before": null,
+      "sha256": "0cf1d9bd2bef518a694a19cb7064006458a4de0a1ad988043b6f2402b5b90550"
+    },
+    {
+      "source": "yuanbao-deploy/tests/test_initial_binding.py",
+      "server": "/home/user/redroid-yuanbao/tests/test_initial_binding.py",
+      "before": null,
+      "sha256": "233e54a51ffb2877f3dc3d15100f03291418c350932614f988ae4b866731f16f"
+    },
+    {
+      "source": "yuanbao-deploy/native_client.py",
+      "server": "/home/user/redroid-yuanbao/native_client.py",
+      "sha256": "98614925264d4ef31d347ecf55b749f51b04a32167130cc2421da32b289f12de"
+    },
+    {
+      "source": "yuanbao-deploy/tests/test_history_refresh.py",
+      "server": "/home/user/redroid-yuanbao/tests/test_history_refresh.py",
+      "sha256": "3ff4e81099af1f75b6be54c8a4b588d088e2968693c10314041510f8b1812df4"
+    },
+    {
+      "source": "yuanbao-deploy/tests/test_native_client_recovery.py",
+      "server": "/home/user/redroid-yuanbao/tests/test_native_client_recovery.py",
+      "sha256": "fb2e2de1d367914c4d62b49de452d7fd3a2f9c59d5c1bc428ef710a07a851e14"
+    }
+  ]
+}

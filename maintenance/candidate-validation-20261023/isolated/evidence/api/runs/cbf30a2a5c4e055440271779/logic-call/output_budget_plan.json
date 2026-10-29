@@ -1,0 +1,7 @@
+{
+  "remaining_cny": 1.27053892,
+  "input_byte_bound": 94737,
+  "max_tokens": 2400,
+  "minimum_complete_audit_tokens": 1600,
+  "ledger_reservation_still_required": true
+}

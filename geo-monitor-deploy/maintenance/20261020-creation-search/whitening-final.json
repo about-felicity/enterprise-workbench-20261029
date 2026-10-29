@@ -1,0 +1,72 @@
+{
+  "checked_at": 1792476715.8600771,
+  "task": {
+    "daily_task_id": "plan-6334cde812bd49549df6efd87a51e3b3--2026-10-20",
+    "name": "焕颜计美白面霜全流程测试",
+    "frequency": "once",
+    "task_type": "collect_write",
+    "enabled": true,
+    "article_budget_cny": 0.35,
+    "task_budget_cny": 2.0,
+    "plan_id": "plan-6334cde812bd49549df6efd87a51e3b3",
+    "date": "2026-10-20",
+    "product": {
+      "name": "焕颜计小白罐美白精华霜",
+      "id": "2142aa128bac9a0ba8ffb1f0ba15826e1d9898ef56d55d575cfcc71babbee454"
+    },
+    "status": "complete",
+    "capture_time": "13:51",
+    "writing_time": "13:51",
+    "questions": 2,
+    "target_per_model": 2,
+    "progress": [
+      {
+        "id": "baidu_ai",
+        "name": "百度卡片",
+        "completed": 2,
+        "counts": {
+          "completed": 2
+        },
+        "blocked": {}
+      },
+      {
+        "id": "wenxin_card",
+        "name": "文心卡片",
+        "completed": 2,
+        "counts": {
+          "completed": 2
+        },
+        "blocked": {}
+      }
+    ],
+    "writing_jobs": 2,
+    "writing_complete": 2,
+    "articles": 2,
+    "stages": {
+      "research:accepted": 2,
+      "taxonomy:accepted": 2,
+      "review:accepted": 2,
+      "writer:accepted": 2
+    },
+    "error": "",
+    "jobs": {
+      "美白淡斑面霜有哪些值得推荐的？": "creation-1792475798-7d2fc250",
+      "皮肤暗沉、肤色不均，应该怎么选美白面霜？": "creation-1792475798-478ca528"
+    }
+  },
+  "cost_cny": 0.26587792,
+  "unsettled_calls": 0,
+  "geo_ingest_rows_for_creation_batches": 0,
+  "word_visual_qa": {
+    "method": "Native Microsoft Word PDF export after packaged renderer reported missing LibreOffice, followed by Poppler PNG rendering and all-page inspection",
+    "pages": [
+      6,
+      5
+    ],
+    "files_unchanged": true
+  },
+  "source_mapping": {
+    "matched": 133,
+    "files": 133
+  }
+}

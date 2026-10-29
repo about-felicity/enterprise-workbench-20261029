@@ -1,0 +1,173 @@
+{
+  "verified_at": 1791964340.3481858,
+  "batch": "geo-products-21x5-account2-relogin-20261013",
+  "service": "active",
+  "consecutive_geo_processed": 16,
+  "verified_tasks": [
+    {
+      "ordinal": 1,
+      "body_length": 342,
+      "source_count": 5,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    },
+    {
+      "ordinal": 2,
+      "body_length": 325,
+      "source_count": 5,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    },
+    {
+      "ordinal": 3,
+      "body_length": 267,
+      "source_count": 6,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    },
+    {
+      "ordinal": 4,
+      "body_length": 319,
+      "source_count": 12,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    },
+    {
+      "ordinal": 5,
+      "body_length": 412,
+      "source_count": 5,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    },
+    {
+      "ordinal": 6,
+      "body_length": 339,
+      "source_count": 11,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    },
+    {
+      "ordinal": 7,
+      "body_length": 277,
+      "source_count": 12,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    },
+    {
+      "ordinal": 8,
+      "body_length": 314,
+      "source_count": 12,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    },
+    {
+      "ordinal": 9,
+      "body_length": 366,
+      "source_count": 11,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    },
+    {
+      "ordinal": 10,
+      "body_length": 439,
+      "source_count": 11,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    },
+    {
+      "ordinal": 11,
+      "body_length": 323,
+      "source_count": 11,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    },
+    {
+      "ordinal": 12,
+      "body_length": 287,
+      "source_count": 12,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    },
+    {
+      "ordinal": 13,
+      "body_length": 398,
+      "source_count": 10,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    },
+    {
+      "ordinal": 14,
+      "body_length": 398,
+      "source_count": 6,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    },
+    {
+      "ordinal": 15,
+      "body_length": 341,
+      "source_count": 11,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    },
+    {
+      "ordinal": 16,
+      "body_length": 330,
+      "source_count": 11,
+      "geo_content_exact": true,
+      "geo_processed": true,
+      "native_requests": 1,
+      "server_confirmed": true
+    }
+  ],
+  "minimum_send_interval": 36.94413185119629,
+  "first_account_captured": 105,
+  "first_account_geo_processed": 105,
+  "diagnostic_listener_stopped": true,
+  "health": {
+    "time": 1791964335.7527778,
+    "heartbeat_expires_at": 1791964380.7527785,
+    "bridge_pid": 37228,
+    "batch": "geo-products-21x5-account2-relogin-20261013",
+    "planned": 105,
+    "captured": 16,
+    "geo_processed": 16,
+    "tasks": {
+      "completed": 16,
+      "pending": 88,
+      "prepared": 1
+    },
+    "worker_exit": null,
+    "delivery_errors": [],
+    "status": "running"
+  }
+}

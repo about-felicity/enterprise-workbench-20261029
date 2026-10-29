@@ -1,0 +1,92 @@
+[
+  {
+    "method": "GET",
+    "url": "https://api.deepseek.com/user/balance",
+    "kind": "balance",
+    "started": 1792736172.821658,
+    "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/000",
+    "status": 200,
+    "finished": 1792736173.1608133
+  },
+  {
+    "method": "POST",
+    "url": "https://api.deepseek.com/chat/completions",
+    "kind": "completion",
+    "started": 1792736173.2507038,
+    "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-000/primary",
+    "status": 200,
+    "finished": 1792736175.2329447
+  },
+  {
+    "method": "GET",
+    "url": "https://api.deepseek.com/user/balance",
+    "kind": "balance",
+    "started": 1792736175.3313763,
+    "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/002",
+    "status": 200,
+    "finished": 1792736175.4575224
+  },
+  {
+    "method": "POST",
+    "url": "https://api.deepseek.com/chat/completions",
+    "kind": "completion",
+    "started": 1792736175.6263855,
+    "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-001/primary",
+    "status": 200,
+    "finished": 1792736177.8634367
+  },
+  {
+    "method": "GET",
+    "url": "https://api.deepseek.com/user/balance",
+    "kind": "balance",
+    "started": 1792736177.8931487,
+    "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/004",
+    "status": 200,
+    "finished": 1792736177.9578247
+  },
+  {
+    "method": "POST",
+    "url": "https://api.deepseek.com/chat/completions",
+    "kind": "completion",
+    "started": 1792736178.0916348,
+    "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-002/primary",
+    "status": 200,
+    "finished": 1792736180.0126204
+  },
+  {
+    "method": "GET",
+    "url": "https://api.deepseek.com/user/balance",
+    "kind": "balance",
+    "started": 1792736180.0957956,
+    "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/006",
+    "status": 200,
+    "finished": 1792736180.1989462
+  },
+  {
+    "method": "POST",
+    "url": "https://api.deepseek.com/chat/completions",
+    "kind": "completion",
+    "started": 1792736180.321857,
+    "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/primary",
+    "status": 200,
+    "finished": 1792736182.2087286
+  },
+  {
+    "method": "GET",
+    "url": "https://api.deepseek.com/user/balance",
+    "kind": "balance",
+    "started": 1792736182.2946806,
+    "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/008",
+    "status": 200,
+    "finished": 1792736182.3744583
+  },
+  {
+    "method": "POST",
+    "url": "https://api.deepseek.com/chat/completions",
+    "kind": "completion",
+    "started": 1792736182.4477527,
+    "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062",
+    "status": 200,
+    "finished": 1792736184.8332417
+  }
+]

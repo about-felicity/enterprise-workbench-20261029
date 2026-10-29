@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "current_state": "running",
+  "daily_state": "running",
+  "processed": 32,
+  "planned": 63,
+  "pending_delivery": 0,
+  "rounds": 3,
+  "interval": 600,
+  "manual_login": "ready",
+  "batch": "geo-panel-deepseek-20261016-094039-dc64b7e1"
+}

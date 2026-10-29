@@ -1,0 +1,99 @@
+{
+  "at": 1792078866.3679192,
+  "test_id": "question-only-soak12h-rowidfix-1792072084",
+  "test_deadline": 1792115284.674704,
+  "batch": "geo-panel-yuanbao-20261015-181821-d56b0d20",
+  "task_id": "2d668639-8b1c-5a6b-955b-566220026fea",
+  "ordinal": 322,
+  "question": "推荐一款祛痘精华液",
+  "state": "needs_attention",
+  "error": "Original native request unresolved after 900s (absent); automatic resend forbidden",
+  "agent_send_clicks": 1,
+  "automatic_resend_performed": false,
+  "server_human_messages": 2,
+  "server_answer_messages": 2,
+  "same_original_client_request_id": true,
+  "same_original_question": true,
+  "full_history_two_stable_reads": true,
+  "messages": [
+    {
+      "store": 0,
+      "message_id": "0RGfLig07CS_1",
+      "index": 1,
+      "speaker": "human",
+      "created_at": 1792077297,
+      "question_equal": true,
+      "raw_sha256": "8d21aacdb463859a1344bcc605b70afcedbb5911b89b3d667379302ab24971cd",
+      "text_lengths": [
+        9
+      ],
+      "source_count": 0,
+      "original_client_request_equal": true
+    },
+    {
+      "store": 0,
+      "message_id": "0RGfLig07CS_2",
+      "index": 2,
+      "speaker": "ai",
+      "created_at": 1792077323,
+      "question_equal": null,
+      "raw_sha256": "6548e34e463a6768e11c490e396beecec099562d16cc37ecb1378798c1582706",
+      "text_lengths": [
+        1412
+      ],
+      "source_count": 19,
+      "original_client_request_equal": true
+    },
+    {
+      "store": 0,
+      "message_id": "0RGfLig07CS_3",
+      "index": 3,
+      "speaker": "human",
+      "created_at": 1792077323,
+      "question_equal": true,
+      "raw_sha256": "469c3f084ec701b4132434b80782d9876a470185e293432709caec13ef17c8c0",
+      "text_lengths": [
+        9
+      ],
+      "source_count": 0,
+      "original_client_request_equal": true
+    },
+    {
+      "store": 0,
+      "message_id": "0RGfLig07CS_4",
+      "index": 4,
+      "speaker": "ai",
+      "created_at": 1792077351,
+      "question_equal": null,
+      "raw_sha256": "0c0ddb6e1d741128e2385c997756f5a56f23c84cddfb4c12d16e017be8ed35d0",
+      "text_lengths": [
+        1699
+      ],
+      "source_count": 48,
+      "original_client_request_equal": true
+    }
+  ],
+  "task_delivery_files": {
+    "outbox": false,
+    "receipts": false,
+    "nontext-outbox": false,
+    "nontext-receipts": false
+  },
+  "task_has_result": false,
+  "prior_text_verified_receipts": 320,
+  "prior_nontext_audit": {
+    "observations": 1,
+    "processed": 1,
+    "database_fidelity": true,
+    "scope": "Raw audit events; excluded from full-text counts and product statistics"
+  },
+  "production_code_changed": false,
+  "worker_or_android_restarted": false,
+  "recovery_status": "blocked_first_turn_and_provider_duplicate_history",
+  "limits": [
+    "One collector send click does not establish one server generation. Both observed server turns are reported.",
+    "Provider/App internal duplicate cause is unproven; do not claim it is a reused old conversation or waive first-user-turn gate.",
+    "Original first answer is preserved in SQLite; current immutable reader exposes latest second pair. No unsupported parser substitution or latest-answer ingestion.",
+    "No cache clear, login, queue reset, duplicate model request, new batch, or new paid job. Other four capture channels and creation continue."
+  ]
+}

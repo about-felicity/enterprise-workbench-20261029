@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-10-23T16:16:27.065466+08:00",
+  "service_active_states": {
+    "geo-content-api.service": "active",
+    "geo-content-worker.service": "active",
+    "geo-creation-studio.service": "active"
+  },
+  "shared_article_cap_cny": 0.35,
+  "daily_cap_cny": 10,
+  "job_limits": {
+    "article_budget_cny": 0.35,
+    "task_budget_cny": 5.25
+  },
+  "rank01_used_cny": 0.7881206000000001,
+  "scope_used_cny": 4.759712719999998,
+  "rank01_available_cny": 0,
+  "all_unsettled_reservations": {
+    "count": 3,
+    "reserved_cny": 0.21578999999999998
+  },
+  "original_job_control": {
+    "paused": false,
+    "revision": 24,
+    "resumed_epoch": 1792656726.9786563
+  },
+  "new_deepseek_calls": 0,
+  "balance_queried": false
+}

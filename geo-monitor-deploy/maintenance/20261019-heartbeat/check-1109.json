@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-19T11:09:30+08:00",
+  "deepseek_browser": {
+    "auth": "ready",
+    "captured": 2,
+    "processed": 2,
+    "outbox_receipts_equal": true,
+    "next_send": "2026-10-19T11:33:35+08:00",
+    "inflight": "preparing",
+    "services": "active"
+  },
+  "daily_pg": {
+    "doubao1": 106,
+    "doubao2": 12,
+    "baidu_ai": 62,
+    "yuanbao": 134,
+    "deepseek2": 2
+  },
+  "doubao1_batch": {
+    "planned": 105,
+    "processed": 105,
+    "state": "complete",
+    "pending_delivery": 0
+  },
+  "wenxin_today": "waiting_for_baidu",
+  "doubao2": "same unresolved ordinal13; no new alert; not resent",
+  "changes": "read-only inspection; no settings or tasks changed",
+  "notification": "doubao1 newly completed; existing unresolved issue not repeated"
+}

@@ -1,0 +1,16 @@
+[Unit]
+Description=Yuanbao WeChat QR and system WebView compatibility
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=simple
+ExecStart=/home/user/redroid-doubao/worker-venv/bin/python -B /home/user/redroid-yuanbao/tools/wechat_qr_compat.py
+Restart=on-failure
+RestartSec=15
+UMask=0077
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

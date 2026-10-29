@@ -1,0 +1,7 @@
+{
+  "at": "2026-10-15T14:00:02+08:00",
+  "before": "MainPID=997964\nExecMainStartTimestampMonotonic=6581971843469\nId=nginx.service\nActiveState=active\n\nMainPID=3123828\nExecMainStartTimestampMonotonic=4833672251656\nId=geo-monitor-auth.service\nActiveState=active\n\nMainPID=424102\nExecMainStartTimestampMonotonic=6054883427066\nId=monitor-offline-fallback.service\nActiveState=active",
+  "after": "MainPID=1305961\nExecMainStartTimestampMonotonic=6831056927533\nId=nginx.service\nActiveState=active\n\nMainPID=1305938\nExecMainStartTimestampMonotonic=6831048410935\nId=geo-monitor-auth.service\nActiveState=active\n\nMainPID=1305944\nExecMainStartTimestampMonotonic=6831048469204\nId=monitor-offline-fallback.service\nActiveState=active",
+  "nginx_configuration_validated": true,
+  "credentials_and_session_secret_preserved": true
+}

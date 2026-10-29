@@ -1,0 +1,1940 @@
+{
+  "day": "2026-10-16",
+  "started": 1792136027.2980933,
+  "finished": 1792136042.078306,
+  "event_rows_scanned": 989,
+  "today_rows": 989,
+  "models": {
+    "doubao1": {
+      "success_rows": 449,
+      "configured_questions": 21,
+      "rounds": 10,
+      "interval": 45,
+      "coverage": [
+        {
+          "question": "推荐一款护发精油",
+          "actual": 22,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款护发素",
+          "actual": 22,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款控油蓬松洗发水",
+          "actual": 22,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款二硫化硒洗发水",
+          "actual": 22,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款沐浴精油",
+          "actual": 21,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款眉毛增长液",
+          "actual": 21,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款祛痘精华液",
+          "actual": 21,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款美白面霜",
+          "actual": 21,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款造型喷雾",
+          "actual": 21,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款染发剂",
+          "actual": 21,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款睫毛增长液",
+          "actual": 21,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款防脱洗发水",
+          "actual": 21,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款防脱精华液",
+          "actual": 21,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款面膜",
+          "actual": 21,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款眼霜",
+          "actual": 21,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款卸妆油",
+          "actual": 21,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款爽肤水",
+          "actual": 21,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款洗面奶",
+          "actual": 22,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款身体乳",
+          "actual": 22,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款护手霜",
+          "actual": 22,
+          "target": 10,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款防晒霜",
+          "actual": 22,
+          "target": 10,
+          "missing": 0
+        }
+      ],
+      "unexpected_questions": {},
+      "body_only": 0,
+      "repeated_body_observations": 0,
+      "distinct_question_bodies": 449,
+      "product_review": {
+        "ai_verified": 447,
+        "ai_pending": 2
+      },
+      "duplicate_native_identities": [],
+      "panel_count": 449,
+      "panel_count_matches": true,
+      "runtime": {
+        "state": "paused",
+        "service_state": "failed",
+        "batch": "geo-panel-doubao1-20261015-181820-3d82b024",
+        "pending_delivery": 0,
+        "needs_review": 1
+      }
+    },
+    "doubao2": {
+      "success_rows": 0,
+      "configured_questions": 21,
+      "rounds": 10,
+      "interval": 45,
+      "coverage": [
+        {
+          "question": "推荐一款护发精油",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款护发素",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款控油蓬松洗发水",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款二硫化硒洗发水",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款沐浴精油",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款眉毛增长液",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款祛痘精华液",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款美白面霜",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款造型喷雾",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款染发剂",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款睫毛增长液",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款防脱洗发水",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款防脱精华液",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款面膜",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款眼霜",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款卸妆油",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款爽肤水",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款洗面奶",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款身体乳",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款护手霜",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        },
+        {
+          "question": "推荐一款防晒霜",
+          "actual": 0,
+          "target": 10,
+          "missing": 10
+        }
+      ],
+      "unexpected_questions": {},
+      "body_only": 0,
+      "repeated_body_observations": 0,
+      "distinct_question_bodies": 0,
+      "product_review": {},
+      "duplicate_native_identities": [],
+      "panel_count": 0,
+      "panel_count_matches": true,
+      "runtime": {
+        "state": "paused",
+        "service_state": "failed",
+        "batch": "geo-panel-doubao2-20261015-181821-6fa7c803",
+        "pending_delivery": 0,
+        "needs_review": 1
+      }
+    },
+    "deepseek": {
+      "success_rows": 30,
+      "configured_questions": 21,
+      "rounds": 3,
+      "interval": 600,
+      "coverage": [
+        {
+          "question": "推荐一款护发精油",
+          "actual": 2,
+          "target": 3,
+          "missing": 1
+        },
+        {
+          "question": "推荐一款护发素",
+          "actual": 2,
+          "target": 3,
+          "missing": 1
+        },
+        {
+          "question": "推荐一款控油蓬松洗发水",
+          "actual": 2,
+          "target": 3,
+          "missing": 1
+        },
+        {
+          "question": "推荐一款二硫化硒洗发水",
+          "actual": 2,
+          "target": 3,
+          "missing": 1
+        },
+        {
+          "question": "推荐一款沐浴精油",
+          "actual": 2,
+          "target": 3,
+          "missing": 1
+        },
+        {
+          "question": "推荐一款眉毛增长液",
+          "actual": 2,
+          "target": 3,
+          "missing": 1
+        },
+        {
+          "question": "推荐一款祛痘精华液",
+          "actual": 2,
+          "target": 3,
+          "missing": 1
+        },
+        {
+          "question": "推荐一款美白面霜",
+          "actual": 2,
+          "target": 3,
+          "missing": 1
+        },
+        {
+          "question": "推荐一款造型喷雾",
+          "actual": 2,
+          "target": 3,
+          "missing": 1
+        },
+        {
+          "question": "推荐一款染发剂",
+          "actual": 1,
+          "target": 3,
+          "missing": 2
+        },
+        {
+          "question": "推荐一款睫毛增长液",
+          "actual": 1,
+          "target": 3,
+          "missing": 2
+        },
+        {
+          "question": "推荐一款防脱洗发水",
+          "actual": 1,
+          "target": 3,
+          "missing": 2
+        },
+        {
+          "question": "推荐一款防脱精华液",
+          "actual": 1,
+          "target": 3,
+          "missing": 2
+        },
+        {
+          "question": "推荐一款面膜",
+          "actual": 1,
+          "target": 3,
+          "missing": 2
+        },
+        {
+          "question": "推荐一款眼霜",
+          "actual": 1,
+          "target": 3,
+          "missing": 2
+        },
+        {
+          "question": "推荐一款卸妆油",
+          "actual": 1,
+          "target": 3,
+          "missing": 2
+        },
+        {
+          "question": "推荐一款爽肤水",
+          "actual": 1,
+          "target": 3,
+          "missing": 2
+        },
+        {
+          "question": "推荐一款洗面奶",
+          "actual": 1,
+          "target": 3,
+          "missing": 2
+        },
+        {
+          "question": "推荐一款身体乳",
+          "actual": 1,
+          "target": 3,
+          "missing": 2
+        },
+        {
+          "question": "推荐一款护手霜",
+          "actual": 1,
+          "target": 3,
+          "missing": 2
+        },
+        {
+          "question": "推荐一款防晒霜",
+          "actual": 1,
+          "target": 3,
+          "missing": 2
+        }
+      ],
+      "unexpected_questions": {},
+      "body_only": 0,
+      "repeated_body_observations": 0,
+      "distinct_question_bodies": 30,
+      "product_review": {
+        "ai_verified": 30
+      },
+      "duplicate_native_identities": [],
+      "panel_count": 30,
+      "panel_count_matches": true,
+      "runtime": {
+        "state": "running",
+        "service_state": "active",
+        "batch": "geo-panel-deepseek-20261016-094039-dc64b7e1",
+        "pending_delivery": 0,
+        "needs_review": 0
+      }
+    },
+    "wenxin_card": {
+      "success_rows": 212,
+      "configured_questions": 21,
+      "rounds": 8,
+      "interval": 60,
+      "coverage": [
+        {
+          "question": "推荐一款护发精油",
+          "actual": 8,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款护发素",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款控油蓬松洗发水",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款二硫化硒洗发水",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款沐浴精油",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款眉毛增长液",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款祛痘精华液",
+          "actual": 11,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款美白面霜",
+          "actual": 11,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款造型喷雾",
+          "actual": 11,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款染发剂",
+          "actual": 11,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款睫毛增长液",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款防脱洗发水",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款防脱精华液",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款面膜",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款眼霜",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款卸妆油",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款爽肤水",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款洗面奶",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款身体乳",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款护手霜",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款防晒霜",
+          "actual": 10,
+          "target": 8,
+          "missing": 0
+        }
+      ],
+      "unexpected_questions": {},
+      "body_only": 0,
+      "repeated_body_observations": 0,
+      "distinct_question_bodies": 212,
+      "product_review": {
+        "ai_verified": 210,
+        "ai_pending": 2
+      },
+      "duplicate_native_identities": [],
+      "panel_count": 212,
+      "panel_count_matches": true,
+      "runtime": {
+        "state": "complete",
+        "service_state": "inactive",
+        "batch": "geo-panel-wenxin-card-20261016-112430-9f29da9d",
+        "pending_delivery": 0,
+        "needs_review": 0
+      }
+    },
+    "baidu_ai": {
+      "success_rows": 193,
+      "configured_questions": 21,
+      "rounds": 5,
+      "interval": 60,
+      "coverage": [
+        {
+          "question": "推荐一款护发精油",
+          "actual": 5,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款护发素",
+          "actual": 9,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款控油蓬松洗发水",
+          "actual": 10,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款二硫化硒洗发水",
+          "actual": 10,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款沐浴精油",
+          "actual": 10,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款眉毛增长液",
+          "actual": 10,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款祛痘精华液",
+          "actual": 10,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款美白面霜",
+          "actual": 10,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款造型喷雾",
+          "actual": 10,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款染发剂",
+          "actual": 10,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款睫毛增长液",
+          "actual": 10,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款防脱洗发水",
+          "actual": 11,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款防脱精华液",
+          "actual": 6,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款面膜",
+          "actual": 11,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款眼霜",
+          "actual": 11,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款卸妆油",
+          "actual": 5,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款爽肤水",
+          "actual": 10,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款洗面奶",
+          "actual": 10,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款身体乳",
+          "actual": 10,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款护手霜",
+          "actual": 10,
+          "target": 5,
+          "missing": 0
+        },
+        {
+          "question": "推荐一款防晒霜",
+          "actual": 5,
+          "target": 5,
+          "missing": 0
+        }
+      ],
+      "unexpected_questions": {},
+      "body_only": 10,
+      "repeated_body_observations": 162,
+      "distinct_question_bodies": 31,
+      "product_review": {
+        "ai_verified": 193
+      },
+      "duplicate_native_identities": [],
+      "panel_count": 193,
+      "panel_count_matches": true,
+      "runtime": {
+        "state": "complete",
+        "service_state": "inactive",
+        "batch": "geo-panel-baidu-ai-20261016-095851-ff407fd3",
+        "pending_delivery": 0,
+        "needs_review": 0
+      }
+    },
+    "yuanbao": {
+      "success_rows": 105,
+      "configured_questions": 21,
+      "rounds": 8,
+      "interval": 45,
+      "coverage": [
+        {
+          "question": "推荐一款护发精油",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款护发素",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款控油蓬松洗发水",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款二硫化硒洗发水",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款沐浴精油",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款眉毛增长液",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款祛痘精华液",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款美白面霜",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款造型喷雾",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款染发剂",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款睫毛增长液",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款防脱洗发水",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款防脱精华液",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款面膜",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款眼霜",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款卸妆油",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款爽肤水",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款洗面奶",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款身体乳",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款护手霜",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        },
+        {
+          "question": "推荐一款防晒霜",
+          "actual": 5,
+          "target": 8,
+          "missing": 3
+        }
+      ],
+      "unexpected_questions": {},
+      "body_only": 0,
+      "repeated_body_observations": 0,
+      "distinct_question_bodies": 105,
+      "product_review": {
+        "ai_pending": 42,
+        "ai_verified": 63
+      },
+      "duplicate_native_identities": [],
+      "panel_count": 105,
+      "panel_count_matches": true,
+      "runtime": {
+        "state": "complete",
+        "service_state": "inactive",
+        "batch": "geo-panel-yuanbao-20261016-100013-89d43fdd",
+        "pending_delivery": 0,
+        "needs_review": 0
+      }
+    }
+  },
+  "issues": [],
+  "issue_counts": {},
+  "sqlite_errors": [],
+  "original_completed_today": {
+    "wenxin_card": 212,
+    "deepseek": 30,
+    "baidu_ai": 220,
+    "doubao1": 449,
+    "yuanbao": 105
+  },
+  "original_not_ingested": [
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "fae2685090a567c6229c80b4e117f793d4dbef5ae275cc76be2efc82d577b8b5",
+      "question": "推荐一款护发素",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T08:05:33+08:00",
+      "prepared_at": 1792109129.8623328,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "8575d9f99a6bb1e2cfc9883c63b2b43a8029f797378792c03f1c1ea4507a4ed4",
+      "question": "推荐一款防脱精华液",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T05:39:43+08:00",
+      "prepared_at": 1792100349.2557673,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "023a6c5b4b39a98f54f29378eefb1c6636258881fb568ae13e5ca7599a5cea9a",
+      "question": "推荐一款防脱精华液",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T06:37:24+08:00",
+      "prepared_at": 1792103809.3529756,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "aa5421c214211d23fe5232ffa34a178a97c973d52e070cc3d21e790dfb974349",
+      "question": "推荐一款防脱精华液",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T07:35:25+08:00",
+      "prepared_at": 1792107291.155745,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "53abd0aaec38abb31b2c321ddaa6f8c7f8f75ca44298aa3b3776e794142015aa",
+      "question": "推荐一款防脱精华液",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T08:36:00+08:00",
+      "prepared_at": 1792110926.1560261,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "badf56102fe00741c4ba1e1751f84c9283c418c3c68f1b3143107498f6824dc4",
+      "question": "推荐一款防脱精华液",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T09:34:36+08:00",
+      "prepared_at": 1792114442.614835,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "4733ea76f50247bebd7eb0fe9272358f385293fb091982cc6a8a878a26994a76",
+      "question": "推荐一款卸妆油",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T00:13:32+08:00",
+      "prepared_at": 1792080778.3670244,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "b5bbb34edcf01ad7ee8c54fbba29a6a31c9de359ac040b1fe6627e19fe74d185",
+      "question": "推荐一款卸妆油",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T01:09:12+08:00",
+      "prepared_at": 1792084120.0225828,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "b5f2eae649f07ce6ceaec2cd7dae71f3ebced08e5fbee367ddba7a153f63a249",
+      "question": "推荐一款卸妆油",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T02:04:44+08:00",
+      "prepared_at": 1792087450.9783394,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "9088cc7f1fa2d0dd7d2723a93b9e6de8ccceba4a8428583bd0a22f959f89a07a",
+      "question": "推荐一款卸妆油",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T03:00:16+08:00",
+      "prepared_at": 1792090781.8675416,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "50ae53401b56284c125a668434a0bea002373ed936444eea9509a4cdb7489f82",
+      "question": "推荐一款卸妆油",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T03:55:59+08:00",
+      "prepared_at": 1792094125.0125182,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "111e7e1e78d2de6eb6e78785a8f67ff936be3d3a20f1fa0a5bfcb760a74d70db",
+      "question": "推荐一款卸妆油",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T04:51:58+08:00",
+      "prepared_at": 1792097483.377487,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "7adf234e2d929aca938c400ce5d81d1aff7e18f280150aa21fecd0c76eaf845e",
+      "question": "推荐一款卸妆油",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T05:49:26+08:00",
+      "prepared_at": 1792100932.4754322,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "7bc4abedaed540a652c2dd174fb650e1f53c71cf67682f71c87eb09a51842c2e",
+      "question": "推荐一款卸妆油",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T06:47:06+08:00",
+      "prepared_at": 1792104393.316523,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "9a376e90428fe748b48e23b69ffca5bb861d73d9ccd97187b1069a9527cad96c",
+      "question": "推荐一款卸妆油",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T07:45:02+08:00",
+      "prepared_at": 1792107869.6250196,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "8d99bf51d308158eb1f905ff7e9037d23a95f1c1c0d73948355ea8b49e1f9cea",
+      "question": "推荐一款卸妆油",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T08:45:46+08:00",
+      "prepared_at": 1792111508.5911336,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "5ddddc833891db336c8b6c1a531398c6822afd9ae00599c7c60b6686ad4f5100",
+      "question": "推荐一款卸妆油",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T09:47:50+08:00",
+      "prepared_at": 1792115231.052174,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "bbe327de5c50738beea36870aca7b7beead22e05dbe7a499bfd18bb42a2a935e",
+      "question": "推荐一款防晒霜",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T00:28:20+08:00",
+      "prepared_at": 1792081666.026756,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "2a35da6a6e372828de7f38728aaf271ea0c0e1857a38b53fa481519bf83cd378",
+      "question": "推荐一款防晒霜",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T01:23:55+08:00",
+      "prepared_at": 1792085001.6972072,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "adbbb233923375444fbe561fd194b81185fbfffe65dafc7495e001a0f46efd92",
+      "question": "推荐一款防晒霜",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T02:19:25+08:00",
+      "prepared_at": 1792088331.502208,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "80417a0ec003d2ff8b1ad3f4d8b9f3e3b6de02a7b180653a504a16681684f6cb",
+      "question": "推荐一款防晒霜",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T03:15:00+08:00",
+      "prepared_at": 1792091665.7602353,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "4d8bfa6fc208a5e232a91e450f785a58b7c32ecd5a603d5b4be9748c8c93bc18",
+      "question": "推荐一款防晒霜",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T04:10:46+08:00",
+      "prepared_at": 1792095012.124009,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "3322095a7c0ea4908fd3d4d369f32ce1a7a4cb157d23022b168d28ed00a55901",
+      "question": "推荐一款防晒霜",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T05:06:40+08:00",
+      "prepared_at": 1792098365.6293654,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "32ee9483978396125df2fd3d1fa65831648bc706098d274083ce413acac5da5e",
+      "question": "推荐一款防晒霜",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T06:04:12+08:00",
+      "prepared_at": 1792101818.263798,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "ae8ce8e55693d4c93d872e975dfef76f522c30d06f3efff0e39f1852af320aac",
+      "question": "推荐一款防晒霜",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T07:02:17+08:00",
+      "prepared_at": 1792105303.6667304,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "7688072daccce116947b363524285517fd12473a558c33446a9773270042a703",
+      "question": "推荐一款防晒霜",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T08:01:14+08:00",
+      "prepared_at": 1792108817.0694675,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "task_id": "c20b1b52397438437324d62b17ca3f31a7dbf5f50794408de9936780e103640a",
+      "question": "推荐一款防晒霜",
+      "state": "completed",
+      "availability": "supplement_unavailable",
+      "body_complete": false,
+      "source_complete": false,
+      "time": "2026-10-16T09:00:29+08:00",
+      "prepared_at": 1792112396.0081642,
+      "body_length": 0,
+      "reason": "supplement_unavailable"
+    }
+  ],
+  "other_devices": [],
+  "deepseek_gaps": [
+    {
+      "before": "acfae8b35763047a4b8e3d41db637d0e01e44f2161100b68ddc6da233ef36666",
+      "after": "fa14f0aac2d2b5c982b0fd014cc3331fdce44e85799a7398700bf929ac410ac6",
+      "seconds": 624.2
+    },
+    {
+      "before": "fa14f0aac2d2b5c982b0fd014cc3331fdce44e85799a7398700bf929ac410ac6",
+      "after": "2de74a6a86aea86648e0cebb99bdec96112dacc8bfbe0ac1b55aad8761444d95",
+      "seconds": 621.706
+    },
+    {
+      "before": "2de74a6a86aea86648e0cebb99bdec96112dacc8bfbe0ac1b55aad8761444d95",
+      "after": "399f34c1420a996ea3f5e20146d12c2a06bdd04c1f7d4b21d9db4e0602bcfabe",
+      "seconds": 1396.169
+    },
+    {
+      "before": "399f34c1420a996ea3f5e20146d12c2a06bdd04c1f7d4b21d9db4e0602bcfabe",
+      "after": "4e662589d31f718d6ee03d76703a88d5f6c2858a5cd6c7a852be85c70078a313",
+      "seconds": 624.34
+    },
+    {
+      "before": "4e662589d31f718d6ee03d76703a88d5f6c2858a5cd6c7a852be85c70078a313",
+      "after": "09fdc06a1ad15640dd0c519d2b67dcf4b798fdaa33ff268e2a51ecda77df53f4",
+      "seconds": 621.772
+    },
+    {
+      "before": "09fdc06a1ad15640dd0c519d2b67dcf4b798fdaa33ff268e2a51ecda77df53f4",
+      "after": "85379a2c65a29f84803f2234dc71770a494a9274bf92ce0b4e0839cfaac16b0a",
+      "seconds": 621.761
+    },
+    {
+      "before": "85379a2c65a29f84803f2234dc71770a494a9274bf92ce0b4e0839cfaac16b0a",
+      "after": "89cf51c04590bdc4e4215b06b9c9167fa2b87ebfc5b09f7df9fd602a5c68a734",
+      "seconds": 623.678
+    },
+    {
+      "before": "89cf51c04590bdc4e4215b06b9c9167fa2b87ebfc5b09f7df9fd602a5c68a734",
+      "after": "f5cee33ed37c81cb6edaf21970faa95897b3260b0811954da07f4e29bdeb0a05",
+      "seconds": 624.139
+    },
+    {
+      "before": "f5cee33ed37c81cb6edaf21970faa95897b3260b0811954da07f4e29bdeb0a05",
+      "after": "9f96af3a38898f895b10cdaf349ec22e6fcf629d34091d2cce7e615132e58094",
+      "seconds": 621.778
+    },
+    {
+      "before": "9f96af3a38898f895b10cdaf349ec22e6fcf629d34091d2cce7e615132e58094",
+      "after": "1d24928b43d021af4315f3900f3310d93ef406e67684af168e5f9a7496605e29",
+      "seconds": 1719.78
+    },
+    {
+      "before": "1d24928b43d021af4315f3900f3310d93ef406e67684af168e5f9a7496605e29",
+      "after": "9c30bc679ea6cbb7b744359b5fbc7245dc408b695a64397fe9b65690bbd9d7ab",
+      "seconds": 621.772
+    },
+    {
+      "before": "9c30bc679ea6cbb7b744359b5fbc7245dc408b695a64397fe9b65690bbd9d7ab",
+      "after": "4c89601996f9e7d2e9afe1e4048ceb87a35e9c30dd513e42d1e31a71493e9bf3",
+      "seconds": 623.439
+    },
+    {
+      "before": "4c89601996f9e7d2e9afe1e4048ceb87a35e9c30dd513e42d1e31a71493e9bf3",
+      "after": "168ec3bd0e7edfe4f4fe16bb2c706e72dce24e27e78fa5663a454ccba2f6beee",
+      "seconds": 625.046
+    },
+    {
+      "before": "168ec3bd0e7edfe4f4fe16bb2c706e72dce24e27e78fa5663a454ccba2f6beee",
+      "after": "ecaa10adf2d2706520f9511bd595ae06442852c7af391c8c267d74f23763c2d4",
+      "seconds": 621.618
+    },
+    {
+      "before": "ecaa10adf2d2706520f9511bd595ae06442852c7af391c8c267d74f23763c2d4",
+      "after": "762502bfb0384c2f0ef0e6114c1fab90b439249b24694a99d8f79f2c6a9672cb",
+      "seconds": 623.3
+    },
+    {
+      "before": "762502bfb0384c2f0ef0e6114c1fab90b439249b24694a99d8f79f2c6a9672cb",
+      "after": "749156c9ddb129a74230330b37fdaface407d55f9d2cd5198a605f19a79dafd9",
+      "seconds": 621.631
+    },
+    {
+      "before": "749156c9ddb129a74230330b37fdaface407d55f9d2cd5198a605f19a79dafd9",
+      "after": "a2c9ac6de3991127d4b697e4b7609c501a8bce9208b2f90a8a4d354d05e29e01",
+      "seconds": 624.692
+    },
+    {
+      "before": "a2c9ac6de3991127d4b697e4b7609c501a8bce9208b2f90a8a4d354d05e29e01",
+      "after": "7aea88a1230ab44a3698baffb8127205c85ba6b385a0db33e7a9323dacbbba2d",
+      "seconds": 1306.721
+    },
+    {
+      "before": "7aea88a1230ab44a3698baffb8127205c85ba6b385a0db33e7a9323dacbbba2d",
+      "after": "5b01769697cd0e04ab946f637b3f22442602513ee1c5b1d6ad2cf0c3c944ab17",
+      "seconds": 623.157
+    },
+    {
+      "before": "5b01769697cd0e04ab946f637b3f22442602513ee1c5b1d6ad2cf0c3c944ab17",
+      "after": "ecf4c4ee4bf44bba1167b4181c6a47aba42ac4cac12877c3aafd47fff1e9dbd1",
+      "seconds": 621.722
+    },
+    {
+      "before": "ecf4c4ee4bf44bba1167b4181c6a47aba42ac4cac12877c3aafd47fff1e9dbd1",
+      "after": "1ab35bfad15acc113cb9d70e4e075f67fbf835f70df05092042717bcd13a9323",
+      "seconds": 625.016
+    },
+    {
+      "before": "1ab35bfad15acc113cb9d70e4e075f67fbf835f70df05092042717bcd13a9323",
+      "after": "94161d7e4fbdff65dddb34316045de5e213fad4a07048869e6b50f8b48758f9d",
+      "seconds": 623.145
+    },
+    {
+      "before": "94161d7e4fbdff65dddb34316045de5e213fad4a07048869e6b50f8b48758f9d",
+      "after": "efd865cfec4234426d3ef222757c03273711d016b539d96f96c84246cd673798",
+      "seconds": 623.36
+    },
+    {
+      "before": "efd865cfec4234426d3ef222757c03273711d016b539d96f96c84246cd673798",
+      "after": "7e390db0f1c42f6e51d95ee461733383c4b0fdcfedaa17a5b7dc3e57ea621863",
+      "seconds": 621.924
+    },
+    {
+      "before": "7e390db0f1c42f6e51d95ee461733383c4b0fdcfedaa17a5b7dc3e57ea621863",
+      "after": "044b8cb129165c78955060889d770db43a6ca4b7969f54bd1551c9191f6eaf7a",
+      "seconds": 621.746
+    },
+    {
+      "before": "044b8cb129165c78955060889d770db43a6ca4b7969f54bd1551c9191f6eaf7a",
+      "after": "7591940b0f2a8dbd8d23d2f3c1dd99e6bfb81287de5e0c852883556e6afab3ce",
+      "seconds": 620.39
+    },
+    {
+      "before": "7591940b0f2a8dbd8d23d2f3c1dd99e6bfb81287de5e0c852883556e6afab3ce",
+      "after": "a0d06bb1b008374dae7a619f4dddb4be11d34884a98220300e75fccdb458f511",
+      "seconds": 623.19
+    },
+    {
+      "before": "a0d06bb1b008374dae7a619f4dddb4be11d34884a98220300e75fccdb458f511",
+      "after": "446e3861b9d29b3d6a26648cf8027967b51510b5171b31932c9ae5b54467d528",
+      "seconds": 623.342
+    },
+    {
+      "before": "446e3861b9d29b3d6a26648cf8027967b51510b5171b31932c9ae5b54467d528",
+      "after": "688efdab0669e025d86b3b750cef3e400dd77f6f5eecda8292c31596f09557c7",
+      "seconds": 623.621
+    }
+  ],
+  "deepseek_under_600": [],
+  "product_evidence_not_exact": [],
+  "pending_product_review": [
+    {
+      "model": "yuanbao",
+      "run_id": "37eda17c86ef5d6b55c8",
+      "question": "推荐一款二硫化硒洗发水",
+      "received_at": "2026-10-16T10:03:25.258552+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "b156bb894512d46d95b6",
+      "question": "推荐一款卸妆油",
+      "received_at": "2026-10-16T11:27:14.453334+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "4dacf26800c3b61d211a",
+      "question": "推荐一款爽肤水",
+      "received_at": "2026-10-16T11:10:34.746148+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "wenxin_card",
+      "run_id": "87e20e8d62c204909f4b",
+      "question": "推荐一款面膜",
+      "received_at": "2026-10-16T07:55:08.429671+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "ef3e53b55e4cb89e062e",
+      "question": "推荐一款眼霜",
+      "received_at": "2026-10-16T10:51:11.899411+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "c692231ab59f3d32cc9e",
+      "question": "推荐一款身体乳",
+      "received_at": "2026-10-16T11:29:45.802635+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "ca28bc082f16fde44fa2",
+      "question": "推荐一款造型喷雾",
+      "received_at": "2026-10-16T10:07:35.266663+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "dfeacf91745a340e415c",
+      "question": "推荐一款睫毛增长液",
+      "received_at": "2026-10-16T10:29:54.214555+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "wenxin_card",
+      "run_id": "db352f352276ba498cf7",
+      "question": "推荐一款面膜",
+      "received_at": "2026-10-16T05:01:02.618871+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "c40a1fdf6a44064df453",
+      "question": "推荐一款爽肤水",
+      "received_at": "2026-10-16T10:14:21.41045+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "95f9cdce85a0c25e989b",
+      "question": "推荐一款造型喷雾",
+      "received_at": "2026-10-16T11:03:35.434003+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "b2a5be6d89d545674a50",
+      "question": "推荐一款睫毛增长液",
+      "received_at": "2026-10-16T11:05:25.270265+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "cbe5a2c3f27b4ab72496",
+      "question": "推荐一款二硫化硒洗发水",
+      "received_at": "2026-10-16T10:23:59.645206+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "6d3f1aee9b9c562d5248",
+      "question": "推荐一款洗面奶",
+      "received_at": "2026-10-16T10:53:38.00983+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "9d69479d02361705c7eb",
+      "question": "推荐一款防脱洗发水",
+      "received_at": "2026-10-16T11:23:54.836214+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "1575ec219fc8299e055d",
+      "question": "推荐一款防晒霜",
+      "received_at": "2026-10-16T11:31:21.672713+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "d551b62bd78f45d25117",
+      "question": "推荐一款身体乳",
+      "received_at": "2026-10-16T11:12:13.479532+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "34f08d3062026bca1a58",
+      "question": "推荐一款卸妆油",
+      "received_at": "2026-10-16T10:51:52.281434+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "6af43cf50e78213c50eb",
+      "question": "推荐一款沐浴精油",
+      "received_at": "2026-10-16T11:00:17.962935+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "23482ba6410ebecd7618",
+      "question": "推荐一款洗面奶",
+      "received_at": "2026-10-16T11:11:22.127543+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "d113cf6ae3d0b690cc9a",
+      "question": "推荐一款祛痘精华液",
+      "received_at": "2026-10-16T10:05:57.423007+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "8bb47d14141d0c235222",
+      "question": "推荐一款护手霜",
+      "received_at": "2026-10-16T10:55:19.755369+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "doubao1",
+      "run_id": "doubao-6f6192d1632aea39b34d",
+      "question": "推荐一款面膜",
+      "received_at": "2026-10-16T03:10:50+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "b4abcbf4044f90c84b85",
+      "question": "推荐一款洗面奶",
+      "received_at": "2026-10-16T11:28:56.41785+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "f93fac4841b1b0c9b2be",
+      "question": "推荐一款眼霜",
+      "received_at": "2026-10-16T11:26:15.098217+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "4e6452b7bd6054bb2fac",
+      "question": "推荐一款眼霜",
+      "received_at": "2026-10-16T11:08:49.878515+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "37006631a37ef6d1d8ff",
+      "question": "推荐一款护手霜",
+      "received_at": "2026-10-16T11:12:49.917261+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "10d2956b06b27288f157",
+      "question": "推荐一款护发素",
+      "received_at": "2026-10-16T11:15:28.096459+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "4a4a274208bf3c5b7d0a",
+      "question": "推荐一款爽肤水",
+      "received_at": "2026-10-16T11:28:01.924489+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "cae5b7a904458cb04bfd",
+      "question": "推荐一款护手霜",
+      "received_at": "2026-10-16T11:30:23.255091+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "7c6d8e69d36adee6cf1d",
+      "question": "推荐一款洗面奶",
+      "received_at": "2026-10-16T10:15:12.758966+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "b8c11d66734d3b7b9a4e",
+      "question": "推荐一款造型喷雾",
+      "received_at": "2026-10-16T10:45:54.409536+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "785e837a173c788fa9d1",
+      "question": "推荐一款防脱洗发水",
+      "received_at": "2026-10-16T11:06:06.698383+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "57959f4420548699fd43",
+      "question": "推荐一款美白面霜",
+      "received_at": "2026-10-16T10:27:22.141733+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "35c1aae93fa5802c3b27",
+      "question": "推荐一款祛痘精华液",
+      "received_at": "2026-10-16T11:01:58.704098+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "83a41cc1f15402c89ffb",
+      "question": "推荐一款眼霜",
+      "received_at": "2026-10-16T10:12:37.662624+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "e5d44c25677c11e4a834",
+      "question": "推荐一款造型喷雾",
+      "received_at": "2026-10-16T10:28:13.48164+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "5e0c977363469ee1e4d7",
+      "question": "推荐一款二硫化硒洗发水",
+      "received_at": "2026-10-16T10:59:22.585387+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "4126610e029f8906a174",
+      "question": "推荐一款睫毛增长液",
+      "received_at": "2026-10-16T11:22:57.471751+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "8d44a449f43f2628789c",
+      "question": "推荐一款面膜",
+      "received_at": "2026-10-16T10:11:54.268647+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "f4587670bffeed43e866",
+      "question": "推荐一款面膜",
+      "received_at": "2026-10-16T11:07:55.473161+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "doubao1",
+      "run_id": "doubao-149a572352527c94ea47",
+      "question": "推荐一款染发剂",
+      "received_at": "2026-10-16T06:12:24+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "226bc1968115e9d2cbbf",
+      "question": "推荐一款睫毛增长液",
+      "received_at": "2026-10-16T10:47:41.334546+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "eebc9a25b1c1ff3e62cb",
+      "question": "推荐一款防晒霜",
+      "received_at": "2026-10-16T10:56:09.13809+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "11066c87a38d0630105b",
+      "question": "推荐一款防脱精华液",
+      "received_at": "2026-10-16T11:07:02.086573+08:00",
+      "retry": null,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "run_id": "71c75889f93d83afd212",
+      "question": "推荐一款防脱精华液",
+      "received_at": "2026-10-16T11:24:48.256433+08:00",
+      "retry": null,
+      "error": null
+    }
+  ],
+  "source_incomplete_records": [
+    {
+      "model": "baidu_ai",
+      "question": "推荐一款卸妆油",
+      "run_id": "ab696a006c055c90ab55",
+      "availability": "body_only"
+    },
+    {
+      "model": "baidu_ai",
+      "question": "推荐一款防晒霜",
+      "run_id": "4b40ca9c69a32f334d31",
+      "availability": "body_only"
+    },
+    {
+      "model": "baidu_ai",
+      "question": "推荐一款卸妆油",
+      "run_id": "f25902da1066c4de42dc",
+      "availability": "body_only"
+    },
+    {
+      "model": "baidu_ai",
+      "question": "推荐一款防晒霜",
+      "run_id": "253682dd808e2c3719fc",
+      "availability": "body_only"
+    },
+    {
+      "model": "baidu_ai",
+      "question": "推荐一款防晒霜",
+      "run_id": "6fb25dd9ad03b61c5b5f",
+      "availability": "body_only"
+    },
+    {
+      "model": "baidu_ai",
+      "question": "推荐一款卸妆油",
+      "run_id": "b0632582065fd96b7197",
+      "availability": "body_only"
+    },
+    {
+      "model": "baidu_ai",
+      "question": "推荐一款防晒霜",
+      "run_id": "5853ef537e82e55fb405",
+      "availability": "body_only"
+    },
+    {
+      "model": "baidu_ai",
+      "question": "推荐一款防晒霜",
+      "run_id": "9bd22cbfaa7d37928311",
+      "availability": "body_only"
+    },
+    {
+      "model": "baidu_ai",
+      "question": "推荐一款卸妆油",
+      "run_id": "92d7a338a481eb87ec9d",
+      "availability": "body_only"
+    },
+    {
+      "model": "baidu_ai",
+      "question": "推荐一款卸妆油",
+      "run_id": "fcb44ff644f9b445ca7e",
+      "availability": "body_only"
+    }
+  ],
+  "runs_without_ingest_event": [],
+  "review_queue": [
+    {
+      "model_id": "deepseek",
+      "review": "ai_verified",
+      "n": 30,
+      "earliest": "2026-10-16T09:41:06+08:00",
+      "max_retry": 0
+    },
+    {
+      "model_id": "doubao",
+      "review": "ai_pending",
+      "n": 2,
+      "earliest": "2026-10-16T03:10:49.869497+08:00",
+      "max_retry": 4
+    },
+    {
+      "model_id": "doubao",
+      "review": "ai_verified",
+      "n": 447,
+      "earliest": "2026-10-16T00:00:06.453499+08:00",
+      "max_retry": 0
+    },
+    {
+      "model_id": "wenxin",
+      "review": "ai_pending",
+      "n": 2,
+      "earliest": "2026-10-16T05:00:59+08:00",
+      "max_retry": 4
+    },
+    {
+      "model_id": "wenxin",
+      "review": "ai_verified",
+      "n": 403,
+      "earliest": "2026-10-16T00:01:05+08:00",
+      "max_retry": 0
+    },
+    {
+      "model_id": "yuanbao",
+      "review": "ai_pending",
+      "n": 42,
+      "earliest": "2026-10-16T10:03:24.548823+08:00",
+      "max_retry": 4
+    },
+    {
+      "model_id": "yuanbao",
+      "review": "ai_verified",
+      "n": 63,
+      "earliest": "2026-10-16T10:01:00.367959+08:00",
+      "max_retry": 0
+    }
+  ]
+}

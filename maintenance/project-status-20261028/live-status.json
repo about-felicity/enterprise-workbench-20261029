@@ -1,0 +1,326 @@
+{
+  "at": "2026-10-28T15:35:45.778346+08:00",
+  "services": {
+    "monitor-dashboard": "inactive",
+    "monitor-dashboard-api": "inactive",
+    "geo-content-api": "active",
+    "geo-content-worker": "active",
+    "geo-creation-studio": "active"
+  },
+  "creation_days": {
+    "2026-10-28": {
+      "tasks": 14,
+      "articles": 152,
+      "states": {
+        "complete": 9,
+        "scheduled": 2,
+        "complete_with_failures": 2,
+        "supplementing": 1
+      }
+    },
+    "2026-10-27": {
+      "tasks": 10,
+      "articles": 180,
+      "states": {
+        "complete": 7,
+        "insufficient_materials": 3
+      }
+    },
+    "2026-10-26": {
+      "tasks": 11,
+      "articles": 180,
+      "states": {
+        "complete": 9,
+        "insufficient_materials": 2
+      }
+    }
+  },
+  "products": 19,
+  "plans": 18,
+  "attention": [
+    {
+      "name": "防脱",
+      "date": "2026-10-28",
+      "status": "complete_with_failures",
+      "articles": 8,
+      "reason": "REWRITE_V2_STOPPED"
+    },
+    {
+      "name": "梵玢防脱洗发水",
+      "date": "2026-10-28",
+      "status": "supplementing",
+      "articles": 4,
+      "reason": "新一轮采集完成，正在检查有效素材"
+    },
+    {
+      "name": "科熙本造型喷雾",
+      "date": "2026-10-28",
+      "status": "complete_with_failures",
+      "articles": 22,
+      "reason": "REWRITE_V2_STOPPED"
+    },
+    {
+      "name": "眉毛增长液每天",
+      "date": "2026-10-27",
+      "status": "insufficient_materials",
+      "articles": 0,
+      "reason": "推荐一款眉毛增长液：已排除6条自有产品信源；可用完整正文0篇，至少需要3篇（2条来源不在当前允许的媒体范围内）；本问题已结束，补充有效来源后可新建任务重试；采集缺失：文心卡片：推荐一款眉毛增长液（多次读取后仍不完整）"
+    },
+    {
+      "name": "科熙本控油蓬松洗发水日常创作",
+      "date": "2026-10-27",
+      "status": "insufficient_materials",
+      "articles": 36,
+      "reason": "推荐一款好用的洗发水：可用完整正文0篇，至少需要3篇；本问题已结束，补充有效来源后可新建任务重试"
+    },
+    {
+      "name": "科熙本防脱精华",
+      "date": "2026-10-27",
+      "status": "insufficient_materials",
+      "articles": 6,
+      "reason": "哪款防脱精华好用有效：已排除7条自有产品信源；可用完整正文0篇，至少需要3篇；本问题已结束，补充有效来源后可新建任务重试"
+    },
+    {
+      "name": "科熙本控油蓬松洗发水日常创作",
+      "date": "2026-10-26",
+      "status": "insufficient_materials",
+      "articles": 35,
+      "reason": "推荐一款好用的洗发水：可用完整正文0篇，至少需要3篇；本问题已结束，补充有效来源后可新建任务重试；采集缺失：文心卡片：推荐一款控油蓬松洗发水（多次读取后仍不完整）"
+    },
+    {
+      "name": "眉毛",
+      "date": "2026-10-26",
+      "status": "insufficient_materials",
+      "articles": 3,
+      "reason": "只长杂毛不长主眉毛怎么办？：可用完整正文0篇，至少需要3篇（6条来源不在当前允许的媒体范围内）；本问题已结束，补充有效来源后可新建任务重试；植发/文眉后还能用眉毛增长液吗？：可用完整正文1篇，至少需要3篇（1条来源不在当前允许的媒体范围内）；本问题已结束，补充有效来源后可新建任务重试；采集缺失：百度卡片：植发/文眉后还能用眉毛增长液吗？（未出现AI卡片）；百度卡片：眉尾稀疏用哪款增长液能补齐？（未出现AI卡片）；文心卡片：只长杂毛不长主眉毛怎么办？（缺少来源链接）"
+    }
+  ],
+  "supplement_policy": {
+    "enabled": true,
+    "start_date": "2026-10-28",
+    "include_days": [
+      "plan-0d57811d9b2543eab75d181badec6d9e--2026-10-26"
+    ],
+    "enabled_at": 1793171504.6882381
+  },
+  "geo": [
+    {
+      "batch": "geo-panel-doubao1-20261028-090003-3c8b3d61",
+      "model": "doubao1",
+      "service": "geo-native@geo-panel-doubao1-20261028-090003-3c8b3d61.service",
+      "health": {
+        "batch": "geo-panel-doubao1-20261028-090003-3c8b3d61",
+        "planned": 105,
+        "prompt_mode": "question_only",
+        "model": "doubao1",
+        "captured": 105,
+        "geo_processed": 105,
+        "delivery_errors": [],
+        "unavailable": 0,
+        "time": 1793158760.1806371,
+        "heartbeat_expires_at": null,
+        "bridge_pid": null,
+        "tasks": {
+          "completed": 105
+        },
+        "status": "complete",
+        "memory": {},
+        "progress": {
+          "phase": "delivery",
+          "task_id": null,
+          "ordinal": null,
+          "changed_at": 1793158755.163311,
+          "pending_delivery": 1
+        }
+      }
+    },
+    {
+      "batch": "geo-panel-doubao2-20261028-090003-05ae11c3",
+      "model": "doubao2",
+      "service": "geo-native@geo-panel-doubao2-20261028-090003-05ae11c3.service",
+      "health": {
+        "batch": "geo-panel-doubao2-20261028-090003-05ae11c3",
+        "planned": 105,
+        "prompt_mode": "question_only",
+        "model": "doubao2",
+        "captured": 105,
+        "geo_processed": 105,
+        "delivery_errors": [],
+        "unavailable": 0,
+        "time": 1793158095.0186298,
+        "heartbeat_expires_at": null,
+        "bridge_pid": null,
+        "tasks": {
+          "completed": 105
+        },
+        "status": "complete",
+        "memory": {
+          "app_alive": true,
+          "pid": 27670,
+          "java_alloc_kib": 336216,
+          "java_size_kib": 434384,
+          "java_limit_kib": 524288,
+          "java_fraction": 0.6412811279296875,
+          "native_alloc_kib": 365476,
+          "app_pss_kib": 1501016,
+          "container_bytes": 1583595520,
+          "container_working_bytes": 1495908352,
+          "container_limit_bytes": 4294967296,
+          "container_fraction": 0.3482933044433594,
+          "app_pss_fraction": 0.35787010192871094,
+          "sampled_at": 1793158064.3693385,
+          "last_exit": {
+            "pid": 23069,
+            "reason": "user_requested"
+          },
+          "pending": "",
+          "high_samples": 0
+        },
+        "progress": {
+          "phase": "delivery",
+          "task_id": null,
+          "ordinal": null,
+          "changed_at": 1793158090.003523,
+          "pending_delivery": 1
+        }
+      }
+    },
+    {
+      "batch": "geo-panel-deepseek-app-20261017-094524",
+      "model": "deepseek",
+      "service": "geo-native@geo-panel-deepseek-app-20261017-094524.service"
+    },
+    {
+      "batch": "geo-panel-wenxin-card-20261028-112634-dd336205",
+      "model": "wenxin_card",
+      "service": "geo-web@geo-panel-wenxin-card-20261028-112634-dd336205.service",
+      "health": {
+        "time": 1793172944.0189624,
+        "heartbeat_expires_at": 1793172989.0189624,
+        "bridge_pid": 4287,
+        "model": "wenxin_card",
+        "batch": "geo-panel-wenxin-card-20261028-112634-dd336205",
+        "planned": 168,
+        "tasks": {
+          "completed": 102,
+          "pending": 66
+        },
+        "status": "running",
+        "worker_exit": 0,
+        "worker_pid": 39918,
+        "captured": 102,
+        "unique": 102,
+        "processed": 102,
+        "duplicates": 0,
+        "unavailable": 0,
+        "body_only_observations": 0,
+        "errors": [],
+        "unique_processed": 102,
+        "progress": {
+          "phase": "rate_wait",
+          "pending_delivery": 0,
+          "changed_at": 1793172927.6689715,
+          "ordinal": 14,
+          "next_at": 1793172976.3284318
+        }
+      }
+    },
+    {
+      "batch": "geo-panel-baidu-ai-20261028-090004-03ddefa1",
+      "model": "baidu_ai",
+      "service": "geo-web@geo-panel-baidu-ai-20261028-090004-03ddefa1.service",
+      "health": {
+        "time": 1793157995.4265077,
+        "heartbeat_expires_at": null,
+        "bridge_pid": null,
+        "model": "baidu_ai",
+        "batch": "geo-panel-baidu-ai-20261028-090004-03ddefa1",
+        "planned": 105,
+        "tasks": {
+          "completed": 105
+        },
+        "status": "complete_with_unavailable",
+        "worker_exit": 0,
+        "worker_pid": null,
+        "captured": 103,
+        "unique": 30,
+        "processed": 103,
+        "duplicates": 73,
+        "unavailable": 2,
+        "body_only_observations": 2,
+        "errors": [],
+        "unique_processed": 30,
+        "body_only_delivery": {
+          "observations": 2,
+          "processed": 2,
+          "pending_delivery": 0,
+          "errors": [],
+          "unique_processed": 1
+        },
+        "progress": {
+          "phase": "complete_with_unavailable",
+          "pending_delivery": 0
+        }
+      }
+    },
+    {
+      "batch": "geo-panel-yuanbao-20261028-090004-02abccba",
+      "model": "yuanbao",
+      "service": "geo-native@geo-panel-yuanbao-20261028-090004-02abccba.service",
+      "health": {
+        "batch": "geo-panel-yuanbao-20261028-090004-02abccba",
+        "planned": 168,
+        "prompt_mode": "question_only",
+        "model": "yuanbao",
+        "captured": 168,
+        "geo_processed": 168,
+        "delivery_errors": [],
+        "nontext_observations": 0,
+        "nontext_processed": 0,
+        "nontext_pending": 0,
+        "unavailable": 0,
+        "time": 1793159690.5436218,
+        "heartbeat_expires_at": null,
+        "bridge_pid": null,
+        "tasks": {
+          "completed": 168
+        },
+        "status": "complete",
+        "memory": {
+          "app_alive": true,
+          "pid": 52868,
+          "java_alloc_kib": 44788,
+          "java_size_kib": 143092,
+          "java_limit_kib": 524288,
+          "java_fraction": 0.08542633056640625,
+          "native_alloc_kib": 240782,
+          "app_pss_kib": 1143830,
+          "container_bytes": 1781907456,
+          "container_working_bytes": 1689182208,
+          "container_limit_bytes": 4294967296,
+          "container_fraction": 0.3932933807373047,
+          "app_pss_fraction": 0.27271032333374023,
+          "sampled_at": 1793159635.705985,
+          "last_exit": {
+            "pid": 28758,
+            "reason": "low_memory"
+          },
+          "pending": "",
+          "high_samples": 0
+        },
+        "progress": {
+          "phase": "delivery",
+          "task_id": null,
+          "ordinal": null,
+          "changed_at": 1793159685.460673,
+          "pending_delivery": 1
+        }
+      }
+    },
+    {
+      "batch": "geo-panel-deepseek2-20261019-103338-38eaf48a",
+      "model": "deepseek2",
+      "service": "geo-native@geo-panel-deepseek2-20261019-103338-38eaf48a.service"
+    }
+  ]
+}

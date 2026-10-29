@@ -1,0 +1,17 @@
+{
+  "at_beijing": "2026-10-15T13:34:31+08:00",
+  "observer_unit": "geo-editorial-acceptance-current.service",
+  "observer_date": "2026-10-09",
+  "observer_verdict": "Not passed; prerequisites never met; observation retired",
+  "stop_observer": true,
+  "disable_only_completed_soak_units": [
+    "geo-doubao-soak2h-1792030883.service",
+    "geo-doubao-soak2h-1792030883-deadline.timer"
+  ],
+  "preserve_business_services": true,
+  "completed_at_beijing": "2026-10-15T13:34:31+08:00",
+  "observer_active": false,
+  "completed_soak_autostart_disabled": true,
+  "evidence_preserved": true,
+  "private_archive": "/opt/monitor/geo-capture/maintenance/20261015/retired-observers"
+}

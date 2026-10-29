@@ -1,0 +1,47 @@
+{
+  "job_id": "creation-1792575159-0a8f9221",
+  "created_at": 1792575159.5652778,
+  "input_sha256": "cd8efe5f7162efb2b278633342f696b102c88040e825f78e79f61b903ffd31aa",
+  "date": "2026-10-21",
+  "question": "任务问题汇总",
+  "channels": [
+    "baidu_ai",
+    "wenxin_card"
+  ],
+  "max_per_category": 7,
+  "material_counts": {
+    "geo_observations": 0,
+    "private_observations": 14,
+    "full_articles": 117
+  },
+  "platform_questions_sent": 0,
+  "prepared": {
+    "date": "2026-10-21",
+    "input_sha256": "cff4b4cb9311db50e158f94cf0eaa3463cba867875bf4e726324e3e6bce25069",
+    "media_articles": 101,
+    "max_per_category": 14,
+    "status": "waiting_taxonomy"
+  },
+  "material_source": "dedicated",
+  "studio_plan_id": "plan-33e7bfca8bb6497da10b28f0444a693b",
+  "task_name": "道和小绿瓶 排行与测评各7篇一次测试",
+  "budget_limits": {
+    "article_budget_cny": 0.35,
+    "task_budget_cny": 5.25
+  },
+  "preparation": "ready",
+  "questions": [
+    "防脱洗发水有哪些值得参考的品牌，普通消费者怎么选？",
+    "头皮容易出油又担心掉发，防脱洗发水怎么挑？",
+    "100到200元预算的防脱洗发水有哪些选择？",
+    "草本防脱洗发水横向测评应该比较哪些维度？",
+    "道和小绿瓶防脱洗发水怎么样，成分和规格有哪些特点？",
+    "防脱洗发水测评里的检测数据和真实使用感受该怎么看？",
+    "防脱洗发水和普通洗发水怎么比较，选购时要注意什么？"
+  ],
+  "article_target": 14,
+  "genre_targets": {
+    "排行类": 7,
+    "测评类": 7
+  }
+}

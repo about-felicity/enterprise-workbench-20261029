@@ -1,0 +1,206 @@
+{
+  "at": 1792027854.7474816,
+  "existing_docker_unchanged": true,
+  "editorial_services_unchanged": true,
+  "doubao_complete_unchanged": true,
+  "collectors": [
+    {
+      "model": "baidu_ai",
+      "batch": "geo-baidu_ai-21x5-20261015",
+      "planned": 105,
+      "verified_processed": 1,
+      "verified": [
+        {
+          "request_id": "92dd2171949a11f7ab9a5723c98b3999f8a7504abf366c24ec8f80c90b604bab",
+          "body_length": 564,
+          "source_count": 9,
+          "round": 2,
+          "body_sha256": "00b9bfa2c55660b5b6a327ea1b9ba2449fa2088825f19dc688d7650c71c101b0"
+        }
+      ]
+    },
+    {
+      "model": "deepseek",
+      "batch": "geo-deepseek-21x3-20261015",
+      "planned": 63,
+      "verified_processed": 0,
+      "verified": []
+    },
+    {
+      "model": "wenxin_card",
+      "batch": "geo-wenxin_card-21x6-20261015",
+      "planned": 126,
+      "verified_processed": 5,
+      "verified": [
+        {
+          "request_id": "8cf0fbfe8207893ad852fe1aef186d3f1b183f13613dffd58df01784ac2f1e93",
+          "body_length": 455,
+          "source_count": 28,
+          "round": 2,
+          "body_sha256": "453a56e2eff84576799d4beed3686b47eacc2dd9b8715dda159397e977459e0e"
+        },
+        {
+          "request_id": "be0203975543e28d1105b622727b9e399d5afe372c71e258a360ccde13f3c654",
+          "body_length": 406,
+          "source_count": 28,
+          "round": 4,
+          "body_sha256": "b33c18760bf2da6013e8e8d4f42056f133c5c050dcf1dac700826349e550b1a2"
+        },
+        {
+          "request_id": "4fedaa240fb5763336d670433773bf0e9f2574e7910ea9bdd833c57ec0d247b5",
+          "body_length": 403,
+          "source_count": 25,
+          "round": 3,
+          "body_sha256": "72013699efadb15d64b193706dec9e2dd15a217b38ab1ce8e30690576ab15682"
+        },
+        {
+          "request_id": "11d6835afb8584d753057454d9e85af32feb41986d894021d596e2fa93009619",
+          "body_length": 687,
+          "source_count": 34,
+          "round": 5,
+          "body_sha256": "0442e2c428b43eac382143d6262d26015ded2dd463af0889cb2c32b06a8348e7"
+        },
+        {
+          "request_id": "e1afe9134c6dc4ecaa372078b1e41db04cb9af0808f152c6ec53c428c9cfb1e6",
+          "body_length": 320,
+          "source_count": 33,
+          "round": 1,
+          "body_sha256": "4fe1837daa8f154fd718b3f8b8c29d1083ec745a05ef7cba43bdc76ad1353809"
+        }
+      ]
+    }
+  ],
+  "fleet": {
+    "project": "GEO",
+    "generated_at": 1792027854.1700187,
+    "containers": [
+      {
+        "name": "monitor-dashboard",
+        "status": "running",
+        "started_at": "2026-10-06T06:22:02.004508911Z"
+      },
+      {
+        "name": "monitor-dashboard-api",
+        "status": "running",
+        "started_at": "2026-10-12T08:40:01.711661132Z"
+      },
+      {
+        "name": "monitor-result-receiver",
+        "status": "running",
+        "started_at": "2026-09-21T05:26:29.9984192Z"
+      },
+      {
+        "name": "monitor-doubao-receiver",
+        "status": "running",
+        "started_at": "2026-09-17T01:36:19.47297663Z"
+      },
+      {
+        "name": "monitor-product-worker",
+        "status": "running",
+        "started_at": "2026-10-06T01:50:44.448616109Z"
+      },
+      {
+        "name": "monitor-content-worker",
+        "status": "running",
+        "started_at": "2026-09-14T01:53:22.563778025Z"
+      },
+      {
+        "name": "monitor-postgres",
+        "status": "running",
+        "started_at": "2026-09-07T08:05:26.787567304Z"
+      },
+      {
+        "name": "monitor-redis",
+        "status": "running",
+        "started_at": "2026-09-07T08:05:26.782716935Z"
+      },
+      {
+        "name": "doubao-hpe14-13-test",
+        "status": "running",
+        "started_at": "2026-10-06T11:22:43.134118275Z"
+      },
+      {
+        "name": "doubao-hpe14-account2",
+        "status": "running",
+        "started_at": "2026-10-13T04:00:31.567054906Z"
+      }
+    ],
+    "collectors": [
+      {
+        "name": "豆包 1",
+        "service": "redroid-geo-products.service",
+        "service_state": "inactive",
+        "status": "complete",
+        "batch": "geo-products-21x5-account1-20261014",
+        "planned": 105,
+        "captured": 105,
+        "processed": 105,
+        "unique_processed": 105,
+        "duplicates": 0,
+        "unavailable": 0,
+        "delivery_errors": 0,
+        "updated_at": 1792026807.4144652
+      },
+      {
+        "name": "豆包 2",
+        "service": "redroid-geo-products-account2.service",
+        "service_state": "inactive",
+        "status": "complete",
+        "batch": "geo-products-21x5-account2-relogin-20261013",
+        "planned": 105,
+        "captured": 105,
+        "processed": 105,
+        "unique_processed": 105,
+        "duplicates": 0,
+        "unavailable": 0,
+        "delivery_errors": 0,
+        "updated_at": 1792026807.4144504
+      },
+      {
+        "name": "DeepSeek",
+        "service": "geo-capture-deepseek.service",
+        "service_state": "failed",
+        "status": "waiting_login",
+        "batch": "geo-deepseek-21x3-20261015",
+        "planned": 63,
+        "captured": 0,
+        "processed": 0,
+        "unique_processed": 0,
+        "duplicates": 0,
+        "unavailable": 0,
+        "delivery_errors": 0,
+        "updated_at": 1792026816.408962
+      },
+      {
+        "name": "文心卡片",
+        "service": "geo-capture-wenxin-card.service",
+        "service_state": "active",
+        "status": "running",
+        "batch": "geo-wenxin_card-21x6-20261015",
+        "planned": 126,
+        "captured": 5,
+        "processed": 5,
+        "unique_processed": 5,
+        "duplicates": 0,
+        "unavailable": 0,
+        "delivery_errors": 0,
+        "updated_at": 1792027851.265027
+      },
+      {
+        "name": "百度卡片",
+        "service": "geo-capture-baidu-ai.service",
+        "service_state": "active",
+        "status": "running",
+        "batch": "geo-baidu_ai-21x5-20261015",
+        "planned": 105,
+        "captured": 4,
+        "processed": 4,
+        "unique_processed": 1,
+        "duplicates": 3,
+        "unavailable": 1,
+        "delivery_errors": 0,
+        "updated_at": 1792027851.2237935
+      }
+    ]
+  }
+}

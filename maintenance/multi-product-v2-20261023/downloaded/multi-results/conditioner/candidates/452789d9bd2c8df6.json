@@ -1,0 +1,22 @@
+{
+  "question": "推荐一款适合烫染后干枯毛躁的护发素",
+  "model": "baidu_ai",
+  "source": {
+    "url": "https://baijiahao.baidu.com/s?id=1850630145226547491&wfr=spider&for=pc",
+    "title": "什么护发素品牌效果好?2025年改善头发毛躁护发素产品推荐:修护干枯毛躁",
+    "media": "度看青岛",
+    "article": {
+      "status": "failed",
+      "requested_url": "https://baijiahao.baidu.com/s?id=1850630145226547491&wfr=spider&for=pc",
+      "text": "",
+      "attempts": [
+        {
+          "backend": "http",
+          "status": "failed",
+          "error": "Verification/access-denied page is not an article"
+        }
+      ],
+      "error": "All enabled Scrapling readers failed; inspect attempts or provide a permitted source copy"
+    }
+  }
+}

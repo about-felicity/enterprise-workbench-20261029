@@ -1,0 +1,202 @@
+"""Preserve a primary article's product roster before lossy summarisation."""
+import re
+
+VERSION = "primary-reference-v4-action-heading-guard"
+CHILD = re.compile(r"儿童|宝宝|婴儿|婴童|新生儿|学龄|月龄")
+MARKER = re.compile(r"[（(][一二三四五六七八九十]{1,3}[）)]|[一二三四五六七八九十]{1,3}、|精选[一二三四五六七八九十]+[：:]|(?:^|\n|(?<=[）)】]))\s*(?:推荐\s*)?(?:TOP\s*)?\d{1,2}[、．.)）](?!\d)|(?:第[一二三四五六七八九十\d]+(?:梯队|名|款)|TOP\s*\d{1,2})[：:、.\s]*", re.I)
+PRODUCT_KIND = r'洗发水|洗发液|洗发露|洗发乳|洗沐二合一|护发素|护发精油|精华霜|精华液|精华水|精粹水|精华乳|精华露|护理液|滋养液|增长液|修护液|眉养液|养眉液|眉液|面霜|眼霜|美白霜|祛斑霜|淡斑霜|防晒霜|素颜霜|洁面乳|洗面奶|身体乳|面膜|乳霜|精华|霜'
+PRODUCT = re.compile(r"([^。！？\n：:，,；;]{1,65}?(?:"+PRODUCT_KIND+r"))")
+QUESTION_HEADING = re.compile(r'怎么|如何|为什么|能不能|是否|要不要|多久|多长|多少|何时|什么时候|能否|可否|需不需要|有没有|会不会|好不好|有用吗|有必要|可用的|可以用的|使用方法|使用顺序|用法|适用范围|挑选|选购|区别|常见问题|注意事项|[？?]|^(?:正确使用|使用前|使用后|购买前|涂抹|请先|建议先)|^护理.{0,20}的')
+
+CATEGORY_PRODUCT = re.compile(r"(?:(?:清洁|滋养|修护|修复|保湿|补水|清爽|免洗|涂抹|睡眠|泥浆|矿物泥|乳霜|凝胶|水润|轻薄|抗老|紧致|养护|护理|美白|祛斑|淡斑|控油|去屑|止痒)(?:型|类|式)?)+(?:"+PRODUCT_KIND+r")")
+ACTION_HEADING = re.compile(r'^(?:(?:不要|切勿|避免|不宜|不建议|应当|应该|建议|必须|请|频繁|反复|过度|定期|经常|长期|正确|盲目)\s*)*(?:更换|换用|使用|涂抹|清洗)(?:[^。！？]*)(?:'+PRODUCT_KIND+r')')
+
+def category_product(value):
+    """A product form or use category has no independently identified brand/item."""
+    return bool(CATEGORY_PRODUCT.fullmatch(value.strip()))
+
+
+def roster_identity(value):
+    value=re.sub(r'^(?:产品(?:详细)?(?:分析|介绍|盘点)|产品推荐)\s*[:：]?\s*(?:\d+[、.．)]\s*)?','',value.strip())
+    value=re.sub(r'^(?:(?:可(?:以)?|建议|优先|值得|不妨|也可|可先|可以先)\s*)?(?:考虑|选择|选用|购买|了解|试用)\s*','',value)
+    return re.sub(r'^(?:首选|优先选择|优先推荐|推荐选择|优选)\s*','',value).strip()
+
+def clean_roster(blueprint):
+    """Exclude knowledge questions from both new and retained product rosters."""
+    products=[];seen=set();owned=(blueprint.get('owned_product') or {}).get('name','')
+    compact=lambda v:re.sub(r'\s+','',v).casefold()
+    for p in blueprint.get('products',[]):
+        name=roster_identity(p['name']);key=compact(name)
+        if not name or ACTION_HEADING.match(name) or category_product(name) or QUESTION_HEADING.search(name) or key in seen or (owned and key==compact(owned)):continue
+        products.append({**p,'name':name});seen.add(key)
+    return {**blueprint,'products':products}
+
+
+def product_blocks(article):
+    text = article.get("text", "")
+    markers = list(MARKER.finditer(text))
+    candidates = []
+    for index, marker in enumerate(markers):
+        end = markers[index+1].start() if index+1 < len(markers) else len(text)
+        candidates.append((marker.start(), marker.end(), end, True))
+    # Some media pages preserve product headings but lose list numbering.
+    for line in re.finditer(r"(?m)^[ \t]*[^\n]+$", text):
+        candidates.append((line.start(), line.start(), line.end(), False))
+    found = []
+    for position, start, end, numbered in sorted(candidates):
+        block = text[start:end].lstrip()
+        heading = re.split(r"[\n。！？；;]", block, maxsplit=1)[0].strip()
+        if not heading:
+            continue
+        if not numbered and MARKER.match(heading):
+            continue
+        if re.match(r'^(?:主要功效|核心成分|使用感受|适用人群|核心定位|成分|配方|防断核心|对应成分|参考价|备案|功效|适配人群|综合评分|规格价格)', heading):
+            continue
+        # Only the heading may supply identity. A later '核心定位：…洗发水'
+        # describes a product and must never overwrite its actual name.
+        identity = re.sub(r"^[•·●▪◦‣*\-]+\s*", "", heading).strip()
+        identity = roster_identity(identity)
+        if not PRODUCT.match(identity) and (':' in heading or '：' in heading):
+            identity = re.split(r"[：:]", heading, maxsplit=1)[-1].strip()
+        match = PRODUCT.match(identity)
+        country = re.search(r"[（(](?:法国|德国|美国|英国|日本|韩国|中国)[）)]", identity)
+        if not match and not (numbered and country):
+            continue
+        name = (identity[:country.start()] if country else match.group(1)).strip(" —-\t")
+        if ACTION_HEADING.match(name) or category_product(name) or QUESTION_HEADING.search(name) or re.match(r'^的|^是.{0,30}(?:品牌|一款)',name):
+            continue
+        # A feature bullet such as “• 二硫化硒洗发水：区别于…”
+        # describes the current product. It is not an additional branded item
+        # and must not split its ingredients/evidence into a phantom roster row.
+        if re.fullmatch(r"(?:二硫化硒|氨基酸|水杨酸|吡硫翁锌|美白|保湿|祛斑|淡斑|滋养|修护|养护|增长|生长|护理)*(?:"+PRODUCT_KIND+r")", name):
+            continue
+        if not numbered and MARKER.search(name):
+            continue
+        if not name or len(name) > 60 or re.search(r"^(?:\d|十大|十款|多款|去屑|控油|止痒|无硅油|温和|普通|药用|全能型|强效|比|取|选|挑选|好用|其他|切忌|很多|这款|一款)|什么|哪个|哪款|选择|不用|成人的|你用|建议|如果|选购|速览|盘点|标准|贴士|解析|攻略|清洁力|蛋白、|成分的|调理剂", name):
+            continue
+        if not numbered:
+            # Standalone headings must end at the product or a short variant;
+            # ordinary prose mentioning a product is not an independent entry.
+            tail = identity[match.end():].strip() if match else ''
+            if tail and not (tail.startswith(('：', ':', '——', '—')) or re.fullmatch(r"[（(][^()（）]{1,40}[）)]", tail)):
+                continue
+            if re.search(r"[。！？；;，,]", identity[:match.end()] if match else heading):
+                continue
+        if numbered and match:
+            tail = identity[match.end():].strip()
+            if tail and not re.match(r"^(?:[（(—\-：:]|综合评分|评分|核心定位|参考价|备案)", tail):
+                continue
+        heading_end = start + len(text[start:end]) - len(block) + len(heading)
+        found.append({'name':name, 'heading':heading, 'position':position, '_start':start, '_heading_end':heading_end})
+    # Product excerpts run through their inner ingredient lists. Numeric
+    # ingredient subpoints are not boundaries between different products.
+    result = []
+    for index, row in enumerate(found):
+        end = found[index+1]['position'] if index+1 < len(found) else len(text)
+        following = [m.start() for m in markers if row['_heading_end'] <= m.start() < end and re.match(r"[一二三四五六七八九十]+、", m.group())]
+        if following:
+            end = min(following)
+        excerpt = text[row['_start']:end].strip()
+        existing = next((p for p in result if p['name'] == row['name']), None)
+        if existing:
+            # A summary table followed by detailed entries is one roster.
+            # Prefer the detailed block, keeping its original source position.
+            if len(excerpt) > len(existing['excerpt']):
+                existing.update(excerpt=excerpt[:6000], heading=row['heading'])
+        else:
+            result.append({k:v for k,v in row.items() if not k.startswith('_')} | {'excerpt':excerpt[:6000]})
+    return result
+
+
+def compatible(category, title):
+    # A mention of children deep in an adult marketing article cannot make its
+    # main topic a children's article. Use its actual title for this decision.
+    return not CHILD.search(category) or bool(CHILD.search(title))
+
+
+def design(sources, category, number=1):
+    if category in {"排行类", "科普类", "测评类"}:
+        from .genre_pools import classify_source
+        eligible = [(s, classify_source(s,include_review=category=="测评类")) for s in sources]
+        eligible = [(s, a) for s, a in eligible if a['genre'] == category and a['status'] == 'ready' and a['audience'] != 'children']
+        if not eligible:
+            return None
+        source, analysis = eligible[(number - 1) % len(eligible)]
+        return {"version": "three-genre-v1" if category=="测评类" else "two-genre-v1", "primary_url": source['url'], "primary_title": analysis['title'],
+                "genre": {"排行类":"ranking","科普类":"science","测评类":"review"}[category], "category": category,
+                "products": analysis['products'] if category in {"排行类","测评类"} else [],
+                "article_type": analysis["article_type"], "structure_tags": analysis["structure_tags"],
+                "source_headings": source['article'].get('headings', []),
+                "product_insertion": "FIRST_COMPARISON" if category=="测评类" else "FIRST_RECOMMENDATION" if category == "排行类" else "NATURAL_CONTEXT",
+                "section_pattern": ["读者问题", "比较维度与资料边界", "自有产品与竞品逐项比较", "信息缺口与条件式结论"] if category=="测评类" else ["导语", "选购标准", "自有产品第一位", "其他产品逐款介绍", "总结"] if category == "排行类" else ["问题导入", "知识解释", "常见误区", "日常认识与产品示例", "总结"],
+                "requirements": "参考主题和层级重新组织，不抄句子；科普不得变榜单；排行保留竞品，自有产品列第一。"}
+    candidates = []
+    for source in sources:
+        article = source.get("article", {})
+        title = article.get("title") or source.get("title", "")
+        if not compatible(category, title):
+            continue
+        blocks = product_blocks(article)
+        if len(blocks) >= 3:
+            candidates.append((source, title, blocks))
+    if not candidates:
+        return None
+    source, title, blocks = candidates[(number - 1) % len(candidates)]
+    return {"version": VERSION, "primary_url": source["url"], "primary_title": title,
+            "genre": "numbered_product_roundup", "category": category,
+            "products": blocks, "section_pattern": ["问题导入", "选购标准", "逐款产品介绍", "选择总结"],
+            "product_insertion": "NO_INSERT" if CHILD.search(category) else "APPROVED_FACTS_ONLY",
+            "requirements": "保留全部已提取竞品身份及逐项介绍体裁；重新表达标题、导语与正文。不得改成泛泛容量价格教程。不得复制原文亲测、功效保证或儿童适用结论。"}
+
+
+def validate_structure(markdown, blueprint, *, include_length=True):
+    if not blueprint:
+        return []
+    blueprint=clean_roster(blueprint)
+    headings = re.findall(r"^#{2,3}\s+(.+)$", markdown, re.M)
+    compact = lambda value: re.sub(r"\s+", "", value).casefold()
+    from .genre_length import validate
+    failures = validate(markdown, blueprint) if include_length else []
+    if blueprint.get('genre') in {'ranking','review','numbered_product_roundup'} and not blueprint['products']:
+        failures.append('排行参考没有可识别独立产品，不能把类型当产品')
+    if blueprint.get('genre') == 'science':
+        if len(headings) < 4:
+            failures.append('科普稿至少四个知识小标题')
+        if any(re.search(r'第[一二三四五六七八九十\d]+名|TOP\s*\d|推荐榜|排行榜', h, re.I) for h in headings):
+            failures.append('科普稿不能改成产品榜单')
+        from .product_identity import matches
+        if any(matches(h,blueprint) for h in headings):
+            failures.append('科普产品举例应融合在知识段内，不另设品牌推荐小标题')
+        return failures
+    if blueprint.get('product_insertion') in {'FIRST_RECOMMENDATION','FIRST_COMPARISON'}:
+        from .product_identity import matches,name
+        product_headings = [h for h in headings if matches(h,blueprint) or any(compact(p['name']) in compact(h) for p in blueprint['products'])]
+        if not product_headings or not matches(product_headings[0],blueprint):
+            failures.append('排行稿第一款推荐必须为当前任务产品：'+name(blueprint))
+        title = next(iter(re.findall(r'^#\s+(.+)$', markdown, re.M)), '')
+        if '无激素' in title:
+            failures.append('不能把参考标题的无激素声明推广为所有入选产品的共同事实')
+        from .argument_plan import title_counts_match
+        if not title_counts_match(title,len(blueprint['products'])+1):
+            failures.append('标题款数与自有产品加竞品总数不一致')
+    if blueprint.get('genre')=='review':
+        if not any(re.search(r'比较|对比|维度|标准|口径|测评|评估',h) for h in headings):
+            failures.append('测评稿缺少统一比较维度，不能仅逐款推荐后改名为测评')
+        if re.search(r'我们(?:本次|实际|连续)?.{0,6}(?:亲测|实测|测试)|本次亲测|实测评分|综合得分[：:\s]*\d|客观冠军|全网第一',markdown):
+            failures.append('资料测评不能编造作者实测、评分或性能冠军')
+    if blueprint.get('source_contract'):
+        allowed = [compact(p['name']) for p in blueprint['products']]
+        for heading in headings:
+            from .product_identity import matches
+            if matches(heading,blueprint):
+                continue
+            if re.match(r'\s*\d+[、.．）)]', heading) and PRODUCT.search(heading):
+                if not any(name in compact(heading) for name in allowed):
+                    failures.append('出现不在当日主参考名单中的产品小标题：' + heading)
+    for product in blueprint["products"]:
+        name = compact(product["name"])
+        if not any(name in compact(heading) for heading in headings):
+            failures.append("缺少独立产品小标题：" + product["name"])
+    if len(headings) < len(blueprint["products"]) + 2:
+        failures.append("产品盘点须有选购标准、逐项产品小标题和结尾总结")
+    return failures

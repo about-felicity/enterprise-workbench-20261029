@@ -1,0 +1,45 @@
+{
+  "at": 1792810884.9426455,
+  "deployed_hashes_verified": 19,
+  "articles_visible": 7,
+  "daily_plan": {
+    "plan_id": "plan-9b827648df6c4bf9b5648db2eaf6079e",
+    "product_id": "product-cbdab5bf17454acaa1996253f6c50ac9",
+    "enabled": true,
+    "frequency": "daily",
+    "capture_time": "01:00",
+    "writing_time": "04:00",
+    "article_target": 7,
+    "channels": [
+      "baidu_ai",
+      "wenxin_card"
+    ],
+    "article_budget_cny": 0.35,
+    "task_budget_cny": 2.45
+  },
+  "persistent_profiles": [
+    {
+      "model": "baidu_ai",
+      "persistent_profile": true,
+      "seed_completed": true
+    },
+    {
+      "model": "wenxin_card",
+      "persistent_profile": true,
+      "seed_completed": true
+    }
+  ],
+  "services_active": [
+    "geo-content-worker",
+    "geo-content-api",
+    "geo-creation-studio",
+    "geo-creation-materials"
+  ],
+  "costs": {
+    "calls": 86,
+    "charged_cny": 1.0292020800000004,
+    "unsettled_cny": 0
+  },
+  "next_natural_day_observed": false,
+  "ui_changed": false
+}

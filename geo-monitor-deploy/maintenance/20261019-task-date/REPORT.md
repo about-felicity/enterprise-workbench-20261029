@@ -1,0 +1,11 @@
+# 豆包今日任务核对与单题授权恢复
+
+11:35收尾：豆包2授权重试第13题已于11:34:35完成，正文470字、11条信源，真实processed回执确认13/105，无待回传，worker已准备第14题。新增attempt1仅有一次send_click_intent_committed/send_tap_returned；原attempt0记录保留。准备恢复期间uiautomator出现RemoteDisconnected，自动重连和有限准备退避后恢复；不能把App当前页面正常误说成整个先前准备过程没有异常。原请求最初未确认的根因仍不能仅凭点击日志确定。新增受控preparation_failed日志已部署，仅重启豆包2；既有准备/发送只点击一次规则保持。
+
+用户要求昨天未完成不再补作今天目标，今天任务须跑完。实际查明豆包1今天原批次geo-panel-doubao1-20261019-090810-41d5da92的105条为21题各5轮、09:08:30–11:08:26实际发送，已回执入库105。另1条来自10月18日批次，旧database_counts仅按入库run.day统计，将它混入今天任务进度（106）。不能将这一条历史回传当作今天目标完成；也不能把105条今天真实采集说成昨天补采。
+
+daily_tasks.database_counts现在按来源和批次分组，豆包1/2再核对明确daily_date（旧批次回退服务器批次日期）；昨天回传不抵扣今天任务，历史数据仍保留，未改monitor_runs或删除记录。其他模型计数暂保持原语义，不在本次擅自改DeepSeek跨日任务。4项新增日期归属测试、44既有控制/每日回归通过，源码包117/117一致。备份服务器 /opt/monitor/geo-capture/maintenance/20261019-task-date/daily_tasks.before.py。
+
+豆包2今天批次geo-panel-doubao2-20261019-090003-88e4f45b此前12/105，13题“推荐一款防脱精华液”点击已记录但无确认。用户本轮明确回复“允许本题重新发送一次，继续跑完今天任务”。仅该题归档旧尝试至failed_attempts、capture_retries从0变1，保持纯问题原文和同一task_id、同一批次；新增operator_interrupted_send_recovery_scheduled作为授权边界。旧baseline未改，后续新baseline使用attempt1；不清队列、不批量重问。完整SQLite备份 before-user-authorized-retry-1792380378.sqlite。
+
+一次性恢复脚本deepseek-browser-deploy/retry_doubao2_authorized_once.py只作审计，不可重跑（已设原状态/attempt0/无授权事件断言）。先暂停daily actor避免抢占，只停止豆包2worker，锁定设备并复核原请求仍absent后事务更新，再启动原worker和daily actor。重试一度处于preparing/preparation_backoff，正在检查App新对话准备故障，未据此声称第13题或今天任务已完成。

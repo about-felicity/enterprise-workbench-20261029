@@ -1,0 +1,55 @@
+{
+  "article_topic": "可用资料的组织方式",
+  "article_purpose": "以同一问题组织已有资料",
+  "genre": "ranking",
+  "sections": [
+    {
+      "section_id": "AS-O0038",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "说明当前部分",
+      "purpose": "解释前提并承接下文",
+      "moves": [
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0034",
+      "anchors": [
+        "O0038",
+        "O0041"
+      ]
+    },
+    {
+      "section_id": "AS-O0042",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "说明当前部分",
+      "purpose": "解释前提并承接下文",
+      "moves": [
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0038",
+      "anchors": [
+        "O0042",
+        "O0045"
+      ]
+    },
+    {
+      "section_id": "AS-O0046",
+      "role": "subject",
+      "role_status": "inferred",
+      "topic": "说明当前部分",
+      "purpose": "解释前提并承接下文",
+      "moves": [
+        "explain",
+        "qualify"
+      ],
+      "after": "AS-O0042",
+      "anchors": [
+        "O0046",
+        "O0049"
+      ]
+    }
+  ]
+}

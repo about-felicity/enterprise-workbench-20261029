@@ -1,0 +1,13 @@
+{
+  "version": "article-structure-compact-v2",
+  "status": "structure_incomplete",
+  "degraded": true,
+  "sections": [],
+  "reason": "Recovery exhausted for chunk-003/recover-AS-O0062",
+  "input_sha256": "24c5937043cf4544a2e92279ae9b62e4bc0008b5a3b9347226f56829ffc1646a",
+  "source_ref": {
+    "writer_location": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer",
+    "sha256": "9ded1964286eadbdaf0ca426458e7eded612f4a49820c05f87f89d1bd1ea4bd7"
+  },
+  "sha256": "985fbe68505e3f78839473395bbb7aa086986c30b5b77337e62f72dcfac0bb09"
+}

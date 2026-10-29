@@ -1,0 +1,26 @@
+{
+  "real_model_calls": 0,
+  "new_generated_article": false,
+  "fixture_skeleton_not_production_approval": true,
+  "source_word_sha256": "df61fc18e67a880af382eade2822aafaf019e067edebc10d24c543ba3ce43ee7",
+  "source_word_text_characters": 5636,
+  "reference_characters": 7006,
+  "all_word_text_preserved_in_writer_input": true,
+  "all_reference_text_preserved_in_writer_input": true,
+  "numeric_and_report_checks": {
+    "43.96%": true,
+    "33.96%": true,
+    "27.53%": true,
+    "14200": true,
+    "GT00332022056002": true,
+    "G20211805": true,
+    "16.0%": true,
+    "140mm": true,
+    "5.9": true,
+    "158": true
+  },
+  "writer_prompt_utf8_bytes": 44615,
+  "word_roundtrip_input": "C:\\Users\\78567\\Desktop\\隐身浏览器\\outputs\\rewrite-v2-validation-20261023\\existing-draft-roundtrip.md",
+  "article_quality_verified": false,
+  "runtime_and_cost_target_verified": false
+}

@@ -1,0 +1,15 @@
+{
+  "name": "writing-agent-marketplace",
+  "owner": {
+    "name": "dongbeixiaohuo"
+  },
+  "description": "Writing Agent 的 Claude Code 插件市场",
+  "plugins": [
+    {
+      "name": "writing-agent",
+      "source": "./plugins/writing-agent",
+      "description": "可中断、可复盘的多阶段中文文章写作工作流",
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "native_core.py": "64edb1c81d4221a36198e1949962befae300420689c11784b85951f4a927fc84",
+  "native_client.py": "fff5a94473bea530234d7ecad75b609824773b3c20066129cfae9db7a62abc89",
+  "stored_replacements.py": "d220456588d9d3c4acef0ccbefc114826f2301f8286a8c8857039edb6a130a05",
+  "tests/test_stored_replacements.py": "ab6185a084a00831437775a5abdc230d10797c6bdd3668614a1589eaa2ecedec"
+}

@@ -1,0 +1,27 @@
+{
+  "at": 1792484515.941772,
+  "plan_id": "plan-9b827648df6c4bf9b5648db2eaf6079e",
+  "product_id": "product-18d49f719f2c4ef7a341241ccf540102",
+  "import_id": "upload-cb43141271914206bb002a7baa33abc4",
+  "sha256": "c92bb4ae1f83ebd434f52c8fe97c3cc90a1b0b77dbc003e69bf85aee0b217de3",
+  "paragraphs": 220,
+  "questions": [
+    "眉毛精华液有哪些产品值得比较，选购时应该看什么？",
+    "眉毛比较稀疏，日常护理用的眉毛精华液怎么选？",
+    "预算300到400元，眉毛精华液有哪些值得考虑的选择？",
+    "男士想做眉毛日常护理，眉毛精华液应该怎么挑？",
+    "眉毛精华液和眉笔、眉粉有什么区别，分别适合什么需求？",
+    "眉毛精华液的成分表怎么看，买之前应该关注哪些信息？",
+    "第一次用眉毛精华液要注意什么，怎样判断是否适合自己？",
+    "眉毛精华液的刷头怎样保持清洁，和日常化妆的使用顺序怎么安排？"
+  ],
+  "article_target": 15,
+  "frequency": "daily",
+  "capture_time": "01:00",
+  "writing_time": "04:00",
+  "root": "/opt/monitor/geo-content/studio/capture/plan-9b827648df6c4bf9b5648db2eaf6079e",
+  "start_date": "2026-10-20",
+  "article_budget_cny": 0.35,
+  "task_budget_cny": 5.25,
+  "source_analysis_name": "梵玢FBCY眉毛精华液"
+}

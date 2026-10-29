@@ -1,0 +1,14 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/Dashboard.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/Dashboard.tsx",
+      "sha256": "10def5bee8ca60ba328d22a9563a325e5cfa199c8d93e8050a6c7845111c3488"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/globals.css",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/globals.css",
+      "sha256": "fd3df399ce831914b461677f7bfab60d8e88f58709d799a3b01551c38b0afb99"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "run_id": "rank01-staged-20261023T120816-e50a98ac",
+  "same_job_id": "creation-1792575159-0a8f9221",
+  "same_scope": "plan-33e7bfca8bb6497da10b28f0444a693b",
+  "model_requests": [
+    {
+      "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-0",
+      "state": {
+        "payload_sha256": "063a5f9ff6bb895b8d95b76b4b0290ac76a1a688f5f74ffe8952b95454a9aa5c",
+        "model": "deepseek-flash",
+        "reservation": "2a5d8d0ed2498035459cbef3514eb5581746f2efcfff6639e6a609c2cf6bb99a",
+        "state": "INVALID_RESPONSE",
+        "failure_code": "output_incomplete",
+        "finish_reason": "length",
+        "finished_epoch": 1792728534.613847
+      },
+      "usage": {
+        "prompt_tokens": 11100,
+        "completion_tokens": 2399,
+        "total_tokens": 13499,
+        "prompt_tokens_details": {
+          "cached_tokens": 10880
+        },
+        "prompt_cache_hit_tokens": 10880,
+        "prompt_cache_miss_tokens": 220
+      },
+      "provider_request_id": "3752460a-89ac-43c4-9bc7-cf1d4897636b"
+    },
+    {
+      "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac/article/writer/structure_calls/attempt-1",
+      "state": {
+        "payload_sha256": "8d780c443d47f34071c5eaff87d4c80887235ad1d34c34a07eb24bb5e97b2983",
+        "model": "deepseek-flash",
+        "reservation": "3e244d86c3b3dae70f1d97458117098062620890fbf508094498df9070c9eb1e",
+        "state": "INVALID_RESPONSE",
+        "failure_code": "output_incomplete",
+        "finish_reason": "length",
+        "finished_epoch": 1792728548.3780162
+      },
+      "usage": {
+        "prompt_tokens": 11103,
+        "completion_tokens": 2400,
+        "total_tokens": 13503,
+        "prompt_tokens_details": {
+          "cached_tokens": 10880
+        },
+        "prompt_cache_hit_tokens": 10880,
+        "prompt_cache_miss_tokens": 223
+      },
+      "provider_request_id": "7ff5f0d7-339d-4be2-a333-6075dacb4b02"
+    }
+  ],
+  "model_request_count": 2,
+  "ledger_before": {
+    "rows": 2004,
+    "article_used_cny": 0.6531943200000002,
+    "scope_used_cny": 4.624786440000001,
+    "today_used_cny": 0,
+    "unknown": [
+      {
+        "id": "6d5c862ba8f2abdbfe249ce62ff3315eb8c9856d25e9fd78cff054cab9edade1",
+        "state": "reserved",
+        "reserved": 0.06948
+      },
+      {
+        "id": "beb0fe71fe2ca8d2cfe72fa6f123190e74881ffbc961c2a897363259d88c4f11",
+        "state": "reserved",
+        "reserved": 0.075934
+      },
+      {
+        "id": "bf5fc05faa9ccb415ae4ad245c4833b0f572cbcfc59571d5f8a6524b2a7e243c",
+        "state": "reserved",
+        "reserved": 0.070376
+      }
+    ],
+    "run_rows": [],
+    "run_used_cny": 0,
+    "run_known_cost_cny": 0,
+    "run_reserved_unknown_cny": 0
+  },
+  "ledger_after": {
+    "rows": 2006,
+    "article_used_cny": 0.67326852,
+    "scope_used_cny": 4.644860640000002,
+    "today_used_cny": 0.0200742,
+    "unknown": [
+      {
+        "id": "6d5c862ba8f2abdbfe249ce62ff3315eb8c9856d25e9fd78cff054cab9edade1",
+        "state": "reserved",
+        "reserved": 0.06948
+      },
+      {
+        "id": "beb0fe71fe2ca8d2cfe72fa6f123190e74881ffbc961c2a897363259d88c4f11",
+        "state": "reserved",
+        "reserved": 0.075934
+      },
+      {
+        "id": "bf5fc05faa9ccb415ae4ad245c4833b0f572cbcfc59571d5f8a6524b2a7e243c",
+        "state": "reserved",
+        "reserved": 0.070376
+      }
+    ],
+    "run_rows": [
+      {
+        "id": "2a5d8d0ed2498035459cbef3514eb5581746f2efcfff6639e6a609c2cf6bb99a",
+        "date": "2026-10-23",
+        "batch_date": "2026-10-21",
+        "category": "排行类",
+        "article": "1",
+        "stage": "writer",
+        "test": 0,
+        "state": "settled",
+        "reserved": 0.116714,
+        "charged": 0.0100336,
+        "usage": "{\"prompt_tokens\": 11100, \"completion_tokens\": 2399, \"total_tokens\": 13499, \"prompt_tokens_details\": {\"cached_tokens\": 10880}, \"prompt_cache_hit_tokens\": 10880, \"prompt_cache_miss_tokens\": 220}",
+        "created": 1792728520.4584365
+      },
+      {
+        "id": "3e244d86c3b3dae70f1d97458117098062620890fbf508094498df9070c9eb1e",
+        "date": "2026-10-23",
+        "batch_date": "2026-10-21",
+        "category": "排行类",
+        "article": "1",
+        "stage": "writer",
+        "test": 0,
+        "state": "settled",
+        "reserved": 0.11674799999999999,
+        "charged": 0.0100406,
+        "usage": "{\"prompt_tokens\": 11103, \"completion_tokens\": 2400, \"total_tokens\": 13503, \"prompt_tokens_details\": {\"cached_tokens\": 10880}, \"prompt_cache_hit_tokens\": 10880, \"prompt_cache_miss_tokens\": 223}",
+        "created": 1792728534.7492127
+      }
+    ],
+    "run_used_cny": 0.0200742,
+    "run_known_cost_cny": 0.0200742,
+    "run_reserved_unknown_cny": 0
+  },
+  "known_cost_cny": 0.0200742,
+  "reserved_unknown_cny": 0,
+  "incremental_remaining_cny": 7.1799258,
+  "historical_costs_preserved": true,
+  "pricing": "existing peak/off-peak usage rules; ledger estimate, not provider invoice",
+  "no_repairs": true
+}

@@ -1,0 +1,196 @@
+{
+  "at": "2026-10-21T13:32:02.725424+08:00",
+  "daily_plan": {
+    "enabled": true,
+    "time": "09:00",
+    "timezone": "Asia/Shanghai",
+    "models": [
+      "doubao1",
+      "doubao2",
+      "baidu_ai",
+      "wenxin_card",
+      "yuanbao"
+    ],
+    "daily_control_enabled": true
+  },
+  "daily_snapshot": [
+    {
+      "model": "doubao1",
+      "status": "complete",
+      "desired": "running",
+      "batch": "geo-panel-doubao1-20261021-090003-e1d20b1d",
+      "questions": 21,
+      "rounds": 5,
+      "interval": 45,
+      "target": 105,
+      "credited_pg": 105,
+      "error": null
+    },
+    {
+      "model": "doubao2",
+      "status": "complete",
+      "desired": "running",
+      "batch": "geo-panel-doubao2-20261021-090003-d8a0098e",
+      "questions": 21,
+      "rounds": 5,
+      "interval": 45,
+      "target": 105,
+      "credited_pg": 105,
+      "error": null
+    },
+    {
+      "model": "baidu_ai",
+      "status": "complete",
+      "desired": "running",
+      "batch": "geo-panel-baidu-ai-20261021-090004-f08e93e5",
+      "questions": 21,
+      "rounds": 5,
+      "interval": 60,
+      "target": 105,
+      "credited_pg": 105,
+      "error": null
+    },
+    {
+      "model": "wenxin_card",
+      "status": "running",
+      "desired": "running",
+      "batch": "geo-panel-wenxin-card-20261021-111957-122eb71b",
+      "questions": 21,
+      "rounds": 8,
+      "interval": 60,
+      "target": 168,
+      "credited_pg": 63,
+      "error": null
+    },
+    {
+      "model": "yuanbao",
+      "status": "complete",
+      "desired": "running",
+      "batch": "geo-panel-yuanbao-20261021-124729-95dc7a0c",
+      "questions": 21,
+      "rounds": 8,
+      "interval": 45,
+      "target": 168,
+      "credited_pg": 168,
+      "error": null
+    }
+  ],
+  "services": {
+    "geo-daily-dispatch.timer": "active",
+    "geo-daily-control": "active",
+    "geo-creation-studio": "active",
+    "geo-content-worker": "active",
+    "geo-content-api": "active",
+    "geo-deepseek-public-ingest": "active",
+    "geo-deepseek-upload-tunnel": "active",
+    "geo-deepseek-browser-test": "inactive",
+    "geo-deepseek-browser-receiver": "inactive"
+  },
+  "next_daily_timer": "Thu 2026-10-22 01:00:00 UTC",
+  "deepseek_backend": {
+    "backend": "android"
+  },
+  "creation_plans": [
+    {
+      "plan_id": "plan-6334cde812bd49549df6efd87a51e3b3",
+      "name": "焕颜计美白面霜全流程测试",
+      "enabled": true,
+      "capture_time": "13:51",
+      "writing_time": "13:51",
+      "frequency": "once",
+      "article_target": null,
+      "article_budget_cny": 0.35,
+      "task_budget_cny": 2.0,
+      "genre_targets": null
+    },
+    {
+      "plan_id": "plan-c32eb3793b6846e39f72cb25f9e06d1c",
+      "name": "姿生怡眼霜每日创作测试",
+      "enabled": true,
+      "capture_time": "01:00",
+      "writing_time": "04:00",
+      "frequency": "daily",
+      "article_target": 15,
+      "article_budget_cny": 0.35,
+      "task_budget_cny": 5.25,
+      "genre_targets": null
+    },
+    {
+      "plan_id": "plan-ed9d992f0299425ebe1782a9911869f9",
+      "name": "姿生怡鱼子酱面膜产品详解每日测试",
+      "enabled": true,
+      "capture_time": "01:00",
+      "writing_time": "04:00",
+      "frequency": "daily",
+      "article_target": 14,
+      "article_budget_cny": 0.35,
+      "task_budget_cny": 5.25,
+      "genre_targets": {
+        "排行类": 7,
+        "科普类": 7
+      }
+    },
+    {
+      "plan_id": "plan-9b827648df6c4bf9b5648db2eaf6079e",
+      "name": "梵玢FBCY眉毛精华液每日创作测试",
+      "enabled": true,
+      "capture_time": "01:00",
+      "writing_time": "04:00",
+      "frequency": "daily",
+      "article_target": 15,
+      "article_budget_cny": 0.35,
+      "task_budget_cny": 5.25,
+      "genre_targets": null
+    },
+    {
+      "plan_id": "plan-8b3d5a5ac21c4e5bbcd31dc407499208",
+      "name": "科熙本防脱精华测试1",
+      "enabled": true,
+      "capture_time": "16:55",
+      "writing_time": "17:12",
+      "frequency": "once",
+      "article_target": 4,
+      "article_budget_cny": 0.3,
+      "task_budget_cny": 1.2,
+      "genre_targets": null
+    },
+    {
+      "plan_id": "plan-fbb1750d49ea45cb8d3a490b44a19e32",
+      "name": "文心＋百度专用素材采集",
+      "enabled": true,
+      "capture_time": "01:00",
+      "writing_time": "04:00",
+      "frequency": "daily",
+      "article_target": null,
+      "article_budget_cny": 0.35,
+      "task_budget_cny": 10.0,
+      "genre_targets": null
+    },
+    {
+      "plan_id": "plan-94e086aa2c5243b89a4b20a201c066ed",
+      "name": null,
+      "enabled": false,
+      "capture_time": "01:00",
+      "writing_time": "04:00",
+      "frequency": null,
+      "article_target": null,
+      "article_budget_cny": null,
+      "task_budget_cny": null,
+      "genre_targets": null
+    }
+  ],
+  "mask_test": {
+    "at": 1792558776.7344413,
+    "count": 14,
+    "categories": {
+      "排行类": 7,
+      "科普类": 7
+    },
+    "budget_actual_cny": 0.9236933999999998,
+    "maximum_article_cny": 0.14423988000000001,
+    "export_sha256": "347021930bfcc94e07182fc3bda56704faecfe882ee840d3779c728af2941536",
+    "export_bytes": 1135862
+  },
+  "mask_day_status": "complete",
+  "read_only": true
+}

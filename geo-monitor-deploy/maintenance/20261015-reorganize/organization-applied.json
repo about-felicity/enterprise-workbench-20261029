@@ -1,0 +1,1122 @@
+{
+  "moves": 186,
+  "source_backup": "before-organization.zip",
+  "files": [
+    {
+      "source": "geo-monitor-deploy/acceptance-20261015.json",
+      "target": "geo-monitor-deploy/reports/20261015/acceptance-20261015.json",
+      "before_sha256": "e8095f6eb6e761102891e7fbea78543eae640140556d635e735b45c8492c24dd",
+      "after_sha256": "e8095f6eb6e761102891e7fbea78543eae640140556d635e735b45c8492c24dd"
+    },
+    {
+      "source": "geo-monitor-deploy/acceptance.py",
+      "target": "geo-monitor-deploy/tools/diagnostics/acceptance.py",
+      "before_sha256": "b7fc0d4d166fef5dd6cc84a0c136ad3c7e45909543aa5112966ec1fa7dd9c79c",
+      "after_sha256": "16830b958ff7d059c66138b4ccaababbbd4684b0ed8b0af8b382bbb902249606"
+    },
+    {
+      "source": "geo-monitor-deploy/analysis-progress-20261015-1140.json",
+      "target": "geo-monitor-deploy/reports/20261015/analysis-progress-20261015-1140.json",
+      "before_sha256": "8ca2a7904d6fd45034f7bd8a4b1c0dab175bc59de152e8c2687b38305e9b79cd",
+      "after_sha256": "8ca2a7904d6fd45034f7bd8a4b1c0dab175bc59de152e8c2687b38305e9b79cd"
+    },
+    {
+      "source": "geo-monitor-deploy/analysis-progress-20261015-1317.json",
+      "target": "geo-monitor-deploy/reports/20261015/analysis-progress-20261015-1317.json",
+      "before_sha256": "9b440a5d1003b5c1dbb36670c80635c49e01f263e191158eb138515bc049e5b7",
+      "after_sha256": "9b440a5d1003b5c1dbb36670c80635c49e01f263e191158eb138515bc049e5b7"
+    },
+    {
+      "source": "geo-monitor-deploy/ANALYSIS_PROGRESS_20261015_1140.md",
+      "target": "geo-monitor-deploy/docs/reports/ANALYSIS_PROGRESS_20261015_1140.md",
+      "before_sha256": "ff36b017f29e785c1ae070d3846e3647e3c5d9e2c3f320e0d16ecb771fe9b3be",
+      "after_sha256": "6e71dd3ac1a8ee9012ceafca8afe1aaedb9e41fefa24096735db2063b23dfbd3"
+    },
+    {
+      "source": "geo-monitor-deploy/ANALYSIS_PROGRESS_20261015_1317.md",
+      "target": "geo-monitor-deploy/docs/reports/ANALYSIS_PROGRESS_20261015_1317.md",
+      "before_sha256": "9dbc27ad75e4b57ed723fd04dcaa22fca79c7b9caf5bf8efa4f931552460e585",
+      "after_sha256": "fb1098e0f61be635ae89ca62216911b02546735f8d3f0b118ac38f7308311b33"
+    },
+    {
+      "source": "geo-monitor-deploy/check_dashboard_integration.py",
+      "target": "geo-monitor-deploy/tools/diagnostics/check_dashboard_integration.py",
+      "before_sha256": "bdc0c7053f15f21b060b35a64f0e27e7b36c35dd758ea96d3e77a4cb2133de03",
+      "after_sha256": "0e48858212fd17f8b547b29d3ccf86e4df1a5b967c4c067d913fe89c4ce661f3"
+    },
+    {
+      "source": "geo-monitor-deploy/check_deepseek_balance.py",
+      "target": "geo-monitor-deploy/tools/diagnostics/check_deepseek_balance.py",
+      "before_sha256": "c39223e47ebf669db13aa0e9aa459cf2d97f97244b813045611102af50a3a73f",
+      "after_sha256": "49e96fb59087ec1a46bc40bac5a80fb6e8bdb928380659b0298bb6e8a7eadd71"
+    },
+    {
+      "source": "geo-monitor-deploy/check_vps_geo_access.py",
+      "target": "geo-monitor-deploy/tools/diagnostics/check_vps_geo_access.py",
+      "before_sha256": "ca1662475dc87fbd04bf1cf014b418df3467ae3da80077ca41ac3488072c2beb",
+      "after_sha256": "d7d30570d882a2c27cf6bdec05dcf4f8209af776df14b9cc4b52d0a716e515ff"
+    },
+    {
+      "source": "geo-monitor-deploy/control-panel-release-final.zip",
+      "target": "geo-monitor-deploy/releases/20261015/control-panel-release-final.zip",
+      "before_sha256": "d09c282a719926625a3600ef350705baf46e0565acc63de049bf2a3b8aecbcbe",
+      "after_sha256": "d09c282a719926625a3600ef350705baf46e0565acc63de049bf2a3b8aecbcbe"
+    },
+    {
+      "source": "geo-monitor-deploy/control-panel-release.zip",
+      "target": "geo-monitor-deploy/releases/20261015/control-panel-release.zip",
+      "before_sha256": "85942e37aaa94eb5754589b97d2b0d9bbd925b61d7a384136d3ee6098fba96fe",
+      "after_sha256": "85942e37aaa94eb5754589b97d2b0d9bbd925b61d7a384136d3ee6098fba96fe"
+    },
+    {
+      "source": "geo-monitor-deploy/CONTROL_PANEL_GUIDE.md",
+      "target": "geo-monitor-deploy/docs/guides/CONTROL_PANEL_GUIDE.md",
+      "before_sha256": "f80413fb3ce1a83ae686105bb8b45c27f12c1dc29897fc59c8947cfa546b4ed5",
+      "after_sha256": "e2293052ecc37b83c552640c50b89d7b0c7c4334e865fd9c59ae5f51d075c205"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration-20261015.zip",
+      "target": "geo-monitor-deploy/releases/20261015/dashboard-integration-20261015.zip",
+      "before_sha256": "08e955113db94f4e176e6ba84d70dfa8fd88060a5d3f2dc8ac51a988b7310bbb",
+      "after_sha256": "08e955113db94f4e176e6ba84d70dfa8fd88060a5d3f2dc8ac51a988b7310bbb"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration-continuity.json",
+      "target": "geo-monitor-deploy/reports/20261015/dashboard-integration-continuity.json",
+      "before_sha256": "72f2cc0924ca951bc6878b43af2c40766e4543e64e9cb57a5ca5085cf9ca0a78",
+      "after_sha256": "72f2cc0924ca951bc6878b43af2c40766e4543e64e9cb57a5ca5085cf9ca0a78"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration-live.json",
+      "target": "geo-monitor-deploy/reports/20261015/dashboard-integration-live.json",
+      "before_sha256": "e952be46d5ee819741fc5d7f2cb03bd7f4a8bc10599e5eb680d2e121133b82d9",
+      "after_sha256": "e952be46d5ee819741fc5d7f2cb03bd7f4a8bc10599e5eb680d2e121133b82d9"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration-operations.zip",
+      "target": "geo-monitor-deploy/releases/20261015/dashboard-integration-operations.zip",
+      "before_sha256": "4489619058feae87b0ca33dba3f96fec2bf142f11c3701f0e19431edf097c71a",
+      "after_sha256": "4489619058feae87b0ca33dba3f96fec2bf142f11c3701f0e19431edf097c71a"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration-preview-desktop-final.png",
+      "target": "geo-monitor-deploy/reports/20261015/dashboard-integration-preview-desktop-final.png",
+      "before_sha256": "e70f2eb697ed90eb2ed9f7d5f389045dd76dd424f16a1667325ff825077ae991",
+      "after_sha256": "e70f2eb697ed90eb2ed9f7d5f389045dd76dd424f16a1667325ff825077ae991"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration-preview-desktop.png",
+      "target": "geo-monitor-deploy/reports/20261015/dashboard-integration-preview-desktop.png",
+      "before_sha256": "71069a76f0cc0b7e31af42458dc029a405f7e42274091141ba10df299773fcfb",
+      "after_sha256": "71069a76f0cc0b7e31af42458dc029a405f7e42274091141ba10df299773fcfb"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration-preview-mobile-final.png",
+      "target": "geo-monitor-deploy/reports/20261015/dashboard-integration-preview-mobile-final.png",
+      "before_sha256": "479b8ece466c621950df4df4fa7f9afbe34c829100283a5100aced37a939af8e",
+      "after_sha256": "479b8ece466c621950df4df4fa7f9afbe34c829100283a5100aced37a939af8e"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration-preview-mobile.png",
+      "target": "geo-monitor-deploy/reports/20261015/dashboard-integration-preview-mobile.png",
+      "before_sha256": "49fd4ca93b048ad49b58aa3833cc32385be580a28b6014574a7142e209513d81",
+      "after_sha256": "49fd4ca93b048ad49b58aa3833cc32385be580a28b6014574a7142e209513d81"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-vps-prefix-20261015.zip",
+      "target": "geo-monitor-deploy/releases/20261015/dashboard-vps-prefix-20261015.zip",
+      "before_sha256": "ae7808a80113f7a25771c8ec6ec8ea2bb73e4c4647baf404d48a6dad48e583ae",
+      "after_sha256": "ae7808a80113f7a25771c8ec6ec8ea2bb73e4c4647baf404d48a6dad48e583ae"
+    },
+    {
+      "source": "geo-monitor-deploy/DASHBOARD_INTEGRATION_20261015.md",
+      "target": "geo-monitor-deploy/docs/guides/DASHBOARD_INTEGRATION_20261015.md",
+      "before_sha256": "8fe22bbfd95c7951a933be8bfc850f4e4c122ea92af015738200e1a38a5cf152",
+      "after_sha256": "8fe22bbfd95c7951a933be8bfc850f4e4c122ea92af015738200e1a38a5cf152"
+    },
+    {
+      "source": "geo-monitor-deploy/deploy_dashboard_integration.py",
+      "target": "geo-monitor-deploy/tools/deployment/deploy_dashboard_integration.py",
+      "before_sha256": "82f7f224c6e7271eac9d891a5e20667243b48ba971c4f7a2fce57ee7f25956df",
+      "after_sha256": "664a4672eed2434fc3b689268f208a960cc95ed3b586b4733d1b2b99c2bd83e2"
+    },
+    {
+      "source": "geo-monitor-deploy/deploy_vps_frontend.py",
+      "target": "geo-monitor-deploy/tools/deployment/deploy_vps_frontend.py",
+      "before_sha256": "075df1876d56d1dd7629acf632d505b02e65fa9b701613419324e3fdcce45f8a",
+      "after_sha256": "50cc6315647e100d86d998c67713ad6b4fb6363d06890505e8f92f4e0c8f4730"
+    },
+    {
+      "source": "geo-monitor-deploy/doubao-soak2h-1792030883-deadline_pause.json",
+      "target": "geo-monitor-deploy/reports/20261015/doubao-soak2h-1792030883-deadline_pause.json",
+      "before_sha256": "4428b302c5e3425aa856976f17467d20c6583a1d82232557d763ac34d9bbb0ec",
+      "after_sha256": "4428b302c5e3425aa856976f17467d20c6583a1d82232557d763ac34d9bbb0ec"
+    },
+    {
+      "source": "geo-monitor-deploy/doubao-soak2h-1792030883-metrics.jsonl",
+      "target": "geo-monitor-deploy/reports/20261015/doubao-soak2h-1792030883-metrics.jsonl",
+      "before_sha256": "166c7b65152e8df82fcb369d7b7625161d52a6ee3d7e727bde14006c147795b7",
+      "after_sha256": "166c7b65152e8df82fcb369d7b7625161d52a6ee3d7e727bde14006c147795b7"
+    },
+    {
+      "source": "geo-monitor-deploy/doubao-soak2h-1792030883-report.json",
+      "target": "geo-monitor-deploy/reports/20261015/doubao-soak2h-1792030883-report.json",
+      "before_sha256": "ecf03c9887b87ef21a700876a4be97f1ec2668cb63ebe998e967e96b45ad0d78",
+      "after_sha256": "ecf03c9887b87ef21a700876a4be97f1ec2668cb63ebe998e967e96b45ad0d78"
+    },
+    {
+      "source": "geo-monitor-deploy/doubao-soak2h-1792030883-status.json",
+      "target": "geo-monitor-deploy/reports/20261015/doubao-soak2h-1792030883-status.json",
+      "before_sha256": "ecf03c9887b87ef21a700876a4be97f1ec2668cb63ebe998e967e96b45ad0d78",
+      "after_sha256": "ecf03c9887b87ef21a700876a4be97f1ec2668cb63ebe998e967e96b45ad0d78"
+    },
+    {
+      "source": "geo-monitor-deploy/doubao-soak2h-1792030883-summary.json",
+      "target": "geo-monitor-deploy/reports/20261015/doubao-soak2h-1792030883-summary.json",
+      "before_sha256": "697959b8ddc5c68ea8e0352f23c29b875f7da69c2412e3c50bcf8506a4261336",
+      "after_sha256": "697959b8ddc5c68ea8e0352f23c29b875f7da69c2412e3c50bcf8506a4261336"
+    },
+    {
+      "source": "geo-monitor-deploy/doubao-soak2h-1792030883-verified.jsonl",
+      "target": "geo-monitor-deploy/reports/20261015/doubao-soak2h-1792030883-verified.jsonl",
+      "before_sha256": "2e2e885b0122238ebfaddcc1d0467a0e857f750eec3ea1712cde299a79e00c60",
+      "after_sha256": "2e2e885b0122238ebfaddcc1d0467a0e857f750eec3ea1712cde299a79e00c60"
+    },
+    {
+      "source": "geo-monitor-deploy/DOUBAO_2H_REPORT_20261015.md",
+      "target": "geo-monitor-deploy/docs/reports/DOUBAO_2H_REPORT_20261015.md",
+      "before_sha256": "ce1f312af6fc4913d331b87a6f99eacb12662e33d362a7574c8dc740cf9954eb",
+      "after_sha256": "552be69dedd22bce0e18e91b61c339c9ec5b368be925210c8ced8437a0739321"
+    },
+    {
+      "source": "geo-monitor-deploy/DOUBAO_2H_SOAK_20261015.md",
+      "target": "geo-monitor-deploy/docs/reports/DOUBAO_2H_SOAK_20261015.md",
+      "before_sha256": "2068fb11de065258b3d43da32dd547947923ddc421aa26fac5237e506bb33047",
+      "after_sha256": "4fd3dba8504f361ce0e6533363fa14d3f984f9c4a9a5bdfbf8792b6f2ef53cc2"
+    },
+    {
+      "source": "geo-monitor-deploy/export_native_soak_deadline_note.py",
+      "target": "geo-monitor-deploy/tools/exports/export_native_soak_deadline_note.py",
+      "before_sha256": "e192e9277d96455f1e73b61d9e16877255ce56e86d5d186cbe13ae8526049f09",
+      "after_sha256": "129f62721e0d7e20f81ab9d064094ff85e7fa7567fb015d3778ad419f16612aa"
+    },
+    {
+      "source": "geo-monitor-deploy/export_native_soak_report.py",
+      "target": "geo-monitor-deploy/tools/exports/export_native_soak_report.py",
+      "before_sha256": "baa3fd2fedac9d8755fe213fe29472c83ecdb62d0e8cc99e71a896260b0fb056",
+      "after_sha256": "0e7e64b93a5cd1a8a8641c35a3c758503c76513fa7f2481d05435c0cd1bcf0df"
+    },
+    {
+      "source": "geo-monitor-deploy/export_soak1h_report.py",
+      "target": "geo-monitor-deploy/tools/exports/export_soak1h_report.py",
+      "before_sha256": "d9f966db26edae7dccdb01ff2aa349e98b08fef5b30fc5767a70377dd4dad19a",
+      "after_sha256": "d935abe9810b3746a2212e1b6a9700876a9d017ddb167cee01c2944596219f3c"
+    },
+    {
+      "source": "geo-monitor-deploy/finalize.py",
+      "target": "geo-monitor-deploy/tools/deployment/finalize.py",
+      "before_sha256": "63c636bd86583f92613d9f18d763cf6ad2f329c0a9cb8c8118ff17d2698e000a",
+      "after_sha256": "2ecfd9b51da47015f4a13c804622d17ee8ef319c2070d52da7d7bf8fb8eb42c6"
+    },
+    {
+      "source": "geo-monitor-deploy/geo-dashboard-source-20261015.tar.gz",
+      "target": "geo-monitor-deploy/releases/20261015/geo-dashboard-source-20261015.tar.gz",
+      "before_sha256": "13440480a8b10f6cbf9a39dc242e1ee9b730bd5e5ad01f0e55f8e26838eddb5a",
+      "after_sha256": "13440480a8b10f6cbf9a39dc242e1ee9b730bd5e5ad01f0e55f8e26838eddb5a"
+    },
+    {
+      "source": "geo-monitor-deploy/GEO_1H_REPORT_20261015.md",
+      "target": "geo-monitor-deploy/docs/reports/GEO_1H_REPORT_20261015.md",
+      "before_sha256": "431d06e50877ffdc6da62a2989a6b0fd6f10a1df4c44274a6c731e60ccf4be98",
+      "after_sha256": "8d79cf68491da8a0cdba06b53b673c811626e0d052c8890d04017bc00c012ca6"
+    },
+    {
+      "source": "geo-monitor-deploy/inspect_analysis_progress.py",
+      "target": "geo-monitor-deploy/tools/diagnostics/inspect_analysis_progress.py",
+      "before_sha256": "7b11cfc1f92cff102ef8d7572e98621db6e2476cd348f6a87630f884d3e143d6",
+      "after_sha256": "3755d75155cae5a79459edc4f520558b28a0f419d279d3836587c205c0f085bf"
+    },
+    {
+      "source": "geo-monitor-deploy/inspect_receiver_config.py",
+      "target": "geo-monitor-deploy/tools/diagnostics/inspect_receiver_config.py",
+      "before_sha256": "06c9ddc11f6319efdf5fd10ac87973fe0ba8d7d2389ff3c5cf6dbcb3fad1ff21",
+      "after_sha256": "5ddaac691c9c9df490a709af82bf1ceb389591705e800873bee955cdac577c77"
+    },
+    {
+      "source": "geo-monitor-deploy/install_receipt_fix.py",
+      "target": "geo-monitor-deploy/tools/deployment/install_receipt_fix.py",
+      "before_sha256": "af2ea09e3cb199c1f7eb29f9addbfb9f10b9820ae22d53809438fae91b91cb62",
+      "after_sha256": "cbb654f7680cad2728c4cb156959ef64dab4f8288fd2164bf04b8df3234ba190"
+    },
+    {
+      "source": "geo-monitor-deploy/migrate_session.py",
+      "target": "geo-monitor-deploy/archive/one_off/migrate_session.py",
+      "before_sha256": "2c1682b85d107a9de6740703e71fc20e362e0db1480fcd1f43ff6106156ce74b",
+      "after_sha256": "3d94ba371c805874f743385e3a58ee81adb37e3493287ea4b01addb8e2207ea5"
+    },
+    {
+      "source": "geo-monitor-deploy/native-soak-20261015.zip",
+      "target": "geo-monitor-deploy/releases/20261015/native-soak-20261015.zip",
+      "before_sha256": "ce399b8ae1cee285919549b1afff109ee66f20c6d6dd1bf99d8c5977712ea1ea",
+      "after_sha256": "ce399b8ae1cee285919549b1afff109ee66f20c6d6dd1bf99d8c5977712ea1ea"
+    },
+    {
+      "source": "geo-monitor-deploy/panel-browser-report.json",
+      "target": "geo-monitor-deploy/reports/20261015/panel-browser-report.json",
+      "before_sha256": "a4799f82d96aa405effc52a9cd94e196aae2ae19eeb9adc80fe2b3b52a4224c7",
+      "after_sha256": "a4799f82d96aa405effc52a9cd94e196aae2ae19eeb9adc80fe2b3b52a4224c7"
+    },
+    {
+      "source": "geo-monitor-deploy/panel-desktop-final.png",
+      "target": "geo-monitor-deploy/reports/20261015/panel-desktop-final.png",
+      "before_sha256": "b7ff45b6f494fd0806dbf7934c3e19a0ec64e87eeefe231f1d6d7b9672244638",
+      "after_sha256": "b7ff45b6f494fd0806dbf7934c3e19a0ec64e87eeefe231f1d6d7b9672244638"
+    },
+    {
+      "source": "geo-monitor-deploy/panel-desktop.png",
+      "target": "geo-monitor-deploy/reports/20261015/panel-desktop.png",
+      "before_sha256": "5303e2692820213e0f80c48ccd6c3e42a778b8befc9a58da36730790158ad66b",
+      "after_sha256": "5303e2692820213e0f80c48ccd6c3e42a778b8befc9a58da36730790158ad66b"
+    },
+    {
+      "source": "geo-monitor-deploy/panel-mobile.png",
+      "target": "geo-monitor-deploy/reports/20261015/panel-mobile.png",
+      "before_sha256": "64311d03c940204f4fa47929d391d17d79d8f0c078d640f08d8a11700aff7cf7",
+      "after_sha256": "64311d03c940204f4fa47929d391d17d79d8f0c078d640f08d8a11700aff7cf7"
+    },
+    {
+      "source": "geo-monitor-deploy/panel_browser_check.py",
+      "target": "geo-monitor-deploy/tools/diagnostics/panel_browser_check.py",
+      "before_sha256": "b49b6181e76e0efc7f90d01af44328a33ff30bd49e5ef1c9a07cd9901bfca26c",
+      "after_sha256": "a82137dd871044e05cda9062d97d737816928f7993680b06c9838ee228ffce8a"
+    },
+    {
+      "source": "geo-monitor-deploy/panel_visual_check.py",
+      "target": "geo-monitor-deploy/tools/diagnostics/panel_visual_check.py",
+      "before_sha256": "555c6e347bf57d6475a29ee16764d314667f2d99404bd3bec4edb74d1b0b9c6f",
+      "after_sha256": "199704b9b9437b67396ab3d9203b892a2a8fb4e54adc578c38558ce2233545b7"
+    },
+    {
+      "source": "geo-monitor-deploy/README_20261015.md",
+      "target": "geo-monitor-deploy/docs/reports/README_20261015.md",
+      "before_sha256": "985642f997f98cfeabb5c9fb6db84276dd8645510544476d5656a6a5ac225b51",
+      "after_sha256": "3835ac67345614beccf422f5e20df394f169199f2c8414e13ac03c2ffa775687"
+    },
+    {
+      "source": "geo-monitor-deploy/receipt-fix.zip",
+      "target": "geo-monitor-deploy/releases/20261015/receipt-fix.zip",
+      "before_sha256": "b05e57bc5c330d0f50e9c8eaafd0ca54d572225aa3c15cfebb7eff4c959b1eaa",
+      "after_sha256": "b05e57bc5c330d0f50e9c8eaafd0ca54d572225aa3c15cfebb7eff4c959b1eaa"
+    },
+    {
+      "source": "geo-monitor-deploy/release-20261015.zip",
+      "target": "geo-monitor-deploy/releases/20261015/release-20261015.zip",
+      "before_sha256": "c98b2e80a7f47c1a0121aaab231dc6162e48aad35ba7b2b024222609c0af0be6",
+      "after_sha256": "c98b2e80a7f47c1a0121aaab231dc6162e48aad35ba7b2b024222609c0af0be6"
+    },
+    {
+      "source": "geo-monitor-deploy/release-final-20261015.zip",
+      "target": "geo-monitor-deploy/releases/20261015/release-final-20261015.zip",
+      "before_sha256": "8bb22ac16564d7144a49ea28c05b1622ffaf4f8fc5ec0e1c9687abc6083cf9ad",
+      "after_sha256": "8bb22ac16564d7144a49ea28c05b1622ffaf4f8fc5ec0e1c9687abc6083cf9ad"
+    },
+    {
+      "source": "geo-monitor-deploy/resume_search.py",
+      "target": "geo-monitor-deploy/archive/one_off/resume_search.py",
+      "before_sha256": "e7634a3c0fa6fa5928f364c2a744caf8c6407f1d8dabfb4c8f699159c1cdd68a",
+      "after_sha256": "afeddcd59c161389423298b77135905b6cd5ab530e098aede0af2a36c8e7c71e"
+    },
+    {
+      "source": "geo-monitor-deploy/soak1h-1792029907-manifest.json",
+      "target": "geo-monitor-deploy/reports/20261015/soak1h-1792029907-manifest.json",
+      "before_sha256": "41e5d49b0a88faa61ae50d3ce7f202e63ce05a18bd74902a3a03e3de3390c485",
+      "after_sha256": "41e5d49b0a88faa61ae50d3ce7f202e63ce05a18bd74902a3a03e3de3390c485"
+    },
+    {
+      "source": "geo-monitor-deploy/soak1h-1792029907-metrics.jsonl",
+      "target": "geo-monitor-deploy/reports/20261015/soak1h-1792029907-metrics.jsonl",
+      "before_sha256": "c72bb99fa323786e522e2876ece3414adecb29ff888c580b4c86475e6b195373",
+      "after_sha256": "c72bb99fa323786e522e2876ece3414adecb29ff888c580b4c86475e6b195373"
+    },
+    {
+      "source": "geo-monitor-deploy/soak1h-1792029907-report.json",
+      "target": "geo-monitor-deploy/reports/20261015/soak1h-1792029907-report.json",
+      "before_sha256": "1ad5c1bf34298e6005014e6edf6001f0a01190899e8a6108c6cc71a3a638966c",
+      "after_sha256": "1ad5c1bf34298e6005014e6edf6001f0a01190899e8a6108c6cc71a3a638966c"
+    },
+    {
+      "source": "geo-monitor-deploy/soak1h-1792029907-summary.json",
+      "target": "geo-monitor-deploy/reports/20261015/soak1h-1792029907-summary.json",
+      "before_sha256": "746409fae57f9182844b847fb1b902ac8ed07ca71637bb19a531801a3f8febd0",
+      "after_sha256": "746409fae57f9182844b847fb1b902ac8ed07ca71637bb19a531801a3f8febd0"
+    },
+    {
+      "source": "geo-monitor-deploy/soak1h-1792029907-verified.jsonl",
+      "target": "geo-monitor-deploy/reports/20261015/soak1h-1792029907-verified.jsonl",
+      "before_sha256": "d77308afdad67bd7deded0cec084f155c3f3a26cb2ef156ccf23efdb7129a862",
+      "after_sha256": "d77308afdad67bd7deded0cec084f155c3f3a26cb2ef156ccf23efdb7129a862"
+    },
+    {
+      "source": "geo-monitor-deploy/start_native_soak.py",
+      "target": "geo-monitor-deploy/tools/soak/start_native_soak.py",
+      "before_sha256": "7f21038ea637890cd701bea0af382bd0a9e71af812cf2b57b4ae93e86fc19029",
+      "after_sha256": "816b00f2fd55ae6fc6bf7c10efce7e8c4065f15093263a0b605fe96447c4dc19"
+    },
+    {
+      "source": "geo-monitor-deploy/test_capture_bridge.py",
+      "target": "geo-monitor-deploy/tests/test_capture_bridge.py",
+      "before_sha256": "f6e5e07b2943064b440dfeb98a1b710badf2840cc1b9c00effd005d6fa9ee35e",
+      "after_sha256": "78d605c10a30ed2833703f42f429e6b8e56398c28324e214b9dc1643533599b6"
+    },
+    {
+      "source": "geo-monitor-deploy/test_control_panel.py",
+      "target": "geo-monitor-deploy/tests/test_control_panel.py",
+      "before_sha256": "5f7bf61a31a5d949ab0d15339fa3b74f5949b12935e1506e5f768930c833107e",
+      "after_sha256": "63f6f0f34904f17653c8d79f3c10b478e385d2bb29cfc268d91c8030db689f6c"
+    },
+    {
+      "source": "geo-monitor-deploy/test_native_soak.py",
+      "target": "geo-monitor-deploy/tests/test_native_soak.py",
+      "before_sha256": "1905123a924ba60115adf31032f722894c6c4fbe5c125b4ff2b7daf12b8c3e8b",
+      "after_sha256": "e0a09866bbee6474c9f62074af6f53c7df13b86379ae73516dfa74be4cfd27c5"
+    },
+    {
+      "source": "geo-monitor-deploy/vps-access-continuity.json",
+      "target": "geo-monitor-deploy/reports/20261015/vps-access-continuity.json",
+      "before_sha256": "58a40d2962d20190411d622fdf71c55850263bfeb74d1f2279098b0210b87393",
+      "after_sha256": "58a40d2962d20190411d622fdf71c55850263bfeb74d1f2279098b0210b87393"
+    },
+    {
+      "source": "geo-monitor-deploy/vps-geo-control-desktop.png",
+      "target": "geo-monitor-deploy/reports/20261015/vps-geo-control-desktop.png",
+      "before_sha256": "2382531562d4e3e24b60e7c96645583cec27dc2f2f08e7b88d06554043ecf542",
+      "after_sha256": "2382531562d4e3e24b60e7c96645583cec27dc2f2f08e7b88d06554043ecf542"
+    },
+    {
+      "source": "geo-monitor-deploy/vps-geo-control-mobile.png",
+      "target": "geo-monitor-deploy/reports/20261015/vps-geo-control-mobile.png",
+      "before_sha256": "d24dc9fb5c45d9cf494ef02b3ac86604a346eab07fb04bec318b3fd7641ab99f",
+      "after_sha256": "d24dc9fb5c45d9cf494ef02b3ac86604a346eab07fb04bec318b3fd7641ab99f"
+    },
+    {
+      "source": "geo-monitor-deploy/vps-geo-control-report.json",
+      "target": "geo-monitor-deploy/reports/20261015/vps-geo-control-report.json",
+      "before_sha256": "a0cc9779fc3d98bb7d96a7ab01ae99493b09cbfdd0f891b7edd20a25a7eb65ef",
+      "after_sha256": "a0cc9779fc3d98bb7d96a7ab01ae99493b09cbfdd0f891b7edd20a25a7eb65ef"
+    },
+    {
+      "source": "geo-monitor-deploy/vps-geo-operations-20261015-final.zip",
+      "target": "geo-monitor-deploy/releases/20261015/vps-geo-operations-20261015-final.zip",
+      "before_sha256": "d8c4b00f4c3934074079ecc2d0bdc566aa04bde631dac22776ce30ec9c28b712",
+      "after_sha256": "d8c4b00f4c3934074079ecc2d0bdc566aa04bde631dac22776ce30ec9c28b712"
+    },
+    {
+      "source": "geo-monitor-deploy/vps-geo-operations-20261015.zip",
+      "target": "geo-monitor-deploy/releases/20261015/vps-geo-operations-20261015.zip",
+      "before_sha256": "fe1a255b84c83e1d6fbb6c6773fef6f945005cbe38525b139cf2b072d2b28a33",
+      "after_sha256": "fe1a255b84c83e1d6fbb6c6773fef6f945005cbe38525b139cf2b072d2b28a33"
+    },
+    {
+      "source": "geo-monitor-deploy/VPS_GEO_ACCESS_20261015.md",
+      "target": "geo-monitor-deploy/docs/guides/VPS_GEO_ACCESS_20261015.md",
+      "before_sha256": "9c164a5af68999b000b794fc2fc1b18058370977759bdda47bb840474e448f9e",
+      "after_sha256": "74e84b7d0f5c62fe2a1dac8b1c044ffa0fe0cfd6efe344b302184da79ec3a750"
+    },
+    {
+      "source": "geo-monitor-deploy/wenxin-network-fix-20261015.zip",
+      "target": "geo-monitor-deploy/releases/20261015/wenxin-network-fix-20261015.zip",
+      "before_sha256": "890056a4aa63dac12c28eea28531c0ce90f77e13b65153d18048c6ad04f94be0",
+      "after_sha256": "890056a4aa63dac12c28eea28531c0ce90f77e13b65153d18048c6ad04f94be0"
+    },
+    {
+      "source": "geo-monitor-deploy/WENXIN_NETWORK_CHANGE_20261015.md",
+      "target": "geo-monitor-deploy/docs/reports/WENXIN_NETWORK_CHANGE_20261015.md",
+      "before_sha256": "7fd5517e5b3a336484d09839a175d65789ca22402ad70c0328f5fb207ca42028",
+      "after_sha256": "7fd5517e5b3a336484d09839a175d65789ca22402ad70c0328f5fb207ca42028"
+    },
+    {
+      "source": "redroid-deploy/acceptance_snapshot.py",
+      "target": "redroid-deploy/tools/diagnostics/acceptance_snapshot.py",
+      "before_sha256": "2605fe42a89da4cc5ca54bb7bfaeb93cc15755a414fc28f4c4bd40a87baa0d25",
+      "after_sha256": "92b5533e5d4b809a8d33bd12db4edaa71aeec153adae05227b3b1bf40eaf8904"
+    },
+    {
+      "source": "redroid-deploy/ACCOUNT2.md",
+      "target": "redroid-deploy/docs/operations/ACCOUNT2.md",
+      "before_sha256": "8f7a1066ede5d358b772cb912213ae10b153125cd189843674821d4b84ab9b70",
+      "after_sha256": "8f7a1066ede5d358b772cb912213ae10b153125cd189843674821d4b84ab9b70"
+    },
+    {
+      "source": "redroid-deploy/ACCOUNT2_BLOCKER_HANDOFF_20261014.md",
+      "target": "redroid-deploy/docs/history/ACCOUNT2_BLOCKER_HANDOFF_20261014.md",
+      "before_sha256": "e9f12c52357aa9264088206e40a94d30f028be5ddd06ae586dca569548d015c9",
+      "after_sha256": "e9f12c52357aa9264088206e40a94d30f028be5ddd06ae586dca569548d015c9"
+    },
+    {
+      "source": "redroid-deploy/account2_error_menu.py",
+      "target": "redroid-deploy/tools/diagnostics/account2_error_menu.py",
+      "before_sha256": "c9de88c900432d563029e59b511e1cb316ca105af4de82421c2af4e0afc155b2",
+      "after_sha256": "391cde5765675659c3da286f860ee8bf50a3d5ca26a9c25233b1e503f3d6539c"
+    },
+    {
+      "source": "redroid-deploy/ACCOUNT2_RECOVERY_20261014.md",
+      "target": "redroid-deploy/docs/history/ACCOUNT2_RECOVERY_20261014.md",
+      "before_sha256": "d85bed35ee9e8998a3ffb1dc62d568a730c49ce9d5e51e07062df50901a43fad",
+      "after_sha256": "d85bed35ee9e8998a3ffb1dc62d568a730c49ce9d5e51e07062df50901a43fad"
+    },
+    {
+      "source": "redroid-deploy/account2_recovery_acceptance.py",
+      "target": "redroid-deploy/tools/diagnostics/account2_recovery_acceptance.py",
+      "before_sha256": "faee45d293c5c7d256fc60363092c1e8809907416b54ff9ee1ae6a381a513584",
+      "after_sha256": "36dc6109867912d61562927de8504a7bc9cec8a5149cbad998066060eb959356"
+    },
+    {
+      "source": "redroid-deploy/account2_ui.py",
+      "target": "redroid-deploy/tools/diagnostics/account2_ui.py",
+      "before_sha256": "68e1cbd090c3103f8a98ed05969cfb464cd7851da1fdc3ea774da4f32bb554b8",
+      "after_sha256": "bcaf7dcb1694e5b309c95e809dc1b25c6b12ae286f0dfc5dad6c65b696ebaaed"
+    },
+    {
+      "source": "redroid-deploy/apply_account1_keva_workaround.py",
+      "target": "redroid-deploy/archive/one_off/apply_account1_keva_workaround.py",
+      "before_sha256": "743b7df0caf7cd434287ca035d27ea72e0f8c89ec67407652d36dd0edf374d2f",
+      "after_sha256": "e2b9f81d25a7c57ddb85e445c2e1f819529c231ecde8dc1ab3e12c33aaf7e91f"
+    },
+    {
+      "source": "redroid-deploy/apply_account2_keva_workaround.py",
+      "target": "redroid-deploy/archive/one_off/apply_account2_keva_workaround.py",
+      "before_sha256": "c0f52a6ceef98dad8f75d4aebff9d3c78a07a0c80db13848501e4ef8689391a1",
+      "after_sha256": "5fc7b5cd0a7e895a4466901c26a03f16851bfef510a510474186318aa08488ef"
+    },
+    {
+      "source": "redroid-deploy/audit_messages.py",
+      "target": "redroid-deploy/tools/diagnostics/audit_messages.py",
+      "before_sha256": "e2633eb2bec0b7fbb9712f0d3fd4f153a258037aaac11c38f9374dc7fb5e7ab1",
+      "after_sha256": "7fa7353184b54a4b83d970d7fe9c524e13e5ca16f50185b40d1ec1fab1b422bb"
+    },
+    {
+      "source": "redroid-deploy/backup_android13_volume.py",
+      "target": "redroid-deploy/tools/deployment/backup_android13_volume.py",
+      "before_sha256": "1b54231ff3a33ca9f398001f71f785b55ad667ff266be7666c47377611eb1e3e",
+      "after_sha256": "02de16316331042155cab9bfae91d984c21811f78c87e3c434688bc2b435ccab"
+    },
+    {
+      "source": "redroid-deploy/backup_hpe14_release.py",
+      "target": "redroid-deploy/tools/deployment/backup_hpe14_release.py",
+      "before_sha256": "3102e1640044199189f3ac50f90693c79e374e104c5d3334b61e4fd03646217b",
+      "after_sha256": "bffd271b9557e33d3c6e93b27d1c04ad40514f915530e249d41e518339572b9c"
+    },
+    {
+      "source": "redroid-deploy/build_hpe14_13.py",
+      "target": "redroid-deploy/tools/deployment/build_hpe14_13.py",
+      "before_sha256": "5da8220670fff1f142ae4eee379a00e241ccd223e6dc8430649d75c648bbb0ce",
+      "after_sha256": "7c41143886a2edc0731d5801849461e7313b263a673ba31e3a270895d3b1b304"
+    },
+    {
+      "source": "redroid-deploy/build_hpe14_test.py",
+      "target": "redroid-deploy/tools/deployment/build_hpe14_test.py",
+      "before_sha256": "f267f3e0068ba2612a53716f1fec1419b4c048db11667e1d22a664b2fa3ed086",
+      "after_sha256": "dec685f6183cf16c615f09459ccad53a6f864938a478836e7a2d996ee69d497f"
+    },
+    {
+      "source": "redroid-deploy/build_keva_workaround.py",
+      "target": "redroid-deploy/tools/deployment/build_keva_workaround.py",
+      "before_sha256": "275371bd7cc29d1cbc0480f4dc78c0ed6357ec10610c366114cde871a892c525",
+      "after_sha256": "eeb003bfb0be7362b4081989561a7e6630ed8fa637afb54c78eda17ae42a5af6"
+    },
+    {
+      "source": "redroid-deploy/capture_hpe_errors.py",
+      "target": "redroid-deploy/tools/diagnostics/capture_hpe_errors.py",
+      "before_sha256": "5808061413d1e6d202f338a632e4ba40b5b92bb625d67a599298da4e2e85f809",
+      "after_sha256": "d899b98153b3804028fb913f8fe4acd33af6a0b2272ac3a5839a3f3e58f2e2b8"
+    },
+    {
+      "source": "redroid-deploy/check_account2.py",
+      "target": "redroid-deploy/tools/diagnostics/check_account2.py",
+      "before_sha256": "3efdcada0121eb75868dcef54bccd0c8992ebfd3bd70f5a5dd779d8979716946",
+      "after_sha256": "eeba4c1f61ab9589eeccb335c561caf5fcac0d2b929d5e13a15c206ad7983151"
+    },
+    {
+      "source": "redroid-deploy/check_account2_fresh_chat.py",
+      "target": "redroid-deploy/tools/diagnostics/check_account2_fresh_chat.py",
+      "before_sha256": "ce961747fe34c753108f5bd1790f067287892ed9a91c65a75da1a103e54834f6",
+      "after_sha256": "afe1fa1de41a90facfd97af81f8ada9924e87f465d1c0d0c1f590163a8923abc"
+    },
+    {
+      "source": "redroid-deploy/check_current_dual_batches.py",
+      "target": "redroid-deploy/tools/diagnostics/check_current_dual_batches.py",
+      "before_sha256": "0a68cfbe0106b7d4ab42a073882fe979b07266943d7d1f0f48ed0cf09f587d17",
+      "after_sha256": "957f7c22c89c1a8a20cd222a18a756d9c7d6c95163316ac4a0a718a30809bd81"
+    },
+    {
+      "source": "redroid-deploy/check_image_backup.py",
+      "target": "redroid-deploy/tools/diagnostics/check_image_backup.py",
+      "before_sha256": "2c554b3e207ed236b8ecd5e39c154d4de29866b931be7c854f1cfaa96b6484a0",
+      "after_sha256": "0674ebaac6710c43ce324c5dfc1b8dc8e03efa665c0fdb4fea6360cf0ec92826"
+    },
+    {
+      "source": "redroid-deploy/check_runtime_isolation.py",
+      "target": "redroid-deploy/tools/diagnostics/check_runtime_isolation.py",
+      "before_sha256": "2f8b948d816b00b287d09691bebef7b55f0d48c306957ad4f629c373cb6f6f95",
+      "after_sha256": "27b53efbe4a5816d7dc65c3dda60909f5ae06d6c99726c8342cf9446c9a80b6e"
+    },
+    {
+      "source": "redroid-deploy/check_two_accounts.py",
+      "target": "redroid-deploy/tools/diagnostics/check_two_accounts.py",
+      "before_sha256": "e5696d66425a01c181d0ec939626c67f0133a3b79832f175b4949bf178409087",
+      "after_sha256": "779fbe002404d86c6c30e26d2eb140cd989af073250945f98006e56c258516f9"
+    },
+    {
+      "source": "redroid-deploy/clean_server_project.py",
+      "target": "redroid-deploy/archive/one_off/clean_server_project.py",
+      "before_sha256": "7f38a1010dcc9948e325cb2a2b505a16a295163a693de230ba2600fe9806e64f",
+      "after_sha256": "21b8665ead1d637220dc0eb8656daeab81e00fd22432ea6f48beb6f3a635b4ab"
+    },
+    {
+      "source": "redroid-deploy/compare_active_accounts.py",
+      "target": "redroid-deploy/tools/diagnostics/compare_active_accounts.py",
+      "before_sha256": "a8f29423ba7e1f5215513bd002039c22879d1773f94774fc4ce0c09c8a123f47",
+      "after_sha256": "1b55e627a2b6cc123cfa8f8e7d01e61801ae836c18af21eeba343b89c7d110b4"
+    },
+    {
+      "source": "redroid-deploy/compare_app_libraries.py",
+      "target": "redroid-deploy/tools/diagnostics/compare_app_libraries.py",
+      "before_sha256": "8bdfe303580e7e03065f773c0a09c742f4a9dfeb38d3cc68857de16aa92a9ac1",
+      "after_sha256": "0b051dbe49a61738e9ba70a540a8ef5505f3048f0ff3f23448a11fef9743accf"
+    },
+    {
+      "source": "redroid-deploy/compare_network_cache.py",
+      "target": "redroid-deploy/tools/diagnostics/compare_network_cache.py",
+      "before_sha256": "77b5f114618e6aaf0464dc5383bccca10514fe6bfddfdf5e71ad1121178087e5",
+      "after_sha256": "2e1b2aa0176947e505b8375960f816d3f8a05e9795ff57ae53c4cd3ccfa38aae"
+    },
+    {
+      "source": "redroid-deploy/compare_session_isolation.py",
+      "target": "redroid-deploy/tools/diagnostics/compare_session_isolation.py",
+      "before_sha256": "f3ab36190f9895ebdd5a0a884cdd87d6e1242464efeef8614128610052602c2c",
+      "after_sha256": "93f940af8948683b3104fb2d9384068bcf7cd2c22e6e22129f2fa434fd21b883"
+    },
+    {
+      "source": "redroid-deploy/create_account2.py",
+      "target": "redroid-deploy/archive/one_off/create_account2.py",
+      "before_sha256": "27dadf674cac30364a8190d12f3209079e521f887425ffd90ba7359394315026",
+      "after_sha256": "a5c02acfa607f0c95b3eb39fa9af760ee1a69aad523414954329f80b06090da6"
+    },
+    {
+      "source": "redroid-deploy/deploy_bridge_stop_fix.py",
+      "target": "redroid-deploy/tools/deployment/deploy_bridge_stop_fix.py",
+      "before_sha256": "ae79b49411eea3f5a22c215a9dcdb7fe87b2512f6b0bfcbf1aae44df1f71e98a",
+      "after_sha256": "f4a094b4a6c6cc5cc1acc000cf838e41c1d975db4cad79b181f378aaec60886f"
+    },
+    {
+      "source": "redroid-deploy/deploy_dual_pause_fix.py",
+      "target": "redroid-deploy/tools/deployment/deploy_dual_pause_fix.py",
+      "before_sha256": "5e3cfc5a3e693f3874d72e4f5c23adba96360b0181b112c549506bb4b1ca6609",
+      "after_sha256": "1820b4635fd75e4448ccf2807568b119ad19c34d5f1c3c5d2eb3eefc184c77e3"
+    },
+    {
+      "source": "redroid-deploy/diagnose_account2_task.py",
+      "target": "redroid-deploy/tools/diagnostics/diagnose_account2_task.py",
+      "before_sha256": "e660897b57f613f73ebce4b99c92008f41202ca82b1b9d133fe10784000ae0f3",
+      "after_sha256": "b6cff366c1473f57f42fd21dd8d594305985437b2e5a72833ac66a12455b545a"
+    },
+    {
+      "source": "redroid-deploy/diagnose_send_runtime.py",
+      "target": "redroid-deploy/tools/diagnostics/diagnose_send_runtime.py",
+      "before_sha256": "e67b46ac9036d805d8d5425aa10b0077db7b36515adb886a255c66643a550539",
+      "after_sha256": "3229f7bf739a2c92738a67f598f337668d85b89a4fc75ab4697cb71a55f05ef0"
+    },
+    {
+      "source": "redroid-deploy/disassemble_keva.py",
+      "target": "redroid-deploy/tools/diagnostics/disassemble_keva.py",
+      "before_sha256": "ce6294bae267c73298ac223792657af17b9b8931757ec217d1180fd8793b6449",
+      "after_sha256": "50b68cf415f8ed701337a57a0bc59ef5c26eb55372eb5a85beca46f3c6b5e861"
+    },
+    {
+      "source": "redroid-deploy/DUAL_CAPTURE_PAUSE_FIX_20261014.md",
+      "target": "redroid-deploy/docs/history/DUAL_CAPTURE_PAUSE_FIX_20261014.md",
+      "before_sha256": "01386cdd2663ee30feee04892967535ad8380f5df476d4657777eecc5f52cea7",
+      "after_sha256": "01386cdd2663ee30feee04892967535ad8380f5df476d4657777eecc5f52cea7"
+    },
+    {
+      "source": "redroid-deploy/export_chat_store.py",
+      "target": "redroid-deploy/tools/exports/export_chat_store.py",
+      "before_sha256": "0b38cd4f23fbcb60873598bcaa10c6348ab71207918aea8882cf1c5fa5f5fe76",
+      "after_sha256": "2ac9c829f9c8fc46a3fd6f068f1eb6cec11714af5c26d7edee019aa6a715b068"
+    },
+    {
+      "source": "redroid-deploy/fetch_hpe.py",
+      "target": "redroid-deploy/tools/deployment/fetch_hpe.py",
+      "before_sha256": "cc46704b80ef9d6f2665b57ae5ff57d64bc74a347396d4aa184566e92089513b",
+      "after_sha256": "323c60c094ebfce2a12a9c2d1f72cec8fc83e32a3824ce0de3900c389067c2df"
+    },
+    {
+      "source": "redroid-deploy/fix_hpe_namespace.py",
+      "target": "redroid-deploy/archive/one_off/fix_hpe_namespace.py",
+      "before_sha256": "6d117fd4abc0ca2563491f85af66ff24e7b9b822b6d518d28f5c4b130b43f436",
+      "after_sha256": "c50d2577a79b1f0de6140b4ada581be391e357214556accb9eddabd1ab3a21e6"
+    },
+    {
+      "source": "redroid-deploy/fix_monitor_live_status.py",
+      "target": "redroid-deploy/archive/one_off/fix_monitor_live_status.py",
+      "before_sha256": "23b0477246755194863aa3985b819d7641a8bfafa4d74e50fa59017887d560cb",
+      "after_sha256": "3fc707a2ccb44186a06bee5fcc92b5a70fcb10c872664997ab8a992baa8e4b92"
+    },
+    {
+      "source": "redroid-deploy/frida_account2.py",
+      "target": "redroid-deploy/tools/diagnostics/frida_account2.py",
+      "before_sha256": "611b210c050a53a535472b5141e13b2b7dbc1e0e303c9335655c32d9c32bbbc9",
+      "after_sha256": "4d7722ede119224c983b5b5697d6a44e2ee602518d6457be8d6a8e1d4739eb2e"
+    },
+    {
+      "source": "redroid-deploy/frida_dual.py",
+      "target": "redroid-deploy/tools/diagnostics/frida_dual.py",
+      "before_sha256": "8641ad29938d162527a3b02242ded705abdb5690c0ee5bbbd6abda82079c60f7",
+      "after_sha256": "67f22af6be047f73f5687f0bb1aad7311253523de2169bb3db33dea6ea3413f6"
+    },
+    {
+      "source": "redroid-deploy/GEO_BATCH_20261013.md",
+      "target": "redroid-deploy/docs/history/GEO_BATCH_20261013.md",
+      "before_sha256": "02f2ac2e91c2db3480c34ddecfe8b16e63b0bc1eccc4c23c098184fde99ac7bc",
+      "after_sha256": "02f2ac2e91c2db3480c34ddecfe8b16e63b0bc1eccc4c23c098184fde99ac7bc"
+    },
+    {
+      "source": "redroid-deploy/GEO_BATCH_20261014_DUAL.md",
+      "target": "redroid-deploy/docs/history/GEO_BATCH_20261014_DUAL.md",
+      "before_sha256": "93b6be8900b8e9f94de2c5698d9199e40fd2e942e6c7ce5b4c287fc7ac78280c",
+      "after_sha256": "93b6be8900b8e9f94de2c5698d9199e40fd2e942e6c7ce5b4c287fc7ac78280c"
+    },
+    {
+      "source": "redroid-deploy/HPE14_FIX.md",
+      "target": "redroid-deploy/docs/operations/HPE14_FIX.md",
+      "before_sha256": "eee834eb06f9cd960d3061e44b4be8dfaf6f82b4d21ac76cc4ada979123b2ffc",
+      "after_sha256": "eee834eb06f9cd960d3061e44b4be8dfaf6f82b4d21ac76cc4ada979123b2ffc"
+    },
+    {
+      "source": "redroid-deploy/hpe14_report.py",
+      "target": "redroid-deploy/tools/diagnostics/hpe14_report.py",
+      "before_sha256": "8c9cbee2506b7265ca047a65f62ad20f2b8003a1cddc8d4c647aa66638c1d31a",
+      "after_sha256": "56dde7ed657ebdbe18b0dd44faab79dbe6a2fda03e88d8c8cb72577cfb848371"
+    },
+    {
+      "source": "redroid-deploy/inspect_account2_attention.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_account2_attention.py",
+      "before_sha256": "48ed23a37cc222dcfe80ccc028c4a0034c3d8c7d81518cfa767f67584d13ca53",
+      "after_sha256": "f9637944a3307fcc59449ba60219f69af40b7f2dc7045105e503ee68c07c7c56"
+    },
+    {
+      "source": "redroid-deploy/inspect_account2_controls.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_account2_controls.py",
+      "before_sha256": "834888066841efd99db146377842c5b7d22abe29b3e6ddc6fe1f2381e9afe281",
+      "after_sha256": "caa9e7536dd69e270dbb04af3823b38bedc95cceff6170dea3817a5e614562b9"
+    },
+    {
+      "source": "redroid-deploy/inspect_account2_db.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_account2_db.py",
+      "before_sha256": "bd33951d647f70cade8c5dd60f2bb79001c9aa55d16d300fd150bef59001c597",
+      "after_sha256": "f377068afa4892e76d620d51a94f29c004359387a27ef4c480f4a24fa3814bc4"
+    },
+    {
+      "source": "redroid-deploy/inspect_account2_sync_safe.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_account2_sync_safe.py",
+      "before_sha256": "557df926d6cf62fa172e8801cd903de54159bbd2ddcc9ca6958a8a9785680823",
+      "after_sha256": "2b2208155ac6afc9017d8330d8e6ab3d3c90cbd2ff695dd695e43b2da1a8f588"
+    },
+    {
+      "source": "redroid-deploy/inspect_all_im_state.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_all_im_state.py",
+      "before_sha256": "09170f22708a7d487373ccd406382e6ed5b785f8ba70ae4823f0311ffed482f7",
+      "after_sha256": "6a514c56e07cd59b972715120f569adc7586513f8da3fc651140fd890187045b"
+    },
+    {
+      "source": "redroid-deploy/inspect_batch_attention.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_batch_attention.py",
+      "before_sha256": "593fcf1cdc5159e2fe369ed56933ace5ad1b7251b16681a86572f6e7da64dffd",
+      "after_sha256": "a1b719c01968b8472da226e2e60db87579ea0432a1d229a93b38b7fc8dca5027"
+    },
+    {
+      "source": "redroid-deploy/inspect_chat_store.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_chat_store.py",
+      "before_sha256": "1c37c8ca395df11dfe0c5c26c7a18031dff7ca1503f06f6738625eb155cec7e5",
+      "after_sha256": "1891444093c629da8e64dfd3020e23648acfe8aba6b07a4d9cfbcdd324f831ac"
+    },
+    {
+      "source": "redroid-deploy/inspect_conversation_sql.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_conversation_sql.py",
+      "before_sha256": "c89ed37092c70812363a669b445ebc17eef4547b3d9f47fbb6fae500365d5467",
+      "after_sha256": "20161e6e5feb81b016ccf13b0c6ba8ca6f35145695c4cb5599e0a8e38b75582a"
+    },
+    {
+      "source": "redroid-deploy/inspect_conversation_state.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_conversation_state.py",
+      "before_sha256": "62c8095915c021760b4d875b660c480d45593734195bec276311981757d55090",
+      "after_sha256": "7cdc18bb85c67513d2475681584a09a04976f0a50cb71a2b51809dd3f73f86e5"
+    },
+    {
+      "source": "redroid-deploy/inspect_current_account2.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_current_account2.py",
+      "before_sha256": "fd1f5e2fa7261528195285fa12a0493b99832f715524d5890685f66ebc7b1262",
+      "after_sha256": "3d9a6f4f73d552a201e8f05423b872a4399c41282378293c11483255bb43f8ef"
+    },
+    {
+      "source": "redroid-deploy/inspect_current_delivery_blockers.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_current_delivery_blockers.py",
+      "before_sha256": "30902d20cd34515e76c07ddb4bf4eac29d852371ba5041ec84825b35b2e01b40",
+      "after_sha256": "ac99df26232718d19efbc301f1a72bd49e23a45b1a8b1b6a809c9e0624cf3c96"
+    },
+    {
+      "source": "redroid-deploy/inspect_dual_pause_detail.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_dual_pause_detail.py",
+      "before_sha256": "ab9247f3b675541dc63da12f785db8d0ee3ae9928f8651f794385d9ff7d700c5",
+      "after_sha256": "ff4294859d8fd577eadc41b8a18f27ea8e62f31f619c9734de7568c3d42d526a"
+    },
+    {
+      "source": "redroid-deploy/inspect_im_cache_keys.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_im_cache_keys.py",
+      "before_sha256": "2c93e8e86be2eb002b760b7471159519edb330708e9084cec7452d3130aaeb60",
+      "after_sha256": "c4f34a5f42b556f51388fcf7d0999a0868d40a33efbf9b589c9e4ea354ab5045"
+    },
+    {
+      "source": "redroid-deploy/inspect_im_dex.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_im_dex.py",
+      "before_sha256": "da53e0011de1f1c83987a911e8c8e39708d0f41535cd0c0850d527e56190704e",
+      "after_sha256": "c0a93be0ed49b4fe0904a64d83464bf7e39b0b33941410187c7b7897cf05ae8c"
+    },
+    {
+      "source": "redroid-deploy/inspect_im_error_symbols.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_im_error_symbols.py",
+      "before_sha256": "1758c99e72cd82fbd88a1c32bf769a6c60228094ab660656deabe2e6e5c60d40",
+      "after_sha256": "f60fa8d7422c602f01eeb9c1c7f0efbd52cc70806c728add72fab8923d98dddf"
+    },
+    {
+      "source": "redroid-deploy/inspect_im_runtime_errors.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_im_runtime_errors.py",
+      "before_sha256": "7e612ac026a39f0e32b6a06d8cbbff154a81340dcc78466d67e7f99554b2e28d",
+      "after_sha256": "c74e8b0865dda7c3f861b6fcefd8df101080cdc78eb5dac1305cc98339253b4b"
+    },
+    {
+      "source": "redroid-deploy/inspect_keva_library.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_keva_library.py",
+      "before_sha256": "fd6c9d664bb8422d0984f35e6b81ae0eecd0f5563b0d3f128c0fcd88995a6e35",
+      "after_sha256": "29959f47a927662b3bae76e2fcb2e3ce8a5b6cc9b12554bf8f7835a115036e12"
+    },
+    {
+      "source": "redroid-deploy/inspect_keva_paths.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_keva_paths.py",
+      "before_sha256": "e5fc15843be2e9f08653cb2c8b905d0ecc26966e36867076384a55b6b2749ee1",
+      "after_sha256": "f0301269948b5e76ad0fbc415d149847d754ad31defe319caf88163c12465ae2"
+    },
+    {
+      "source": "redroid-deploy/inspect_pending_dual.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_pending_dual.py",
+      "before_sha256": "2001ad804b012a3910ea4d00ba3ed29fee9f92f0baad5f1c92bd421618cbb558",
+      "after_sha256": "e758f11c0132559e3d215204c1f88fe8f479d3f8d170fc8fee96015b72dcf2cb"
+    },
+    {
+      "source": "redroid-deploy/inspect_prepared.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_prepared.py",
+      "before_sha256": "b57a3c05414a65b86abb563116e78147068cc4c90bba38d72710829a0db03ec9",
+      "after_sha256": "edf4eb385e2c03a1bf98986c9a09d710e7a6afb1d8511a9230a941d728207653"
+    },
+    {
+      "source": "redroid-deploy/inspect_send_errors.py",
+      "target": "redroid-deploy/tools/diagnostics/inspect_send_errors.py",
+      "before_sha256": "b7975260f9b2511ac74a2bb3e017c6ecb0cdbfc1693b7a015775312e7d59a0b8",
+      "after_sha256": "929ffc7fba1a1ee045cef335855c9f9d3c8ff43f169fdff52ef14020e7315180"
+    },
+    {
+      "source": "redroid-deploy/install_worker_runtime.py",
+      "target": "redroid-deploy/tools/deployment/install_worker_runtime.py",
+      "before_sha256": "9be1f4f65742620427519cb034c38a2a37608e1a4abf5e5e0460786024d2861e",
+      "after_sha256": "932f8a7a434eee98e826140c4d113a8194d04d01000170b5cfddb3992e895412"
+    },
+    {
+      "source": "redroid-deploy/isolate_account2_conversation_fts.py",
+      "target": "redroid-deploy/archive/one_off/isolate_account2_conversation_fts.py",
+      "before_sha256": "c486c96a303006b73794d8bc69cac55d68787b19978082380285a316bd65ab30",
+      "after_sha256": "e3865cc8f1af17e736046a5440676fbf5da210269497dfa44311964b45ed344f"
+    },
+    {
+      "source": "redroid-deploy/mark_account2_blocked.py",
+      "target": "redroid-deploy/archive/one_off/mark_account2_blocked.py",
+      "before_sha256": "3991015757630bbe3988144f3072b9b8ade1e95467680ec51600bd9c4a53359c",
+      "after_sha256": "cd84f545877ecbb373c89f7fbe8f11bf2e060bcdf82eae2e5a33d4ff5706abbe"
+    },
+    {
+      "source": "redroid-deploy/migrate_test_app.py",
+      "target": "redroid-deploy/archive/one_off/migrate_test_app.py",
+      "before_sha256": "ad96ff1b194d1a0fe00f7665c8b585d52aee1eb0e9dffabcedf4844cd5d5ba44",
+      "after_sha256": "212165501e32ad36f7c33514ee5e9e57a946d4675b4f4a1ada614d72845ec880"
+    },
+    {
+      "source": "redroid-deploy/package_hpe14_results.py",
+      "target": "redroid-deploy/tools/exports/package_hpe14_results.py",
+      "before_sha256": "2303fcf5ef2d72c28174ce3e520ce04916bb6be6a5d42a00613df41b69868d45",
+      "after_sha256": "f89fa201bd0c7595a0fee0f734649cc079e97003680024d1b4d344c5913fd8f3"
+    },
+    {
+      "source": "redroid-deploy/probe_arm_openat.py",
+      "target": "redroid-deploy/tools/diagnostics/probe_arm_openat.py",
+      "before_sha256": "f8e54112292726b1b0b723568a24e483a08944d1f47f7f7adb1f6e6e439570df",
+      "after_sha256": "cd485cf3e5512a921c8e51a07c25d30ab8070f809d9826a0840bfa034725ed74"
+    },
+    {
+      "source": "redroid-deploy/probe_chat_hosts.py",
+      "target": "redroid-deploy/tools/diagnostics/probe_chat_hosts.py",
+      "before_sha256": "bae8a86b4b75d7731a4da45e982218f11276331860699800871b276160c36459",
+      "after_sha256": "f74a7d699d1a5d0df7dca845550aebacc25630eb89ad37f0b7b1d7b6e666d318"
+    },
+    {
+      "source": "redroid-deploy/probe_hpe14.py",
+      "target": "redroid-deploy/tools/diagnostics/probe_hpe14.py",
+      "before_sha256": "bb6e646e542251d49ff8ad2f208f695930d3504345ace8739d75549b237e55e8",
+      "after_sha256": "3e2ec12dc886eb3c94d91133d58be9d4f35b092647d0d353ed1cfeee3e1f34f2"
+    },
+    {
+      "source": "redroid-deploy/probe_hpe14_13.py",
+      "target": "redroid-deploy/tools/diagnostics/probe_hpe14_13.py",
+      "before_sha256": "93b5932a30f7d31f171eb280b3fc8a3afa9928eb1407157aed9a490661fe4f8f",
+      "after_sha256": "65841190ef2b30877b0201c260472c9b3513896150d11aa227a9b1e15c7bb9ef"
+    },
+    {
+      "source": "redroid-deploy/PROJECT_GUIDE.md",
+      "target": "redroid-deploy/docs/operations/PROJECT_GUIDE.md",
+      "before_sha256": "f4a6f314586773b855537bebf7539018241575c4b7fbcb19db3f415ec3cf82fd",
+      "after_sha256": "f4a6f314586773b855537bebf7539018241575c4b7fbcb19db3f415ec3cf82fd"
+    },
+    {
+      "source": "redroid-deploy/PROJECT_TREE.md",
+      "target": "redroid-deploy/docs/operations/PROJECT_TREE.md",
+      "before_sha256": "15e41bb77d80ae3dde153cd59ceaa5fc6430196cc4029b601dd361d20ee8a2d5",
+      "after_sha256": "15e41bb77d80ae3dde153cd59ceaa5fc6430196cc4029b601dd361d20ee8a2d5"
+    },
+    {
+      "source": "redroid-deploy/read_crash_debugger.py",
+      "target": "redroid-deploy/tools/diagnostics/read_crash_debugger.py",
+      "before_sha256": "cd904929fb882978fca50ae3cef9e0d11d867a4291ff91741a8cfefe1e4674f4",
+      "after_sha256": "6d4ada58d1833120734cd0987b1092655823547fcf82db0be05d2defa722a1c3"
+    },
+    {
+      "source": "redroid-deploy/read_hpe13_crash.py",
+      "target": "redroid-deploy/tools/diagnostics/read_hpe13_crash.py",
+      "before_sha256": "d40f099c90d96c2e0c2660d1ad4a79ccfca14fda911b8ab995cdf6f988a95715",
+      "after_sha256": "a14986e0519655b7acd3733f52d2b047636574cb51193151eab7b38eac10d877"
+    },
+    {
+      "source": "redroid-deploy/read_hpe_crash.py",
+      "target": "redroid-deploy/tools/diagnostics/read_hpe_crash.py",
+      "before_sha256": "8312f90fc200af3986d38c837c569eb4d6853dce6f1ff5ebb453f534017716db",
+      "after_sha256": "8fcc807b7e24a6d6ff1283b44713e942ee20450ed287e5cf3823e639fb543122"
+    },
+    {
+      "source": "redroid-deploy/read_im_constants.py",
+      "target": "redroid-deploy/tools/diagnostics/read_im_constants.py",
+      "before_sha256": "7781769c4c914ce877ee4c25480bab826473c44656342ca6974cae3c6b94636c",
+      "after_sha256": "ae5bf7b01e8c53bbea71330f3b81fc951bbc24c79036b4e91ccb14f17ea60a60"
+    },
+    {
+      "source": "redroid-deploy/read_probe_ui.py",
+      "target": "redroid-deploy/tools/diagnostics/read_probe_ui.py",
+      "before_sha256": "4cf0f1cfe65eba4508dba5822ef08208882be436e4caa027c58bd2527c18121d",
+      "after_sha256": "d3500ded58fc7dfc9218ce8a3496a4bcb6da960c6281c6f384c0f57eb7998c68"
+    },
+    {
+      "source": "redroid-deploy/read_send_faults.py",
+      "target": "redroid-deploy/tools/diagnostics/read_send_faults.py",
+      "before_sha256": "1c64387dc420dd227a216a41003ea3cfdf075feeb542cb6606177e69b22614c4",
+      "after_sha256": "a6b992c1b17c713f852a1e051772178afd8ca2a976f037392279324d1a5dfacf"
+    },
+    {
+      "source": "redroid-deploy/README.before-hpe14.md",
+      "target": "redroid-deploy/docs/history/README.before-hpe14.md",
+      "before_sha256": "82ffa7f9968df4ae81568c1d2e84caa133c2a1b5b4a84dd74d054695a97148d5",
+      "after_sha256": "82ffa7f9968df4ae81568c1d2e84caa133c2a1b5b4a84dd74d054695a97148d5"
+    },
+    {
+      "source": "redroid-deploy/rebuild_account2_chat_cache.py",
+      "target": "redroid-deploy/archive/one_off/rebuild_account2_chat_cache.py",
+      "before_sha256": "6706db9f4652196b5ac64ecf35ce5c10c39adbce37e79abee89be01461952803",
+      "after_sha256": "1831ac626daf67e88f5911956aa07246e4c9711c2dee513454d9a563a13ce4fa"
+    },
+    {
+      "source": "redroid-deploy/rebuild_account2_im_sync.py",
+      "target": "redroid-deploy/archive/one_off/rebuild_account2_im_sync.py",
+      "before_sha256": "ebb4daa7d8cb7331cef9f24d4ef2fa740c4b901e8dbce04150aeb0894dd2e16b",
+      "after_sha256": "f0374c28c8a292951237b9db89b9fce4e16ef0081481dfa9b03758e46d93a519"
+    },
+    {
+      "source": "redroid-deploy/reconcile_account1_maintenance_boundary.py",
+      "target": "redroid-deploy/archive/one_off/reconcile_account1_maintenance_boundary.py",
+      "before_sha256": "d067d55935b1518b0adb4efac34cd8686f1e6b727bf50ca2b732e0cdee284115",
+      "after_sha256": "7791ddd5675c3890b668822bf73ae905c9b27e3b672e0653ca12620c18c77ab3"
+    },
+    {
+      "source": "redroid-deploy/reconcile_dual_pause_20261014.py",
+      "target": "redroid-deploy/archive/one_off/reconcile_dual_pause_20261014.py",
+      "before_sha256": "01e0124621bf85470fc9073362e413d33bb8f836ca6dffd6993d472bfec2921e",
+      "after_sha256": "0f66b3968fe250acdecb97fc90cc68f7c0c708a0f437f22df4dbe216fcc20206"
+    },
+    {
+      "source": "redroid-deploy/recover_account2_rejected_task.py",
+      "target": "redroid-deploy/archive/one_off/recover_account2_rejected_task.py",
+      "before_sha256": "39011d9e9db201d3c46b91cf705e2b29be58e5111d02a8a5758577def9f453a2",
+      "after_sha256": "9afe551348224fcece820ef1e21d4153f19ffa3d51f6c949a3e9d86ea8e00227"
+    },
+    {
+      "source": "redroid-deploy/redroid-doubao-source.tar.gz",
+      "target": "redroid-deploy/releases/history/redroid-doubao-source.tar.gz",
+      "before_sha256": "56df7ec441c719d320f647d11a1600e801c669e1c91fbf7ab3d1acf18668900c",
+      "after_sha256": "56df7ec441c719d320f647d11a1600e801c669e1c91fbf7ab3d1acf18668900c"
+    },
+    {
+      "source": "redroid-deploy/reload_account2_worker_after_ack.py",
+      "target": "redroid-deploy/archive/one_off/reload_account2_worker_after_ack.py",
+      "before_sha256": "18b8e5034533e02e751ed6a18be11e2ef40951f0febb4bc07fbc908ce1ba4927",
+      "after_sha256": "803a4b6f46efc054f0fde604e8d68e0d26472eda7d23660a95b2ec4e3b820f9e"
+    },
+    {
+      "source": "redroid-deploy/repair_account1_conversation_fts.py",
+      "target": "redroid-deploy/archive/one_off/repair_account1_conversation_fts.py",
+      "before_sha256": "41f875550efb5e080877d2ee940838cc9152e34ebfb59fb277f7990985b403b0",
+      "after_sha256": "26892f517ca89f216cd14cc07455fcf77754ae746aedb047fe473f5d675f170b"
+    },
+    {
+      "source": "redroid-deploy/repair_account2_conversation_fts.py",
+      "target": "redroid-deploy/archive/one_off/repair_account2_conversation_fts.py",
+      "before_sha256": "2570ecc5e8c5a70ae7a06093a17e25320d0f8cfe79bd06db07b0fdcdc5fe853b",
+      "after_sha256": "7e0c9dc453e199ce80285949777b54cbd5ad768eda2209ad73b0a8f5ec9e3114"
+    },
+    {
+      "source": "redroid-deploy/repair_account2_keva_filenames.py",
+      "target": "redroid-deploy/archive/one_off/repair_account2_keva_filenames.py",
+      "before_sha256": "9760556a8ec4dbc144504f4bd6a6132a70f99809ce4d1dba959ad771b923c81b",
+      "after_sha256": "b95c8c8517d99492349415fdce82a46fee5fc1c0c1c6d8c558e4fca0b381da6e"
+    },
+    {
+      "source": "redroid-deploy/research_houdini.py",
+      "target": "redroid-deploy/tools/diagnostics/research_houdini.py",
+      "before_sha256": "a5bb61e59c2fb7f069ee0447ff3e6a43b725db256b76807f6e0e175d8c86a116",
+      "after_sha256": "825763214e37f39696a7903b3a7cf21ed24b669e2647a5e3efc7346b13819041"
+    },
+    {
+      "source": "redroid-deploy/research_hpe.py",
+      "target": "redroid-deploy/tools/diagnostics/research_hpe.py",
+      "before_sha256": "351379272da6582c9372a884d7274647e78b5fa0644570ae36200b56cee8fcce",
+      "after_sha256": "618225de71b071d9bf32a5719d325066d71271040313742fe736127fb6c977f0"
+    },
+    {
+      "source": "redroid-deploy/research_patch.py",
+      "target": "redroid-deploy/tools/diagnostics/research_patch.py",
+      "before_sha256": "be0aaa0528994e0050d8bcd0a696286a1d669708440947a975cfde3fca3260bd",
+      "after_sha256": "4b8f9bb42562b8fb4132510ebd33f422d744f0dbded37fb856fb07e2d3a67e47"
+    },
+    {
+      "source": "redroid-deploy/research_translation.py",
+      "target": "redroid-deploy/tools/diagnostics/research_translation.py",
+      "before_sha256": "2f7082d482b5f193d1a62520e27ca75eb7a4594befe21649430c222e19387bfd",
+      "after_sha256": "dc3c918b94b0660a1dce48c13d609f1fc4d1b2ee21ea1d2d5c42519378028dbd"
+    },
+    {
+      "source": "redroid-deploy/reset_account2_network_cache.py",
+      "target": "redroid-deploy/archive/one_off/reset_account2_network_cache.py",
+      "before_sha256": "34d85c8ecd4cafbad01b6d3bd98aaf1fcaea50cdcb0c4baee35be9711e0ca2e7",
+      "after_sha256": "b2bf15a916d3fc6dd996d1f1466c54231b2599478e48d84b06e2e4a746cdfd1c"
+    },
+    {
+      "source": "redroid-deploy/resume_account2_late_answer.py",
+      "target": "redroid-deploy/archive/one_off/resume_account2_late_answer.py",
+      "before_sha256": "ce58a47709292bd707c970b7424191e91338afd13708c6596abd77aca1b35c8c",
+      "after_sha256": "7c6a181c100599b64c96b23caa3ecdfbbc92bd269a84631d6c6a8531073dde61"
+    },
+    {
+      "source": "redroid-deploy/resume_first_notification.py",
+      "target": "redroid-deploy/archive/one_off/resume_first_notification.py",
+      "before_sha256": "2937ca69c90136ad3511768a6276a373bf32854ec3d8918451a49f88addbe57c",
+      "after_sha256": "0edfe9422b495a2ce764efef7b197968b26d7bb95a11edf50d29aa8704011b23"
+    },
+    {
+      "source": "redroid-deploy/retry_account2_repaired_native.py",
+      "target": "redroid-deploy/archive/one_off/retry_account2_repaired_native.py",
+      "before_sha256": "3303d2a6728aa05e2ccb138c7ae496ad04a9cf1f4b36f6e903b9a9f840aec76f",
+      "after_sha256": "9c7eed8f72eb9413460b8fcd0265bf541ea8cbff1154166578f485b66e01bd9b"
+    },
+    {
+      "source": "redroid-deploy/start_account1_new_batch_20261014.py",
+      "target": "redroid-deploy/archive/one_off/start_account1_new_batch_20261014.py",
+      "before_sha256": "07391f879f7e84a9d78b74b0260bbcce629a91bf58d714df438bac2c8b874bb7",
+      "after_sha256": "0b134756f5e04ed93ac25bb11d1a471d2090f2124f4ff984e93deb1ffcf38355"
+    },
+    {
+      "source": "redroid-deploy/switch_soak_frequency.py",
+      "target": "redroid-deploy/archive/one_off/switch_soak_frequency.py",
+      "before_sha256": "32042ffc2b686b14608c76eb0447170618e0f45b1c64da55a534900219710524",
+      "after_sha256": "07eef80fa1833c55d5b1163e9e7abc6d4fbb8d7866af92394d29b7e17f62d563"
+    },
+    {
+      "source": "redroid-deploy/test_geo_batch_bridge.py",
+      "target": "redroid-deploy/tests/test_geo_batch_bridge.py",
+      "before_sha256": "b4029780303ebc6f184bcb03aef08e2d7f3f32e6d40f5ab4000e7ba95aabb983",
+      "after_sha256": "68c63883d38abcd8e23095c01d1eee6071cbd17ec04486dd4080be1a7248d675"
+    },
+    {
+      "source": "redroid-deploy/test_phase_recovery_live.py",
+      "target": "redroid-deploy/archive/one_off/test_phase_recovery_live.py",
+      "before_sha256": "c5648912e148d3f6fa3558fd7c5f178de2c7163000ec3f3a1be020a2ff7053ad",
+      "after_sha256": "2b27e99ce9db87b850d239ec0cfcdb03960e48df02c74b5e91350dbe6d981c88"
+    },
+    {
+      "source": "redroid-deploy/test_soak_sequence.py",
+      "target": "redroid-deploy/tests/test_soak_sequence.py",
+      "before_sha256": "b2962669ce39f1a420eee7ebd985adce72cc24b7f31a503db7e75171a7c9f78f",
+      "after_sha256": "a2a4a372d4a03952bf5f4168bc0e8d7314b0ae6edf7d8bbf14f1502c5df11dd4"
+    },
+    {
+      "source": "redroid-deploy/test_unattended.py",
+      "target": "redroid-deploy/tests/test_unattended.py",
+      "before_sha256": "a8189cbcd6ea4f3028428ef6108fa0fc43c21ea85979c0a0bff402b790b4e0fe",
+      "after_sha256": "69b2a74b5373c67808b92a73e7a84dcf4bd053c9daff569aa15fb690e5cf95c9"
+    },
+    {
+      "source": "redroid-deploy/transfer_artifact.py",
+      "target": "redroid-deploy/tools/deployment/transfer_artifact.py",
+      "before_sha256": "649f7ca986180d873d77738238c3fab6f31d6b06f651336a6cfb56e04dd3527c",
+      "after_sha256": "fe75bce1deacca6e6612b3975fc9c6eea8a087898743332b606b2dccfa51040d"
+    },
+    {
+      "source": "redroid-deploy/UNATTENDED.before-hpe14.md",
+      "target": "redroid-deploy/docs/history/UNATTENDED.before-hpe14.md",
+      "before_sha256": "a550d4c74060f07a66dc47f7a9453b781ac4bee886221a109cb009def5b44af4",
+      "after_sha256": "a550d4c74060f07a66dc47f7a9453b781ac4bee886221a109cb009def5b44af4"
+    },
+    {
+      "source": "redroid-deploy/UNATTENDED.md",
+      "target": "redroid-deploy/docs/operations/UNATTENDED.md",
+      "before_sha256": "ef6ad3cc87a90a32c28fd1f7cdf2dae2078f20f8c7c976926721f732cbe60c6e",
+      "after_sha256": "ef6ad3cc87a90a32c28fd1f7cdf2dae2078f20f8c7c976926721f732cbe60c6e"
+    },
+    {
+      "source": "redroid-deploy/verify_account2_recovery.py",
+      "target": "redroid-deploy/tools/diagnostics/verify_account2_recovery.py",
+      "before_sha256": "85ab23c2a22d779b6b64f2a52593ec479d0e1e92da220cbca7d765623c2f431c",
+      "after_sha256": "bb059ef4040c158fc0981040b2e3e4f3b945e037f74c7eaec7af7a2c855e656b"
+    },
+    {
+      "source": "redroid-deploy/verify_dual_pause_fix.py",
+      "target": "redroid-deploy/tools/diagnostics/verify_dual_pause_fix.py",
+      "before_sha256": "57953f35dd2cf3e46db75ac551ec3aadc9efde6e5811ec6d72c66008c4332103",
+      "after_sha256": "259df0f1347b3000dbf814ce16830d4e86b4d096a0775ac148d4882afee0c52a"
+    },
+    {
+      "source": "redroid-deploy/watch_send_telemetry.py",
+      "target": "redroid-deploy/tools/diagnostics/watch_send_telemetry.py",
+      "before_sha256": "bb4d59f37235fbcc872b1956016a0171fede5b6b9757ccf728ca96e4286a5e87",
+      "after_sha256": "0073f33780750028ab437273d23733af42d7a2c16483883da85e2b8135ae9b8c"
+    },
+    {
+      "source": "redroid-deploy/watchdog_smoke.py",
+      "target": "redroid-deploy/tools/diagnostics/watchdog_smoke.py",
+      "before_sha256": "37028aacd26a6c40208d6ec06475ccbf415992269989f04936b0ecc5e56f8009",
+      "after_sha256": "6d55f50b5d7b82491f3fe6c7fe9363e70a6a03b9b305324279650ddebad01b99"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "at": 1792226161.7618303,
+  "scenarios": [
+    {
+      "model": "deepseek",
+      "mobile": false,
+      "actual_scrcpy_frames": 21,
+      "fixture_control_validated": true,
+      "risk_and_verification_did_not_close": true,
+      "verifying_did_not_close": true,
+      "ready_closed_popup": true,
+      "no_overflow": true,
+      "native_input_sent": false
+    },
+    {
+      "model": "deepseek2",
+      "mobile": true,
+      "actual_scrcpy_frames": 22,
+      "fixture_control_validated": true,
+      "risk_and_verification_did_not_close": true,
+      "verifying_did_not_close": true,
+      "ready_closed_popup": true,
+      "no_overflow": true,
+      "native_input_sent": false
+    }
+  ],
+  "production_login_or_send_actions": 0,
+  "native_capture_control": false
+}

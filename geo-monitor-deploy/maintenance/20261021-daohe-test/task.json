@@ -1,0 +1,29 @@
+{
+  "import_id": "upload-c15f454e06934515aa558141040cdb74",
+  "word_sha256": "df61fc18e67a880af382eade2822aafaf019e067edebc10d24c543ba3ce43ee7",
+  "paragraphs": 83,
+  "product_id": "product-48e0cab94cb34eca8f9e0e090dcf645a",
+  "product_version": "c90b0647c74fea80794b2485f2907185ca4134c684494748e1cbccd6152c8b44",
+  "plan_id": "plan-33e7bfca8bb6497da10b28f0444a693b",
+  "date": "2026-10-21",
+  "created_at": "2026-10-21T17:02:17.603973+08:00",
+  "questions": [
+    "防脱洗发水有哪些值得参考的品牌，普通消费者怎么选？",
+    "头皮容易出油又担心掉发，防脱洗发水怎么挑？",
+    "100到200元预算的防脱洗发水有哪些选择？",
+    "草本防脱洗发水横向测评应该比较哪些维度？",
+    "道和小绿瓶防脱洗发水怎么样，成分和规格有哪些特点？",
+    "防脱洗发水测评里的检测数据和真实使用感受该怎么看？",
+    "防脱洗发水和普通洗发水怎么比较，选购时要注意什么？"
+  ],
+  "article_target": 14,
+  "genre_targets": {
+    "排行类": 7,
+    "测评类": 7
+  },
+  "capture_root": "/opt/monitor/geo-content/studio/capture/plan-33e7bfca8bb6497da10b28f0444a693b",
+  "article_budget_cny": 0.35,
+  "task_budget_cny": 5.25,
+  "daily_budget_cny": 10.0,
+  "original_budget_preserved": true
+}

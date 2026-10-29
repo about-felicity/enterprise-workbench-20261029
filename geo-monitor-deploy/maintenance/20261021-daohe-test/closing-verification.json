@@ -1,0 +1,37 @@
+{
+  "at": "2026-10-21T18:37:53.458134+08:00",
+  "daily_cap_restored": 10,
+  "original_shared_control_unchanged": true,
+  "original_control_hash_count": 11,
+  "original_control_hashes_unchanged": true,
+  "protected_control_count": 3,
+  "all_protected_controls_unchanged": true,
+  "original_unknown_ids": [
+    "6d5c862ba8f2abdbfe249ce62ff3315eb8c9856d25e9fd78cff054cab9edade1",
+    "beb0fe71fe2ca8d2cfe72fa6f123190e74881ffbc961c2a897363259d88c4f11",
+    "bf5fc05faa9ccb415ae4ad245c4833b0f572cbcfc59571d5f8a6524b2a7e243c"
+  ],
+  "new_unknown_requests": 0,
+  "trial_outstanding_reserve": 0,
+  "timer_state": "inactive",
+  "all_trial_jobs_paused_with_no_pending": true,
+  "source_fingerprint_matches": true,
+  "ledger": {
+    "date": "2026-10-21",
+    "charged": 12.52671484,
+    "outstanding_reserved_today": 0.21578999999999998,
+    "total_committed": 12.74250484,
+    "unresolved": 3
+  },
+  "observation": {
+    "state": "needs_attention",
+    "issues": [
+      "daily_budget_exceeded"
+    ],
+    "cross_day_passed": false,
+    "checked_at": "2026-10-21T18:37:53.458134+08:00",
+    "window_end": "2026-10-22T17:00:00+08:00",
+    "no_automatic_recovery_or_paid_requests": true
+  },
+  "budget_note": "Temporary cap16 authorized for this manual trial; restored10 for subsequent work. Today committed amount includes this trial and may exceed restored normal cap. Preserve this signal; do not reset ledger or claim unattended pass."
+}

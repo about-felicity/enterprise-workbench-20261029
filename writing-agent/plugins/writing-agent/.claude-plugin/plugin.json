@@ -1,0 +1,19 @@
+{
+  "name": "writing-agent",
+  "version": "0.11.0",
+  "displayName": "Writing Agent",
+  "description": "可中断、可复盘的多阶段中文文章写作工作流",
+  "author": {
+    "name": "dongbeixiaohuo",
+    "url": "https://github.com/dongbeixiaohuo"
+  },
+  "homepage": "https://github.com/dongbeixiaohuo/writing-agent",
+  "repository": "https://github.com/dongbeixiaohuo/writing-agent",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "writing",
+    "workflow",
+    "chinese"
+  ]
+}

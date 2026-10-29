@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "scope": "creation_only",
+  "models": ["baidu_ai", "wenxin_card"],
+  "description": "Independent creation browser lock, rate state and per-task profiles; no GEO receiver."
+}

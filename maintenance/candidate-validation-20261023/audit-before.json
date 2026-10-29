@@ -1,0 +1,152 @@
+{
+  "at": 1792719301.5906506,
+  "read_only": true,
+  "new_api_calls": 0,
+  "sources": {
+    "consumer_prompts.py": {
+      "production_sha256": "f71986c09f0095758748470e7abd2d5c535b45d0242435caeab1f8dc128c4bea",
+      "stage_sha256": "d4f906ade8e9850ed7c7b5e4da388d25159867b00a15b7541904debd1871d2b0"
+    },
+    "structure_analyzer.py": {
+      "production_sha256": "e44a594643b3a063cd3922023e430a34a24120a3253833dd286a2fb86ee55baa",
+      "stage_sha256": "295a0f6a863030c69b4104a83151ac032e9c318cc69d4c66994ee9acd613990e"
+    },
+    "section_writer.py": {
+      "production_sha256": "7ec2e4554bd5b5a3348957de00338f92f5a99601e9c09048e63e9c360f213cc5",
+      "stage_sha256": "c96957d1b2c6e82487841f487ac079df0b7c68fbbc6ac45f43debe189599d22c"
+    },
+    "review_arbitration.py": {
+      "production_sha256": "ad9a5d2f4f5aafb51942cdf920be7cc79f9c8227dc44ffef22a2d64f1655bfa8",
+      "stage_sha256": "a605e907b4276a4810e4f47b053d46d65f3b2fd1edaa5f303b31f7af63d08c7e"
+    }
+  },
+  "tests": {
+    "test_section_budget_revision.py": null,
+    "test_arbitration_batches.py": null
+  },
+  "original_hashes_current": {
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/job.json": "6cafee0c48a2c78f5563341dbaa716ed1bfa56807953ce1a841564adbd7a5226",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/control.json": "7c285b40b66aa442eef33c38ef58eb66713a58a433cd0753f7e90b92c4ec32f4",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/research/research_task.txt": "7bd12784eb93f8a7f115ca70090bd0a43b0f06d5ba3d9cc1522d53f5726c7ffc",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/research/stage_job.json": "89d7a4361b5209aca40d6febac14763495714db28c877585f173ead9a9b1d247",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/research/stage.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/research/research_input.json": "991bd1bb7b25cf63843c731b0c057fe8266cae3a671102da48ead12742d6876f",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/research/research_result.json": "2999a63712dc9291b8d9a0e0a5c16414cac0bf68451b25d7d102f7cc7bfd9a9b",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/research/research_review.json": "728ba92ea06fc174a1d1c4d65de4cb64b4f74b9e619c816620784e2eb4616eb2",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/review/result.json": "ea9118eb01880c63e061af14912f93c8ca827d13f1ebfac8f511a14d418a064a",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/review/task.md": "ee7d1855be967dc6fde4efb03f6c892ccaf48411efedb8288daf76891c31024d",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/review/writer_done.json": "1c67f73e42f5dafe89e5ec20a67001281b89ec2ec6deff47be190f300430558c",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/review/product.json": "4c7ecaec7c55fdb06708dc09dd2684362e34b4e0de1e478c073b5d470056afab",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/review/category.json": "eed39aeab8fcd8830de29fdf75187b0afa902008beddbe8d2119b711e8316cd9",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/review/knowledge.json": "0ea4522952f4a8ebb090f75eb3bf83176e6685e09662106886a711a1f5de292f",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/review/draft.md": "cdb323121d880aa5911030e92501b66830f972eb0b21f3741ba9d87d81724c24",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/paragraph_sections.json": "e53c3f8e08e425ca1474632467061ca4aff8c506fe86f65900a3325d7a87e9b1",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/paragraph_repair.json": "279d71b9dab7e2e258104bed708dd9cdc4b90923843b2be6eb6abd9a608ea871",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/writing_job.json": "885b0e44a7a89e094d5a00a24aaf1ba6bd9ef8466553283371c62432edd0b839",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/claim_map.json": "89c463b09c58280829cf331ca8c319529a8595bccab9efe39b3e0beca06c5c3e",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/knowledge_to_sections.json": "36a0800c68f07f679f0634bbabd467aee343eeeea99d59faa478ecf1e07881cb",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/batch_rules.md": "f3de0e2f5f3ff2dc78bf57068e48b1f7ecdb7d3834f56af2ab79a955da688e2b",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/stage.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/writer_done.json": "1c67f73e42f5dafe89e5ec20a67001281b89ec2ec6deff47be190f300430558c",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/article.docx": "6f3ba3f8d8651a9fc4d28b089a5b490a1993c488f6ea5fc11eb8932f3a2ebccb",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/product.json": "4c7ecaec7c55fdb06708dc09dd2684362e34b4e0de1e478c073b5d470056afab",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/revision_note.txt": "22eae3511fccd34e06f3153d842396ec46ec45a03eb8bbbf95aeef498d2c4a80",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/paragraph_base.md": "9dc19d406866f4f8911feb6f93d8baa163fadf1503bb68dfdc6a1eab8c062723",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/writing_task.txt": "6b43807599d7d357a5533836e2fa996846222a0de0db901c2569bb50deea25ed",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/paragraph_claims.json": "d2361532b6cf8dd5800274b140c847333fa987e5079ca9ff36bf67e4b6d3b39f",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/category.json": "eed39aeab8fcd8830de29fdf75187b0afa902008beddbe8d2119b711e8316cd9",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/product_detail_review.json": "49f12d57a1bd2adeb5849fc18a55088482d422c9a9a7305d331717f164c7fbb4",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/knowledge.json": "0ea4522952f4a8ebb090f75eb3bf83176e6685e09662106886a711a1f5de292f",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/writing_prompt.md": "70d456fa3fe867a5ad76dc6ef379765aa2490f6e7ee8d1b83fff6971f5e21edf",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/repair_route.json": "27363ef124b0d7a0805114417bf76756d436c20d641c23efa322df46cc38b10e",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/draft_review.json": "7ba1e8905dd7c5937e918e8e23f18f93dc749830351499504e919fc5d91ee971",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02/writer/draft.md": "cdb323121d880aa5911030e92501b66830f972eb0b21f3741ba9d87d81724c24",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/research/research_task.txt": "0187fc836ac40e52b37cf606ea313124619a055a094197a73e8e30b7d71b9662",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/research/stage_job.json": "c259249ac7f469356e32aa3f6821c4fa765b56b1d8db622cc65f8be0097ac0ed",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/research/stage.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/research/revision_note.txt": "1eed6882f9d212033629fad9f9470321bb64a00a10e73f5e28ebd321dc0cdfd4",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/research/research_input.json": "e2ebddf9ac5b943fbacd1fca72bd3451412ed28db01f4e4387ee8a811d154124",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/research/research_result.json": "9196637ae6ff09dafdd32e9bcc6673caa48a6fc874b429c9b4415c7e7a087f02",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/research/research_review.json": "e26327ab99496a97bfd5a4236e4b4b8224fa41a5258d52441e2b8bdff3e12932",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/writing_job.json": "c46f5da2f088c31d852cfa3eafc3b532e2ceeb1509d8ff9aeb080fc5968176e2",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/claim_map.json": "2bfc189de889be407898611ce140c4e42592d2833246dee656adeb9a70925f3f",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/knowledge_to_sections.json": "49480c23183e84e3f403f8211fd4063832b0da1e5e429e2c1610a541ddebf0fa",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/batch_rules.md": "f3de0e2f5f3ff2dc78bf57068e48b1f7ecdb7d3834f56af2ab79a955da688e2b",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/stage.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/writer_done.json": "2bfba58419c44144d0a51a47341cd73d53e8793600081ece81583e654d73fdae",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/article.docx": "2b284c40edf5a04fd4da7ecbb35b2f799b1af2e52c52f5de0316a2b4a65fcb15",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/product.json": "4c7ecaec7c55fdb06708dc09dd2684362e34b4e0de1e478c073b5d470056afab",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/revision_note.txt": "e2a46d6d43252f8a4273be4e5b4dff98d1afea6bd5c6643867419bf6e85dd830",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/writing_task.txt": "afdb07ab180ba916b177e86684c39f51cdb3e6147aff7cd3a0929216cbf2525a",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/category.json": "bd571fcf5675db2be9ccb4ee16c4e9d577ba28bc4fd0e84dec2b75d0df199bbe",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/product_detail_review.json": "822727ed07e4baa6b0557e06db8283f549ef7c42e6128108f809e1c2c982b57f",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/knowledge.json": "cd0239ca1dd031f36b3d04368821af67e454a5f830017acb51064bb28ea59b9c",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/writing_prompt.md": "d44ab934493b68e3e7129e6f66e4401106b11e307c8608308bec5b178be0ea0c",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/repair_route.json": "6702baad4f494b3a94c87cc825acf0249de9c8e6624d6795cbdf12dd3a1fde66",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/draft_review.json": "eab01b65cbcc77f02ef0cf1384a1495002e74f149a098722ef1246b59de0c29e",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/draft.md": "c810b7411d8fb8e752d38b312acff3cbb1679903f0ccd8f878a928f6a2147d61"
+  },
+  "originals_match_previous": true,
+  "ledger": {
+    "rows": 2004,
+    "rows_sha256": "e4b0801e7e0ab39688cf6d41269196a7b0f03736c71ffe05fc696ac590fc6b59",
+    "scopes_sha256": "0eefbdc1e412bcc52c444f5aa80f1f6aa994970f05ad94eea1120e16278ae7fa",
+    "unknown": [
+      {
+        "id": "6d5c862ba8f2abdbfe249ce62ff3315eb8c9856d25e9fd78cff054cab9edade1",
+        "reserved": 0.06948,
+        "state": "reserved"
+      },
+      {
+        "id": "beb0fe71fe2ca8d2cfe72fa6f123190e74881ffbc961c2a897363259d88c4f11",
+        "reserved": 0.075934,
+        "state": "reserved"
+      },
+      {
+        "id": "bf5fc05faa9ccb415ae4ad245c4833b0f572cbcfc59571d5f8a6524b2a7e243c",
+        "reserved": 0.070376,
+        "state": "reserved"
+      }
+    ],
+    "scope_used": 4.624786440000001,
+    "scope": "plan-33e7bfca8bb6497da10b28f0444a693b",
+    "per_article": {
+      "排行类": 0.6531943200000002,
+      "测评类": 0.8206397599999999
+    },
+    "today_used": 0
+  },
+  "shared_settings": {
+    "start_time": "05:00",
+    "max_per_category": 10,
+    "deepseek_interval": 600,
+    "search_interval": 60,
+    "article_budget_cny": 0.35,
+    "daily_budget_cny": 10,
+    "test_budget_cny": 1.3,
+    "max_revisions": 1
+  },
+  "acceptance_budget": {
+    "article_budget_cny": 2.0,
+    "task_budget_cny": 8.0
+  },
+  "acceptance_control": {
+    "paused": true,
+    "reason": "acceptance_failed_two_revision_limit",
+    "message": "两篇真实样本未通过，两轮修订已耗尽；保存诊断证据，禁止自动新增内容修订",
+    "revision": 2,
+    "paused_epoch": 1792664186.1559887
+  },
+  "acceptance_active": {},
+  "balance_cache": {
+    "is_available": true,
+    "balance_infos": [
+      {
+        "currency": "CNY",
+        "total_balance": "15.21"
+      }
+    ],
+    "checked_epoch": 1792663901.099252
+  },
+  "balance_cache_mtime": 1792663901.0977614
+}

@@ -1,0 +1,11 @@
+{
+  "protected_file_count": 269,
+  "changed_while_diagnostic_artifacts_written": [],
+  "pass": true,
+  "only_new_artifacts": [
+    "REPORT.md",
+    "evidence.json",
+    "verification.json"
+  ],
+  "not_a_regression_or_model_quality_test": true
+}

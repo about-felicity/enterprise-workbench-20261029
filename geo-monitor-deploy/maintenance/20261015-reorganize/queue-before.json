@@ -1,0 +1,40 @@
+{
+  "doubao1": {
+    "batch": "geo-panel-doubao1-20261015-102126-041120bd",
+    "counts": {
+      "completed": 116,
+      "pending": 304
+    },
+    "queue": "/home/user/redroid-doubao/batches/geo-panel-doubao1-20261015-102126-041120bd/tasks.sqlite"
+  },
+  "doubao2": {
+    "batch": "geo-panel-doubao2-20261015-102128-d6e56b0a",
+    "counts": {
+      "completed": 119,
+      "pending": 301
+    },
+    "queue": "/home/user/redroid-doubao/batches/geo-panel-doubao2-20261015-102128-d6e56b0a/tasks.sqlite"
+  },
+  "deepseek": {
+    "batch": "geo-deepseek-21x3-20261015",
+    "counts": {
+      "pending": 63
+    },
+    "queue": "/opt/monitor/geo-capture/batches/geo-deepseek-21x3-20261015/collector/tasks.sqlite"
+  },
+  "wenxin_card": {
+    "batch": "geo-wenxin_card-21x6-20261015",
+    "counts": {
+      "completed": 126
+    },
+    "queue": "/opt/monitor/geo-capture/batches/geo-wenxin_card-21x6-20261015/collector/tasks.sqlite"
+  },
+  "baidu_ai": {
+    "batch": "geo-baidu_ai-21x5-20261015",
+    "counts": {
+      "completed": 91,
+      "pending": 14
+    },
+    "queue": "/opt/monitor/geo-capture/batches/geo-baidu_ai-21x5-20261015/collector/tasks.sqlite"
+  }
+}

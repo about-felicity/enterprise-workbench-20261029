@@ -1,0 +1,15 @@
+{
+  "at": 1792072032.9675603,
+  "old_test": "question-only-soak12h-videofix-1792066775",
+  "task_id": "512cd59d-44e5-5569-80ad-83aa515e8981",
+  "same_batches": {
+    "doubao1": "geo-panel-doubao1-20261015-181820-3d82b024",
+    "doubao2": "geo-panel-doubao2-20261015-181821-6fa7c803"
+  },
+  "historical_reinsert_proven": true,
+  "new_request_fresh_first_turn": true,
+  "native_clicks": 1,
+  "model_resends": 0,
+  "other_collectors_restarted": false,
+  "core_android_restarted": false
+}

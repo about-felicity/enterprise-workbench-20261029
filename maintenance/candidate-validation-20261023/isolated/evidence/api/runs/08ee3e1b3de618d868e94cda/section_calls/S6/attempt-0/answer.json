@@ -1,0 +1,16 @@
+{
+  "content": "{\n  \"id\": \"S6\",\n  \"heading\": \"域发防脱洗发水\",\n  \"paragraphs\": [\n    {\n      \"text\": \"继续按统一维度往下看，域发防脱洗发水在现有记录里同样给出了配方层面的线索。\",\n      \"statement_type\": \"transition\",\n      \"claim_ids\": []\n    },\n    {\n      \"text\": \"资料显示，域发防脱洗发水的配方以植物精粹加活性成分为核心。\",\n      \"statement_type\": \"product_fact\",\n      \"claim_ids\": [\"CL0004\", \"CL0022\"]\n    },\n    {\n      \"text\": \"需要说明的是，这条记录只描述配方构成，并未展开具体成分浓度或完整成分表，因此不宜据此推断它适合哪类发质或会产生什么使用效果。\",\n      \"statement_type\": \"inference\",\n      \"claim_ids\": []\n    },\n    {\n      \"text\": \"如果你正在几款产品之间做筛选，可以把“配方是否以植萃与活性成分为主”当作一个对照项；但最终是否合自己，仍建议先小范围试用、观察头皮与发丝的实际反应，再决定是否长期使用。\",\n      \"statement_type\": \"general_advice\",\n      \"claim_ids\": []\n    }\n  ]\n}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3931,
+    "completion_tokens": 275,
+    "total_tokens": 4206,
+    "prompt_tokens_details": {
+      "cached_tokens": 2432
+    },
+    "prompt_cache_hit_tokens": 2432,
+    "prompt_cache_miss_tokens": 1499
+  },
+  "request_id": "bf8e3ac6-f0df-4a81-8321-f3c8ff0db980",
+  "model": "deepseek-flash"
+}

@@ -1,0 +1,463 @@
+{
+  "at": 1792646964.1635354,
+  "services": {
+    "geo-content-api": "active",
+    "geo-content-worker": "active",
+    "geo-creation-studio": "active"
+  },
+  "jobs": [
+    {
+      "id": "creation-1792060761-3c2baae0",
+      "control": {
+        "paused": true,
+        "reason": "soak_deadline",
+        "message": "六小时测试截止，排空当前API请求；其他任务不受影响",
+        "revision": 8,
+        "paused_epoch": 1792083957.0360389
+      },
+      "active": {},
+      "health": {
+        "ticket": "632b07c19bac2187e935edb9",
+        "run_id": "4f1b4787e953685a945fca85",
+        "state": "REQUESTING",
+        "stage": "review",
+        "started_epoch": 1792062367.3099647,
+        "execution": {
+          "run_id": "4f1b4787e953685a945fca85",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792062367.321167,
+        "model": "deepseek-flash"
+      }
+    },
+    {
+      "id": "creation-1792060415-1e4e3a8d",
+      "control": {
+        "paused": false,
+        "revision": 9,
+        "resumed_epoch": 1792072232.4577825
+      },
+      "active": {},
+      "health": {
+        "ticket": "9efa7217e15cc4158d5c6f2d",
+        "run_id": "bcc9d31f43457590559ac4e1",
+        "state": "REQUESTING",
+        "stage": "review",
+        "started_epoch": 1792060550.698157,
+        "execution": {
+          "run_id": "bcc9d31f43457590559ac4e1",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792060550.7127156,
+        "model": "deepseek-flash"
+      }
+    },
+    {
+      "id": "creation-1792487912-b64bc49a",
+      "control": {
+        "paused": true,
+        "reason": "needs_attention",
+        "message": "执行需要核对，保留请求和质量证据；不会重发未知请求",
+        "revision": 4,
+        "paused_epoch": 1792488464.1503696
+      },
+      "active": {},
+      "health": {
+        "ticket": "840bdc437f0ce6a83b2c10f5",
+        "run_id": "ef0cf0d1ca10ffeac76d023c",
+        "state": "REQUESTING",
+        "stage": "review",
+        "started_epoch": 1792488451.3866403,
+        "execution": {
+          "run_id": "ef0cf0d1ca10ffeac76d023c",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792488451.4017513,
+        "model": "deepseek-flash"
+      }
+    },
+    {
+      "id": "creation-1792475798-478ca528",
+      "control": {
+        "paused": false,
+        "revision": 1,
+        "resumed_epoch": 1792475798.5861423
+      },
+      "active": {},
+      "health": {
+        "ticket": "a5b523221076e336acbeaa9b",
+        "run_id": "5027c568a8236b206aacb6f8",
+        "state": "REQUESTING",
+        "stage": "review",
+        "started_epoch": 1792476324.6982787,
+        "execution": {
+          "run_id": "5027c568a8236b206aacb6f8",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792476324.7163215,
+        "model": "deepseek-flash"
+      }
+    },
+    {
+      "id": "creation-1792621034-c569469d",
+      "control": {
+        "paused": true,
+        "reason": "needs_attention",
+        "message": "执行需要核对，保留请求和质量证据；不会重发未知请求",
+        "revision": 2,
+        "paused_epoch": 1792625129.3897367
+      },
+      "active": {},
+      "health": {
+        "ticket": "65b324d02f766770948225a6",
+        "run_id": "b1fda0aa5d06f9015a452975",
+        "state": "REQUESTING",
+        "stage": "review",
+        "started_epoch": 1792625114.3084738,
+        "execution": {
+          "run_id": "b1fda0aa5d06f9015a452975",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792625114.3585687,
+        "model": "deepseek-flash"
+      }
+    },
+    {
+      "id": "creation-1792475798-7d2fc250",
+      "control": {
+        "paused": false,
+        "revision": 1,
+        "resumed_epoch": 1792475798.4125826
+      },
+      "active": {},
+      "health": {
+        "ticket": "a5b523221076e336acbeaa9b",
+        "run_id": "fa61ceaacf9781f98f42deb7",
+        "state": "REQUESTING",
+        "stage": "review",
+        "started_epoch": 1792476332.2398853,
+        "execution": {
+          "run_id": "fa61ceaacf9781f98f42deb7",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792476332.2490351,
+        "model": "deepseek-flash"
+      }
+    },
+    {
+      "id": "creation-1792576129-389f575e",
+      "control": {
+        "paused": true,
+        "reason": "compiler_small_sample",
+        "message": "按用户要求暂停14篇批量返修，先验证可写性、结论账本与小样本闭环",
+        "revision": 14,
+        "paused_epoch": 1792639859.7089531
+      },
+      "active": {},
+      "health": {
+        "ticket": "39c23af8db30d182a99eaa93",
+        "run_id": "daaee4e8e64422902e3809ad",
+        "state": "REQUESTING",
+        "stage": "writer",
+        "started_epoch": 1792635860.8127823,
+        "execution": {
+          "run_id": "daaee4e8e64422902e3809ad",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792635860.9000459,
+        "model": "deepseek-flash"
+      },
+      "limits": {
+        "article_budget_cny": 0.35,
+        "task_budget_cny": 5.25
+      },
+      "pilots": []
+    },
+    {
+      "id": "creation-1792636960-aa0d6ec9",
+      "control": {
+        "paused": false,
+        "revision": 1,
+        "resumed_epoch": 1792636961.063664
+      },
+      "active": {},
+      "health": {
+        "ticket": "5f6cd7c93f867fad1d7dabea",
+        "run_id": "cc86516479742e0dfea872d1",
+        "state": "REQUESTING",
+        "stage": "review",
+        "started_epoch": 1792639425.0430334,
+        "execution": {
+          "run_id": "cc86516479742e0dfea872d1",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792639425.0546205,
+        "model": "deepseek-flash"
+      }
+    },
+    {
+      "id": "creation-1792575159-0a8f9221",
+      "control": {
+        "paused": true,
+        "reason": "compiler_small_sample",
+        "message": "两篇小样本已收尾；保留批量暂停、预算和所有结果，待处理正文问题与剩余复审",
+        "revision": 23,
+        "paused_epoch": 1792641575.3754613
+      },
+      "active": {},
+      "health": {
+        "ticket": "3ee463850a806b427f75d00c",
+        "run_id": "c8b9cf0002bf06313b9b0c3e",
+        "state": "REQUESTING",
+        "stage": "review",
+        "started_epoch": 1792641367.1893075,
+        "execution": {
+          "run_id": "c8b9cf0002bf06313b9b0c3e",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792641367.2161322,
+        "model": "deepseek-flash"
+      },
+      "limits": {
+        "article_budget_cny": 0.35,
+        "task_budget_cny": 5.25
+      },
+      "pilots": [
+        {
+          "location": "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/测评类/02",
+          "writer_done": true,
+          "review_checks": {
+            "category_fit": true,
+            "structure_fit": true,
+            "innovation_present": true,
+            "product_gate_respected": true,
+            "no_invented_tests": true,
+            "no_unsupported_claims": true,
+            "consumer_article": true
+          },
+          "review_failures": [
+            "C60将“满足日常清洁”表述与植萃组合、乳液质地描述“相符”，由成分存在与外观推出用途表现，属无依据推断，应仅作产品用途说明。",
+            "C34以“200ml/瓶适合短期试用或旅行携带”对小容量作便携性推定，资料未给包装取用设计，属无依据的具体使用场景判断。"
+          ],
+          "draft_sha256": "cdb323121d880aa5911030e92501b66830f972eb0b21f3741ba9d87d81724c24"
+        },
+        {
+          "location": "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01",
+          "writer_done": true,
+          "review_checks": null,
+          "review_failures": null,
+          "draft_sha256": null
+        }
+      ]
+    },
+    {
+      "id": "creation-1792526406-06126e43",
+      "control": {
+        "paused": false,
+        "revision": 1,
+        "resumed_epoch": 1792526406.7576106
+      },
+      "active": {},
+      "health": {
+        "ticket": "0105d29cffef722506aeb253",
+        "run_id": "1ba54245bc7e6b281ade5f59",
+        "state": "REQUESTING",
+        "stage": "review",
+        "started_epoch": 1792528575.1717327,
+        "execution": {
+          "run_id": "1ba54245bc7e6b281ade5f59",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792528575.1799295,
+        "model": "deepseek-flash"
+      }
+    },
+    {
+      "id": "creation-1792479954-8a96bc88",
+      "control": {
+        "paused": false,
+        "revision": 16,
+        "resumed_epoch": 1792550267.205236
+      },
+      "active": {},
+      "health": {
+        "ticket": "08ea09c343343b52fb6b705a",
+        "run_id": "bffcd949db594ed54e198e95",
+        "state": "REQUESTING",
+        "stage": "writer",
+        "started_epoch": 1792545957.6054995,
+        "execution": {
+          "run_id": "bffcd949db594ed54e198e95",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792545957.615981,
+        "model": "deepseek-flash"
+      }
+    },
+    {
+      "id": "creation-1792526406-8f93ccca",
+      "control": {
+        "paused": false,
+        "revision": 3,
+        "resumed_epoch": 1792550377.4152882
+      },
+      "active": {},
+      "health": {
+        "ticket": "55a3a259348d620d72a9d3bf",
+        "run_id": "7620d327e73f27eba2bbc5f9",
+        "state": "REQUESTING",
+        "stage": "writer",
+        "started_epoch": 1792546285.0995426,
+        "execution": {
+          "run_id": "7620d327e73f27eba2bbc5f9",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792546285.1105342,
+        "model": "deepseek-flash"
+      }
+    },
+    {
+      "id": "creation-1792556219-bbc55e13",
+      "control": {
+        "paused": false,
+        "revision": 6,
+        "resumed_epoch": 1792557832.7236297,
+        "resolved_system_pause": {
+          "paused": true,
+          "reason": "document_projection_maintenance",
+          "message": "等待正在执行的请求安全收尾，修正三级标题与结构化段落兼容；不发送新请求",
+          "revision": 5,
+          "paused_epoch": 1792557712.4321377
+        },
+        "reason": "document_and_evidence_projection_fixed"
+      },
+      "active": {},
+      "health": {
+        "ticket": "6b94d416a87174f0cfebdde2",
+        "run_id": "68303f384389799168f83db7",
+        "state": "REQUESTING",
+        "stage": "review",
+        "started_epoch": 1792558731.7025356,
+        "execution": {
+          "run_id": "68303f384389799168f83db7",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792558731.7121463,
+        "model": "deepseek-flash"
+      }
+    },
+    {
+      "id": "creation-1792487019-ffa40955",
+      "control": {
+        "paused": false,
+        "revision": 13,
+        "resumed_epoch": 1792491165.793582
+      },
+      "active": {},
+      "health": {
+        "ticket": "f166ba0a7364c6f6f17cbcad",
+        "run_id": "c8ada37bddf3e010651c16f6",
+        "state": "REQUESTING",
+        "stage": "review",
+        "started_epoch": 1792491218.9221923,
+        "execution": {
+          "run_id": "c8ada37bddf3e010651c16f6",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792491218.9400098,
+        "model": "deepseek-flash"
+      }
+    },
+    {
+      "id": "creation-1792575864-f2f8afb2",
+      "control": {
+        "paused": true,
+        "reason": "local_taxonomy_replaced",
+        "message": "旧进程缓存导致本地分类未更新；保留零付费准备记录，新任务使用相同缓存正文重新分类",
+        "revision": 2,
+        "paused_epoch": 1792576124.0421479
+      },
+      "active": {},
+      "health": {
+        "ticket": "e273b929a410f396bf29abe4",
+        "run_id": "eda6f8c770da3eff16b79fc8",
+        "state": "REQUESTING",
+        "stage": "taxonomy",
+        "started_epoch": 1792575868.7145271,
+        "execution": {
+          "run_id": "eda6f8c770da3eff16b79fc8",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792575868.7218127,
+        "model": "deepseek-flash"
+      }
+    },
+    {
+      "id": "creation-1792620783-e9ce20db",
+      "control": {
+        "paused": true,
+        "reason": "invalid_response",
+        "message": "API阶段受保护暂停：invalid_response",
+        "revision": 2,
+        "paused_epoch": 1792623490.025819
+      },
+      "active": {
+        "ticket": "be7d4afc6c497e68270dc5b1",
+        "run_id": "3d41d181e3c403645c17f017",
+        "state": "RESPONDED",
+        "stage": "review",
+        "started_epoch": 1792623480.1652455,
+        "execution": {
+          "run_id": "3d41d181e3c403645c17f017",
+          "generation": 1
+        }
+      },
+      "health": {
+        "ticket": "be7d4afc6c497e68270dc5b1",
+        "run_id": "3d41d181e3c403645c17f017",
+        "state": "REQUESTING",
+        "stage": "review",
+        "started_epoch": 1792623480.1652455,
+        "execution": {
+          "run_id": "3d41d181e3c403645c17f017",
+          "generation": 1
+        },
+        "status": "requesting",
+        "checked_epoch": 1792623480.173291,
+        "model": "deepseek-flash"
+      }
+    }
+  ],
+  "costs": [
+    [
+      "2026-10-21",
+      2.8020491200000004,
+      0
+    ],
+    [
+      "2026-10-22",
+      0.9096056000000002,
+      0
+    ]
+  ],
+  "unknown_ids": [
+    "6d5c862ba8f2abdbfe249ce62ff3315eb8c9856d25e9fd78cff054cab9edade1",
+    "beb0fe71fe2ca8d2cfe72fa6f123190e74881ffbc961c2a897363259d88c4f11",
+    "bf5fc05faa9ccb415ae4ad245c4833b0f572cbcfc59571d5f8a6524b2a7e243c"
+  ]
+}

@@ -1,0 +1,1 @@
+{"python_tests":83,"go_race":"passed","go_vet":"passed","ten_task_fixture":"passed","ten_model_requests_fixture":"passed","ten_capture_leases_fixture":"passed","orphan_lock_retained":"passed","native_serve_sigterm":"passed","live_readonly_balance":"passed","live_capture_user_permissions":"passed","browser_ui":"passed","paid_requests":0,"real_ten_browser_load_test":false}

@@ -1,0 +1,871 @@
+{
+  "created_at": "2026-10-21T13:30:14.166600+08:00",
+  "root": "C:\\Users\\78567\\Desktop\\隐身浏览器",
+  "directories": [
+    {
+      "path": "deepseek-browser-deploy\\__pycache__",
+      "bytes": 33918,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "deepseek-browser-deploy\\public_ingest\\__pycache__",
+      "bytes": 17834,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "deepseek-deploy\\__pycache__",
+      "bytes": 69666,
+      "files": 9,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "deepseek-deploy\\account2\\__pycache__",
+      "bytes": 3836,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "geo-monitor-deploy\\__pycache__",
+      "bytes": 273784,
+      "files": 15,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "geo-monitor-deploy\\creation\\__pycache__",
+      "bytes": 243137,
+      "files": 12,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "geo-monitor-deploy\\tests\\__pycache__",
+      "bytes": 77111,
+      "files": 4,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "geo-source-card-collectors\\geo_source_cards\\__pycache__",
+      "bytes": 337727,
+      "files": 20,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "geo-source-card-collectors\\monitor_core\\__pycache__",
+      "bytes": 13688,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "geo-source-card-collectors\\tests\\__pycache__",
+      "bytes": 49424,
+      "files": 6,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "geo-source-card-collectors\\web_collectors\\__pycache__",
+      "bytes": 66150,
+      "files": 4,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "geo-source-card-collectors\\wenxin_monitor\\__pycache__",
+      "bytes": 66196,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "outputs\\api-editorial\\diagnostics\\deepseek-login-20261010\\local-runtime\\web_profiles\\deepseek\\GrShaderCache",
+      "bytes": 4880252,
+      "files": 10,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "outputs\\api-editorial\\diagnostics\\deepseek-login-20261010\\local-runtime\\web_profiles\\deepseek\\ShaderCache",
+      "bytes": 557424,
+      "files": 5,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "outputs\\api-editorial\\diagnostics\\deepseek-login-20261010\\local-runtime\\web_profiles\\deepseek\\Default\\Cache",
+      "bytes": 8318279,
+      "files": 29,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "outputs\\api-editorial\\diagnostics\\deepseek-login-20261010\\local-runtime\\web_profiles\\deepseek\\Default\\Code Cache",
+      "bytes": 23428,
+      "files": 18,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "outputs\\api-editorial\\diagnostics\\deepseek-login-20261010\\local-runtime\\web_profiles\\deepseek\\Default\\GPUCache",
+      "bytes": 1642864,
+      "files": 5,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "outputs\\api-editorial\\diagnostics\\deepseek-login-20261012\\local-runtime\\web_profiles\\deepseek\\GrShaderCache",
+      "bytes": 4906064,
+      "files": 11,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "outputs\\api-editorial\\diagnostics\\deepseek-login-20261012\\local-runtime\\web_profiles\\deepseek\\ShaderCache",
+      "bytes": 557424,
+      "files": 5,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "outputs\\api-editorial\\diagnostics\\deepseek-login-20261012\\local-runtime\\web_profiles\\deepseek\\Default\\Cache",
+      "bytes": 8513712,
+      "files": 35,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "outputs\\api-editorial\\diagnostics\\deepseek-login-20261012\\local-runtime\\web_profiles\\deepseek\\Default\\Code Cache",
+      "bytes": 4843088,
+      "files": 27,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "outputs\\api-editorial\\diagnostics\\deepseek-login-20261012\\local-runtime\\web_profiles\\deepseek\\Default\\GPUCache",
+      "bytes": 1642864,
+      "files": 5,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\__pycache__",
+      "bytes": 41039,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\__pycache__",
+      "bytes": 10972,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\adbutils\\__pycache__",
+      "bytes": 228458,
+      "files": 17,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\adbutils\\binaries\\__pycache__",
+      "bytes": 209,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\bcrypt\\__pycache__",
+      "bytes": 592,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\certifi\\__pycache__",
+      "bytes": 3716,
+      "files": 3,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\certifi\\tests\\__pycache__",
+      "bytes": 2373,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cffi\\__pycache__",
+      "bytes": 440157,
+      "files": 20,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\charset_normalizer\\__pycache__",
+      "bytes": 194362,
+      "files": 10,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\charset_normalizer\\cli\\__pycache__",
+      "bytes": 15221,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\click\\__pycache__",
+      "bytes": 589167,
+      "files": 17,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\__pycache__",
+      "bytes": 27061,
+      "files": 6,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\__pycache__",
+      "bytes": 22516,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\asn1\\__pycache__",
+      "bytes": 21806,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\backends\\__pycache__",
+      "bytes": 657,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__pycache__",
+      "bytes": 19374,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\__pycache__",
+      "bytes": 271,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\__pycache__",
+      "bytes": 14068,
+      "files": 3,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\decrepit\\__pycache__",
+      "bytes": 271,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\decrepit\\ciphers\\__pycache__",
+      "bytes": 11396,
+      "files": 3,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\__pycache__",
+      "bytes": 43584,
+      "files": 13,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\__pycache__",
+      "bytes": 133516,
+      "files": 14,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\__pycache__",
+      "bytes": 25340,
+      "files": 5,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\__pycache__",
+      "bytes": 7706,
+      "files": 8,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\__pycache__",
+      "bytes": 109939,
+      "files": 5,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\twofactor\\__pycache__",
+      "bytes": 9842,
+      "files": 3,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\cryptography\\x509\\__pycache__",
+      "bytes": 273850,
+      "files": 9,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\decorator\\__pycache__",
+      "bytes": 23135,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\idna\\__pycache__",
+      "bytes": 184265,
+      "files": 10,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\invoke\\__pycache__",
+      "bytes": 328876,
+      "files": 16,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\invoke\\completion\\__pycache__",
+      "bytes": 6624,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\invoke\\parser\\__pycache__",
+      "bytes": 47812,
+      "files": 4,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\invoke\\vendor\\__pycache__",
+      "bytes": 205,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\invoke\\vendor\\fluidity\\__pycache__",
+      "bytes": 18099,
+      "files": 3,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\invoke\\vendor\\lexicon\\__pycache__",
+      "bytes": 8799,
+      "files": 4,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\invoke\\vendor\\yaml\\__pycache__",
+      "bytes": 263013,
+      "files": 17,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\lxml\\__pycache__",
+      "bytes": 71554,
+      "files": 9,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\lxml\\html\\__pycache__",
+      "bytes": 258709,
+      "files": 14,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\lxml\\includes\\__pycache__",
+      "bytes": 205,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\lxml\\includes\\extlibs\\__pycache__",
+      "bytes": 213,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\lxml\\includes\\libexslt\\__pycache__",
+      "bytes": 214,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\lxml\\includes\\libxml\\__pycache__",
+      "bytes": 212,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\lxml\\includes\\libxslt\\__pycache__",
+      "bytes": 213,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\lxml\\isoschematron\\__pycache__",
+      "bytes": 14171,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\nacl\\__pycache__",
+      "bytes": 80620,
+      "files": 9,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\nacl\\bindings\\__pycache__",
+      "bytes": 199754,
+      "files": 16,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\nacl\\pwhash\\__pycache__",
+      "bytes": 23736,
+      "files": 5,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\packaging\\__pycache__",
+      "bytes": 512493,
+      "files": 20,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\packaging\\licenses\\__pycache__",
+      "bytes": 61041,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\paramiko\\__pycache__",
+      "bytes": 754827,
+      "files": 41,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\PIL\\__pycache__",
+      "bytes": 1612289,
+      "files": 97,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\__pycache__",
+      "bytes": 4065,
+      "files": 3,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\__pycache__",
+      "bytes": 149435,
+      "files": 9,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\cli\\__pycache__",
+      "bytes": 146805,
+      "files": 13,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\commands\\__pycache__",
+      "bytes": 182817,
+      "files": 19,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\distributions\\__pycache__",
+      "bytes": 19617,
+      "files": 5,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\index\\__pycache__",
+      "bytes": 91869,
+      "files": 4,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\locations\\__pycache__",
+      "bytes": 40186,
+      "files": 4,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\metadata\\__pycache__",
+      "bytes": 73627,
+      "files": 4,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\metadata\\importlib\\__pycache__",
+      "bytes": 31499,
+      "files": 4,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\models\\__pycache__",
+      "bytes": 84702,
+      "files": 13,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\network\\__pycache__",
+      "bytes": 98649,
+      "files": 8,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\operations\\__pycache__",
+      "bytes": 50430,
+      "files": 4,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\operations\\build\\__pycache__",
+      "bytes": 17848,
+      "files": 6,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\operations\\install\\__pycache__",
+      "bytes": 40896,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\req\\__pycache__",
+      "bytes": 152144,
+      "files": 8,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\resolution\\__pycache__",
+      "bytes": 1877,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\resolution\\legacy\\__pycache__",
+      "bytes": 25476,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\resolution\\resolvelib\\__pycache__",
+      "bytes": 151142,
+      "files": 9,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\utils\\__pycache__",
+      "bytes": 192457,
+      "files": 26,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_internal\\vcs\\__pycache__",
+      "bytes": 88208,
+      "files": 6,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\__pycache__",
+      "bytes": 4656,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\cachecontrol\\__pycache__",
+      "bytes": 57821,
+      "files": 9,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\cachecontrol\\caches\\__pycache__",
+      "bytes": 13171,
+      "files": 3,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\certifi\\__pycache__",
+      "bytes": 3781,
+      "files": 3,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\dependency_groups\\__pycache__",
+      "bytes": 21843,
+      "files": 6,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\distlib\\__pycache__",
+      "bytes": 180134,
+      "files": 5,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\distro\\__pycache__",
+      "bytes": 62617,
+      "files": 3,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\idna\\__pycache__",
+      "bytes": 443352,
+      "files": 8,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\msgpack\\__pycache__",
+      "bytes": 55116,
+      "files": 4,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\packaging\\__pycache__",
+      "bytes": 269544,
+      "files": 15,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\packaging\\licenses\\__pycache__",
+      "bytes": 59256,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\pkg_resources\\__pycache__",
+      "bytes": 189594,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\platformdirs\\__pycache__",
+      "bytes": 105607,
+      "files": 8,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\pygments\\__pycache__",
+      "bytes": 144277,
+      "files": 15,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\pygments\\filters\\__pycache__",
+      "bytes": 38499,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\pygments\\formatters\\__pycache__",
+      "bytes": 11382,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\pygments\\lexers\\__pycache__",
+      "bytes": 135137,
+      "files": 3,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\pygments\\styles\\__pycache__",
+      "bytes": 6511,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\pyproject_hooks\\__pycache__",
+      "bytes": 22503,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\pyproject_hooks\\_in_process\\__pycache__",
+      "bytes": 17044,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\requests\\__pycache__",
+      "bytes": 213174,
+      "files": 18,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\resolvelib\\__pycache__",
+      "bytes": 32228,
+      "files": 4,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\resolvelib\\resolvers\\__pycache__",
+      "bytes": 40850,
+      "files": 5,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\rich\\__pycache__",
+      "bytes": 1319466,
+      "files": 77,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\tomli\\__pycache__",
+      "bytes": 41403,
+      "files": 4,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\tomli_w\\__pycache__",
+      "bytes": 13506,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\truststore\\__pycache__",
+      "bytes": 69049,
+      "files": 6,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\urllib3\\__pycache__",
+      "bytes": 169968,
+      "files": 11,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\urllib3\\contrib\\__pycache__",
+      "bytes": 89789,
+      "files": 7,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\urllib3\\contrib\\_securetransport\\__pycache__",
+      "bytes": 32676,
+      "files": 3,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\urllib3\\packages\\__pycache__",
+      "bytes": 43129,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\urllib3\\packages\\backports\\__pycache__",
+      "bytes": 9948,
+      "files": 3,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pip\\_vendor\\urllib3\\util\\__pycache__",
+      "bytes": 102706,
+      "files": 13,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\pycparser\\__pycache__",
+      "bytes": 271798,
+      "files": 7,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\requests\\__pycache__",
+      "bytes": 282304,
+      "files": 19,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\retry\\__pycache__",
+      "bytes": 8487,
+      "files": 3,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\uiautomator2\\__pycache__",
+      "bytes": 281565,
+      "files": 17,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\uiautomator2\\agent_cli\\__pycache__",
+      "bytes": 118069,
+      "files": 9,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\uiautomator2\\ext\\__pycache__",
+      "bytes": 208,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\uiautomator2\\ext\\htmlreport\\__pycache__",
+      "bytes": 9284,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\uiautomator2\\ext\\htmlreport\\assets\\__pycache__",
+      "bytes": 2007,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\uiautomator2\\ext\\info\\__pycache__",
+      "bytes": 40682,
+      "files": 2,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\uiautomator2\\ext\\perf\\__pycache__",
+      "bytes": 20360,
+      "files": 1,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\urllib3\\__pycache__",
+      "bytes": 284500,
+      "files": 12,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\urllib3\\contrib\\__pycache__",
+      "bytes": 45705,
+      "files": 3,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\urllib3\\contrib\\emscripten\\__pycache__",
+      "bytes": 64869,
+      "files": 5,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\urllib3\\http2\\__pycache__",
+      "bytes": 27100,
+      "files": 3,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "redroid-deploy\\.venv\\Lib\\site-packages\\urllib3\\util\\__pycache__",
+      "bytes": 130665,
+      "files": 13,
+      "reason": "Regenerable bytecode/test cache or inactive historical browser cache"
+    },
+    {
+      "path": "outputs\\creation-quality-20261021\\eye-pages",
+      "bytes": 4538,
+      "files": 1,
+      "reason": "Superseded failed blank Word rendering; verified final render retained"
+    }
+  ],
+  "log": {
+    "path": "yuanbao-deploy\\artifacts\\tunnel-error.log",
+    "bytes": 1365666827,
+    "mtime_ns": 1792352770122453400,
+    "sha256": "5bc6965d637511a6373821fde90415f209c3cb2dbde3107515dc6685878903e8",
+    "archive": "geo-monitor-deploy\\maintenance\\20261021-cleanup\\yuanbao-tunnel-error-full.log.gz",
+    "archive_bytes": 18676067,
+    "archive_sha256": "e998d7b11a3fa463122505a96d952f9188f3948f61a7ad763edf2cd1988c368f",
+    "replacement": "geo-monitor-deploy\\maintenance\\20261021-cleanup\\yuanbao-tunnel-error.tail",
+    "tail_bytes": 65536,
+    "tail_sha256": "9d878a66a57a7346ec218c35b63bdcd28edbcf479a3dc3dde053f93d40712b28"
+  },
+  "scope": "Local only; runtime/source/data/login/results/rollback evidence and reparse targets retained"
+}

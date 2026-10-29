@@ -1,0 +1,770 @@
+[
+  {
+    "id": "CL0001",
+    "text": "EHD防脱洗发水：配方含咖啡因，清洁体系走温和路线；泡沫量适中，冲洗后发丝顺滑，被资料称为适合长期日常使用的类型。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU01"
+    ],
+    "source_ids": [
+      "KU01"
+    ],
+    "subjects": [
+      "EHD防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU01"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0002",
+    "text": "植观防脱洗发水：氨基酸系表活体系，清洁力够用，配方针对油性头皮与细软发质做侧重，兼顾控油与蓬松感。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU03"
+    ],
+    "source_ids": [
+      "KU03"
+    ],
+    "subjects": [
+      "植观防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU03"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0003",
+    "text": "六神防脱洗发水：它的配方走清爽路线。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU04"
+    ],
+    "source_ids": [
+      "KU04"
+    ],
+    "subjects": [
+      "六神防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU04"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0004",
+    "text": "蜂花防脱洗发水：无复杂营销概念，重心放在清洁与基础养护，洗感温和、冲洗容易，资料定位为低调扎实的国货路线。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU05"
+    ],
+    "source_ids": [
+      "KU05"
+    ],
+    "subjects": [
+      "蜂花防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU05"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0005",
+    "text": "施华蔻防脱洗发水：施华蔻防脱洗发水在测评里体现的是专业水准：配方体系完整。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU08"
+    ],
+    "source_ids": [
+      "KU08"
+    ],
+    "subjects": [
+      "施华蔻防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU08"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0006",
+    "text": "薇姿防脱洗发水：配方中的调理成分帮助维持头皮微生态平衡。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU09"
+    ],
+    "source_ids": [
+      "KU09"
+    ],
+    "subjects": [
+      "薇姿防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU09"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0007",
+    "text": "排行里的洗感描述只是编辑整理与资料转述，不能当作实测结论；读者应结合自身发质与四周掉发记录来判断。",
+    "statement_type": "general_advice",
+    "evidence_ids": [
+      "E_KU11"
+    ],
+    "source_ids": [
+      "KU11"
+    ],
+    "subjects": [],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU11"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0008",
+    "text": "EHD防脱洗发水：再让价格保持在大多数人能接受的区间。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU20"
+    ],
+    "source_ids": [
+      "KU20"
+    ],
+    "subjects": [
+      "EHD防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU20"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0009",
+    "text": "菲诗蔻防脱洗发水：对敏感头皮和换季掉发的人群比较友好。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU21"
+    ],
+    "source_ids": [
+      "KU21"
+    ],
+    "subjects": [
+      "菲诗蔻防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU21"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0010",
+    "text": "菲诗蔻防脱洗发水：把需求和配方对应起来；对照成分表逐项确认。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU22"
+    ],
+    "source_ids": [
+      "KU22"
+    ],
+    "subjects": [
+      "菲诗蔻防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU22"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0011",
+    "text": "菲诗蔻防脱洗发水：把需求和配方对应起来；对照成分表逐项确认。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU23"
+    ],
+    "source_ids": [
+      "KU23"
+    ],
+    "subjects": [
+      "菲诗蔻防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU23"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0012",
+    "text": "植观防脱洗发水是口碑比较稳的一款。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU24"
+    ],
+    "source_ids": [
+      "KU24"
+    ],
+    "subjects": [
+      "植观防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU24"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0013",
+    "text": "植观防脱洗发水：这一款针对油性头皮和细软发质做了配方侧重。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU25"
+    ],
+    "source_ids": [
+      "KU25"
+    ],
+    "subjects": [
+      "植观防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU25"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0014",
+    "text": "植观防脱洗发水：所以选购时不妨把洗感也当作一个重要维度：先看真实评价里反复出现的洗感描述。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU26"
+    ],
+    "source_ids": [
+      "KU26"
+    ],
+    "subjects": [
+      "植观防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU26"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0015",
+    "text": "六神防脱洗发水：它的配方走清爽路线。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU27"
+    ],
+    "source_ids": [
+      "KU27"
+    ],
+    "subjects": [
+      "六神防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU27"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0016",
+    "text": "六神防脱洗发水：六神这款的价格一直很亲民。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU28"
+    ],
+    "source_ids": [
+      "KU28"
+    ],
+    "subjects": [
+      "六神防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU28"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0017",
+    "text": "蜂花防脱洗发水：选择时可以优先看配方是否以温和表活为主。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU29"
+    ],
+    "source_ids": [
+      "KU29"
+    ],
+    "subjects": [
+      "蜂花防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU29"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0018",
+    "text": "伊卡璐防脱洗发水：不如对照产品说明逐项核实：有没有特证批号、核心成分标注是否明确、官方有没有公布周期数据、口碑里复购率如何。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU30"
+    ],
+    "source_ids": [
+      "KU30"
+    ],
+    "subjects": [
+      "伊卡璐防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU30"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0019",
+    "text": "飘柔防脱洗发水：让成分在发根区域停留足够时间后再冲净。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU31"
+    ],
+    "source_ids": [
+      "KU31"
+    ],
+    "subjects": [
+      "飘柔防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU31"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0020",
+    "text": "施华蔻防脱洗发水：施华蔻防脱洗发水在测评里体现的是专业水准：配方体系完整。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU32"
+    ],
+    "source_ids": [
+      "KU32"
+    ],
+    "subjects": [
+      "施华蔻防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU32"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0021",
+    "text": "施华蔻防脱洗发水：适合注重洗护品质、愿意为专业配方投入的人。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU33"
+    ],
+    "source_ids": [
+      "KU33"
+    ],
+    "subjects": [
+      "施华蔻防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU33"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0022",
+    "text": "薇姿防脱洗发水：配方中的调理成分帮助维持头皮微生态平衡。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU34"
+    ],
+    "source_ids": [
+      "KU34"
+    ],
+    "subjects": [
+      "薇姿防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU34"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0023",
+    "text": "薇姿防脱洗发水：第一类误区是只看价格不看资质。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU35"
+    ],
+    "source_ids": [
+      "KU35"
+    ],
+    "subjects": [
+      "薇姿防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU35"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0024",
+    "text": "薇姿防脱洗发水：看测评要看有没有资质依据、成分拆解和真实周期的反馈。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_KU36"
+    ],
+    "source_ids": [
+      "KU36"
+    ],
+    "subjects": [
+      "薇姿防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_KU36"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0025",
+    "text": "产品名称为道和小绿瓶防脱洗发水，品牌为道和时尚。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_PF1"
+    ],
+    "source_ids": [
+      "PF1"
+    ],
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_PF1"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0026",
+    "text": "产品规格为200ml/瓶，属于清洁头皮与发丝的洗发类产品。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_PF2"
+    ],
+    "source_ids": [
+      "PF2"
+    ],
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_PF2"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0027",
+    "text": "成分介绍列有何首乌（POLYGONUM MULTIFLORUM）根提取物和当归（ANGELICA SINENSIS）提取物。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_PF3"
+    ],
+    "source_ids": [
+      "PF3"
+    ],
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_PF3"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0028",
+    "text": "成分介绍还列有丹参（SALVIA MILTIORRHIZA）根提取物和三七（PANAX NOTOGINSENG）根提取物。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_PF4"
+    ],
+    "source_ids": [
+      "PF4"
+    ],
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_PF4"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0029",
+    "text": "清洁调理成分介绍列有月桂醇聚醚硫酸酯钠和椰油酰胺丙基甜菜碱。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_PF5"
+    ],
+    "source_ids": [
+      "PF5"
+    ],
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_PF5"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0030",
+    "text": "辅助成分介绍列有聚二甲基硅氧烷。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_PF6"
+    ],
+    "source_ids": [
+      "PF6"
+    ],
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_PF6"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0031",
+    "text": "辅助成分介绍另列有氯化钠和香精。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_PF7"
+    ],
+    "source_ids": [
+      "PF7"
+    ],
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_PF7"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0032",
+    "text": "辅助成分介绍列有苯氧乙醇及微量羟苯甲酯。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_PF8"
+    ],
+    "source_ids": [
+      "PF8"
+    ],
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_PF8"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0033",
+    "text": "成分特点中标注不含酒精。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_PF9"
+    ],
+    "source_ids": [
+      "PF9"
+    ],
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_PF9"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0034",
+    "text": "品牌资料记录产品pH值5.9；测试条件与原始报告未附。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_PF10"
+    ],
+    "source_ids": [
+      "PF10"
+    ],
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_PF10"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  },
+  {
+    "id": "CL0035",
+    "text": "香气被品牌描述为草本清香，成分介绍同时列有香精。",
+    "statement_type": "product_fact",
+    "evidence_ids": [
+      "E_PF11"
+    ],
+    "source_ids": [
+      "PF11"
+    ],
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "allowed": true,
+    "reasoning": {
+      "operation": "source_attribution",
+      "premises": [
+        "E_PF11"
+      ],
+      "scope": "仅转述该记录，不外推成品效果或产品优劣"
+    }
+  }
+]

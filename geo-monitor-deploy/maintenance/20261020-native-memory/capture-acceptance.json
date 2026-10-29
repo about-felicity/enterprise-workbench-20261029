@@ -1,0 +1,86 @@
+{
+  "checked_at": 1792466123.7280674,
+  "batch": "geo-panel-doubao2-20261020-090001-6bcafb90",
+  "local_completed": 40,
+  "postgres_verified": 40,
+  "verified_tail": [
+    {
+      "ordinal": 36,
+      "body_length": 574,
+      "sources": 12,
+      "capture_retries": 0
+    },
+    {
+      "ordinal": 37,
+      "body_length": 520,
+      "sources": 12,
+      "capture_retries": 0
+    },
+    {
+      "ordinal": 38,
+      "body_length": 441,
+      "sources": 12,
+      "capture_retries": 0
+    },
+    {
+      "ordinal": 39,
+      "body_length": 460,
+      "sources": 12,
+      "capture_retries": 0
+    },
+    {
+      "ordinal": 40,
+      "body_length": 518,
+      "sources": 11,
+      "capture_retries": 0
+    }
+  ],
+  "rejected_context_not_in_pg": true,
+  "original_task17_was_not_resent": true,
+  "panel_recovery_labels_served": true,
+  "memory_limit": 4294967296,
+  "memory_swap_limit": 7516192768,
+  "health": {
+    "batch": "geo-panel-doubao2-20261020-090001-6bcafb90",
+    "planned": 105,
+    "prompt_mode": "question_only",
+    "model": "doubao2",
+    "captured": 40,
+    "geo_processed": 40,
+    "delivery_errors": [],
+    "unavailable": 0,
+    "time": 1792466121.7783434,
+    "heartbeat_expires_at": 1792466271.7783434,
+    "bridge_pid": 65306,
+    "tasks": {
+      "completed": 40,
+      "pending": 64,
+      "prepared": 1
+    },
+    "status": "running",
+    "memory": {
+      "app_alive": true,
+      "pid": 2195,
+      "java_alloc_kib": 220143,
+      "java_size_kib": 318447,
+      "java_limit_kib": 524288,
+      "java_fraction": 0.4198894500732422,
+      "native_alloc_kib": 408682,
+      "app_pss_kib": 1369290,
+      "container_bytes": 1891045376,
+      "container_working_bytes": 1783803904,
+      "container_limit_bytes": 4294967296,
+      "container_fraction": 0.41532421112060547,
+      "app_pss_fraction": 0.3264641761779785,
+      "sampled_at": 1792466096.262189,
+      "pending": "",
+      "high_samples": 0
+    },
+    "progress": {
+      "phase": "verifying_complete_snapshot",
+      "task_id": "cc5730d8-8b50-5c06-bd31-c5f423b1d84e",
+      "ordinal": 41,
+      "changed_at": 1792466118.7666419
+    }
+  }
+}

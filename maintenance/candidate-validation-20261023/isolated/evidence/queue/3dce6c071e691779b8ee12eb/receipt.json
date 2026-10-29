@@ -1,0 +1,10 @@
+{
+  "ticket": "3dce6c071e691779b8ee12eb",
+  "state": "failed",
+  "client": "e80b6d80455851a92c808620",
+  "execution": {
+    "run_id": "cbf30a2a5c4e055440271779",
+    "generation": 1
+  },
+  "error_code": "logic_output_incomplete"
+}

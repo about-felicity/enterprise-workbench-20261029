@@ -1,0 +1,548 @@
+{
+  "at": 1792230223.2882977,
+  "deleted_files": [
+    {
+      "path": "/tmp/geo-input-latency-source.zip",
+      "size": 16689,
+      "inode": 2622096,
+      "mtime_ns": 1792228434721324169,
+      "sha256": "5e8ff12eff0cb09173975a79c6b869c7ced1e5c054f447168d40b1a633e4ab75"
+    },
+    {
+      "path": "/tmp/geo-input-final-manifest.json",
+      "size": 26136,
+      "inode": 2622112,
+      "mtime_ns": 1792229007350783744,
+      "sha256": "eefff017c412852a6e37f67cbef0c1e38b73e0b5bc7010459179004ba7330a42"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-video-debug.log",
+      "size": 228,
+      "inode": 2622034,
+      "mtime_ns": 1792225659927523014,
+      "sha256": "3788c65e5ac5e9f8be96081569be5eec8f5131536d7dc1ff6ebab5a27a5044d3"
+    },
+    {
+      "path": "/tmp/geo-input-latency-probe-v2.py",
+      "size": 3049,
+      "inode": 2622095,
+      "mtime_ns": 1792228392961701873,
+      "sha256": "e36f6879b95fdbcf5b69bbf5eebc4a5adcf21c9efd668fb2956c53e60ad4313d"
+    },
+    {
+      "path": "/tmp/geo-input-final-report.md",
+      "size": 4543,
+      "inode": 2622116,
+      "mtime_ns": 1792229156015176778,
+      "sha256": "6afc748635ac6586d8309d14c29e60665682e701edfb50f7194b065e93543122"
+    },
+    {
+      "path": "/tmp/geo-test-channel-test.py",
+      "size": 1466,
+      "inode": 2622063,
+      "mtime_ns": 1792227126785955970,
+      "sha256": "3572fd62ca4805f8e2feea923a9fc261ceead89026dd9861052842feb99676e9"
+    },
+    {
+      "path": "/tmp/geo-test-channel-recover.py",
+      "size": 701,
+      "inode": 2622071,
+      "mtime_ns": 1792227357294366760,
+      "sha256": "6b39cd9f99fd8a25f2f5ccaf1dd4518962669f927cdeb240861d4973b5af9e34"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-final-health.py",
+      "size": 2496,
+      "inode": 2622055,
+      "mtime_ns": 1792226827083369955,
+      "sha256": "f558c846825e2eb86cbdfc0cfecbee36af9df0bdcde57cca09cbd7a6e91f81bf"
+    },
+    {
+      "path": "/tmp/geo-test-channel-qa-v2.py",
+      "size": 2537,
+      "inode": 2622077,
+      "mtime_ns": 1792227545709265029,
+      "sha256": "776d97ef3fdba6d727d25979901e46ca027bfb0e0fab225cc5fa113f1ef6b500"
+    },
+    {
+      "path": "/tmp/geo-ban-audit-handoff.md",
+      "size": 84438,
+      "inode": 2622120,
+      "mtime_ns": 1792229918185068627,
+      "sha256": "4cd9267c4830925cf109e74276179760aa5fbb63a5043a22b4e866a4c56745b2"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-public-stage.zip",
+      "size": 72807,
+      "inode": 2622037,
+      "mtime_ns": 1792225769756817167,
+      "sha256": "38b61f4922c63da92f10b6f4c1462f7babb1484463bd53c59a13cec8b812b124"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-stream-candidate.py",
+      "size": 6238,
+      "inode": 2622031,
+      "mtime_ns": 1792225646203744016,
+      "sha256": "a1cb9fe6840d60606c6421ea705c59639e223b7416288f1a32157e305c5c1463"
+    },
+    {
+      "path": "/tmp/geo-test-channel-handoff.md",
+      "size": 80046,
+      "inode": 2622068,
+      "mtime_ns": 1792227298074029766,
+      "sha256": "41cb69551d8a1e03f1d05dd043be01c9f72d61cb5b068c49243684a7af54439f"
+    },
+    {
+      "path": "/tmp/geo-input-stream-v2.py",
+      "size": 7030,
+      "inode": 2622100,
+      "mtime_ns": 1792228531412560730,
+      "sha256": "9e14ba8e7af0930086bb3231ede41b2fd27a535e7972e1b7446c0f5a0f24e049"
+    },
+    {
+      "path": "/tmp/deepseek-manual-test-signed.apk",
+      "size": 22217501,
+      "inode": 2622060,
+      "mtime_ns": 1792215525000000000,
+      "sha256": "1468cae414245e6bd447b0ae79c277958a6da1c25f4e4798ffc04e42127fa14a"
+    },
+    {
+      "path": "/tmp/geo-test-channel-test-final.py",
+      "size": 2359,
+      "inode": 2622075,
+      "mtime_ns": 1792227503149738881,
+      "sha256": "91e504820efefb0f2ccf44ffc71157e0295fe31ebfdacd67da133b886f369679"
+    },
+    {
+      "path": "/tmp/geo-test-channel-final3-report.md",
+      "size": 3031,
+      "inode": 2622083,
+      "mtime_ns": 1792227616320479823,
+      "sha256": "58ec7ec1be49d35e029a6238cc54a45dd69e5657ee42e3a2205fab19fca0aaab"
+    },
+    {
+      "path": "/tmp/geo-test-channel-source.zip",
+      "size": 45067,
+      "inode": 2622061,
+      "mtime_ns": 1792227086877406930,
+      "sha256": "2c2b2a44d54b86141fbdb5885de9d4d1d1caeaafb001e668995458998c93e5e2"
+    },
+    {
+      "path": "/tmp/geo-test-channel-final3-handoff.md",
+      "size": 80209,
+      "inode": 2622081,
+      "mtime_ns": 1792227614996494536,
+      "sha256": "d47ada4386dbf703169dd331b5079d28f868e7dcafb2381cad7e8b24acff47c6"
+    },
+    {
+      "path": "/tmp/geo-test-channel-final2-source.zip",
+      "size": 1216595,
+      "inode": 2622072,
+      "mtime_ns": 1792227383481073992,
+      "sha256": "9cb3d7bc4ebf7cead310c725379c19ab96a4f5175837ad5e729ebff3ae89d6ba"
+    },
+    {
+      "path": "/tmp/geo-input-final-handoff.md",
+      "size": 82725,
+      "inode": 2622117,
+      "mtime_ns": 1792229153720172143,
+      "sha256": "c9537391c4706290d9f8ae64c2b088cf60845365a4cce6026747f4870a33e2ed"
+    },
+    {
+      "path": "/tmp/geo-test-channel-chinese.py",
+      "size": 1372,
+      "inode": 2622067,
+      "mtime_ns": 1792227232065770429,
+      "sha256": "7dfafa8b5e29a575c9844cfb4bf5d7ca00661bf90f8211da304eeae9533c43ad"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-regression.zip",
+      "size": 36773,
+      "inode": 2622038,
+      "mtime_ns": 1792225838181804269,
+      "sha256": "2c31dace639e64b1f4a2ee79e98a90e1037644dce1ad7552a3b5e02de01e68d4"
+    },
+    {
+      "path": "/tmp/geo-test-channel-login-final.py",
+      "size": 7830,
+      "inode": 2622069,
+      "mtime_ns": 1792227345358500284,
+      "sha256": "e06b90d19369c785aec8164c8cde7e04764ea4c3d9aae8cf56a3dcc18256fc26"
+    },
+    {
+      "path": "/tmp/geo-test-channel-stream-final.py",
+      "size": 6670,
+      "inode": 2622074,
+      "mtime_ns": 1792227478535013156,
+      "sha256": "739195d47a1ecc70c6fc8bbfa2bc8aa2be597d4c5da0caabb528a7919cf0e880"
+    },
+    {
+      "path": "/tmp/geo-input-canvas-html",
+      "size": 14095,
+      "inode": 2622105,
+      "mtime_ns": 1792228637196634303,
+      "sha256": "2d85db01c69a7b7e776068d7486c38e947974b6d619b2798c2b70e16c7c9063c"
+    },
+    {
+      "path": "/tmp/geo-ban-audit-support.md",
+      "size": 1465,
+      "inode": 2622122,
+      "mtime_ns": 1792229921164410714,
+      "sha256": "6e8ca657169d3a81645c2af64beeac0cc3b246a9d6be530825b7b7f3027ac61f"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-final-source.zip",
+      "size": 1215569,
+      "inode": 2622052,
+      "mtime_ns": 1792226792599767687,
+      "sha256": "ccf7b089f091de260a42a199e5e9af6ff78c0d756aced471f8e68cdce3c06148"
+    },
+    {
+      "path": "/tmp/geo-risk-report-final.md",
+      "size": 2774,
+      "inode": 2622094,
+      "mtime_ns": 1792228067055341069,
+      "sha256": "e71f12e212bff8aeb267222a4a7ea7257818e102a0e10dcd2cb1f5db5e077717"
+    },
+    {
+      "path": "/tmp/geo-risk-deploy.py",
+      "size": 1099,
+      "inode": 2622087,
+      "mtime_ns": 1792227977858282781,
+      "sha256": "d01a80da61a52bb42caf2b4a2ccdfa81c2530f05cd5abe228779d57bda38c4b3"
+    },
+    {
+      "path": "/tmp/geo-test-channel-final-source.zip",
+      "size": 1216463,
+      "inode": 2622065,
+      "mtime_ns": 1792227183183320193,
+      "sha256": "da89ca4e6e24d46877b56cd643b299cc71b1d6e42ab5a771e95d8a0362d680d4"
+    },
+    {
+      "path": "/tmp/geo-test-channel-final2-manifest.json",
+      "size": 25886,
+      "inode": 2622073,
+      "mtime_ns": 1792227384902058112,
+      "sha256": "5c045aee152cfe393a900dd1c313dc099d93610ace9ef55c410874faa7c1bc9e"
+    },
+    {
+      "path": "/tmp/geo-test-channel-deploy.py",
+      "size": 3512,
+      "inode": 2622062,
+      "mtime_ns": 1792227088493388652,
+      "sha256": "c1d1a265d4372d0f39886ff8660be5a9d649cfed4b73c625911198a80df25ea1"
+    },
+    {
+      "path": "/tmp/geo-risk-qa.py",
+      "size": 2150,
+      "inode": 2622089,
+      "mtime_ns": 1792228001908163563,
+      "sha256": "45fbb97695d8b7b4ec9d97a62b08abc7ab3b1fa94203f889ceea6b1e752f0437"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-final-check.py",
+      "size": 1368,
+      "inode": 2622054,
+      "mtime_ns": 1792226796152726649,
+      "sha256": "1853656f9587f09230f07b3033d128ecd2a97d0250886744b45ef8e6d1482946"
+    },
+    {
+      "path": "/tmp/geo-input-current-risk-qa.py",
+      "size": 2261,
+      "inode": 2622109,
+      "mtime_ns": 1792228992401732634,
+      "sha256": "f0edfeca910a87e7d0183d9842b3fd3e4a05e2840c759fe69aa94cb368dd4899"
+    },
+    {
+      "path": "/tmp/geo-risk-tests.py",
+      "size": 2621,
+      "inode": 2622088,
+      "mtime_ns": 1792227979552346254,
+      "sha256": "20364ec963d99d6391797745a6fbbdbc386a3fec294d18f91c6f1790fbdfab8b"
+    },
+    {
+      "path": "/tmp/geo-test-channel-final3-manifest.json",
+      "size": 25886,
+      "inode": 2622080,
+      "mtime_ns": 1792227613512511027,
+      "sha256": "4b8956f9303a23135770f5d3aba095be1b3390716911cdf61c2007665bf2b9e7"
+    },
+    {
+      "path": "/tmp/geo-input-restart-bridge.py",
+      "size": 1131,
+      "inode": 2622101,
+      "mtime_ns": 1792228533243581636,
+      "sha256": "7820704d42427d8bd84a3ad8fb74860c3a4b6aa61d1b7d698f1a1790be1efa66"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-CaptureControl.tsx",
+      "size": 2072,
+      "inode": 2622049,
+      "mtime_ns": 1792226468000588240,
+      "sha256": "259d751dcb755029c4b3470e70ea9114f31da112beb35bbdc4865d463817cba7"
+    },
+    {
+      "path": "/tmp/geo-risk-handoff-final.md",
+      "size": 81213,
+      "inode": 2622092,
+      "mtime_ns": 1792228065607295786,
+      "sha256": "fbe1cabb0951f9cd67571acb62351df0a165b97df7d67ab3394cc7f1b41a63f2"
+    },
+    {
+      "path": "/tmp/geo-ban-network-audit.py",
+      "size": 917,
+      "inode": 2622119,
+      "mtime_ns": 1792229793559216648,
+      "sha256": "4c1f363b1d509869b097f718e350cd70a6872387a0be29299e86fcc66c7a38ae"
+    },
+    {
+      "path": "/tmp/geo-input-latency-probe.py",
+      "size": 3065,
+      "inode": 2622093,
+      "mtime_ns": 1792228251124110450,
+      "sha256": "281037148e6ae904399fce2ac7bd5e8827492d4a152f573b102c4454953b7a79"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-report-final.md",
+      "size": 5011,
+      "inode": 2622058,
+      "mtime_ns": 1792226913561377608,
+      "sha256": "afc9dfe76658f72d6e82c79976f3039d8ae69a9373a2e52ac0511a0c84fb9cfb"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-probe-video.py",
+      "size": 706,
+      "inode": 2622032,
+      "mtime_ns": 1792225363752799819,
+      "sha256": "87f090b24ae7ad682efc0a2976d57247603a62031198c0ef399cbbed1974cdef"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-controller-final.py",
+      "size": 39611,
+      "inode": 2622050,
+      "mtime_ns": 1792226528426864313,
+      "sha256": "d952dcaba5a473d1cfaeb2887fda46e6cdc3cdf95f4ef725136e73cfbcfaf576"
+    },
+    {
+      "path": "/tmp/geo-input-latency-health.py",
+      "size": 1443,
+      "inode": 2622108,
+      "mtime_ns": 1792228967235641197,
+      "sha256": "447db05124b0b4f736623050c7101c01356e4185047b70b7557093fc64a1bcb4"
+    },
+    {
+      "path": "/tmp/geo-input-final2-source.zip",
+      "size": 1220603,
+      "inode": 2622114,
+      "mtime_ns": 1792229130294122464,
+      "sha256": "5b1bc2a5ca51bff86c64113029af6b886a52d4a8b4d38c4f25c4012bc1aa9017"
+    },
+    {
+      "path": "/tmp/geo-input-latency-fixture.py",
+      "size": 5991,
+      "inode": 2622107,
+      "mtime_ns": 1792228921376456156,
+      "sha256": "f5f1187960a4dc22fd14c25cc111de1167a5ddb3c5471a587399831c32affd5b"
+    },
+    {
+      "path": "/tmp/geo-risk-test-auth.py",
+      "size": 1777,
+      "inode": 2622086,
+      "mtime_ns": 1792227976214220962,
+      "sha256": "aaf22c8a4dcd6b89d20cbdc246495adcc02a20705b49bac66a5d0f679240934c"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-handoff-final.md",
+      "size": 78982,
+      "inode": 2622057,
+      "mtime_ns": 1792226912077394580,
+      "sha256": "d412577ba028506ef82b4d4f63ae5159e97d015a06f86ebed9ce12b48f80a1b8"
+    },
+    {
+      "path": "/tmp/geo-input-ui-comparison.py",
+      "size": 2131,
+      "inode": 2622106,
+      "mtime_ns": 1792228706857207913,
+      "sha256": "bc8f555844b19957110b08971010feb07378128723ac2aa47f478a7f46a1aff1"
+    },
+    {
+      "path": "/tmp/geo-ban-audit-report.md",
+      "size": 6865,
+      "inode": 2622121,
+      "mtime_ns": 1792229919675239919,
+      "sha256": "e7ac1428019647691530781fb43cdf49bbfcf4ce198d31f0078337f3075e4a14"
+    },
+    {
+      "path": "/tmp/geo-test-channel-report.md",
+      "size": 2501,
+      "inode": 2622070,
+      "mtime_ns": 1792227299567013034,
+      "sha256": "873a6ac660a93103399bd14d5839073d23cefcb47281862421d8a9f3ba3ad150"
+    },
+    {
+      "path": "/tmp/geo-input-latency-manual-tests.py",
+      "size": 2636,
+      "inode": 2622099,
+      "mtime_ns": 1792228439425390731,
+      "sha256": "4e1b3085e4268abae67cd778ce9d5d1133769cac8588ff771c299c6af406cdae"
+    },
+    {
+      "path": "/tmp/geo-input-latency-deploy.py",
+      "size": 2117,
+      "inode": 2622097,
+      "mtime_ns": 1792228436442348602,
+      "sha256": "b8965fe46f45d595924528708539b049e5d4938ecb086b260d66558ed4db4d9c"
+    },
+    {
+      "path": "/tmp/geo-test-channel-inspect.py",
+      "size": 727,
+      "inode": 2622076,
+      "mtime_ns": 1792227569486000500,
+      "sha256": "6503aa986ce0fa09d9077331335c89523920b30309962360784873d5e05ac008"
+    },
+    {
+      "path": "/tmp/geo-risk-final-manifest.json",
+      "size": 26135,
+      "inode": 2622091,
+      "mtime_ns": 1792228031195178824,
+      "sha256": "fa5ad349b74d688c66a65148ac7b325302efc2ec684ad1f1658ab5526394b5b7"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-public-stage-final.zip",
+      "size": 72810,
+      "inode": 2622040,
+      "mtime_ns": 1792225879757205003,
+      "sha256": "10f00effd3e4a5d4f5eda4028c379b10d4c50d1a6fb46e69bdd8ccc423ed5e71"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-probe-video-debug.py",
+      "size": 1131,
+      "inode": 2622033,
+      "mtime_ns": 1792225646193744178,
+      "sha256": "dd17269429130a20a5532a1bdea1f3923de622bb8819fee4b4ece0e2c5166b95"
+    },
+    {
+      "path": "/tmp/geo-risk-final-source.zip",
+      "size": 1218661,
+      "inode": 2622090,
+      "mtime_ns": 1792228029701128503,
+      "sha256": "edce5d6aa898c962824d68f23623c1c18e54717a9dfa48f8a73ef7967afdf821"
+    },
+    {
+      "path": "/tmp/geo-input-final-source.zip",
+      "size": 1220516,
+      "inode": 2622111,
+      "mtime_ns": 1792229005745778369,
+      "sha256": "f4883f2ce23dd6e4ffd151e6555c7e1504863b416cf26090a5e7934e8862c913"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-final-manifest.json",
+      "size": 25886,
+      "inode": 2622053,
+      "mtime_ns": 1792226794361747334,
+      "sha256": "4d40190b9870ab9957d44ff25c43a81746bfcb2f6350b06465a5475588b42bc2"
+    },
+    {
+      "path": "/tmp/geo-ban-audit.py",
+      "size": 7231,
+      "inode": 2622118,
+      "mtime_ns": 1792229654123469325,
+      "sha256": "d4db80e82dde2fbeeb79d275ec32bb26349c2bd4bcff79597d061415a0b1df5d"
+    },
+    {
+      "path": "/tmp/geo-input-final2-manifest.json",
+      "size": 26136,
+      "inode": 2622115,
+      "mtime_ns": 1792229131975126176,
+      "sha256": "14db921a3c264712864c2510da0641201e67d65cbcab6fee34b1505968e11f20"
+    },
+    {
+      "path": "/tmp/geo-test-channel-final-manifest.json",
+      "size": 25886,
+      "inode": 2622066,
+      "mtime_ns": 1792227184748302575,
+      "sha256": "ff1fa75aa1c80db8efb056479d9965e1e20516aafb7e0ff0d2ee1e8b22eedfdf"
+    },
+    {
+      "path": "/tmp/geo-test-channel-qa.py",
+      "size": 2029,
+      "inode": 2622064,
+      "mtime_ns": 1792227128579935720,
+      "sha256": "0249a09a6f6fc6feb1975e125045ef19269fc8ce4fb27fc1f32cfbdf90a43a5f"
+    },
+    {
+      "path": "/tmp/geo-risk-manual.py",
+      "size": 6248,
+      "inode": 2622085,
+      "mtime_ns": 1792227974808167929,
+      "sha256": "57e74722d8a563bd4e6ed073e9697aa560425308ba7458b641bc0e689c6c22df"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-LICENSE.txt",
+      "size": 11387,
+      "inode": 2622046,
+      "mtime_ns": 1792226392544502741,
+      "sha256": "01c12035bf35af37241298dc7ad538eb2a07e5c940437bc6876feeaa9d1951d0"
+    },
+    {
+      "path": "/tmp/deepseek-account2-verified.apk",
+      "size": 22217501,
+      "inode": 2621931,
+      "mtime_ns": 1792201065000000000,
+      "sha256": "1468cae414245e6bd447b0ae79c277958a6da1c25f4e4798ffc04e42127fa14a"
+    },
+    {
+      "path": "/tmp/geo-test-channel-final3-source.zip",
+      "size": 1216644,
+      "inode": 2622079,
+      "mtime_ns": 1792227612010527718,
+      "sha256": "a6126b00e749b7525620a3686b16b8f0c7f1e171d89a948012652c6fe67e4cad"
+    },
+    {
+      "path": "/tmp/geo-risk-policy.py",
+      "size": 3689,
+      "inode": 2622084,
+      "mtime_ns": 1792227973384114057,
+      "sha256": "029d636b72201333a63cfe3a5ad45619b407cde29b7fbe0e2f391a96c8491e1f"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-auth-policy-final.py",
+      "size": 2791,
+      "inode": 2622044,
+      "mtime_ns": 1792226230394516057,
+      "sha256": "a25511f4db60d9820e9200c6e6e34a5ac52863224b997d99771c359ae8782ee0"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-server-v5.0",
+      "size": 733974,
+      "inode": 2622030,
+      "mtime_ns": 1792225059980879463,
+      "sha256": "26cbc9ad0aced6c2282455bef4fb43462605c1f8758c74b4ab1dbf818c229daa"
+    },
+    {
+      "path": "/tmp/geo-input-final-html",
+      "size": 14271,
+      "inode": 2622113,
+      "mtime_ns": 1792229096993044135,
+      "sha256": "9626b1c3051cd4ce690097367b7ed869e3bca5c8ad98362f85fff386ff80734d"
+    },
+    {
+      "path": "/tmp/geo-input-latency-tests.py",
+      "size": 1015,
+      "inode": 2622098,
+      "mtime_ns": 1792228437905369301,
+      "sha256": "86fbd8d67f0aac0c5946ea2c5a04f291b6eeb023968f950070e365863955d3fb"
+    },
+    {
+      "path": "/tmp/geo-scrcpy-ffmpeg-install.log",
+      "size": 31744,
+      "inode": 2622029,
+      "mtime_ns": 1792225138442716318,
+      "sha256": "2482692708684a0dd5cb8675863a4df56c82385f19f7481f0614df77522c7343"
+    }
+  ],
+  "deleted_file_bytes": 54848869,
+  "skipped_files": [],
+  "removed_dangling_images": [],
+  "skipped_images": []
+}

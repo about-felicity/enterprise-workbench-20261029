@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "port": 3000,
+  "approved_articles": 94,
+  "legacy_articles": 82,
+  "private_questions": 16,
+  "time": "01:00",
+  "writes_intercepted": 4,
+  "verified_word_downloads": 94,
+  "bundle_entries": 188,
+  "browser_errors": []
+}

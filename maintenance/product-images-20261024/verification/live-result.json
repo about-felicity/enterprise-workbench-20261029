@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "actual_gateway_upload": true,
+  "exact_image_bytes": true,
+  "reload_persistence": true,
+  "metadata": {
+    "width": 64,
+    "height": 80,
+    "uploaded_at": 1792821765.3826704
+  },
+  "browser_errors": [],
+  "test_image_removed": true
+}

@@ -1,0 +1,10 @@
+[Unit]
+Description=Inspect both GEO DeepSeek logins every five minutes
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=5min
+AccuracySec=1s
+Persistent=true
+Unit=geo-deepseek-auth-check.service
+[Install]
+WantedBy=timers.target

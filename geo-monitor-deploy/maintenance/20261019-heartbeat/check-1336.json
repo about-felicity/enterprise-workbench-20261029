@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-19T13:37:00+08:00",
+  "deepseek_browser": {
+    "auth": "ready",
+    "captured": 7,
+    "processed": 7,
+    "target": 63,
+    "phase": "rate_wait",
+    "next_send": "2026-10-19T13:39:49.401+08:00",
+    "receipt_pairs_equal": 7,
+    "pending_delivery": 0,
+    "services": "active"
+  },
+  "doubao_today": {
+    "doubao1": [
+      105,
+      105
+    ],
+    "doubao2": [
+      105,
+      105
+    ]
+  },
+  "baidu_today": {
+    "state": "complete_with_unavailable",
+    "observations": 105,
+    "target": 105,
+    "full_source_processed": 92,
+    "body_only_processed": 13,
+    "pending_delivery": 0,
+    "questions": 21,
+    "rounds_min": 5,
+    "rounds_max": 5
+  },
+  "wenxin_today": {
+    "batch": "geo-panel-wenxin-card-20261019-131934-a7ec85f4",
+    "state": "running",
+    "processed": 10,
+    "target": 168,
+    "pending_delivery": 0
+  },
+  "daily_actor": "running and fresh",
+  "mutation": "none; scheduler made normal handoff, no manual batch/start or resend",
+  "notification": "Baidu105 collection attempts and receipts finished including13 explicit body-only observations; Wenxin automatically started, 10/168"
+}

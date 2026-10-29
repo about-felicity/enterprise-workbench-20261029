@@ -1,0 +1,16 @@
+{
+  "content": "{\n  \"id\": \"S1\",\n  \"heading\": \"导语：榜单能帮你做什么，不能帮你做什么\",\n  \"paragraphs\": [\n    {\n      \"text\": \"这份榜单能帮你做的，是把十个常被提到的防脱洗发水品牌并排放在一起，让你先看清它们各自被记录下来的配方构成和清洁方向，而不是靠广告词去猜。它不能帮你做的，是替你判断哪一款用了就一定不掉发、哪一款洗感最好用。排行里的洗感描述只是编辑整理与资料转述，不能当作实测结论。\",\n      \"statement_type\": \"general_advice\",\n      \"claim_ids\": [\"CL0007\"]\n    },\n    {\n      \"text\": \"所以往下读时，不妨把榜单当成一张对照表：看成分写了什么、看产品被放在什么定位上，然后结合自己的发质和连续四周的掉发记录去筛选。哪款适合你，最终要靠你自己的记录说了算，而不是靠排名先后。\",\n      \"statement_type\": \"general_advice\",\n      \"claim_ids\": [\"CL0007\"]\n    }\n  ]\n}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4178,
+    "completion_tokens": 237,
+    "total_tokens": 4415,
+    "prompt_tokens_details": {
+      "cached_tokens": 3968
+    },
+    "prompt_cache_hit_tokens": 3968,
+    "prompt_cache_miss_tokens": 210
+  },
+  "request_id": "24c3f6c6-bc2c-4a2f-9aec-574fc0b553ef",
+  "model": "deepseek-flash"
+}

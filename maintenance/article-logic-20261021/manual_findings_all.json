@@ -1,0 +1,1605 @@
+[
+  {
+    "key": "fe918b5de6113b61e2d5f0f0",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "全文可按单价→偏好→成分信息→预算→清单展开，但单价方法和使用成本在预算段混用，结尾新增候选数量承诺。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P014",
+          "P003"
+        ],
+        "reason": "P003正确将单位价格定义为到手价除以毫升数，P014却让是否长期使用同款决定大容量的单位价格优势能否体现。能否用完影响浪费和实际使用成本，不能决定或证明大包装的每毫升价格更低。",
+        "repair": "先独立核对实际单位价格，再谈用完和浪费条件，不能把两种成本合为同一因果。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P016"
+        ],
+        "reason": "五个核对问题不支持“候选通常只剩一到两款”的数量预测；文中没有候选总数、筛选阈值或分布依据。",
+        "repair": "改为明确偏好和继续比较，不承诺筛选后的候选数量。"
+      }
+    ]
+  },
+  {
+    "key": "47bd0e61261075461eed045d",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "场景→价格→补货→感受→回收三个问题的总体顺序可以成立，但开头进入场景的过渡由不相关的成分分类引出，存在推理断点。",
+    "issues": [
+      {
+        "kind": "missing_bridge",
+        "paragraph_ids": [
+          "P004"
+        ],
+        "reason": "成分温和度分层与常备或偶尔购买是不同维度；前者未经核实，且不能推出后者是适用的购买分类。用“这个分层提示”连接两者，没有支持关系。",
+        "repair": "删除该成分前提，直接把购买频率明确设为本文选择的观察维度。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P005",
+          "P011"
+        ],
+        "reason": "P005把补货渠道不稳定列为一瓶已经买到并使用一半后被闲置的原因。P011只说明渠道影响再次购买，未解释为什么会使手里的半瓶停止使用，两个阶段的因果对象混淆。",
+        "repair": "分别讨论已有产品是否用完与用完后是否容易补货，不用补货困难解释半瓶闲置。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "容量计算→包装浪费→感受→购买条件→回收三维框架的顺序基本连贯；问题在容量与单位价格、油头与消耗速度的推理。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P004",
+          "P009"
+        ],
+        "reason": "具体算例只证明这两个假设售价下A的单位价格较低，不能推出容量差距拉开就使单位成本明显变化。P009又默认大包装必有单位成本优势，而两种规格价格可同比变化或反向变化。",
+        "repair": "每种包装先按实际价格独立计算，明确低单价是待核对的条件，之后再分析是否用完。"
+      },
+      {
+        "kind": "scope_shift",
+        "paragraph_ids": [
+          "P018"
+        ],
+        "reason": "把就近补货对油头人群尤其重要，用“用得快的人”解释，却没有建立油头与实际洗发水消耗速度的关系；人群标签与行为条件被互换。",
+        "repair": "限定为本人确有消耗快且临时补货的习惯，不从油头直接推断用量或便利性权重。"
+      }
+    ]
+  },
+  {
+    "key": "75d214c121ed2d8e1b249463",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "先比较框架、后11款、末尾说明边界的章序成立，但逐款结论多次超出前面设置的信息边界；H3内容是自有产品展开，不应与竞品H2当同级排名。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P005",
+          "P008"
+        ],
+        "reason": "P005承认头皮状态、频率、水温影响实际感受，P008却说清洁体系决定整体偏清爽或温和，把同文的多因素条件收缩成单一决定因素。",
+        "repair": "仅描述资料列出的清洁成分，不据此判定成品的温和或清爽程度。"
+      },
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P004",
+          "P038",
+          "P043"
+        ],
+        "reason": "P004规定定位描述不等于效果；P038仍把未量化且没有成分明细的“温和”标签当作担心紧绷者的筛选依据，P043进一步直接断言满足日常清洁和去屑需求，均超出同文已设的信息边界。",
+        "repair": "不能用营销定位推出人群适配或已满足需求，保留待核验标注，并补充实际产品资料后再作相应判断。"
+      }
+    ]
+  },
+  {
+    "key": "7ccd097f2279d56255c0797d",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "导语建立误区和四维框架，再依次11款并总结；主要断点是症状情境不能证明选品原因，以及香精标签被换成香味浓淡。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P002",
+          "P034"
+        ],
+        "reason": "导语由屑反复和更换强力产品后干紧，直接判定问题往往在只看一个指标；这些现象不能排除个体反应、具体使用方式等其他原因，全文的资料索引也不能证明该归因。",
+        "repair": "将导语限定为阅读选购资料的困惑，不用它解释症状反复的原因。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P018"
+        ],
+        "reason": "“不含刺激性香精”并不等于香味淡、无香或适合对气味敏感者。正文从该标签直接推到淡香或无香偏好的筛选建议，把刺激分类与气味浓淡混为一谈。",
+        "repair": "单独核对是否含香精及实际香型描述，删除由该标签推断淡香或无香的建议。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P028",
+          "P032"
+        ],
+        "reason": "薰衣草香的接受度相对广、通常容易长期使用，以及白茶香不易出错，均把特定香型推广为人群接受或长期使用结果，文中没有相应调查或限定的个人偏好条件。",
+        "repair": "只列资料中的香型名称，由读者自己的气味偏好比较，不宣称普遍接受或长期适用。"
+      }
+    ]
+  },
+  {
+    "key": "4090f0f59a9b89894effd79a",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "开头承诺配方、头皮状态、长期反馈三维，实际逐款只有配方及定位，无第三维的材料；总结重复三维不能补齐缺失。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P018",
+          "P020"
+        ],
+        "reason": "P018明确上一款为三重活性物，P020却把上一款与本款并称两种品牌对“双重去屑”的理解；三重与双重被当成同一组合口径。",
+        "repair": "明确比较三重和双重两个不同组合，不能把两款都称双重。"
+      },
+      {
+        "kind": "missing_bridge",
+        "paragraph_ids": [
+          "P008",
+          "P017",
+          "P038"
+        ],
+        "reason": "先将相近状态普通人的长期反馈列为第三比较维度，随后11款均未呈现该反馈，结尾仍称回到三维做对照；缺项维度没有数据却被写成已经完成的比较。",
+        "repair": "补充有来源的对应反馈及其限制，或将框架改为实际有资料的维度并明确反馈尚缺。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P028",
+          "P030",
+          "P039"
+        ],
+        "reason": "草本配方不支持草本气味判断；“周期性调理”定位也不支持与其他洗发水交替使用的安排。结尾宣称不延伸用法或适配，不能消除前面的实际延伸。",
+        "repair": "删除香味和交替使用的推断，只有在具体标签或可靠资料提供同一信息时才介绍。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct text and argument review",
+    "state": "needs_revision_manual",
+    "order_notes": "框架→五款→总结的次序存在，但前文禁止人群适配推断，正文却按未验证定位给出人群和更换建议，结尾再否认建议，首尾边界失效。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P005",
+          "P021",
+          "P026",
+          "P046"
+        ],
+        "reason": "P005称不补写适用人群，P021据成分并列推荐给不想干涩打结的人，P026把轻度定位转成既往清洁后不舒服者更合理的替换方向，P046又否认任何人群建议；声明与实际建议互相冲突。",
+        "repair": "删除由成分名称或营销定位推到具体人群和换用方案的内容，不以结尾免责替代正文修改。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P039",
+          "P040"
+        ],
+        "reason": "产品重视发尾顺滑和香气，不支持它可能不能同时满足清爽感要求；两类属性不必互斥，文中没有证明必须二选一。",
+        "repair": "只说明资料披露的重点，不从未披露清爽表现反推其不能兼顾。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct text and argument review",
+    "state": "needs_revision_manual",
+    "order_notes": "统一框架后逐款展开，但容量被用作治疗性使用节奏依据，末尾突然加入备案报告和轮换方案，不能由前文的组成与规格比较推出。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P012",
+          "P014"
+        ],
+        "reason": "200ml容量只能说明规格，不能推出适合症状明显时集中使用一段时间或与日常款交替使用；容量与使用周期方案之间没有依据。",
+        "repair": "删除阶段、集中和交替安排，只按实际消耗和携带需求讨论容量。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P018",
+          "P027"
+        ],
+        "reason": "无香精无硅油不等于整个配方精简；含无花果和奇异果提取物也不证明果香。两处都由个别成分信息推到另一个尚未披露的整体属性。",
+        "repair": "分别核对完整配方条目和实际香型，缺失则不作推断。"
+      },
+      {
+        "kind": "order_error",
+        "paragraph_ids": [
+          "P004",
+          "P035"
+        ],
+        "reason": "框架是成分、规格、主观偏好，结尾改成备案报告、按状态分档及功效款日常款轮换，并说植提数量取胜；这些标准或使用安排没有被前文论证。",
+        "repair": "结尾只回收已建立且有资料支持的比较标准，删除轮换方案与数量取胜。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "框架后七款再总结的顺序清楚，但基本规格被当作消耗预测的依据，定位标签被转换成应急使用安排，超出了框架的信息边界。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P013"
+        ],
+        "reason": "容量和清洁基底不能帮助判断一瓶大概能用多久；还缺少每次用量、频率等变量。本文没有这些信息却称可由前两项作判断。",
+        "repair": "仅比较容量与已披露组成，使用时长只据明确的个人消耗记录估算。"
+      },
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P004",
+          "P024",
+          "P025",
+          "P026"
+        ],
+        "reason": "前文说角色标签不是结论，后文又从“急救款”标签推断不是常规款、适于突发状态时取用并建议浴室备一瓶；这是实际使用情境和节奏建议，不能再说只是呈现标签。",
+        "repair": "删除由营销角色推导使用节奏的段落，具体使用方式须有同一产品的可靠依据。"
+      }
+    ]
+  },
+  {
+    "key": "9cb2fa6ff95fecebc6aeaf87",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "开头承诺六款且其余五款，正文实际有七个连续编号；尾段仍总结为六款，结构数量不一致。末尾还加入未经前文支持的轮换方案。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P006",
+          "P042",
+          "P047",
+          "P050"
+        ],
+        "reason": "P006称六款、第一款后五款，正文却出现第七款百雀羚；P047和P050又总结为六款。这使预告、编号和结尾无法对应。",
+        "repair": "先确定最终产品名单和数量，再同步导语、全部编号以及总结，不能仅改一个标题。"
+      },
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P011",
+          "P031",
+          "P036"
+        ],
+        "reason": "P031要求把530g每百克价格与200ml和530ml放一起比较，却没有密度；P036自己承认重量体积换算需要密度。P011还把容量直接转换为单次成本，缺少单次用量。",
+        "repair": "分别比较重量或体积的单位价格，缺密度时不跨单位排名；单次成本另需实际用量。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P017",
+          "P048",
+          "P050"
+        ],
+        "reason": "容量和成分名称不能支持症状期、稳定期或两类产品交替使用的安排；末尾从资料阅读跃迁为轮换使用方案，推理对象发生变化。",
+        "repair": "删除未获支持的用法安排，只回收前文已有的资料比较标准。"
+      }
+    ]
+  },
+  {
+    "key": "43edfef141828a384400fc16",
+    "reviewer": "Codex direct text and argument review",
+    "state": "needs_revision_manual",
+    "order_notes": "症状成因→比较框架→11款→结论的形式顺序有了，但把未经证明的强刺激快、温和慢二分当成全篇前提，结尾又推广到全部产品。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P005",
+          "P036"
+        ],
+        "reason": "资料中的强刺激快、温和慢只是来源观点，没有逐款相同口径的证据；结尾却直接说该话放在十一款都成立，把观点扩展为11款通用比较结论。",
+        "repair": "删除该二分的通用结论，只介绍已核对的组成和资料缺口，不用定位解释快慢。"
+      },
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P010",
+          "P020",
+          "P034"
+        ],
+        "reason": "前面说成分和名称不能推出适合谁或速度，后文又由植萃温和方向断言单靠某款未必够用，并由更多成分推出覆盖更多诉求；实际使用判断超出已设边界。",
+        "repair": "去除人群、速度及组合使用推断，不以成分数量解释覆盖效果。"
+      }
+    ]
+  },
+  {
+    "key": "7befe4dcd7a0917787d038e7",
+    "reviewer": "Codex direct argument review; specific disqualifying claims verified",
+    "state": "needs_revision_manual",
+    "order_notes": "框架后逐款展开并总结，但条目中将营销定位扩展为配方复杂度，再把持续使用上升为结果优先级，不能由前文组成信息支持。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P059",
+          "P060"
+        ],
+        "reason": "资料仅称入门级、价格、渠道和易冲洗，不能推出产品不是复杂配方堆叠。入门级是定位，成分复杂度是另一个待核对属性。",
+        "repair": "删去由入门定位推断配方复杂度的句子，只保留资料确有的价格、渠道、冲洗信息。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P010",
+          "P064"
+        ],
+        "reason": "从小规格推断来不及形成习惯，或断言洗护持续比换产品更重要，均缺少消耗量、时间或对比依据；篇幅中的组成盘点不能支持这些使用结果判断。",
+        "repair": "把规格仅用于容量比较，删除无依据的习惯时间和结果优先级。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "维度→五款→总结基本对应，但开头与末尾反复要求计算用完时长，正文并没有每次用量或价格，承诺的比较无法完成。",
+    "issues": [
+      {
+        "kind": "missing_bridge",
+        "paragraph_ids": [
+          "P006",
+          "P021",
+          "P033",
+          "P039"
+        ],
+        "reason": "仅有薄涂或厚敷和每周频率，没有每次克数，不能给出小罐两三个月或可靠估算；120g本身也不能说明单次成本会摊薄，还缺到手价格和单次用量。",
+        "repair": "明确补齐实际单次用量和价格才估算成本时长，不用容量代替缺失变量。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P034",
+          "P007"
+        ],
+        "reason": "无厚重封闭油脂不能证明整体膏体厚薄或清爽；前文强调组成不代表整体强弱，后文又把排除一类成分用作整体质地线索而未说明依据。",
+        "repair": "仅记录成分排除项，质地须有对应产品直接描述或实际资料，不能从排除项推断。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "已核对章节列表及对应主旨；发现下述具体范围或数量断点后判为需修订，不作为完整合格稿。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P015",
+          "P026"
+        ],
+        "reason": "P015先以部分面霜含酒精、可能刺激为前提，随即推出面霜不承担眼周职责，结尾要求面霜一律绕开眼周；同段又承认不能把个别配方推广到所有面霜，范围前后冲突。",
+        "repair": "只据具体产品的标示用途讨论，不从部分配方推导整个品类的统一用法。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "已核对章节列表及对应主旨；发现下述具体范围或数量断点后判为需修订，不作为完整合格稿。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P009",
+          "P028",
+          "P043"
+        ],
+        "reason": "P009说成分表是唯一可以逐字核对的信息，后文又要求核对刷头、规格、质地和完整包装信息；唯一这一排他判断与本文实际比较方法冲突。",
+        "repair": "删去唯一，分别说明成分和包装等可核对信息的作用。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "已核对章节列表及对应主旨；发现下述具体范围或数量断点后判为需修订，不作为完整合格稿。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P002",
+          "P034",
+          "P037"
+        ],
+        "reason": "导语与结尾承诺12款产品，实际第12项标题是产后多久可以使用的问题，而非一款产品，只有11款具名产品；预告、正文对象与总结数量不对应。",
+        "repair": "将常见问题移出产品编号，并按真实名单统一款数，不能把问答凑成产品数。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "已核对章节列表及对应主旨；发现下述具体范围或数量断点后判为需修订，不作为完整合格稿。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P011",
+          "P024"
+        ],
+        "reason": "整体组成不同只能说明不能假定两款完全等同，不能据此绝对断言不能互相替代。文章没有交代用法或选择目的不同到不可替换的依据。",
+        "repair": "改为不能仅凭相同成分视作等同，是否替换须另据具体用途和条件判断。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "核对开头设问、章节框架和结尾；下列断点尚未修复，不作为合格交付。",
+    "issues": [
+      {
+        "kind": "missing_bridge",
+        "paragraph_ids": [
+          "P001",
+          "P002",
+          "P042"
+        ],
+        "reason": "标题问增长液是真是假，正文仅比较包装和组成，末尾反说比追问真假更有用，既没给出验证结论，也未明确回答现有资料不足以判断；设问与答案被替换。",
+        "repair": "收窄标题为资料比较，或明确回答证据能否支持增长，不把包装比较当作真伪回答。"
+      }
+    ]
+  },
+  {
+    "key": "6466ae1b9f0d55d0ec49ae54",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "核对开头设问、章节框架和结尾；下列断点尚未修复，不作为合格交付。",
+    "issues": [
+      {
+        "kind": "missing_bridge",
+        "paragraph_ids": [
+          "P036"
+        ],
+        "reason": "只有10ml和使用频率，仍缺每次用量，不能据此估算使用周期。文中同时承认没有相关数据，却把周期估算作为可执行动作。",
+        "repair": "补齐单次实际用量后再估算，或只介绍规格不预测周期。"
+      }
+    ]
+  },
+  {
+    "key": "51cf7fcf75591fc287ab635d",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "核对开头设问、章节框架和结尾；下列断点尚未修复，不作为合格交付。",
+    "issues": [
+      {
+        "kind": "missing_bridge",
+        "paragraph_ids": [
+          "P006",
+          "P027",
+          "P030"
+        ],
+        "reason": "把完整生长周期用作判断眉部护理产品是否适合的通用观察标准，却没有定义该周期或说明它与质地、刷头等购买问题的关系。避免换用造成混乱，不足以证明一定应按该周期判断。",
+        "repair": "区分使用感观察与毛发生长效果评估，没有对应验证方案时不设统一生长周期。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "已核对提纲与首尾问题；下述推理缺口需修订，未据局部阅读作整篇通过判断。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P029",
+          "P030"
+        ],
+        "reason": "建议凭成分表避开劣质矿物油、强效香精或刺激性防腐剂，但成分名称不能说明原料品质或成品刺激强弱；随后读护理精华的成分表也没有补上如何作这些判断的依据。",
+        "repair": "移除无法由INCI识别的品质、刺激强弱筛选，眉笔问题使用对应笔芯或实际质地资料解释。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "已核对提纲与首尾问题；下述推理缺口需修订，未据局部阅读作整篇通过判断。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P025"
+        ],
+        "reason": "20ml价格与15ml高价位产品可以比较单位体积价格，不能直接推出单次成本更低，还缺单次用量；含水相油相也不能单凭组成判为干而怕闷人群的中间选择。",
+        "repair": "分别核算单位价格和实际用量，不从水油组成推定闷感或适配。"
+      }
+    ]
+  },
+  {
+    "key": "8f41cee13e4ae4a3ee32a6a5",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "已核对提纲与首尾问题；下述推理缺口需修订，未据局部阅读作整篇通过判断。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P018"
+        ],
+        "reason": "15g规格不能单独判断使用周期，缺单次克数和频率。文本把成分、规格、按摩头列为三个步骤，第二步实际上无法由给定数据完成。",
+        "repair": "明确先有个人用量及频率记录才估算周期，缺项时只比较净含量。"
+      }
+    ]
+  },
+  {
+    "key": "ab979a7d25b253a432ffa1d4",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "已核对提纲与首尾问题；下述推理缺口需修订，未据局部阅读作整篇通过判断。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P027",
+          "P029",
+          "P033"
+        ],
+        "reason": "原文仅列两个或几个主打名称，不等于产品完整配方成分最少、配方简短。正文由资料列举少转成配方自身简单，再将其作为选择理由，偷换信息范围。",
+        "repair": "仅比较资料公开的名称，拿到完整INCI之前不作配方长度或简洁程度排序。"
+      }
+    ]
+  },
+  {
+    "key": "84360abad684d632031c1649",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "全文比较框架和结尾存在下述具体范围变化，未作为通过稿。",
+    "issues": [
+      {
+        "kind": "scope_shift",
+        "paragraph_ids": [
+          "P025",
+          "P051"
+        ],
+        "reason": "来源只列出辅酶Q10与玻尿酸两个主打名称，不能据此断定整支产品配方主线简单。资料列名的多少被转换成实际配方复杂度，后者没有完整INCI支持。",
+        "repair": "只说公开列出的主打名称少，拿到完整配方之前不评价配方本身简单。"
+      }
+    ]
+  },
+  {
+    "key": "d76595f2399968546c53c55a",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "全文比较框架和结尾存在下述具体范围变化，未作为通过稿。",
+    "issues": [
+      {
+        "kind": "scope_shift",
+        "paragraph_ids": [
+          "P010",
+          "P030"
+        ],
+        "reason": "前文强调不同产品浓度与复配等差异须具体核对，结尾却仅按年轻且无明显问题就判定可用轻盈面霜替代，没有具体面霜的眼周用途说明或同一用法依据；人群条件代替了产品适用条件。",
+        "repair": "回到具体产品的标示用途，不以年龄和问题有无单独作跨部位替代结论。"
+      }
+    ]
+  },
+  {
+    "key": "9cb2edb0362b3c3fa4aab0ff",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "已核对设问、章节顺序和收束对象，发现下述不一致或推论断点。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P008",
+          "P012",
+          "P037"
+        ],
+        "reason": "排行的第一款标题后是通用方法，第二款自然堂标题下却承接自有产品资料；总结还承认自然堂配方信息有限。小标题、实际产品正文和条目定位错位，读者不能按编号找到对应产品。",
+        "repair": "按真实产品内容重新安排小标题和段落，缺项则明确留缺，不靠统一改标题修复。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "已核对设问、章节顺序和收束对象，发现下述不一致或推论断点。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P017",
+          "P022",
+          "P037"
+        ],
+        "reason": "先说成分种类多不代表适合，后面却设适合怎样人群一节，并把形态直接对应早晨外出或晚间，未提供同一产品的场景适配依据；结尾把资料读法升级为人群和使用安排。",
+        "repair": "保留产品具体用法，删除由成分条数或形态本身推出的统一人群、时段建议。"
+      }
+    ]
+  },
+  {
+    "key": "079db9f407dfb7679d47265d",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "已核对设问、章节顺序和收束对象，发现下述不一致或推论断点。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P033",
+          "P039"
+        ],
+        "reason": "成分没有名称、浓度或同口径对照，却先给出强效美白这一强度判断，再用来区分纯清洁产品；配方介绍不足以支持效力和组合价值判断。",
+        "repair": "删去强效及由此导出的价值推断，只列有依据的组成和产品标示。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "已核对设问、章节顺序和收束对象，发现下述不一致或推论断点。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P006",
+          "P035"
+        ],
+        "reason": "前面说不能按成分条数判断配方，后面仅据资料所列几个主打名称就将某款定位为组成简单、相对精简的选择，缺少完整INCI，资料简短被当成配方简单。",
+        "repair": "只说明公开信息有限，拿到完整成分表之前不作配方简洁或覆盖范围判断。"
+      }
+    ]
+  },
+  {
+    "key": "e0ce431b3539cd363e056ef5",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "已核对设问、章节顺序和收束对象，发现下述不一致或推论断点。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P001",
+          "P002",
+          "P032"
+        ],
+        "reason": "标题问海藻面膜值不值得，导语限定海藻主题各形态，结尾却将非同一海藻路线的自有产品并入三款共同作答案，未建立比较范围；配方和形态资料也没有回答值得的判断标准。",
+        "repair": "明确建立海藻与非海藻对照问题，或移除无关例证；结尾回答预先定义的价值标准。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "已核对设问、章节顺序和收束对象，发现下述不一致或推论断点。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P006",
+          "P016",
+          "P024"
+        ],
+        "reason": "正文承认成分表不能说明实际功效，结论却把红烫阶段对应为成分精简和功能单一产品，再把产品资料用于省试错成本；成分少和阶段适配或成本结果之间缺少依据。",
+        "repair": "删除由症状阶段直接推出配方长度和适配的结论，先明确资料实际能回答的范围。"
+      }
+    ]
+  },
+  {
+    "key": "20fa037d01a4bf0ce2b10dd0",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "核对首尾设问与章节对象后发现下述明确断点，不作通过判断。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P002",
+          "P015",
+          "P027"
+        ],
+        "reason": "开头由使用后反复就排除面膜品类或具体产品的问题，结尾把高频、毛孔堆积与闭口泛红串成因果，没有同一产品及使用条件的依据；同时将不清洗列为通用误区，未区分免洗与清洗型。",
+        "repair": "不排除未经核对的其他原因，按具体产品说明区分用法，不把情境串成统一病因。"
+      }
+    ]
+  },
+  {
+    "key": "d74901e3cb238792c3e0cbbd",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "核对首尾设问与章节对象后发现下述明确断点，不作通过判断。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P002",
+          "P009",
+          "P027"
+        ],
+        "reason": "开头期待的是第二天皮肤状态改善，结尾却用膜布贴合、挂液与过程舒适回答，使用体验好不能证明第二天状态改善。论证中途把结果指标换成过程指标。",
+        "repair": "改为明确回答服帖、滴落和敷贴舒适的问题，不能用这些指标解释次日效果。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "核对首尾设问与章节对象后发现下述明确断点，不作通过判断。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P015"
+        ],
+        "reason": "瓶身放不进置物架不等于只能放地面；还存在改变收纳位置或更换收纳方式等选项。由架子尺寸直接推出体验与卫生变差，是未证明的二选一。",
+        "repair": "去掉只能及必然卫生后果，仅将包装尺寸列为需要核对的收纳条件。"
+      }
+    ]
+  },
+  {
+    "key": "11c8e54a95c1a549c893d430",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "检查章节对象与首尾对应，发现以下具体缺口；未据其余流畅段落放行。",
+    "issues": [
+      {
+        "kind": "missing_bridge",
+        "paragraph_ids": [
+          "P015",
+          "P025",
+          "P027"
+        ],
+        "reason": "按头屑轻重和敏感度直接对应单类成分，后文又承认实际体验取决于整体配方、频率和个体状态，并且没有用量与时长。缺少这些条件时，单成分类别不足以支持已经形成适配选择的结论。",
+        "repair": "把单成分信息限定为资料分类，不用于直接判断具体成品对某阶段或人群的适配。"
+      }
+    ]
+  },
+  {
+    "key": "1328fa393817cf1fe5658741",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "检查章节对象与首尾对应，发现以下具体缺口；未据其余流畅段落放行。",
+    "issues": [
+      {
+        "kind": "missing_bridge",
+        "paragraph_ids": [
+          "P031",
+          "P055",
+          "P061"
+        ],
+        "reason": "第11项标题混入欧莱雅和已经在第5项出现的玛丝兰两款产品，实际名单不是清楚的一款一条；结尾仍称11款各自独立介绍。产品身份与编号结构未对齐。",
+        "repair": "拆清第11项实际对应的产品，去除重复或补齐独立条目，再统一总数和总结。"
+      }
+    ]
+  },
+  {
+    "key": "1e6e4f2be1a82fc525327eea",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "检查章节对象与首尾对应，发现以下具体缺口；未据其余流畅段落放行。",
+    "issues": [
+      {
+        "kind": "missing_bridge",
+        "paragraph_ids": [
+          "P013"
+        ],
+        "reason": "只有200ml和洗发频率高仍不能估计使用周期，缺少单次实际用量。购买场景被写成可计算周期，却未提供必要变量。",
+        "repair": "补齐实际用量记录才估算，或仅讨论容量及收纳不预测时长。"
+      }
+    ]
+  },
+  {
+    "key": "1a11fe65f7ec1b31eb038535",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "核对章节顺序与结尾主张，发现下述前提不足或自相矛盾。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P002",
+          "P028"
+        ],
+        "reason": "结尾把理顺选品和用法顺序推成不再年年反复，正文只有资料阅读和常见提示，没有支持复发结果的证据；从选择过程跨到健康结果。",
+        "repair": "结尾仅说明有助于理解产品信息，不能承诺减少或阻止反复。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "核对章节顺序与结尾主张，发现下述前提不足或自相矛盾。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P023"
+        ],
+        "reason": "200ml仅是规格，不能提前估算使用周期，还缺单次用量及频率；“属于可提前估算周期的信息”缺少必要的条件说明。",
+        "repair": "只在明确实际用量与频率后估算，否则保留为净含量信息。"
+      }
+    ]
+  },
+  {
+    "key": "0abdfe6c70c43ebb2c2d3ff7",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "核对章节顺序与结尾主张，发现下述前提不足或自相矛盾。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P017"
+        ],
+        "reason": "粒径、专利溶解性和备案信息不能说明产品成本主要落在工艺合规上，没有成本分项数据；由技术名词和资质推到成本构成，前提不足。",
+        "repair": "删除成本归因，只说明资料宣称的技术或可核验的备案信息，不推断费用和品质。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "核对章节顺序与结尾主张，发现下述前提不足或自相矛盾。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P023",
+          "P036"
+        ],
+        "reason": "前文承认没有质地描述，后文又由保湿修护膜与屏障说法推定把滋润感做足，并延伸为厚涂或叠加选择；功能定位不能代替实际质地信息。",
+        "repair": "明确质地信息缺失，不从功能性表述推断厚薄和使用安排。"
+      }
+    ]
+  },
+  {
+    "key": "da7d10a9b5ffa7bb53d7a309",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "核对章节顺序与结尾主张，发现下述前提不足或自相矛盾。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P013",
+          "P014",
+          "P019"
+        ],
+        "reason": "同一段先概括眼霜通常更厚更润，再说眼霜更清爽、面霜更厚重，后文又回到眼霜更厚。没有划分具体产品或条件，两个相反的一般判断被同时采用。",
+        "repair": "删除品类统一厚薄结论，分别依据具体产品的实际质地和标示用途比较。"
+      }
+    ]
+  },
+  {
+    "key": "2be8778a8f8d87614631eee5",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "以下章节数量、指标解释或范围冲突已确认，需修改后整篇重审。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P012",
+          "P049",
+          "P051",
+          "P054"
+        ],
+        "reason": "标题与总结称十款，前面已列1至9，第10项又合并卓蓝雅和高岚两款，实为11个产品。P051还称两款加前八款，和正文编号不一致。",
+        "repair": "每款独立成条，按真实名单统一数量、预告和总结。"
+      }
+    ]
+  },
+  {
+    "key": "90b98ab1fa6e0ad0406a67d6",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "以下章节数量、指标解释或范围冲突已确认，需修改后整篇重审。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P002",
+          "P028"
+        ],
+        "reason": "两条对立评论都在谈是否长出绒毛，实际上使用了同一个效果标准；结尾却把分裂的根源归为把合规、体验、价格混记，不能解释同一指标上相反的观察。",
+        "repair": "区分效果描述是否可靠、个体与使用差异，以及讨论标准差异，不用后者替代前者的解释。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "以下章节数量、指标解释或范围冲突已确认，需修改后整篇重审。",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "paragraph_ids": [
+          "P016",
+          "P024",
+          "P025"
+        ],
+        "reason": "P016承认同类产品内有轻薄和滋润膜感等差异，P024又把面霜统一概括为封闭厚重、眼霜统一概括为精简清爽，并据此判定各自区域更合适；品类内部差异被忽略，质地偏好被升级为区域适配。",
+        "repair": "用具体产品说明讨论用途，不把整个品类设成统一质地，不能由清爽或厚重单独推出区域适配。"
+      }
+    ]
+  },
+  {
+    "key": "7255beb24e5f01c5588f45f8",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "存在下述明确的标准跳转、对象混用或无依据推断，未通过。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P020",
+          "P029"
+        ],
+        "reason": "前文说无法由成分推断成品表现，结尾却统一指定米粒用量、约三周判断和一个月无变化再换思路。没有具体产品及对应评估指标，不能从通用成分读法得出统一用量和效果观察周期。",
+        "repair": "具体用法只据各产品说明，观察标准与目标分别交代，删除统一周期及换用阈值。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "存在下述明确的标准跳转、对象混用或无依据推断，未通过。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P002",
+          "P016",
+          "P019",
+          "P022",
+          "P025",
+          "P031"
+        ],
+        "reason": "承诺5款具体产品，实际第一条是具体自有产品，其余四条是清洁型、滋养型、修护型、睡眠型等类别，不是四款具名产品。类别与单品混为同级比较，结尾仍称5款产品。",
+        "repair": "改为一个产品举例与四类用途说明，或补齐真正对应的具体单品，统一标题及数量。"
+      }
+    ]
+  },
+  {
+    "key": "0e277e21472f9a180247561f",
+    "reviewer": "Codex direct argument and outline check",
+    "state": "needs_revision_manual",
+    "order_notes": "存在下述明确的标准跳转、对象混用或无依据推断，未通过。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P013",
+          "P017"
+        ],
+        "reason": "由活性原料排序靠前推断没有敷衍、配方用心，不能成立；排序无法证明意图、成本或成品品质，前文承认效果边界也不能支持这一新判断。",
+        "repair": "去掉用心和敷衍等判断，仅记录可核对的组成，不从排序推到品质或意图。"
+      }
+    ]
+  },
+  {
+    "key": "efbaae713d2978272ed03722",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "误区→衡量→状态分类→提示的次序连贯，但把一类成分产品统一归类并套用同一标签提示，范围缺少具体产品依据。",
+    "issues": [
+      {
+        "kind": "scope_shift",
+        "paragraph_ids": [
+          "P010",
+          "P026",
+          "P029",
+          "P030"
+        ],
+        "reason": "由摇匀、避眼和破损等提示推断这类不是普通清洁品，并将统一年龄和使用提示接到具体品牌例子；使用注意本身不能证明产品类别，含同一成分也不能证明不同配方标签相同。",
+        "repair": "区分具体产品类别及标示，不从通用注意推断类别，也不把某种洗剂的提示自动转给所有含该成分的洗发水。"
+      }
+    ]
+  },
+  {
+    "key": "5dae4521d8384b3f8a86edde",
+    "reviewer": "Codex direct text and argument review",
+    "state": "needs_revision_manual",
+    "order_notes": "提纲和首尾顺序基本对应，但以下资料范围或用法边界有明确跳转。",
+    "issues": [
+      {
+        "kind": "scope_shift",
+        "paragraph_ids": [
+          "P014",
+          "P017"
+        ],
+        "reason": "资料已描述刷头薄涂的用法，正文却把薄厚和早晚频率整体称为个人习惯，未区分明确的产品说明与个人偏好；从描述资料过渡到任意安排用法，边界不清。",
+        "repair": "用法以具体标签为准，资料没提供频率时保留缺项，不把薄厚和频率一概归为个人习惯。"
+      }
+    ]
+  },
+  {
+    "key": "7ba31c7b8a757ddf71902d2f",
+    "reviewer": "Codex direct text and argument review",
+    "state": "needs_revision_manual",
+    "order_notes": "提纲和首尾顺序基本对应，但以下资料范围或用法边界有明确跳转。",
+    "issues": [
+      {
+        "kind": "scope_shift",
+        "paragraph_ids": [
+          "P033",
+          "P039",
+          "P041"
+        ],
+        "reason": "原文列出三项主打名称，不等于给出完整INCI，正文却据此反复判断成分表简短、少而明确；公开摘要长度被替换成实际配方长度。",
+        "repair": "仅说资料列出的主打名称少，完整INCI未确认时不作配方精简判断。"
+      }
+    ]
+  },
+  {
+    "key": "10333e0ae5c5ee6c8d8e5315",
+    "reviewer": "Codex direct text and argument review",
+    "state": "needs_revision_manual",
+    "order_notes": "提纲和首尾顺序基本对应，但以下资料范围或用法边界有明确跳转。",
+    "issues": [
+      {
+        "kind": "scope_shift",
+        "paragraph_ids": [
+          "P026",
+          "P027"
+        ],
+        "reason": "P026只说线上电商平台有售，P027却改成只在线上销售。有该渠道不能推出没有其他渠道，是从存在信息推出排他结论。",
+        "repair": "删除只，保留资料确认的渠道，其他渠道未说明就记未知。"
+      }
+    ]
+  },
+  {
+    "key": "5454f9926fe0c266e5d167d2",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "逐款及总结的章序基本连贯，以下成本或信息范围推断仍需修正。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P007",
+          "P018",
+          "P021"
+        ],
+        "reason": "P007承认标价受品牌、原料、研发和营销等多项因素影响，P018却由百元以内直接推断原料预算有限，P021又用中高端价格解释品牌与研发成本。零售价不能单独证明这些成本分项。",
+        "repair": "只比较实际标价和规格，不从高低价推断原料预算或研发投入。"
+      }
+    ]
+  },
+  {
+    "key": "e1acaacdc76ae62c0dd33be9",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "逐款及总结的章序基本连贯，以下成本或信息范围推断仍需修正。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P023",
+          "P031"
+        ],
+        "reason": "把眉部护理安排到已有夜间流程不等于没有增加步骤，文中没有说明替代了哪一步；同时仅列三个主打名称不足以证明完整配方表简短。两处都把缺失的流程或全表信息当成已知。",
+        "repair": "明确实际是否新增涂抹操作，成分只按已公开名称介绍，不据摘要判断完整配方长度。"
+      }
+    ]
+  },
+  {
+    "key": "1f51900bc4294a2efccb4949",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "评论分歧→备案边界→体验→价格→配方的顺序可理解，但价格部分将未给出的消耗量当作确定使用周期。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P003",
+          "P020"
+        ],
+        "reason": "仅给出5ml容量及每天使用，缺少单次用量，却断言不满两个月见底，并据此评估三百多元的试用成本。频率和容量不足以推出用完周期。",
+        "repair": "引用实际用量和周期依据，或删除确定周期，仅比较明示价格与规格。"
+      }
+    ]
+  },
+  {
+    "key": "dba3eeb7a084de65d3eaaca0",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "工具定义→形态比较→场景→技巧→独立护理附录顺序成立；核心形态比较出现无依据的全类性能结论，随后用于场景推荐和结尾。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P012",
+          "P017",
+          "P030"
+        ],
+        "reason": "以眉膏的膏状形态直接推出显色度高、持久性强，并明确称这两点由形态决定。正文未提供色料含量、配方或持妆测试，无法由形态单独推出全类性能，后文推荐沿用了该前提。",
+        "repair": "区分形态、操作方式与具体产品性能；显色和持久须以具体产品资料或实测为依据，无法确认时改成条件式比较。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "需求→九款→总结顺序清楚，但标题、开头提出的价格问题在正文和结尾缺席。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P001",
+          "P002",
+          "P036",
+          "P037"
+        ],
+        "reason": "标题承诺从肤感到价位进行对照，开头也以几十元到上千元的困惑设问，但九款介绍没有可核对价格，结尾改为规格、成分和定位清单，未兑现价位比较。",
+        "repair": "补充同口径价格与规格对应信息并回应预算问题，或删去标题和开头的价位比较承诺。"
+      }
+    ]
+  },
+  {
+    "key": "e4c3bd71f1f3b74dd2fbe0cc",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "概述→维度→11款→总结框架成立；第一节内部连续换题，结尾重复没有建立的关联。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P005",
+          "P006",
+          "P044"
+        ],
+        "reason": "以脂肪粒和温和与抗皱能否兼得设问，随后用黏腻感、文章结构和点涂习惯代替回应，结尾又把这些连带讨论当作选择依据。黏腻体验与脂肪粒问题不是同一命题，原文把它们并列也不能构成解释。",
+        "repair": "删去未回答的病因和功效兼得设问，或补充对应依据；将质地与用量限定为体验维度，不暗示其已解释脂肪粒。"
+      }
+    ]
+  },
+  {
+    "key": "14d48641c933420cbb3d2024",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "统一比较口径→各款资料→结论顺序成立，但自己的产品实例引入未有依据的包装前提。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P009",
+          "P013"
+        ],
+        "reason": "P009只给15g/支及按摩头，P013却直接把它设定为瓶装加按摩头，并要求与软管权衡携带体积。包装容器和尺寸未提供，按摩头不能单独推出瓶装或更大的携带体积。",
+        "repair": "按已知15g/支和按摩头讨论；缺少实物尺寸或标签时保留容器与体积缺口。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "动机→区域→判断→配方→实例总体连贯，但类目推论与结尾临时/长期区分超出已建立前提。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P011",
+          "P013",
+          "P032",
+          "P034"
+        ],
+        "reason": "从眼周与其他区域护理条件不同，推出两类产品不是同配方换包装，属于由区域差异跳到所有具体配方差异；又把相同产品的临时使用与长期使用分成不同依据标准，却未说明时长如何改变前述说明与用途要求。",
+        "repair": "以具体产品标签、配方及使用条件判断；区域差异不能证明全类配方必然不同，临时简化也应沿用同样的适用条件。"
+      }
+    ]
+  },
+  {
+    "key": "9c596d8ad8afa9a6176e0f87",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "已全文核对；具体论证断点见段落记录，修订后须重新核对全文和顺序。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P008",
+          "P022",
+          "P023",
+          "P030",
+          "P031"
+        ],
+        "reason": "前文要求先分清剂型再谈成分，后文却明确将成分解读列为第一步、剂型第二步并称四步是递进而非并列；示范又改成名称→剂型→成分三步，结尾同时重复互不一致的顺序。",
+        "repair": "统一成先明确需求、再对照剂型和组成等有解释的流程；若维度可并行，删去唯一递进顺序的断言。"
+      }
+    ]
+  },
+  {
+    "key": "c9098ffbcbcc311047c6050f",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "已全文核对；具体论证断点见段落记录，修订后须重新核对全文和顺序。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P007",
+          "P020",
+          "P021",
+          "P022"
+        ],
+        "reason": "P007只分别提到酒精和油脂透明质酸，就认定后者成分表更简单、变量更少；P022又将资料没有提到香精染料当作敏感时的参考优点。资料未提及不等于实际不含，部分主打名录也不能用于排除成分。",
+        "repair": "查看完整INCI后再判断种类与有无；未提供的信息明确保留未知，不拿来做敏感期筛选优势。"
+      }
+    ]
+  },
+  {
+    "key": "9d4fb6c976e5c5052ee96254",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "已全文核对；具体论证断点见段落记录，修订后须重新核对全文和顺序。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P014",
+          "P016",
+          "P017",
+          "P021"
+        ],
+        "reason": "P014根据原文的成分组合叙述，直接确认配方不是堆料而是促生—修护—补充分工；P021才承认同一组合解决多问题属于个人描述。只有名称和宣传不足以证明真实协同分工，末尾限制不能为前文的确定推论补证据。",
+        "repair": "一般成分研究、品牌设计叙述与成品实证分开；组合示例改为资料声称的设计意图，不确认其已实现分工或协同。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "形态和成本→八款→汇总总体顺序成立；结尾重复了正文中已出现的倒置计算口径。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P035",
+          "P055"
+        ],
+        "reason": "正文先正确给出740元/10片=74元单次成本，但P035和P055将算法写成片数除以总价。数字与解释使用倒数口径，读者照结尾方法会得到片/元而非元/片。",
+        "repair": "统一成总价÷片数；涂抹类另需单次用量依据，不能以容量替代次数。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "预算→资质→成分→习惯顺序清楚，但资质节的实例错位，结尾弱化了该节客观核验要求。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P009",
+          "P010",
+          "P018"
+        ],
+        "reason": "备案一节要求核对状态，产品实例却只介绍名称和容量而未给出核对结果，无法示范本节标准；结尾又说四组每一项都不需要标准答案，将有无可核对备案状态与包装偏好混为一类。",
+        "repair": "备案实例展示真实核对过程与状态或明确尚未核对；结尾区分客观信息一致性与个人偏好。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "已逐段阅读全文；章节框架可理解，但下列核心比较或收束标准不成立。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P006",
+          "P007",
+          "P016",
+          "P017"
+        ],
+        "reason": "前文将备案与信息一致性规定为第一道门槛，结尾又说四个问题不用全部答是也能买，且没有说明例外。把必须核对的客观门槛和可取舍的偏好混在同一可选清单，执行标准前后冲突。",
+        "repair": "明确哪些是进入候选的必要核对项、哪些允许按个人偏好取舍，结尾不要一概允许缺项。"
+      }
+    ]
+  },
+  {
+    "key": "73cb32a100843ddac1d8b6a3",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "已逐段阅读全文；章节框架可理解，但下列核心比较或收束标准不成立。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P019",
+          "P022"
+        ],
+        "reason": "将149元/280ml与138元/380g直接比较为后者单位容量更低，ml是体积、g是质量，缺少密度不能直接得到相同单位的容量价格。",
+        "repair": "分别列元/ml与元/g并说明不可直接换算，取得密度或同单位净含量后再比较。"
+      }
+    ]
+  },
+  {
+    "key": "ba6c17dd166ebb6074c40160",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "已逐段阅读全文；章节框架可理解，但下列核心比较或收束标准不成立。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P022",
+          "P027",
+          "P031"
+        ],
+        "reason": "用138元/380g的总价和质量规格得出单次使用成本可控，未给单次用量；后文又把g与ml产品放在同一单位容量价口径排序，缺少换算依据。",
+        "repair": "先统一可比净含量单位，单次成本必须另有用量；不能从总价和规格直接推出每次成本或跨单位排名。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "已全文核对；框架按原因、判断、方法、边界展开，但正文或收束把可能性升级为比例或确定结论。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P004",
+          "P007",
+          "P008",
+          "P019"
+        ],
+        "reason": "前文列出环境变化和多种皮肤情况，只说明存在这些可能，结尾却概括春夏头屑增多多数时候是环境变化提醒。列举可能原因不能推出哪种占多数，文章没有发生比例或排除其他情况的依据。",
+        "repair": "保留多种可能，删去多数时候的频率判断；结尾按已有观察和需要专业判断的条件收束。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "已全文核对；框架按原因、判断、方法、边界展开，但正文或收束把可能性升级为比例或确定结论。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P026",
+          "P027",
+          "P030"
+        ],
+        "reason": "未给舒蕾售价和单次用量，直接因530g大容量断言能摊薄单次成本；又把530g重述为和另一款一样530ml左右，混淆质量与体积。",
+        "repair": "单位成本需要价格，单次成本还需要用量；保留原净含量单位，不无依据地换成ml。"
+      }
+    ]
+  },
+  {
+    "key": "ca72825c82446d0523fc2f8f",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "已全文核对；框架按原因、判断、方法、边界展开，但正文或收束把可能性升级为比例或确定结论。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P005",
+          "P021"
+        ],
+        "reason": "以一直有或干燥时多一点就称多半常态，随后称多数波动可先调整观察，均把变化特征或可能原因升级为发生比例和分流依据。正文没有支持多半或多数的来源数据；前文同时承认不同情况外观相似，无法单凭这些特征完成该判断。",
+        "repair": "删除未经支持的概率词和常态分类结论；明确观察不能排除疾病，将需要专业核对的条件放在自我调整建议之前。"
+      }
+    ]
+  },
+  {
+    "key": "acdcc218aa93fdfaccce2d06",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "已全文核对；框架按原因、判断、方法、边界展开，但正文或收束把可能性升级为比例或确定结论。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P014",
+          "P016",
+          "P017",
+          "P029"
+        ],
+        "reason": "从一些错误用法可能造成不适，推成干枯多半不是产品问题、多一分钟操作通常减少抱怨、起泡挡掉大部分风险，缺少发生比例或因果证据；P029又引用正确使用不会脱发的绝对结论，后面的有人认为只修饰另一句，不能限定这一绝对判断。",
+        "repair": "分别保留用法说明和可能影响因素，不把投诉归责于使用者；去掉多半、大部分和不会等超出证据的确定性断言，具体使用依对应说明核对。"
+      }
+    ]
+  },
+  {
+    "key": "6e4f667ae98cd8fb830cef9f",
+    "reviewer": "Codex direct argument and section-order review",
+    "state": "needs_revision_manual",
+    "order_notes": "已检查章节顺序与具体论证；发现如下确定断点，修复后须对新版本完整复核。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P013",
+          "P018",
+          "P020"
+        ],
+        "reason": "自有产品明确没有完整INCI，却将列名密度高作为统一比较基准；初源漾也只给资料列名，质地未知，却让读者与啫喱款比较配方密度。信息摘录长短不等于真实配方复杂度，缺失质地也不能参与这项性能对照。",
+        "repair": "统一比较资料公开程度，不把摘录多少称作真实配方密度；质地未知保留未知。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and section-order review",
+    "state": "needs_revision_manual",
+    "order_notes": "已检查章节顺序与具体论证；发现如下确定断点，修复后须对新版本完整复核。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P023",
+          "P024"
+        ],
+        "reason": "第2款安芮介绍却写与前三款对照，出现未建立的上文参照；只列四项主要成分即确认成分表相对简短、组成简洁，缺少完整INCI。",
+        "repair": "修正产品编号与上下文参照；将主要列名与完整配方区分，不能由摘录简短推荐配方精简。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and section-order review",
+    "state": "needs_revision_manual",
+    "order_notes": "已检查章节顺序与具体论证；发现如下确定断点，修复后须对新版本完整复核。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P026"
+        ],
+        "reason": "只给泛醇与蜡菊两个资料列名，就认定成分表相对精简，并据此推荐。资料摘要不是完整INCI，无法证明真实配方条目少。",
+        "repair": "改为资料当前仅列两项，索取完整INCI后再评价配方是否精简。"
+      }
+    ]
+  },
+  {
+    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "reviewer": "Codex direct argument and section-order review",
+    "state": "needs_revision_manual",
+    "order_notes": "已检查章节顺序与具体论证；发现如下确定断点，修复后须对新版本完整复核。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P024",
+          "P028",
+          "P034"
+        ],
+        "reason": "分别从只列两三项主要名称，推出成分表较短、条目少、适合偏好简单配方的人。P028又承认植物名称不代表整表只有植物来源，说明正文知道资料不完整，仍用摘要条目数评价真实配方。",
+        "repair": "所有精简、短表等比较改成资料列名多少；完整INCI未给，不得推荐为简单配方。"
+      }
+    ]
+  },
+  {
+    "key": "782e741b27f0120648a14b38",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "全文顺序可辨，但核心解释存在下列由形态或包装跳到性能、比例的断点。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P009",
+          "P010",
+          "P011",
+          "P016"
+        ],
+        "reason": "由粉状或膏状单独推出不能画清晰线条、附着力强且更持久，再据此给出场景分工；正文没有工具、配方和持妆依据，形态不足以决定这些全类性能。",
+        "repair": "形态、工具与具体性能分开；把操作倾向限定到明确条件，持妆和显色以具体资料或实测为准。"
+      }
+    ]
+  },
+  {
+    "key": "09f8b343ebf081ff5ea7e1b7",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "全文顺序可辨，但核心解释存在下列由形态或包装跳到性能、比例的断点。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P005",
+          "P024"
+        ],
+        "reason": "P005称面霜直接减量分装会使油脂比例和增稠体系变得尴尬。仅减少装入量不会改变同一均匀配方的成分比例，不能用分装体积证明需要不同配方；结尾沿用了这个未成立的理由。",
+        "repair": "分清包装净含量与配方组成。说明眼周设计应依据具体需求和产品资料，不把减量分装写成配方比例变化。"
+      }
+    ]
+  },
+  {
+    "key": "c5791be92bb3f584956e66e9",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "已阅读全文并核对开头、全部章节及结尾；主要断点见所列段落。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P010",
+          "P014",
+          "P018",
+          "P026",
+          "P028"
+        ],
+        "reason": "前面先定需求、选剂型再比较成分，四步却固定为成分解读→剂型→肤质→年龄，并强调价值在顺序；示范和结尾再回到先剂型后成分，未解释这几个不同次序的关系。",
+        "repair": "统一需求先行的流程，或将四项明示为可并行的核对维度；示范、正文、结尾沿用相同逻辑。"
+      }
+    ]
+  },
+  {
+    "key": "1bf2484541972032391d88bf",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "已阅读全文并核对开头、全部章节及结尾；主要断点见所列段落。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P002",
+          "P010",
+          "P024"
+        ],
+        "reason": "P024把敷后又紧绷的现象归为更可能是判断标准只停一瞬间。判断标准会影响评价，不能作为紧绷感再次出现的原因，混淆身体体验原因与选购评价方法。P010还从袋内精华剩余多直接推出膜布承载有限，未考虑灌装量、操作等其他变量。",
+        "repair": "分开解释即时体验与持续体验的差别、以及如何评价；原因不明保留未知。袋内剩余量只作为体验记录，不推断承载能力。"
+      }
+    ]
+  },
+  {
+    "key": "adb3bc576fac3fab198a93bd",
+    "reviewer": "Codex direct full-text review",
+    "state": "needs_revision_manual",
+    "order_notes": "已阅读全文并核对开头、全部章节及结尾；主要断点见所列段落。",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "paragraph_ids": [
+          "P022",
+          "P023"
+        ],
+        "reason": "由一个3g定量杯产品的规格，推成整个贴片式在用量精准和携带便利上都不如杯装；正文并未比较贴片包装尺寸、单片定量等条件。个例便利不足以证明整类形态的劣势，也与不排优劣的边界不一致。",
+        "repair": "只比较具体包装在给定场景下的取舍，明确贴片同样需核对单片规格与尺寸，不作整类便利或精准度排名。"
+      }
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+candidate/
+baseline/
+budget-work/
+__pycache__/
+*.zip

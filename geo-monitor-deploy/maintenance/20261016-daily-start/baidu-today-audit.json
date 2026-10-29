@@ -1,0 +1,149 @@
+{
+  "at": 1792118114.3234918,
+  "day": "2026-10-16",
+  "batch": "geo-panel-baidu-ai-20261016-095851-ff407fd3",
+  "questions": {
+    "推荐一款护发素": {
+      "full": 9,
+      "body_only": 0,
+      "missing_or_failed": 1
+    },
+    "推荐一款控油蓬松洗发水": {
+      "full": 10,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款二硫化硒洗发水": {
+      "full": 10,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款沐浴精油": {
+      "full": 10,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款眉毛增长液": {
+      "full": 10,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款祛痘精华液": {
+      "full": 10,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款美白面霜": {
+      "full": 10,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款造型喷雾": {
+      "full": 10,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款染发剂": {
+      "full": 10,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款睫毛增长液": {
+      "full": 10,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款防脱洗发水": {
+      "full": 11,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款防脱精华液": {
+      "full": 6,
+      "body_only": 0,
+      "missing_or_failed": 5
+    },
+    "推荐一款面膜": {
+      "full": 11,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款眼霜": {
+      "full": 11,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款卸妆油": {
+      "full": 0,
+      "body_only": 5,
+      "missing_or_failed": 11
+    },
+    "推荐一款爽肤水": {
+      "full": 10,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款洗面奶": {
+      "full": 10,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款身体乳": {
+      "full": 10,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款护手霜": {
+      "full": 10,
+      "body_only": 0,
+      "missing_or_failed": 0
+    },
+    "推荐一款防晒霜": {
+      "full": 0,
+      "body_only": 5,
+      "missing_or_failed": 10
+    },
+    "推荐一款护发精油": {
+      "full": 5,
+      "body_only": 0,
+      "missing_or_failed": 0
+    }
+  },
+  "questions_with_five_card_bodies": 21,
+  "body_only_database_fidelity": true,
+  "body_only_processed": 10,
+  "supplement_health": {
+    "time": 1792117486.6062434,
+    "heartbeat_expires_at": null,
+    "bridge_pid": null,
+    "model": "baidu_ai",
+    "batch": "geo-panel-baidu-ai-20261016-095851-ff407fd3",
+    "planned": 15,
+    "tasks": {
+      "completed": 15
+    },
+    "status": "complete_with_unavailable",
+    "worker_exit": 0,
+    "worker_pid": null,
+    "captured": 5,
+    "unique": 1,
+    "processed": 5,
+    "duplicates": 4,
+    "unavailable": 10,
+    "body_only_observations": 10,
+    "errors": [],
+    "unique_processed": 1,
+    "progress": {
+      "phase": "complete_with_unavailable",
+      "pending_delivery": 0
+    }
+  },
+  "body_delivery_health": {
+    "time": 1792117944.395895,
+    "observations": 10,
+    "processed": 10,
+    "pending_delivery": 0,
+    "errors": [],
+    "unique_processed": 2
+  }
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "source": "geo-source-card-collectors/geo_source_cards/reference_design.py",
+    "server": "/opt/monitor/geo-content/engine/geo_source_cards/reference_design.py",
+    "sha256": "288fa149c18b75d6baf8b645af50642cd493e28153ce91f8854fd93d8534595b",
+    "bytes": 13857
+  },
+  {
+    "source": "geo-source-card-collectors/geo_source_cards/daily_editorial.py",
+    "server": "/opt/monitor/geo-content/engine/geo_source_cards/daily_editorial.py",
+    "sha256": "7546a642b01a8246804f2414db08cbce71f96277d4ef7edb771d8bc57c6ebce9",
+    "bytes": 50628
+  },
+  {
+    "source": "geo-source-card-collectors/geo_source_cards/genre_outline.py",
+    "server": "/opt/monitor/geo-content/engine/geo_source_cards/genre_outline.py",
+    "sha256": "efb8e5dc0f7f6e942ad24d37c9903ac711d5381933ac84b880712274647a4e46",
+    "bytes": 7691
+  },
+  {
+    "source": "geo-source-card-collectors/geo_source_cards/genre_length.py",
+    "server": "/opt/monitor/geo-content/engine/geo_source_cards/genre_length.py",
+    "sha256": "f233347c4e42f17193ec11c68875db17e1042102a1cbf780e5c1cba19ea38662",
+    "bytes": 2132
+  },
+  {
+    "source": "geo-source-card-collectors/geo_source_cards/genre_prompts.py",
+    "server": "/opt/monitor/geo-content/engine/geo_source_cards/genre_prompts.py",
+    "sha256": "d6488956bc4cd7f7bee25672de1d2087712a0cfca7895bbb7945e9ef035cd2e3",
+    "bytes": 24477
+  },
+  {
+    "source": "geo-source-card-collectors/geo_source_cards/article_allocation.py",
+    "server": "/opt/monitor/geo-content/engine/geo_source_cards/article_allocation.py",
+    "sha256": "d1a2b5f5163b155a9b02864a51ebfee8f646dadd5696c270c009fbeea4cb4b5b",
+    "bytes": 1543
+  },
+  {
+    "source": "geo-source-card-collectors/geo_source_cards/genre_pools.py",
+    "server": "/opt/monitor/geo-content/engine/geo_source_cards/genre_pools.py",
+    "sha256": "ea139f4fccc40d3eaf77c9e50d0a8b4b04174432db5700cc2f1c2c69b40c911e",
+    "bytes": 8093
+  },
+  {
+    "source": "geo-source-card-collectors/geo_source_cards/api_worker.py",
+    "server": "/opt/monitor/geo-content/engine/geo_source_cards/api_worker.py",
+    "sha256": "c4e781d23008c772dce4ff8b3dc3cf8f74cf828ae0c5725cd8da5153caa2decf",
+    "bytes": 26418
+  },
+  {
+    "source": "geo-source-card-collectors/geo_source_cards/consumer_prompts.py",
+    "server": "/opt/monitor/geo-content/engine/geo_source_cards/consumer_prompts.py",
+    "sha256": "32db5510048be4c897604ed8e8a6367f77716865aca79ccbae83946d7b4009f9",
+    "bytes": 24434
+  },
+  {
+    "source": "geo-source-card-collectors/geo_source_cards/api_prompts.py",
+    "server": "/opt/monitor/geo-content/engine/geo_source_cards/api_prompts.py",
+    "sha256": "1d6afff2fff45e948a716eda2d7e4291d71dffe7bf03589c6a7c13fd0c9acc17",
+    "bytes": 20545
+  },
+  {
+    "source": "geo-source-card-collectors/geo_source_cards/reference_prompts.py",
+    "server": "/opt/monitor/geo-content/engine/geo_source_cards/reference_prompts.py",
+    "sha256": "2b5a1851ec089e4c182404de631b5e1e7c619656f396456ec6ae81aa1884cc8b",
+    "bytes": 9395
+  },
+  {
+    "source": "geo-source-card-collectors/geo_source_cards/staged_editorial.py",
+    "server": "/opt/monitor/geo-content/engine/geo_source_cards/staged_editorial.py",
+    "sha256": "b133b1ea6b6fe42e2f2778168ab44db1812da6c57742e7efd93450511328a183",
+    "bytes": 28734
+  },
+  {
+    "source": "geo-monitor-deploy/creation/panel.html",
+    "server": "/opt/monitor/geo-content/creation/panel.html",
+    "sha256": "12aea708bbb9dfc48fab4065bff06d19cb85027157929a8f443f10f66527794a",
+    "bytes": 72206
+  }
+]

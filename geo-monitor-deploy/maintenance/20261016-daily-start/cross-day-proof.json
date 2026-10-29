@@ -1,0 +1,163 @@
+{
+  "questions": {
+    "推荐一款护发素": {
+      "full_raw_today": 9,
+      "old_envelope_yesterday": 8,
+      "old_request_ids": [
+        "19c21e962e601974c0308f08c9545abafb8fb147c85bee199fa16f154b590d80",
+        "4f24bf935b7c3511e20792a03977f18c2dd17ae1052ebdc283640707f41d4a1f"
+      ]
+    },
+    "推荐一款控油蓬松洗发水": {
+      "full_raw_today": 10,
+      "old_envelope_yesterday": 9,
+      "old_request_ids": [
+        "53c349cb8777f954943ceadc017e0b765d944664f49b5603d5859c1efd4734b4",
+        "5bb526d0a6cc6217dc5aa7b38b4a791f0ff8fd94977361a08758f576069083e6"
+      ]
+    },
+    "推荐一款二硫化硒洗发水": {
+      "full_raw_today": 10,
+      "old_envelope_yesterday": 10,
+      "old_request_ids": [
+        "b4744d231bb90997de98e01b5c764ea9f9715a458414f627d661046d97e6c128"
+      ]
+    },
+    "推荐一款沐浴精油": {
+      "full_raw_today": 10,
+      "old_envelope_yesterday": 9,
+      "old_request_ids": [
+        "2d57d49e549637dc7a84e113b01d8d437640adbd53ccc6bfc20b99869d9ec16c",
+        "6f9a3beb17b392e088e89a574e906c8faf0f3417f379b860a5a1c13c01473c97"
+      ]
+    },
+    "推荐一款眉毛增长液": {
+      "full_raw_today": 10,
+      "old_envelope_yesterday": 10,
+      "old_request_ids": [
+        "df59b1ce32c50c283e0b7c78967b2fba60120a36e331b4ac8111c919b2301438"
+      ]
+    },
+    "推荐一款祛痘精华液": {
+      "full_raw_today": 10,
+      "old_envelope_yesterday": 0,
+      "old_request_ids": [
+        "0fad24272bacc43dacc65f490f5e68175fff40eb2c1a48bee87c154f6fb38f73",
+        "18b5b9a0b1c2203066142032a06df6a04778c4e1388de96fa6d562df2e2d84f2",
+        "720ec0a515d8d83ebd9d29d35dcfab0286486d304947199550737481d7a99093",
+        "7a2fb3fc9668cc627e2b1aae2210ae6b90623ad628c52c2ab83e5d6c4b5dee10",
+        "80a0692385ff6a55e787b9f2ad86ec0aeb23835b38b0a4e610f060db4213704b",
+        "8fd7c814bdc6c11b8be2ec28a6883fa5724526cb4ad567194ca7019439eab01b",
+        "b077e30c564af2417b06c0b32978fbe91478c093b5f6c980afa302041a44c5d9",
+        "bf3254298688728865e0034ae7a6b2e29869c9aed3c1794bef3b092f38c89cd4",
+        "d6475d54c95bb1acbb0dc0f26a44340bde49664b1330e4f0aae0091242129911",
+        "e5288cf6830294c25affe1706367867e7d5ceded3ef8fd30e6290594a3d8665c"
+      ]
+    },
+    "推荐一款美白面霜": {
+      "full_raw_today": 10,
+      "old_envelope_yesterday": 5,
+      "old_request_ids": [
+        "371978d2232c91d31a48030d414072a26dab5b4d9e81f33b8d7c0b0f7adf37ab",
+        "77ce9c5fb5bfed31a39b4b19e20afcb73138380440a435582df704c94aa9dd8d"
+      ]
+    },
+    "推荐一款造型喷雾": {
+      "full_raw_today": 10,
+      "old_envelope_yesterday": 4,
+      "old_request_ids": [
+        "07e01d4d4924e2f461e43753b976891723104fb5cfde7ef7b8b2761a60456365",
+        "da5d87395fd7b27a22cd21c6ec87b7a9fdffef276306abe3f1ab7122f5298d21"
+      ]
+    },
+    "推荐一款染发剂": {
+      "full_raw_today": 10,
+      "old_envelope_yesterday": 5,
+      "old_request_ids": [
+        "70775abe6862de6e6acf4e03aa068531bfb454a8a3aa7d2efaa6366a6b21df17",
+        "a45780596bdedeb2fc75e5ad4d6c58595f1a48934e93738351f0284281d0221a"
+      ]
+    },
+    "推荐一款睫毛增长液": {
+      "full_raw_today": 10,
+      "old_envelope_yesterday": 5,
+      "old_request_ids": [
+        "42f03a780f5e114c5b7ea39891c29ab1f1676007c69f8d830abd6625a6e9560c",
+        "79df58ec3a943bed606825e38d6821b47c56f2b5281775a4bfb702b58a4fa72f",
+        "82a3734d5f7b63068441fd181e83aaa8bfd8a067f04f8970e17797529295c79c"
+      ]
+    },
+    "推荐一款防脱洗发水": {
+      "full_raw_today": 11,
+      "old_envelope_yesterday": 11,
+      "old_request_ids": [
+        "104796799669b21c93a1150fc6cdddbb27b80c8cfef3f066dcc701192719d2bd"
+      ]
+    },
+    "推荐一款防脱精华液": {
+      "full_raw_today": 6,
+      "old_envelope_yesterday": 6,
+      "old_request_ids": [
+        "c228d0d9d1aca8472bdf33280a0b27bcd168be409658efd21a8604c024445676"
+      ]
+    },
+    "推荐一款面膜": {
+      "full_raw_today": 11,
+      "old_envelope_yesterday": 6,
+      "old_request_ids": [
+        "1c8495eedf26ed96ea92e7abade23874701ad78bb4495c7ee91bbba86c422999",
+        "88cfa0e865fdf8fc0084fbceaaf143cf533f346ffb2141fe20924b818a20c950"
+      ]
+    },
+    "推荐一款眼霜": {
+      "full_raw_today": 11,
+      "old_envelope_yesterday": 0,
+      "old_request_ids": [
+        "0e95b77f6d0e9379fe5adf7c08f2f07c203270479ddaa3fca7fd1fcf925f0666",
+        "0fc8384d052d1889787aab90e29a35fc706f70669f0cd1ea570e1cf5d3619ad6",
+        "64572d2dbb827bb6c8246d5722d2e8016e1407cc0b30e7f7f986b07077e738ac",
+        "b40307e8ed72698d387c12ee232a19382d05ee8cc7563d40e89ad549bbc57204",
+        "c3a6fd750f4836773fecc6e65efdf1d8cbdac6df86f3fa1e286459ff93ab5e34",
+        "d313daf23642088776a0114b8807b2271cba25fc8763baa62e65292780f9b613",
+        "dc2a43941aaffe0c0a695ec28d37fb1f1ac4e82401bcb5c72f807f90ceb8efc8",
+        "dfa8c252fd86a6aa7533c085e4d7ca3ac0b5d0055f603ae0815811e2e15f74ab",
+        "e7dd4f98c4e045bc5bb23ed674d707833541e5ebcbf44ee2cd4f94be8dd77378",
+        "eb8bfba7d5e6cc44469c2baf30562a8a81d21db17d09dc9c2b36c4daf93c95f7",
+        "f011397c9037d02e112e8d6bcfecd27f0fe961df12cc3f44aa97b92dc0712b2a"
+      ]
+    },
+    "推荐一款爽肤水": {
+      "full_raw_today": 10,
+      "old_envelope_yesterday": 10,
+      "old_request_ids": [
+        "32ddc3b4a02d07007ab474ba37cf3f5caffffcac485e849f558338496260fcb0"
+      ]
+    },
+    "推荐一款洗面奶": {
+      "full_raw_today": 10,
+      "old_envelope_yesterday": 7,
+      "old_request_ids": [
+        "003db538c5524e94e1c329eee84c7556d9455e31c74047f05b93d5489ef3453d",
+        "9603a8f55ce738b7caec44b6199ed8d9e099cddfe954a5188789b72e966d69d8"
+      ]
+    },
+    "推荐一款身体乳": {
+      "full_raw_today": 10,
+      "old_envelope_yesterday": 10,
+      "old_request_ids": [
+        "9ebc2a704b7259f0cd58b25ef6d4eb939fcc2f17417308ae42e318911d42f774"
+      ]
+    },
+    "推荐一款护手霜": {
+      "full_raw_today": 10,
+      "old_envelope_yesterday": 7,
+      "old_request_ids": [
+        "3bd06986dacc8ba9259deb2a12e5dae759fbfb10fa38dc5a4362b50745f3b3ba",
+        "859c0a00ccf309347ff304280adea578228ff17ad155c17c210f8c8576687516",
+        "86830b24a19cd2acfd97bbf3c5750f50b37282ed954f57981f4497dd945f6687",
+        "e0d09fb7e296beb6f9fe0aa3d7e15ea412f94b0c94a370af065e641a5b0c0bfa"
+      ]
+    }
+  },
+  "today_observations_reused_yesterday": 122
+}

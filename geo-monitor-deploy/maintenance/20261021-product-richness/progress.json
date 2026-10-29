@@ -1,0 +1,46 @@
+{
+  "at": 1792554979.7226057,
+  "plan_id": "plan-ed9d992f0299425ebe1782a9911869f9",
+  "date": "2026-10-21",
+  "capture": [
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "completed": 0,
+      "counts": {},
+      "recovery": {},
+      "blocked": {}
+    },
+    {
+      "id": "baidu_ai",
+      "name": "百度卡片",
+      "completed": 7,
+      "counts": {
+        "completed": 7
+      },
+      "recovery": {},
+      "blocked": {}
+    },
+    {
+      "id": "wenxin_card",
+      "name": "文心卡片",
+      "completed": 2,
+      "counts": {
+        "completed": 2,
+        "pending": 5
+      },
+      "recovery": {
+        "status": "cooling_down",
+        "kind": "verification",
+        "streak": 2,
+        "cooldown_until": 1792555311.4440463,
+        "blocked": 0
+      },
+      "blocked": {}
+    }
+  ],
+  "task_state": "scheduled",
+  "paused": false,
+  "error": null,
+  "jobs": []
+}

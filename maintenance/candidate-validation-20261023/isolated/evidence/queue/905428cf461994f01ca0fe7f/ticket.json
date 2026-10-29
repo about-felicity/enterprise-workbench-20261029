@@ -1,0 +1,41 @@
+{
+  "id": "905428cf461994f01ca0fe7f",
+  "stage": "writer",
+  "location": "days/2026-10-21/articles/排行类/01/writer",
+  "inputs": {
+    "writing_prompt.md": "d44ab934493b68e3e7129e6f66e4401106b11e307c8608308bec5b178be0ea0c",
+    "writing_job.json": "c46f5da2f088c31d852cfa3eafc3b532e2ceeb1509d8ff9aeb080fc5968176e2",
+    "knowledge.json": "cd0239ca1dd031f36b3d04368821af67e454a5f830017acb51064bb28ea59b9c",
+    "product.json": "4c7ecaec7c55fdb06708dc09dd2684362e34b4e0de1e478c073b5d470056afab",
+    "writing_task.txt": "afdb07ab180ba916b177e86684c39f51cdb3e6147aff7cd3a0929216cbf2525a",
+    "category.json": "bd571fcf5675db2be9ccb4ee16c4e9d577ba28bc4fd0e84dec2b75d0df199bbe",
+    "batch_rules.md": "f3de0e2f5f3ff2dc78bf57068e48b1f7ecdb7d3834f56af2ab79a955da688e2b"
+  },
+  "outputs": [
+    "draft.md",
+    "article.docx",
+    "claim_map.json",
+    "knowledge_to_sections.json",
+    "writer_done.json"
+  ],
+  "meta": {
+    "date": "2026-10-21",
+    "category": "排行类",
+    "number": 1,
+    "revision": 1,
+    "consumer_rewrite": true,
+    "paragraph_repair": false,
+    "known_response_replay": false,
+    "acceptance_version": "three-agent-20261022-v1"
+  },
+  "state": "revision_requested",
+  "created_at": "2026-10-22T17:45:00.564885+08:00",
+  "client": "e80b6d80455851a92c808620",
+  "claimed_at": "2026-10-22T17:55:58.980904+08:00",
+  "execution": {
+    "run_id": "b13a1acdb95039a6fa6061c2",
+    "generation": 1
+  },
+  "error": "API generation rejected: section_generation_exhausted",
+  "replaced_by": "6d0dc7c99beaaf3d06a50b46"
+}

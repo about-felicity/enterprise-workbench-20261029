@@ -1,0 +1,11 @@
+{
+  "recovery_mapping_files": 170,
+  "server_sha_matches": 170,
+  "mismatches": [],
+  "server_source_files": 281,
+  "source_snapshot_files": 479,
+  "unique_manifest_hash_entries": 475,
+  "server_export_sha256": "2e4dbe1f2d29b3eb5dc0cc1894dfd2812959ba83631fbcd29e7b35452622ebde",
+  "engine_regression_tests": 111,
+  "creation_regression_tests": 69
+}

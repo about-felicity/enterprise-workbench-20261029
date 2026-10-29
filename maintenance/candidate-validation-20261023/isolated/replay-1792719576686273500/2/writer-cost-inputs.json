@@ -1,0 +1,77 @@
+[
+  {
+    "id": "INTRO",
+    "utf8_bytes": 62657,
+    "max_tokens": 2090
+  },
+  {
+    "id": "S1",
+    "utf8_bytes": 14497,
+    "max_tokens": 926
+  },
+  {
+    "id": "S2",
+    "utf8_bytes": 24205,
+    "max_tokens": 2150
+  },
+  {
+    "id": "S3",
+    "utf8_bytes": 17337,
+    "max_tokens": 926
+  },
+  {
+    "id": "S4",
+    "utf8_bytes": 17576,
+    "max_tokens": 926
+  },
+  {
+    "id": "S5",
+    "utf8_bytes": 17570,
+    "max_tokens": 926
+  },
+  {
+    "id": "S6",
+    "utf8_bytes": 14566,
+    "max_tokens": 926
+  },
+  {
+    "id": "S7",
+    "utf8_bytes": 17583,
+    "max_tokens": 926
+  },
+  {
+    "id": "S8",
+    "utf8_bytes": 16937,
+    "max_tokens": 926
+  },
+  {
+    "id": "S9",
+    "utf8_bytes": 15895,
+    "max_tokens": 926
+  },
+  {
+    "id": "S10",
+    "utf8_bytes": 17050,
+    "max_tokens": 926
+  },
+  {
+    "id": "S11",
+    "utf8_bytes": 16968,
+    "max_tokens": 926
+  },
+  {
+    "id": "S12",
+    "utf8_bytes": 16994,
+    "max_tokens": 926
+  },
+  {
+    "id": "S13",
+    "utf8_bytes": 14726,
+    "max_tokens": 926
+  },
+  {
+    "id": "END",
+    "utf8_bytes": 62576,
+    "max_tokens": 900
+  }
+]

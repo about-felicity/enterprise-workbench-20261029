@@ -1,0 +1,305 @@
+{
+  "at": 1792079517.6476483,
+  "model": "doubao2",
+  "test_id": "question-only-soak12h-rowidfix-1792072084",
+  "task_id": "23c5d97d-f843-562c-82e5-c22a6b55b855",
+  "ordinal": 311,
+  "question": "推荐一款爽肤水",
+  "state": "needs_attention",
+  "error": "Original native request unresolved after 900s (waiting); automatic resend forbidden",
+  "prepared_at": 1792078575.172502,
+  "elapsed": 942.4751470088959,
+  "events": [
+    {
+      "event": "enqueued",
+      "time": 1792059501.4147742,
+      "detail": "question-only-v1"
+    },
+    {
+      "event": "send_intent_committed",
+      "time": 1792078563.8217654,
+      "detail": ""
+    },
+    {
+      "event": "send_protocol_v2",
+      "time": 1792078563.821772,
+      "detail": ""
+    },
+    {
+      "event": "send_click_intent_committed",
+      "time": 1792078575.1725197,
+      "detail": ""
+    },
+    {
+      "event": "send_tap_returned",
+      "time": 1792078578.7908185,
+      "detail": ""
+    },
+    {
+      "event": "needs_attention",
+      "time": 1792079475.6806722,
+      "detail": "Original native request unresolved after 900s (waiting); automatic resend forbidden"
+    }
+  ],
+  "model_actions": 0,
+  "read_status": {
+    "status": "waiting",
+    "native_request_confirmed": true,
+    "request_id": "e26fffe8-95ac-4dd9-bd0b-520b125d85f4",
+    "answer_id": null
+  },
+  "native_messages": [
+    {
+      "rowid": 9231,
+      "local_message_id": "e26fffe8-95ac-4dd9-bd0b-520b125d85f4",
+      "local_index": 1000,
+      "message_id": "58651361200618242",
+      "server_index": 1,
+      "user_type": 1,
+      "blocks": [
+        {
+          "type": null,
+          "finished": false,
+          "content_keys": [
+            "pc_event_block",
+            "text_block"
+          ]
+        }
+      ],
+      "body_characters": 7,
+      "body_sha256": "c7520efbb448f822bfec3c5ee99c1aaff13511048154ae18f93453110ecfbbea",
+      "native_status_fields": {
+        "status": 11,
+        "message_status": 0,
+        "create_time": 1792078578,
+        "image_upload_status": 0,
+        "regen_status": -1,
+        "time_group_id": 0
+      }
+    },
+    {
+      "rowid": 9232,
+      "local_message_id": "7851568a-e23a-4a5d-abed-15dc5b4b5d02",
+      "local_index": 2000,
+      "message_id": "58651361200624130",
+      "server_index": 2,
+      "user_type": 2,
+      "blocks": [
+        {
+          "type": null,
+          "finished": true,
+          "content_keys": [
+            "pc_event_block",
+            "search_query_result_block"
+          ]
+        },
+        {
+          "type": null,
+          "finished": false,
+          "content_keys": [
+            "pc_event_block",
+            "text_block"
+          ]
+        }
+      ],
+      "body_characters": 135,
+      "body_sha256": "a3a4fc7673cd66b92c4283b2e9128af6688d2e6263509767bd60420cce0feb9f",
+      "native_status_fields": {
+        "status": 21,
+        "message_status": 0,
+        "create_time": 1792078580,
+        "image_upload_status": 0,
+        "regen_status": -1,
+        "time_group_id": 0
+      }
+    }
+  ],
+  "ui_markers": [
+    {
+      "text": "AI 生成可能有误 注意核实",
+      "description": "",
+      "resource_id": "com.larus.nova:id/subtitle"
+    },
+    {
+      "text": "",
+      "description": "重新生成",
+      "resource_id": "com.larus.nova:id/msg_action_regenerate"
+    }
+  ],
+  "ui_controls": [
+    {
+      "text": "",
+      "description": "返回",
+      "resource_id": "com.larus.nova:id/back_icon",
+      "bounds": "[16,64][104,152]"
+    },
+    {
+      "text": "",
+      "description": "创建新对话",
+      "resource_id": "com.larus.nova:id/larus_chat_top_left_create_new_cvs",
+      "bounds": "[104,64][192,152]"
+    },
+    {
+      "text": "",
+      "description": "爽肤水推荐，打开设置页",
+      "resource_id": "com.larus.nova:id/main_container",
+      "bounds": "[235,70][485,147]"
+    },
+    {
+      "text": "",
+      "description": "",
+      "resource_id": "com.larus.nova:id/real_time_call_ic_container",
+      "bounds": "[528,64][616,152]"
+    },
+    {
+      "text": "",
+      "description": "打电话",
+      "resource_id": "com.larus.nova:id/real_time_call",
+      "bounds": "[528,64][616,152]"
+    },
+    {
+      "text": "",
+      "description": "朗读已关闭",
+      "resource_id": "com.larus.nova:id/tts",
+      "bounds": "[616,64][704,152]"
+    },
+    {
+      "text": "先一句话总结：干敏皮选珂润，混干/不稳定选茵芙莎流金水，油皮痘肌选水杨酸款，平价湿敷选B5积雪草水。\n \n一、干皮/敏感肌（维稳补水）\n \n1. 珂润保湿化妆水",
+      "description": "先一句话总结：干敏皮选珂润，混干/不稳定选茵芙莎流金水，油皮痘肌选水杨酸款，平价湿敷选B5积雪草水。\n \n一、干皮/敏感肌（维稳补水）\n \n1. 珂润保湿化妆水",
+      "resource_id": "",
+      "bounds": "[22,168][698,776]"
+    },
+    {
+      "text": "",
+      "description": "复制",
+      "resource_id": "com.larus.nova:id/msg_action_copy",
+      "bounds": "[54,801][122,869]"
+    },
+    {
+      "text": "",
+      "description": "朗读",
+      "resource_id": "com.larus.nova:id/msg_action_re_tts",
+      "bounds": "[138,801][206,869]"
+    },
+    {
+      "text": "",
+      "description": "点赞",
+      "resource_id": "com.larus.nova:id/msg_action_like",
+      "bounds": "[222,801][290,869]"
+    },
+    {
+      "text": "",
+      "description": "点踩",
+      "resource_id": "com.larus.nova:id/msg_action_dislike",
+      "bounds": "[306,801][374,869]"
+    },
+    {
+      "text": "",
+      "description": "",
+      "resource_id": "com.larus.nova:id/msg_action_common",
+      "bounds": "[390,801][458,869]"
+    },
+    {
+      "text": "",
+      "description": "重新生成",
+      "resource_id": "com.larus.nova:id/msg_action_regenerate",
+      "bounds": "[598,801][666,869]"
+    },
+    {
+      "text": "",
+      "description": "",
+      "resource_id": "com.larus.nova:id/input_delegate",
+      "bounds": "[0,924][720,1184]"
+    },
+    {
+      "text": "",
+      "description": "深度思考，已关闭",
+      "resource_id": "",
+      "bounds": "[24,948][184,1024]"
+    },
+    {
+      "text": "",
+      "description": "AI 创作",
+      "resource_id": "",
+      "bounds": "[200,948][378,1024]"
+    },
+    {
+      "text": "",
+      "description": "买前问豆包",
+      "resource_id": "",
+      "bounds": "[394,948][622,1024]"
+    },
+    {
+      "text": "",
+      "description": "拍题答疑",
+      "resource_id": "",
+      "bounds": "[638,948][720,1024]"
+    },
+    {
+      "text": "",
+      "description": "相机",
+      "resource_id": "com.larus.nova:id/action_entrance",
+      "bounds": "[24,1048][112,1160]"
+    },
+    {
+      "text": "发消息或按住说话",
+      "description": "",
+      "resource_id": "com.larus.nova:id/input_text",
+      "bounds": "[112,1055][520,1153]"
+    },
+    {
+      "text": "",
+      "description": "语音输入",
+      "resource_id": "com.larus.nova:id/action_speak_group",
+      "bounds": "[520,1048][608,1160]"
+    },
+    {
+      "text": "",
+      "description": "",
+      "resource_id": "com.larus.nova:id/action_menu_entrance",
+      "bounds": "[608,1048][696,1160]"
+    },
+    {
+      "text": "",
+      "description": "更多面板",
+      "resource_id": "com.larus.nova:id/iv_action_menu_entrance",
+      "bounds": "[608,1048][672,1160]"
+    },
+    {
+      "text": "",
+      "description": "Back",
+      "resource_id": "com.android.systemui:id/back",
+      "bounds": "[100,1184][260,1280]"
+    },
+    {
+      "text": "",
+      "description": "Overview",
+      "resource_id": "com.android.systemui:id/recent_apps",
+      "bounds": "[460,1184][620,1280]"
+    },
+    {
+      "text": "",
+      "description": "Home",
+      "resource_id": "com.android.systemui:id/home",
+      "bounds": "[280,1184][440,1280]"
+    },
+    {
+      "text": "3:51",
+      "description": "3:51 PM",
+      "resource_id": "com.android.systemui:id/clock",
+      "bounds": "[16,0][75,48]"
+    },
+    {
+      "text": "",
+      "description": "Ethernet.",
+      "resource_id": "",
+      "bounds": "[598,2][636,46]"
+    },
+    {
+      "text": "",
+      "description": "Battery charging, 94 percent.",
+      "resource_id": "com.android.systemui:id/battery",
+      "bounds": "[648,0][664,48]"
+    }
+  ]
+}

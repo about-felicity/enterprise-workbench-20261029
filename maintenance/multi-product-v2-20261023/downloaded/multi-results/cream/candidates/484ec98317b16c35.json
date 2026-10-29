@@ -1,0 +1,22 @@
+{
+  "question": "敏感肌想改善暗沉，有什么美白面霜推荐",
+  "model": "baidu_ai",
+  "source": {
+    "url": "https://baijiahao.baidu.com/s?for=pc&id=1855549578562096380&wfr=spider",
+    "title": "屏障受损用什么产品修复?测评10款给敏感肌“重建安全感”的面霜",
+    "media": "百家号",
+    "article": {
+      "status": "failed",
+      "requested_url": "https://baijiahao.baidu.com/s?for=pc&id=1855549578562096380&wfr=spider",
+      "text": "",
+      "attempts": [
+        {
+          "backend": "http",
+          "status": "failed",
+          "error": "Verification/access-denied page is not an article"
+        }
+      ],
+      "error": "All enabled Scrapling readers failed; inspect attempts or provide a permitted source copy"
+    }
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "at": 1793150755.6022859,
+  "jobs": [
+    {
+      "job": "creation-1793091688-ad8c9ac1",
+      "day": {
+        "date": "2026-10-27",
+        "input_sha256": "fe6c3aae0e306ff2174618f3a8087c8d50b6794c851fdcaf241a154555328819",
+        "media_articles": 2,
+        "max_per_category": 5,
+        "status": "complete",
+        "categories": 1,
+        "planned_articles": 2,
+        "accepted_articles": 2,
+        "failed_articles": 0
+      },
+      "articles": 2,
+      "verified_downloads": [
+        {
+          "id": "2026-10-27/排行类/01",
+          "http": 200,
+          "bytes": 41261
+        },
+        {
+          "id": "2026-10-27/排行类/02",
+          "http": 200,
+          "bytes": 42848
+        }
+      ]
+    },
+    {
+      "job": "creation-1793009315-b5caef1c",
+      "day": {
+        "date": "2026-10-26",
+        "input_sha256": "8e4a6757215816d9c2e703011af6e8dbbe91292588aa0f0e72c411a420d24e83",
+        "media_articles": 1,
+        "max_per_category": 5,
+        "status": "complete",
+        "categories": 1,
+        "planned_articles": 1,
+        "accepted_articles": 1,
+        "failed_articles": 0
+      },
+      "articles": 1,
+      "verified_downloads": [
+        {
+          "id": "2026-10-26/排行类/01",
+          "http": 200,
+          "bytes": 44679
+        }
+      ]
+    },
+    {
+      "job": "creation-1793067135-0fd9dc7e",
+      "day": {
+        "date": "2026-10-27",
+        "input_sha256": "7105fef50346bb2cb39cafbe5eef4824fae82eae204149376c101ceb27ca99d1",
+        "media_articles": 2,
+        "max_per_category": 5,
+        "status": "complete",
+        "categories": 1,
+        "planned_articles": 2,
+        "accepted_articles": 2,
+        "failed_articles": 0
+      },
+      "articles": 2,
+      "verified_downloads": [
+        {
+          "id": "2026-10-27/排行类/01",
+          "http": 200,
+          "bytes": 45135
+        },
+        {
+          "id": "2026-10-27/排行类/02",
+          "http": 200,
+          "bytes": 42785
+        }
+      ]
+    },
+    {
+      "job": "creation-1793067139-f0f51240",
+      "day": {
+        "date": "2026-10-27",
+        "input_sha256": "653a25f1150bc86861dd8b6f7d4d981ede477c0e17ae3d9a2a000d36e2797e33",
+        "media_articles": 4,
+        "max_per_category": 5,
+        "status": "complete",
+        "categories": 1,
+        "planned_articles": 4,
+        "accepted_articles": 4,
+        "failed_articles": 0
+      },
+      "articles": 4,
+      "verified_downloads": [
+        {
+          "id": "2026-10-27/排行类/04",
+          "http": 200,
+          "bytes": 40606
+        }
+      ],
+      "original_ticket_state": "accepted"
+    },
+    {
+      "job": "creation-1793067131-091aa6e1",
+      "day": {
+        "date": "2026-10-27",
+        "input_sha256": "6935fd80f0c19f20f330464b96f1014fee61562551ce2079b0c34c2031082b37",
+        "media_articles": 5,
+        "max_per_category": 5,
+        "status": "complete",
+        "categories": 2,
+        "planned_articles": 5,
+        "accepted_articles": 5,
+        "failed_articles": 0
+      },
+      "articles": 5,
+      "verified_downloads": [
+        {
+          "id": "2026-10-27/科普类/01",
+          "http": 200,
+          "bytes": 42540
+        }
+      ],
+      "original_ticket_state": "accepted"
+    },
+    {
+      "job": "creation-1793066668-d2f25dd3",
+      "day": {
+        "date": "2026-10-27",
+        "input_sha256": "656dfcc53b418f86a9be1d4ff9b1af1af0aab03a82d27aa896277951f869b835",
+        "media_articles": 3,
+        "max_per_category": 5,
+        "status": "complete",
+        "categories": 1,
+        "planned_articles": 3,
+        "accepted_articles": 3,
+        "failed_articles": 0
+      },
+      "articles": 3,
+      "verified_downloads": [
+        {
+          "id": "2026-10-27/排行类/03",
+          "http": 200,
+          "bytes": 41224
+        }
+      ],
+      "original_ticket_state": "accepted"
+    },
+    {
+      "job": "creation-1793138057-6e622eb2",
+      "day": {
+        "date": "2026-10-28",
+        "input_sha256": "f58688dc40e18bd51f5ca95114cae7c157d8547438a778f27258c66bbe4b3093",
+        "media_articles": 17,
+        "max_per_category": 5,
+        "status": "complete",
+        "categories": 2,
+        "planned_articles": 6,
+        "accepted_articles": 6,
+        "failed_articles": 0
+      },
+      "articles": 6,
+      "verified_downloads": [
+        {
+          "id": "2026-10-28/科普类/01",
+          "http": 200,
+          "bytes": 44410
+        }
+      ],
+      "original_ticket_state": "accepted"
+    }
+  ]
+}

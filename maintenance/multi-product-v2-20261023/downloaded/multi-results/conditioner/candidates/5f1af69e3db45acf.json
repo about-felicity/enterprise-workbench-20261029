@@ -1,0 +1,22 @@
+{
+  "question": "推荐一款适合烫染后干枯毛躁的护发素",
+  "model": "wenxin_card",
+  "source": {
+    "url": "https://zhuanlan.zhihu.com/p/2029966292682326059",
+    "title": "哪种护发素效果最好？2026 五款实测有效修护护发素盘点，烫染受损干枯毛躁闭眼入 - 知乎-知乎",
+    "media": "",
+    "article": {
+      "status": "failed",
+      "requested_url": "https://zhuanlan.zhihu.com/p/2029966292682326059",
+      "text": "",
+      "attempts": [
+        {
+          "backend": "http",
+          "status": "failed",
+          "error": "HTTP 403"
+        }
+      ],
+      "error": "All enabled Scrapling readers failed; inspect attempts or provide a permitted source copy"
+    }
+  }
+}

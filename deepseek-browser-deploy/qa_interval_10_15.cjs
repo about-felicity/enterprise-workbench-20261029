@@ -1,0 +1,5 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const src=fs.readFileSync('deepseek-browser-deploy/project/extension/background.js','utf8');
+const part=src.slice(src.indexOf('function safeSettings('),src.indexOf('function nextDailyTime('));
+const c={DEFAULT_SETTINGS:{retryDelaySeconds:20},Date,Math,mem:{},settings:async()=>({intervalMinSeconds:1200,intervalMaxSeconds:1800}),storageGet:async()=>c.mem,storageSet:async v=>Object.assign(c.mem,v)};vm.createContext(c);vm.runInContext(part,c);
+(async()=>{for(let i=0;i<100;i++){c.mem={};let now=Date.now(),a=await c.claimSendSlot();assert(a.ok);assert(a.nextAllowedSendAt-now>=600000&&a.nextAllowedSendAt-now<=900010);let b=await c.claimSendSlot();assert(!b.ok);assert.equal(a.nextAllowedSendAt,b.nextAllowedSendAt)}c.mem={nextAllowedSendAt:Date.now()+1800000};const old=c.mem.nextAllowedSendAt;assert(!(await c.claimSendSlot()).ok);assert.equal(c.mem.nextAllowedSendAt,old);console.log('PASS 100 random 600–900 second slots, duplicate claim blocked, preexisting permit preserved')})().catch(e=>{console.error(e);process.exit(1)});

@@ -1,0 +1,9 @@
+{
+  "payload_sha256": "063a5f9ff6bb895b8d95b76b4b0290ac76a1a688f5f74ffe8952b95454a9aa5c",
+  "model": "deepseek-flash",
+  "reservation": "dc17392b2f94665999547be1de1fd8a07fd407d2f5ba75991acee07a3ac42cb8",
+  "state": "INVALID_RESPONSE",
+  "failure_code": "output_incomplete",
+  "finish_reason": "length",
+  "finished_epoch": 1792662971.500171
+}

@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-10-19T11:56:36+08:00",
+  "deepseek_browser": {
+    "auth": "ready",
+    "cursor": 3,
+    "captured": 3,
+    "processed": 3,
+    "inflight": "preparing",
+    "phase": "rate_wait",
+    "next_send": "2026-10-19T12:03:03+08:00",
+    "receipt_pairs_equal": 3,
+    "services": "active"
+  },
+  "doubao_today": {
+    "doubao1": [
+      105,
+      105
+    ],
+    "doubao2": [
+      34,
+      105
+    ]
+  },
+  "baidu_today": {
+    "processed": 65,
+    "target": 105,
+    "pending_delivery": 0,
+    "same_read_error_attempt": 16,
+    "defer": true,
+    "cooldown": "2026-10-19T11:58:03+08:00"
+  },
+  "wenxin_today": "waiting_for_baidu; not started, historical current batch complete excluded from today",
+  "yuanbao": {
+    "active_batch_day": "2026-10-18",
+    "batch_complete": 168,
+    "note": "historical batch completion; do not label it a newly completed October19 batch"
+  },
+  "changes": "none; no task/config/service mutation; no duplicate question",
+  "notification": "none: progress normal, existing Baidu error already reported"
+}

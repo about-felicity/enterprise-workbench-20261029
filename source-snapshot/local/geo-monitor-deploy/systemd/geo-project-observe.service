@@ -1,0 +1,13 @@
+[Unit]
+Description=Read-only GEO cross-day observation for October 21-22
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/monitor/geo-content
+Environment=PYTHONPATH=/opt/monitor/geo-content:/opt/monitor/geo-content/engine
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/home/user/geo-editorial/venv/bin/python -B -m creation.observation
+UMask=0077
+TimeoutStartSec=90
+

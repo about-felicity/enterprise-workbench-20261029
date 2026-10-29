@@ -1,0 +1,7 @@
+{
+  "server": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/search_profiles.py",
+  "sha256": "ff262079914f849ad9813f85dad44550ec214de617f1df14cdd15b18d6a01309",
+  "tests_run": 7,
+  "failures": 0,
+  "errors": 0
+}

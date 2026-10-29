@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/creation/runtime.py",
+      "server": "/opt/monitor/geo-content/creation/runtime.py",
+      "sha256": "b4379a69e199dfed2852ff4872af555d3c2388fb3d639a1676ac18450e527ddc"
+    },
+    {
+      "source": "geo-monitor-deploy/creation/article_export.py",
+      "server": "/opt/monitor/geo-content/creation/article_export.py",
+      "sha256": "1319a5324b307f3bbfc9eae9bcc5404e6db5304679506fe0ba276d41ac18bcf1"
+    },
+    {
+      "source": "geo-monitor-deploy/creation/panel.html",
+      "server": "/opt/monitor/geo-content/creation/panel.html",
+      "sha256": "c32c1cf0bdaccde4569438dfc97b1ffb0d5d953aa22f64414c425b590360fca3"
+    },
+    {
+      "source": "geo-monitor-deploy/creation/article_images.py",
+      "server": "/opt/monitor/geo-content/creation/article_images.py",
+      "sha256": "3de470286f6c3cdef0ae81cc5172d6a53cd6ea4911dbeb98e0532204e0177e95"
+    }
+  ]
+}

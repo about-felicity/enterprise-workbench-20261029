@@ -1,0 +1,686 @@
+[
+  {
+    "path": "engine/geo_source_cards/__init__.py",
+    "sha256": "5725a414f91936a6300de4569bf1e8487d262574696328154447c952c186fe65"
+  },
+  {
+    "path": "engine/geo_source_cards/acceptance.py",
+    "sha256": "2b8be1b7292c9330050f6dd303d16613038724728059a55d5a7ba9414f864998"
+  },
+  {
+    "path": "engine/geo_source_cards/api_budget.py",
+    "sha256": "3807b98c54e5bd921f25e9f582d3b1c312e6e30a2563a67edeb2ace539e6129c"
+  },
+  {
+    "path": "engine/geo_source_cards/api_prompts.py",
+    "sha256": "b9196fdcdb0eba3c5efe1b2985b91a03593865f2bb20d4ba4a3ff9eaa2f7557f"
+  },
+  {
+    "path": "engine/geo_source_cards/api_worker.py",
+    "sha256": "edf34dc53c04c7e1f4e5694169246e011ae206be2f0e7cbec5e4d573d39b656a"
+  },
+  {
+    "path": "engine/geo_source_cards/append_repair.py",
+    "sha256": "bf0d3f084bc8612322bc3f022550ef634c43e8d484e18f908c45a973ce4210bf"
+  },
+  {
+    "path": "engine/geo_source_cards/archive_sync.py",
+    "sha256": "ecf1377f51b86d7c49d64a65474047ac0c600d25a20bce179551848d7bf33914"
+  },
+  {
+    "path": "engine/geo_source_cards/argument_plan.py",
+    "sha256": "26ecb8bb6257f1e6eebc697df6a7911d94f6da83a44fd6f810f65b2c3c0e51f5"
+  },
+  {
+    "path": "engine/geo_source_cards/article_allocation.py",
+    "sha256": "c024956f44439cc1f2850dda3e009e05149b56dde2b4089226cb4654f5350de6"
+  },
+  {
+    "path": "engine/geo_source_cards/article_compiler.py",
+    "sha256": "6a67aa405cef94dc3f9754dbc0760ba24b12f547341654da98ef1857875664ce"
+  },
+  {
+    "path": "engine/geo_source_cards/article_fetch.py",
+    "sha256": "1f790556367ddf89c2d24756fd838a85ed9c404254fe2d6b7ccd96c9cea90b18"
+  },
+  {
+    "path": "engine/geo_source_cards/article_logic.py",
+    "sha256": "ee17656aaef3ce6d6bd72dba56fdf20725dcd828c6c74c2b07811b630249a576"
+  },
+  {
+    "path": "engine/geo_source_cards/article_provenance.py",
+    "sha256": "9eaac799ed5c7554799894f454f1c615744cc3b145310c346a84cbf56a99c0a3"
+  },
+  {
+    "path": "engine/geo_source_cards/article_quality.py",
+    "sha256": "e623b1d617c73ccedc52861d3891d0af3f6e6e02eff7ffa49a6fca3ff6bdcbe6"
+  },
+  {
+    "path": "engine/geo_source_cards/auto_repair.py",
+    "sha256": "a86b3c8441e584a1318c5a120732eba9f458d3ed7348e34a548c5ce16ff88f87"
+  },
+  {
+    "path": "engine/geo_source_cards/cli.py",
+    "sha256": "51e6dd1fc5ac360d6147404aa550fcc83e2d7a72e9dccbc5a949b66209ef5958"
+  },
+  {
+    "path": "engine/geo_source_cards/consumer_prompts.py",
+    "sha256": "d4f906ade8e9850ed7c7b5e4da388d25159867b00a15b7541904debd1871d2b0"
+  },
+  {
+    "path": "engine/geo_source_cards/consumer_voice.py",
+    "sha256": "01b33d9c2061ca60f7cea7f1fc7dea8a8375f69c337e50fb3ea5330ccaa858ef"
+  },
+  {
+    "path": "engine/geo_source_cards/daily_editorial.py",
+    "sha256": "7c34743b12c76a39605b9c29214b48b7e10a396ffc9e131d96e291ab7e6bc0f3"
+  },
+  {
+    "path": "engine/geo_source_cards/deepseek_api.py",
+    "sha256": "b03addbc36f9d4aa542d817630433c0ebd9229d7d513751d9550a113c3ffd497"
+  },
+  {
+    "path": "engine/geo_source_cards/delta_review.py",
+    "sha256": "176282cdf64bcb78ea95d53a4f9e603b404bb6c0c032a42d144fc4cd0e149d2a"
+  },
+  {
+    "path": "engine/geo_source_cards/desktop_app.py",
+    "sha256": "5ff91c3b5cbf7cd66ef4c7325119f54fe8d5d5387dbef819895a0f08795ab1a6"
+  },
+  {
+    "path": "engine/geo_source_cards/desktop_backend.py",
+    "sha256": "549198394b7bd76c526b6271afe88e9853f5d5e0242d9353c0135a8057d101bb"
+  },
+  {
+    "path": "engine/geo_source_cards/desktop_logs.py",
+    "sha256": "e8c7a6a2c1ef2847726240f6115a52912a4090e85b011cc899ec3185d1e99b98"
+  },
+  {
+    "path": "engine/geo_source_cards/desktop_status.py",
+    "sha256": "2f5ad30106a67d45451cb10b1a7d6d7527b86d98f5c4ce0eafffef1e7abcea28"
+  },
+  {
+    "path": "engine/geo_source_cards/draft_length.py",
+    "sha256": "7794942e308a8de34f07b1a7ea08d662e9b83a792730a784260fcdc6dcc33f99"
+  },
+  {
+    "path": "engine/geo_source_cards/editorial_analysis.py",
+    "sha256": "03d034c49e1294fb99dfe6fa83c244c88960b73ed95f69a8690583b2d34a79b3"
+  },
+  {
+    "path": "engine/geo_source_cards/editorial_pipeline.py",
+    "sha256": "0fe0adeae263a2ef30a500117b1e514397022e02b005cf8e6ad64a2b18d5f3e3"
+  },
+  {
+    "path": "engine/geo_source_cards/editorial_schema.py",
+    "sha256": "d85b67b74ac596c3fcc4388889affbd2dbb0f17cab8a0fccffb524001498ebd2"
+  },
+  {
+    "path": "engine/geo_source_cards/execution_runs.py",
+    "sha256": "acf680f150140e49384ef0f8f045292a30359919adf84e3db6a8f45c0c0e9856"
+  },
+  {
+    "path": "engine/geo_source_cards/genre_length.py",
+    "sha256": "8b1167dee55a205ff85d8b4e656f82c8b94d4cf5a4157408ff6d8b0554aaf857"
+  },
+  {
+    "path": "engine/geo_source_cards/genre_outline.py",
+    "sha256": "1ae679f299a06177242884d786cfcfa5fce05761b976f492661574df46037217"
+  },
+  {
+    "path": "engine/geo_source_cards/genre_pools.py",
+    "sha256": "b0a0d920cec81ecf59b67efc0e4960df7a88d9df1b182ca033188183c1c2bf99"
+  },
+  {
+    "path": "engine/geo_source_cards/genre_prompts.py",
+    "sha256": "332d7ab1f0a9381f5d1b22682cfe2d95d9102a638662bbce84e2bd6d3ea7eee4"
+  },
+  {
+    "path": "engine/geo_source_cards/journal.py",
+    "sha256": "773b171c1c81db136878a342bcabd1f12e8fcb0edbc19a9b20531f5cbd76f74b"
+  },
+  {
+    "path": "engine/geo_source_cards/known_response.py",
+    "sha256": "93b69042cb149fc3d1d6a4579489b934336f7e32f18723a5c76419a74428c774"
+  },
+  {
+    "path": "engine/geo_source_cards/paragraph_repair.py",
+    "sha256": "5bcc05286a5f58c42fd50094ad29a4bd8b3e3bc687594f4afd03e462d8fedae1"
+  },
+  {
+    "path": "engine/geo_source_cards/pipeline_control.py",
+    "sha256": "a1c440d6c77f247cede084a8e9a065d93ca7fbf21813581f486d76b534172c2c"
+  },
+  {
+    "path": "engine/geo_source_cards/price_math.py",
+    "sha256": "69c8be8d44e733e018ff3d351f33f8f6ccbe2ece51186a8558edad546f398653"
+  },
+  {
+    "path": "engine/geo_source_cards/product_identity.py",
+    "sha256": "a6e8fb0d0cdcf8c14988ada74bbc1f1cb5c57a54e2a8cf09679523912c1a27ab"
+  },
+  {
+    "path": "engine/geo_source_cards/product_richness.py",
+    "sha256": "d5cab8f7416e3330672ad0604078b4c205efcdae6977d62aa03bf08938be2ba4"
+  },
+  {
+    "path": "engine/geo_source_cards/prompt_compaction.py",
+    "sha256": "217ed0138e7b10086c757f51a87e19530ed06bd2ec3ea9a5265c1957092badc8"
+  },
+  {
+    "path": "engine/geo_source_cards/quality_checks.py",
+    "sha256": "d64b79d7fe5a8f2a09dbc596fad43d0c37bca0364ce2b031c26cecf4cca95b68"
+  },
+  {
+    "path": "engine/geo_source_cards/reference_design.py",
+    "sha256": "f650f0a919ea3dc67c152f7dd9c14b876b2426818bc92ed68bd14bd2ab9a8480"
+  },
+  {
+    "path": "engine/geo_source_cards/reference_prompts.py",
+    "sha256": "57c8082a3549182841631fa7f0a9d8ce770ae535a1d97ec6f5cdb7a25d7d98d4"
+  },
+  {
+    "path": "engine/geo_source_cards/relay_health.py",
+    "sha256": "a5203cab5bfc54b69d67251f343bd2fc6ccbe3a80960b87d87483070ce78e274"
+  },
+  {
+    "path": "engine/geo_source_cards/repair_router.py",
+    "sha256": "827746fd8810f7acbdcb7bc65e8166701d540ba4275acc4efd5d7a2dde9271f8"
+  },
+  {
+    "path": "engine/geo_source_cards/review_arbitration.py",
+    "sha256": "a605e907b4276a4810e4f47b053d46d65f3b2fd1edaa5f303b31f7af63d08c7e"
+  },
+  {
+    "path": "engine/geo_source_cards/review_quality.py",
+    "sha256": "6bab1df74021cbf483191de397a960c5d6d6541d27185929deab5a346f6ad10a"
+  },
+  {
+    "path": "engine/geo_source_cards/rewrite_v2/__init__.py",
+    "sha256": "0e40fbe08c6caaabd058353f44f94b29431977bc294ee57a928fb794a8ce573f"
+  },
+  {
+    "path": "engine/geo_source_cards/rewrite_v2/__main__.py",
+    "sha256": "fd906e687ca2e8944087682567edced06a47a8dfa0949fd03e9e8cc4601d3fea"
+  },
+  {
+    "path": "engine/geo_source_cards/rewrite_v2/common.py",
+    "sha256": "e3f147cb9a55fd7c7f4224a76e12f7e66becc467341f13c667719ea8aac2cdcd"
+  },
+  {
+    "path": "engine/geo_source_cards/rewrite_v2/full_writer.py",
+    "sha256": "7d9a5e1898bf8e752fde949deee95c19e36e10cac2027d400c68c8279cd6143b"
+  },
+  {
+    "path": "engine/geo_source_cards/rewrite_v2/integration.py",
+    "sha256": "cfaefaf5f2ca9ffc95580be3971a89c12b247c5f815f82a8d8bdd5c4402618ca"
+  },
+  {
+    "path": "engine/geo_source_cards/rewrite_v2/material_manager.py",
+    "sha256": "997a986e4a4011c397b8533b7b61b8edf62db00a94d0839944caeda524bd924b"
+  },
+  {
+    "path": "engine/geo_source_cards/rewrite_v2/quality_reviewer.py",
+    "sha256": "9555ace52cee8c3c45ea7ef5bfdb954450d2a04ae01725bc249b65f4488c4486"
+  },
+  {
+    "path": "engine/geo_source_cards/rewrite_v2/structure_parser.py",
+    "sha256": "940c4bffab46bc620ae9704dca6326371edcbccda280cf4dc8999e940d8e6943"
+  },
+  {
+    "path": "engine/geo_source_cards/runtime.py",
+    "sha256": "f906681eaa6f233dac666fc6992bd8245820639e3e7dcc462f27a1b1a8e0d13d"
+  },
+  {
+    "path": "engine/geo_source_cards/scheduler.py",
+    "sha256": "5a40f139220a30d9c320a7ec68ac5efbbd5a4dcb6803e02a4f8ce6c95de4ef34"
+  },
+  {
+    "path": "engine/geo_source_cards/search_profiles.py",
+    "sha256": "ff262079914f849ad9813f85dad44550ec214de617f1df14cdd15b18d6a01309"
+  },
+  {
+    "path": "engine/geo_source_cards/search_recovery.py",
+    "sha256": "efae218472781fd72187aeaf5d4a937c6d1d6309c20358c7a0a4f8821e5c03c8"
+  },
+  {
+    "path": "engine/geo_source_cards/section_writer.py",
+    "sha256": "c96957d1b2c6e82487841f487ac079df0b7c68fbbc6ac45f43debe189599d22c"
+  },
+  {
+    "path": "engine/geo_source_cards/server_capture.py",
+    "sha256": "180a98280187b43c373de79fe6cd0a066b1f5b3cfacd8e183d59552e6d25ef47"
+  },
+  {
+    "path": "engine/geo_source_cards/session_watch.py",
+    "sha256": "bde8c062b312ce66a5da29bc32c4292914c5bc309dddc5835eb0d6e5ec2d2f06"
+  },
+  {
+    "path": "engine/geo_source_cards/source_analysis.py",
+    "sha256": "4a50e656f7d737464f07863805508b06e85b70b51f81be344b91d1f2464e8ede"
+  },
+  {
+    "path": "engine/geo_source_cards/source_contract.py",
+    "sha256": "9190c7e8f45d9e900b5cd17ed8f3943bf800c7de0cdc2f217e0bc8bd65fca84e"
+  },
+  {
+    "path": "engine/geo_source_cards/source_scope.py",
+    "sha256": "e089ac755de1e3d9fd2d4f157e7d9a9d51b047ec2e258086f43842308a3ad793"
+  },
+  {
+    "path": "engine/geo_source_cards/staged_editorial.py",
+    "sha256": "2e43d133e7136b229123f3110c729c0b99cce78012891174ee1c86538c70b2ce"
+  },
+  {
+    "path": "engine/geo_source_cards/structure_analyzer.py",
+    "sha256": "295a0f6a863030c69b4104a83151ac032e9c318cc69d4c66994ee9acd613990e"
+  },
+  {
+    "path": "engine/geo_source_cards/taxonomy_batches.py",
+    "sha256": "c6bbb2cd553c96b520e34fcbc85245aee1c34f2d31c37a51c1f6d33a290c0ffd"
+  },
+  {
+    "path": "engine/geo_source_cards/word_export.py",
+    "sha256": "09e187d0b0a5be7c10e48f09add86562d253c66fb17e7ad1439a367111fe133b"
+  },
+  {
+    "path": "engine/geo_source_cards/writer_handoff.py",
+    "sha256": "cba87a6104253ac18802eab173164da873d5c6bed2a837ca4a3a78fdee5cb966"
+  },
+  {
+    "path": "engine/tests/__init__.py",
+    "sha256": "38b9845a5badba7a1c2673db4bbeb282402e4c4f7f0ee9282d577569e7e2e4a8"
+  },
+  {
+    "path": "engine/tests/fixtures/baidu_ai.html",
+    "sha256": "8c863292430af1b86a6cc97246e407cee64344684190faad945fb2bbe7090bbb"
+  },
+  {
+    "path": "engine/tests/fixtures/deepseek_answer.html",
+    "sha256": "d9f86d20df45a3482d45606c9f0100b48f81e3337ea61f655f7b8b4791d4808b"
+  },
+  {
+    "path": "engine/tests/fixtures/wenxin_card.html",
+    "sha256": "8a4c9d488ce1e1c65a331fe6ea2340994db1df495de6ecbd5f141a95feb06856"
+  },
+  {
+    "path": "engine/tests/test_acceptance.py",
+    "sha256": "c9f89dd25b0e1be9e96140c38f96fe9a415f0ec3952d5126442c6cd7dbe51c16"
+  },
+  {
+    "path": "engine/tests/test_api_worker.py",
+    "sha256": "036d7ec885fad62e6db3779f0b0557f223a102e8f5b87a9a204e0916a0be3e2c"
+  },
+  {
+    "path": "engine/tests/test_append_repair.py",
+    "sha256": "8cc2cce7ba5e1056005dcddb39c9dd350614587dac6d2c2bc95604fda20b2c6d"
+  },
+  {
+    "path": "engine/tests/test_arbitration_batches.py",
+    "sha256": "6f0835d15c3b695f9f236e2650a00768b655cd72ef1935b8d3963c9f8dd61185"
+  },
+  {
+    "path": "engine/tests/test_argument_plan.py",
+    "sha256": "958d94c2a1638cf5965b72f538f22be626bc4ed3e42b719c8217d9d3f76b6b77"
+  },
+  {
+    "path": "engine/tests/test_article_allocation.py",
+    "sha256": "cac9eabf47852d68521680eab94b662b6f7fc7aea8b5f47e771df3956957a647"
+  },
+  {
+    "path": "engine/tests/test_article_compiler.py",
+    "sha256": "b17275ca10f35086a0570107c986bedaa2eaf2c1971bf60f4ab7b24517aca6b9"
+  },
+  {
+    "path": "engine/tests/test_article_logic.py",
+    "sha256": "7b9b4d9613e60c1fab8cdeb3b46007bf9725e4848ebcb6ea7be9e4c4a9154197"
+  },
+  {
+    "path": "engine/tests/test_article_provenance.py",
+    "sha256": "a03beb9af7e876062265d4ee8ca3a37d8d7483d9dc69b2d57642ba73567e8a34"
+  },
+  {
+    "path": "engine/tests/test_article_quality.py",
+    "sha256": "e784ac41584604cdef5b172777209bc8cd218655b23fe0620baf1b29cc127faa"
+  },
+  {
+    "path": "engine/tests/test_auto_repair.py",
+    "sha256": "6c05432e0582483251a46520b190ba655a0d6323e323b6c04ca6cb49fe21a47f"
+  },
+  {
+    "path": "engine/tests/test_browser_fixture.py",
+    "sha256": "601710e67542a9c59694952d03e2dcad2995b9643f28e50dba1c0798c479658b"
+  },
+  {
+    "path": "engine/tests/test_capture_recovery.py",
+    "sha256": "6a6a2e1a3e2a56ba8845cec3e6ecd6e8c3d4c29e1f34c09ac0dc4b56bd820f61"
+  },
+  {
+    "path": "engine/tests/test_collectors.py",
+    "sha256": "3ad45f4ccc0d454d6913eba79a4ab0cae7cacfadf92fa2a18ced124a1769369d"
+  },
+  {
+    "path": "engine/tests/test_completion_fence.py",
+    "sha256": "1fa6d403c832231ec46e68072082c8ffc40d3c15ae0f85e4a90e739beca1cab7"
+  },
+  {
+    "path": "engine/tests/test_completion_states.py",
+    "sha256": "45bf16483834592dfcec5d89107882d003ce49d8cb439aac3364a41392c614de"
+  },
+  {
+    "path": "engine/tests/test_consumer_voice.py",
+    "sha256": "4bcb8e4532503e989d800436cddfb2356086b146a1605ef964e4986d81efd76b"
+  },
+  {
+    "path": "engine/tests/test_corpus_compaction.py",
+    "sha256": "3050072cdbc48571b72d3ed4401c6d566be686eee1989e7761f474dca9e3bce0"
+  },
+  {
+    "path": "engine/tests/test_cost_controls.py",
+    "sha256": "dbc5e3f1dce1dba59a971ac469c243c4124a987cc43d95438d87a3d812a79d73"
+  },
+  {
+    "path": "engine/tests/test_daily_editorial.py",
+    "sha256": "ad0fc1e86a9d60c06e82b06bc867724005f5869e35d3515e35bbc05578e5c08b"
+  },
+  {
+    "path": "engine/tests/test_deepseek_api.py",
+    "sha256": "c09af63e8b8054a69a31ae57199ff7c807dfedae192f49a019360d036c3914b8"
+  },
+  {
+    "path": "engine/tests/test_delta_review.py",
+    "sha256": "7ea251ffcaad126462eaae0308a72f13895a995a23ea152caf139c1ae530f53a"
+  },
+  {
+    "path": "engine/tests/test_desktop_backend.py",
+    "sha256": "8c84fe7ee0eda1dec48909426d982f38002a622a504fae5001ffc0345401c842"
+  },
+  {
+    "path": "engine/tests/test_desktop_logs.py",
+    "sha256": "eeaeb61a37038f977f7b674ed0e1674aea3c1c9b76f232f0b065b990df8b7082"
+  },
+  {
+    "path": "engine/tests/test_draft_length.py",
+    "sha256": "335829b0bad027a3e4602ed2c57a381e48a045f79e6704ded8b145dd2bf7aa3e"
+  },
+  {
+    "path": "engine/tests/test_editorial.py",
+    "sha256": "2f03375d49db15a074e9bbc5e52ef4b31a5390b785dab16150747d0a8ed8bcc3"
+  },
+  {
+    "path": "engine/tests/test_execution_runs.py",
+    "sha256": "a3ba1c93abbb6c8e91e8904fa53ece79ec7a06b05e39f1f603da961938d59726"
+  },
+  {
+    "path": "engine/tests/test_genre_length.py",
+    "sha256": "c1154fd5f271107ad974812a0bb6dd6ffa4c78ebfe72222f7df5265c2f1d502e"
+  },
+  {
+    "path": "engine/tests/test_genre_pools.py",
+    "sha256": "6f56020be8f0ca84b0ef8c53bd87720cdb379789cf3e9a7e646d718c7a85185d"
+  },
+  {
+    "path": "engine/tests/test_known_response.py",
+    "sha256": "1750a6685e5a52709a5bc232a9482652ca6475645d62c0422ef74def00f83ae1"
+  },
+  {
+    "path": "engine/tests/test_media_scope.py",
+    "sha256": "23ac3bb1b91c906481ffec2be7f3cd9f3777244e3fb6949e58bbf7c05f75ee64"
+  },
+  {
+    "path": "engine/tests/test_paragraph_repair.py",
+    "sha256": "4c2727a2d00b97f16923896c6e716376a81027fe23315bca9ff0a2bbdd76a3ba"
+  },
+  {
+    "path": "engine/tests/test_preflight_recovery.py",
+    "sha256": "360f236b5de82aa328028fb27f4bee1aed43da043e0d0aec02146bf50ee91b04"
+  },
+  {
+    "path": "engine/tests/test_product_identity.py",
+    "sha256": "f9d618d1e1ec5750084683a84e2303bcfeea60c14b16c75b86c427e872465f9c"
+  },
+  {
+    "path": "engine/tests/test_product_richness.py",
+    "sha256": "f9f0ea025d7e0fdc39ec2c24e6d4eb26d59c5e8707f85383f1f86d431d2ac8e6"
+  },
+  {
+    "path": "engine/tests/test_pump_duration.py",
+    "sha256": "76944463d64d60df583b3952db00ea51fb1bb07822968345a496cfade35b0933"
+  },
+  {
+    "path": "engine/tests/test_reference_design.py",
+    "sha256": "385b951c4c9bac7c3cb755b72414658fe4ed2214aeb83f83586c4ac7c8292ebf"
+  },
+  {
+    "path": "engine/tests/test_reliability.py",
+    "sha256": "70da3fe577054a09efad95cfbb622f8ec2668ad71fe60bbb339f9f5d503a1459"
+  },
+  {
+    "path": "engine/tests/test_review_genre.py",
+    "sha256": "4fdbcca48be16bea38470d49c3e717b96b7455c443bb3c219e05b0566e768b48"
+  },
+  {
+    "path": "engine/tests/test_rewrite_v2.py",
+    "sha256": "9d124111bb7bcd3d1c3e83140057e86f0598014b485eff4b0177d1683df8c246"
+  },
+  {
+    "path": "engine/tests/test_roster_feature_bullet.py",
+    "sha256": "58303b010c553977662bfb8a3f45ffa93f7ca42471d533b88efc9cc2b2b84ce7"
+  },
+  {
+    "path": "engine/tests/test_round_cycle.py",
+    "sha256": "b85e225b24c3c4afeb17d016b11dfd4777ed0c9c9ac3f4dbe98674c2e2e994ca"
+  },
+  {
+    "path": "engine/tests/test_search_profiles.py",
+    "sha256": "eb8e0ba29731b8ff865af5b0e34e0506afd4e91bce6da01ebd00dcd9d19120cf"
+  },
+  {
+    "path": "engine/tests/test_search_recovery.py",
+    "sha256": "d75b6dd8d5664c05179d1b0e97fcba8f3ba28b2335733d495ef759b31a2f8a73"
+  },
+  {
+    "path": "engine/tests/test_section_budget_revision.py",
+    "sha256": "a3a475c6dae2915772b5b24d968d9d0ac0c351e594c4e9b7e4c3e8edf81a7b7c"
+  },
+  {
+    "path": "engine/tests/test_send_position_recheck.py",
+    "sha256": "0a312fe2921db7e9f0ef5ee780d160c442e7009744c7dce686817fbc2284fa37"
+  },
+  {
+    "path": "engine/tests/test_session_persistence.py",
+    "sha256": "2d88e6c5b0978025ce4b2ac6dedd46862bc399443b0c1ebb4e6c4b24f984b2bd"
+  },
+  {
+    "path": "engine/tests/test_session_watch.py",
+    "sha256": "2fd4a16e158592faf129b72685efbf8a2a6704c4b5f05af80dd363c8f80d2ca9"
+  },
+  {
+    "path": "engine/tests/test_shared_deepseek_rate.py",
+    "sha256": "db1df0f60593629a354c2418189ad4ea9b962c1d61b7832ea4f4ec117f798892"
+  },
+  {
+    "path": "engine/tests/test_source_analysis.py",
+    "sha256": "83811b5bd07ea5d18e354163c95fa62673e3aba31584f75baf6f808b394fdb67"
+  },
+  {
+    "path": "engine/tests/test_source_contract.py",
+    "sha256": "4912a5741fa64b4b8629a8820a70a0fa6da221795850cde032d215649092ea2e"
+  },
+  {
+    "path": "engine/tests/test_source_scope.py",
+    "sha256": "2ce1876d9ba57b20283b7eb07d2f81943ed45e25291d6d20749652d1c4cdc6ef"
+  },
+  {
+    "path": "engine/tests/test_staged_editorial.py",
+    "sha256": "8403128777f2dc8390669563a170dda501f6c4f1a20c7c45cad18ce1bec5f7d8"
+  },
+  {
+    "path": "engine/tests/test_taxonomy_batches.py",
+    "sha256": "6fdfdb67be8771192ded1cb2aac3763d9dafa6c6fb3d31765539112b690f5887"
+  },
+  {
+    "path": "engine/tests/test_three_agent_quality.py",
+    "sha256": "3e7c16446477fa3260f1c6bf55bec7c5b187da09104c88316569cffbb770cfef"
+  },
+  {
+    "path": "engine/tests/test_unattended_capture.py",
+    "sha256": "687182b502eab25dd483067b5ab9fba2f650d3adea545b925d10e1949c1b5d37"
+  },
+  {
+    "path": "engine/tests/test_user_review.py",
+    "sha256": "955bcb4fc32ae19f50f494c2d6f198646044a7974aa2a34bb62a611a69ee911b"
+  },
+  {
+    "path": "engine/tests/test_word_layout.py",
+    "sha256": "82cc113a6373bd91d2c7829f6682015f710a8fe3416714aa30dc4cf113c08c4e"
+  },
+  {
+    "path": "creation/__init__.py",
+    "sha256": "047d05e2a69364e12b508814d3a267520ad0ed8f269557bdb28ddc6898c32ce9"
+  },
+  {
+    "path": "creation/article_export.py",
+    "sha256": "90193a70ddaef4bc9e55be446bacb0c97f36007e2f4157a5dad45f4cab881963"
+  },
+  {
+    "path": "creation/browser_capture.py",
+    "sha256": "3011f8f240b79f53926f6ba3145705eb8241acddcb94c1565320e81bce4cbb4c"
+  },
+  {
+    "path": "creation/client.py",
+    "sha256": "9bd62afc07b3bd528a5d049261011f4ed78da69feaf0868ed830a5da1350b0ba"
+  },
+  {
+    "path": "creation/editorial_status.py",
+    "sha256": "6332b29608725248aadd2e98e5dd282b45070e696a38b7e9a5e5c730bd687501"
+  },
+  {
+    "path": "creation/knowledge.py",
+    "sha256": "8b7514a062b4f531b6fecdf97a5b23a41f86932a9f6349a2d1dcba4b871e99a8"
+  },
+  {
+    "path": "creation/materials.py",
+    "sha256": "85809fd6ad9c4e58d1303a471b3b998dbb3aff141053081c0b1dfc221d002264"
+  },
+  {
+    "path": "creation/observation.py",
+    "sha256": "145094f5de8c6122ff124f2d8f486e55badb4de56a79417b2f89910f42ae53cb"
+  },
+  {
+    "path": "creation/panel.html",
+    "sha256": "22901201429ca0b3826f826a73760846b4693a0a3fc57c2153b1814f6f722550"
+  },
+  {
+    "path": "creation/quality_repair.py",
+    "sha256": "90f0eb74de95a076c0df9c68c4bbdd9968db23c9c1882a99d7a06c9c7daf4f43"
+  },
+  {
+    "path": "creation/README.md",
+    "sha256": "b399989ff9e29a724e81fbd7a0233ff6655f5e931e1429e9b929007dc1c7eb1a"
+  },
+  {
+    "path": "creation/recovery.py",
+    "sha256": "bea3fa1f0931abd3f9f5f3d47a778d13f7522a8309f1724f8472bc3880da74d1"
+  },
+  {
+    "path": "creation/repair_followup.py",
+    "sha256": "bf11c85a0f12647d3be8b330707692d421253017cbdc3ce28f75e0ff8217c0cd"
+  },
+  {
+    "path": "creation/runtime.py",
+    "sha256": "26cc91a6c040f5d9e9c4972a0bef1d7da5b16d0e5f8f00ac834c1b0d7cd196e9"
+  },
+  {
+    "path": "creation/service.py",
+    "sha256": "0fb02fde74b68d9d78ced4328e98b135b4bbb20f182b08aa14f66ac89d889ba7"
+  },
+  {
+    "path": "creation/soak.py",
+    "sha256": "90446e1f44b70fc4f7162896c9e0a821bc45ee6120c06632f28b591275085f59"
+  },
+  {
+    "path": "creation/source_adapter.py",
+    "sha256": "307d193e95814642a5789e18df4eb5944f395cf7618c0fdc576c48dcd325f622"
+  },
+  {
+    "path": "creation/studio.py",
+    "sha256": "69d9a3f790a8479b9c83e173ec840cc16dddbfd4cd71adb7d4cd0a10ef5f802a"
+  },
+  {
+    "path": "creation/test_article_export.py",
+    "sha256": "fb1bb07f06636aff59bbd1805bc974dae09af2aae6ab6213c681d3c715c3bffb"
+  },
+  {
+    "path": "creation/test_client.py",
+    "sha256": "78012d79230248239fc167844cf35f6103308105275cb394216393b0c474c91a"
+  },
+  {
+    "path": "creation/test_client_projection.py",
+    "sha256": "1eed25805149f2baf22413744a8ad3cd22b1963a85448674f51609103586555d"
+  },
+  {
+    "path": "creation/test_download_service.py",
+    "sha256": "9cf51d9391228824c423f23443c36484a34ef71ea22f19d607cbd7acf3c73818"
+  },
+  {
+    "path": "creation/test_editorial_health.py",
+    "sha256": "3c5a7ba8c9f7084b671ebb663fc5572dbcb9bbfcfbf19223c8a43bd02e965249"
+  },
+  {
+    "path": "creation/test_logic_client.py",
+    "sha256": "3de9943eb581f6cface4b5c89fc32d8d38dd269a15b08f93f9632e9acd86adaa"
+  },
+  {
+    "path": "creation/test_materials.py",
+    "sha256": "43c8702891aed6ae25c3aab7a703e270def33f7627a99d2255a272cd2fa35e90"
+  },
+  {
+    "path": "creation/test_observation.py",
+    "sha256": "c80fcaa6a79f1eb472608a2b2c2ce10d7a1f544b1e95b50131a93e489fb57c1a"
+  },
+  {
+    "path": "creation/test_quality_delivery_reuse.py",
+    "sha256": "8fb76c8bab722b654a57c4f4621473619dc887e30bf8beec42027411e933cf47"
+  },
+  {
+    "path": "creation/test_repair_followup.py",
+    "sha256": "e5bb21344344a62f974f88266768817a8cf97fec1c1be8ddc7ee0331e6107e93"
+  },
+  {
+    "path": "creation/test_source_adapter.py",
+    "sha256": "577e714a4c36c6956d1d2614f48b3621f012d4811b8b7689fac5114ccbe28bee"
+  },
+  {
+    "path": "creation/test_structural_json.py",
+    "sha256": "0c7923d53d0e98e3013342350beb22b6425a7da662ee8ebc4eb7e22659e8abf0"
+  },
+  {
+    "path": "creation/test_studio.py",
+    "sha256": "a2160c46c12a131cdd4db8922485ca46c62deabf3e82e87ede238ba1da328bef"
+  },
+  {
+    "path": "creation/test_unattended_recovery.py",
+    "sha256": "5c5918d6285b44afd63aa1602db04361143fcfae4a7af5f044925d2ce843b230"
+  },
+  {
+    "path": "creation/test_worker_recovery.py",
+    "sha256": "502d3fb58b4355d8029838db2d3539478480666616170fd036c1b24ac726d9b1"
+  },
+  {
+    "path": "creation/test_workflow.py",
+    "sha256": "fe911968a3ab1e0cc24941966bdf95f39b1d23228e9cbcb574ed462f8ffe3461"
+  },
+  {
+    "path": "creation/wizard_sections.html",
+    "sha256": "c4a1bd42c75be080b7be3c58a32526c022325ec9c98403fa2a761ce0baa2e5ca"
+  },
+  {
+    "path": "creation/worker.py",
+    "sha256": "72616aba2442383211623321571c81640490ea3afe817b7dc16626896b286883"
+  },
+  {
+    "path": "validate.py",
+    "sha256": "13fd767704c195b0df7879122d9bd5282d5440ef5709e254a99839aa6035de5e"
+  }
+]

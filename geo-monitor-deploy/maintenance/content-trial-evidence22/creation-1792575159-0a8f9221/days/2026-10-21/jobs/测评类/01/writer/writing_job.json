@@ -1,0 +1,8 @@
+{
+  "job_id": "0fca0d77c474e1a3088ea6b8",
+  "status": "ready_for_editorial_review",
+  "prompt_sha256": "5f668c07037c04cae1ecd19bcea17694d0caea756f866e38d6e4b04bac50f104",
+  "knowledge_sha256": "992ce69d2e74fc40f1e4d31ac54869da8589c31b823c7366b435d298b8adab38",
+  "publication_approved": false,
+  "draft_sha256": "b4ae9796905fb2e1180d4877585ad8b37f7df26df593417620c1d9cea1918b5f"
+}

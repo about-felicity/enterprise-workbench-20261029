@@ -1,0 +1,16 @@
+{
+  "at": 1792734194.5063117,
+  "source": "Actual original Yuanbao EOF + exact persisted first pair, no resend",
+  "status": "nontext_complete",
+  "request_id": "876a3acdca7609a26c7eb286254afba7",
+  "answer_id": "0RTB4lSYXbs_2",
+  "rich_cards": 1,
+  "media_items": 1,
+  "text_body_present": false,
+  "sources": 0,
+  "body_transcript_invented": false,
+  "native_store_proof": "12ada7a3ec99b428e0e9acea0999701c3e69ea1f999ad61f5aaf28deb77252e9",
+  "original_render_cards_still_empty": true,
+  "send_clicks": 1,
+  "api_calls": 0
+}

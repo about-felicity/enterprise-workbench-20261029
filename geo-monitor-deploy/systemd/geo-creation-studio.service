@@ -1,0 +1,18 @@
+[Unit]
+Description=Creation studio daily product tasks and workflow orchestration
+After=network-online.target geo-content-api.service
+[Service]
+Type=simple
+WorkingDirectory=/opt/monitor/geo-content
+Environment=PYTHONPATH=/opt/monitor/geo-content:/opt/monitor/geo-content/engine
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/home/user/geo-editorial/venv/bin/python -B -m creation.studio
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=900
+KillMode=mixed
+MemoryMax=3000M
+TasksMax=1024
+UMask=0077
+[Install]
+WantedBy=multi-user.target

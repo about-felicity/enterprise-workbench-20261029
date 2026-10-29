@@ -1,0 +1,7 @@
+{
+  "file": "/home/user/redroid-doubao/backups/hpe14-20261006/android13-data.tar",
+  "bytes": 1722265600,
+  "sha256": "041ac3b22fe60629fb91b46659d97ff2754c04bed04fa605332d47e9e73a082d",
+  "includes_android_login_volume": true,
+  "consistent_container_stopped_backup": true
+}

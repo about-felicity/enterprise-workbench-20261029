@@ -1,0 +1,19 @@
+{
+  "geo_control_bridge_soak": {
+    "tests": 28,
+    "windows": "passed",
+    "linux": "passed",
+    "includes_exit_snapshot_race_regression": true
+  },
+  "native_worker": {
+    "tests": 52,
+    "linux": "passed",
+    "platform_note": "Native worker runs on Linux; full native test result is for Linux."
+  },
+  "reference_repo": {
+    "tests": 3,
+    "result": "passed",
+    "commit": "8789ea281b201b6ec7a9770ddb24f6ac5f800929"
+  },
+  "production_questions_created_for_tests": 0
+}

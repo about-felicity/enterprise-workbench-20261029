@@ -1,0 +1,53 @@
+{
+  "at": 1792138095.8100717,
+  "batch": "geo-panel-deepseek-20261016-094039-dc64b7e1",
+  "before_processed": 31,
+  "planned": 63,
+  "rounds": 3,
+  "interval": 600,
+  "manual_login": "ready",
+  "login": {
+    "status": "ready",
+    "message": "GEO DeepSeek 网页已就绪；没有发送问题",
+    "checked_at": 1792138095.021697,
+    "batch": "geo-panel-deepseek-20261016-094039-dc64b7e1",
+    "revision": 6
+  },
+  "readiness": {
+    "checks": [
+      {
+        "name": "settings",
+        "ok": true,
+        "message": "已保存的问题、轮数与间隔有效"
+      },
+      {
+        "name": "login",
+        "ok": true,
+        "message": "DeepSeek 登录及采集会话有效"
+      },
+      {
+        "name": "results",
+        "ok": true,
+        "message": "历史题目状态明确"
+      },
+      {
+        "name": "delivery",
+        "ok": true,
+        "message": "回传与回执已核对"
+      },
+      {
+        "name": "idle",
+        "ok": true,
+        "message": "采集进程已空闲"
+      }
+    ],
+    "can_start": true,
+    "can_resume": true,
+    "expires_at": 1792138395.021697
+  },
+  "resume": {
+    "ok": true,
+    "message": "正在继续原任务，已完成题目不会重发",
+    "batch": "geo-panel-deepseek-20261016-094039-dc64b7e1"
+  }
+}

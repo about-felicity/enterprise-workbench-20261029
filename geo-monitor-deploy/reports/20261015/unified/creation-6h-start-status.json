@@ -1,0 +1,227 @@
+{
+  "pointer": {
+    "test_id": "creation-soak6h-rosterfix-1792062355",
+    "started_at": 1792062355.8455582,
+    "deadline": 1792083955.8455582,
+    "duration_seconds": 21600,
+    "jobs": [
+      "creation-1792060761-3c2baae0"
+    ],
+    "root": "/opt/monitor/geo-capture/soak/creation-soak6h-rosterfix-1792062355",
+    "service": "geo-creation-soak6h-rosterfix-1792062355.service",
+    "deadline_timer": "geo-creation-soak6h-rosterfix-1792062355-deadline.timer"
+  },
+  "snapshot": {
+    "test_id": "creation-soak6h-rosterfix-1792062355",
+    "status": "running",
+    "at": 1792063199.016747,
+    "started_at": 1792062355.8455582,
+    "deadline": 1792083955.8455582,
+    "elapsed_seconds": 843.1711888313293,
+    "jobs": [
+      {
+        "job_id": "creation-1792060761-3c2baae0",
+        "material_counts": {
+          "geo_observations": 8,
+          "unique_source_urls": 73,
+          "full_articles": 37,
+          "excluded_sources": 36
+        },
+        "material_hashes_verified": true,
+        "approved": [
+          {
+            "id": "2026-10-15/排行类/01",
+            "word_sha256": "82d280d63ac9aeee895d08878189d779d793798ea6a2e58ea2838cb385c805be",
+            "normalized_text_similarity": 1.0,
+            "markdown_characters": 3596,
+            "word_characters": 3596,
+            "independent_review": {
+              "category_fit": true,
+              "structure_fit": true,
+              "innovation_present": true,
+              "product_gate_respected": true,
+              "no_invented_tests": true,
+              "no_unsupported_claims": true,
+              "consumer_article": true
+            }
+          },
+          {
+            "id": "2026-10-15/排行类/02",
+            "word_sha256": "b642cf5c7fbe5b87e45b35d2973e7df4c08dbf7b03da07389efbd462eec398f0",
+            "normalized_text_similarity": 1.0,
+            "markdown_characters": 4152,
+            "word_characters": 4152,
+            "independent_review": {
+              "category_fit": true,
+              "structure_fit": true,
+              "innovation_present": true,
+              "product_gate_respected": true,
+              "no_invented_tests": true,
+              "no_unsupported_claims": true,
+              "consumer_article": true
+            }
+          },
+          {
+            "id": "2026-10-15/排行类/03",
+            "word_sha256": "92d5b49670f5fda2a5c76b858f69697f37cfe0ba717fb25a4c0b5b9da6f59a31",
+            "normalized_text_similarity": 1.0,
+            "markdown_characters": 4535,
+            "word_characters": 4535,
+            "independent_review": {
+              "category_fit": true,
+              "structure_fit": true,
+              "innovation_present": true,
+              "product_gate_respected": true,
+              "no_invented_tests": true,
+              "no_unsupported_claims": true,
+              "consumer_article": true
+            }
+          },
+          {
+            "id": "2026-10-15/排行类/04",
+            "word_sha256": "c5561b6a7261db3e24dc189ea97e340a82071b0272cbde0eca870cd5f4474a49",
+            "normalized_text_similarity": 1.0,
+            "markdown_characters": 3556,
+            "word_characters": 3556,
+            "independent_review": {
+              "category_fit": true,
+              "structure_fit": true,
+              "innovation_present": true,
+              "product_gate_respected": true,
+              "no_invented_tests": true,
+              "no_unsupported_claims": true,
+              "consumer_article": true
+            }
+          },
+          {
+            "id": "2026-10-15/科普类/01",
+            "word_sha256": "4dd08fd3e3d4328b6011372f5e8a9774263f2f7343405646e1dc629bc8b5843b",
+            "normalized_text_similarity": 1.0,
+            "markdown_characters": 3324,
+            "word_characters": 3324,
+            "independent_review": {
+              "category_fit": true,
+              "structure_fit": true,
+              "innovation_present": true,
+              "product_gate_respected": true,
+              "no_invented_tests": true,
+              "no_unsupported_claims": true,
+              "consumer_article": true
+            }
+          },
+          {
+            "id": "2026-10-15/科普类/02",
+            "word_sha256": "77031c52ab1ccc065c5be54be88afd8a712f9e993a518a9cb5f0845a35116421",
+            "normalized_text_similarity": 1.0,
+            "markdown_characters": 2923,
+            "word_characters": 2923,
+            "independent_review": {
+              "category_fit": true,
+              "structure_fit": true,
+              "innovation_present": true,
+              "product_gate_respected": true,
+              "no_invented_tests": true,
+              "no_unsupported_claims": true,
+              "consumer_article": true
+            }
+          },
+          {
+            "id": "2026-10-15/科普类/03",
+            "word_sha256": "cfc4cf5346c5c029d3fb92f37b1c4230fb29a586415365b2c42b6a89e2f98308",
+            "normalized_text_similarity": 1.0,
+            "markdown_characters": 2713,
+            "word_characters": 2713,
+            "independent_review": {
+              "category_fit": true,
+              "structure_fit": true,
+              "innovation_present": true,
+              "product_gate_respected": true,
+              "no_invented_tests": true,
+              "no_unsupported_claims": true,
+              "consumer_article": true
+            }
+          },
+          {
+            "id": "2026-10-15/科普类/04",
+            "word_sha256": "0818be9bf8137138d852e6c26f97000a664476702515ce077d23417b47ed1120",
+            "normalized_text_similarity": 1.0,
+            "markdown_characters": 2882,
+            "word_characters": 2882,
+            "independent_review": {
+              "category_fit": true,
+              "structure_fit": true,
+              "innovation_present": true,
+              "product_gate_respected": true,
+              "no_invented_tests": true,
+              "no_unsupported_claims": true,
+              "consumer_article": true
+            }
+          },
+          {
+            "id": "2026-10-15/科普类/05",
+            "word_sha256": "c07bef81bf7cd6b0b4960947a65bc5efd3f38b55881d04a57b090179e856cb48",
+            "normalized_text_similarity": 1.0,
+            "markdown_characters": 2719,
+            "word_characters": 2719,
+            "independent_review": {
+              "category_fit": true,
+              "structure_fit": true,
+              "innovation_present": true,
+              "product_gate_respected": true,
+              "no_invented_tests": true,
+              "no_unsupported_claims": true,
+              "consumer_article": true
+            }
+          },
+          {
+            "id": "2026-10-15/科普类/06",
+            "word_sha256": "c8d757e8624a3f9ce61dc49bea79b1b155ae390e7e62b050c2831d553bef7214",
+            "normalized_text_similarity": 1.0,
+            "markdown_characters": 2632,
+            "word_characters": 2632,
+            "independent_review": {
+              "category_fit": true,
+              "structure_fit": true,
+              "innovation_present": true,
+              "product_gate_respected": true,
+              "no_invented_tests": true,
+              "no_unsupported_claims": true,
+              "consumer_article": true
+            }
+          }
+        ],
+        "api_calls": 48,
+        "unknown_calls": 0,
+        "platform_questions_sent": 0,
+        "control": {
+          "paused": false,
+          "revision": 7,
+          "resumed_epoch": 1792062324.08828
+        },
+        "worker": {
+          "at": 1792063197.6943665,
+          "result": {
+            "status": "idle",
+            "date": "2026-10-15",
+            "failed_tickets": 0,
+            "historical_failed_tickets": 0
+          }
+        },
+        "day": {
+          "date": "2026-10-15",
+          "input_sha256": "e4e27c6c6a4cf865c2060954f05c037d46bd28c450aa0f35f1b14f813dfab724",
+          "media_articles": 37,
+          "max_per_category": 10,
+          "status": "complete",
+          "categories": 2,
+          "planned_articles": 10,
+          "accepted_articles": 10
+        },
+        "approved_in_window": [
+          "2026-10-15/排行类/04"
+        ]
+      }
+    ],
+    "anomalies": []
+  }
+}

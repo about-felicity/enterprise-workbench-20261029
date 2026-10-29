@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+worker-venv/
+linux-tools/
+hpe14-acceptance/
+hpe14-export/
+soak24h/
+soak1h/
+soak-smoke/
+backups/
+*.apk
+*.tar
+*.tar.gz
+*.bin

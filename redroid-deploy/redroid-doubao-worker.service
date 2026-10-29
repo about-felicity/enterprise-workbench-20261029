@@ -1,0 +1,27 @@
+[Unit]
+Description=Doubao headless Android task worker
+After=docker.service network-online.target
+Wants=network-online.target
+Requires=docker.service
+StartLimitIntervalSec=1800
+StartLimitBurst=3
+
+[Service]
+Type=notify
+NotifyAccess=main
+WatchdogSec=120
+TimeoutStartSec=30
+User=root
+WorkingDirectory=/home/user/redroid-doubao
+ExecStart=/home/user/redroid-doubao/worker-venv/bin/python -u /home/user/redroid-doubao/unattended_worker.py run
+Restart=on-failure
+RestartSec=20
+RestartPreventExitStatus=2
+UMask=0077
+Environment=PYTHONUNBUFFERED=1
+CPUQuota=100%
+MemoryMax=512M
+TimeoutStopSec=20
+
+[Install]
+WantedBy=multi-user.target

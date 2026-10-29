@@ -1,0 +1,109 @@
+{
+  "version": "candidate-b2-repair-entry-v2-20261023",
+  "at": "2026-10-23T11:32:13.749119+08:00",
+  "candidate_sha_manifest": {
+    "creation/runtime.py": {
+      "sha256": "abba3c1084e0953740a00916c03987efab9d71e1d60afc7aee0a637772cbfb8d",
+      "baseline_sha256": "abba3c1084e0953740a00916c03987efab9d71e1d60afc7aee0a637772cbfb8d",
+      "change": "unchanged"
+    },
+    "geo_source_cards/consumer_prompts.py": {
+      "sha256": "d4f906ade8e9850ed7c7b5e4da388d25159867b00a15b7541904debd1871d2b0",
+      "baseline_sha256": "d4f906ade8e9850ed7c7b5e4da388d25159867b00a15b7541904debd1871d2b0",
+      "change": "unchanged"
+    },
+    "geo_source_cards/daily_editorial.py": {
+      "sha256": "c98993370318ea24f0fdf2d72e7f62f64148503bd13570f43f5fbe7548d12c75",
+      "baseline_sha256": "c98993370318ea24f0fdf2d72e7f62f64148503bd13570f43f5fbe7548d12c75",
+      "change": "unchanged"
+    },
+    "geo_source_cards/repair_router.py": {
+      "sha256": "9cda2d0f1bdc9fb42881e16a48637efa74c4de08d9e0459914c5f5eb78bc3799",
+      "baseline_sha256": "1b2bdde41f9ad5ac9b6e1b9998c66172be19a18c71c35bba4afa95f33f043c0c",
+      "change": "modified"
+    },
+    "geo_source_cards/review_arbitration.py": {
+      "sha256": "03aed7119d9d8cac26937e620c3c6710656b85dcddd875c517ec870aea6cdf7e",
+      "baseline_sha256": "03aed7119d9d8cac26937e620c3c6710656b85dcddd875c517ec870aea6cdf7e",
+      "change": "unchanged"
+    },
+    "geo_source_cards/review_inputs.py": {
+      "sha256": "c8ff98708204ef2ce176c6dd2eeb7c9702e4421e5ef583c05895f612ca80a5ec",
+      "baseline_sha256": "c8ff98708204ef2ce176c6dd2eeb7c9702e4421e5ef583c05895f612ca80a5ec",
+      "change": "unchanged"
+    },
+    "geo_source_cards/review_quality.py": {
+      "sha256": "5da64b2cd498a58c3dffc83eb89da1d39d0629f8c420317dfe190728815d8dcf",
+      "baseline_sha256": "5da64b2cd498a58c3dffc83eb89da1d39d0629f8c420317dfe190728815d8dcf",
+      "change": "unchanged"
+    },
+    "geo_source_cards/section_writer.py": {
+      "sha256": "c96957d1b2c6e82487841f487ac079df0b7c68fbbc6ac45f43debe189599d22c",
+      "baseline_sha256": "c96957d1b2c6e82487841f487ac079df0b7c68fbbc6ac45f43debe189599d22c",
+      "change": "unchanged"
+    },
+    "geo_source_cards/structure_analyzer.py": {
+      "sha256": "f4f213e49d18bc7f99855e1cc545779d3fa42db61c04043d569ee8605915eede",
+      "baseline_sha256": "f4f213e49d18bc7f99855e1cc545779d3fa42db61c04043d569ee8605915eede",
+      "change": "unchanged"
+    },
+    "tests/test_arbitration_batches.py": {
+      "sha256": "6f0835d15c3b695f9f236e2650a00768b655cd72ef1935b8d3963c9f8dd61185",
+      "baseline_sha256": "6f0835d15c3b695f9f236e2650a00768b655cd72ef1935b8d3963c9f8dd61185",
+      "change": "unchanged"
+    },
+    "tests/test_b1_b2_offline.py": {
+      "sha256": "be144ebe82a5e10dbda1b229a7da2851e5ecca6e06a3f9992e7cced1bc561267",
+      "baseline_sha256": "be144ebe82a5e10dbda1b229a7da2851e5ecca6e06a3f9992e7cced1bc561267",
+      "change": "unchanged"
+    },
+    "tests/test_b2_repair_entry.py": {
+      "sha256": "51308666531d8215f0ccb4b70664b08aee4ce5d5bf783b582b901c82916e99fd",
+      "baseline_sha256": null,
+      "change": "added"
+    },
+    "tests/test_section_budget_revision.py": {
+      "sha256": "a3a475c6dae2915772b5b24d968d9d0ac0c351e594c4e9b7e4c3e8edf81a7b7c",
+      "baseline_sha256": "a3a475c6dae2915772b5b24d968d9d0ac0c351e594c4e9b7e4c3e8edf81a7b7c",
+      "change": "unchanged"
+    },
+    "tests/test_three_agent_quality.py": {
+      "sha256": "7c4bb8ece75ce4a68aa77213a5403d91337eba1eac8d6cd62aa49a99caeee83e",
+      "baseline_sha256": "7c4bb8ece75ce4a68aa77213a5403d91337eba1eac8d6cd62aa49a99caeee83e",
+      "change": "unchanged"
+    }
+  },
+  "protected_local_files_unchanged": 828,
+  "older_protected_files_unchanged": 33,
+  "frozen_candidate_directory_files_unchanged": 438,
+  "runtime_files_changed": 1,
+  "new_test_files": 1,
+  "old_candidate_files_unchanged": 12,
+  "tracked_git_status_unchanged": true,
+  "linux_tests": 420,
+  "linux_failures": 0,
+  "linux_errors": 0,
+  "linux_skips": 0,
+  "test_groups": {
+    "special": 24,
+    "prior": 20,
+    "edges": 10,
+    "engine": 288,
+    "creation": 78
+  },
+  "production_source_and_control_files_checked": 161,
+  "ledger_rows": 2004,
+  "production_sources_originals_budget_controls_and_ledger_unchanged": true,
+  "real_api_calls": 0,
+  "balance_calls": 0,
+  "external_business_service_calls": 0,
+  "new_agent_count": 0,
+  "dependencies_installed": false,
+  "new_billable_tasks": 0,
+  "budget_changed": false,
+  "deployed": false,
+  "real_article_quality_acceptance": "NOT_PERFORMED; original real sample outcome remains 0/2",
+  "validation_scope": "Offline source/version/routing invariants only. Saved real research plus synthetic method paragraphs/Mock judge in probe.",
+  "stage_zip_sha256": "b3d75c41316e7d8c7e3ae21b9a3e06f6e64d4f5a7dda98753b550898228064f9",
+  "diff_sha256": "d4a8fdf644dca316a9f117a57d417b9e496ea528566d5c9e3bbcc75f234cee68"
+}

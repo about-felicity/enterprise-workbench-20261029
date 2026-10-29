@@ -1,0 +1,60 @@
+{
+  "test_id": "question-only-soak12h-rowidfix-1792072084",
+  "at": 1792115612.4696198,
+  "recorder_unit": "geo-question-only-soak12h-rowidfix-1792072084.service",
+  "recorder_state": "inactive",
+  "action": "Stopped only the expired monitoring recorder after manifest-owned batch audit; no capture/creation worker stopped by this script.",
+  "panel_batch_and_service_states_before": {
+    "doubao1": {
+      "batch": "geo-panel-doubao1-20261015-181820-3d82b024",
+      "service_state": "failed"
+    },
+    "doubao2": {
+      "batch": "geo-panel-doubao2-20261015-181821-6fa7c803",
+      "service_state": "failed"
+    },
+    "yuanbao": {
+      "batch": "geo-panel-yuanbao-20261015-181821-d56b0d20",
+      "service_state": "failed"
+    },
+    "deepseek": {
+      "batch": "geo-panel-deepseek-20261016-094039-dc64b7e1",
+      "service_state": "active"
+    },
+    "wenxin_card": {
+      "batch": "geo-panel-wenxin-card-20261015-181822-d5a69c59",
+      "service_state": "inactive"
+    },
+    "baidu_ai": {
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "service_state": "inactive"
+    }
+  },
+  "panel_batch_and_service_states_after": {
+    "doubao1": {
+      "batch": "geo-panel-doubao1-20261015-181820-3d82b024",
+      "service_state": "failed"
+    },
+    "doubao2": {
+      "batch": "geo-panel-doubao2-20261015-181821-6fa7c803",
+      "service_state": "failed"
+    },
+    "yuanbao": {
+      "batch": "geo-panel-yuanbao-20261015-181821-d56b0d20",
+      "service_state": "failed"
+    },
+    "deepseek": {
+      "batch": "geo-panel-deepseek-20261016-094039-dc64b7e1",
+      "service_state": "active"
+    },
+    "wenxin_card": {
+      "batch": "geo-panel-wenxin-card-20261015-181822-d5a69c59",
+      "service_state": "inactive"
+    },
+    "baidu_ai": {
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "service_state": "inactive"
+    }
+  },
+  "raw_recorder_finalization_limit": "Raw recorder stayed draining because its all-lane busy condition included the operator new DeepSeek batch. Raw evidence retained; independent adjudication closes only original batch scope."
+}

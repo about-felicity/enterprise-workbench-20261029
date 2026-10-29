@@ -1,0 +1,204 @@
+{
+  "modules": [
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/journal.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/search_recovery.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/cli.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/reference_design.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/editorial_schema.py",
+      "disposition": "modified",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/article_compiler.py",
+      "disposition": "modified",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/repair_router.py",
+      "disposition": "modified",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/argument_plan.py",
+      "disposition": "modified",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/paragraph_repair.py",
+      "disposition": "modified",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/delta_review.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/known_response.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/api_budget.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/deepseek_api.py",
+      "disposition": "modified",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/article_logic.py",
+      "disposition": "modified",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/product_richness.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/product_identity.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/daily_editorial.py",
+      "disposition": "modified",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/genre_outline.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/genre_length.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/genre_prompts.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/article_allocation.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/article_quality.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/genre_pools.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/source_scope.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/word_export.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/api_worker.py",
+      "disposition": "modified",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/append_repair.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/auto_repair.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/consumer_voice.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/consumer_prompts.py",
+      "disposition": "modified",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/api_prompts.py",
+      "disposition": "modified",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/reference_prompts.py",
+      "disposition": "retained",
+      "reason": "Existing runtime compatibility, evidence, acquisition, scheduling or safety dependency retained"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/staged_editorial.py",
+      "disposition": "modified",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/structure_analyzer.py",
+      "disposition": "added",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/section_writer.py",
+      "disposition": "added",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/quality_checks.py",
+      "disposition": "added",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/review_quality.py",
+      "disposition": "added",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    },
+    {
+      "module": "geo-source-card-collectors/geo_source_cards/review_arbitration.py",
+      "disposition": "added",
+      "reason": "Three-role workflow changes documented in REPORT.md"
+    }
+  ],
+  "deleted_code": [
+    "consumer_prompts.build overwritten initial Writer prompt block and redundant output-format injection",
+    "obsolete minimum unit/product-field count blocking branches; source/identity validation retained"
+  ],
+  "compatibility_retained": [
+    "append_repair",
+    "delta_review",
+    "known_response"
+  ],
+  "whole_modules_deleted": []
+}
