@@ -1,0 +1,11 @@
+{
+  "ticket": "6d006a094c390080dd0bf67c",
+  "state": "failed",
+  "client": "e80b6d80455851a92c808620",
+  "execution": {
+    "run_id": "4a3b427ed88d72ed8558bf82",
+    "generation": 1
+  },
+  "error_code": "invalid_stage_schema",
+  "detail": "章节正文与产品身份不一致，不能靠改标题修复：S2 / 道和小绿瓶防脱洗发水"
+}

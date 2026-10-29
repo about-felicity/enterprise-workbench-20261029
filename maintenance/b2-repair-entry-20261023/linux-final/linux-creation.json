@@ -1,0 +1,13 @@
+{
+  "suite": "creation",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "tests": 78,
+  "failures": [],
+  "errors": [],
+  "skips": [],
+  "blocked_network_attempts": 0,
+  "real_api_calls": 0,
+  "balance_calls": 0,
+  "external_business_service_calls": 0
+}

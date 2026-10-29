@@ -1,0 +1,35 @@
+{
+  "id": "3dce6c071e691779b8ee12eb",
+  "stage": "review",
+  "location": "days/2026-10-21/diagnostic/测评类/02/review",
+  "inputs": {
+    "task.md": "ad77946a5f74d95740862c1225b0b895b8e1e985f2af28e2dc7a05048872d769",
+    "draft.md": "14fe677454c4de9333ebb7b59499f9ce98da9921c5518f5f616b22ed9156ba94",
+    "knowledge.json": "0ea4522952f4a8ebb090f75eb3bf83176e6685e09662106886a711a1f5de292f",
+    "product.json": "4c7ecaec7c55fdb06708dc09dd2684362e34b4e0de1e478c073b5d470056afab",
+    "category.json": "eed39aeab8fcd8830de29fdf75187b0afa902008beddbe8d2119b711e8316cd9",
+    "writer_done.json": "947a4266b34f445265fa28886fe93e026579e2d88d550b8bd81c56c08566f404"
+  },
+  "outputs": [
+    "result.json"
+  ],
+  "meta": {
+    "date": "2026-10-21",
+    "category": "测评类",
+    "number": 2,
+    "revision": 1,
+    "compiled_repair_round": 2,
+    "consumer_rewrite": true,
+    "diagnostic_only": true,
+    "acceptance_version": "complete-saved-draft-independent-diagnostic"
+  },
+  "state": "needs_attention",
+  "created_at": "2026-10-22T18:11:24.069582+08:00",
+  "client": "e80b6d80455851a92c808620",
+  "claimed_at": "2026-10-22T18:11:24.084483+08:00",
+  "execution": {
+    "run_id": "cbf30a2a5c4e055440271779",
+    "generation": 1
+  },
+  "error": "API generation rejected: logic_output_incomplete"
+}

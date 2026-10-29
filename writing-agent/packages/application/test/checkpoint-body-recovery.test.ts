@@ -1,0 +1,574 @@
+import assert from "node:assert/strict";
+import { mkdtempSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { it } from "node:test";
+import { ModelProviderBase, type ModelRequest, type ProviderStreamEvent } from "../../runtime/llm/src/index.js";
+import { openWorkspaceStorage } from "../../storage/src/index.js";
+import { WritingApplicationService } from "../src/index.js";
+import { pendingStageCheckpoint } from "../src/workflow-tools.js";
+import { collaborationState, publicStageFixtureEvents } from "./collaboration-fixture.js";
+import { withCheckpointIntent, withIntentFixture } from "./intent-fixture.js";
+import { createApplicationBridge } from '../../client-bridge/src/application-bridge.js';
+
+class RecoveryProvider extends ModelProviderBase {
+  readonly requests: ModelRequest[] = [];
+  constructor() {
+    super("checkpoint-recovery", "1.0.0", {
+      protocol: "mock",
+      tools: "supported",
+      streaming: "supported",
+      usage: "unknown",
+    });
+  }
+
+  protected async *providerStream(request: ModelRequest): AsyncIterable<ProviderStreamEvent> {
+    this.requests.push(structuredClone(request));
+    const state = collaborationState(request);
+    if (state === null) {
+      yield { type: "text_delta", delta: "继续当前流程。" };
+      yield { type: "completed", finishReason: "stop" };
+      return;
+    }
+    const alreadyReady = request.messages.some((message) =>
+      message.role === "tool" && message.name === "assess_writing_readiness" &&
+      JSON.parse(message.content).ok === true,
+    );
+    let name: string;
+    let args: unknown;
+    if (state.actor === "director") {
+      const readIds = request.messages.flatMap((message) =>
+        message.role === "tool" && message.name === "read_artifact_version"
+          ? [JSON.parse(message.content).result?.versionId]
+          : [],
+      );
+      const unread = !state.ready
+        ? state.unreadArtifactVersionIds.find((id) => !readIds.includes(id))
+        : undefined;
+      if (unread !== undefined) {
+        yield {
+          type: "tool_call_delta",
+          index: 0,
+          id: `read-${request.requestId}`,
+          name: "read_artifact_version",
+          argumentsDelta: JSON.stringify({ versionId: unread }),
+        };
+        yield { type: "completed", finishReason: "tool_calls" };
+        return;
+      }
+      if (!state.ready && !alreadyReady) {
+        name = "assess_writing_readiness";
+        args = { status: "ready", reason: "输入完整", questions: [] };
+      } else {
+        name = "director_decide";
+        args = {
+          action: state.nextStage === null ? "finish" : "dispatch",
+          stage: state.nextStage,
+          reason: "按当前已确认版本继续。",
+          questions: [],
+        };
+      }
+    } else if (state.stage === "fact_check") {
+      name = "submit_fact_check";
+      args = { claims: [], noFactualClaimsReason: "没有外部事实主张。" };
+    } else {
+      name = "submit_writing_stage";
+      args = {
+        stage: state.stage,
+        content: state.stage === "research"
+          ? '{"claims":[],"notes":"无外部事实"}'
+          : state.stage?.startsWith("review_")
+            ? `${state.stage} 审校意见`
+            : `# 当前稿件\n\n${state.stage} 正文。`,
+      };
+    }
+    const publicEvents = publicStageFixtureEvents(request, name, args);
+    if (publicEvents !== null) {
+      yield* publicEvents;
+      return;
+    }
+    yield {
+      type: "tool_call_delta",
+      index: 0,
+      id: `${name}-${request.requestId}`,
+      name,
+      argumentsDelta: JSON.stringify(args),
+    };
+    yield { type: "completed", finishReason: "tool_calls" };
+  }
+}
+
+function setup() {
+  const workspacePath = mkdtempSync(join(tmpdir(), "checkpoint-body-recovery-"));
+  const storage = openWorkspaceStorage({ workspacePath });
+  const provider = new RecoveryProvider();
+  const app = new WritingApplicationService({ storage, provider: withIntentFixture(provider) });
+  const actor = { kind: "user", id: "u" } as const;
+  app.createProject({ operationId: "project", projectId: "p", name: "test", mode: "deep", actor });
+  const brief = app.saveWritingBrief({
+    operationId: "brief",
+    projectId: "p",
+    expectedProjectRevision: storage.inspectProject("p")!.revision,
+    baseVersionId: null,
+    actor,
+    brief: {
+      schemaVersion: 1,
+      topic: "当前稿件",
+      genre: "narrative_observation",
+      audience: "读者",
+      lengthTarget: { targetCharacters: 800 },
+      materialIds: [],
+      constraints: [],
+      interactionMode: "co_creation",
+      authorAuthorization: {
+        voice: "克制",
+        styleReference: null,
+        styleDecision: "user_confirmed",
+        directionDecision: "user_confirmed",
+        firsthandMaterialIds: [],
+      },
+      platform: null,
+      publicationGoal: "not_applicable",
+      confirmationStatus: "confirmed",
+    },
+  });
+  assert.equal(brief.ok, true);
+  const input = {
+    projectId: "p",
+    expectedProjectRevision: storage.inspectProject("p")!.revision,
+    expectedBriefVersionId: storage.inspectProject("p")!.currentBriefVersionId!,
+    model: "mock",
+    parameters: {},
+    budget: { maxModelRequests: 80, maxToolCalls: 100, maxRetriesPerRequest: 0, maxMajorRevisions: 1 },
+  };
+  return {
+    storage,
+    app,
+    provider,
+    input,
+    close() {
+      storage.close();
+      rmSync(workspacePath, { recursive: true, force: true });
+    },
+  };
+}
+
+async function approveCurrentCheckpoint(f: ReturnType<typeof setup>, runId: string, operationId: string) {
+  return f.app.resumeDraft(withCheckpointIntent(f.storage, {
+    ...f.input,
+    runId,
+    operationId,
+    decision: "resume",
+    userInstruction: "确认以当前保存版本继续",
+    expectedProjectRevision: f.storage.inspectProject("p")!.revision,
+  })).result;
+}
+
+it('explicit approval bypasses semantic classification, persists across restart and is consumed only once', async () => {
+  const f = setup();
+  try {
+    const first = await f.app.runDraft(f.input);
+    const count = f.provider.requests.length;
+    const approval = f.app.getCheckpointApproval('p', first.runId)!;
+    await f.app.approveStageCheckpoint({ projectId: 'p', runId: first.runId, operationId: 'explicit-ok', approval });
+    assert.equal(f.provider.requests.length, count, 'recording an explicit click must make zero model requests');
+    const receiptRun = f.storage.getRun('checkpoint-approval:explicit-ok')!;
+    assert.equal(receiptRun.status, 'completed');
+    assert.equal(receiptRun.usage.modelRequests, 0);
+    const receipt = JSON.parse(f.storage.listArtifactVersions('p', 'report', `author-intent:${receiptRun.id}`)[0]!.content);
+    assert.equal(receipt.intent, 'approve_checkpoint');
+    assert.equal(receipt.decisionSource, 'explicit_checkpoint_button');
+    const restarted = new WritingApplicationService({ storage: f.storage, provider: f.provider });
+    assert.equal(restarted.continuePendingHandoffs(f.input).length, 1);
+    for (let n = 0; n < 200 && f.storage.getRun(first.runId)?.status === 'running'; n++) await new Promise(r => setTimeout(r, 5));
+    assert.equal(f.storage.listRunEvents(first.runId).findLast(e => e.type === 'run.waiting_user')?.payload.stage, 'draft');
+    assert.equal(restarted.continuePendingHandoffs(f.input).length, 0);
+    await restarted.approveStageCheckpoint({ projectId: 'p', runId: first.runId, operationId: 'explicit-ok', approval });
+    assert.equal(restarted.continuePendingHandoffs(f.input).length, 0, 'duplicate click does not approve the new draft');
+    await assert.rejects(restarted.approveStageCheckpoint({ projectId: 'p', runId: first.runId, operationId: 'old-card', approval }), /已变化/);
+  } finally { f.close(); }
+});
+
+it('rejects explicit approval when the displayed body changed, without creating a receipt', async () => {
+  const f = setup();
+  try {
+    const first = await f.app.runDraft(f.input);
+    await approveCurrentCheckpoint(f, first.runId, 'outline');
+    const approval = f.app.getCheckpointApproval('p', first.runId)!;
+    assert.ok(approval.bodyVersionId);
+    f.app.saveBody({ projectId: 'p', operationId: 'edit', expectedProjectRevision: f.storage.inspectProject('p')!.revision,
+      baseBodyVersionId: approval.bodyVersionId, content: '# 改过的稿件\n\n不是刚才显示的版本。', reason: 'edit', actor: { kind: 'user', id: 'u' } });
+    await assert.rejects(f.app.approveStageCheckpoint({ projectId: 'p', runId: first.runId, operationId: 'stale', approval }), /已变化/);
+    assert.equal(f.storage.getRun('checkpoint-approval:stale'), null);
+  } finally { f.close(); }
+});
+
+for (const concurrent of [false, true]) it(`deduplicates one checkpoint across different operation IDs (${concurrent ? 'concurrent' : 'restart'})`, async () => {
+  const f = setup();
+  try {
+    const first = await f.app.runDraft(f.input);
+    const approval = f.app.getCheckpointApproval('p', first.runId)!;
+    const firstClick = f.app.approveStageCheckpoint({ projectId: 'p', runId: first.runId, operationId: 'click-a', approval });
+    if (!concurrent) await firstClick;
+    const restarted = new WritingApplicationService({ storage: f.storage, provider: f.provider });
+    await Promise.all([firstClick, restarted.approveStageCheckpoint({ projectId: 'p', runId: first.runId, operationId: 'click-b', approval })]);
+    const confirmations = f.storage.listRuns('p').filter(run => run.id.startsWith('checkpoint-approval:'));
+    assert.equal(confirmations.length, 1, 'one displayed result must have only one receipt/outbox run');
+    assert.equal(f.storage.listArtifactVersions('p', 'report', `author-turn:${confirmations[0]!.id}`).length, 1);
+    assert.equal(restarted.continuePendingHandoffs(f.input).length, 1);
+    for (let n = 0; n < 200 && f.storage.getRun(first.runId)?.status === 'running'; n++) await new Promise(r => setTimeout(r, 5));
+    assert.equal(f.storage.listRunEvents(first.runId).findLast(e => e.type === 'run.waiting_user')?.payload.stage, 'draft');
+    assert.equal(restarted.continuePendingHandoffs(f.input).length, 0);
+    assert.equal(f.storage.listRuns('p').some(run =>
+      f.storage.listArtifactVersions('p', 'report', `author-turn:${run.id}`).some(source =>
+        f.storage.listArtifactVersions('p', 'report', `handoff-failure:${source.id}`).length > 0)), false);
+    await assert.rejects(restarted.approveStageCheckpoint({ projectId: 'p', runId: first.runId, operationId: 'old-click', approval }), /已变化/);
+  } finally { f.close(); }
+});
+
+for (const crashPoint of ['outbox', 'finish'] as const) it(`recovers an interrupted approval at ${crashPoint} without duplicating its durable decision`, async t => {
+  const f = setup();
+  try {
+    const first = await f.app.runDraft(f.input);
+    const approval = f.app.getCheckpointApproval('p', first.runId)!;
+    const commit = f.storage.commitArtifactVersion.bind(f.storage);
+    const finish = f.storage.finishRun.bind(f.storage);
+    if (crashPoint === 'outbox') t.mock.method(f.storage, 'commitArtifactVersion', (input: Parameters<typeof commit>[0]) => {
+      if (input.logicalKey === 'author-turn:checkpoint-approval:before-crash') throw new Error('PROCESS_CRASH');
+      return commit(input);
+    });
+    else t.mock.method(f.storage, 'finishRun', (input: Parameters<typeof finish>[0]) => {
+      if (input.runId === 'checkpoint-approval:before-crash') throw new Error('PROCESS_CRASH');
+      return finish(input);
+    });
+    await assert.rejects(f.app.approveStageCheckpoint({ projectId: 'p', runId: first.runId, operationId: 'before-crash', approval }), /PROCESS_CRASH/);
+    t.mock.restoreAll();
+    f.storage.recoverProjectRuns('p');
+    const restarted = new WritingApplicationService({ storage: f.storage, provider: f.provider });
+    await restarted.approveStageCheckpoint({ projectId: 'p', runId: first.runId, operationId: 'after-crash', approval });
+    assert.equal(f.storage.listRuns('p').filter(run => run.id.startsWith('checkpoint-approval:')).length, 1);
+    assert.equal(f.storage.getRun('checkpoint-approval:before-crash')!.status, 'completed');
+    assert.equal(f.storage.listArtifactVersions('p', 'report', 'author-intent:checkpoint-approval:before-crash').length, 1);
+    assert.equal(f.storage.listArtifactVersions('p', 'report', 'author-turn:checkpoint-approval:before-crash').length, 1);
+    assert.equal(restarted.continuePendingHandoffs(f.input).length, 1);
+    for (let n = 0; n < 200 && f.storage.getRun(first.runId)?.status === 'running'; n++) await new Promise(r => setTimeout(r, 5));
+    assert.equal(restarted.continuePendingHandoffs(f.input).length, 0);
+  } finally { f.close(); }
+});
+
+it('does not reuse an interrupted operation for a changed brief', async t => {
+  const f = setup();
+  try {
+    const first = await f.app.runDraft(f.input);
+    const approval = f.app.getCheckpointApproval('p', first.runId)!;
+    const commit = f.storage.commitArtifactVersion.bind(f.storage);
+    t.mock.method(f.storage, 'commitArtifactVersion', (input: Parameters<typeof commit>[0]) => {
+      if (input.logicalKey.startsWith('author-turn:checkpoint-approval:')) throw new Error('PROCESS_CRASH');
+      return commit(input);
+    });
+    await assert.rejects(f.app.approveStageCheckpoint({ projectId: 'p', runId: first.runId, operationId: 'reused', approval }), /PROCESS_CRASH/);
+    t.mock.restoreAll();
+    f.storage.recoverProjectRuns('p');
+    const project = f.storage.inspectProject('p')!;
+    const brief = f.storage.getWritingBriefVersion(project.currentBriefVersionId!)!.brief;
+    assert.equal(f.app.saveWritingBrief({ projectId: 'p', operationId: 'new-brief', expectedProjectRevision: project.revision,
+      baseVersionId: project.currentBriefVersionId, actor: { kind: 'user', id: 'u' }, brief: { ...brief, constraints: ['新的要求'] } }).ok, true);
+    const updated = f.app.getCheckpointApproval('p', first.runId)!;
+    assert.notEqual(updated.briefVersionId, approval.briefVersionId);
+    await assert.rejects(f.app.approveStageCheckpoint({ projectId: 'p', runId: first.runId, operationId: 'reused', approval: updated }),
+      error => (error as { code?: string }).code === 'IDEMPOTENCY_CONFLICT');
+  } finally { f.close(); }
+});
+
+it('recovers legacy misclassified approval at central revision through a bound UI action, without disabling the rework gate', async () => {
+  const f = setup();
+  let bridge: ReturnType<typeof createApplicationBridge> | undefined;
+  try {
+    const first = await f.app.runDraft(f.input);
+    for (let n = 0; n < 5; n++) await approveCurrentCheckpoint(f, first.runId, `step-${n}`);
+    assert.equal(f.storage.listRunEvents(first.runId).findLast(e => e.type === 'run.waiting_user')?.payload.stage, 'central_revision');
+    await f.app.resumeDraft(withCheckpointIntent(f.storage, { ...f.input, runId: first.runId, operationId: 'legacy-wrong-intent',
+      decision: 'resume', userInstruction: '提纲改成对比结构', expectedProjectRevision: f.storage.inspectProject('p')!.revision })).result;
+    assert.equal(f.storage.getRun(first.runId)?.stopReason, 'TOOL_FAILURE_LOOP');
+    assert.equal(f.storage.listRunEvents(first.runId).findLast(e => e.type === 'run.waiting_user')?.payload.validationCode, 'CHECKPOINT_REWORK_REQUIRED');
+    bridge = createApplicationBridge({ service: f.app, workspaceId: 'recovery', initialProjectId: 'p',
+      model: { model: 'mock', parameters: {}, providerLabel: 'mock', credentialReference: 'test', budget: f.input.budget } });
+    const recovery = bridge.getSnapshot().recoverableRuns.find(r => r.runId === first.runId)!;
+    assert.ok(recovery.checkpointApproval, 'a legacy blocked confirmation must offer an explicit decision, not a blind retry');
+    await bridge.resumeRun(first.runId, 'resume', { operationId: 'corrected-approval', checkpointApproval: recovery.checkpointApproval });
+    for (let n = 0; n < 200 && f.storage.getRun(first.runId)?.status === 'running'; n++) await new Promise(r => setTimeout(r, 5));
+    assert.equal(f.storage.getRun(first.runId)?.stopReason, 'CO_CREATION_CHECKPOINT');
+    assert.equal(f.storage.listRunEvents(first.runId).findLast(e => e.type === 'run.waiting_user')?.payload.stage, 'language_review');
+    assert.equal(f.storage.listArtifactVersions('p', 'report', `workflow:${first.runId}:fact_check`).length, 0, 'new polished body still requires approval');
+  } finally { bridge?.dispose(); f.close(); }
+});
+
+for (const checkpointStage of ['outline', 'draft']) it(`classifies the new reply against the saved ${checkpointStage} instead of replaying handled objections`, async () => {
+  const f = setup();
+  try {
+    const first = await f.app.runDraft({ ...f.input, userInstruction: '旧意见：反复提及整理稿，请改好。' });
+    if (checkpointStage === 'draft') await approveCurrentCheckpoint(f, first.runId, 'intent-outline');
+    const turn = f.app.startAuthorTurn({ projectId: 'p', sessionId: first.sessionId, model: 'mock', parameters: {}, userInstruction: '认可；' });
+    await turn.result;
+    const request = f.storage.listRequestSnapshots(turn.runId)[0]!.request;
+    const context = JSON.parse(request.messages.find(m => m.role === 'user')!.content);
+    assert.equal(context.currentUserMessage, '认可；');
+    assert.ok(context.context.savedResult.includes(`${checkpointStage} 正文`));
+    assert.equal(JSON.stringify(context.context).includes('旧意见：'), false);
+    assert.match(context.context.interpretationRule, /已经处理/);
+  } finally { f.close(); }
+});
+
+it("rebinds a manually saved draft after explicit confirmation and reviews that exact version", async () => {
+  const f = setup();
+  try {
+    const first = await f.app.runDraft(f.input);
+    const outlineResult = await approveCurrentCheckpoint(f, first.runId, "approve-outline");
+    assert.equal(f.storage.listRunEvents(first.runId).findLast((event) => event.type === "run.waiting_user")?.payload.stage, "draft", JSON.stringify({ outlineResult, run: f.storage.getRun(first.runId), tail: f.storage.listRunEvents(first.runId).slice(-5) }));
+
+    const beforeEdit = f.storage.inspectProject("p")!;
+    const edited = f.app.saveBody({
+      operationId: "manual-draft-edit",
+      projectId: "p",
+      expectedProjectRevision: beforeEdit.revision,
+      baseBodyVersionId: beforeEdit.latestBodyVersionId!,
+      content: "# 用户当前稿\n\n保留这段手动修改。",
+      reason: "author edit at checkpoint",
+      actor: { kind: "user", id: "u" },
+    });
+    assert.equal(edited.ok, true);
+    if (!edited.ok) return;
+
+    const resumed = await approveCurrentCheckpoint(f, first.runId, "approve-current-draft");
+    assert.equal(resumed.ok, false, JSON.stringify(resumed));
+    assert.equal(f.storage.getRun(first.runId)?.stopReason, "CO_CREATION_CHECKPOINT");
+    assert.equal(f.storage.listRunEvents(first.runId).findLast((event) => event.type === "run.waiting_user")?.payload.stage, "review_editor");
+    assert.equal(f.storage.inspectProject("p")!.latestBodyVersionId, edited.result.versionId);
+    const reviewMarker = f.storage.listArtifactVersions("p", "report", `workflow:${first.runId}:review_editor`).at(-1)!;
+    const review = f.storage.getArtifactVersion(JSON.parse(reviewMarker.content).artifactVersionId)!;
+    assert.equal(JSON.parse(review.content).bodyVersionId, edited.result.versionId);
+    assert.equal(f.storage.listRunEvents(first.runId).some((event) =>
+      ["WRITING_INPUT_REQUIRED", "REVIEW_DRAFT_CHANGED"].includes((event.payload.result as any)?.error?.code)), false);
+  } finally {
+    f.close();
+  }
+});
+
+it("accepts carried reviews only through their persisted source-run envelope", async () => {
+  const f = setup();
+  try {
+    const first = await f.app.runDraft(f.input);
+    let lastResult: unknown;
+    for (let index = 0; index < 4; index += 1) {
+      lastResult = await approveCurrentCheckpoint(f, first.runId, `source-approve-${index}`);
+    }
+    assert.equal(f.storage.listRunEvents(first.runId).findLast((event) => event.type === "run.waiting_user")?.payload.stage, "review_reader", JSON.stringify({ lastResult, run: f.storage.getRun(first.runId), tail: f.storage.listRunEvents(first.runId).slice(-5) }));
+    f.app.cancelDraft({ projectId: "p", runId: first.runId, operationId: "cancel-source", reason: "restart application" });
+
+    const second = await f.app.runDraft({
+      ...f.input,
+      sessionId: f.storage.getRun(first.runId)!.sessionId,
+      expectedProjectRevision: f.storage.inspectProject("p")!.revision,
+      userInstruction: "继续保存的流程",
+    });
+    assert.equal(f.storage.getRun(second.runId)?.stopReason, "CO_CREATION_CHECKPOINT");
+    assert.equal(f.storage.listRunEvents(second.runId).findLast((event) => event.type === "run.waiting_user")?.payload.stage, "review_reader");
+
+    const resumed = await approveCurrentCheckpoint(f, second.runId, "approve-carried-review");
+    assert.equal(resumed.ok, false, JSON.stringify(resumed));
+    assert.equal(f.storage.listRunEvents(second.runId).findLast((event) => event.type === "run.waiting_user")?.payload.stage, "central_revision");
+    assert.equal(f.storage.listRunEvents(second.runId).some((event) =>
+      (event.payload.result as any)?.error?.code === "REVIEW_BINDING_INVALID"), false);
+  } finally {
+    f.close();
+  }
+});
+
+it("invalidates stale reviews after a confirmed manual edit and then advances after the replacement review", async () => {
+  const f = setup();
+  try {
+    const first = await f.app.runDraft(f.input);
+    await approveCurrentCheckpoint(f, first.runId, "review-edit-outline");
+    await approveCurrentCheckpoint(f, first.runId, "review-edit-draft");
+    assert.equal(f.storage.listRunEvents(first.runId).findLast((event) => event.type === "run.waiting_user")?.payload.stage, "review_editor");
+    const staleMarker = f.storage.listArtifactVersions("p", "report", `workflow:${first.runId}:review_editor`).at(-1)!;
+
+    const beforeEdit = f.storage.inspectProject("p")!;
+    const edited = f.app.saveBody({
+      operationId: "manual-edit-after-review",
+      projectId: "p",
+      expectedProjectRevision: beforeEdit.revision,
+      baseBodyVersionId: beforeEdit.latestBodyVersionId!,
+      content: "# 用户审阅稿\n\n这是确认时的当前正文。",
+      reason: "author edit after review",
+      actor: { kind: "user", id: "u" },
+    });
+    assert.equal(edited.ok, true);
+    if (!edited.ok) return;
+
+    await approveCurrentCheckpoint(f, first.runId, "approve-edited-review");
+    assert.equal(f.storage.listRunEvents(first.runId).findLast((event) => event.type === "run.waiting_user")?.payload.stage, "review_editor");
+    const invalidations = f.storage.listArtifactVersions("p", "report", `workflow-invalidated:${first.runId}`)
+      .flatMap((version) => JSON.parse(version.content).markerIds ?? []);
+    assert.ok(invalidations.includes(staleMarker.id));
+    const replacementMarker = f.storage.listArtifactVersions("p", "report", `workflow:${first.runId}:review_editor`).at(-1)!;
+    assert.notEqual(replacementMarker.id, staleMarker.id);
+    const replacement = f.storage.getArtifactVersion(JSON.parse(replacementMarker.content).artifactVersionId)!;
+    assert.equal(JSON.parse(replacement.content).bodyVersionId, edited.result.versionId);
+
+    await approveCurrentCheckpoint(f, first.runId, "approve-replacement-review");
+    assert.equal(f.storage.listRunEvents(first.runId).findLast((event) => event.type === "run.waiting_user")?.payload.stage, "review_publish");
+  } finally {
+    f.close();
+  }
+});
+
+it("carries a revision request as pending work, preserves its exact text, and never advances the stale draft", async () => {
+  const f = setup();
+  try {
+    const first = await f.app.runDraft(f.input);
+    await approveCurrentCheckpoint(f, first.runId, "revise-carry-outline");
+    assert.equal(f.storage.listRunEvents(first.runId).findLast((event) => event.type === "run.waiting_user")?.payload.stage, "draft");
+    const originalBodyId = f.storage.inspectProject("p")!.latestBodyVersionId!;
+    const revisionText = "提纲改成对比结构";
+    await f.app.resumeDraft(withCheckpointIntent(f.storage, {
+      ...f.input,
+      runId: first.runId,
+      operationId: "request-draft-revision",
+      decision: "resume",
+      userInstruction: revisionText,
+      expectedProjectRevision: f.storage.inspectProject("p")!.revision,
+    })).result;
+    f.app.cancelDraft({ projectId: "p", runId: first.runId, operationId: "cancel-revision-source", reason: "restart after revision request" });
+
+    const requestCount = f.provider.requests.length;
+    const second = await f.app.runDraft({
+      ...f.input,
+      sessionId: f.storage.getRun(first.runId)!.sessionId,
+      expectedProjectRevision: f.storage.inspectProject("p")!.revision,
+      userInstruction: "继续未完成的返工",
+    });
+    assert.equal(f.storage.getRun(second.runId)?.stopReason, "CO_CREATION_CHECKPOINT");
+    assert.equal(f.storage.listRunEvents(second.runId).findLast((event) => event.type === "run.waiting_user")?.payload.stage, "draft");
+    assert.equal(f.storage.listArtifactVersions("p", "report", `workflow:${second.runId}:review_editor`).length, 0,
+      "the stale draft must not be treated as approved and sent to review");
+    assert.ok(f.storage.getArtifactVersion(originalBodyId), "the original body version must remain recoverable");
+    const rework = f.storage.listArtifactVersions("p", "report", `workflow-carried-rework:${second.runId}`).at(-1);
+    assert.ok(rework, "the author revision request must be persisted before carried stages are rebuilt");
+    assert.equal(JSON.parse(rework.content).instruction, revisionText);
+    const draftRequest = f.provider.requests.slice(requestCount).find(request => collaborationState(request)?.stage === "draft");
+    assert.ok(draftRequest);
+    assert.match(JSON.stringify(draftRequest.messages), /提纲改成对比结构/u,
+      "the replacement draft must receive the persisted author instruction");
+  } finally {
+    f.close();
+  }
+});
+
+async function rebuildDraftFromCarriedRevision(f: ReturnType<typeof setup>, prefix: string) {
+  const first = await f.app.runDraft(f.input);
+  await approveCurrentCheckpoint(f, first.runId, `${prefix}-outline`);
+  const revisionText = "提纲改成对比结构";
+  await f.app.resumeDraft(withCheckpointIntent(f.storage, {
+    ...f.input,
+    runId: first.runId,
+    operationId: `${prefix}-request-revision`,
+    decision: "resume",
+    userInstruction: revisionText,
+    expectedProjectRevision: f.storage.inspectProject("p")!.revision,
+  })).result;
+  f.app.cancelDraft({ projectId: "p", runId: first.runId, operationId: `${prefix}-cancel-source`, reason: "restart after revision request" });
+  const second = await f.app.runDraft({
+    ...f.input,
+    sessionId: f.storage.getRun(first.runId)!.sessionId,
+    expectedProjectRevision: f.storage.inspectProject("p")!.revision,
+    userInstruction: "继续未完成的返工",
+  });
+  assert.equal(f.storage.listRunEvents(second.runId).findLast((event) => event.type === "run.waiting_user")?.payload.stage, "draft");
+  return { second, revisionText };
+}
+
+it("reuses a rebuilt draft awaiting confirmation instead of executing the carried revision again", async () => {
+  const f = setup();
+  try {
+    const { second, revisionText } = await rebuildDraftFromCarriedRevision(f, "unapproved-rebuild");
+    const rebuiltBodyId = f.storage.inspectProject("p")!.latestBodyVersionId!;
+    const rebuiltMarker = f.storage.listArtifactVersions("p", "report", `workflow:${second.runId}:draft`).at(-1)!;
+    const rebuiltArtifactId = JSON.parse(rebuiltMarker.content).artifactVersionId;
+    f.app.cancelDraft({ projectId: "p", runId: second.runId, operationId: "cancel-unapproved-rebuild", reason: "restart before approval" });
+
+    const requestCount = f.provider.requests.length;
+    const third = await f.app.runDraft({
+      ...f.input,
+      sessionId: f.storage.getRun(second.runId)!.sessionId,
+      expectedProjectRevision: f.storage.inspectProject("p")!.revision,
+      userInstruction: "恢复刚保存的返工稿",
+    });
+    assert.equal(f.storage.listRunEvents(third.runId).findLast((event) => event.type === "run.waiting_user")?.payload.stage, "draft");
+    assert.equal(f.storage.inspectProject("p")!.latestBodyVersionId, rebuiltBodyId);
+    assert.equal(f.provider.requests.slice(requestCount).some(request => collaborationState(request)?.stage === "draft"), false,
+      "a saved replacement needs confirmation, not another draft request");
+    const carriedMarker = f.storage.listArtifactVersions("p", "report", `workflow:${third.runId}:draft`).at(-1)!;
+    assert.equal(JSON.parse(carriedMarker.content).artifactVersionId, rebuiltArtifactId);
+    const carriedRework = f.storage.listArtifactVersions("p", "report", `workflow-carried-rework:${third.runId}`).at(-1)!;
+    assert.equal(JSON.parse(carriedRework.content).instruction, revisionText);
+  } finally {
+    f.close();
+  }
+});
+
+it("reuses an approved rebuilt draft and resumes at its pending review without repeating the revision", async () => {
+  const f = setup();
+  try {
+    const { second } = await rebuildDraftFromCarriedRevision(f, "approved-rebuild");
+    await approveCurrentCheckpoint(f, second.runId, "approve-rebuilt-draft");
+    assert.equal(f.storage.listRunEvents(second.runId).findLast((event) => event.type === "run.waiting_user")?.payload.stage, "review_editor");
+    const rebuiltBodyId = f.storage.inspectProject("p")!.latestBodyVersionId!;
+    const rebuiltMarker = f.storage.listArtifactVersions("p", "report", `workflow:${second.runId}:draft`).at(-1)!;
+    const rebuiltArtifactId = JSON.parse(rebuiltMarker.content).artifactVersionId;
+    f.app.cancelDraft({ projectId: "p", runId: second.runId, operationId: "cancel-approved-rebuild", reason: "restart after approval" });
+
+    const requestCount = f.provider.requests.length;
+    const third = await f.app.runDraft({
+      ...f.input,
+      sessionId: f.storage.getRun(second.runId)!.sessionId,
+      expectedProjectRevision: f.storage.inspectProject("p")!.revision,
+      userInstruction: "恢复已认可的返工稿",
+    });
+    assert.equal(f.storage.listRunEvents(third.runId).findLast((event) => event.type === "run.waiting_user")?.payload.stage, "review_editor");
+    assert.equal(f.storage.inspectProject("p")!.latestBodyVersionId, rebuiltBodyId);
+    assert.equal(f.provider.requests.slice(requestCount).some(request => collaborationState(request)?.stage === "draft"), false);
+    const carriedMarker = f.storage.listArtifactVersions("p", "report", `workflow:${third.runId}:draft`).at(-1)!;
+    assert.equal(JSON.parse(carriedMarker.content).artifactVersionId, rebuiltArtifactId);
+  } finally {
+    f.close();
+  }
+});
+
+for (const decision of ["resume", "retry_unknown"] as const) {
+  it(`legacy resume author-intent recovery is ${decision === "resume" ? "accepted" : "not mistaken for approval"}`, async () => {
+    const f = setup();
+    try {
+      const first = await f.app.runDraft(f.input);
+      const prepared = withCheckpointIntent(f.storage, {
+        ...f.input,
+        runId: first.runId,
+        operationId: `legacy-${decision}`,
+        decision,
+        userInstruction: "确认继续",
+        expectedProjectRevision: f.storage.inspectProject("p")!.revision,
+      });
+      f.storage.resumeRun({
+        projectId: "p",
+        runId: first.runId,
+        operationId: `legacy-resume-${decision}`,
+        decision,
+        ...(prepared.userInstruction === undefined ? {} : { displayInstruction: prepared.userInstruction }),
+      });
+      const checkpoint = pendingStageCheckpoint(f.storage, "p", first.runId);
+      assert.equal(checkpoint === null, decision === "resume");
+    } finally {
+      f.close();
+    }
+  });
+}

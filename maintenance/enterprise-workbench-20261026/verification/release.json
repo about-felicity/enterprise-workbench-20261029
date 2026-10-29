@@ -1,0 +1,16 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/Dashboard.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/Dashboard.tsx",
+      "sha256": "464f6826c78e212dcb81fefc391e407cc612b1027569c506fe682880416e8ae0"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/layout.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/layout.tsx",
+      "sha256": "dac60fc1855bc168895f3d6f05035fd71d57901a10d07cd7a844e3e34cdf3732"
+    }
+  ],
+  "other_containers_unchanged": true,
+  "verified_title": "企业工作台"
+}

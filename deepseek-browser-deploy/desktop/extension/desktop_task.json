@@ -1,0 +1,313 @@
+{
+  "date": "2026-10-19",
+  "questions": [
+    "推荐一款护发精油",
+    "推荐一款护发素",
+    "推荐一款控油蓬松洗发水",
+    "推荐一款二硫化硒洗发水",
+    "推荐一款沐浴精油",
+    "推荐一款眉毛增长液",
+    "推荐一款祛痘精华液",
+    "推荐一款美白面霜",
+    "推荐一款造型喷雾",
+    "推荐一款染发剂",
+    "推荐一款睫毛增长液",
+    "推荐一款防脱洗发水",
+    "推荐一款防脱精华液",
+    "推荐一款面膜",
+    "推荐一款眼霜",
+    "推荐一款卸妆油",
+    "推荐一款爽肤水",
+    "推荐一款洗面奶",
+    "推荐一款身体乳",
+    "推荐一款护手霜",
+    "推荐一款防晒霜"
+  ],
+  "rounds": 3,
+  "schedule": [
+    {
+      "globalIndex": 0,
+      "prompt": "推荐一款爽肤水",
+      "questionIndex": 16,
+      "questionRound": 1
+    },
+    {
+      "globalIndex": 1,
+      "prompt": "推荐一款洗面奶",
+      "questionIndex": 17,
+      "questionRound": 1
+    },
+    {
+      "globalIndex": 2,
+      "prompt": "推荐一款身体乳",
+      "questionIndex": 18,
+      "questionRound": 1
+    },
+    {
+      "globalIndex": 3,
+      "prompt": "推荐一款护手霜",
+      "questionIndex": 19,
+      "questionRound": 1
+    },
+    {
+      "globalIndex": 4,
+      "prompt": "推荐一款防晒霜",
+      "questionIndex": 20,
+      "questionRound": 1
+    },
+    {
+      "globalIndex": 5,
+      "prompt": "推荐一款护发精油",
+      "questionIndex": 0,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 6,
+      "prompt": "推荐一款护发素",
+      "questionIndex": 1,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 7,
+      "prompt": "推荐一款控油蓬松洗发水",
+      "questionIndex": 2,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 8,
+      "prompt": "推荐一款二硫化硒洗发水",
+      "questionIndex": 3,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 9,
+      "prompt": "推荐一款沐浴精油",
+      "questionIndex": 4,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 10,
+      "prompt": "推荐一款眉毛增长液",
+      "questionIndex": 5,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 11,
+      "prompt": "推荐一款祛痘精华液",
+      "questionIndex": 6,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 12,
+      "prompt": "推荐一款美白面霜",
+      "questionIndex": 7,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 13,
+      "prompt": "推荐一款造型喷雾",
+      "questionIndex": 8,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 14,
+      "prompt": "推荐一款染发剂",
+      "questionIndex": 9,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 15,
+      "prompt": "推荐一款睫毛增长液",
+      "questionIndex": 10,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 16,
+      "prompt": "推荐一款防脱洗发水",
+      "questionIndex": 11,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 17,
+      "prompt": "推荐一款防脱精华液",
+      "questionIndex": 12,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 18,
+      "prompt": "推荐一款面膜",
+      "questionIndex": 13,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 19,
+      "prompt": "推荐一款眼霜",
+      "questionIndex": 14,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 20,
+      "prompt": "推荐一款卸妆油",
+      "questionIndex": 15,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 21,
+      "prompt": "推荐一款爽肤水",
+      "questionIndex": 16,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 22,
+      "prompt": "推荐一款洗面奶",
+      "questionIndex": 17,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 23,
+      "prompt": "推荐一款身体乳",
+      "questionIndex": 18,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 24,
+      "prompt": "推荐一款护手霜",
+      "questionIndex": 19,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 25,
+      "prompt": "推荐一款防晒霜",
+      "questionIndex": 20,
+      "questionRound": 2
+    },
+    {
+      "globalIndex": 26,
+      "prompt": "推荐一款护发精油",
+      "questionIndex": 0,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 27,
+      "prompt": "推荐一款护发素",
+      "questionIndex": 1,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 28,
+      "prompt": "推荐一款控油蓬松洗发水",
+      "questionIndex": 2,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 29,
+      "prompt": "推荐一款二硫化硒洗发水",
+      "questionIndex": 3,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 30,
+      "prompt": "推荐一款沐浴精油",
+      "questionIndex": 4,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 31,
+      "prompt": "推荐一款眉毛增长液",
+      "questionIndex": 5,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 32,
+      "prompt": "推荐一款祛痘精华液",
+      "questionIndex": 6,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 33,
+      "prompt": "推荐一款美白面霜",
+      "questionIndex": 7,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 34,
+      "prompt": "推荐一款造型喷雾",
+      "questionIndex": 8,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 35,
+      "prompt": "推荐一款染发剂",
+      "questionIndex": 9,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 36,
+      "prompt": "推荐一款睫毛增长液",
+      "questionIndex": 10,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 37,
+      "prompt": "推荐一款防脱洗发水",
+      "questionIndex": 11,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 38,
+      "prompt": "推荐一款防脱精华液",
+      "questionIndex": 12,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 39,
+      "prompt": "推荐一款面膜",
+      "questionIndex": 13,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 40,
+      "prompt": "推荐一款眼霜",
+      "questionIndex": 14,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 41,
+      "prompt": "推荐一款卸妆油",
+      "questionIndex": 15,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 42,
+      "prompt": "推荐一款爽肤水",
+      "questionIndex": 16,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 43,
+      "prompt": "推荐一款洗面奶",
+      "questionIndex": 17,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 44,
+      "prompt": "推荐一款身体乳",
+      "questionIndex": 18,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 45,
+      "prompt": "推荐一款护手霜",
+      "questionIndex": 19,
+      "questionRound": 3
+    },
+    {
+      "globalIndex": 46,
+      "prompt": "推荐一款防晒霜",
+      "questionIndex": 20,
+      "questionRound": 3
+    }
+  ],
+  "already_processed": 16,
+  "original_batch": "geo-panel-deepseek2-20261019-103338-38eaf48a"
+}

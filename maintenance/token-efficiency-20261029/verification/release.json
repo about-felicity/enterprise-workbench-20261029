@@ -1,0 +1,13 @@
+{
+  "at": 1793238077.2975256,
+  "tests": 45,
+  "restarted_services": [],
+  "new_paid_calls": 0,
+  "files": [
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/rewrite_v2/full_writer.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/rewrite_v2/full_writer.py",
+      "sha256": "4e5fe772d6db041a3d58eacc588bed600bb13713c665d1022f3e455f37f236ff"
+    }
+  ]
+}

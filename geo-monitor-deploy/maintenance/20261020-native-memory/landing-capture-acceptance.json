@@ -1,0 +1,85 @@
+{
+  "checked_at": 1792468433.823116,
+  "batch": "geo-panel-doubao2-20261020-090001-6bcafb90",
+  "local_completed": 75,
+  "postgres_verified": 75,
+  "verified_tail": [
+    {
+      "ordinal": 71,
+      "body_length": 463,
+      "sources": 12,
+      "capture_retries": 0
+    },
+    {
+      "ordinal": 72,
+      "body_length": 535,
+      "sources": 9,
+      "capture_retries": 0
+    },
+    {
+      "ordinal": 73,
+      "body_length": 650,
+      "sources": 11,
+      "capture_retries": 0
+    },
+    {
+      "ordinal": 74,
+      "body_length": 599,
+      "sources": 11,
+      "capture_retries": 0
+    },
+    {
+      "ordinal": 75,
+      "body_length": 486,
+      "sources": 12,
+      "capture_retries": 0
+    }
+  ],
+  "rejected_context_not_in_pg": true,
+  "original_task17_was_not_resent": true,
+  "panel_recovery_labels_served": true,
+  "memory_limit": 4294967296,
+  "memory_swap_limit": 7516192768,
+  "health": {
+    "batch": "geo-panel-doubao2-20261020-090001-6bcafb90",
+    "planned": 105,
+    "prompt_mode": "question_only",
+    "model": "doubao2",
+    "captured": 75,
+    "geo_processed": 75,
+    "delivery_errors": [],
+    "unavailable": 0,
+    "time": 1792468431.9112167,
+    "heartbeat_expires_at": 1792468581.911217,
+    "bridge_pid": 52277,
+    "tasks": {
+      "completed": 75,
+      "pending": 30
+    },
+    "status": "running",
+    "memory": {
+      "app_alive": true,
+      "pid": 2195,
+      "java_alloc_kib": 330919,
+      "java_size_kib": 429223,
+      "java_limit_kib": 524288,
+      "java_fraction": 0.6311779022216797,
+      "native_alloc_kib": 370643,
+      "app_pss_kib": 1662194,
+      "container_bytes": 2353819648,
+      "container_working_bytes": 1890361344,
+      "container_limit_bytes": 4294967296,
+      "container_fraction": 0.44013404846191406,
+      "app_pss_fraction": 0.3962979316711426,
+      "sampled_at": 1792468431.1201105,
+      "pending": "",
+      "high_samples": 0
+    },
+    "progress": {
+      "phase": "preparing",
+      "task_id": "58e172ff-6d8c-5115-bf97-80172a6baf63",
+      "ordinal": 76,
+      "changed_at": 1792468431.9112148
+    }
+  }
+}

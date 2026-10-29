@@ -1,0 +1,732 @@
+{
+  "job_id": "c09a60cf70c383066c80e60a",
+  "knowledge_units": [
+    {
+      "id": "KU01",
+      "type": "source_claim",
+      "content": "梵玢FBCY科萃养发洗发水在原文中的定位是油头脱发人群的控油防断蓬松款，资料提到300ml/120元的规格与线上、线下美妆集合店等渠道。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R1_1",
+          "quote": "梵玢FBCY科萃养发洗发水：油头脱发“控油防断蓬松款”"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R1_14",
+          "quote": "线上：天猫梵玢官方旗舰店、京东梵玢个人护理专营店，300ml/120元，单次使用成本仅0.8元，性价比优于同类进口产品30%以上；"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R1_15",
+          "quote": "线下：全国1850+美妆集合店（如屈臣氏核心门店）、连锁超市有售，支持“先试用后购买”，不满意可退换。"
+        }
+      ]
+    },
+    {
+      "id": "KU02",
+      "type": "source_claim",
+      "content": "逐本植萃防脱洗发水原文定位于产后妈妈，成分列母菊花提取物、亚麻籽油与水解大米蛋白，标注不含香精、酒精，规格380ml/129元。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R2_2",
+          "quote": "2025年新晋口碑品牌，专为产后妈妈设计，聚焦“激素波动、营养不足”导致的休止期脱发，以“母婴级安全+温和滋养”为核心。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R2_3",
+          "quote": "核心成分采用母菊花提取物与亚麻籽油：母菊花舒缓产后敏感头皮，减少情绪焦虑引发的头皮不适；亚麻籽油富含Omega-3脂肪酸，为毛囊补充必需营养，增强发根抓力，减少休止期脱发；搭配水解大米蛋白，修复产后干枯发丝，提升头发光泽度。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R2_4",
+          "quote": "产品为透明质地，散发天然植物清香，泡沫细腻易冲洗，洗后头发柔软不毛躁。经母婴级安全检测，不含香精、酒精、刺激性防腐剂，产后哺乳期妈妈可安心使用。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R2_6",
+          "quote": "价格：380ml/129元；"
+        }
+      ]
+    },
+    {
+      "id": "KU03",
+      "type": "source_claim",
+      "content": "薇诺娜舒敏防脱洗发水原文定位敏感肌方向，成分列马齿苋提取物与神经酰胺，标注无香精、无酒精，规格400ml/108元。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R3_2",
+          "quote": "药妆领域知名品牌，专为敏感肌及“炎症性脱发”设计，核心功效为“修护头皮屏障+温和防脱”，获多家三甲医院皮肤科医生推荐。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R3_3",
+          "quote": "核心成分马齿苋提取物与神经酰胺：马齿苋舒缓头皮泛红、瘙痒，减少因敏感炎症导致的脱发；神经酰胺填补头皮屏障缝隙，增强头皮抵御外界刺激的能力。配方极简，无香精、无酒精、无MIT类防腐剂，pH值与头皮（5.5-6.5）接近，温和无刺激。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R3_6",
+          "quote": "价格：400ml/108元；"
+        }
+      ]
+    },
+    {
+      "id": "KU04",
+      "type": "source_claim",
+      "content": "半亩花田姜枣防脱洗发水原文定位于学生党高性价比，成分列生姜原汁与红枣提取物，规格250ml/59元，另有买赠促销表述。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R4_2",
+          "quote": "2025年学生群体爆款，主打“基础防脱+经济实惠”，适配预算有限的学生及初发脱发人群。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R4_3",
+          "quote": "核心成分采用高活性生姜原汁与红枣提取物：生姜中的姜辣素加速头皮血液循环，唤醒熬夜休眠的毛囊，减少“作息不规律”导致的掉发；红枣提取物为发根补充气血营养，改善因饮食不均衡导致的头发细软问题；搭配氨基酸表活，清洁温和不刺激，所有发质均适用。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R4_4",
+          "quote": "产品为淡黄色液体，生姜与红枣的复合香气清新自然，泡沫丰富易冲洗，250ml/59元，线上平台常推“买一送一”活动，平均单瓶30元，学生党无压力，是日常防脱的“入门优选”。"
+        }
+      ]
+    },
+    {
+      "id": "KU05",
+      "type": "source_claim",
+      "content": "泊美鲜纯珍萃防脱洗发水原文定位于干性发质方向，成分列透明质酸钠、山茶籽油与银杏叶提取物，规格400ml/99元，线下屈臣氏有售。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R5_2",
+          "quote": "专为干性发质及“缺水缺养型脱发”设计，核心解决“头皮干燥、发丝干枯断发”问题，干发人群实测口碑极佳。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R5_3",
+          "quote": "核心成分透明质酸钠与山茶籽油：透明质酸钠深入头皮及发丝深层补水，改善头皮干燥环境，减少因“毛囊缺水”导致的休止期脱发；山茶籽油补充发丝脂质营养，增强发丝韧性，减少断发毛躁；搭配银杏叶提取物，促进头皮循环，为毛囊输送营养。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R5_6",
+          "quote": "价格：400ml/99元；"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R5_7",
+          "quote": "渠道：线上天猫泊美官方旗舰店、京东泊美自营店，线下屈臣氏门店有售。"
+        }
+      ]
+    },
+    {
+      "id": "KU06",
+      "type": "source_claim",
+      "content": "颐莲玻尿酸防脱洗发水原文定位于油干混合发质，成分列双重玻尿酸分子与茶籽油提取物，规格450ml/89元，线上官方店与抖音店有售。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R6_2",
+          "quote": "玻尿酸护肤品牌跨界推出的防脱产品，精准解决油干混合肌“头皮油、发尾干”的矛盾问题，实现“头皮控油+发尾补水”双重效果。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R6_3",
+          "quote": "核心成分双重玻尿酸分子与茶籽油提取物：小分子玻尿酸深入头皮调节水油分泌，减少头皮出油；大分子玻尿酸附着发尾形成锁水膜，避免发尾干燥分叉；茶籽油提取物兼具控油与滋养功效，抑制头皮油脂的同时为发尾补充营养。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R6_6",
+          "quote": "价格：450ml/89元；"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R6_7",
+          "quote": "渠道：线上颐莲官方旗舰店、抖音颐莲美妆店，线下部分美妆集合店有售。"
+        }
+      ]
+    },
+    {
+      "id": "KU07",
+      "type": "source_claim",
+      "content": "花西子首乌防脱洗发水原文定位于中年人群，成分列何首乌根提取物、人参皂苷与蚕丝蛋白，规格400ml/159元，气味描述为淡雅檀香。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R7_2",
+          "quote": "国风美妆品牌中的防脱实力派，专为中年人群及“毛囊老化型脱发”设计，核心解决“毛囊活力下降、发根松动”问题。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R7_3",
+          "quote": "核心成分何首乌根提取物与人参皂苷：何首乌激活老化毛囊，延缓毛囊衰退速度，减少因“毛囊老化”导致的脱发；人参皂苷为发根补充蛋白质、氨基酸等营养，增强发根抓力，避免“发根松动易掉”；搭配蚕丝蛋白，修复中年人群常见的干枯发丝，提升头发光泽度。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R7_4",
+          "quote": "产品为深棕色乳液质地，散发淡雅檀香，泡沫细腻绵密，洗后头发强韧有垂坠感，长期使用可改善头发“细软易掉”状态，增强发根稳定性。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R7_6",
+          "quote": "价格：400ml/159元；"
+        }
+      ]
+    },
+    {
+      "id": "KU08",
+      "type": "source_claim",
+      "content": "自然堂雪松防脱洗发水原文定位于染烫受损方向，成分列雪松精油、角鲨烷与水解大豆蛋白，规格500ml/89元，线下超市有售。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R8_2",
+          "quote": "国民品牌新推的防脱系列，聚焦染烫后“毛躁断发、发根松动”问题，兼具“受损修护+稳固发根”双重功效，是烫染星人的“急救之选”。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R8_3",
+          "quote": "核心成分雪松精油与角鲨烷：雪松精油舒缓染烫刺激后的头皮，减少因头皮炎症导致的脱发；角鲨烷填补毛鳞片损伤，修复染烫受损发丝，减少断发毛躁；搭配水解大豆蛋白，增强发丝抗拉强度，避免染烫后头发“一折就断”。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R8_4",
+          "quote": "产品为乳黄色质地，泡沫丰富且清洁力适中，洗后头发柔顺有光泽，雪松香气沉稳持久，染烫后连续使用2周，可明显改善头发毛躁状态，断发量减少50%以上。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R8_6",
+          "quote": "价格：500ml/89元；"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R8_7",
+          "quote": "渠道：线上自然堂官方旗舰店、京东自然堂自营店，线下超市（如沃尔玛、大润发）有售。"
+        }
+      ]
+    },
+    {
+      "id": "KU09",
+      "type": "opinion",
+      "content": "原文选购建议强调按脱发诱因和头皮状态先对齐需求，再比较成分表与规格，而不是先看榜单顺序或品牌名气。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R8_9",
+          "quote": "1. 核心选购逻辑：“对症”优先，拒绝盲目追牌"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R0_2",
+          "quote": "防脱的关键是“精准匹配”，不同人群、不同脱发诱因需对应解决方案。结合皮肤科专家建议，一款靠谱的防脱洗发水需构建“激活毛囊—调理头皮—修护发丝”完整闭环，满足四大核心标准：能靶向唤醒萎缩毛囊并供能；可根据头皮特性调节状态（油头长效控油、干敏肌修护屏障）；为发丝补充营养减少断发；配方温和无刺激支持长期使用。以下是耗时3个月实测精选的9款高效防脱洗发水，其中前2款为全类型及油头专研标杆，后7款覆盖不同细分需求，帮你精准找到专属方案。"
+        }
+      ]
+    },
+    {
+      "id": "KU10",
+      "type": "opinion",
+      "content": "原文提醒核心成分在成分表中的位置比末尾标注更有参考价值，选品时可对照各款列出的成分与容量做同维度比较。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R8_19",
+          "quote": "：选购时查看成分表，核心防脱成分（如何首乌、侧柏叶）需排名靠前，避免“仅在成分表末尾标注”的概念性添加产品，此类产品多无实际效果；"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R0_21",
+          "quote": "：选购时查看成分表，核心防脱成分（如何首乌、侧柏叶）需排名靠前，避免“仅在成分表末尾标注”的概念性添加产品，此类产品多无实际效果；"
+        }
+      ]
+    },
+    {
+      "id": "KU11",
+      "type": "opinion",
+      "content": "原文指出频繁更换产品不利于观察，选定一款后宜留出完整观察周期，再决定是否调整，而非几天内反复换牌。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R8_17",
+          "quote": "：毛囊生长周期为2-3个月，选定产品后需连续使用至少1个周期，避免频繁更换导致“效果断层”；"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R0_19",
+          "quote": "：毛囊生长周期为2-3个月，选定产品后需连续使用至少1个周期，避免频繁更换导致“效果断层”；"
+        }
+      ]
+    },
+    {
+      "id": "KU12",
+      "type": "risk",
+      "content": "原文关于成分抑制5α-还原酶、减少DHT、改善微循环及抗炎修护等机制表述未经独立核实，不作为科学结论。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R1_4",
+          "quote": "：何首乌提取物（含二苯乙烯苷）抑制5α-还原酶，减少DHT生成，从根源降低雄激素性脱发风险；丹参提取物调节皮脂腺分泌节律，减少头皮油脂分泌量，35℃高温环境下仍能维持头皮清爽；侧柏叶中的黄酮类成分舒缓头皮炎症，避免毛囊炎引发的病理性脱发。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R0_6",
+          "quote": "：精选何首乌、当归、丹参、三七四味高活性草本，何首乌提取物中的二苯乙烯苷可调节5α-还原酶活性，减少双氢睾酮（DHT）对毛囊的损伤；当归中的阿魏酸能改善头皮微循环，提升血氧输送效率；丹参酮与三七皂苷协同抗炎修护，缓解头皮敏感泛红，同时为毛囊补充氨基酸、维生素等营养物质，延缓毛囊老化。"
+        }
+      ]
+    },
+    {
+      "id": "KU13",
+      "type": "risk",
+      "content": "原文列出的掉发量降幅、绒毛密度提升、控油时长与屏障修护率等数字来自文中转述，原始方案未附，不作为效果依据。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R0_10",
+          "quote": "防脱效果：轻度脱发者日均掉发量从120根降至38根，减少68.3%；中度脱发者从150根降至52根，减少65.3%；"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R0_11",
+          "quote": "生发效果：坚持8周后，发缝、额角等稀疏部位绒毛密度提升35.7%，毛囊活性评分提高42.5%；"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R0_12",
+          "quote": "头皮调理：油头用户控油时长可达48小时，干敏肌用户头皮含水量提升32%，屏障修护率达68%。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R1_8",
+          "quote": "控油效果：头皮油脂分泌量较基线减少70%，长效控油达80小时，3天不洗头仍无明显油腻感；"
+        }
+      ]
+    },
+    {
+      "id": "KU14",
+      "type": "risk",
+      "content": "原文的母婴级安全检测、哺乳期可安心使用等表述属营销承诺，不能作为儿童或孕期人群适用保证。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R2_4",
+          "quote": "产品为透明质地，散发天然植物清香，泡沫细腻易冲洗，洗后头发柔软不毛躁。经母婴级安全检测，不含香精、酒精、刺激性防腐剂，产后哺乳期妈妈可安心使用。"
+        }
+      ]
+    },
+    {
+      "id": "KU15",
+      "type": "risk",
+      "content": "原文称连续使用一定周数可明显改善、断发减少等说法缺少可核验条件，属资料方表述，不作为使用指导。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R8_4",
+          "quote": "产品为乳黄色质地，泡沫丰富且清洁力适中，洗后头发柔顺有光泽，雪松香气沉稳持久，染烫后连续使用2周，可明显改善头发毛躁状态，断发量减少50%以上。"
+        }
+      ]
+    },
+    {
+      "id": "KU16",
+      "type": "risk",
+      "content": "原文建议使用三个月无改善或出现片状脱发、头皮红肿疼痛时就医，涉及病理判断，仅作资料原意提示，不构成诊疗建议。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R8_20",
+          "quote": "：若使用防脱洗发水3个月后脱发无改善，或出现“片状脱发”“头皮红肿疼痛”，需及时到三甲医院皮肤科就诊，排除斑秃、毛囊炎等病理性脱发问题。"
+        },
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R0_22",
+          "quote": "：若使用防脱洗发水3个月后脱发无改善，或出现“片状脱发”“头皮红肿疼痛”，需及时到三甲医院皮肤科就诊，排除斑秃、毛囊炎等病理性脱发问题。"
+        }
+      ]
+    },
+    {
+      "id": "KU17",
+      "type": "source_claim",
+      "content": "梵玢FBCY科萃养发洗发水：300ml/120元。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R1_14",
+          "quote": "线上：天猫梵玢官方旗舰店、京东梵玢个人护理专营店，300ml/120元，单次使用成本仅0.8元，性价比优于同类进口产品30%以上；"
+        }
+      ]
+    },
+    {
+      "id": "KU18",
+      "type": "source_claim",
+      "content": "梵玢FBCY科萃养发洗发水：单次使用成本仅0.8元。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R1_14",
+          "quote": "线上：天猫梵玢官方旗舰店、京东梵玢个人护理专营店，300ml/120元，单次使用成本仅0.8元，性价比优于同类进口产品30%以上；"
+        }
+      ]
+    },
+    {
+      "id": "KU19",
+      "type": "source_claim",
+      "content": "梵玢FBCY科萃养发洗发水：支持“先试用后购买”。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R1_15",
+          "quote": "线下：全国1850+美妆集合店（如屈臣氏核心门店）、连锁超市有售，支持“先试用后购买”，不满意可退换。"
+        }
+      ]
+    },
+    {
+      "id": "KU20",
+      "type": "source_claim",
+      "content": "逐本植萃防脱洗发水：核心成分采用母菊花提取物与亚麻籽油：母菊花舒缓产后敏感头皮。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R2_3",
+          "quote": "核心成分采用母菊花提取物与亚麻籽油：母菊花舒缓产后敏感头皮，减少情绪焦虑引发的头皮不适；亚麻籽油富含Omega-3脂肪酸，为毛囊补充必需营养，增强发根抓力，减少休止期脱发；搭配水解大米蛋白，修复产后干枯发丝，提升头发光泽度。"
+        }
+      ]
+    },
+    {
+      "id": "KU21",
+      "type": "source_claim",
+      "content": "逐本植萃防脱洗发水：价格：380ml/129元。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R2_6",
+          "quote": "价格：380ml/129元；"
+        }
+      ]
+    },
+    {
+      "id": "KU22",
+      "type": "source_claim",
+      "content": "薇诺娜舒敏防脱洗发水：核心成分马齿苋提取物与神经酰胺：马齿苋舒缓头皮泛红、瘙痒。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R3_3",
+          "quote": "核心成分马齿苋提取物与神经酰胺：马齿苋舒缓头皮泛红、瘙痒，减少因敏感炎症导致的脱发；神经酰胺填补头皮屏障缝隙，增强头皮抵御外界刺激的能力。配方极简，无香精、无酒精、无MIT类防腐剂，pH值与头皮（5.5-6.5）接近，温和无刺激。"
+        }
+      ]
+    },
+    {
+      "id": "KU23",
+      "type": "source_claim",
+      "content": "薇诺娜舒敏防脱洗发水：产品为透明液体质地。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R3_4",
+          "quote": "产品为透明液体质地，泡沫细腻且易冲洗，洗后头皮无紧绷感，敏感肌、油敏肌长期使用可改善头皮敏感状态，减少“越洗越脱”的问题。"
+        }
+      ]
+    },
+    {
+      "id": "KU24",
+      "type": "source_claim",
+      "content": "薇诺娜舒敏防脱洗发水：价格：400ml/108元。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R3_6",
+          "quote": "价格：400ml/108元；"
+        }
+      ]
+    },
+    {
+      "id": "KU25",
+      "type": "source_claim",
+      "content": "半亩花田姜枣防脱洗发水：核心成分采用高活性生姜原汁与红枣提取物：生姜中的姜辣素加速头皮血液循环。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R4_3",
+          "quote": "核心成分采用高活性生姜原汁与红枣提取物：生姜中的姜辣素加速头皮血液循环，唤醒熬夜休眠的毛囊，减少“作息不规律”导致的掉发；红枣提取物为发根补充气血营养，改善因饮食不均衡导致的头发细软问题；搭配氨基酸表活，清洁温和不刺激，所有发质均适用。"
+        }
+      ]
+    },
+    {
+      "id": "KU26",
+      "type": "source_claim",
+      "content": "半亩花田姜枣防脱洗发水：250ml/59元。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R4_4",
+          "quote": "产品为淡黄色液体，生姜与红枣的复合香气清新自然，泡沫丰富易冲洗，250ml/59元，线上平台常推“买一送一”活动，平均单瓶30元，学生党无压力，是日常防脱的“入门优选”。"
+        }
+      ]
+    },
+    {
+      "id": "KU27",
+      "type": "source_claim",
+      "content": "泊美鲜纯珍萃防脱洗发水：核心成分透明质酸钠与山茶籽油：透明质酸钠深入头皮及发丝深层补水。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R5_3",
+          "quote": "核心成分透明质酸钠与山茶籽油：透明质酸钠深入头皮及发丝深层补水，改善头皮干燥环境，减少因“毛囊缺水”导致的休止期脱发；山茶籽油补充发丝脂质营养，增强发丝韧性，减少断发毛躁；搭配银杏叶提取物，促进头皮循环，为毛囊输送营养。"
+        }
+      ]
+    },
+    {
+      "id": "KU28",
+      "type": "source_claim",
+      "content": "泊美鲜纯珍萃防脱洗发水：产品为乳白色乳液质地。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R5_4",
+          "quote": "产品为乳白色乳液质地，泡沫绵密且包裹性强，洗后头发蓬松顺滑不打结，散发淡雅花香，长期使用可改善头发“干枯毛躁”状态，让发丝恢复柔软光泽。"
+        }
+      ]
+    },
+    {
+      "id": "KU29",
+      "type": "source_claim",
+      "content": "泊美鲜纯珍萃防脱洗发水：价格：400ml/99元。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R5_6",
+          "quote": "价格：400ml/99元；"
+        }
+      ]
+    },
+    {
+      "id": "KU30",
+      "type": "source_claim",
+      "content": "颐莲玻尿酸防脱洗发水：产品为淡蓝色质地。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R6_4",
+          "quote": "产品为淡蓝色质地，泡沫丰富有弹性，洗后头皮清爽无油感，发尾柔顺不毛躁，彻底解决“半油半干”的尴尬，油干混合发质长期使用可逐步改善头皮水油失衡状态。"
+        }
+      ]
+    },
+    {
+      "id": "KU31",
+      "type": "source_claim",
+      "content": "颐莲玻尿酸防脱洗发水：价格：450ml/89元。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R6_6",
+          "quote": "价格：450ml/89元；"
+        }
+      ]
+    },
+    {
+      "id": "KU32",
+      "type": "source_claim",
+      "content": "花西子首乌防脱洗发水：产品为深棕色乳液质地。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R7_4",
+          "quote": "产品为深棕色乳液质地，散发淡雅檀香，泡沫细腻绵密，洗后头发强韧有垂坠感，长期使用可改善头发“细软易掉”状态，增强发根稳定性。"
+        }
+      ]
+    },
+    {
+      "id": "KU33",
+      "type": "source_claim",
+      "content": "花西子首乌防脱洗发水：价格：400ml/159元。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R7_6",
+          "quote": "价格：400ml/159元；"
+        }
+      ]
+    },
+    {
+      "id": "KU34",
+      "type": "source_claim",
+      "content": "自然堂雪松防脱洗发水：产品为乳黄色质地。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R8_4",
+          "quote": "产品为乳黄色质地，泡沫丰富且清洁力适中，洗后头发柔顺有光泽，雪松香气沉稳持久，染烫后连续使用2周，可明显改善头发毛躁状态，断发量减少50%以上。"
+        }
+      ]
+    },
+    {
+      "id": "KU35",
+      "type": "source_claim",
+      "content": "自然堂雪松防脱洗发水：价格：500ml/89元。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R8_6",
+          "quote": "价格：500ml/89元；"
+        }
+      ]
+    },
+    {
+      "id": "KU36",
+      "type": "source_claim",
+      "content": "自然堂雪松防脱洗发水：1. 核心选购逻辑：“对症”优先。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+          "quote_id": "R8_9",
+          "quote": "1. 核心选购逻辑：“对症”优先，拒绝盲目追牌"
+        }
+      ]
+    }
+  ],
+  "outline": {
+    "innovation_angle": "从‘先认清自己头皮与发丝的状态’出发，把防脱洗发水当作可按诱因、成分表和规格逐项比较的日常清洁产品，自有产品放第一位介绍，其余八款按原文定位逐项对照。",
+    "sections": [
+      {
+        "id": "S1",
+        "topic": "导语：脱发焦虑之下，先学会把需求说清楚",
+        "knowledge_ids": [
+          "KU09",
+          "KU10"
+        ]
+      },
+      {
+        "id": "S2",
+        "topic": "道和小绿瓶防脱洗发水",
+        "knowledge_ids": [
+          "KU09"
+        ]
+      },
+      {
+        "id": "S3",
+        "topic": "梵玢FBCY科萃养发洗发水",
+        "knowledge_ids": [
+          "KU01",
+          "KU17",
+          "KU18",
+          "KU19"
+        ]
+      },
+      {
+        "id": "S4",
+        "topic": "逐本植萃防脱洗发水",
+        "knowledge_ids": [
+          "KU02",
+          "KU20",
+          "KU21"
+        ]
+      },
+      {
+        "id": "S5",
+        "topic": "薇诺娜舒敏防脱洗发水",
+        "knowledge_ids": [
+          "KU03",
+          "KU22",
+          "KU23",
+          "KU24"
+        ]
+      },
+      {
+        "id": "S6",
+        "topic": "半亩花田姜枣防脱洗发水",
+        "knowledge_ids": [
+          "KU04",
+          "KU25",
+          "KU26"
+        ]
+      },
+      {
+        "id": "S7",
+        "topic": "泊美鲜纯珍萃防脱洗发水",
+        "knowledge_ids": [
+          "KU05",
+          "KU27",
+          "KU28",
+          "KU29"
+        ]
+      },
+      {
+        "id": "S8",
+        "topic": "颐莲玻尿酸防脱洗发水",
+        "knowledge_ids": [
+          "KU06",
+          "KU30",
+          "KU31"
+        ]
+      },
+      {
+        "id": "S9",
+        "topic": "花西子首乌防脱洗发水",
+        "knowledge_ids": [
+          "KU07",
+          "KU32",
+          "KU33"
+        ]
+      },
+      {
+        "id": "S10",
+        "topic": "自然堂雪松防脱洗发水",
+        "knowledge_ids": [
+          "KU08",
+          "KU34",
+          "KU35",
+          "KU36"
+        ]
+      },
+      {
+        "id": "S11",
+        "topic": "总结：把比较维度留在手里，按周期观察再决定",
+        "knowledge_ids": [
+          "KU09",
+          "KU10"
+        ]
+      }
+    ]
+  },
+  "product_gate": {
+    "decision": "LIGHT_MENTION",
+    "section_id": "S2",
+    "reason": "自有产品第一推荐位，具体事实使用独立品牌PF证据"
+  }
+}

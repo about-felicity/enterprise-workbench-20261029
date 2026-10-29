@@ -1,0 +1,19 @@
+{
+  "status": "accepted_for_user_review",
+  "date": "2026-10-21",
+  "category": "科普类",
+  "number": 4,
+  "word_sha256": "7b9e63c3435c28663085d0b0e4b619de26aa462f829457b94c9c26f9296c7c20",
+  "files": {
+    "claim_map.json": "067407dcfddb700f4020f4478c2e74d7842333ae5a027c3675529f71c64c1bb0",
+    "knowledge_to_sections.json": "097fb9c1f24cb873a7feb72291368bf1740ddbd46e1fd28077e338b4791bf758",
+    "semantic_review.json": "80320366a07e18d67ccd332ae783826cdd99ab97b52b558e7ef08a3be0397b15",
+    "provenance.json": "31e34801433797c4ebbdb7fce40e225a53685fd04a6190e5653392c789dc15f5",
+    "article.docx": "7b9e63c3435c28663085d0b0e4b619de26aa462f829457b94c9c26f9296c7c20",
+    "consumer_projection.json": "54dc3818263ce5bf4c2856a087ac1b2c368013f45b1f08a42edb88f0a05be488",
+    "category.json": "f758d0fd0073b5877494bb8571c1088ee8f330a5e4be764b16b3e14c842cc5c1",
+    "product_detail_review.json": "19b9ad2f801d73ec502b88cbd8ea27630fabc0b747b9f938840094fab9674e6d",
+    "draft.md": "3141aff9c05b2db51f47c0db5c30659566ab47c7e66b3428e11e8660d8da980c"
+  },
+  "publication_approved": false
+}

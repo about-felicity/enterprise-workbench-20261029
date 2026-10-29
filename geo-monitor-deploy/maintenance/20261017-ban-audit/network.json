@@ -1,0 +1,32 @@
+{
+  "deepseek-hpe14-android13": {
+    "network_mode": "bridge",
+    "system_proxy_set": false,
+    "proxy_environment_set": false
+  },
+  "deepseek-hpe14-account2": {
+    "network_mode": "bridge",
+    "system_proxy_set": false,
+    "proxy_environment_set": false
+  },
+  "deepseek-manual-test": {
+    "network_mode": "bridge",
+    "system_proxy_set": false,
+    "proxy_environment_set": false
+  },
+  "doubao-hpe14-13-test": {
+    "network_mode": "bridge",
+    "system_proxy_set": false,
+    "proxy_environment_set": false
+  },
+  "doubao-hpe14-account2": {
+    "network_mode": "bridge",
+    "system_proxy_set": false,
+    "proxy_environment_set": false
+  },
+  "yuanbao-hpe14-android13": {
+    "network_mode": "bridge",
+    "system_proxy_set": false,
+    "proxy_environment_set": false
+  }
+}

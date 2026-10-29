@@ -1,0 +1,61 @@
+{
+  "input_sha256": "5d5a8d0ee2ace31e7160ed82ee345609f993004e91f1107682b6b4055d6367c9",
+  "result_sha256": "40d8d18d2c3afe494ba73a3e7a6d1f89f99c9eb6bccd8d7066c946c031895a6c",
+  "result": {
+    "article_topic": "防脱洗发水选购指南与热门产品实测",
+    "article_purpose": "按资质成分周期逻辑组织选购依据并评述代表性产品",
+    "genre": "ranking",
+    "sections": [
+      {
+        "section_id": "AS-O0001",
+        "role": "opening",
+        "role_status": "inferred",
+        "topic": "脱发机制与选购判断框架",
+        "purpose": "建立问题背景与阅读路径",
+        "moves": [
+          "define_scope",
+          "explain"
+        ],
+        "after": null,
+        "anchors": [
+          "O0001",
+          "O0002"
+        ]
+      },
+      {
+        "section_id": "AS-O0003",
+        "role": "subject",
+        "role_status": "inferred",
+        "topic": "单一产品的分问题解读",
+        "purpose": "用连续问答覆盖资质成分周期等判断点",
+        "moves": [
+          "question",
+          "explain",
+          "qualify"
+        ],
+        "after": "AS-O0001",
+        "anchors": [
+          "O0003",
+          "O0033"
+        ]
+      },
+      {
+        "section_id": "AS-O0034",
+        "role": "subject",
+        "role_status": "inferred",
+        "topic": "另一产品的定位与日常适用性",
+        "purpose": "概括产品取向并补充外部影响因素",
+        "moves": [
+          "describe",
+          "explain",
+          "conclude"
+        ],
+        "after": "AS-O0003",
+        "anchors": [
+          "O0034",
+          "O0037"
+        ]
+      }
+    ]
+  }
+}

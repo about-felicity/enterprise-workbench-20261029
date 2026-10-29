@@ -1,0 +1,26 @@
+{
+  "before_sha256": "cceb58b987324ba32529d3ea0919db380216e311b0621686f6eb4a9d7b573bdc",
+  "after_sha256": "51e6dd1fc5ac360d6147404aa550fcc83e2d7a72e9dccbc5a949b66209ef5958",
+  "backup": "/tmp/geo-rewrite-v2-mQfF5Dbd/capture-cli-before.py",
+  "interrupted_pid": 16484,
+  "original_recovery": {
+    "id": 1,
+    "streak": 0,
+    "cooldown_until": 1792750120.696266,
+    "blocked": 0,
+    "kind": "read_error",
+    "attempt": 114,
+    "cycle": 56,
+    "defer": true,
+    "exhausted": false,
+    "status": "cooling_down",
+    "task_id": "8044ee8698ed049c7ab8b246bd5d94f7308ba626000ea24696383354a282507d",
+    "error": "Daily Baidu card is still missing; retry the read-only search instead of completing the round",
+    "attempt_limit": 2,
+    "checked_epoch": 1792749820.6992333
+  },
+  "at": 1792749921.6845443,
+  "reason": "One-question collector held shared lock across repeated read-only search cooldowns",
+  "original_task_journal_preserved": true,
+  "policy_and_intervals_unchanged": true
+}

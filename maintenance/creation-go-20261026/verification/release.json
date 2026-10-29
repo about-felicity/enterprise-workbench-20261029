@@ -1,0 +1,97 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/creation/materials.py",
+      "server": "/opt/monitor/geo-content/creation/materials.py",
+      "sha256": "b19980db739a789a9cf8ab6c9af502bf77bb0af05b06659288e81cd7488f36aa"
+    },
+    {
+      "source": "geo-monitor-deploy/creation/client.py",
+      "server": "/opt/monitor/geo-content/creation/client.py",
+      "sha256": "2f6eda3addb209c3a65719b068cfa9085256f95542d87aa415105c61b69c8882"
+    },
+    {
+      "source": "geo-monitor-deploy/creation/studio.py",
+      "server": "/opt/monitor/geo-content/creation/studio.py",
+      "sha256": "bbb911fe7c22f9a0dd039ca7465de80b8564ae86eb55a5011948cb73ce6bc9c2"
+    },
+    {
+      "source": "geo-monitor-deploy/creation/panel.html",
+      "server": "/opt/monitor/geo-content/creation/panel.html",
+      "sha256": "490e2eb923fda955630d932192c19b0ac6281ee42a426bcdc3329d9d098727bb"
+    },
+    {
+      "source": "geo-monitor-deploy/creation/wizard_sections.html",
+      "server": "/opt/monitor/geo-content/creation/wizard_sections.html",
+      "sha256": "ec229591e95866484a92adf93ebb31a028066ed2974f82efcc9ae2dd489c4b8e"
+    },
+    {
+      "source": "geo-monitor-deploy/creation/go_transport.py",
+      "server": "/opt/monitor/geo-content/creation/go_transport.py",
+      "sha256": "3f3230df8317024f8879389cd4cc2ddae89166866c6349ba4c7394f29bf17d38"
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_go_transport.py",
+      "server": "/opt/monitor/geo-content/creation/test_go_transport.py",
+      "sha256": "f335ee5a679ef44c569861892a260732c14e26a9abde77d6447413898efe8180"
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_materials.py",
+      "server": "/opt/monitor/geo-content/creation/test_materials.py",
+      "sha256": "c86d90a622cdf87d39e29bc3ce44cb0e653431489b9bb4eb15fa77cdfcff829f"
+    },
+    {
+      "source": "geo-monitor-deploy/creation-go/go.mod",
+      "server": "/opt/monitor/geo-content/creation-go/go.mod",
+      "sha256": "81ac581f1b72c324aeb7bc171f32bedfeccf7a257a1967d3ca421ade232ccddc"
+    },
+    {
+      "source": "geo-monitor-deploy/creation-go/main.go",
+      "server": "/opt/monitor/geo-content/creation-go/main.go",
+      "sha256": "2557368c2074be4987dcd51d6a2dfee096833799df88ab11cb23ae13c47aab4a"
+    },
+    {
+      "source": "geo-monitor-deploy/creation-go/main_test.go",
+      "server": "/opt/monitor/geo-content/creation-go/main_test.go",
+      "sha256": "f2345f811fac7d00d133b09e9dcde15db5cabb9bdf021c947c9ad1113c00a077"
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/geo-content-worker-go.conf",
+      "server": "/etc/systemd/system/geo-content-worker.service.d/zz-go.conf",
+      "sha256": "5ceffd2c1cee36dc20573bab1dde4af0ca492425ea2df4891b28153e575c3712"
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/geo-creation-studio-dynamic.conf",
+      "server": "/etc/systemd/system/geo-creation-studio.service.d/dynamic.conf",
+      "sha256": "6adf32b8de034c0f5ec0a8f450b68990234b2f34b8141f99faf5bd675b5b51d2"
+    },
+    {
+      "source": "geo-monitor-deploy/creation-go/bin/creation-runner",
+      "server": "/opt/monitor/geo-content/bin/creation-runner",
+      "sha256": "c999bec73930041b0466b196e00a20544b9cb9f8df4a8bfd8b71ed8507379d59"
+    }
+  ],
+  "binary": {
+    "server": "/opt/monitor/geo-content/bin/creation-runner",
+    "sha256": "c999bec73930041b0466b196e00a20544b9cb9f8df4a8bfd8b71ed8507379d59"
+  },
+  "worker": {
+    "active_jobs": [],
+    "at": 1792983294.2597706,
+    "capture_limit": 10,
+    "issues": {},
+    "max_parallel_jobs": 10,
+    "mode": "go_dynamic",
+    "model_transport": "go",
+    "queued_jobs": 0,
+    "status": "running"
+  },
+  "backup": "/opt/monitor/geo-content/maintenance/creation-go-20261026",
+  "checks": {
+    "python": 83,
+    "go_race": true,
+    "native_serve_drain": true,
+    "paid_requests": 0
+  },
+  "deepseek_capture_changed": false
+}

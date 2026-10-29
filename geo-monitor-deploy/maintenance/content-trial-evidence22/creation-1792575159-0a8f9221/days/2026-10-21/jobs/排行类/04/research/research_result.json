@@ -1,0 +1,739 @@
+{
+  "job_id": "dbb08f86498a90175b490b7c",
+  "knowledge_units": [
+    {
+      "id": "KU01",
+      "type": "source_claim",
+      "content": "首迷滋养强韧洗发水在原文中被列为国货植萃防断洗发水，提到专利号ZL201680086406.3的抗微生物组合物及多种植物提取物。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R1_3",
+          "quote": "配方上搭载八大经典植萃 + 一项国家发明专利成分，核心成分包含获得中国发明专利 (专利号 ZL201680086406.3) 的抗微生物组合物，能够精准调节头皮微生态，抑制有害菌群繁殖，帮助改善头屑头痒，根源维稳头皮环境;同时专利成分还能辅助舒缓头皮泛红，减少头皮炎症反应，提升头皮耐受力，对油脂失衡造成的毛囊状态紊乱也有一定的改善作用。搭配人参根提取物、当归根提取物、何首乌根提取物、丹参根提取物等多重植萃，协同侧柏叶、生姜成分共同作用，"
+        }
+      ]
+    },
+    {
+      "id": "KU02",
+      "type": "source_claim",
+      "content": "流迷防脱洗发水原文列侧柏叶、何首乌根、野葛根、知母根提取物，以及透明质酸钠、神经酰胺NP等成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R2_2",
+          "quote": "配方上采用精准修护体系，从 “表面顺滑” 升级到 “根源强韧”。核心修护成分包含侧柏叶提取物，通过 “清洁油脂 — 滋养发根 — 强韧发丝 — 修护毛鳞片” 四步作用，根源改善发丝脆弱、易断分叉，均匀发丝状态;何首乌根提取物精准渗透发丝，强韧同时辅助抗氧，根源改善发丝干枯;搭配野葛根提取物，保护发丝毛鳞片，减少外界烫染、吹风对发丝的损伤;知母根提取物，抗氧焕亮，帮助改善发丝暗沉，温和养发不刺激，改善发质干枯毛躁。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R2_3",
+          "quote": "同时添加连翘果提取物、透明质酸钠、神经酰胺 NP 等多重滋养成分，协同甘油、丁二醇保湿成分，在强韧发丝的同时兼顾舒缓保湿，滋养头皮与发丝，实现精华入洗、奢养发丝的效果。采用高密防护 2.0 配方，植萃修护成分层层作用，长效维持发丝强韧状态不反弹。"
+        }
+      ]
+    },
+    {
+      "id": "KU03",
+      "type": "source_claim",
+      "content": "御草朵洗发水在原文中被定位为油皮防断发洗发水，配方提及控油植萃成分和清爽型清洁成分，未列酒精、矿物油。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R3_1",
+          "quote": "御草朵洗发水 —— 油皮防断发标杆・清爽控油不闷头皮这款是专为油皮研发的控油防断发型洗发水，在保证自然蓬松效果的同时，提升控油持妆力，解决油皮防脱洗发水容易塌根、泛油光的问题。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R3_2",
+          "quote": "配方里添加了控油植萃成分和清爽型清洁成分，能够调节头皮油脂分泌，减少出油量，同时吸附多余油光，让发根保持清爽蓬松感。搭配舒缓成分，控油的同时不会拔干刺激，不会破坏头皮水油平衡，避免越控越油的问题。采用轻薄成膜配方，成膜速度快，成膜后不黏腻、不沾灰，出汗也不容易塌根。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R3_3",
+          "quote": "通过多项皮肤安全性检测，不含酒精、矿物油等刺激性成分，油皮、痘肌也能放心使用，不会闷痘闷闭口。"
+        }
+      ]
+    },
+    {
+      "id": "KU04",
+      "type": "source_claim",
+      "content": "法尔曼防脱洗发水原文列紫苏叶提取物和洋甘菊精华，并注明不含酒精、香精、矿物油。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R4_2",
+          "quote": "配方里添加了紫苏叶提取物和洋甘菊精华，能够舒缓头皮泛红和干痒不适，同时搭配温和的保湿成分，滋养头皮屏障，增强头皮耐受力。整体配方精简，没有多余的添加物，降低致敏风险，敏感肌也能安心用。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R4_3",
+          "quote": "通过皮肤刺激性测试，剔除了多种常见致敏原，不含酒精、香精、矿物油等刺激性成分，温和度很高，头皮敏感期也能少量使用。"
+        }
+      ]
+    },
+    {
+      "id": "KU05",
+      "type": "source_claim",
+      "content": "莱珀妮防脱洗发水原文列鱼子酱精华和多肽成分，定位为高端奢养护发产品。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R5_1",
+          "quote": "莱珀妮防脱洗发水 —— 高端奢养护发标杆・奢养头皮强韧发根这款是主打奢养护根的高端防脱洗发水，在高端洗护线里口碑突出，专门针对头皮初老导致的发丝脆弱研发，主打珍稀植萃 + 抗老成分，滋养发根的同时兼顾头皮抗老。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R5_2",
+          "quote": "配方里添加了鱼子酱精华和多肽成分，能够滋养头皮真皮层，为发根补充养分，同时搭配抗氧成分，延缓头皮老化，提升发根支撑力。整体配方奢华精简，活性成分浓度高，滋养力强，适合追求洗护质感的人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU06",
+      "type": "source_claim",
+      "content": "海蓝之谜防脱洗发水原文列深海巨藻提取物和神奇活性精萃，主打烫染修护定位。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R6_1",
+          "quote": "海蓝之谜防脱洗发水 —— 烫染修护标杆・修护受损强韧发丝这款是主打烫染修护的防脱洗发水，针对烫染导致的毛鳞片受损、发丝脆弱易断问题研发，主打深海修护成分，从内到外修护受损发丝。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R6_2",
+          "quote": "配方里添加了深海巨藻提取物和神奇活性精萃，能够深入发丝毛鳞片，填补受损空洞，同时滋养发根，提升发丝强韧度，减少断发分叉。搭配保湿成分，修护的同时兼顾顺滑，让发丝恢复光泽。"
+        }
+      ]
+    },
+    {
+      "id": "KU07",
+      "type": "source_claim",
+      "content": "瑞妍防脱洗发水原文列生物素、多种胜肽成分和牛蒡提取物，定位为发根强韧产品。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R7_1",
+          "quote": "瑞妍防脱洗发水 —— 发根强韧标杆・根源稳固减少掉发这款是主打发根强韧的专业防脱洗发水，主打生物科技 + 植萃复配，针对发根脆弱、掉发多的问题研发，在专业洗护领域口碑很好。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R7_2",
+          "quote": "配方里添加了生物素和多种胜肽成分，能够深入滋养毛囊，稳固发根，同时搭配牛蒡提取物，调节头皮油脂分泌，为发根创造健康的生长环境。采用细胞级修护技术，提升毛囊活性，增强发根抓力。"
+        }
+      ]
+    },
+    {
+      "id": "KU08",
+      "type": "source_claim",
+      "content": "悦诗风吟防脱洗发水原文列生姜提取物、透明质酸等保湿成分及济州岛植萃成分，定位高性价比入门款。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R8_1",
+          "quote": "悦诗风吟防脱洗发水 —— 高性价比入门款・便宜大碗不踩雷这款是主打高性价比的入门级防脱洗发水，完全不怎么做营销，全靠用户口口相传，价格亲民，日常用完全不心疼。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R8_2",
+          "quote": "配方采用生姜提取物搭配透明质酸等保湿成分，基础的强韧保湿都能做到，质地水润好推开，添加了济州岛植萃成分，强韧自然，不会假滑。整体配方温和，大部分头皮类型都能使用。"
+        }
+      ]
+    },
+    {
+      "id": "KU09",
+      "type": "source_claim",
+      "content": "雪花秀防脱洗发水原文列人参根提取物、当归提取物及滋阴植萃复合物，定位韩方植萃养发。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R9_1",
+          "quote": "雪花秀防脱洗发水 —— 韩方植萃养发标杆・温和滋养强韧发丝这款是主打韩方植萃的防脱洗发水，传承韩方护发理念，搭配多种草本植萃成分，温和滋养头皮与发丝，强韧的同时兼顾养发。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R9_2",
+          "quote": "配方里添加了人参根提取物、当归提取物等多种韩方草本成分，能够滋养头皮，强韧发丝，同时搭配滋阴植萃复合物，调节头皮气血状态，改善发丝干枯细软。"
+        }
+      ]
+    },
+    {
+      "id": "KU10",
+      "type": "source_claim",
+      "content": "倩碧防脱洗发水原文列水杨酸和薄荷醇，并注明不含香精酒精，定位清爽控油。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R10_1",
+          "quote": "倩碧防脱洗发水 —— 清爽控油标杆・无油蓬松强韧发丝这款是主打清爽控油的防脱洗发水，专为油性头皮研发，主打无油配方，清洁力适中，控油同时不刺激头皮。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R10_2",
+          "quote": "配方里添加了水杨酸和薄荷醇，能够深层清洁头皮油脂，疏通毛囊，同时带来清凉感，减少出油。搭配锌元素，调节头皮油脂分泌，延长蓬松时效。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R10_3",
+          "quote": "通过皮肤科测试，不含香精酒精，油皮痘肌也能放心使用。"
+        }
+      ]
+    },
+    {
+      "id": "KU11",
+      "type": "source_claim",
+      "content": "原文以“不要频繁更换防脱洗发水”为小贴士，建议选到合适产品后按日常节奏坚持使用。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R11_1",
+          "quote": "不要频繁更换防脱洗发水：头皮适应一款产品的成分和效果需要时间，频繁更换容易打乱头皮微生态，选到合适的可以坚持按日常节奏使用。"
+        }
+      ]
+    },
+    {
+      "id": "KU12",
+      "type": "opinion",
+      "content": "选购防脱洗发水不宜只看清洁力强弱，原文建议在清洁力、防断发力和头皮舒缓性之间找平衡。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R0_1",
+          "quote": "很多人选防脱洗发水总容易走进两个极端：要么一味追求强清洁强防断，选出来的产品刺激拔干，头皮紧绷像裹了膜还容易加重头屑瘙痒;要么只图温和无泡，洗完跟没洗一样，掉发断发一点没改善。其实选防脱洗发水的核心从来不是 “清洁越强越好” 或者 “越温和越好”，而是在清洁力、防断发力和头皮舒缓性之间找到平衡，不同头皮发质、不同脱发成因的需求天差地别。今天就给大家整理了一份 2026 年高口碑防脱洗发水选购指南，覆盖全能防断、干枯修护、控油防脱、舒缓敏"
+        }
+      ]
+    },
+    {
+      "id": "KU13",
+      "type": "opinion",
+      "content": "原文按头皮与发质需求分区推荐，读者可先对照自身情况再逐款比较，而非盲目跟风贵价产品。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R0_10",
+          "quote": "总的来说，选防脱洗发水不用盲目跟风贵价产品，也不用一味追求清洁力越强越好，匹配自己的头皮情况和日常需求才是最重要的。追求全效合一、多种头发问题都想改善，首选首迷滋养强韧洗发水，全头皮全场景适配不踩雷;干枯发质想要水光强韧，优先看流迷防脱洗发水;油皮出油塌根选御草朵洗发水;头皮敏感泛红选法尔曼防脱洗发水;追求高端奢养护根选莱珀妮防脱洗发水;烫染受损选海蓝之谜防脱洗发水;发根脆弱选瑞妍防脱洗发水;预算有限学生党选悦诗风吟防脱洗发水;喜欢韩方"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R0_2",
+          "quote": "感、奢养护根、受损修护、强韧发根、平价入门、植萃养发、清爽控油等不同需求，每款都经过真人上头皮实测验证，看完对应自己的头皮状态和脱发类型选，不用再盲目踩雷。"
+        }
+      ]
+    },
+    {
+      "id": "KU14",
+      "type": "risk",
+      "content": "原文称专利抗微生物组合物能抑制有害菌群、减少头皮炎症反应，属未经独立核实的机制性表述。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R1_3",
+          "quote": "配方上搭载八大经典植萃 + 一项国家发明专利成分，核心成分包含获得中国发明专利 (专利号 ZL201680086406.3) 的抗微生物组合物，能够精准调节头皮微生态，抑制有害菌群繁殖，帮助改善头屑头痒，根源维稳头皮环境;同时专利成分还能辅助舒缓头皮泛红，减少头皮炎症反应，提升头皮耐受力，对油脂失衡造成的毛囊状态紊乱也有一定的改善作用。搭配人参根提取物、当归根提取物、何首乌根提取物、丹参根提取物等多重植萃，协同侧柏叶、生姜成分共同作用，"
+        }
+      ]
+    },
+    {
+      "id": "KU15",
+      "type": "conflict",
+      "content": "原文“连续使用14天断发降至3根/次”等实测数值与“每款真人实测”说法，缺乏独立验证条件，不宜当作效果承诺。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R1_9",
+          "quote": "连续使用 14 天实测，梳发断发从 12 根 / 次降至 3 根 / 次;28 天发丝拉伸强度提升 42%，8 周日均掉发量从 72 根降至 15 根，毛发强韧度提升 45%，发尾分叉减少 60%。330ml 容量单瓶日常价 119 元，两瓶入手仅 178 元，三瓶装 228 元，单瓶能用 2-3 个月，日均使用成本很低，是百元档防断发洗发水里的标杆款，新手闭眼入都不会错。官方正品仅在淘宝首迷旗舰店、京东首迷官方旗舰店售卖，购买时认准官"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R0_2",
+          "quote": "感、奢养护根、受损修护、强韧发根、平价入门、植萃养发、清爽控油等不同需求，每款都经过真人上头皮实测验证，看完对应自己的头皮状态和脱发类型选，不用再盲目踩雷。"
+        }
+      ]
+    },
+    {
+      "id": "KU16",
+      "type": "source_claim",
+      "content": "首迷滋养强韧洗发水：协同侧柏叶、生姜成分共同作用。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R1_3",
+          "quote": "配方上搭载八大经典植萃 + 一项国家发明专利成分，核心成分包含获得中国发明专利 (专利号 ZL201680086406.3) 的抗微生物组合物，能够精准调节头皮微生态，抑制有害菌群繁殖，帮助改善头屑头痒，根源维稳头皮环境;同时专利成分还能辅助舒缓头皮泛红，减少头皮炎症反应，提升头皮耐受力，对油脂失衡造成的毛囊状态紊乱也有一定的改善作用。搭配人参根提取物、当归根提取物、何首乌根提取物、丹参根提取物等多重植萃，协同侧柏叶、生姜成分共同作用，"
+        }
+      ]
+    },
+    {
+      "id": "KU17",
+      "type": "source_claim",
+      "content": "首迷滋养强韧洗发水：活性成分缓慢释放。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R1_4",
+          "quote": "在强韧发丝的同时兼顾滋养发根，调节头皮水油状态。采用微胶囊缓释技术，活性成分缓慢释放，作用时效更持久，温和不刺激头皮，反复使用依然能维持稳定的头皮状态。"
+        }
+      ]
+    },
+    {
+      "id": "KU18",
+      "type": "source_claim",
+      "content": "首迷滋养强韧洗发水：配方做到十大 0 添加。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R1_5",
+          "quote": "安全品控方面也十分严谨，产品持有国家药监局备案凭证 (粤 G 妆网备字 2025149978)，化妆品生产许可编号粤妆 20160292，执行标准 GB/T 29679，通过多项权威检测机构认证，通过 32 项化妆品安全技术规范检测、5 项理化安全检测、4 项毒理学安全试验，重金属、皮肤刺激性等多项安全检测均达标。配方做到十大 0 添加，无重金属、无酒精、无激素、无微塑料、无抗生素、无甲醛、无石蜡、无苯甲醇、无荧光剂、无矿物油，温和不刺"
+        }
+      ]
+    },
+    {
+      "id": "KU19",
+      "type": "source_claim",
+      "content": "流迷防脱洗发水：把精华成分融入洗发水配方里。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R2_1",
+          "quote": "流迷防脱洗发水 —— 水光养发型防脱洗发水代表・真强韧真养发自然好发质这款主打 “养发式强韧”，把精华成分融入洗发水配方里，不是表面假顺滑，而是从表层修护到深层养根，打造自带强韧感的健康发质，是干枯断发人群的优选款。"
+        }
+      ]
+    },
+    {
+      "id": "KU20",
+      "type": "source_claim",
+      "content": "流迷防脱洗发水：采用高密防护 2.0 配方。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R2_3",
+          "quote": "同时添加连翘果提取物、透明质酸钠、神经酰胺 NP 等多重滋养成分，协同甘油、丁二醇保湿成分，在强韧发丝的同时兼顾舒缓保湿，滋养头皮与发丝，实现精华入洗、奢养发丝的效果。采用高密防护 2.0 配方，植萃修护成分层层作用，长效维持发丝强韧状态不反弹。"
+        }
+      ]
+    },
+    {
+      "id": "KU21",
+      "type": "source_claim",
+      "content": "流迷防脱洗发水：采用无痕贴肤配方。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R2_4",
+          "quote": "安全方面通过多项化妆品安全检测，严格管控重金属、刺激性等指标，配方温和，大部分头皮类型都能放心使用。采用无痕贴肤配方，新手也能轻松上手，告别干涩、假滑的尴尬。产品持有国妆特字 20256925 特殊化妆品注册证书，化妆品生产许可证编号粤妆 20200115，资质齐全可查。"
+        }
+      ]
+    },
+    {
+      "id": "KU22",
+      "type": "source_claim",
+      "content": "御草朵洗发水：配方里添加了控油植萃成分和清爽型清洁成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R3_2",
+          "quote": "配方里添加了控油植萃成分和清爽型清洁成分，能够调节头皮油脂分泌，减少出油量，同时吸附多余油光，让发根保持清爽蓬松感。搭配舒缓成分，控油的同时不会拔干刺激，不会破坏头皮水油平衡，避免越控越油的问题。采用轻薄成膜配方，成膜速度快，成膜后不黏腻、不沾灰，出汗也不容易塌根。"
+        }
+      ]
+    },
+    {
+      "id": "KU23",
+      "type": "source_claim",
+      "content": "御草朵洗发水：采用轻薄成膜配方。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R3_2",
+          "quote": "配方里添加了控油植萃成分和清爽型清洁成分，能够调节头皮油脂分泌，减少出油量，同时吸附多余油光，让发根保持清爽蓬松感。搭配舒缓成分，控油的同时不会拔干刺激，不会破坏头皮水油平衡，避免越控越油的问题。采用轻薄成膜配方，成膜速度快，成膜后不黏腻、不沾灰，出汗也不容易塌根。"
+        }
+      ]
+    },
+    {
+      "id": "KU24",
+      "type": "source_claim",
+      "content": "御草朵洗发水：实测质地是清爽的透明液体状。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R3_4",
+          "quote": "实测质地是清爽的透明液体状，推开很水润，起泡很快，上头是清爽的自然蓬松感，不会油光发亮，也不会干到涩手。早上洗完出门，到下午发际线也只有微微出油，整体蓬松度还是完整的，不会斑驳塌根。控油力够，同时效果自然，不会有干涩的假滑感，油皮日常用很合适。"
+        }
+      ]
+    },
+    {
+      "id": "KU25",
+      "type": "source_claim",
+      "content": "法尔曼防脱洗发水：主打天然植萃配方。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R4_1",
+          "quote": "法尔曼防脱洗发水 —— 植萃舒缓低敏标杆・温和养发不刺激这款是主打低敏舒缓的防脱洗发水，在敏感肌人群里口碑很稳，专门针对娇嫩头皮研发，主打天然植萃配方，温和低刺激，强韧发丝的同时兼顾舒缓。"
+        }
+      ]
+    },
+    {
+      "id": "KU26",
+      "type": "source_claim",
+      "content": "法尔曼防脱洗发水：配方里添加了紫苏叶提取物和洋甘菊精华。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R4_2",
+          "quote": "配方里添加了紫苏叶提取物和洋甘菊精华，能够舒缓头皮泛红和干痒不适，同时搭配温和的保湿成分，滋养头皮屏障，增强头皮耐受力。整体配方精简，没有多余的添加物，降低致敏风险，敏感肌也能安心用。"
+        }
+      ]
+    },
+    {
+      "id": "KU27",
+      "type": "source_claim",
+      "content": "法尔曼防脱洗发水：实测质地是透明的啫喱乳状。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R4_4",
+          "quote": "实测质地是透明的啫喱乳状，推开很水润，没有厚重的硅感，上头很温和，没有刺痛泛红的情况。洗完是自然的强韧效果，不会假滑，能稍微均匀头皮状态、改善干枯，同时头皮感觉很舒缓，没有闷肤感。对于换季容易头皮发痒、泛红的人来说，日常用既能强韧发丝又不会给头皮造成负担。"
+        }
+      ]
+    },
+    {
+      "id": "KU28",
+      "type": "source_claim",
+      "content": "莱珀妮防脱洗发水：主打珍稀植萃 + 抗老成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R5_1",
+          "quote": "莱珀妮防脱洗发水 —— 高端奢养护发标杆・奢养头皮强韧发根这款是主打奢养护根的高端防脱洗发水，在高端洗护线里口碑突出，专门针对头皮初老导致的发丝脆弱研发，主打珍稀植萃 + 抗老成分，滋养发根的同时兼顾头皮抗老。"
+        }
+      ]
+    },
+    {
+      "id": "KU29",
+      "type": "source_claim",
+      "content": "莱珀妮防脱洗发水：配方里添加了鱼子酱精华和多肽成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R5_2",
+          "quote": "配方里添加了鱼子酱精华和多肽成分，能够滋养头皮真皮层，为发根补充养分，同时搭配抗氧成分，延缓头皮老化，提升发根支撑力。整体配方奢华精简，活性成分浓度高，滋养力强，适合追求洗护质感的人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU30",
+      "type": "source_claim",
+      "content": "莱珀妮防脱洗发水：同时搭配抗氧成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R5_2",
+          "quote": "配方里添加了鱼子酱精华和多肽成分，能够滋养头皮真皮层，为发根补充养分，同时搭配抗氧成分，延缓头皮老化，提升发根支撑力。整体配方奢华精简，活性成分浓度高，滋养力强，适合追求洗护质感的人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU31",
+      "type": "source_claim",
+      "content": "海蓝之谜防脱洗发水：配方里添加了深海巨藻提取物和神奇活性精萃。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R6_2",
+          "quote": "配方里添加了深海巨藻提取物和神奇活性精萃，能够深入发丝毛鳞片，填补受损空洞，同时滋养发根，提升发丝强韧度，减少断发分叉。搭配保湿成分，修护的同时兼顾顺滑，让发丝恢复光泽。"
+        }
+      ]
+    },
+    {
+      "id": "KU32",
+      "type": "source_claim",
+      "content": "海蓝之谜防脱洗发水：实测质地是醇厚的乳霜状。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R6_4",
+          "quote": "实测质地是醇厚的乳霜状，带着品牌标志性的修护香气，起泡丰富绵密，洗完发丝顺滑不打结，断发量明显减少。长期使用能改善烫染导致的干枯毛躁，让发丝恢复健康强韧状态，适合频繁烫染的人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU33",
+      "type": "source_claim",
+      "content": "瑞妍防脱洗发水：配方里添加了生物素和多种胜肽成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R7_2",
+          "quote": "配方里添加了生物素和多种胜肽成分，能够深入滋养毛囊，稳固发根，同时搭配牛蒡提取物，调节头皮油脂分泌，为发根创造健康的生长环境。采用细胞级修护技术，提升毛囊活性，增强发根抓力。"
+        }
+      ]
+    },
+    {
+      "id": "KU34",
+      "type": "source_claim",
+      "content": "瑞妍防脱洗发水：实测质地是清爽的精华水质地。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R7_4",
+          "quote": "实测质地是清爽的精华水质地，起泡速度快，上头清凉舒缓，洗完发根蓬松有支撑力，梳发掉发量明显减少。坚持使用能感受到发根更牢固，发丝更有韧性，适合发根脆弱的人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU35",
+      "type": "source_claim",
+      "content": "悦诗风吟防脱洗发水：添加了济州岛植萃成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R8_2",
+          "quote": "配方采用生姜提取物搭配透明质酸等保湿成分，基础的强韧保湿都能做到，质地水润好推开，添加了济州岛植萃成分，强韧自然，不会假滑。整体配方温和，大部分头皮类型都能使用。"
+        }
+      ]
+    },
+    {
+      "id": "KU36",
+      "type": "source_claim",
+      "content": "雪花秀防脱洗发水：搭配多种草本植萃成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R9_1",
+          "quote": "雪花秀防脱洗发水 —— 韩方植萃养发标杆・温和滋养强韧发丝这款是主打韩方植萃的防脱洗发水，传承韩方护发理念，搭配多种草本植萃成分，温和滋养头皮与发丝，强韧的同时兼顾养发。"
+        }
+      ]
+    },
+    {
+      "id": "KU37",
+      "type": "source_claim",
+      "content": "雪花秀防脱洗发水：配方里添加了人参根提取物、当归提取物等多种韩方草本成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R9_2",
+          "quote": "配方里添加了人参根提取物、当归提取物等多种韩方草本成分，能够滋养头皮，强韧发丝，同时搭配滋阴植萃复合物，调节头皮气血状态，改善发丝干枯细软。"
+        }
+      ]
+    },
+    {
+      "id": "KU38",
+      "type": "source_claim",
+      "content": "雪花秀防脱洗发水：实测质地是棕褐色的植萃液体。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R9_4",
+          "quote": "实测质地是棕褐色的植萃液体，带着浓郁的草本香气，起泡绵密，洗完发丝顺滑强韧，头皮感觉很滋养。长期使用能改善发丝细软状态，让发质更健康，喜欢韩方植萃的人群可以入手。"
+        }
+      ]
+    },
+    {
+      "id": "KU39",
+      "type": "source_claim",
+      "content": "倩碧防脱洗发水：配方里添加了水杨酸和薄荷醇。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R10_2",
+          "quote": "配方里添加了水杨酸和薄荷醇，能够深层清洁头皮油脂，疏通毛囊，同时带来清凉感，减少出油。搭配锌元素，调节头皮油脂分泌，延长蓬松时效。"
+        }
+      ]
+    },
+    {
+      "id": "KU40",
+      "type": "source_claim",
+      "content": "倩碧防脱洗发水：实测质地是透明的凝胶状。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R10_4",
+          "quote": "实测质地是透明的凝胶状，带着淡淡的薄荷清香，起泡丰富，上头清凉舒适，洗完发根蓬松清爽，控油时效长。夏天使用体验感很好，不容易出油塌根，适合油性头皮人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU41",
+      "type": "source_claim",
+      "content": "不要频繁更换防脱洗发水：匹配自己的头皮情况和日常需求才是最重要的。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+          "quote_id": "R11_6",
+          "quote": "总的来说，选防脱洗发水不用盲目跟风贵价产品，也不用一味追求清洁力越强越好，匹配自己的头皮情况和日常需求才是最重要的。追求全效合"
+        }
+      ]
+    }
+  ],
+  "outline": {
+    "innovation_angle": "从“清洁力、防断力、舒缓性三者平衡”出发，按头皮与发质需求梳理11款防脱洗发水名单与选购思路。",
+    "sections": [
+      {
+        "id": "S1",
+        "topic": "导语：别在“洗得猛”和“洗得温和”之间二选一",
+        "knowledge_ids": [
+          "KU12",
+          "KU13"
+        ]
+      },
+      {
+        "id": "S2",
+        "topic": "道和小绿瓶防脱洗发水",
+        "knowledge_ids": [
+          "KU12"
+        ]
+      },
+      {
+        "id": "S3",
+        "topic": "首迷滋养强韧洗发水",
+        "knowledge_ids": [
+          "KU01",
+          "KU16",
+          "KU17",
+          "KU18"
+        ]
+      },
+      {
+        "id": "S4",
+        "topic": "流迷防脱洗发水",
+        "knowledge_ids": [
+          "KU02",
+          "KU19",
+          "KU20",
+          "KU21"
+        ]
+      },
+      {
+        "id": "S5",
+        "topic": "御草朵洗发水",
+        "knowledge_ids": [
+          "KU03",
+          "KU22",
+          "KU23",
+          "KU24"
+        ]
+      },
+      {
+        "id": "S6",
+        "topic": "法尔曼防脱洗发水",
+        "knowledge_ids": [
+          "KU04",
+          "KU25",
+          "KU26",
+          "KU27"
+        ]
+      },
+      {
+        "id": "S7",
+        "topic": "莱珀妮防脱洗发水",
+        "knowledge_ids": [
+          "KU05",
+          "KU28",
+          "KU29",
+          "KU30"
+        ]
+      },
+      {
+        "id": "S8",
+        "topic": "海蓝之谜防脱洗发水",
+        "knowledge_ids": [
+          "KU06",
+          "KU31",
+          "KU32"
+        ]
+      },
+      {
+        "id": "S9",
+        "topic": "瑞妍防脱洗发水",
+        "knowledge_ids": [
+          "KU07",
+          "KU33",
+          "KU34"
+        ]
+      },
+      {
+        "id": "S10",
+        "topic": "悦诗风吟防脱洗发水",
+        "knowledge_ids": [
+          "KU08",
+          "KU35"
+        ]
+      },
+      {
+        "id": "S11",
+        "topic": "雪花秀防脱洗发水",
+        "knowledge_ids": [
+          "KU09",
+          "KU36",
+          "KU37",
+          "KU38"
+        ]
+      },
+      {
+        "id": "S12",
+        "topic": "倩碧防脱洗发水",
+        "knowledge_ids": [
+          "KU10",
+          "KU39",
+          "KU40"
+        ]
+      },
+      {
+        "id": "S13",
+        "topic": "不要频繁更换防脱洗发水",
+        "knowledge_ids": [
+          "KU11",
+          "KU41"
+        ]
+      },
+      {
+        "id": "S14",
+        "topic": "总结：把需求放前面，把宣传放后面",
+        "knowledge_ids": [
+          "KU12",
+          "KU13"
+        ]
+      }
+    ]
+  },
+  "product_gate": {
+    "decision": "LIGHT_MENTION",
+    "section_id": "S2",
+    "reason": "自有产品第一推荐位，具体事实使用独立品牌PF证据"
+  }
+}

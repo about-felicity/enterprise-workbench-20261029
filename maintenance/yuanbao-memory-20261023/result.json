@@ -1,0 +1,17 @@
+{
+  "at": 1792725138.6646106,
+  "before_memory_bytes": 3221225472,
+  "after_memory_bytes": 4294967296,
+  "total_ram_swap_unchanged": true,
+  "container_and_app_not_restarted": true,
+  "questions_resent": 0,
+  "task_reset": false,
+  "fees_or_article_api_changed": false,
+  "resources_sha256": "2fc1dbc5f280822e8e921f78b57a0607f8cc8163d22a8a1e07310d943e5566e8",
+  "before_app_pid": "4403",
+  "after_app_pid": "4403",
+  "captured": 56,
+  "processed": 56,
+  "container_oom_events_before": "low 0\nhigh 0\nmax 47802\noom 7\noom_kill 4\noom_group_kill 0",
+  "container_oom_events_after": "low 0\nhigh 0\nmax 47802\noom 7\noom_kill 4\noom_group_kill 0"
+}

@@ -1,0 +1,76 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\78567\\Downloads\\article.zip",
+      "bytes": 164,
+      "sha256": "184b8003a39a2c05a69394aac9fa05981e3e575337056165f63cbee3a04ce2a2",
+      "zip": true,
+      "entries": [
+        "导出清单.json"
+      ],
+      "crc_error": null,
+      "manifest": {
+        "articles": [],
+        "count": 0
+      }
+    }
+  ],
+  "geo_download_history": [
+    {
+      "browser": "Google/Chrome",
+      "profile": "Default",
+      "id": 32,
+      "target_path": "C:\\Users\\78567\\Downloads\\article.zip",
+      "start_time": 13436865774347609,
+      "received_bytes": 164,
+      "total_bytes": 164,
+      "state": 1,
+      "interrupt_reason": 0,
+      "started_at_beijing": "2026-10-19T14:42:54.347609+08:00",
+      "url_paths_without_queries": [
+        "https://1any.top/geo_monitor/api/geo-creation/download"
+      ],
+      "download_filters": {
+        "job": [
+          "all-approved"
+        ],
+        "kind": [
+          "bundle"
+        ],
+        "plan": [
+          "plan-94e086aa2c5243b89a4b20a201c066ed"
+        ],
+        "date": [
+          "2026-10-19"
+        ]
+      }
+    },
+    {
+      "browser": "Google/Chrome",
+      "profile": "Default",
+      "id": 33,
+      "target_path": "C:\\Users\\78567\\Downloads\\article.docx",
+      "start_time": 13437018335527987,
+      "received_bytes": 41630,
+      "total_bytes": 41630,
+      "state": 1,
+      "interrupt_reason": 0,
+      "started_at_beijing": "2026-10-21T09:05:35.527987+08:00",
+      "url_paths_without_queries": [
+        "https://1any.top/geo_monitor/api/geo-creation/download"
+      ],
+      "download_filters": {
+        "job": [
+          "creation-1792479954-8a96bc88"
+        ],
+        "article": [
+          "2026-10-20/科普类/05"
+        ],
+        "kind": [
+          "word"
+        ]
+      }
+    }
+  ],
+  "original_files_modified": false
+}

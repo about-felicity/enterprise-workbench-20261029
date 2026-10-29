@@ -1,0 +1,76 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  width: 320px;
+  background: #f7f8fa;
+  color: #182230;
+}
+
+main { padding: 18px; }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.logo {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #ff5a1f, #e82127);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgb(232 33 39 / 22%);
+}
+
+h1 { margin: 0; font-size: 17px; }
+.brand p { margin: 3px 0 0; color: #6b7280; font-size: 12px; }
+
+button {
+  width: 100%;
+  padding: 11px 14px;
+  border: 0;
+  border-radius: 9px;
+  background: #e9392f;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover { background: #cf2f27; }
+button:disabled { cursor: wait; opacity: .65; }
+
+.message {
+  min-height: 18px;
+  margin: 11px 2px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.message.error { color: #c62828; }
+.message.ok { color: #138a50; }
+
+.tips {
+  padding: 12px 13px;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  background: #fff;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.tips strong { font-size: 13px; }
+.tips ol { margin: 6px 0 0; padding-left: 20px; color: #5c6675; }

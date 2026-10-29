@@ -1,0 +1,688 @@
+{
+  "at": 1792638177.9258304,
+  "articles": [
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 1,
+      "ticket": "83405128bb65c783f1419174",
+      "paragraph_patch": false,
+      "latest": {
+        "stage": "writer",
+        "state": "needs_attention",
+        "error": "API generation rejected: article_budget_exceeded",
+        "id": "b379251bb2341eedf0bc994a"
+      },
+      "approved": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 2,
+      "ticket": "dbe4ed038e683549e89f0f59",
+      "paragraph_patch": true,
+      "latest": {
+        "stage": "review",
+        "state": "needs_attention",
+        "error": "API generation rejected: article_budget_exceeded",
+        "id": "8fbf060dd5b07d48daf9528a"
+      },
+      "approved": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 3,
+      "ticket": "d7ef20d371b64ee1d5a35924",
+      "paragraph_patch": true,
+      "latest": {
+        "stage": "writer",
+        "state": "needs_attention",
+        "error": "API generation rejected: article_budget_exceeded",
+        "id": "38e3c928ce6512dcf515a44f"
+      },
+      "approved": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 4,
+      "ticket": "71e454fba19079f447b48dd6",
+      "paragraph_patch": false,
+      "latest": {
+        "stage": "writer",
+        "state": "needs_attention",
+        "error": "API generation rejected: article_budget_exceeded",
+        "id": "6add8dc11bb4beed81feb899"
+      },
+      "approved": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 5,
+      "ticket": "76f01d7af132919b5463d1b1",
+      "paragraph_patch": true,
+      "latest": {
+        "stage": "writer",
+        "state": "needs_attention",
+        "error": "API generation rejected: article_budget_exceeded",
+        "id": "24e6402f8f1ca17965ca4633"
+      },
+      "approved": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 6,
+      "ticket": "1cd5fddb8a41bd1e92ae5eaf",
+      "paragraph_patch": true,
+      "latest": {
+        "stage": "writer",
+        "state": "needs_attention",
+        "error": "Draft checks rejected: 标题款数与自有产品加竞品总数不一致",
+        "id": "5be72aa4bba378be95cdc315"
+      },
+      "approved": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 7,
+      "ticket": "807c7a1a18462c29de4fbd3c",
+      "paragraph_patch": true,
+      "latest": {
+        "stage": "writer",
+        "state": "needs_attention",
+        "error": "API generation rejected: article_budget_exceeded",
+        "id": "32f304f3d1d3712c11aa3deb"
+      },
+      "approved": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 1,
+      "ticket": "943cdcf1d280035d4a1aabb9",
+      "paragraph_patch": true,
+      "latest": {
+        "stage": "writer",
+        "state": "needs_attention",
+        "error": "API generation rejected: article_budget_exceeded",
+        "id": "1f5db3283bed611d2df3a1f3"
+      },
+      "approved": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 2,
+      "ticket": "a32ade80be9b56ba54aee94a",
+      "paragraph_patch": true,
+      "latest": {
+        "stage": "writer",
+        "state": "needs_attention",
+        "error": "API generation rejected: article_budget_exceeded",
+        "id": "82aba9b6273505991d934ef8"
+      },
+      "approved": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 3,
+      "ticket": "2eb639bd5f9262d93e95d16d",
+      "paragraph_patch": true,
+      "latest": {
+        "stage": "review",
+        "state": "needs_attention",
+        "error": "Review belongs to another draft",
+        "id": "79bb96ff674b24f4a4c17c79"
+      },
+      "approved": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 4,
+      "ticket": "18f5fcead1a303e70e2ca6a8",
+      "paragraph_patch": true,
+      "latest": {
+        "stage": "review",
+        "state": "needs_attention",
+        "error": "API generation rejected: article_budget_exceeded",
+        "id": "358090cd8ac62d0702752820"
+      },
+      "approved": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 5,
+      "ticket": "bcf35fc49cecdc1d59656e62",
+      "paragraph_patch": true,
+      "latest": {
+        "stage": "review",
+        "state": "needs_attention",
+        "error": "API generation rejected: article_budget_exceeded",
+        "id": "bde5f162760f59292242331d"
+      },
+      "approved": false
+    },
+    {
+      "job": "creation-1792576129-389f575e",
+      "category": "测评类",
+      "number": 1,
+      "ticket": "996c66601f5f44aaa4917df1",
+      "paragraph_patch": true,
+      "latest": {
+        "stage": "writer",
+        "state": "needs_attention",
+        "error": "API generation rejected: article_budget_exceeded",
+        "id": "39c23af8db30d182a99eaa93"
+      },
+      "approved": false
+    },
+    {
+      "job": "creation-1792576129-389f575e",
+      "category": "测评类",
+      "number": 2,
+      "ticket": "9e2c8d1fdf6a0da28b54e490",
+      "paragraph_patch": true,
+      "latest": {
+        "stage": "writer",
+        "state": "needs_attention",
+        "error": "API generation rejected: article_budget_exceeded",
+        "id": "eda1a427c06d1f289534abca"
+      },
+      "approved": false
+    }
+  ],
+  "jobs": [
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "control": {
+        "paused": false,
+        "revision": 20,
+        "resumed_epoch": 1792638072.6678188
+      },
+      "active": {},
+      "worker": {
+        "at": 1792638152.140912,
+        "result": {
+          "status": "completed_with_failures",
+          "date": "2026-10-21",
+          "failed_tickets": 12,
+          "historical_failed_tickets": 0
+        }
+      },
+      "pending": 0,
+      "approved": 0
+    },
+    {
+      "job": "creation-1792576129-389f575e",
+      "control": {
+        "paused": true,
+        "reason": "deployment_drain",
+        "message": "Generic count validation and audit-budget fix; retain original execution",
+        "revision": 12,
+        "paused_epoch": 1792637243.2595255
+      },
+      "active": {},
+      "worker": {
+        "at": 1792637227.4364653,
+        "result": {
+          "status": "completed_with_failures",
+          "date": "2026-10-21",
+          "failed_tickets": 2,
+          "historical_failed_tickets": 0
+        }
+      },
+      "pending": 0,
+      "approved": 0
+    }
+  ],
+  "costs": [
+    [
+      "2026-10-21",
+      "排行类",
+      "1",
+      "research",
+      2,
+      0.033018320000000004,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "1",
+      "writer",
+      6,
+      0.09538844,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "2",
+      "research",
+      2,
+      0.027579080000000002,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "2",
+      "review",
+      8,
+      0.07423088,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "2",
+      "writer",
+      5,
+      0.09658992,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "3",
+      "research",
+      1,
+      0.028686959999999997,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "3",
+      "review",
+      4,
+      0.08624656,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "3",
+      "writer",
+      3,
+      0.09923496,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "4",
+      "research",
+      1,
+      0.027029360000000002,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "4",
+      "writer",
+      6,
+      0.18799335999999997,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "5",
+      "research",
+      1,
+      0.02512896,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "5",
+      "review",
+      3,
+      0.07841136,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "5",
+      "writer",
+      2,
+      0.09715135999999999,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "6",
+      "research",
+      1,
+      0.0242572,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "6",
+      "review",
+      2,
+      0.04538728,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "6",
+      "writer",
+      5,
+      0.16375920000000002,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "7",
+      "research",
+      1,
+      0.0287792,
+      0
+    ],
+    [
+      "2026-10-21",
+      "排行类",
+      "7",
+      "writer",
+      5,
+      0.20044832,
+      0
+    ],
+    [
+      "2026-10-21",
+      "测评类",
+      "1",
+      "research",
+      4,
+      0.07941828,
+      0
+    ],
+    [
+      "2026-10-21",
+      "测评类",
+      "1",
+      "review",
+      6,
+      0.06755896,
+      0
+    ],
+    [
+      "2026-10-21",
+      "测评类",
+      "1",
+      "writer",
+      10,
+      0.2453274,
+      0
+    ],
+    [
+      "2026-10-21",
+      "测评类",
+      "2",
+      "research",
+      3,
+      0.045958320000000004,
+      0
+    ],
+    [
+      "2026-10-21",
+      "测评类",
+      "2",
+      "review",
+      4,
+      0.08912136,
+      0
+    ],
+    [
+      "2026-10-21",
+      "测评类",
+      "2",
+      "writer",
+      10,
+      0.25824344,
+      0
+    ],
+    [
+      "2026-10-21",
+      "测评类",
+      "3",
+      "research",
+      2,
+      0.016801640000000003,
+      0
+    ],
+    [
+      "2026-10-21",
+      "测评类",
+      "3",
+      "review",
+      6,
+      0.0752826,
+      0
+    ],
+    [
+      "2026-10-21",
+      "测评类",
+      "3",
+      "writer",
+      4,
+      0.08945212,
+      0
+    ],
+    [
+      "2026-10-21",
+      "测评类",
+      "4",
+      "research",
+      1,
+      0.01264424,
+      0
+    ],
+    [
+      "2026-10-21",
+      "测评类",
+      "4",
+      "review",
+      4,
+      0.052296159999999994,
+      0
+    ],
+    [
+      "2026-10-21",
+      "测评类",
+      "4",
+      "writer",
+      6,
+      0.1331648,
+      0
+    ],
+    [
+      "2026-10-21",
+      "测评类",
+      "5",
+      "research",
+      1,
+      0.01557224,
+      0
+    ],
+    [
+      "2026-10-21",
+      "测评类",
+      "5",
+      "review",
+      4,
+      0.05759372,
+      0
+    ],
+    [
+      "2026-10-21",
+      "测评类",
+      "5",
+      "writer",
+      6,
+      0.14429312,
+      0
+    ],
+    [
+      "2026-10-22",
+      "排行类",
+      "1",
+      "writer",
+      3,
+      0.12838104,
+      0
+    ],
+    [
+      "2026-10-22",
+      "排行类",
+      "2",
+      "review",
+      1,
+      0.02213496,
+      0
+    ],
+    [
+      "2026-10-22",
+      "排行类",
+      "2",
+      "writer",
+      2,
+      0.030464480000000002,
+      0
+    ],
+    [
+      "2026-10-22",
+      "排行类",
+      "3",
+      "writer",
+      3,
+      0.05721896,
+      0
+    ],
+    [
+      "2026-10-22",
+      "排行类",
+      "4",
+      "writer",
+      1,
+      0.06335392,
+      0
+    ],
+    [
+      "2026-10-22",
+      "排行类",
+      "5",
+      "writer",
+      3,
+      0.06037496,
+      0
+    ],
+    [
+      "2026-10-22",
+      "排行类",
+      "6",
+      "writer",
+      2,
+      0.041514480000000006,
+      0
+    ],
+    [
+      "2026-10-22",
+      "排行类",
+      "7",
+      "writer",
+      1,
+      0.016740239999999997,
+      0
+    ],
+    [
+      "2026-10-22",
+      "测评类",
+      "1",
+      "writer",
+      5,
+      0.1335768,
+      0
+    ],
+    [
+      "2026-10-22",
+      "测评类",
+      "2",
+      "writer",
+      3,
+      0.08739864,
+      0
+    ],
+    [
+      "2026-10-22",
+      "测评类",
+      "3",
+      "review",
+      1,
+      0.018109120000000003,
+      0
+    ],
+    [
+      "2026-10-22",
+      "测评类",
+      "3",
+      "writer",
+      1,
+      0.02264024,
+      0
+    ],
+    [
+      "2026-10-22",
+      "测评类",
+      "4",
+      "review",
+      2,
+      0.03615528,
+      0
+    ],
+    [
+      "2026-10-22",
+      "测评类",
+      "4",
+      "writer",
+      3,
+      0.048916720000000004,
+      0
+    ],
+    [
+      "2026-10-22",
+      "测评类",
+      "5",
+      "review",
+      1,
+      0.02064,
+      0
+    ],
+    [
+      "2026-10-22",
+      "测评类",
+      "5",
+      "writer",
+      2,
+      0.0417236,
+      0
+    ]
+  ]
+}

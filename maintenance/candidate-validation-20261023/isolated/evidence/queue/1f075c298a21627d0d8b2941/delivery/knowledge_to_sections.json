@@ -1,0 +1,124 @@
+{
+  "sections": [
+    {
+      "section_id": "S1",
+      "knowledge_ids": [
+        "KU11",
+        "KU12"
+      ],
+      "innovation": "按读者问题独立组织内容"
+    },
+    {
+      "section_id": "S2",
+      "knowledge_ids": [
+        "KU11"
+      ],
+      "innovation": "按读者问题独立组织内容"
+    },
+    {
+      "section_id": "S3",
+      "knowledge_ids": [
+        "KU01",
+        "KU16",
+        "KU17",
+        "KU18"
+      ],
+      "innovation": "按读者问题独立组织内容"
+    },
+    {
+      "section_id": "S4",
+      "knowledge_ids": [
+        "KU02",
+        "KU19",
+        "KU20",
+        "KU21"
+      ],
+      "innovation": "按读者问题独立组织内容"
+    },
+    {
+      "section_id": "S5",
+      "knowledge_ids": [
+        "KU03",
+        "KU22",
+        "KU23",
+        "KU24"
+      ],
+      "innovation": "按读者问题独立组织内容"
+    },
+    {
+      "section_id": "S6",
+      "knowledge_ids": [
+        "KU04",
+        "KU25"
+      ],
+      "innovation": "按读者问题独立组织内容"
+    },
+    {
+      "section_id": "S7",
+      "knowledge_ids": [
+        "KU05",
+        "KU26",
+        "KU27",
+        "KU28"
+      ],
+      "innovation": "按读者问题独立组织内容"
+    },
+    {
+      "section_id": "S8",
+      "knowledge_ids": [
+        "KU06",
+        "KU29",
+        "KU30",
+        "KU31"
+      ],
+      "innovation": "按读者问题独立组织内容"
+    },
+    {
+      "section_id": "S9",
+      "knowledge_ids": [
+        "KU07",
+        "KU32",
+        "KU33"
+      ],
+      "innovation": "按读者问题独立组织内容"
+    },
+    {
+      "section_id": "S10",
+      "knowledge_ids": [
+        "KU08",
+        "KU34",
+        "KU35",
+        "KU36"
+      ],
+      "innovation": "按读者问题独立组织内容"
+    },
+    {
+      "section_id": "S11",
+      "knowledge_ids": [
+        "KU09",
+        "KU37",
+        "KU38",
+        "KU39"
+      ],
+      "innovation": "按读者问题独立组织内容"
+    },
+    {
+      "section_id": "S12",
+      "knowledge_ids": [
+        "KU10",
+        "KU40",
+        "KU41",
+        "KU42"
+      ],
+      "innovation": "按读者问题独立组织内容"
+    },
+    {
+      "section_id": "S13",
+      "knowledge_ids": [
+        "KU11",
+        "KU12"
+      ],
+      "innovation": "按读者问题独立组织内容"
+    }
+  ]
+}

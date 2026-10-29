@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "actual_dashboard_gateway": true,
+  "upload_survives_reload": true,
+  "manual_publish_and_task_draft": true,
+  "update_keeps_current_and_task_versions": true,
+  "paid_jobs": 0,
+  "page_errors": [],
+  "original_products": 11,
+  "original_tasks": 0
+}

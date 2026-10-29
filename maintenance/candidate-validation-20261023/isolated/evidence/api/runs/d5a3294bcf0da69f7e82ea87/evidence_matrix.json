@@ -1,0 +1,1177 @@
+[
+  {
+    "id": "E_KU01",
+    "source_id": "KU01",
+    "text": "首迷滋养强韧洗发水：它的配方核心走 “科学复配 + 植萃养护” 的温和路线；配方 pH 值稳定在 5.8 的弱酸性区间。",
+    "subjects": [
+      "首迷滋养强韧洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R1_2"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R1_3"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU02",
+    "source_id": "KU02",
+    "text": "流迷防脱洗发水：同时配方中添加了聚季铵盐 - 10、瓜儿胶羟丙基三甲基氯化铵等调理成分；它是乳白色的乳液质地；产品有 300ml/112 元、600ml/208 元两种规格。",
+    "subjects": [
+      "流迷防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition",
+      "net_content",
+      "price"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R2_1"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R2_2"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R2_3"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R2_4"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU03",
+    "source_id": "KU03",
+    "text": "御草朵防脱洗发水：它的配方以多种草本提取物为核心；配方中精选了侧柏叶、生姜、何首乌、当归等多重草本精粹；采用低温冷萃技术提取活性成分；弱酸性配方贴合头皮 pH 值；还添加了水解角蛋白成分。",
+    "subjects": [
+      "御草朵防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R3_1"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R3_2"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R3_3"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU04",
+    "source_id": "KU04",
+    "text": "域发防脱洗发水：它的配方以植物精粹 + 活性成分为核心。",
+    "subjects": [
+      "域发防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R4_1"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R4_2"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R4_3"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU05",
+    "source_id": "KU05",
+    "text": "密思丝密 MSSM 防脱发洗发水：配方中还添加了 12 种人体毛发仿生氨基酸；搭配烟酰胺、生育酚等成分；它是乳白色乳液质地。",
+    "subjects": [
+      "密思丝密 MSSM 防脱发洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R5_2"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R5_3"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R5_5"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU06",
+    "source_id": "KU06",
+    "text": "千木朵防脱洗发水：配方精选生姜提取物、侧柏叶提取物、何首乌提取物等多重经典护发植萃；它是浅棕色的乳液质地。",
+    "subjects": [
+      "千木朵防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R6_1"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R6_2"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R6_3"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R6_4"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU07",
+    "source_id": "KU07",
+    "text": "诗碧曼防脱洗发水：配方中精选了人参、何首乌、当归、侧柏叶等十余种草本植物提取物；它是深棕色的啫喱质地。",
+    "subjects": [
+      "诗碧曼防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R7_1"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R7_2"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R7_4"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU08",
+    "source_id": "KU08",
+    "text": "植木说防脱洗发乳：配方中添加了山茶籽、侧柏叶、姜根等多重植物精粹；弱酸性配方贴合头皮 pH 值；无硅油配方；它是奶白色的乳液质地。",
+    "subjects": [
+      "植木说防脱洗发乳"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R8_1"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R8_2"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R8_3"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R8_4"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU09",
+    "source_id": "KU09",
+    "text": "Bodyaid 防脱生姜洗发水：配方中添加了高活性生姜根提取物；还添加了控油成分；它是淡黄色的乳液质地。",
+    "subjects": [
+      "Bodyaid 防脱生姜洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R9_2"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R9_3"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R9_4"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R9_5"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU10",
+    "source_id": "KU10",
+    "text": "云康防脱洗发水：配方中添加了侧柏叶、何首乌、当归等草本植萃成分；同时搭配泛醇成分；它是透明啫喱质地。",
+    "subjects": [
+      "云康防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R10_1"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R10_2"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R10_4"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU11",
+    "source_id": "KU11",
+    "text": "可先把组成资料、净含量与同单位价格、包装取用、已提供报告指标放在同一张表里。",
+    "subjects": [],
+    "statement_type": "general_advice",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R2_4"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R10_6"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU12",
+    "source_id": "KU12",
+    "text": "原文十款产品的资质、成分和规格披露详略差异很大。",
+    "subjects": [],
+    "statement_type": "general_advice",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R1_2"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R5_2"
+      },
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R10_5"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU16",
+    "source_id": "KU16",
+    "text": "首迷滋养强韧洗发水：它的配方核心走 “科学复配 + 植萃养护” 的温和路线；配方 pH 值稳定在 5.8 的弱酸性区间。",
+    "subjects": [
+      "首迷滋养强韧洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R1_3"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU17",
+    "source_id": "KU17",
+    "text": "首迷滋养强韧洗发水：它的配方核心走 “科学复配 + 植萃养护” 的温和路线；配方 pH 值稳定在 5.8 的弱酸性区间。",
+    "subjects": [
+      "首迷滋养强韧洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R1_3"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU18",
+    "source_id": "KU18",
+    "text": "首迷滋养强韧洗发水：它是浅琥珀色的通透啫喱质地。",
+    "subjects": [
+      "首迷滋养强韧洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R1_6"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU19",
+    "source_id": "KU19",
+    "text": "流迷防脱洗发水：同时配方中添加了聚季铵盐 - 10、瓜儿胶羟丙基三甲基氯化铵等调理成分。",
+    "subjects": [
+      "流迷防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R2_3"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU20",
+    "source_id": "KU20",
+    "text": "流迷防脱洗发水：它是乳白色的乳液质地；产品有 300ml/112 元、600ml/208 元两种规格。",
+    "subjects": [
+      "流迷防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "net_content",
+      "price"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R2_4"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU21",
+    "source_id": "KU21",
+    "text": "流迷防脱洗发水：它是乳白色的乳液质地；产品有 300ml/112 元、600ml/208 元两种规格。",
+    "subjects": [
+      "流迷防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "net_content",
+      "price"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R2_4"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU22",
+    "source_id": "KU22",
+    "text": "御草朵防脱洗发水：它的配方以多种草本提取物为核心。",
+    "subjects": [
+      "御草朵防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R3_1"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU23",
+    "source_id": "KU23",
+    "text": "御草朵防脱洗发水：配方中精选了侧柏叶、生姜、何首乌、当归等多重草本精粹；采用低温冷萃技术提取活性成分。",
+    "subjects": [
+      "御草朵防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R3_2"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU24",
+    "source_id": "KU24",
+    "text": "御草朵防脱洗发水：配方中精选了侧柏叶、生姜、何首乌、当归等多重草本精粹；采用低温冷萃技术提取活性成分。",
+    "subjects": [
+      "御草朵防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R3_2"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU25",
+    "source_id": "KU25",
+    "text": "域发防脱洗发水：它的配方以植物精粹 + 活性成分为核心。",
+    "subjects": [
+      "域发防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R4_2"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU26",
+    "source_id": "KU26",
+    "text": "密思丝密 MSSM 防脱发洗发水：属于特殊用途化妆品。",
+    "subjects": [
+      "密思丝密 MSSM 防脱发洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R5_2"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU27",
+    "source_id": "KU27",
+    "text": "密思丝密 MSSM 防脱发洗发水：配方中还添加了 12 种人体毛发仿生氨基酸；搭配烟酰胺、生育酚等成分。",
+    "subjects": [
+      "密思丝密 MSSM 防脱发洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R5_3"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU28",
+    "source_id": "KU28",
+    "text": "密思丝密 MSSM 防脱发洗发水：配方中还添加了 12 种人体毛发仿生氨基酸；搭配烟酰胺、生育酚等成分。",
+    "subjects": [
+      "密思丝密 MSSM 防脱发洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R5_3"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU29",
+    "source_id": "KU29",
+    "text": "千木朵防脱洗发水：配方精选生姜提取物、侧柏叶提取物、何首乌提取物等多重经典护发植萃。",
+    "subjects": [
+      "千木朵防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R6_2"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU30",
+    "source_id": "KU30",
+    "text": "千木朵防脱洗发水：能够满足日常头皮清洁需求。",
+    "subjects": [
+      "千木朵防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R6_3"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU31",
+    "source_id": "KU31",
+    "text": "千木朵防脱洗发水：它是浅棕色的乳液质地。",
+    "subjects": [
+      "千木朵防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R6_4"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU32",
+    "source_id": "KU32",
+    "text": "诗碧曼防脱洗发水：配方中精选了人参、何首乌、当归、侧柏叶等十余种草本植物提取物。",
+    "subjects": [
+      "诗碧曼防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R7_2"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU33",
+    "source_id": "KU33",
+    "text": "诗碧曼防脱洗发水：它是深棕色的啫喱质地。",
+    "subjects": [
+      "诗碧曼防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R7_4"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU34",
+    "source_id": "KU34",
+    "text": "植木说防脱洗发乳：配方中添加了山茶籽、侧柏叶、姜根等多重植物精粹。",
+    "subjects": [
+      "植木说防脱洗发乳"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R8_2"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU35",
+    "source_id": "KU35",
+    "text": "植木说防脱洗发乳：弱酸性配方贴合头皮 pH 值；无硅油配方。",
+    "subjects": [
+      "植木说防脱洗发乳"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R8_3"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU36",
+    "source_id": "KU36",
+    "text": "植木说防脱洗发乳：它是奶白色的乳液质地。",
+    "subjects": [
+      "植木说防脱洗发乳"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R8_4"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU37",
+    "source_id": "KU37",
+    "text": "Bodyaid 防脱生姜洗发水：配方中添加了高活性生姜根提取物；还添加了控油成分。",
+    "subjects": [
+      "Bodyaid 防脱生姜洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R9_3"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU38",
+    "source_id": "KU38",
+    "text": "Bodyaid 防脱生姜洗发水：配方中添加了高活性生姜根提取物；还添加了控油成分。",
+    "subjects": [
+      "Bodyaid 防脱生姜洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R9_3"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU39",
+    "source_id": "KU39",
+    "text": "Bodyaid 防脱生姜洗发水：它是淡黄色的乳液质地。",
+    "subjects": [
+      "Bodyaid 防脱生姜洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R9_5"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU40",
+    "source_id": "KU40",
+    "text": "云康防脱洗发水：配方中添加了侧柏叶、何首乌、当归等草本植萃成分；同时搭配泛醇成分。",
+    "subjects": [
+      "云康防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R10_2"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU41",
+    "source_id": "KU41",
+    "text": "云康防脱洗发水：配方中添加了侧柏叶、何首乌、当归等草本植萃成分；同时搭配泛醇成分。",
+    "subjects": [
+      "云康防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R10_2"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_KU42",
+    "source_id": "KU42",
+    "text": "云康防脱洗发水：配方质地轻盈。",
+    "subjects": [
+      "云康防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "not_independently_verified",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "retrieved_source",
+    "source_refs": [
+      {
+        "url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+        "quote_id": "R10_3"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_PF1",
+    "source_id": "PF1",
+    "text": "产品名称为道和小绿瓶防脱洗发水，品牌为道和时尚。",
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "supplied_product_record",
+    "dimensions": [],
+    "source_kind": "supplier",
+    "source_refs": [
+      {
+        "source_quote": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_PF2",
+    "source_id": "PF2",
+    "text": "产品规格为200ml/瓶，属于清洁头皮与发丝的洗发类产品。",
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "supplied_product_record",
+    "dimensions": [
+      "net_content"
+    ],
+    "source_kind": "supplier",
+    "source_refs": [
+      {
+        "source_quote": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_PF3",
+    "source_id": "PF3",
+    "text": "成分介绍列有何首乌（POLYGONUM MULTIFLORUM）根提取物和当归（ANGELICA SINENSIS）提取物。",
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "supplied_product_record",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "supplier",
+    "source_refs": [
+      {
+        "source_quote": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_PF4",
+    "source_id": "PF4",
+    "text": "成分介绍还列有丹参（SALVIA MILTIORRHIZA）根提取物和三七（PANAX NOTOGINSENG）根提取物。",
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "supplied_product_record",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "supplier",
+    "source_refs": [
+      {
+        "source_quote": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_PF5",
+    "source_id": "PF5",
+    "text": "清洁调理成分介绍列有月桂醇聚醚硫酸酯钠和椰油酰胺丙基甜菜碱。",
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "supplied_product_record",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "supplier",
+    "source_refs": [
+      {
+        "source_quote": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_PF6",
+    "source_id": "PF6",
+    "text": "辅助成分介绍列有聚二甲基硅氧烷。",
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "supplied_product_record",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "supplier",
+    "source_refs": [
+      {
+        "source_quote": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_PF7",
+    "source_id": "PF7",
+    "text": "辅助成分介绍另列有氯化钠和香精。",
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "supplied_product_record",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "supplier",
+    "source_refs": [
+      {
+        "source_quote": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_PF8",
+    "source_id": "PF8",
+    "text": "辅助成分介绍列有苯氧乙醇及微量羟苯甲酯。",
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "supplied_product_record",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "supplier",
+    "source_refs": [
+      {
+        "source_quote": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_PF9",
+    "source_id": "PF9",
+    "text": "成分特点中标注不含酒精。",
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "supplied_product_record",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "supplier",
+    "source_refs": [
+      {
+        "source_quote": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_PF10",
+    "source_id": "PF10",
+    "text": "品牌资料记录产品pH值5.9；测试条件与原始报告未附。",
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "supplied_product_record",
+    "dimensions": [],
+    "source_kind": "supplier",
+    "source_refs": [
+      {
+        "source_quote": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  },
+  {
+    "id": "E_PF11",
+    "source_id": "PF11",
+    "text": "香气被品牌描述为草本清香，成分介绍同时列有香精。",
+    "subjects": [
+      "道和小绿瓶防脱洗发水"
+    ],
+    "statement_type": "product_fact",
+    "verification": "supplied_product_record",
+    "dimensions": [
+      "composition"
+    ],
+    "source_kind": "supplier",
+    "source_refs": [
+      {
+        "source_quote": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx"
+      }
+    ],
+    "measurement": null,
+    "complete_ingredients": false
+  }
+]

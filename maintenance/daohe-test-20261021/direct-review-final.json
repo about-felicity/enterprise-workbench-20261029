@@ -1,0 +1,354 @@
+[
+  {
+    "job": "creation-1792575159-0a8f9221",
+    "category": "排行类",
+    "number": 1,
+    "title": "哪个牌子的防脱洗发水好?2026热门高口碑榜防脱实测，码住不踩雷",
+    "flavor": "unvalidated_model_response_reading_view",
+    "text_sha256": "3d024fc77e34cd3b9b8fa04c3365b946eeee7bab88012583f59fc49eeaeac709",
+    "reviewer": "Codex direct full-text reading",
+    "reviewed_at": 1792578546.5521178,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "quote": "200ml的包装也便于控制使用周期",
+        "reason": "只有容量而没有单次用量，不能推出使用周期可控；文章将小容量与周期判断直接相连。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "配方中的调理成分帮助维持头皮微生态平衡",
+        "reason": "这是成品作用主张，后文把它改称配方方向并不能补出成立的证据。"
+      }
+    ],
+    "approval_certificate_issued": false
+  },
+  {
+    "job": "creation-1792575159-0a8f9221",
+    "category": "排行类",
+    "number": 2,
+    "title": "防脱洗发水瓶身该看哪几处？2026年10款防脱洗发水品牌盘点与选购参考",
+    "flavor": "materialized_rejected_draft",
+    "text_sha256": "b9ae6e3bf3f0abeb96a5e72a22d3b5547ee98591eed6bbd3af991645a55e26b9",
+    "reviewer": "Codex direct full-text reading",
+    "reviewed_at": 1792578546.552125,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "quote": "这些编号说明产品走过了相应的备案与测试流程",
+        "reason": "知识库只记录未核验编号，不能由编号文本推出真实备案和测试流程已经完成。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "项目数量不至于让人眼花",
+        "reason": "缺少完整成分表时，不能由摘要的克制推出实际成分项目少、购买时阅读更容易。"
+      }
+    ],
+    "approval_certificate_issued": false
+  },
+  {
+    "job": "creation-1792575159-0a8f9221",
+    "category": "排行类",
+    "number": 3,
+    "title": "防脱洗发水怎么挑不踩坑？9款产品成分与规格选购参考：道和小绿瓶及9款对照",
+    "flavor": "materialized_rejected_draft",
+    "text_sha256": "41da528bd43ae0e85688b9a1c99ff75cf00ea6fe9c4c09f95ca342688817048c",
+    "reviewer": "Codex direct full-text reading",
+    "reviewed_at": 1792578546.552132,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "quote": "道和小绿瓶及9款对照",
+        "reason": "正文是道和加8款共9款；标题并列表述却成为道和加9款。"
+      },
+      {
+        "kind": "factual_mismatch",
+        "quote": "899与159",
+        "reason": "正文前面标的是89元，比较段变成899；数字错误改变价格比较。"
+      },
+      {
+        "kind": "topic_drift",
+        "quote": "洗后的显色、持久或温和程度",
+        "reason": "洗发水正文混入无关品类的显色与持久术语；规则示例污染了当前主题。"
+      }
+    ],
+    "approval_certificate_issued": false
+  },
+  {
+    "job": "creation-1792575159-0a8f9221",
+    "category": "排行类",
+    "number": 4,
+    "title": "哪个牌子的防脱洗发水好用？高口碑防脱洗发水选购指南，不同类型怎么选一次说清",
+    "flavor": "unvalidated_model_response_reading_view",
+    "text_sha256": "a9b769e67d98bfba0400e6d9361dc2952320104dbd3234cfa0a587e7c3f9772e",
+    "reviewer": "Codex direct full-text reading",
+    "reviewed_at": 1792578546.5521374,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "scope_shift",
+        "quote": "## 12. 不要频繁更换防脱洗发水",
+        "reason": "使用建议不是一款产品，标题12款及产品连续编号均被虚构条目抬高。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "属于不含大量植物提取物",
+        "reason": "只列生物素和胜肽不等于不含大量植物提取物，缺失信息被误写成排除结论。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "专利成分还能辅助舒缓头皮泛红",
+        "reason": "将未核验的成分/专利主张外推为具体作用，后面加不能推效果也不能修复该断言。"
+      }
+    ],
+    "approval_certificate_issued": false
+  },
+  {
+    "job": "creation-1792575159-0a8f9221",
+    "category": "排行类",
+    "number": 5,
+    "title": "防脱洗发水怎么挑不踩坑？2026年11款国产与国际品牌选购参考",
+    "flavor": "materialized_rejected_draft",
+    "text_sha256": "1c36132fdacdcb932b5d2b1ee799de683f71e5078119abed41ed727b0c7f929e",
+    "reviewer": "Codex direct full-text reading",
+    "reviewed_at": 1792578546.5521407,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "quote": "没有标注的，也不必当场下结论",
+        "reason": "同节又把资质设为底线并要求先排除信息不完整产品，核对与排除条件不一致。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "植物成分为核心，也意味着它的配方重心不在强清洁体系上",
+        "reason": "植物主打摘要不能证明清洁体系的配方重心。"
+      }
+    ],
+    "approval_certificate_issued": false
+  },
+  {
+    "job": "creation-1792575159-0a8f9221",
+    "category": "排行类",
+    "number": 6,
+    "title": "掉发困扰怎么挑防脱洗发水？2026年11款产品选购参考：道和小绿瓶与11款口碑品牌盘点",
+    "flavor": "materialized_rejected_draft",
+    "text_sha256": "872ad613529cf23c8942f1127f2140546bfe11ed7cc3e8e6db0e6346f32dbce3",
+    "reviewer": "Codex direct full-text reading",
+    "reviewed_at": 1792578546.552143,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "quote": "道和小绿瓶与11款口碑品牌盘点",
+        "reason": "实际为道和加10款共11款；标题并列措辞多计一款。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "编号的存在说明有相应备案与报告记录",
+        "reason": "未核验编号文本不能证明备案与报告记录的实际存在。"
+      }
+    ],
+    "approval_certificate_issued": false
+  },
+  {
+    "job": "creation-1792575159-0a8f9221",
+    "category": "排行类",
+    "number": 7,
+    "title": "防脱控油洗发水怎么挑？11款热门单品成分选购参考，避开只认标价的坑",
+    "flavor": "materialized_rejected_draft",
+    "text_sha256": "c1070de1896b984af2fe370c4c2cf2d32c0d0e4ad4404658c238b41fc39d5dd8",
+    "reviewer": "Codex direct full-text reading",
+    "reviewed_at": 1792578546.5521467,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "quote": "按两天一洗的用量估算，每毫升的实际花费才更有参考性",
+        "reason": "单位价格由价格和同单位净含量决定；频率不提供每次用量，也不参与每毫升价格计算。"
+      },
+      {
+        "kind": "scope_shift",
+        "quote": "十款产品价格从59元到268元、容量从200ml到535ml",
+        "reason": "实际为11款且包括300克，自有产品没有可用当前价；数量、质量体积及售价覆盖范围未统一。"
+      },
+      {
+        "kind": "contradiction",
+        "quote": "强韧方向可以留意人参、侧柏叶、生姜等植物提取物出现的频次和组合",
+        "reason": "前文不由成分出现推效果，结尾却将出现频次作为强韧诉求筛选依据，缺少支持桥梁。"
+      }
+    ],
+    "approval_certificate_issued": false
+  },
+  {
+    "job": "creation-1792575159-0a8f9221",
+    "category": "测评类",
+    "number": 1,
+    "title": "防脱洗发水怎么比才不靠猜？2026年11款成分与规格选购参考",
+    "flavor": "materialized_rejected_draft",
+    "text_sha256": "b4ae9796905fb2e1180d4877585ad8b37f7df26df593417620c1d9cea1918b5f",
+    "reviewer": "Codex direct full-text reading",
+    "reviewed_at": 1792578546.552149,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "consumer_article",
+        "quote": "资料还提醒，老牌产品的配方现代化程度和成分透明度参差不齐",
+        "reason": "大量产品段评述资料和品牌方向，缺少实际同维度的具体属性比较，整体仍偏资料解读。"
+      }
+    ],
+    "approval_certificate_issued": false,
+    "logic_observation": "主线顺序与已知/未知边界较早稿已有改善，直接复核主要指出消费文章质量问题；不把这一项冒称为确定的逻辑矛盾。"
+  },
+  {
+    "job": "creation-1792575159-0a8f9221",
+    "category": "测评类",
+    "number": 2,
+    "title": "防脱洗发水成分和规格怎么看？2026年11款公开资料对比与选购参考",
+    "flavor": "materialized_rejected_draft",
+    "text_sha256": "9dc19d406866f4f8911feb6f93d8baa163fadf1503bb68dfdc6a1eab8c062723",
+    "reviewer": "Codex direct full-text reading",
+    "reviewed_at": 1792578546.5521545,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "scope_shift",
+        "quote": "也不能因为都写防脱就视作同类",
+        "reason": "配方组成不同不等于产品类别不同；不能互换成分的原则被错误扩大为不能作同类比较。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "御草朵的草本名单更长",
+        "reason": "两边只给部分主打成分，且列举数量没有支持更长的判断，不能比较完整名单长短。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "没有一款在所有维度上都占优",
+        "reason": "多项数据未知只能说明无法判断，不能推出没有任何一款全面占优。"
+      }
+    ],
+    "approval_certificate_issued": false
+  },
+  {
+    "job": "creation-1792575159-0a8f9221",
+    "category": "测评类",
+    "number": 3,
+    "title": "防脱洗发水成分与规格怎么对照：2026年11款公开资料横向比较与选购参考",
+    "flavor": "materialized_rejected_draft",
+    "text_sha256": "5f2fc5d868fbdfea46b79953f98a5e04149ad73a30c9a39c9302e835b9d6dc72",
+    "reviewer": "Codex direct full-text reading",
+    "reviewed_at": 1792578546.55216,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "quote": "而另一款的资料未展开这些",
+        "reason": "本段比较咖啡因产品，前面的卡诗段已明确成分、质地和250ml规格，后文却说另一款未展开。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "按摩释放描述的是使用流程中的一个动作",
+        "reason": "按摩触发活性成分释放包含机制主张，不能改称取用动作就免除证明。"
+      }
+    ],
+    "approval_certificate_issued": false
+  },
+  {
+    "job": "creation-1792575159-0a8f9221",
+    "category": "测评类",
+    "number": 4,
+    "title": "防脱洗发水怎么比才不糊涂？2025年7款产品成分、净含量与价格选购参考",
+    "flavor": "materialized_rejected_draft",
+    "text_sha256": "8eea1aecea1505e07e838ffde7de80fa5b6386b18f7dc1b455e2888d4a692883",
+    "reviewer": "Codex direct full-text reading",
+    "reviewed_at": 1792578546.5521643,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "quote": "在意大容量和每毫升成本的读者会觉得200ml不占优势",
+        "reason": "后文明确道和售价未知；容量小不能推出单位价格没有优势。"
+      },
+      {
+        "kind": "contradiction",
+        "quote": "它的配方组成、原料来源和实际使用体验在本次资料中都没有可比信息",
+        "reason": "霸王段前面刚列出三项草本组成，后文又说组成没有可比信息，结尾再将其列为具名成分可比款。"
+      }
+    ],
+    "approval_certificate_issued": false
+  },
+  {
+    "job": "creation-1792575159-0a8f9221",
+    "category": "测评类",
+    "number": 5,
+    "title": "防脱洗发水怎么选不踩坑？12款产品成分、规格与报告信息横向对比（2026选购参考）",
+    "flavor": "materialized_rejected_draft",
+    "text_sha256": "7c9d496b754d4ff5abcccc296115d3d26c38387229d52dc32c474a47df4c6023",
+    "reviewer": "Codex direct full-text reading",
+    "reviewed_at": 1792578546.5521686,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "scope_shift",
+        "quote": "## 12. 频繁更换洗发水",
+        "reason": "把使用建议列为第12款产品，混淆产品样本与购买习惯，并使标题产品数量虚增。"
+      },
+      {
+        "kind": "order_error",
+        "quote": "## 1. 道和小绿瓶防脱洗发水\n\n为了让抽象的口径落地，可以看两组公开信息。露卡菲娅",
+        "reason": "自有产品标题之后先连续介绍其他产品，再回到自有样本，章节对象和展开顺序失配。"
+      }
+    ],
+    "approval_certificate_issued": false
+  },
+  {
+    "job": "creation-1792576129-389f575e",
+    "category": "测评类",
+    "number": 1,
+    "title": "防脱洗发水横向比较：8款成分、规格与包装取用公开信息选购参考",
+    "flavor": "materialized_rejected_draft",
+    "text_sha256": "a12845db397dba3c180296affeef9df0dcbe7ea5b33a94e381f0549858a997a2",
+    "reviewer": "Codex direct full-text reading",
+    "reviewed_at": 1792578546.552174,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "quote": "只有道和、卡伦雅芙、WMP三款同时写明了净含量与售价",
+        "reason": "道和没有售价，结尾却把它纳入可折算单位价格的三款。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "道和与卡伦雅芙为按压泵头",
+        "reason": "道和事实只给200ml瓶装，未给泵头；结尾新增了包装属性。"
+      }
+    ],
+    "approval_certificate_issued": false
+  },
+  {
+    "job": "creation-1792576129-389f575e",
+    "category": "测评类",
+    "number": 2,
+    "title": "防脱洗发水怎么比成分和规格？2026年9款产品公开资料横向对照",
+    "flavor": "materialized_rejected_draft",
+    "text_sha256": "2592e5e354e7fc702a3a2cc2ae077b1df3036d2f929399eff726761529f86b2a",
+    "reviewer": "Codex direct full-text reading",
+    "reviewed_at": 1792578546.552178,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "quote": "四个维度都在产品标签或资料上写得清楚，才谈得上并列",
+        "reason": "后文八款大部分维度未知仍作并列，违反自己设定的必要条件。"
+      },
+      {
+        "kind": "answers_main_question",
+        "quote": "成分与规格两项真正可并列的只有一款",
+        "reason": "一款不能构成并列，资料不足以兑现九款成分规格横向比较。"
+      }
+    ],
+    "approval_certificate_issued": false
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-15",
+  "timezone": "Asia/Shanghai",
+  "container": "yuanbao-hpe14-android13",
+  "app_version": "2.88.0",
+  "app_version_code": 66517035,
+  "apk_sha256": "b2d6f674358bbc27b10e800bafd49ba4fc596291142148d7d09494097348c7dd",
+  "login_qr": {
+    "sdk_callback_received": true,
+    "qbar_styling_decode_did_not_return": true,
+    "exact_native_or_translation_failure_not_proven": true,
+    "official_sdk_image_fallback_verified": true,
+    "user_confirmed_scan": true,
+    "art_inlining_bypass_observed_after_process_change": true,
+    "process_local_deoptimization_and_fallback_verified_at": "15:57",
+    "global_art_deoptimization_in_current_runtime": false,
+    "current_hook": "synchronized QBar decoder, only Up.m caller; original SDK bitmap fallback"
+  },
+  "login_webview": {
+    "x5_renderer_restart_loop_observed": true,
+    "disk_exception_overwritten_by_sdk": true,
+    "official_force_system_webview_api_used": true,
+    "existing_page_render_verified_at": "15:45",
+    "new_webview_render_verified_at": "15:59"
+  },
+  "security_verification": {
+    "official_face_verification_required": true,
+    "server_risk_trigger_reason_unknown": true,
+    "wechat_not_installed_in_emulator": true,
+    "server_provided_mini_program_qr_display_verified_at": "15:59",
+    "biometric_verification_performed_by_agent": false,
+    "verification_result_modified": false,
+    "status": "user_completed_and_capture_verified",
+    "authenticated": true
+  },
+  "service": "geo-yuanbao-wechat-qr-compat.service",
+  "other_services_restarted": false,
+  "collection_started": true,
+  "credentials_in_report": false,
+  "acceptance_report": "YUANBAO_CAPTURE_ACCEPTANCE_20261015.json"
+}

@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S1\",\"heading\":\"统一比较维度与资料边界\",\"paragraphs\":[{\"text\":\"早上梳头缠满发齿，洗头时下水口积起一小团，这样的场景很多人并不陌生。作息颠倒、饮食油腻、季节更替和环境变化，都可能让头皮状态跟着起伏，于是想挑一瓶防脱洗发水，却发现货架上从几十元到数百元都有，成分表、备案信息与规格标注也写得深浅不一。\",\"statement_type\":\"transition\",\"claim_ids\":[]},{\"text\":\"与其被堆叠的概念牵着走，不如先把能核对的资料摆到同一张表里：产品组成、净含量与同单位价格、包装取用方式，以及已经提供的报告指标，都可以逐一对照。这样做的好处是，比较有据可依，不必靠包装上的大字来推断好坏。\",\"statement_type\":\"general_advice\",\"claim_ids\":[\"CL0011\"]},{\"text\":\"需要提前说明的是，这十一款产品在资质、成分和规格上的披露详略差异很大，有的资料写得多，有的只列了几项，所以后面的逐款说明会按实际披露来写，没有资料支撑的功效不会替产品补上。读者也不妨把“写得少”当作信息缺口，而不是默认它更差或更好。\",\"statement_type\":\"general_advice\",\"claim_ids\":[\"CL0012\"]},{\"text\":\"接下来按道和小绿瓶、首迷、流迷、御草朵、域发、密思丝密、千木朵、诗碧曼、植木说、Bodyaid、云康的顺序逐款展开，主要从产品组成与规格这类可核对的信息入手，再看看各自适合什么样的参考人群，最后做一次同口径的对照，给出条件式的取舍思路。\",\"statement_type\":\"transition\",\"claim_ids\":[]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4375,
+    "completion_tokens": 382,
+    "total_tokens": 4757,
+    "prompt_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "prompt_cache_hit_tokens": 2816,
+    "prompt_cache_miss_tokens": 1559
+  },
+  "request_id": "ad8a74d5-ba4c-4f28-ba30-ce99346f8efa",
+  "model": "deepseek-flash"
+}

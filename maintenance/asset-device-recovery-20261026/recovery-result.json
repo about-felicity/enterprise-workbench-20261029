@@ -1,0 +1,14 @@
+{
+  "restored_device_ids": [
+    39,
+    40
+  ],
+  "restored_assignment_ids": [
+    37,
+    38
+  ],
+  "other_rows_unchanged": true,
+  "device_count": 59,
+  "at": "2026-10-26T09:02:47.433975+00:00",
+  "evidence": "Latest successful DELETE requests: 2026-10-26 16:48:52 and 16:48:56 Asia/Shanghai"
+}

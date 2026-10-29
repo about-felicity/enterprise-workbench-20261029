@@ -1,0 +1,2 @@
+# Additional dependency for product image validation.
+Pillow==12.3.0

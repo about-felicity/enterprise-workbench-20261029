@@ -1,0 +1,11 @@
+[console_scripts]
+geo-api-worker = geo_source_cards.api_worker:main
+geo-archive-sync = geo_source_cards.archive_sync:main
+geo-daily-editorial = geo_source_cards.daily_editorial:main
+geo-desktop = geo_source_cards.desktop_app:main
+geo-editorial = geo_source_cards.editorial_pipeline:main
+geo-session-watch = geo_source_cards.session_watch:main
+geo-source-analyze = geo_source_cards.source_analysis:main
+geo-source-cards = geo_source_cards.cli:main
+geo-staged-editorial = geo_source_cards.staged_editorial:main
+geo-writer-watch = geo_source_cards.writer_handoff:main

@@ -1,0 +1,331 @@
+{
+  "at": 1792734558.2641997,
+  "health": {
+    "batch": "geo-panel-yuanbao-20261023-090004-d6b66215",
+    "planned": 168,
+    "prompt_mode": "question_only",
+    "model": "yuanbao",
+    "captured": 130,
+    "geo_processed": 130,
+    "delivery_errors": [],
+    "nontext_observations": 1,
+    "nontext_processed": 1,
+    "nontext_pending": 0,
+    "unavailable": 1,
+    "time": 1792734554.0621204,
+    "heartbeat_expires_at": 1792734704.062121,
+    "bridge_pid": 16866,
+    "tasks": {
+      "completed": 130,
+      "completed_nontext": 1,
+      "pending": 36,
+      "prepared": 1
+    },
+    "status": "running",
+    "memory": {
+      "app_alive": true,
+      "pid": 4403,
+      "java_alloc_kib": 52485,
+      "java_size_kib": 150789,
+      "java_limit_kib": 524288,
+      "java_fraction": 0.10010719299316406,
+      "native_alloc_kib": 233012,
+      "app_pss_kib": 857736,
+      "container_bytes": 1310412800,
+      "container_working_bytes": 1093947392,
+      "container_limit_bytes": 4294967296,
+      "container_fraction": 0.25470447540283203,
+      "app_pss_fraction": 0.2045001983642578,
+      "sampled_at": 1792734494.5803738,
+      "last_exit": {
+        "pid": 17671,
+        "reason": "low_memory"
+      },
+      "pending": "",
+      "high_samples": 0
+    },
+    "progress": {
+      "phase": "awaiting_ack",
+      "task_id": "cb4feed4-3e97-5626-9f61-556d2f51c0a3",
+      "ordinal": 132,
+      "changed_at": 1792734547.177526,
+      "reason": "",
+      "deadline_at": 1792735444.7170315
+    }
+  },
+  "cases": [
+    {
+      "ordinal": 125,
+      "state": "completed_nontext",
+      "request_id": "876a3acdca7609a26c7eb286254afba7",
+      "answer_id": "0RTB4lSYXbs_2",
+      "capture_retries": 0,
+      "body_chars": 113,
+      "sources": 0,
+      "kind": "video_only",
+      "rich_cards": 1,
+      "events": {
+        "completed_nontext": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 126,
+      "state": "completed",
+      "request_id": "890ed6a0ccd456f4b926c92b42270132",
+      "answer_id": "0RTB8TtiZIe_2",
+      "capture_retries": 0,
+      "body_chars": 2542,
+      "sources": 42,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 127,
+      "state": "completed",
+      "request_id": "1a8f8aacca9ef5231d8cda9717d281d1",
+      "answer_id": "0RTBCBTEPwG_2",
+      "capture_retries": 0,
+      "body_chars": 1867,
+      "sources": 49,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 128,
+      "state": "completed",
+      "request_id": "4ea60252661d94bfb3b0d756fe18e830",
+      "answer_id": "0RTBFvO4suO_2",
+      "capture_retries": 0,
+      "body_chars": 2059,
+      "sources": 17,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 129,
+      "state": "completed",
+      "request_id": "21120235bc6c56c5e7c44ddd974931ba",
+      "answer_id": "0RTHyzijsjA_2",
+      "capture_retries": 0,
+      "body_chars": 2107,
+      "sources": 41,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 130,
+      "state": "completed",
+      "request_id": "d35d4e6f46896c1e193118c202968768",
+      "answer_id": "0RTI2jrmICW_2",
+      "capture_retries": 0,
+      "body_chars": 1575,
+      "sources": 44,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 131,
+      "state": "completed",
+      "request_id": "2dae19feed6abb8a26aeafb08263c8c1",
+      "answer_id": "0RTI6R2scK0_2",
+      "capture_retries": 0,
+      "body_chars": 1961,
+      "sources": 16,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "completed": 1,
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 132,
+      "state": "prepared",
+      "request_id": null,
+      "answer_id": null,
+      "capture_retries": 0,
+      "body_chars": 0,
+      "sources": 0,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "enqueued": 1,
+        "send_click_intent_committed": 1,
+        "send_intent_committed": 1,
+        "send_protocol_v2": 1,
+        "send_tap_returned": 1
+      }
+    },
+    {
+      "ordinal": 133,
+      "state": "pending",
+      "request_id": null,
+      "answer_id": null,
+      "capture_retries": 0,
+      "body_chars": 0,
+      "sources": 0,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "enqueued": 1
+      }
+    },
+    {
+      "ordinal": 134,
+      "state": "pending",
+      "request_id": null,
+      "answer_id": null,
+      "capture_retries": 0,
+      "body_chars": 0,
+      "sources": 0,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "enqueued": 1
+      }
+    },
+    {
+      "ordinal": 135,
+      "state": "pending",
+      "request_id": null,
+      "answer_id": null,
+      "capture_retries": 0,
+      "body_chars": 0,
+      "sources": 0,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "enqueued": 1
+      }
+    },
+    {
+      "ordinal": 136,
+      "state": "pending",
+      "request_id": null,
+      "answer_id": null,
+      "capture_retries": 0,
+      "body_chars": 0,
+      "sources": 0,
+      "kind": null,
+      "rich_cards": 0,
+      "events": {
+        "enqueued": 1
+      }
+    }
+  ],
+  "postgres": [
+    {
+      "status": "success",
+      "n": 130
+    }
+  ],
+  "mapping_files": 224,
+  "mapping_mismatches": [],
+  "app_pid": "4403",
+  "memory_events": "low 0\nhigh 0\nmax 47802\noom 7\noom_kill 4\noom_group_kill 0",
+  "service": "active",
+  "nontext_receipts": 1,
+  "deployment": {
+    "at": 1792734196.7071557,
+    "backup": "/opt/monitor/geo-capture/maintenance/20261023-yuanbao-recurrence/source-before-1792734194513694913",
+    "files": {
+      "/home/user/redroid-yuanbao/native_core.py": "64edb1c81d4221a36198e1949962befae300420689c11784b85951f4a927fc84",
+      "/home/user/redroid-yuanbao/native_client.py": "fff5a94473bea530234d7ecad75b609824773b3c20066129cfae9db7a62abc89",
+      "/home/user/redroid-yuanbao/stored_replacements.py": "d220456588d9d3c4acef0ccbefc114826f2301f8286a8c8857039edb6a130a05",
+      "/home/user/redroid-yuanbao/tests/test_stored_replacements.py": "ab6185a084a00831437775a5abdc230d10797c6bdd3668614a1589eaa2ecedec"
+    },
+    "before": {
+      "native_core.py": "096263fae25fbb8175c19dedd124181e5ad9220e5e99e49842f2b73b68716e10",
+      "native_client.py": "05bb0bc9911ca17940f8207d0b09bd9e28c18355c8887303248f31d29ad937a5",
+      "stored_replacements.py": null,
+      "tests/test_stored_replacements.py": null
+    },
+    "only_reader_restarted": true,
+    "app_pid_unchanged": "4403",
+    "queue_reset": false,
+    "question_resent": false,
+    "article_budget_and_candidate_unchanged": true,
+    "article_guard": {
+      "files": {
+        "/home/user/geo-editorial/runtime-api/settings.json": "001212144d87844eb891335c660aedeca3ec9f29370c02244d52732c0c63deff",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/geo_source_cards/structure_analyzer.py": "dd9d2b04f824b724492b71624fe2a6f7adc8a960aad965c92453e0daba132ade",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/geo_source_cards/review_arbitration.py": "ad45f5629aad92a090e2c6d4bb11936aa81ae987eb83d19cda880b8ffd592e51",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/geo_source_cards/consumer_prompts.py": "2920d28e61e74b50a9a7b42c59059d596f5cbbcf3f000422d659ea27a4c8bfb3",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/geo_source_cards/repair_router.py": "9cda2d0f1bdc9fb42881e16a48637efa74c4de08d9e0459914c5f5eb78bc3799",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/geo_source_cards/review_inputs.py": "c8ff98708204ef2ce176c6dd2eeb7c9702e4421e5ef583c05895f612ca80a5ec",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/geo_source_cards/section_writer.py": "de3a32201b30279866b2a93fab4dbbf300e9f7bc67aedcf3db2079c71011bec1",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/geo_source_cards/article_logic.py": "82994f4ef69f319899c90d0b1215bad72d604665c447e83006c39048d438dea5",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/geo_source_cards/review_quality.py": "5da64b2cd498a58c3dffc83eb89da1d39d0629f8c420317dfe190728815d8dcf",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/geo_source_cards/daily_editorial.py": "c98993370318ea24f0fdf2d72e7f62f64148503bd13570f43f5fbe7548d12c75",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/geo_source_cards/api_worker.py": "d3fcdc544f9a81a7f296a321754221270186928ad053f5bf6cd2d6ca27b26c45",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/geo_source_cards/structure_protocol.py": "c121959b8ed9a0d448f8ee538ef6090008ae4043d93bdcf3569dc71a903d5dd0",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/creation/runtime.py": "abba3c1084e0953740a00916c03987efab9d71e1d60afc7aee0a637772cbfb8d",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/tests/test_section_budget_revision.py": "a3a475c6dae2915772b5b24d968d9d0ac0c351e594c4e9b7e4c3e8edf81a7b7c",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/tests/test_b2_repair_entry.py": "51308666531d8215f0ccb4b70664b08aee4ce5d5bf783b582b901c82916e99fd",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/tests/test_arbitration_batches.py": "6f0835d15c3b695f9f236e2650a00768b655cd72ef1935b8d3963c9f8dd61185",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/tests/test_structure_recovery.py": "3f0a3cfd0882d529844f35ce511e433d4237e79f908705976b8dfcd5ebdd4bba",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/tests/test_three_agent_quality.py": "f2e42cd50fd156a64de6c0dc31f3c1b6c4cd41676a043e851330d509557a39af",
+        "/opt/monitor/geo-capture/maintenance/20261023-structure-recovery-v3-final/candidate-source/tests/test_b1_b2_offline.py": "be144ebe82a5e10dbda1b229a7da2851e5ecca6e06a3f9992e7cced1bc561267"
+      },
+      "ledger_rows": 2006,
+      "ledger_sha256": "d3503d5d6e1ebe0efe250f6f77f7c37036e9b2d4cde5d0dd6e352ef4426d3f1e"
+    }
+  },
+  "regression": {
+    "yuanbao_tests": 60,
+    "new_tests": 14,
+    "shared_tests": 91,
+    "passed": 151,
+    "failures": 0,
+    "new_model_questions_in_tests": 0
+  }
+}

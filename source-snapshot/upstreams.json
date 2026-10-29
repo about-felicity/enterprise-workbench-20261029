@@ -1,0 +1,18 @@
+{
+  "geo-source-card-collectors": {
+    "head": "d6b853cfcb8001fecb9b33a436e23732c9a12743",
+    "source_changes_in_snapshot": true
+  },
+  "redroid": {
+    "head": "e32446b85e112b64354d6e9a0e511a89a2419c95",
+    "source_changes_in_snapshot": false
+  },
+  "Scrapling": {
+    "head": "e0d4d7563207b70c2cb38487c4e0dcbe0e2f04ca",
+    "source_changes_in_snapshot": false
+  },
+  "doubao-headless-technical-docs": {
+    "head": "9ad93e39eefbc4ded8522f61033568db78b177cf",
+    "source_changes_in_snapshot": false
+  }
+}

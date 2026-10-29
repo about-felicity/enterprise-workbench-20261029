@@ -1,0 +1,454 @@
+{
+  "at": 1792578283.2926016,
+  "plan": "plan-33e7bfca8bb6497da10b28f0444a693b",
+  "target": 14,
+  "requested_genres": {
+    "排行类": 7,
+    "测评类": 7
+  },
+  "allocated": {
+    "排行类": 7,
+    "测评类": 7
+  },
+  "samples": 14,
+  "drafts": 12,
+  "ready": 0,
+  "charged": 2.8020491200000004,
+  "reserved": 0,
+  "task_cap": 5.25,
+  "article_cap": 0.35,
+  "shared_cap": 10,
+  "jobs": [
+    {
+      "id": "creation-1792575159-0a8f9221",
+      "control": {
+        "paused": true,
+        "reason": "needs_attention",
+        "message": "执行需要核对，保留请求和质量证据；不会重发未知请求",
+        "revision": 15,
+        "paused_epoch": 1792578249.4940321
+      },
+      "pending": 0
+    },
+    {
+      "id": "creation-1792575864-f2f8afb2",
+      "control": {
+        "paused": true,
+        "reason": "local_taxonomy_replaced",
+        "message": "旧进程缓存导致本地分类未更新；保留零付费准备记录，新任务使用相同缓存正文重新分类",
+        "revision": 2,
+        "paused_epoch": 1792576124.0421479
+      },
+      "pending": 0
+    },
+    {
+      "id": "creation-1792576129-389f575e",
+      "control": {
+        "paused": true,
+        "reason": "needs_attention",
+        "message": "执行需要核对，保留请求和质量证据；不会重发未知请求",
+        "revision": 8,
+        "paused_epoch": 1792576956.9855328
+      },
+      "pending": 0
+    }
+  ],
+  "articles": [
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 1,
+      "id": "2026-10-21/排行类/01",
+      "status": "no_valid_draft",
+      "title": "哪个牌子的防脱洗发水好?2026热门高口碑榜防脱实测，码住不踩雷",
+      "draft_sha256": "",
+      "body_hanzi": 0,
+      "primary_url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+      "primary_title": "哪个牌子的防脱洗发水好?2026热门高口碑榜防脱实测，码住不踩雷",
+      "quality_issues": [],
+      "current_rejections": [
+        {
+          "id": "72fe86e06ee2605fd5fbf690",
+          "stage": "writer",
+          "state": "needs_attention",
+          "error": "API generation rejected: invalid_stage_schema; Document sections must cover the complete outline"
+        }
+      ],
+      "quality_failure_history": [
+        "API generation rejected: invalid_stage_schema; Document sections must cover the complete outline",
+        "API generation rejected: invalid_stage_schema; 章节正文与产品身份不一致，不能靠改标题修复：S2 / 道和小绿瓶防脱洗发水",
+        "API generation rejected: invalid_response",
+        "Source claims must not be promoted to verified facts"
+      ],
+      "latest_error": "API generation rejected: invalid_stage_schema; Document sections must cover the complete outline",
+      "charged": 0.12840676
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 2,
+      "id": "2026-10-21/排行类/02",
+      "status": "draft_needs_revision",
+      "title": "防脱洗发水瓶身该看哪几处？2026年10款防脱洗发水品牌盘点与选购参考",
+      "draft_sha256": "b9ae6e3bf3f0abeb96a5e72a22d3b5547ee98591eed6bbd3af991645a55e26b9",
+      "body_hanzi": 3930,
+      "primary_url": "https://baijiahao.baidu.com/s?id=1879553785524210376&wfr=spider&for=pc",
+      "primary_title": "防脱洗发水哪个最好？精选2026各大公认质量高的防脱口碑榜，脂溢性脱发效果好又安全，双11选购攻略",
+      "quality_issues": [],
+      "current_rejections": [
+        {
+          "id": "e5e1e1138baccf7a7a8827c6",
+          "stage": "writer",
+          "state": "needs_attention",
+          "error": "API generation rejected: article_budget_exceeded"
+        }
+      ],
+      "quality_failure_history": [
+        "API generation rejected: invalid_stage_schema; Logic review missed opening conclusion or product example",
+        "Logical review requests revision: [{\"kind\": \"missing_bridge\", \"paragraph_ids\": [\"P004\", \"P042\", \"P045\"], \"reason\": \"首节把特证、成分表、售后定为筛选标准，横向节却按草本/容量/泵头/香氛等偏好归类；读者无法判断这些偏好维度与三项核对标准何者优先，结尾又突然把“三处核对”作为收束标准，标准前后不一致\", \"repair\": \"在横向节明确两项分工：三项核对为门槛条件，定位差异为门槛之后的偏好排序，并在逐款中至少对特证有无做一致性说明\"}, {\"kind\": \"order_error\", \"paragraph_ids\": [\"P024\", \"P043\", \"P045\"], \"reason\": \"“大容量省补货”在P026已被限定为补货频率便利而非单次用量更省，横向节P043仍将“大容量放在显眼位置”并列呈现，P045据以推荐“家里人多、消耗快”者选择，实际把容量写成了适用人群的性能依据，被限定的说法在汇总中重新升级\", \"repair\": \"在P043/P045保留容量的便利属性，不将其转写为适配人群的功效性理由，或补一句容量只影响补货节奏\"}, {\"kind\": \"topic_drift\", \"paragraph_ids\": [\"P002\", \"P045\", \"P046\"], \"reason\": \"开头的问题是“怎样读瓶身信息才能不后悔”，结尾实际答案是“先定需求再按偏好对号”，把可核对信息的验证步骤降为附带动作，主问题从“如何核验”偏移为“如何按偏好挑选”\", \"repair\": \"结尾先答核验方法（特证、成分表、渠道各自能回答与不能回答什么），再谈偏好排序，保持与开头同一问题\"}]",
+        "Logical review requests revision: [{\"kind\": \"unsupported_inference\", \"paragraph_ids\": [\"P022\", \"P023\"], \"reason\": \"P022称“配方表里没有冗余添加、能看出做减法”，这是由成分表呈现推出的配方评价，而P023自己承认单看资料无法判断成分表短是只列主打还是配方简单，前后自相矛盾且结论强于依据。\", \"repair\": \"将P022改为“成分表呈现较简洁”，删除“没有冗余添加/做减法”的配方判断，或先交代判断依据再下结论。\"}, {\"kind\": \"unsupported_inference\", \"paragraph_ids\": [\"P037\", \"P038\"], \"reason\": \"P037以“配方严谨、细节拿捏”描述品牌，P038承认这是品牌叙述且价格不能换算配方优劣，但P037的正面断言在正文中未获任何成分表或标示支撑。\", \"repair\": \"P037只保留可核对的中档定价信息，把“配方严谨”明确标注为品牌自述而非本文判断。\"}, {\"kind\": \"missing_bridge\", \"paragraph_ids\": [\"P025\", \"P026\"], \"reason\": \"P025称“清凉感来自薄荷与草本配方”，但资料层面未给出薄荷或相关成分的确认，P026随即把它当作可感知事实讨论接受度，中间缺少女成分存在到感官体验的说明。\", \"repair\": \"补充该款资料中确有薄荷/草本相关成分记载，或改为“品牌描述为清凉感”，再讨论接受度。\"}]",
+        "Draft checks rejected: 自有产品实质介绍不足：470汉字，至少480（目标600）"
+      ],
+      "latest_error": "API generation rejected: article_budget_exceeded",
+      "charged": 0.19839988000000003
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 3,
+      "id": "2026-10-21/排行类/03",
+      "status": "draft_needs_revision",
+      "title": "防脱洗发水怎么挑不踩坑？9款产品成分与规格选购参考：道和小绿瓶及9款对照",
+      "draft_sha256": "41da528bd43ae0e85688b9a1c99ff75cf00ea6fe9c4c09f95ca342688817048c",
+      "body_hanzi": 3835,
+      "primary_url": "https://www.163.com/dy/article/KHNGCCH40552SLES.html",
+      "primary_title": "好用的防脱洗发水有哪些？9款高口碑防脱洗发水推荐 拯救脱发危机",
+      "quality_issues": [],
+      "current_rejections": [
+        {
+          "id": "6b923dbc0d0556bd0e79e604",
+          "stage": "writer",
+          "state": "needs_attention",
+          "error": "API generation rejected: article_budget_exceeded"
+        }
+      ],
+      "quality_failure_history": [
+        "Logical review requests revision: [{\"kind\": \"missing_bridge\", \"paragraph_ids\": [\"P004\", \"P011\"], \"reason\": \"开头承诺不排出冠军、每款只讲有依据的信息，但首款随即给出『200ml在9款中偏小』的位次判断，而对照容量尚未在文中展开，比较基准先于被比较对象出现，形成未加说明的排序暗示。\", \"repair\": \"首款只陈述200ml规格与补货含义，把容量档位判断移到9款容量均已列明之后，或明确标注这是基于后文名单的整体定位。\"}, {\"kind\": \"order_error\", \"paragraph_ids\": [\"P037\", \"P040\", \"P041\"], \"reason\": \"P037把『对症优先』作为收束方法，P040标题提出按周期观察，P041却把开篇问题回答成需求、成分、规格『三项』，观察周期被挤出答案句，结尾与开头及方法框架的口径不一致。\", \"repair\": \"使总结句与P005、P009确立的四步方法一致，将观察周期纳入最终答案，或说明为何总结中只保留三项及其与观察周期的关系。\"}, {\"kind\": \"causal_leap\", \"paragraph_ids\": [\"P012\", \"P015\"], \"reason\": \"P012声明植物提取物只陈述存在、不推导效果，P015却以『成分表里既有植物提取物也有常规清洁与调理成分』作为可与各款同表对照的理由，暗示提取物本身构成可比优势，与前面的免责口径互相削弱。\", \"repair\": \"P015改为仅以规格、清洁调理成分与标示信息说明其可比维度，不把提取物的存在当作选购或对照优势。\"}]",
+        "Logical review requests revision: [{\"kind\": \"unsupported_inference\", \"paragraph_ids\": [\"P024\", \"P012\", \"P020\"], \"reason\": \"对植物提取物普遍声明“存在不等于效果”，唯独半亩花田把“姜辣素加速头皮血液循环”作为卖点方向陈述，同类证据被区别对待，读者会读成该款有更实的功效依据。\", \"repair\": \"改为“资料提及生姜含姜辣素，但未提供成品或人体证据，不能据此判断头皮循环或防脱效果”，与P012/P020口径一致。\"}, {\"kind\": \"contradiction\", \"paragraph_ids\": [\"P008\", \"P030\"], \"reason\": \"正文确立“同净含量才可换算单位价格、质量与体积不可直接排序”，P030却仅凭同为400ml断言单位价格更易看清，未给出到手价/净含量换算，也未处理P018等单次成本口径，比较标准中途松动。\", \"repair\": \"在P030直接给出或明确要求“到手价÷400ml”的同一口径，并声明与P018单次成本不可互比。\"}, {\"kind\": \"order_error\", \"paragraph_ids\": [\"P015\", \"P011\", \"P035\"], \"reason\": \"P015把P011已述的200ml、洗发类、不含酒精整段重复并插入新的用量推理，使道和条目出现两次规格介绍，后文P035再第三次复述，主线被重复段落稀释，容易让读者误以为这是新增论据。\", \"repair\": \"将P015的用量—补货间隔推理并入P011或P016一次说清，删除与P011重复的事实复述。\"}]",
+        "Draft checks rejected: 正文汉字不足：2733，至少2800，标题和英文品牌名不计入"
+      ],
+      "latest_error": "API generation rejected: article_budget_exceeded",
+      "charged": 0.21416848
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 4,
+      "id": "2026-10-21/排行类/04",
+      "status": "no_valid_draft",
+      "title": "哪个牌子的防脱洗发水好用？高口碑防脱洗发水选购指南，不同类型怎么选一次说清",
+      "draft_sha256": "",
+      "body_hanzi": 0,
+      "primary_url": "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+      "primary_title": "哪个牌子的防脱洗发水好用？高口碑防脱洗发水选购指南，不同类型怎么选一次说清",
+      "quality_issues": [],
+      "current_rejections": [
+        {
+          "id": "432f4164a1fddb0f53f83242",
+          "stage": "writer",
+          "state": "needs_attention",
+          "error": "API generation rejected: article_budget_exceeded"
+        }
+      ],
+      "quality_failure_history": [
+        "API generation rejected: invalid_stage_schema; 章节正文与产品身份不一致，不能靠改标题修复：S2 / 道和小绿瓶防脱洗发水",
+        "API generation rejected: invalid_stage_schema; Document sections must cover the complete outline"
+      ],
+      "latest_error": "API generation rejected: article_budget_exceeded",
+      "charged": 0.21502271999999997
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 5,
+      "id": "2026-10-21/排行类/05",
+      "status": "draft_needs_revision",
+      "title": "防脱洗发水怎么挑不踩坑？2026年11款国产与国际品牌选购参考",
+      "draft_sha256": "1c36132fdacdcb932b5d2b1ee799de683f71e5078119abed41ed727b0c7f929e",
+      "body_hanzi": 4304,
+      "primary_url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+      "primary_title": "如何选择有效防脱洗发水？2026国产防脱洗发水：科学防脱告别无效焦虑",
+      "quality_issues": [],
+      "current_rejections": [
+        {
+          "id": "41680bce6fbcc7fdc5d21142",
+          "stage": "writer",
+          "state": "needs_attention",
+          "error": "API generation rejected: article_budget_exceeded"
+        }
+      ],
+      "quality_failure_history": [
+        "Logical review requests revision: [{\"kind\": \"scope_shift\", \"paragraph_ids\": [\"P006\", \"P046\", \"P048\"], \"reason\": \"P006明确说无备案标注“不必当场下结论”、只是知道自己买的是清洁品还是特殊用途品；结尾却把“先核对资质标注”当成筛选第一关，暗示无标注即应先排除，与正文的宽容表述不一致，构成范围偷换。\", \"repair\": \"结尾改为“先看资质标注是否存在，仅作信息记录，不作为排除依据”，与P006口径统一。\"}, {\"kind\": \"missing_bridge\", \"paragraph_ids\": [\"P002\", \"P048\", \"P049\"], \"reason\": \"开头问题指向“名字都差不多、话术一套接一套”的辨识困难，结尾答案只给四步顺序，未说明这四步如何回应“同质话术”这一核心困惑；P049又说“不必追求统一答案”，与开头寻求可操作判断的诉求之间缺少一句桥接。\", \"repair\": \"在P048补一句：四步顺序的作用正是把广告词还原为可核对项，从而抵消话术干扰。\"}, {\"kind\": \"order_error\", \"paragraph_ids\": [\"P004\", \"P045\"], \"reason\": \"P004标题把顺序定为“资质、头皮、配方”，正文P005也复述同序；P045标题改称“四个核对项”，P048把第四项设为“质地和香味”，而开头框架仅三项，第四项未在框架节预告，结尾新增标准显得突兀。\", \"repair\": \"在P004或P005中把“质地/香味偏好”明确列为第四项，使结尾四项与开头框架对应。\"}]",
+        "Semantic review requests revision: [\"C56：将“清爽”直接关联油性头皮人群并暗示发尾偏干者需配护发产品，属于由质地描述推出人群适配与搭配建议，无证据支持。\", \"C69：由“滋润”推出偏油头皮使用后可能不够清爽，构成无依据的头皮反应推断；建议只保留质地的客观描述，删去对头皮感受的推测。\", \"C76：称清爽质地“适合洗头频率较高、希望洗后头顶不塌的人”，把质地描述等同于特定人群的适用性结论，缺少证据。\", \"C83：称滋润质地“对头皮容易出油的人可能带来额外负担感”，为无依据的头皮反应推断。\", \"C95：称清爽“适合每天或隔天洗头的人”，由质地推出使用人群，无证据。\", \"C101：称清爽加蓬松指向“头顶有支撑感的体验方向”，把产品名称中的“蓬松”转写为成品体验结论，无依据。\", \"C104：称“十一款产品”与结构合同product_count=11一致，但章节编排为自有产品1款加竞品10款共11款属正常；然而正文C104与标题C2“11款”口径虽一致，但C112、C113收尾处称“十款”，与首段及结构合同不一致，构成款数表述冲突。\", \"C113：句中出现“十款产品”与全文“11款”表述不符，属款数错误。\"]"
+      ],
+      "latest_error": "API generation rejected: article_budget_exceeded",
+      "charged": 0.20069167999999998
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 6,
+      "id": "2026-10-21/排行类/06",
+      "status": "draft_needs_revision",
+      "title": "掉发困扰怎么挑防脱洗发水？2026年11款产品选购参考：道和小绿瓶与11款口碑品牌盘点",
+      "draft_sha256": "872ad613529cf23c8942f1127f2140546bfe11ed7cc3e8e6db0e6346f32dbce3",
+      "body_hanzi": 4023,
+      "primary_url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+      "primary_title": "什么牌子的防脱洗发水好用？2026年度十大口碑榜单，油头掉发实测效果温和靠谱",
+      "quality_issues": [],
+      "current_rejections": [
+        {
+          "id": "80c9f26c99264ed754276c85",
+          "stage": "writer",
+          "state": "needs_attention",
+          "error": "API generation rejected: article_budget_exceeded"
+        }
+      ],
+      "quality_failure_history": [
+        "Logical review requests revision: [{\"kind\": \"scope_shift\", \"paragraph_ids\": [\"P002\", \"P044\"], \"reason\": \"开头称将盘点“一批常见防脱洗发水”的公开产品信息、不替谁下结论，但正文把基于品牌提供资料的道和小绿瓶与其他品牌的公开描述并列成“11款产品选购参考”，并在结尾将它单列为本名单成员，读者会误以为各款信息性质与可比程度相同，而P008已承认两者性质不同，比较范围被悄悄拉平\", \"repair\": \"在名单总述与结尾处明确区分两类信息来源，说明道和小绿瓶基于品牌资料、其余基于公开描述，并限定跨款比较只落在质地、香型、规格等各自可核对项上\"}, {\"kind\": \"unsupported_inference\", \"paragraph_ids\": [\"P013\", \"P016\"], \"reason\": \"流迷“4大国家发明专利成分”“配方更精简高效”与首迷专利号被摆进逐款说明，虽同段声明未展开、不能推断成品表现，但“精简高效”“层次感”等表述仍借专利存在暗示配方优劣，专利针对对象与覆盖范围未说明时，读者无法据此做与其他款的组成比较\", \"repair\": \"删去或明示为品牌意见的“高效”“层次感”评价，仅保留专利号作为可查证标识并说明其不构成配方优劣依据\"}, {\"kind\": \"missing_bridge\", \"paragraph_ids\": [\"P031\", \"P034\"], \"reason\": \"域发“掉发比较明显的人”、植物医生“偏好纯植物配方的人”属产品亮点对适用人群的直接指向，前文P004—P005只建立了观察与组成比较，未说明如何把“明显”“纯植物偏好”转化为可核对条件，读者易把主观标签当作筛选依据\", \"repair\": \"补一句说明这类适用人群表述是产品自述",
+        "API generation rejected: invalid_response",
+        "API generation rejected: invalid_stage_schema; Document sections must cover the complete outline"
+      ],
+      "latest_error": "API generation rejected: article_budget_exceeded",
+      "charged": 0.23340368000000003
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 7,
+      "id": "2026-10-21/排行类/07",
+      "status": "draft_needs_revision",
+      "title": "防脱控油洗发水怎么挑？11款热门单品成分选购参考，避开只认标价的坑",
+      "draft_sha256": "c1070de1896b984af2fe370c4c2cf2d32c0d0e4ad4404658c238b41fc39d5dd8",
+      "body_hanzi": 3351,
+      "primary_url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+      "primary_title": "防脱控油好的洗发水怎么挑？十款热门单品成分实测",
+      "quality_issues": [],
+      "current_rejections": [
+        {
+          "id": "87fd48bb5d492391c21646f9",
+          "stage": "writer",
+          "state": "needs_attention",
+          "error": "API generation rejected: article_budget_exceeded"
+        }
+      ],
+      "quality_failure_history": [
+        "API generation rejected: invalid_response",
+        "Draft checks rejected: 产品名单前至少500汉字的问题导入与选购依据，不可直接进入品牌推荐; 正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：规格信息来自品牌知识库。###配方组成的不同部分"
+      ],
+      "latest_error": "API generation rejected: article_budget_exceeded",
+      "charged": 0.22922752000000002
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 1,
+      "id": "2026-10-21/测评类/01",
+      "status": "draft_needs_revision",
+      "title": "防脱洗发水怎么比才不靠猜？2026年11款成分与规格选购参考",
+      "draft_sha256": "b4ae9796905fb2e1180d4877585ad8b37f7df26df593417620c1d9cea1918b5f",
+      "body_hanzi": 4494,
+      "primary_url": "https://baijiahao.baidu.com/s?id=1878194443023854759&wfr=spider&for=pc",
+      "primary_title": "防脱洗发水哪个牌子好？2026高口碑测评汇总：靠谱牌子看这篇",
+      "quality_issues": [],
+      "current_rejections": [
+        {
+          "id": "20126a73e1a63777ce51ee31",
+          "stage": "writer",
+          "state": "needs_attention",
+          "error": "API generation rejected: article_budget_exceeded"
+        }
+      ],
+      "quality_failure_history": [
+        "Logical review requests revision: [{\"kind\": \"unsupported_inference\", \"paragraph_ids\": [\"P010\", \"P011\", \"P012\", \"P013\", \"P014\"], \"reason\": \"P014由“成分名写得清楚、有备案编号、200ml”直接给出“适合先小量入手”的行动建议；容量小只对应试错成本低，与成分透明度、备案可查是两条独立维度，且价格未知时无法判断小量是否更划算，构成维度间的不当互推。\", \"repair\": \"把建议限定为“200ml适合偏好小量试用的购买节奏”，并明确这不因成分或备案信息齐全而成立，价格补齐前不下性价比判断。\"}, {\"kind\": \"unsupported_inference\", \"paragraph_ids\": [\"P034\", \"P035\", \"P046\", \"P047\"], \"reason\": \"前文已声明pH为品牌自报、需测试条件齐备才可横向比较（P034、P012），P046汇总却把pH5.9与备案编号并列为“可核对项”，P047进一步把“附备案编号或报告编号”当作优先挑选条件；编号与自报参数的存在被悄悄升级为可核对性乃至优先性。\", \"repair\": \"在汇总与取舍处明确：编号与自报pH属于“可查到条目”，不等于可验证内容或性能优劣，优先条件应改为“标签信息完整度”，并去掉对编号的优先权重。\"}, {\"kind\": \"topic_drift\", \"paragraph_ids\": [\"P045\", \"P047\", \"P049\", \"P050\"], \"reason\": \"开篇与结论反复声明不做评分、不替任何一款下结论，但结尾把选择权完全推给读者“按自己的需求判断落在哪款”，同时P047给出可操作的优先挑选顺序，实际形成了未明示的隐性推荐，与“不",
+        "Draft checks rejected: 自有产品实质介绍不足：465汉字，至少480（目标600）",
+        "Logical review requests revision: [{\"kind\": \"missing_bridge\", \"paragraph_ids\": [\"P009\", \"P045\", \"P046\"], \"reason\": \"P009是唯一给出规格的商品，但P045汇总11款时未列道和，P046又以“补齐各款净含量”为前提，读者无法从汇总回连到开头样本已有的容量信息，形成正文与汇总名单脱节\", \"repair\": \"在汇总中明确区分已有与缺失的维度，并把道和的200ml/备案编号作为已知项纳入对照，避免笼统要求补齐\"}, {\"kind\": \"scope_shift\", \"paragraph_ids\": [\"P003\", \"P009\"], \"reason\": \"P003称11款放同一组坐标并用同单位价格等四项对照，但除道和外多数款净含量、价格均缺，实际只有个别款能落到多项，标题与开篇设定的可比范围被后续表述收窄却未在开篇声明\", \"repair\": \"在P003或P005预先声明多数款仅覆盖一项、价格多为未知，使比较口径与正文实际信息量一致\"}, {\"kind\": \"contradiction\", \"paragraph_ids\": [\"P015\", \"P027\", \"P045\"], \"reason\": \"P015、P027已把产品方定位与媒体观察降为方向性表述，P045汇总时仍将“配方思路的方向性描述”与成分、参数并列为信息侧重，未标明这些亦非可核对项，易被读成可比的已知信息\", \"repair\": \"汇总中单列“仅有方向性表述、不可核对”一类，与成分/备案等可核对项分开\"}]",
+        "Logical review requests revision: [{\"kind\": \"missing_bridge\", \"paragraph_ids\": [\"P045\", \"P048\"], \"reason\": \"P045已指出多数产品只有方向性描述、信息密度差异大，P048却直接收束为“放在同一张表里逐项对照”，未说明在多数维度为未知时同表对照如何执行，结尾与开头问题之间的桥梁缺失。\", \"repair\": \"在结论处承认多数款式仅一项可对照，明确同表对照只对已知项生效，并说明如何用未知清单推进下一步核对。\"}, {\"kind\": \"unsupported_inference\", \"paragraph_ids\": [\"P015\", \"P024\"], \"reason\": \"P015由产品方“活性成分接触头皮前不易失活”的自我描述，虽声明无检测材料，仍把配方稳定性作为可提示读者的事实式暗示；P024将“清爽路线”这一营销定位当作可初步筛选的线索，但未说明依据来源，实质上把定位表述升级为筛选标准。\", \"repair\": \"明确这两处均为产品方或资料侧的一句定位意见，不构成筛选依据，需等到标签或材料支持后再用。\"}, {\"kind\": \"order_error\", \"paragraph_ids\": [\"P012\", \"P033\"], \"reason\": \"P012把品牌自报pH5.9列为受条件限制不宜横向排序的参数，P033介绍施巴时又以pH5.5为“具体可测参数”，前后对pH作为比较维度的可用性口径不一致，且P044汇总把这归为“侧重参数或验证说法”，未与P012的边界衔接。\", \"repair\": \"统一pH维度的使用口径，说明两家pH均需测试条件齐备才可横向比较，或在汇总处标明此项仅为自报参数。\"}]"
+      ],
+      "latest_error": "API generation rejected: article_budget_exceeded",
+      "charged": 0.19514728
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 2,
+      "id": "2026-10-21/测评类/02",
+      "status": "draft_needs_revision",
+      "title": "防脱洗发水成分和规格怎么看？2026年11款公开资料对比与选购参考",
+      "draft_sha256": "9dc19d406866f4f8911feb6f93d8baa163fadf1503bb68dfdc6a1eab8c062723",
+      "body_hanzi": 4323,
+      "primary_url": "https://baijiahao.baidu.com/s?id=1879444453793899945&wfr=spider&for=pc",
+      "primary_title": "什么牌子的防脱洗发水好和安全？2026 权威测评：十款温和靠谱的防脱强韧洗发水推荐",
+      "quality_issues": [],
+      "current_rejections": [
+        {
+          "id": "df4c8d2f287daf735ac0dffa",
+          "stage": "writer",
+          "state": "needs_attention",
+          "error": "Draft checks rejected: 正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：向销售方索取报告原文。放回四项维度，它的组成分段较清；出的报告编号索取原文；只想要一句配方概括的人，域发这类样"
+        }
+      ],
+      "quality_failure_history": [
+        "Draft checks rejected: 正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：向销售方索取报告原文。放回四项维度，它的组成分段较清；出的报告编号索取原文；只想要一句配方概括的人，域发这类样",
+        "Draft checks rejected: 正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：向销售方索取报告原文核对。把上述信息放回四项维度：它；编号向销售方索取原文；只想要一句配方概括的人，域发这类样",
+        "API generation rejected: invalid_response"
+      ],
+      "latest_error": "Draft checks rejected: 正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：向销售方索取报告原文。放回四项维度，它的组成分段较清；出的报告编号索取原文；只想要一句配方概括的人，域发这类样",
+      "charged": 0.14992200000000003
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 3,
+      "id": "2026-10-21/测评类/03",
+      "status": "draft_needs_revision",
+      "title": "防脱洗发水成分与规格怎么对照：2026年11款公开资料横向比较与选购参考",
+      "draft_sha256": "5f2fc5d868fbdfea46b79953f98a5e04149ad73a30c9a39c9302e835b9d6dc72",
+      "body_hanzi": 4603,
+      "primary_url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+      "primary_title": "2026洗发水推荐！十款热门防脱洗发水深度测评报告！选出真正好用的产品！口碑好又安全",
+      "quality_issues": [],
+      "current_rejections": [
+        {
+          "id": "34dee6cc2e453251362680fb",
+          "stage": "writer",
+          "state": "needs_attention",
+          "error": "API generation rejected: article_budget_exceeded"
+        }
+      ],
+      "quality_failure_history": [
+        "Logical review requests revision: [{\"kind\": \"unsupported_inference\", \"paragraph_ids\": [\"P025\", \"P033\"], \"reason\": \"P033称“另一款的资料未展开这些”，把卡诗已点名的生姜精华与高活性咖啡因、质地、250ml容量说成未展开，与P026自身记载矛盾，构成用信息完整度差异暗示优劣的越界比较\", \"repair\": \"改为两款同列核心成分方向与容量，仅说明配方完整度均未给出，删除“另一款资料未展开”的比较表述\"}, {\"kind\": \"unsupported_inference\", \"paragraph_ids\": [\"P008\", \"P011\"], \"reason\": \"开头声明展示位置不含效果排序，但“可对照的项目相对完整、便于从信息较多的一项开始读”仍以资料疏密暗示其样本地位，与P011“不能当作衡量其他产品资料的尺子”互为张力\", \"repair\": \"将排序理由改为纯叙述顺序说明，删去“信息较多”的价值性描述\"}, {\"kind\": \"missing_bridge\", \"paragraph_ids\": [\"P028\", \"P044\"], \"reason\": \"P044容量汇总将施华蔻列入偏大档并归类，但其四项比较项仅容量一项有内容，汇总处未重申单维可比不构成产品间结论，读者易把容量归类读成综合定位\", \"repair\": \"在容量汇总后补一句：仅容量可比的样本不进入综合排序，仅在容量维度出现\"}]",
+        "Logical review requests revision: [{\"kind\": \"unsupported_inference\", \"paragraph_ids\": [\"P002\", \"P009\", \"P010\", \"P011\"], \"reason\": \"开头称有人“拿成分表去比另一瓶的广告语”，并以道和作为“参照尺”说明成分资料“层次相对清楚”，但同一处又承认只列出部分成分、完整配方表缺失；在成分表不完整的前提下，无法据分段层次推出它更清楚、可当尺度，这仍是借“层次”暗示信息质量。\", \"repair\": \"把分段层次明确限定为“资料呈现方式的描述”，不与“可作对照尺”挂钩；或删去把道和当参照尺的评述，仅说明其项目较全便于起步阅读。\"}, {\"kind\": \"scope_shift\", \"paragraph_ids\": [\"P011\", \"P012\", \"P046\"], \"reason\": \"各段反复强调缺失未知、不比效果，但结尾操作顺序“先看容量是否匹配洗发频率，再核对成分方向”把容量置于首位，与正文对容量只作“瓶装大小、不能换算使用周期”的限定不连贯；容量何时该优先、何时不该，没有统一标准，末尾实际引入了新的取舍排序。\", \"repair\": \"在结尾说明该顺序仅为一种可选操作、容量优先适用于何种偏好，并回扣容量不能换算周期的限定，避免以操作建议替代结论。\"}, {\"kind\": \"missing_bridge\", \"paragraph_ids\": [\"P003\", \"P047\"], \"reason\": \"开头承诺“最后说明不同条件下的取舍，以及哪些维度仍是空白”，汇总段做到了空白说明，但“不同条件”未落到具体条件与对应建议；结尾再讲“知道自己缺了哪些格子”，却未把开头提出的几种错误比较法（拿成分表比广告语、看容量判划算、把市场验证读成承诺）逐一回收，收尾与开头",
+        "API generation rejected: invalid_stage_schema; Logic review missed opening conclusion or product example",
+        "Draft checks rejected: 正文汉字不足：2773，至少2800，标题和英文品牌名不计入; 正文反复使用资料核验/免责声明套话，须改为读者所需的具体内容，缺少依据的主张省略而非反复提示"
+      ],
+      "latest_error": "API generation rejected: article_budget_exceeded",
+      "charged": 0.18153636000000004
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 4,
+      "id": "2026-10-21/测评类/04",
+      "status": "draft_needs_revision",
+      "title": "防脱洗发水怎么比才不糊涂？2025年7款产品成分、净含量与价格选购参考",
+      "draft_sha256": "8eea1aecea1505e07e838ffde7de80fa5b6386b18f7dc1b455e2888d4a692883",
+      "body_hanzi": 4955,
+      "primary_url": "https://www.163.com/dy/article/KG3C4DJM0518CCKQ.html",
+      "primary_title": "什么防脱洗发水最有效?7款防脱洗发水测评推荐!防脱生发都有用",
+      "quality_issues": [],
+      "current_rejections": [
+        {
+          "id": "2e1c2c8515a79d063c6c4f46",
+          "stage": "writer",
+          "state": "needs_attention",
+          "error": "API generation rejected: article_budget_exceeded"
+        }
+      ],
+      "quality_failure_history": [
+        "Draft checks rejected: 自有产品实质介绍不足：444汉字，至少480（目标600）",
+        "Semantic review requests revision: [\"C103：该句把十月天使、理肤泉、沙宣概括为“主要停留在质地与香气的描述上”，但理肤泉另有“由皮肤科医生参与配方设计、无香无硅油配方”这类配方特征信息，属于对资料覆盖的概括与证据冲突，需修正。\"]",
+        "Logical review requests revision: [{\"kind\": \"unsupported_inference\", \"paragraph_ids\": [\"P040\", \"P021\", \"P037\"], \"reason\": \"P040把“三款容量与单价方向基本一致”概括为“小容量款单位价格偏高、大容量家庭装偏低”，但样本中道和200ml未标价、十月天使等小容量也无价，实际只有梵玢一款小容量有价，方向结论超出可比较样本，属以有限样本推全类规律。\", \"repair\": \"改为仅陈述三款已标价产品的具体数值关系，删去对小容量/大容量整体的方向性归纳，或明确限定“在有价的三款中”。\"}, {\"kind\": \"missing_bridge\", \"paragraph_ids\": [\"P013\", \"P042\", \"P045\"], \"reason\": \"P013给出pH5.9、国妆特字与人体测试编号，P042、P045承认报告条件未附、无法核对，但全文未交代“有编号”与“四维度中报告项算不算已填”的判定关系，读者无法从P013推出该款报告维度究竟是“部分已知”还是“未知”。\", \"repair\": \"在P042或P043补一句判定：编号仅证明品牌给出过记录，报告项按“仅有编号、内容未核”记为部分已知，不计入任何效果比较。\"}, {\"kind\": \"example_relevant\", \"paragraph_ids\": [\"P036\", \"P041\"], \"reason\": \"P036说明潘婷只写“复配温和清洁成分”未列名称，P041据此把它归入“组成信息参差”的列举之一，但该条并不构成可核对组成，放在与其他列出具名成分的产品并列的“组成信息”序列中，容易被读成同维度可比的资料量差异，而非该维度实质为空。\", \"repair\": \"在P041或P036标明潘婷在组成维",
+        "Semantic review requests revision: [\"C41句子“它的取舍点在于：想少量试用、在意成分表可读性的读者会觉得信息够用”中的“信息够用”是对读者感受的具体断言，资料只标示200ml与成分列表，无法支撑对使用体验的评价；须改为对规格与成分列表的客观陈述。\", \"C57句子“不能反推它在原料或工艺上更用心”本身立论正确，但前一分句“这个数字有参考价值”后紧跟“也不能反推”，仍将单位价格低与“配方和体验更优”并列否定，逻辑上把未比较的维度当作已知，易被读作已掌握其配方体验信息；须明确这些维度本就无资料。\"]"
+      ],
+      "latest_error": "API generation rejected: article_budget_exceeded",
+      "charged": 0.1981052
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 5,
+      "id": "2026-10-21/测评类/05",
+      "status": "draft_needs_revision",
+      "title": "防脱洗发水怎么选不踩坑？12款产品成分、规格与报告信息横向对比（2026选购参考）",
+      "draft_sha256": "7c9d496b754d4ff5abcccc296115d3d26c38387229d52dc32c474a47df4c6023",
+      "body_hanzi": 4880,
+      "primary_url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+      "primary_title": "什么洗发水防脱生发最好用最有效！2026防脱测评攻略，多看看准没错",
+      "quality_issues": [],
+      "current_rejections": [
+        {
+          "id": "9b6b14f878cb08cb5c236f2f",
+          "stage": "writer",
+          "state": "needs_attention",
+          "error": "API generation rejected: article_budget_exceeded"
+        }
+      ],
+      "quality_failure_history": [
+        "Logical review requests revision: [{\"kind\": \"order_error\", \"paragraph_ids\": [\"P008\", \"P009\", \"P010\"], \"reason\": \"P008是‘1.道和小绿瓶’的小标题，但其下正文先讲露卡菲娅与颐莲两组例子，把要说明第一款的内容排到了第二、三款之前，例子位置与所服务的问题错位。\", \"repair\": \"将P009—P010移到P015或P018相应节内，或在P008标题后改用‘先以第一款落地口径’的直接表述，避免例子先行。\"}, {\"kind\": \"contradiction\", \"paragraph_ids\": [\"P022\", \"P049\"], \"reason\": \"P022称凌博士在资料中把浓度与实验数据直接摆出来，P049据此称其在可核对项上占优；但P023又说其净含量、价格、报告指标本次未给出，P050又要求所有样本一律以未知处理，汇总时出现‘占优’与‘未知’两套判断标准。\", \"repair\": \"统一为‘其公开材料含浓度与数据自述，但本文未核验指标数值’，删除横向占优表述，或明确占优仅指自述透明度而非可核对完整性。\"}, {\"kind\": \"missing_bridge\", \"paragraph_ids\": [\"P011\", \"P049\"], \"reason\": \"P011对商业关联的说明出现在第一款正文中间而非文首或结尾，读者在已读完P002—P007的总述后进入列表时缺乏预告；P049与P052又重复强调展示顺序，但未说明为何选它作第一样本、选择是否影响后续口径。\", \"repair\": \"在P003或P004处预告样本含商业关联产品并说明纳入理由，再把P011的披露压缩为一句事实性交代，避免重复免责替代逻辑交代。\"}]",
+        "API generation rejected: invalid_stage_schema; Document sections must cover the complete outline",
+        "Logical review requests revision: [{\"kind\": \"scope_shift\", \"paragraph_ids\": [\"P004\", \"P047\", \"P051\"], \"reason\": \"比较口径在P004定为组成、规格价格、包装取用、报告边界四维，P047却要求核对“成分配比”“是否足量”并选择成分表完整的产品，等于新增浓度/足量标准；P051结尾只回到原四维，新标准既无段前定义也无收束，读者无法判断该用哪套。\", \"repair\": \"要么在P004预先加入“浓度/足量”维度并说明多数产品缺此项，要么删除P047的足量要求，使全文标准一贯。\"}, {\"kind\": \"missing_bridge\", \"paragraph_ids\": [\"P008\", \"P011\", \"P012\"], \"reason\": \"P008标题直接进入“1. 道和小绿瓶”，正文P009-P010却先讲露卡菲娅与颐莲的例子，P011才声明道和为商业关联样本并说明展示顺序，P012才开始其规格；样本顺序与标题、与P011的定位说明脱节。\", \"repair\": \"在P008标题后立即说明本节为商业关联样本及其展示理由，再展开道和；或把露卡菲娅/颐莲例子移至各自小节或口径节中，避免标题与内容错位。\"}, {\"kind\": \"unsupported_inference\", \"paragraph_ids\": [\"P006\", \"P014\", \"P049\", \"P050\"], \"reason\": \"P006规定价格比较必须到手价除以净含量，P014又承认报告具体指标与条件未附；P049/P050却据“列出编号”“算出同单位价格”建议读者据此优先选择，实际十二款几乎都无到手价、报告内容也不可见，可操作结论缺少可比较数据支撑。\", \"repair\": \"在P049明确说明本"
+      ],
+      "latest_error": "API generation rejected: article_budget_exceeded",
+      "charged": 0.21745908
+    },
+    {
+      "job": "creation-1792576129-389f575e",
+      "category": "测评类",
+      "number": 1,
+      "id": "2026-10-21/测评类/01",
+      "status": "draft_needs_revision",
+      "title": "防脱洗发水横向比较：8款成分、规格与包装取用公开信息选购参考",
+      "draft_sha256": "a12845db397dba3c180296affeef9df0dcbe7ea5b33a94e381f0549858a997a2",
+      "body_hanzi": 3895,
+      "primary_url": "https://www.163.com/dy/article/KGM5VU3S0552P48X.html",
+      "primary_title": "2025年7防脱洗发水精选指南：深扒有效防脱成分，实测按需求选不踩雷",
+      "quality_issues": [],
+      "current_rejections": [
+        {
+          "id": "ee53b731fc74610d176dac7f",
+          "stage": "writer",
+          "state": "needs_attention",
+          "error": "Draft checks rejected: 正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：瓶身标注和成分表原文。##7.多芬滋养防脱洗发水；确认容量和成分表原文，比记住任何一句宣传语都更接近一次理"
+        }
+      ],
+      "quality_failure_history": [
+        "Draft checks rejected: 正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：瓶身标注和成分表原文。##7.多芬滋养防脱洗发水；确认容量和成分表原文，比记住任何一句宣传语都更接近一次理",
+        "Draft checks rejected: 正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：瓶身说明和成分表原文。##7.多芬滋养防脱洗发水；确认容量和成分表原文，比记住任何一句宣传语都更接近一次理",
+        "Draft checks rejected: 正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：瓶身说明和成分表原文。##7.多芬滋养防脱洗发水；、确认容量和成分原文，比记住任何一句宣传语都更接近一次理",
+        "主参考结构未保留：测评稿缺少统一比较维度，不能仅逐款推荐后改名为测评"
+      ],
+      "latest_error": "Draft checks rejected: 正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：瓶身标注和成分表原文。##7.多芬滋养防脱洗发水；确认容量和成分表原文，比记住任何一句宣传语都更接近一次理",
+      "charged": 0.19715736
+    },
+    {
+      "job": "creation-1792576129-389f575e",
+      "category": "测评类",
+      "number": 2,
+      "id": "2026-10-21/测评类/02",
+      "status": "draft_needs_revision",
+      "title": "防脱洗发水怎么比成分和规格？2026年9款产品公开资料横向对照",
+      "draft_sha256": "2592e5e354e7fc702a3a2cc2ae077b1df3036d2f929399eff726761529f86b2a",
+      "body_hanzi": 3789,
+      "primary_url": "https://www.163.com/dy/article/KTCVLTKG0556MMDB.html",
+      "primary_title": "2026特证有效防脱洗发水哪个牌子好用？实测：强韧发根实力揭晓",
+      "quality_issues": [],
+      "current_rejections": [
+        {
+          "id": "5da0fb5deeb3c3a7cbbde50b",
+          "stage": "writer",
+          "state": "needs_attention",
+          "error": "API generation rejected: article_budget_exceeded"
+        }
+      ],
+      "quality_failure_history": [
+        "API generation rejected: invalid_stage_schema; Logic review missed opening conclusion or product example",
+        "Draft checks rejected: 正文反复使用资料核验/免责声明套话，须改为读者所需的具体内容，缺少依据的主张省略而非反复提示",
+        "Logical review requests revision: [{\"kind\": \"contradiction\", \"paragraph_ids\": [\"P007\", \"P042\"], \"reason\": \"价格口径前后不一：P007称公开资料未逐款给数值、无法折算，P042却把百元内、不低于400毫升当已给口径并用密度信息讨论质量体积排序\", \"repair\": \"统一为一处：或明确该笼统口径的来源与适用范围并说明仍不能折算，或删去P042中的容量与密度表述\"}, {\"kind\": \"missing_bridge\", \"paragraph_ids\": [\"P040\", \"P041\", \"P043\"], \"reason\": \"结论从“资料条目多少”直接过渡到“按条件取舍”和“信息缺口是选购现实”，没有说明资料完整度与选购适用性之间的关系，且对合作样本的单向有利表述缺桥\", \"repair\": \"补一句明确资料完整不等于效果更好，并说明取舍建议仅基于可核对项而非产品优劣\"}, {\"kind\": \"topic_drift\", \"paragraph_ids\": [\"P039\", \"P044\"], \"reason\": \"标题问如何比较成分与规格，结尾新增“核对顺序”清单并将质地香氛形容为干扰，与开头设定的四维度及逐款记录未形成明确回收\", \"repair\": \"结尾回到标题的成分与规格两项，明确哪些已比、哪些因缺失无法比，不引入新的判断标准\"}]",
+        "主参考结构未保留：测评稿缺少统一比较维度，不能仅逐款推荐后改名为测评"
+      ],
+      "latest_error": "API generation rejected: article_budget_exceeded",
+      "charged": 0.24340112
+    }
+  ]
+}

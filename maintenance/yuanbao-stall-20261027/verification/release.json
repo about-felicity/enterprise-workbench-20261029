@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "source": "yuanbao-deploy/android_ui.py",
+      "server": "/home/user/redroid-yuanbao/android_ui.py",
+      "sha256": "6bc4a904722c0449b66ba7339bf11d2a659636234ac9c1ab94bcf1812010ff5e"
+    },
+    {
+      "source": "yuanbao-deploy/draft_recovery.py",
+      "server": "/home/user/redroid-yuanbao/draft_recovery.py",
+      "sha256": "38e0c4426751bfc2f3dbaffaea423af66aae02778ab17d32b8886845bd960a1d"
+    },
+    {
+      "source": "redroid-deploy/question_only_worker.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/question_only_worker.py",
+      "sha256": "9c931b493777086b7ebb4136b99d89ab5d60c75de40d87d4e899e25662266a2f"
+    },
+    {
+      "source": "yuanbao-deploy/tests/test_draft_recovery.py",
+      "server": "/home/user/redroid-yuanbao/tests/test_draft_recovery.py",
+      "sha256": "22d53343c84dd9447563a3681b9a26e9b6705cdd78aee21d3971d83f2de65a64"
+    }
+  ]
+}

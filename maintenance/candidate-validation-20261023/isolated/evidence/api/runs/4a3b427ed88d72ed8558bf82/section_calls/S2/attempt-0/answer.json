@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S2\",\"heading\":\"先定三把尺子：配方取向、清洁感受与发质侧重\",\"paragraphs\":[{\"text\":\"上一节留下的思路是先用记录筛，那么这一步先把尺子摆清楚。资料里能站得住的比较依据主要有三类：配方写明了什么、清洁与冲洗被怎样描述、以及配方被称作侧重哪类发质。三条都只是标签，不构成好坏判决。\",\"statement_type\":\"transition\",\"claim_ids\":[]},{\"text\":\"以EHD防脱洗发水为例，资料写明配方含咖啡因，清洁体系走温和路线，泡沫量适中、冲洗后发丝顺滑，并被称为适合长期日常使用的类型。这些属于记录中的产品取向，可以拿来和你自己的发质、清洁习惯对照，却不能由成分存在推出任何实际效果。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0001\"]},{\"text\":\"再看植观防脱洗发水，记录显示为氨基酸系表活体系，清洁力够用，配方针对油性头皮与细软发质做侧重。读到这里，合适的问题是“它被记述的取向是否贴近我的头皮类型”，而不是“它一定更好”。挑洗发水时，先对照配方取向与自身发质，再看清洁与冲洗感受的描述是否合意，比只挑一句形容词更稳。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0002\"]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4796,
+    "completion_tokens": 299,
+    "total_tokens": 5095,
+    "prompt_tokens_details": {
+      "cached_tokens": 3200
+    },
+    "prompt_cache_hit_tokens": 3200,
+    "prompt_cache_miss_tokens": 1596
+  },
+  "request_id": "dbd984e5-070e-41b2-98ad-171f406df2e7",
+  "model": "deepseek-flash"
+}

@@ -1,0 +1,22 @@
+{
+  "question": "推荐一款适合烫染后干枯毛躁的护发素",
+  "model": "wenxin_card",
+  "source": {
+    "url": "https://baijiahao.baidu.com/s?id=1879800374532833699&wfr=spider&for=pc",
+    "title": "烫染受损干枯毛躁怎么选？性价比高的好用的发膜清单-百家号",
+    "media": "",
+    "article": {
+      "status": "failed",
+      "requested_url": "https://baijiahao.baidu.com/s?id=1879800374532833699&wfr=spider&for=pc",
+      "text": "",
+      "attempts": [
+        {
+          "backend": "http",
+          "status": "failed",
+          "error": "Verification/access-denied page is not an article"
+        }
+      ],
+      "error": "All enabled Scrapling readers failed; inspect attempts or provide a permitted source copy"
+    }
+  }
+}

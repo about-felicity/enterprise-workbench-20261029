@@ -1,0 +1,196 @@
+{
+  "at": 1792226846.2093356,
+  "release_status": "published",
+  "models": [
+    {
+      "model": "doubao1",
+      "current": {
+        "batch": "geo-panel-doubao1-20261017-050004-9fbe31cd",
+        "state": "complete",
+        "planned": 105,
+        "captured": 105,
+        "processed": 105,
+        "pending_delivery": 0,
+        "heartbeat_age": 35626.11513566971,
+        "progress": {
+          "phase": "delivery",
+          "ordinal": null,
+          "changed_at": 1792191214.3058197,
+          "pending_delivery": 1
+        }
+      },
+      "login_monitor": {
+        "status": null,
+        "checked_at": null,
+        "next_check_at": null,
+        "probe_status": null
+      }
+    },
+    {
+      "model": "doubao2",
+      "current": {
+        "batch": "geo-panel-doubao2-20261017-050004-ab993f92",
+        "state": "complete",
+        "planned": 105,
+        "captured": 105,
+        "processed": 105,
+        "pending_delivery": 0,
+        "heartbeat_age": 35151.516147851944,
+        "progress": {
+          "phase": "delivery",
+          "ordinal": null,
+          "changed_at": 1792191689.621391,
+          "pending_delivery": 1
+        }
+      },
+      "login_monitor": {
+        "status": null,
+        "checked_at": null,
+        "next_check_at": null,
+        "probe_status": null
+      }
+    },
+    {
+      "model": "deepseek",
+      "current": {
+        "batch": "geo-panel-deepseek-app-20261017-094524",
+        "state": "running",
+        "planned": 63,
+        "captured": 22,
+        "processed": 22,
+        "pending_delivery": 0,
+        "heartbeat_age": 0.697312593460083,
+        "progress": {
+          "phase": "rate_wait",
+          "ordinal": 23,
+          "changed_at": 1792226547.6742835,
+          "next_at": 1792227248.3594115
+        }
+      },
+      "login_monitor": {
+        "status": "ready",
+        "checked_at": 1792226561.3089395,
+        "next_check_at": 1792226861.3089395,
+        "probe_status": "ready"
+      }
+    },
+    {
+      "model": "wenxin_card",
+      "current": {
+        "batch": "geo-panel-wenxin-card-20261017-072303-c984c073",
+        "state": "complete",
+        "planned": 168,
+        "captured": 168,
+        "processed": 168,
+        "pending_delivery": 0,
+        "heartbeat_age": 15543.778628587723,
+        "progress": {
+          "phase": "complete",
+          "pending_delivery": 0
+        }
+      },
+      "login_monitor": {
+        "status": null,
+        "checked_at": null,
+        "next_check_at": null,
+        "probe_status": null
+      }
+    },
+    {
+      "model": "baidu_ai",
+      "current": {
+        "batch": "geo-panel-baidu-ai-20261017-050004-ad6eb2dd",
+        "state": "complete",
+        "planned": 105,
+        "captured": 105,
+        "processed": 105,
+        "pending_delivery": 0,
+        "heartbeat_age": 33862.04030370712,
+        "progress": {
+          "phase": "complete",
+          "pending_delivery": 0
+        }
+      },
+      "login_monitor": {
+        "status": null,
+        "checked_at": null,
+        "next_check_at": null,
+        "probe_status": null
+      }
+    },
+    {
+      "model": "yuanbao",
+      "current": {
+        "batch": "geo-panel-yuanbao-20261017-050005-1cceeca1",
+        "state": "complete",
+        "planned": 168,
+        "captured": 168,
+        "processed": 168,
+        "pending_delivery": 0,
+        "heartbeat_age": 33932.3266620636,
+        "progress": {
+          "phase": "delivery",
+          "ordinal": null,
+          "changed_at": 1792192908.5890489,
+          "pending_delivery": 1
+        }
+      },
+      "login_monitor": {
+        "status": null,
+        "checked_at": null,
+        "next_check_at": null,
+        "probe_status": null
+      }
+    },
+    {
+      "model": "deepseek2",
+      "current": {
+        "batch": "geo-panel-deepseek2-20261017-134730-bf1a1e9e",
+        "state": "running",
+        "planned": 63,
+        "captured": 12,
+        "processed": 12,
+        "pending_delivery": 0,
+        "heartbeat_age": 1.3407824039459229,
+        "progress": {
+          "phase": "rate_wait",
+          "ordinal": 13,
+          "changed_at": 1792226324.724864,
+          "next_at": 1792227313.7732184
+        }
+      },
+      "login_monitor": {
+        "status": "ready",
+        "checked_at": 1792226561.7666163,
+        "next_check_at": 1792226861.7666163,
+        "probe_status": "ready"
+      }
+    }
+  ],
+  "collector_pids": {
+    "geo-native@geo-panel-deepseek-app-20261017-094524.service": "30871",
+    "geo-native@geo-panel-deepseek2-20261017-134730-bf1a1e9e.service": "46395",
+    "geo-native@geo-panel-doubao1-20261015-181820-3d82b024.service": "0",
+    "geo-native@geo-panel-doubao1-20261017-050004-9fbe31cd.service": "0",
+    "geo-native@geo-panel-doubao2-20261015-181821-6fa7c803.service": "0",
+    "geo-native@geo-panel-doubao2-20261017-050004-ab993f92.service": "0",
+    "geo-native@geo-panel-yuanbao-20261015-181821-d56b0d20.service": "0",
+    "geo-native@geo-panel-yuanbao-20261017-050005-1cceeca1.service": "0",
+    "geo-web@geo-panel-baidu-ai-20261017-050004-ad6eb2dd.service": "0",
+    "geo-web@geo-panel-deepseek-20261015-181821-879aca5d.service": "0",
+    "geo-web@geo-panel-deepseek-20261016-094039-dc64b7e1.service": "0",
+    "geo-web@geo-panel-wenxin-card-20261017-072303-c984c073.service": "0"
+  },
+  "manual_flows": {
+    "deepseek": "ready",
+    "deepseek2": "closed"
+  },
+  "timer": "NextElapseUSecMonotonic=1month 2w 1d 16h 1min 25.706335s\nLastTriggerUSec=Sat 2026-10-17 08:42:40 UTC\nActiveState=active\n",
+  "scrcpy_sha256": "26cbc9ad0aced6c2282455bef4fb43462605c1f8758c74b4ab1dbf818c229daa",
+  "preview": {
+    "Id": "9d371171343fa400358319c6e8ba4a3221a3d1481318b1c8f31d58348cec58e6",
+    "Name": "/monitor-dashboard-scrcpy-preview",
+    "Image": "sha256:b8acf22582f9c642a04d1e18240aadcdb7daf08feb3484cf87f3ab6b506e64a5",
+    "Mounts": []
+  }
+}

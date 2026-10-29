@@ -1,0 +1,1 @@
+send({arch:Process.arch,modules:Process.enumerateModules().filter(m=>/omni|wcdb|sqlite/i.test(m.name)).map(m=>({name:m.name,exports:m.enumerateExports().filter(e=>/sqlite3_(prepare|step|errmsg|sql|db_handle)|error/i.test(e.name)).map(e=>e.name).slice(0,50)}))});

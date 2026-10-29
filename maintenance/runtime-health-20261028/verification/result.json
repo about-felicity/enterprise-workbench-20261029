@@ -1,0 +1,120 @@
+{
+  "checked_at": 1793149916.697272,
+  "yuanbao": {
+    "batch": "geo-panel-yuanbao-20261028-090004-02abccba",
+    "planned": 168,
+    "prompt_mode": "question_only",
+    "model": "yuanbao",
+    "captured": 1,
+    "geo_processed": 1,
+    "delivery_errors": [],
+    "nontext_observations": 0,
+    "nontext_processed": 0,
+    "nontext_pending": 0,
+    "unavailable": 0,
+    "time": 1793149916.1812532,
+    "heartbeat_expires_at": 1793150066.1812537,
+    "bridge_pid": 24247,
+    "tasks": {
+      "completed": 1,
+      "pending": 166,
+      "prepared": 1
+    },
+    "status": "running",
+    "memory": {
+      "app_alive": true,
+      "pid": 30315,
+      "java_alloc_kib": 28092,
+      "java_size_kib": 112367,
+      "java_limit_kib": 524288,
+      "java_fraction": 0.05358123779296875,
+      "native_alloc_kib": 227195,
+      "app_pss_kib": 642236,
+      "container_bytes": 1235656704,
+      "container_working_bytes": 988499968,
+      "container_limit_bytes": 4294967296,
+      "container_fraction": 0.23015308380126953,
+      "app_pss_fraction": 0.1531209945678711,
+      "sampled_at": 1793149856.2743073,
+      "last_exit": {
+        "pid": 358,
+        "reason": "low_memory"
+      },
+      "pending": "",
+      "high_samples": 0
+    },
+    "progress": {
+      "phase": "generating",
+      "task_id": "93569d46-dadb-566a-8783-9f5251125f20",
+      "ordinal": 2,
+      "changed_at": 1793149913.1754189,
+      "reason": "",
+      "deadline_at": 1793150788.7336097
+    }
+  },
+  "tasks": [
+    {
+      "ordinal": 1,
+      "state": "completed",
+      "request_id": "f7c4f2ec97c94b10799eabedfcc6f099",
+      "answer_id": "0RbGDrzynRY_2",
+      "capture_retries": 0,
+      "error": null
+    },
+    {
+      "ordinal": 2,
+      "state": "prepared",
+      "request_id": null,
+      "answer_id": null,
+      "capture_retries": 0,
+      "error": null
+    }
+  ],
+  "events": [
+    {
+      "event": "send_tap_returned",
+      "detail": "",
+      "time": 1793149889.4403174
+    },
+    {
+      "event": "send_click_intent_committed",
+      "detail": "",
+      "time": 1793149888.7336423
+    },
+    {
+      "event": "send_protocol_v2",
+      "detail": "",
+      "time": 1793149884.4239461
+    },
+    {
+      "event": "send_intent_committed",
+      "detail": "",
+      "time": 1793149884.423933
+    },
+    {
+      "event": "completed",
+      "detail": "",
+      "time": 1793149874.896936
+    },
+    {
+      "event": "send_tap_returned",
+      "detail": "",
+      "time": 1793149834.249989
+    },
+    {
+      "event": "send_click_intent_committed",
+      "detail": "",
+      "time": 1793149833.955184
+    },
+    {
+      "event": "send_protocol_v2",
+      "detail": "",
+      "time": 1793149829.8466396
+    }
+  ],
+  "all_job_article_totals": {
+    "2026-10-26": 181,
+    "2026-10-27": 173,
+    "2026-10-28": 90
+  }
+}

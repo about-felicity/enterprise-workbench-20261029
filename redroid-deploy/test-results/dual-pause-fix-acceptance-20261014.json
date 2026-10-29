@@ -1,0 +1,391 @@
+{
+  "verified_at": 1791971354.1566675,
+  "historical_account1_processed": 105,
+  "reports": [
+    {
+      "container": "doubao-hpe14-13-test",
+      "batch": "geo-products-21x5-account1-20261014",
+      "geo_processed_verified": 31,
+      "consecutive_recovered": 18,
+      "minimum_new_send_interval": 59.29859805107117,
+      "failed_attempts_preserved": 2,
+      "cache_mapping_collision": false,
+      "health": {
+        "time": 1791971346.5740952,
+        "heartbeat_expires_at": 1791971391.574096,
+        "bridge_pid": 32871,
+        "batch": "geo-products-21x5-account1-20261014",
+        "planned": 105,
+        "captured": 32,
+        "geo_processed": 31,
+        "tasks": {
+          "completed": 32,
+          "pending": 73
+        },
+        "worker_exit": null,
+        "delivery_errors": [],
+        "status": "running"
+      },
+      "verified_recovered_tasks": [
+        {
+          "ordinal": 14,
+          "body_length": 214,
+          "source_count": 12,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 15,
+          "body_length": 179,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 16,
+          "body_length": 111,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 17,
+          "body_length": 211,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 18,
+          "body_length": 162,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 19,
+          "body_length": 208,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 20,
+          "body_length": 167,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 21,
+          "body_length": 108,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 22,
+          "body_length": 119,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 23,
+          "body_length": 174,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 24,
+          "body_length": 183,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 25,
+          "body_length": 233,
+          "source_count": 5,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 26,
+          "body_length": 122,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 27,
+          "body_length": 153,
+          "source_count": 12,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 28,
+          "body_length": 122,
+          "source_count": 12,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 29,
+          "body_length": 190,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 30,
+          "body_length": 197,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 31,
+          "body_length": 127,
+          "source_count": 12,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        }
+      ]
+    },
+    {
+      "container": "doubao-hpe14-account2",
+      "batch": "geo-products-21x5-account2-relogin-20261013",
+      "geo_processed_verified": 96,
+      "consecutive_recovered": 29,
+      "minimum_new_send_interval": 56.46537137031555,
+      "failed_attempts_preserved": 1,
+      "cache_mapping_collision": false,
+      "health": {
+        "time": 1791971351.212741,
+        "heartbeat_expires_at": 1791971396.2127411,
+        "bridge_pid": 42235,
+        "batch": "geo-products-21x5-account2-relogin-20261013",
+        "planned": 105,
+        "captured": 96,
+        "geo_processed": 96,
+        "tasks": {
+          "completed": 96,
+          "pending": 8,
+          "prepared": 1
+        },
+        "worker_exit": null,
+        "delivery_errors": [],
+        "status": "running"
+      },
+      "verified_recovered_tasks": [
+        {
+          "ordinal": 68,
+          "body_length": 398,
+          "source_count": 10,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 69,
+          "body_length": 249,
+          "source_count": 11,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 70,
+          "body_length": 430,
+          "source_count": 12,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 71,
+          "body_length": 306,
+          "source_count": 9,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 72,
+          "body_length": 409,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 73,
+          "body_length": 414,
+          "source_count": 11,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 74,
+          "body_length": 375,
+          "source_count": 10,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 75,
+          "body_length": 295,
+          "source_count": 12,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 76,
+          "body_length": 414,
+          "source_count": 12,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 77,
+          "body_length": 330,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 78,
+          "body_length": 383,
+          "source_count": 11,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 79,
+          "body_length": 378,
+          "source_count": 12,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 80,
+          "body_length": 334,
+          "source_count": 9,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 81,
+          "body_length": 517,
+          "source_count": 12,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 82,
+          "body_length": 411,
+          "source_count": 11,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 83,
+          "body_length": 457,
+          "source_count": 11,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 84,
+          "body_length": 379,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 85,
+          "body_length": 392,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 86,
+          "body_length": 112,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 87,
+          "body_length": 301,
+          "source_count": 5,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 88,
+          "body_length": 338,
+          "source_count": 4,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 89,
+          "body_length": 289,
+          "source_count": 5,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 90,
+          "body_length": 375,
+          "source_count": 9,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 91,
+          "body_length": 249,
+          "source_count": 7,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 92,
+          "body_length": 404,
+          "source_count": 10,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 93,
+          "body_length": 357,
+          "source_count": 6,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 94,
+          "body_length": 405,
+          "source_count": 11,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 95,
+          "body_length": 375,
+          "source_count": 10,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        },
+        {
+          "ordinal": 96,
+          "body_length": 281,
+          "source_count": 11,
+          "geo_exact": true,
+          "current_attempt_requests": 1
+        }
+      ]
+    }
+  ],
+  "diagnostic_listeners_stopped": true
+}

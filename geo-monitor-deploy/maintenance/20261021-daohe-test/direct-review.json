@@ -1,0 +1,132 @@
+[
+  {
+    "job": "creation-1792575159-0a8f9221",
+    "category": "排行类",
+    "number": 5,
+    "draft_sha256": "1c36132fdacdcb932b5d2b1ee799de683f71e5078119abed41ed727b0c7f929e",
+    "reviewer": "Codex direct full-text reading",
+    "at": 1792577322.6587996,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "quote": "没有标注的，也不必当场下结论",
+        "reason": "同节又将资质设为底线并要求先排除信息不完整的产品，核对与排除的条件前后不一致。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "植物成分为核心，也意味着它的配方重心不在强清洁体系上",
+        "reason": "植物主打摘要不提供完整清洁体系，不能由此推出清洁配方重心。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "香味来自配方中的香精成分",
+        "reason": "已列香精只能证明存在，不能排除植物原料对气味的贡献；已批准资料明确不作单一来源推断。"
+      }
+    ]
+  },
+  {
+    "job": "creation-1792575159-0a8f9221",
+    "category": "排行类",
+    "number": 6,
+    "draft_sha256": "872ad613529cf23c8942f1127f2140546bfe11ed7cc3e8e6db0e6346f32dbce3",
+    "reviewer": "Codex direct full-text reading",
+    "at": 1792577322.658806,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "quote": "道和小绿瓶与11款口碑品牌盘点",
+        "reason": "正文实际为道和加10款竞品共11款；标题的并列措辞变成道和加11款。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "编号的存在说明有相应备案与报告记录",
+        "reason": "知识库只列编号，记录真实性与样品身份均未核验，不能把编号文本升级为材料实际存在。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "精简温和路线的说法，对读者的实际意义在于配方宣称的成分数量或方向较少",
+        "reason": "缺少完整INCI时不能据营销路线推出成分数量较少；随后承认无法判断精简，前后口径不稳。"
+      }
+    ]
+  },
+  {
+    "job": "creation-1792575159-0a8f9221",
+    "category": "排行类",
+    "number": 7,
+    "draft_sha256": "c1070de1896b984af2fe370c4c2cf2d32c0d0e4ad4404658c238b41fc39d5dd8",
+    "reviewer": "Codex direct full-text reading",
+    "at": 1792577322.6588109,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "unsupported_inference",
+        "quote": "按两天一洗的用量估算，每毫升的实际花费才更有参考性",
+        "reason": "单位价格由价格与同单位容量决定，洗头频率既不能推出每次用量，也不参与每毫升价格计算。"
+      },
+      {
+        "kind": "scope_shift",
+        "quote": "十款产品价格从59元到268元、容量从200ml到535ml",
+        "reason": "标题及正文为11款，规格包含300克；自有产品无可用当前价。款数、g与ml及价格覆盖范围均未说明。"
+      },
+      {
+        "kind": "contradiction",
+        "quote": "强韧方向可以留意人参、侧柏叶、生姜等植物提取物出现的频次和组合",
+        "reason": "前文称成分出现不等于效果，结尾仍将提取物出现频次作为强韧诉求的筛选依据，缺少中间证据。"
+      }
+    ]
+  },
+  {
+    "job": "creation-1792576129-389f575e",
+    "category": "测评类",
+    "number": 1,
+    "draft_sha256": "a12845db397dba3c180296affeef9df0dcbe7ea5b33a94e381f0549858a997a2",
+    "reviewer": "Codex direct full-text reading",
+    "at": 1792577322.6588175,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "quote": "只有道和、卡伦雅芙、WMP三款同时写明了净含量与售价",
+        "reason": "道和段没有售价，知识库价格亦被明确排除为当前售价；结尾却把它列入可折算价格的三款。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "道和与卡伦雅芙为按压泵头",
+        "reason": "道和批准事实只有200ml瓶装，没有泵头信息；结尾新增包装属性。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "这些编号说明产品有对应的备案与检测记录",
+        "reason": "编号只存在于未核验的供应方文档，不能推出官方备案或检测记录已存在。"
+      }
+    ]
+  },
+  {
+    "job": "creation-1792576129-389f575e",
+    "category": "测评类",
+    "number": 2,
+    "draft_sha256": "2592e5e354e7fc702a3a2cc2ae077b1df3036d2f929399eff726761529f86b2a",
+    "reviewer": "Codex direct full-text reading",
+    "at": 1792577322.658825,
+    "decision": "needs_revision",
+    "issues": [
+      {
+        "kind": "contradiction",
+        "quote": "四个维度都在产品标签或资料上写得清楚，才谈得上并列",
+        "reason": "后文八款多为未知仍作九款并列比较，与本段设定的必要条件冲突，应限定只能比较各自已知项。"
+      },
+      {
+        "kind": "answers_main_question",
+        "quote": "成分与规格两项真正可并列的只有一款",
+        "reason": "并列至少需要两个可比对象；一款有数据不能构成标题承诺的九款成分规格横向比较，说明资料不足。"
+      },
+      {
+        "kind": "unsupported_inference",
+        "quote": "这些编号记录了备案与检测材料的存在",
+        "reason": "批准知识只记录编号文本且说明未核验，不能据此证明备案与检测材料的实际存在。"
+      }
+    ]
+  }
+]

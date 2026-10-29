@@ -1,0 +1,8 @@
+from pathlib import Path
+p=Path('geo-monitor-deploy/creation/panel.html');s=p.read_text('utf8')
+s=s.replace('<p id="dailyDateHint" class="muted"></p>', '<div class="row filter-bar"><div><label for="dailyProduct">产品</label><select id="dailyProduct" onchange="syncDailyFilters()"></select></div><div><label for="dailyDate">任务日期</label><select id="dailyDate" onchange="syncDailyFilters()"></select></div><button onclick="todayFilter()">今天</button><button onclick="nextDailyTask()">查看下一次任务</button></div><p id="dailyDateHint" class="muted"></p>')
+s=s.replace("capture_only:'已保留定时采集，自动创作未启用',", "capture_only:'已保留定时采集，自动创作未启用',capture_only_complete:'采集已完成，自动创作未启用',")
+s=s.replace("const date=$('dateFilter').value||st.today,rows=", "const date=$('dateFilter').value||st.today;$('dailyProduct').innerHTML=$('productFilter').innerHTML;$('dailyProduct').value=$('productFilter').value;$('dailyDate').innerHTML=[...$('dateFilter').options].filter(o=>o.value).map(o=>`<option value=\"${escape(o.value)}\">${escape(o.text)}</option>`).join('');$('dailyDate').value=date;const rows=")
+s=s.replace("['complete','not_enabled','capture_only'].includes(t.status)", "['complete','not_enabled','capture_only','capture_only_complete'].includes(t.status)")
+s=s.replace('function studioResult(name,r)', "function syncDailyFilters(){$('productFilter').value=$('dailyProduct').value;$('dateFilter').value=$('dailyDate').value;applyFilters()}\nfunction nextDailyTask(){const day=(data.studio?.daily_tasks||[]).map(t=>t.date).filter(d=>d>data.studio.today).sort()[0]||data.studio.today;$('dateFilter').value=day;applyFilters()}\nfunction studioResult(name,r)")
+p.write_text(s,encoding='utf8')

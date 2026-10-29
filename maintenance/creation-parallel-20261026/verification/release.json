@@ -1,0 +1,56 @@
+{
+  "files": [
+    {
+      "server": "/opt/monitor/geo-content/creation/worker.py",
+      "sha256": "cdae46ef38f2a6f1cb18cc18be41e6cb35ada603177c501fb90bd09a7047d56e"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/studio.py",
+      "sha256": "c5312bd6beff37704f42b9e9f3726165819c2996feb1c36d4e6c4f8695ffa6d4"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/runtime.py",
+      "sha256": "77933d077c6225d0a0058f1c0ca98cd5db8f4d974906ed8198bb4ba8a4362e28"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/panel.html",
+      "sha256": "a93b59c08602a6525330e32970c75015f39db9c250c4a1bd857e6a807992d4d2"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/wizard.js",
+      "sha256": "6c490846b8ea0767afe244895b338a66223dd2ba5983e79cf9d600fa4a05007d"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/wizard_sections.html",
+      "sha256": "49f7d1936fd6497d5b751164f2afaafa27e1d268cff4336ec9b9d49b3f6a0ea7"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/parallel.py",
+      "sha256": "7fa2b3ea6d0cf54a729d8a10b5c3a4e405ad477ecf05fc56e27218ecfb4fa20b"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/test_parallel.py",
+      "sha256": "2516b789a109eb3561aba52e44d9b4ba8b30ae32d3198db5e42df09ae54bb1cb"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/test_studio.py",
+      "sha256": "f9d74ec8f36ecbfc98397aa7e06e25be85d1fb406f975b1eef06e6060e100606"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/test_worker_recovery.py",
+      "sha256": "6cb8566efacaf5788c6ea741abe80d2d19bd4dda4018b4de18998d62d6fbaf20"
+    }
+  ],
+  "health": {
+    "at": 1792981865.7282438,
+    "status": "running",
+    "mode": "bounded_processes",
+    "max_parallel_jobs": 4,
+    "active_jobs": [],
+    "queued_jobs": 0
+  },
+  "service_dropin": "/etc/systemd/system/geo-content-worker.service.d/parallel.conf",
+  "backup": "/opt/monitor/geo-content/maintenance/creation-parallel-20261026",
+  "tests": 68,
+  "paid_test_requests": 0
+}

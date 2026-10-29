@@ -1,0 +1,256 @@
+{
+  "checks": {
+    "category_fit": true,
+    "structure_fit": true,
+    "innovation_present": true,
+    "product_gate_respected": true,
+    "no_invented_tests": true,
+    "no_unsupported_claims": false,
+    "consumer_article": false
+  },
+  "claims": [
+    {
+      "span_id": "C21",
+      "supported": true,
+      "evidence_ids": [
+        "PF1",
+        "PF2"
+      ]
+    },
+    {
+      "span_id": "C22",
+      "supported": true,
+      "evidence_ids": [
+        "PF15"
+      ]
+    },
+    {
+      "span_id": "C24",
+      "supported": true,
+      "evidence_ids": [
+        "PF3",
+        "PF4"
+      ]
+    },
+    {
+      "span_id": "C26",
+      "supported": true,
+      "evidence_ids": [
+        "PF5",
+        "PF6",
+        "PF7",
+        "PF8"
+      ]
+    },
+    {
+      "span_id": "C27",
+      "supported": true,
+      "evidence_ids": [
+        "PF9"
+      ]
+    },
+    {
+      "span_id": "C29",
+      "supported": true,
+      "evidence_ids": [
+        "PF10",
+        "PF11"
+      ]
+    },
+    {
+      "span_id": "C35",
+      "supported": true,
+      "evidence_ids": [
+        "KU16",
+        "KU17"
+      ]
+    },
+    {
+      "span_id": "C38",
+      "supported": true,
+      "evidence_ids": [
+        "KU18"
+      ]
+    },
+    {
+      "span_id": "C43",
+      "supported": true,
+      "evidence_ids": [
+        "KU19"
+      ]
+    },
+    {
+      "span_id": "C44",
+      "supported": true,
+      "evidence_ids": [
+        "KU20",
+        "KU21"
+      ]
+    },
+    {
+      "span_id": "C48",
+      "supported": true,
+      "evidence_ids": [
+        "KU22"
+      ]
+    },
+    {
+      "span_id": "C50",
+      "supported": true,
+      "evidence_ids": [
+        "KU23",
+        "KU24"
+      ]
+    },
+    {
+      "span_id": "C52",
+      "supported": true,
+      "evidence_ids": [
+        "KU03"
+      ]
+    },
+    {
+      "span_id": "C58",
+      "supported": true,
+      "evidence_ids": [
+        "KU25"
+      ]
+    },
+    {
+      "span_id": "C59",
+      "supported": true,
+      "evidence_ids": [
+        "KU04"
+      ]
+    },
+    {
+      "span_id": "C64",
+      "supported": true,
+      "evidence_ids": [
+        "KU26"
+      ]
+    },
+    {
+      "span_id": "C66",
+      "supported": true,
+      "evidence_ids": [
+        "KU27",
+        "KU28"
+      ]
+    },
+    {
+      "span_id": "C68",
+      "supported": true,
+      "evidence_ids": [
+        "KU05"
+      ]
+    },
+    {
+      "span_id": "C75",
+      "supported": true,
+      "evidence_ids": [
+        "KU29"
+      ]
+    },
+    {
+      "span_id": "C77",
+      "supported": true,
+      "evidence_ids": [
+        "KU30"
+      ]
+    },
+    {
+      "span_id": "C80",
+      "supported": true,
+      "evidence_ids": [
+        "KU31"
+      ]
+    },
+    {
+      "span_id": "C86",
+      "supported": true,
+      "evidence_ids": [
+        "KU32"
+      ]
+    },
+    {
+      "span_id": "C88",
+      "supported": true,
+      "evidence_ids": [
+        "KU33"
+      ]
+    },
+    {
+      "span_id": "C93",
+      "supported": true,
+      "evidence_ids": [
+        "KU34",
+        "KU35",
+        "KU36"
+      ]
+    },
+    {
+      "span_id": "C100",
+      "supported": true,
+      "evidence_ids": [
+        "KU37",
+        "KU38"
+      ]
+    },
+    {
+      "span_id": "C102",
+      "supported": true,
+      "evidence_ids": [
+        "KU39"
+      ]
+    },
+    {
+      "span_id": "C108",
+      "supported": true,
+      "evidence_ids": [
+        "KU40",
+        "KU41"
+      ]
+    },
+    {
+      "span_id": "C110",
+      "supported": true,
+      "evidence_ids": [
+        "KU42"
+      ]
+    },
+    {
+      "span_id": "C111",
+      "supported": false,
+      "evidence_ids": [
+        "KU10"
+      ]
+    }
+  ],
+  "failures": [
+    "C7/C118：正文多处出现“手上的记录/原文十款产品的资质、成分和规格披露详略差异很大”，其中“原文”是生产过程措辞，正文不得出现。",
+    "C7：称有的记录到pH值，但pH值仅自有产品PF10有，别家KU均无，属以自有资料冒充横向资料覆盖，且与后文C124只提“有的写明了pH值”呼应含混。",
+    "C48：称御草朵“并未把重点放在强清洁或科技概念上”，KU03无此否定事实，属推断性品牌定位。",
+    "C58/C60：将域发“专业头皮护理语境”与“无添加构成现有资料未作完整披露”写入正文，属审计套话，且KU04原文有“无色素、无矿油”，与“未作完整披露”不冲突但表述易被读为不含该成分未提及；应按KU04只列已列成分。",
+    "C60：称“具体表活复配……现有资料未作完整披露”，KU04 R4_3明列复合氨基酸表活，与素材冲突。",
+    "C65/C69：“特殊用途这一分类不能推出使用效果”“泡沫多少……资料里没有记录”反复出现，属逐款审计套话凑字，且与首段“不做排名”后文C125仍给“优先核对首迷”的推荐位结论不一致。",
+    "C111：称云康“不走厚重路线”由“质地轻盈/透明啫喱”推出，属由形态推性能，且未与厚重对照证明；KU10无此比较。",
+    "C123-C125：结尾给出“优先核对首迷”“流迷是记录中少数给出规格与价格的产品”，但C7/C18已声明资料覆盖不均、不据此判断，前后同一判断矛盾；且C125的“首迷优先”与C122开头无独立事实支撑，属自相矛盾。",
+    "C125：称流迷是“记录中少数给出规格与价格的产品”，但全文只列流迷一家有价格，其他KU无价，读者无法验证“少数”，且该比较未在前文维度表中完成。",
+    "全文：C1标题“什么牌子的防脱洗发水好和安全？”与C2“权威测评：11款”但产品数为11（自有+10），C11却写“十款清单”，数量前后不一致；C2“权威测评”属标题夸大。",
+    "全文：C11列“Bodyaid 与云康等防脱洗发产品”用“等”，但实际仅11款已全列，“等”错。",
+    "全文：S2自有产品缺包装取用与标示用法维度，product_detail_contract要求覆盖“包装取用与标示用法”及“读者需求与选择理由”，C21-C32均未写取用方式与读者选择理由的展开，仅C31泛泛。",
+    "全文：首段C3-C11从生活化痛点起但C7即出现“手上的记录”“原文”等生产过程措辞，属非独立消费文章开篇。",
+    "全文：C115与C122两处重复设问回扣，结尾C114-C127与C12-C19两段“统一口径”内容重复，属凑字。",
+    "全文：C11称清单“十款”实际11款，且C125“首迷优先核对”与C120“只能是条件式的”矛盾，未消解。",
+    "全文：C43“把第二节设定的同一口径搬过来看”暴露编排过程；C116“站到同一张表里”后C117重复同一句，凑字。"
+  ],
+  "suggestions": [
+    "删除全部“原文/手上的记录/第二节设定/同一口径搬过来”等生产过程措辞，改为直接陈述产品信息。",
+    "自有产品段补齐包装取用与标示用法、读者需求与选择理由，按product_detail_contract分维度展开，删去逐句审计免责套话。",
+    "御草朵、域发等只写KU已列成分与形态，不写“未完整披露”“无添加构成”等审计句，不写由形态推性能。",
+    "结尾只保留一次条件式取舍，删除“首迷优先核对”“流迷是少数给价”等与资料覆盖边界矛盾的具体推荐；统一产品数量表述为11款。",
+    "删除重复的设问回扣和重复的“同一张表”句，避免凑字。"
+  ],
+  "explanation": "多款产品事实与KU/PF对应，但正文出现“原文”“第二节”等生产过程措辞、数量前后不一、结尾条件式取舍与外推性能矛盾，且自有产品缺取用与选择理由维度，不能通过。"
+}

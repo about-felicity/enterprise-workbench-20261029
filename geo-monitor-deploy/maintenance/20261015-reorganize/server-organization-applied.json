@@ -1,0 +1,942 @@
+{
+  "at": "2026-10-15T13:53:53+08:00",
+  "moved_files": 117,
+  "files": [
+    {
+      "source": "/opt/monitor/test_supervised_product_model.py",
+      "target": "/opt/monitor/tests/legacy/test_supervised_product_model.py",
+      "sha256": "240c8d312ead42e2af23be7d295abceffd0ff03588d3a8e1901d9708030948d3",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "3602faf9538432f7f54e29a3b8a85b431b32a247c0e9f02bd1247be16e496c6e"
+    },
+    {
+      "source": "/opt/monitor/rebuild_content_brand_index.py",
+      "target": "/opt/monitor/archive/one_off/rebuild_content_brand_index.py",
+      "sha256": "a05eeb39e8270b6866c03c6da2d2747d9d5e1e089ad50b8b9841d50f716bae97",
+      "root": "/opt/monitor",
+      "category": "archive/one_off",
+      "new_sha256": "22162094b81cd8e318127bd39fd46d0a990630fc07ea2f808236e34d3df9cb6c"
+    },
+    {
+      "source": "/opt/monitor/test_remote_model_worker.py",
+      "target": "/opt/monitor/tests/legacy/test_remote_model_worker.py",
+      "sha256": "cba89a52c9198121226b887be553b2dc6009e8c534d98250f2ac915b626e0e7d",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "c61d908baa31d48db5aa7421b5d901d16ba8c1c9bc1c0eec52e945d3236bdb85"
+    },
+    {
+      "source": "/opt/monitor/test_remote_model_control_panel.py",
+      "target": "/opt/monitor/tests/legacy/test_remote_model_control_panel.py",
+      "sha256": "f4a2728b8fb2aafd3eb0a45000e61a36576aa805c5e64987765644fddf483a2b",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "f5dbc4e09e74720ec6b87704545fcf33558072b36ca2087016b10c3b2c49877f"
+    },
+    {
+      "source": "/opt/monitor/backfill_monitor_ingest_events.py",
+      "target": "/opt/monitor/archive/one_off/backfill_monitor_ingest_events.py",
+      "sha256": "0994d7f29d4b90109ead7e647be0e36d95aa3c1e9047dd7c103c3bb72081a351",
+      "root": "/opt/monitor",
+      "category": "archive/one_off",
+      "new_sha256": "72f3b93a5ea322e1437ac4d6cda92134bc5117da0876ed69576dcc4f1c068704"
+    },
+    {
+      "source": "/opt/monitor/normalize_existing_product_brands.py",
+      "target": "/opt/monitor/archive/one_off/normalize_existing_product_brands.py",
+      "sha256": "c4b54057318c94f588ba866cdd6cc33f646422bfc6d018badfd3dea019a95c96",
+      "root": "/opt/monitor",
+      "category": "archive/one_off",
+      "new_sha256": "21a9a8d079a7a54153962cf6f622c721e6e0e2fc28a3282d330620b6e0c24f7c"
+    },
+    {
+      "source": "/opt/monitor/test_yuanbao_pipeline.py",
+      "target": "/opt/monitor/tests/legacy/test_yuanbao_pipeline.py",
+      "sha256": "757fa819c0d9e3c99ec52e7db59c7f31355b870b06aec0cac94a23d52eb1c58a",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "02f3d2ec04bb56913bb901e104a9f929b3b75f7a5729a4b7741f58a50c0bf656"
+    },
+    {
+      "source": "/opt/monitor/test_http_cache.py",
+      "target": "/opt/monitor/tests/legacy/test_http_cache.py",
+      "sha256": "45b2101c6716d05037e2cd1ae96048e9e5dd788a3a1ba481bce6c9d4ba898599",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "ef8e02b3368e3ba836aeef974cd5e2143fa797ec00527fb29eb6ef6b6c80bc8d"
+    },
+    {
+      "source": "/opt/monitor/test_wenxin_baidu_search.py",
+      "target": "/opt/monitor/tests/legacy/test_wenxin_baidu_search.py",
+      "sha256": "1d26bb00afc4824c640d69d628b04e76e99e80586e91a59df4146292670a4810",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "b6126835adbc1c8beb8e2b97e00a937f04c7274e0f3520c3a2033e0c1488233b"
+    },
+    {
+      "source": "/opt/monitor/test_remote_model_packages.py",
+      "target": "/opt/monitor/tests/legacy/test_remote_model_packages.py",
+      "sha256": "e99144601b45a5074c0530a3bc19363712bc8fde3d5ea1192fa47ecdf3df9f3c",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "54d000204bf32e018c3a0be4ac007f48d7d640dd4a79571851ca13e2ba426b7d"
+    },
+    {
+      "source": "/opt/monitor/test_doubao_owned_video_share.py",
+      "target": "/opt/monitor/tests/legacy/test_doubao_owned_video_share.py",
+      "sha256": "7176c68b19e75cf660a050970d042c317574faa19cc29362ad4ec90823c3abd8",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "9cc0715f54b697cbb385a0b1193508e38355a494eabd8676eed508f16f9b3007"
+    },
+    {
+      "source": "/opt/monitor/dedupe_doubao_product_snapshots.py",
+      "target": "/opt/monitor/archive/one_off/dedupe_doubao_product_snapshots.py",
+      "sha256": "529c06f82377aaf78635b2ab02ad90bc6637cfd86fddb878c23e2c1e0b6d2e15",
+      "root": "/opt/monitor",
+      "category": "archive/one_off",
+      "new_sha256": "f81381feaf9132505c1aa0bad6395b004f6a483906610196b150cbfb37e2ef9d"
+    },
+    {
+      "source": "/opt/monitor/test_doubao_remote_startup.py",
+      "target": "/opt/monitor/tests/legacy/test_doubao_remote_startup.py",
+      "sha256": "c62943b349ac7c8e8611c43bfa26ad5c679b263003b9774027243d85b43037bd",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "7bd9f05c053e49ca308e3c3a4915cba7f01aa19ade2019029710da72801fd0dd"
+    },
+    {
+      "source": "/opt/monitor/test_doubao_appium_cleanup.py",
+      "target": "/opt/monitor/tests/legacy/test_doubao_appium_cleanup.py",
+      "sha256": "26b1b084361466c4d39ce5493cb8cacfc3dfb6a02864c497a86b9ae043b08829",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "7524c9c898d10e9f5af58a903c2c8956d68bbeee6ee88e57a7c06a1f96102907"
+    },
+    {
+      "source": "/opt/monitor/migrate_monitor_database.py",
+      "target": "/opt/monitor/tools/deployment/migrate_monitor_database.py",
+      "sha256": "3ce88563cabf35ebfda5c944fbd6c93c784d048bd3827804c8fd857c27026794",
+      "root": "/opt/monitor",
+      "category": "tools/deployment",
+      "new_sha256": "5c32eaf4a05bd7be9f1d26c02515660e3aa83ec9c67bad722ea830f5b3424974"
+    },
+    {
+      "source": "/opt/monitor/export_doubao_xlsx.py",
+      "target": "/opt/monitor/tools/exports/export_doubao_xlsx.py",
+      "sha256": "37759bd353df62e76de0cebf0bcc2aff9a72d71bfc7f1b37fff54074e711baef",
+      "root": "/opt/monitor",
+      "category": "tools/exports",
+      "new_sha256": "7d585d3ee70816401f89d39e64acb03a55f07819c77fe8b44e390518d9f7853d"
+    },
+    {
+      "source": "/opt/monitor/test_doubao_mumu_navigation.py",
+      "target": "/opt/monitor/tests/legacy/test_doubao_mumu_navigation.py",
+      "sha256": "32a0611f94eca7f79e96a6a678d9f5f18083ada51cc339a90b9d4982483e9007",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "04be105fdd0a5dc067dfc31d44cb2f67030b2de12cc9a8978a6b23a76161025f"
+    },
+    {
+      "source": "/opt/monitor/test_doubao_lan_client.py",
+      "target": "/opt/monitor/tests/legacy/test_doubao_lan_client.py",
+      "sha256": "2798c84cbd888ac1cd52e99c09a7312d31940cab85b53245261d4529b00ea864",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "7a3fd03a6bd65eec0b29682a95a349a767725a99a13516f9338c982cdc7ce314"
+    },
+    {
+      "source": "/opt/monitor/audit_low_token_analysis.py",
+      "target": "/opt/monitor/tools/diagnostics/audit_low_token_analysis.py",
+      "sha256": "f4d587dab6de846fd98a99e2790db9c387edc552d454be7ece343b4db2f010e0",
+      "root": "/opt/monitor",
+      "category": "tools/diagnostics",
+      "new_sha256": "d785c1fe2ebefe6670779759d5481ca467d01790de4b3baea77116105eb745d7"
+    },
+    {
+      "source": "/opt/monitor/test_doubao_plugin.py",
+      "target": "/opt/monitor/tests/legacy/test_doubao_plugin.py",
+      "sha256": "ec774d6bc13ad023ce89536db69a18e3fdec679eec7c2fb5cd3e3f9a1baacc27",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "369bc99ff3ff184d6bab8e101df4652dc27f91d7cd788153cf6b392eff2d7542"
+    },
+    {
+      "source": "/opt/monitor/test_product_analysis_efficiency.py",
+      "target": "/opt/monitor/tests/legacy/test_product_analysis_efficiency.py",
+      "sha256": "1a9059e8b8b5ea98d002a3daa10aceabcc4cb26f64e1a434930b2143e205fbc7",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "b8f67940485bfb0f544ee025deb7504986eadc06efdd1c04607a1642f4c00107"
+    },
+    {
+      "source": "/opt/monitor/audit_brand_mention_integrity.py",
+      "target": "/opt/monitor/tools/diagnostics/audit_brand_mention_integrity.py",
+      "sha256": "5cddef56186067ee350e82a0d1ec431d00f38bc48f8c116ac0bf12d6ee14f364",
+      "root": "/opt/monitor",
+      "category": "tools/diagnostics",
+      "new_sha256": "ed77b2f7233f45e56e4dece41479a7f9d69753598d80488c9cf07acbbb41b4e5"
+    },
+    {
+      "source": "/opt/monitor/normalize_doubao_historical_questions.py",
+      "target": "/opt/monitor/archive/one_off/normalize_doubao_historical_questions.py",
+      "sha256": "07ad120607afa10b4badf8243b1284362409502de9c4e2ad6c9f4dddfabde51c",
+      "root": "/opt/monitor",
+      "category": "archive/one_off",
+      "new_sha256": "bc0f6be906cbe4e54ee5e15a88340fa187333b0ecd9556d4695bf633ee8d5734"
+    },
+    {
+      "source": "/opt/monitor/test_monitor_core.py",
+      "target": "/opt/monitor/tests/legacy/test_monitor_core.py",
+      "sha256": "2fc48502bd12570407ac963de9946e38b48d7bb6178b574431500377241eab28",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "df52c5cb340d89fd38c097ef556b40f7757fccca77103e0f4cb78f4b3a3e3fd6"
+    },
+    {
+      "source": "/opt/monitor/test_doubao_lan_sync.py",
+      "target": "/opt/monitor/tests/legacy/test_doubao_lan_sync.py",
+      "sha256": "36c5894f0de802d6207070d88da8a5d3eb2a802a55f53e9a67cb066d94209a90",
+      "root": "/opt/monitor",
+      "category": "tests/legacy",
+      "new_sha256": "9387550a2fd2a527670071a1a817ec84ab758ff92f4e1155dfb4348163bc47df"
+    },
+    {
+      "source": "/opt/monitor/rebuild_doubao_products_from_answers.py",
+      "target": "/opt/monitor/archive/one_off/rebuild_doubao_products_from_answers.py",
+      "sha256": "55508e5b4e4971173ef64ef1661d29ee6ac48023f5184431ec14664c0dbdf7e2",
+      "root": "/opt/monitor",
+      "category": "archive/one_off",
+      "new_sha256": "cf68b9a20927e1d52e2761d959b848fcf50a8d4fa662f709f5c765ffe7c8942a"
+    },
+    {
+      "source": "/home/user/redroid-doubao/watch_send_telemetry.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/watch_send_telemetry.py",
+      "sha256": "bb4d59f37235fbcc872b1956016a0171fede5b6b9757ccf728ca96e4286a5e87",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "64d7b67d13db75ed5b2cf3e8e0f2431d07860188d7dc16128b5a1f5d50b11e66"
+    },
+    {
+      "source": "/home/user/redroid-doubao/start_account1_new_batch_20261014.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/start_account1_new_batch_20261014.py",
+      "sha256": "07391f879f7e84a9d78b74b0260bbcce629a91bf58d714df438bac2c8b874bb7",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "e6b745512e464d7bafaa99398fb599f4fdf41514b1b1247e84e5d1aa1d31f425"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_keva_library.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_keva_library.py",
+      "sha256": "fd6c9d664bb8422d0984f35e6b81ae0eecd0f5563b0d3f128c0fcd88995a6e35",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "de5aa7094b3d4a328d4b426e69a0e7b8fab16de3f7ffd481417b9bd7333f2bb4"
+    },
+    {
+      "source": "/home/user/redroid-doubao/diagnose_account2_task.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/diagnose_account2_task.py",
+      "sha256": "e660897b57f613f73ebce4b99c92008f41202ca82b1b9d133fe10784000ae0f3",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "3d56f7538c16aa8aa2292604efc2a56cf7627a0ec53616eb202888f5d4f41be3"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_analysis_progress_20261015.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_analysis_progress_20261015.py",
+      "sha256": "7b11cfc1f92cff102ef8d7572e98621db6e2476cd348f6a87630f884d3e143d6",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "437928ba91f7d612368c0b4a2776d4c050fca2a30ae0e5db3dd494fbbd0c2c10"
+    },
+    {
+      "source": "/home/user/redroid-doubao/resume_account2_late_answer.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/resume_account2_late_answer.py",
+      "sha256": "ce58a47709292bd707c970b7424191e91338afd13708c6596abd77aca1b35c8c",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "d98c365870c59a0b8de2360938b2536d84ccc81f1925453efced9e3fce82d7a6"
+    },
+    {
+      "source": "/home/user/redroid-doubao/runtime_preflight.both-keva.py",
+      "target": "/home/user/redroid-doubao/archive/code_snapshots/20261015/runtime_preflight.both-keva.py",
+      "sha256": "1dc97572d2309538ed08d78e019389da53d1a6f799164a5d6214945a36be2842",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/code_snapshots/20261015",
+      "new_sha256": "7df881c94f4f52ce7cef932b3310ad5fa3c947fca43866e50cefb1d4982af3f3"
+    },
+    {
+      "source": "/home/user/redroid-doubao/verify_dual_pause_fix.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/verify_dual_pause_fix.py",
+      "sha256": "57953f35dd2cf3e46db75ac551ec3aadc9efde6e5811ec6d72c66008c4332103",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "853bfdf963272803df0fcc3e1f33ef9057a0886074611883f65e2b66c648f52a"
+    },
+    {
+      "source": "/home/user/redroid-doubao/finalize_geo_capture.py",
+      "target": "/home/user/redroid-doubao/tools/deployment/finalize_geo_capture.py",
+      "sha256": "63c636bd86583f92613d9f18d763cf6ad2f329c0a9cb8c8118ff17d2698e000a",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/deployment",
+      "new_sha256": "09cf1ec09bf9f91f3597d232754087fd84293bd6f5d22661ca26da0edb71a95b"
+    },
+    {
+      "source": "/home/user/redroid-doubao/account2_error_menu.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/account2_error_menu.py",
+      "sha256": "c9de88c900432d563029e59b511e1cb316ca105af4de82421c2af4e0afc155b2",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "2c89377cea596e7f6e769398c953e621d4386ba5657129c2e323b27496ffc1d6"
+    },
+    {
+      "source": "/home/user/redroid-doubao/migrate_session_geo.py",
+      "target": "/home/user/redroid-doubao/tools/deployment/migrate_session_geo.py",
+      "sha256": "2c1682b85d107a9de6740703e71fc20e362e0db1480fcd1f43ff6106156ce74b",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/deployment",
+      "new_sha256": "042f0b74fbb07ace48700622e5cef862f8b600cf65e46b33a6193cc7fbdf2c55"
+    },
+    {
+      "source": "/home/user/redroid-doubao/verify_account2_recovery.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/verify_account2_recovery.py",
+      "sha256": "85ab23c2a22d779b6b64f2a52593ec479d0e1e92da220cbca7d765623c2f431c",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "dfce311a5f60545697512d6d9dce39a99b3f01963bd96b84fc55ccbc75e65355"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_keva_paths.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_keva_paths.py",
+      "sha256": "e5fc15843be2e9f08653cb2c8b905d0ecc26966e36867076384a55b6b2749ee1",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "cde5f7f8a216e2d158e98b43a204f14898e738e9dcefee32b9f5057bffc56e6d"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_pending_dual.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_pending_dual.py",
+      "sha256": "2001ad804b012a3910ea4d00ba3ed29fee9f92f0baad5f1c92bd421618cbb558",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "22c85e5a6a80fb477bb8a671675e41da3783984e38dadf2c05b6632b356fbb5e"
+    },
+    {
+      "source": "/home/user/redroid-doubao/test_geo_batch_bridge.new2.py",
+      "target": "/home/user/redroid-doubao/archive/code_snapshots/20261015/test_geo_batch_bridge.new2.py",
+      "sha256": "576284e671a013c9805f13afb680b48f85f52d30a2446e13bdb47a793c9cb9cb",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/code_snapshots/20261015",
+      "new_sha256": "786b9950fc81802ec6a2b4bc235d5a080b45b0e012a1add2575e287c2b4861a3"
+    },
+    {
+      "source": "/home/user/redroid-doubao/rebuild_account2_chat_cache.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/rebuild_account2_chat_cache.py",
+      "sha256": "6706db9f4652196b5ac64ecf35ce5c10c39adbce37e79abee89be01461952803",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "ab62e040af659ef2c883f6577eed3a82ad6bc178932a751c27cf1784ee41ddf5"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_conversation_state.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_conversation_state.py",
+      "sha256": "62c8095915c021760b4d875b660c480d45593734195bec276311981757d55090",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "352d87510af20683d7a65e3c68397b8fffc9b88ddda75501dbca9e165c869f96"
+    },
+    {
+      "source": "/home/user/redroid-doubao/check_deepseek_balance_20261015.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/check_deepseek_balance_20261015.py",
+      "sha256": "c39223e47ebf669db13aa0e9aa459cf2d97f97244b813045611102af50a3a73f",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "69de3a87a1fc1e60330aa5f8cdc932bf9750f49ed5bd7ef142e0c03387d95ded"
+    },
+    {
+      "source": "/home/user/redroid-doubao/diagnose_send_runtime.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/diagnose_send_runtime.py",
+      "sha256": "e67b46ac9036d805d8d5425aa10b0077db7b36515adb886a255c66643a550539",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "1279b7d75be92e0c10ed3176c05cb34b1ba2f5b79e31361e4b2e894e6835be34"
+    },
+    {
+      "source": "/home/user/redroid-doubao/pause-fix-runtime_preflight.py",
+      "target": "/home/user/redroid-doubao/archive/code_snapshots/20261015/pause-fix-runtime_preflight.py",
+      "sha256": "9a748146e76bddfd833c8967fcbb4f2e23c1e3602aaa86aebfb6f7916346c911",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/code_snapshots/20261015",
+      "new_sha256": "3ad45060ada4e60b2e04ab0818c99d3dfc2b423c87fd78902dd6eb89cdad6a7c"
+    },
+    {
+      "source": "/home/user/redroid-doubao/check_two_accounts.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/check_two_accounts.py",
+      "sha256": "e5696d66425a01c181d0ec939626c67f0133a3b79832f175b4949bf178409087",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "dd396b638b16e4eb1b5c91abc7b9d477689616523559d88c80c5fcdab225d771"
+    },
+    {
+      "source": "/home/user/redroid-doubao/apply_account1_keva_workaround.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/apply_account1_keva_workaround.py",
+      "sha256": "743b7df0caf7cd434287ca035d27ea72e0f8c89ec67407652d36dd0edf374d2f",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "4fe77458730b18d24dd3cc8097ac7f6e3634611d1610bac1fe026429f17de4d1"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_current_delivery_blockers.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_current_delivery_blockers.py",
+      "sha256": "30902d20cd34515e76c07ddb4bf4eac29d852371ba5041ec84825b35b2e01b40",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "9f00a5a0bb041e4521365af25cedf58258cec032b6639fbed00764f8591f3023"
+    },
+    {
+      "source": "/home/user/redroid-doubao/resume_first_notification.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/resume_first_notification.py",
+      "sha256": "2937ca69c90136ad3511768a6276a373bf32854ec3d8918451a49f88addbe57c",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "df53912d13da7aa77e1dbed7b4775e0a71133ca3f09813c1bdfdd52988d5883b"
+    },
+    {
+      "source": "/home/user/redroid-doubao/create_account2.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/create_account2.py",
+      "sha256": "27dadf674cac30364a8190d12f3209079e521f887425ffd90ba7359394315026",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "a83f624fbc7b628b7f2459e569cf58dd276e298a01aa1f93f9f5dd31545031b9"
+    },
+    {
+      "source": "/home/user/redroid-doubao/retry_account2_repaired_native.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/retry_account2_repaired_native.py",
+      "sha256": "3303d2a6728aa05e2ccb138c7ae496ad04a9cf1f4b36f6e903b9a9f840aec76f",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "7df2acb9c711570d710d962eb88de2a4c75d274c54ede1aeca0fc1553608dd9c"
+    },
+    {
+      "source": "/home/user/redroid-doubao/pause-fix-unattended_worker.py",
+      "target": "/home/user/redroid-doubao/archive/code_snapshots/20261015/pause-fix-unattended_worker.py",
+      "sha256": "e1b25797b1b9e703d59f666e693b5be29b5cd4ca4d811f6c4526ef5e395409e8",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/code_snapshots/20261015",
+      "new_sha256": "d8af91ccd79557ac151d04ef05b6088e230f225a70285018c3da8504a0f214b1"
+    },
+    {
+      "source": "/home/user/redroid-doubao/check_runtime_isolation.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/check_runtime_isolation.py",
+      "sha256": "2f8b948d816b00b287d09691bebef7b55f0d48c306957ad4f629c373cb6f6f95",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "94bfbe44cea099f758a65b816ef848767a866510d7fa481fb358e3e6a75ccbe0"
+    },
+    {
+      "source": "/home/user/redroid-doubao/account2_recovery_acceptance.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/account2_recovery_acceptance.py",
+      "sha256": "faee45d293c5c7d256fc60363092c1e8809907416b54ff9ee1ae6a381a513584",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "a4fec793f86cec4cc5ac6638e3163fc0620d87f0a562a38a50518df18d4f3ffe"
+    },
+    {
+      "source": "/home/user/redroid-doubao/check_current_dual_batches.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/check_current_dual_batches.py",
+      "sha256": "0a68cfbe0106b7d4ab42a073882fe979b07266943d7d1f0f48ed0cf09f587d17",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "d9ccfef2c3553e407817bce0fb3c3d0fad04294700751cbd81acb71331d03127"
+    },
+    {
+      "source": "/home/user/redroid-doubao/check_account2.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/check_account2.py",
+      "sha256": "2203021a39f0ca8bb0e4806ccdd7f8b9036c444b1fc3ada39c905b78d07598ac",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "a3f7a0707c4348911c559a4ea9575a10e7582c119b0c901e8ba8d8b1aa3d95ff"
+    },
+    {
+      "source": "/home/user/redroid-doubao/build_keva_workaround.py",
+      "target": "/home/user/redroid-doubao/tools/deployment/build_keva_workaround.py",
+      "sha256": "275371bd7cc29d1cbc0480f4dc78c0ed6357ec10610c366114cde871a892c525",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/deployment",
+      "new_sha256": "e7d039fa887e4e191be3a79c0662f1007c3fcd2a5bd6a4410cde802d21db88c2"
+    },
+    {
+      "source": "/home/user/redroid-doubao/deploy_dual_pause_fix.py",
+      "target": "/home/user/redroid-doubao/tools/deployment/deploy_dual_pause_fix.py",
+      "sha256": "5e3cfc5a3e693f3874d72e4f5c23adba96360b0181b112c549506bb4b1ca6609",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/deployment",
+      "new_sha256": "16f2a238608b54c97fecad11145f6b2e114c2b651c3c25a894b676b5fa9109dc"
+    },
+    {
+      "source": "/home/user/redroid-doubao/before-maintenance-pause-unattended_worker.py",
+      "target": "/home/user/redroid-doubao/archive/code_snapshots/20261015/before-maintenance-pause-unattended_worker.py",
+      "sha256": "e1b25797b1b9e703d59f666e693b5be29b5cd4ca4d811f6c4526ef5e395409e8",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/code_snapshots/20261015",
+      "new_sha256": "d8af91ccd79557ac151d04ef05b6088e230f225a70285018c3da8504a0f214b1"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_account2_controls.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_account2_controls.py",
+      "sha256": "834888066841efd99db146377842c5b7d22abe29b3e6ddc6fe1f2381e9afe281",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "3067d576e4f7225f995136e49351de4e679f5d646b7f4a45f583af82f6312bec"
+    },
+    {
+      "source": "/home/user/redroid-doubao/frida_account2.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/frida_account2.py",
+      "sha256": "611b210c050a53a535472b5141e13b2b7dbc1e0e303c9335655c32d9c32bbbc9",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "a5464b51142e3d6d933aa507afdbd9837fefdce8e89b3fe073436a1aa4cac7f9"
+    },
+    {
+      "source": "/home/user/redroid-doubao/disassemble_keva.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/disassemble_keva.py",
+      "sha256": "ce6294bae267c73298ac223792657af17b9b8931757ec217d1180fd8793b6449",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "0203ca99607339c68a2a3139172a8d2076a9e4592958569de8b21fc38d2d72fc"
+    },
+    {
+      "source": "/home/user/redroid-doubao/frida_dual.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/frida_dual.py",
+      "sha256": "8641ad29938d162527a3b02242ded705abdb5690c0ee5bbbd6abda82079c60f7",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "d01e56936f899dc6fdb7ebd14d713b742ccc61a7a72ffb3693f5fa80f5e38546"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_send_errors.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_send_errors.py",
+      "sha256": "b7975260f9b2511ac74a2bb3e017c6ecb0cdbfc1693b7a015775312e7d59a0b8",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "2863b7e443892791ca54aedeb077bf2760062d88d7be7fc512a03edf9a8ce376"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_batch_attention.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_batch_attention.py",
+      "sha256": "593fcf1cdc5159e2fe369ed56933ace5ad1b7251b16681a86572f6e7da64dffd",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "e937b4d528e2aa9dd785afad18969dff0b0451c5446a1f902ddb48a8dfdf307f"
+    },
+    {
+      "source": "/home/user/redroid-doubao/maintenance-safe-unattended_worker.py",
+      "target": "/home/user/redroid-doubao/archive/code_snapshots/20261015/maintenance-safe-unattended_worker.py",
+      "sha256": "25e4a4ce9de74c374c3a9fe47e14b52fc6f789ad77fd513f456f970c34e8689a",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/code_snapshots/20261015",
+      "new_sha256": "482673c897601e8a80d8a1f05f32a26bb9a81797d2e7d54d44d39e413a2c242d"
+    },
+    {
+      "source": "/home/user/redroid-doubao/repair_account1_conversation_fts.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/repair_account1_conversation_fts.py",
+      "sha256": "41f875550efb5e080877d2ee940838cc9152e34ebfb59fb277f7990985b403b0",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "d3d333c65e6c57650dad985b849192a19b37a75f52f44d3db5c278c54dde3321"
+    },
+    {
+      "source": "/home/user/redroid-doubao/pause-fix-test_geo_batch_bridge.py",
+      "target": "/home/user/redroid-doubao/archive/code_snapshots/20261015/pause-fix-test_geo_batch_bridge.py",
+      "sha256": "576284e671a013c9805f13afb680b48f85f52d30a2446e13bdb47a793c9cb9cb",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/code_snapshots/20261015",
+      "new_sha256": "786b9950fc81802ec6a2b4bc235d5a080b45b0e012a1add2575e287c2b4861a3"
+    },
+    {
+      "source": "/home/user/redroid-doubao/probe_arm_openat.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/probe_arm_openat.py",
+      "sha256": "f8e54112292726b1b0b723568a24e483a08944d1f47f7f7adb1f6e6e439570df",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "813b67cd7e64431fb6dd52a6e7996378899d94c9d4e5ad13ec0e861765629118"
+    },
+    {
+      "source": "/home/user/redroid-doubao/repair_account2_conversation_fts.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/repair_account2_conversation_fts.py",
+      "sha256": "e70d836062c2c28e5b8384778beae04152cabb224fff045cdc433e119ca39452",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "2b3ee23a497b895c9552b6506b8ba11703c2ff27a8b510019b336abfdbb68cac"
+    },
+    {
+      "source": "/home/user/redroid-doubao/check_account2_fresh_chat.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/check_account2_fresh_chat.py",
+      "sha256": "ce961747fe34c753108f5bd1790f067287892ed9a91c65a75da1a103e54834f6",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "a8a6f4f0b774955ec08192c8b9a66f4f3cff74801815c6906ac196b6b37646a2"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_im_runtime_errors.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_im_runtime_errors.py",
+      "sha256": "7e612ac026a39f0e32b6a06d8cbbff154a81340dcc78466d67e7f99554b2e28d",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "987d7fb013694b1125da09819faa6801a2924a200d29186139f77d76e223a896"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_account2_sync_safe.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_account2_sync_safe.py",
+      "sha256": "557df926d6cf62fa172e8801cd903de54159bbd2ddcc9ca6958a8a9785680823",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "28817e3be8466ead98c2f9a6525bfc8f0499111ccf8c96c4cf1ad5c677351651"
+    },
+    {
+      "source": "/home/user/redroid-doubao/runtime_preflight.new.py",
+      "target": "/home/user/redroid-doubao/archive/code_snapshots/20261015/runtime_preflight.new.py",
+      "sha256": "1644bc39e6295d6f5d8331af88429c62dfbd8959e2fb8f342b8c721888cb3c02",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/code_snapshots/20261015",
+      "new_sha256": "07e463d715f11460f8ec8d9f417b249458d325f6f23d47205e9578bfd80b2eb3"
+    },
+    {
+      "source": "/home/user/redroid-doubao/repair_account2_keva_filenames.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/repair_account2_keva_filenames.py",
+      "sha256": "9760556a8ec4dbc144504f4bd6a6132a70f99809ce4d1dba959ad771b923c81b",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "0837536f27d0e32eeb8fb0f1265c36a8bce100ba096c9d4a13540dd510f6d14d"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_current_account2.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_current_account2.py",
+      "sha256": "fd1f5e2fa7261528195285fa12a0493b99832f715524d5890685f66ebc7b1262",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "92087606e4c72d84769e17ca37b01320d464ea77f037ca21eec9dd19ac8a3894"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_im_error_symbols.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_im_error_symbols.py",
+      "sha256": "1758c99e72cd82fbd88a1c32bf769a6c60228094ab660656deabe2e6e5c60d40",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "77b50a8fd6f0423ee62cb6daef8e96203b74beb20501d5baec282cb97f21a81b"
+    },
+    {
+      "source": "/home/user/redroid-doubao/test_soak_sequence.py",
+      "target": "/home/user/redroid-doubao/tests/legacy/test_soak_sequence.py",
+      "sha256": "b2962669ce39f1a420eee7ebd985adce72cc24b7f31a503db7e75171a7c9f78f",
+      "root": "/home/user/redroid-doubao",
+      "category": "tests/legacy",
+      "new_sha256": "353370ff18ac2cd9b57c7c7d206cf1f26d0990246145fd11937224eab98e3b55"
+    },
+    {
+      "source": "/home/user/redroid-doubao/rebuild_account2_im_sync.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/rebuild_account2_im_sync.py",
+      "sha256": "ebb4daa7d8cb7331cef9f24d4ef2fa740c4b901e8dbce04150aeb0894dd2e16b",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "71cdeead37aa8ef43cbda002381b9c899b753ff0c27f3090c0e0c5db3d0f964c"
+    },
+    {
+      "source": "/home/user/redroid-doubao/before-maintenance-pause-unattended_core.py",
+      "target": "/home/user/redroid-doubao/archive/code_snapshots/20261015/before-maintenance-pause-unattended_core.py",
+      "sha256": "04ee37575f5f55379ce0c9783fec164f794bf45d1b4b782fc891bfb5603d1117",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/code_snapshots/20261015",
+      "new_sha256": "ded71af62ecfba00d0ccd58e210fed2440b7532a34d6e2a2deb756ce3d2e79be"
+    },
+    {
+      "source": "/home/user/redroid-doubao/reconcile_dual_pause_20261014.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/reconcile_dual_pause_20261014.py",
+      "sha256": "01e0124621bf85470fc9073362e413d33bb8f836ca6dffd6993d472bfec2921e",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "796b0a6e984a218aeda8b8ba70662d97541b40356fbadadba651518b8c92ae22"
+    },
+    {
+      "source": "/home/user/redroid-doubao/compare_session_isolation.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/compare_session_isolation.py",
+      "sha256": "f3ab36190f9895ebdd5a0a884cdd87d6e1242464efeef8614128610052602c2c",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "69ae1a4b77d6c0f2cfe9bdc6f4cea7cccf2d92f7c225677bc859eec3ea1637bd"
+    },
+    {
+      "source": "/home/user/redroid-doubao/backup_hpe14_release.py",
+      "target": "/home/user/redroid-doubao/tools/deployment/backup_hpe14_release.py",
+      "sha256": "3102e1640044199189f3ac50f90693c79e374e104c5d3334b61e4fd03646217b",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/deployment",
+      "new_sha256": "99c9731a5eafa0100aec1aaab1e56f9cbd28309cf54bd57f21e1655d456ea3e3"
+    },
+    {
+      "source": "/home/user/redroid-doubao/reload_account2_worker_after_ack.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/reload_account2_worker_after_ack.py",
+      "sha256": "18b8e5034533e02e751ed6a18be11e2ef40951f0febb4bc07fbc908ce1ba4927",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "e3155c88970ec1fea711dd5d3d4de75793a1f2a57b9983440375a7edc3bff31d"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_im_cache_keys.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_im_cache_keys.py",
+      "sha256": "2c93e8e86be2eb002b760b7471159519edb330708e9084cec7452d3130aaeb60",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "95a36b77e494d05dc24ce41a1ba3cdd4cbca2b5071bc8ffb9548b1e85b21175f"
+    },
+    {
+      "source": "/home/user/redroid-doubao/export_soak1h_report.py",
+      "target": "/home/user/redroid-doubao/tools/exports/export_soak1h_report.py",
+      "sha256": "d9f966db26edae7dccdb01ff2aa349e98b08fef5b30fc5767a70377dd4dad19a",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/exports",
+      "new_sha256": "955301bed05a5fc3d7a9750c70b62eb2267d2f0934e3a702a71088ca1cc578f1"
+    },
+    {
+      "source": "/home/user/redroid-doubao/compare_active_accounts.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/compare_active_accounts.py",
+      "sha256": "a8f29423ba7e1f5215513bd002039c22879d1773f94774fc4ce0c09c8a123f47",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "855c2c767f018b12e5689279b21aa566b0985db22b872a5ed96cdec3931f3f43"
+    },
+    {
+      "source": "/home/user/redroid-doubao/compare_network_cache.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/compare_network_cache.py",
+      "sha256": "77b5f114618e6aaf0464dc5383bccca10514fe6bfddfdf5e71ad1121178087e5",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "537ac9e6ecd9c05f53586e61c32eb9b65e87099e1f251c2c2bc929601d00c619"
+    },
+    {
+      "source": "/home/user/redroid-doubao/package_hpe14_results.py",
+      "target": "/home/user/redroid-doubao/tools/exports/package_hpe14_results.py",
+      "sha256": "2303fcf5ef2d72c28174ce3e520ce04916bb6be6a5d42a00613df41b69868d45",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/exports",
+      "new_sha256": "0d68335c6a445edbf8cb2e24138db42fdaef5dfec0c63debb3ff00d4cdbafc24"
+    },
+    {
+      "source": "/home/user/redroid-doubao/test_geo_batch_bridge.new.py",
+      "target": "/home/user/redroid-doubao/archive/code_snapshots/20261015/test_geo_batch_bridge.new.py",
+      "sha256": "1a133f53ce68c9a62710d77409b5d33a1fe6f8284aca8b2d91f31eed5bd98625",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/code_snapshots/20261015",
+      "new_sha256": "926f396964204c671520d99890d552d745562fb3d897ca042ba051d5e7d942c4"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_account2_db.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_account2_db.py",
+      "sha256": "bd33951d647f70cade8c5dd60f2bb79001c9aa55d16d300fd150bef59001c597",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "2c6e4655c579dbe71ed2382255ea14df4fc5cbb4e68e478177d3c8cbb9c1da0f"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_im_dex.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_im_dex.py",
+      "sha256": "da53e0011de1f1c83987a911e8c8e39708d0f41535cd0c0850d527e56190704e",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "62a5db99866e65561997a6b946d37d35c4ddea10a62d3ba3dfc6b98977288144"
+    },
+    {
+      "source": "/home/user/redroid-doubao/probe_chat_hosts.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/probe_chat_hosts.py",
+      "sha256": "bae8a86b4b75d7731a4da45e982218f11276331860699800871b276160c36459",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "ef4867c1360ce29b472bf537a01f725e67847b3ff88d1ce87cdca163a0ec75e0"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_conversation_sql.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_conversation_sql.py",
+      "sha256": "c89ed37092c70812363a669b445ebc17eef4547b3d9f47fbb6fae500365d5467",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "8d9dfc0455e73548ce3540a24bdb0ac4eb30b35516c79536dd8b85800fb8135a"
+    },
+    {
+      "source": "/home/user/redroid-doubao/unattended_worker.locks-closed.py",
+      "target": "/home/user/redroid-doubao/archive/code_snapshots/20261015/unattended_worker.locks-closed.py",
+      "sha256": "3a1af06cbc2074bb7acdb52ef9c6d9fe7ef8da26dc4d5175d404a18571c31831",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/code_snapshots/20261015",
+      "new_sha256": "1cd8da361276253f57a447a1bc9d3e2491ed8c63cd399927e742f195c2495c15"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_account2_attention.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_account2_attention.py",
+      "sha256": "48ed23a37cc222dcfe80ccc028c4a0034c3d8c7d81518cfa767f67584d13ca53",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "4227d015161f33fd59592c1cd67e43632cd60966bad76fb0c45a1e858676d5ee"
+    },
+    {
+      "source": "/home/user/redroid-doubao/export_native_soak_deadline_note.py",
+      "target": "/home/user/redroid-doubao/tools/exports/export_native_soak_deadline_note.py",
+      "sha256": "e192e9277d96455f1e73b61d9e16877255ce56e86d5d186cbe13ae8526049f09",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/exports",
+      "new_sha256": "f775226a68ed726e39cd38d941258064e85fe4f4e6ef8a03ee844e43ae9ed610"
+    },
+    {
+      "source": "/home/user/redroid-doubao/account2_ui.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/account2_ui.py",
+      "sha256": "68e1cbd090c3103f8a98ed05969cfb464cd7851da1fdc3ea774da4f32bb554b8",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "d9f2ed596d0a7321264d8aa28280f830389db565eea0a60d76ece1bc1e508415"
+    },
+    {
+      "source": "/home/user/redroid-doubao/compare_app_libraries.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/compare_app_libraries.py",
+      "sha256": "8bdfe303580e7e03065f773c0a09c742f4a9dfeb38d3cc68857de16aa92a9ac1",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "682f54166d2bd89694d1d608b5cadb8d63b7b5de5ffa8de03ba98dd95522c6c0"
+    },
+    {
+      "source": "/home/user/redroid-doubao/isolate_account2_conversation_fts.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/isolate_account2_conversation_fts.py",
+      "sha256": "c486c96a303006b73794d8bc69cac55d68787b19978082380285a316bd65ab30",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "204849b5e90a034aae76a82e21772ee63aa27d03d1807458f0dbdc420653b0f6"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_receiver_config_20261015.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_receiver_config_20261015.py",
+      "sha256": "06c9ddc11f6319efdf5fd10ac87973fe0ba8d7d2389ff3c5cf6dbcb3fad1ff21",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "bbffaa08d500b3c8a46398787be23cb3001100ca0cbcbf72819e4465be9a26d5"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_dual_pause_detail.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_dual_pause_detail.py",
+      "sha256": "ab9247f3b675541dc63da12f785db8d0ee3ae9928f8651f794385d9ff7d700c5",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "da598668a003c8d226e47aeab977855b3b2660080b3a92b965c2c0be54aa0344"
+    },
+    {
+      "source": "/home/user/redroid-doubao/install_geo_receipt_fix.py",
+      "target": "/home/user/redroid-doubao/tools/deployment/install_geo_receipt_fix.py",
+      "sha256": "af2ea09e3cb199c1f7eb29f9addbfb9f10b9820ae22d53809438fae91b91cb62",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/deployment",
+      "new_sha256": "7166ce18216a2e97b883cd374343f909b6217245bed6b153a80dcd746f769411"
+    },
+    {
+      "source": "/home/user/redroid-doubao/pause-fix-unattended_core.py",
+      "target": "/home/user/redroid-doubao/archive/code_snapshots/20261015/pause-fix-unattended_core.py",
+      "sha256": "04ee37575f5f55379ce0c9783fec164f794bf45d1b4b782fc891bfb5603d1117",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/code_snapshots/20261015",
+      "new_sha256": "ded71af62ecfba00d0ccd58e210fed2440b7532a34d6e2a2deb756ce3d2e79be"
+    },
+    {
+      "source": "/home/user/redroid-doubao/apply_account2_keva_workaround.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/apply_account2_keva_workaround.py",
+      "sha256": "c0f52a6ceef98dad8f75d4aebff9d3c78a07a0c80db13848501e4ef8689391a1",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "ed86f4eb0c91e4d1a9175cc9c4492a25c9ac9716cd59e1b096a21accd9843eb1"
+    },
+    {
+      "source": "/home/user/redroid-doubao/deploy_bridge_stop_fix.py",
+      "target": "/home/user/redroid-doubao/tools/deployment/deploy_bridge_stop_fix.py",
+      "sha256": "ae79b49411eea3f5a22c215a9dcdb7fe87b2512f6b0bfcbf1aae44df1f71e98a",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/deployment",
+      "new_sha256": "0d0408b2ceeb8f4eed14979f9c406fe89369da33335b9eed9b8cc008213411c3"
+    },
+    {
+      "source": "/home/user/redroid-doubao/backup_android13_volume.py",
+      "target": "/home/user/redroid-doubao/tools/deployment/backup_android13_volume.py",
+      "sha256": "1b54231ff3a33ca9f398001f71f785b55ad667ff266be7666c47377611eb1e3e",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/deployment",
+      "new_sha256": "e26cee207911b0549bb9b623854d35fce1976a7c49c8e4e8433f7d016aca6833"
+    },
+    {
+      "source": "/home/user/redroid-doubao/resume_geo_search.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/resume_geo_search.py",
+      "sha256": "e7634a3c0fa6fa5928f364c2a744caf8c6407f1d8dabfb4c8f699159c1cdd68a",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "9176ff0ba7efaa6a7be2e5421307072edef2abb5716ea75f5893faaf5a3fdf1e"
+    },
+    {
+      "source": "/home/user/redroid-doubao/maintenance-safe-unattended_core.py",
+      "target": "/home/user/redroid-doubao/archive/code_snapshots/20261015/maintenance-safe-unattended_core.py",
+      "sha256": "6277eedfda99fab863c44817cdae979f6786437b2daf418f6d8e748f1899458c",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/code_snapshots/20261015",
+      "new_sha256": "f6b5b4f16f747591aa2877952d5e685a100d8392d1c56282ed2b73d4614d0ce2"
+    },
+    {
+      "source": "/home/user/redroid-doubao/read_im_constants.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/read_im_constants.py",
+      "sha256": "7781769c4c914ce877ee4c25480bab826473c44656342ca6974cae3c6b94636c",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "14c15e58fced27e4b1f2bf54547839db827d82ca4055bf0f6fb5ccc22de16982"
+    },
+    {
+      "source": "/home/user/redroid-doubao/recover_account2_rejected_task.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/recover_account2_rejected_task.py",
+      "sha256": "39011d9e9db201d3c46b91cf705e2b29be58e5111d02a8a5758577def9f453a2",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "2149b0f98991c7f526234dc86657d2855521e4845968225f944e921e3cf6d45f"
+    },
+    {
+      "source": "/home/user/redroid-doubao/export_native_soak_report_20261015.py",
+      "target": "/home/user/redroid-doubao/tools/exports/export_native_soak_report_20261015.py",
+      "sha256": "acf8dbdd84e7f40e4668858436a6cf2637ebf9b9b19f4e2bbbc7679460f1b6a7",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/exports",
+      "new_sha256": "4df302d7ebb3cef3385251e1562dc015adffde89e8b4c3969c5f12d6428252c2"
+    },
+    {
+      "source": "/home/user/redroid-doubao/reset_account2_network_cache.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/reset_account2_network_cache.py",
+      "sha256": "34d85c8ecd4cafbad01b6d3bd98aaf1fcaea50cdcb0c4baee35be9711e0ca2e7",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "4a69c8dc0486278840fa31323e1c539ae7a4e00998bece870a1a69de7967c012"
+    },
+    {
+      "source": "/home/user/redroid-doubao/reconcile_account1_maintenance_boundary.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/reconcile_account1_maintenance_boundary.py",
+      "sha256": "d067d55935b1518b0adb4efac34cd8686f1e6b727bf50ca2b732e0cdee284115",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "bc2e846900ed194e41a6b91d6a54f10f0cd12663a84ef9e5e0cf326ddccf8ab5"
+    },
+    {
+      "source": "/home/user/redroid-doubao/inspect_all_im_state.py",
+      "target": "/home/user/redroid-doubao/tools/diagnostics/inspect_all_im_state.py",
+      "sha256": "09170f22708a7d487373ccd406382e6ed5b785f8ba70ae4823f0311ffed482f7",
+      "root": "/home/user/redroid-doubao",
+      "category": "tools/diagnostics",
+      "new_sha256": "188885bb26d598d36053b09eb430459d1983ef34df2f5fa8b1492a20b73a8689"
+    },
+    {
+      "source": "/home/user/redroid-doubao/fix_monitor_live_status.py",
+      "target": "/home/user/redroid-doubao/archive/one_off/fix_monitor_live_status.py",
+      "sha256": "23b0477246755194863aa3985b819d7641a8bfafa4d74e50fa59017887d560cb",
+      "root": "/home/user/redroid-doubao",
+      "category": "archive/one_off",
+      "new_sha256": "0c74922510d79921921e2f3dd78c7c0788636c6c5885968783cd6b60adf331dd"
+    }
+  ]
+}

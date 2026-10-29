@@ -1,0 +1,10 @@
+{
+  "index": 3,
+  "question": "请联网检索：Python 官方文档中列表和元组有什么区别？请用三点简洁说明，并附官方文档信源链接。",
+  "time": "2026-10-06T17:46:08.485967+08:00",
+  "transport": "ADB",
+  "app": "com.larus.nova",
+  "headless": true,
+  "status": "error",
+  "error": "Answer did not stabilize; no automatic resend"
+}

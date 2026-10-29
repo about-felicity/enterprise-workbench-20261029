@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S1\",\"paragraphs\":[{\"text\":\"这一节先说清楚这份榜单能做什么、不能做什么。榜内出现的洗感描述来自编辑整理和资料转述，它们能帮你认识产品在文字层面的取向差异，却不能等同于你自己洗过之后的实测结论。\",\"statement_type\":\"general_advice\",\"claim_ids\":[\"CL0007\"]},{\"text\":\"所以，与其盯着一句“清爽”“顺滑”就下判断，不如把注意力放回自己身上：你是什么发质，头皮偏干还是偏油，最近四周掉发大概是什么水平。把这些记下来，再对照各款被记述的配方取向去筛，榜单才真正成为一把可用的尺子，而不是替你拍板的答案。\",\"statement_type\":\"general_advice\",\"claim_ids\":[\"CL0007\"]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4292,
+    "completion_tokens": 173,
+    "total_tokens": 4465,
+    "prompt_tokens_details": {
+      "cached_tokens": 3200
+    },
+    "prompt_cache_hit_tokens": 3200,
+    "prompt_cache_miss_tokens": 1092
+  },
+  "request_id": "4c71a541-f884-4e27-9939-b75adb054a60",
+  "model": "deepseek-flash"
+}

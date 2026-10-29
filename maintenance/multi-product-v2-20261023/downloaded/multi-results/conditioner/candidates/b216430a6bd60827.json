@@ -1,0 +1,22 @@
+{
+  "question": "推荐一款适合烫染后干枯毛躁的护发素",
+  "model": "baidu_ai",
+  "source": {
+    "url": "https://baijiahao.baidu.com/s?id=1855205314908717974&wfr=spider&for=pc",
+    "title": "2026烫染受损护发素口碑十大护发素品牌排行榜揭晓,全效修护干枯毛躁发质",
+    "media": "度看青岛",
+    "article": {
+      "status": "failed",
+      "requested_url": "https://baijiahao.baidu.com/s?id=1855205314908717974&wfr=spider&for=pc",
+      "text": "",
+      "attempts": [
+        {
+          "backend": "http",
+          "status": "failed",
+          "error": "Verification/access-denied page is not an article"
+        }
+      ],
+      "error": "All enabled Scrapling readers failed; inspect attempts or provide a permitted source copy"
+    }
+  }
+}

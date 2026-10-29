@@ -1,0 +1,13 @@
+{
+  "paused": false,
+  "revision": 6,
+  "resumed_epoch": 1792557832.7236297,
+  "resolved_system_pause": {
+    "paused": true,
+    "reason": "document_projection_maintenance",
+    "message": "等待正在执行的请求安全收尾，修正三级标题与结构化段落兼容；不发送新请求",
+    "revision": 5,
+    "paused_epoch": 1792557712.4321377
+  },
+  "reason": "document_and_evidence_projection_fixed"
+}

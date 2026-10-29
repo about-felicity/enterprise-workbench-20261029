@@ -1,0 +1,211 @@
+{
+  "run_id": "rank01-staged-20261023T120816-e50a98ac",
+  "root": "/opt/monitor/geo-content/runtime/acceptance/20261023-rank01-staged/rank01-staged-20261023T120816-e50a98ac",
+  "candidate_version": "candidate-b2-repair-entry-v2-20261023",
+  "frozen_sha256": {
+    "creation/runtime.py": "abba3c1084e0953740a00916c03987efab9d71e1d60afc7aee0a637772cbfb8d",
+    "geo_source_cards/consumer_prompts.py": "d4f906ade8e9850ed7c7b5e4da388d25159867b00a15b7541904debd1871d2b0",
+    "geo_source_cards/daily_editorial.py": "c98993370318ea24f0fdf2d72e7f62f64148503bd13570f43f5fbe7548d12c75",
+    "geo_source_cards/repair_router.py": "9cda2d0f1bdc9fb42881e16a48637efa74c4de08d9e0459914c5f5eb78bc3799",
+    "geo_source_cards/review_arbitration.py": "03aed7119d9d8cac26937e620c3c6710656b85dcddd875c517ec870aea6cdf7e",
+    "geo_source_cards/review_inputs.py": "c8ff98708204ef2ce176c6dd2eeb7c9702e4421e5ef583c05895f612ca80a5ec",
+    "geo_source_cards/review_quality.py": "5da64b2cd498a58c3dffc83eb89da1d39d0629f8c420317dfe190728815d8dcf",
+    "geo_source_cards/section_writer.py": "c96957d1b2c6e82487841f487ac079df0b7c68fbbc6ac45f43debe189599d22c",
+    "geo_source_cards/structure_analyzer.py": "f4f213e49d18bc7f99855e1cc545779d3fa42db61c04043d569ee8605915eede",
+    "tests/test_arbitration_batches.py": "6f0835d15c3b695f9f236e2650a00768b655cd72ef1935b8d3963c9f8dd61185",
+    "tests/test_b1_b2_offline.py": "be144ebe82a5e10dbda1b229a7da2851e5ecca6e06a3f9992e7cced1bc561267",
+    "tests/test_b2_repair_entry.py": "51308666531d8215f0ccb4b70664b08aee4ce5d5bf783b582b901c82916e99fd",
+    "tests/test_section_budget_revision.py": "a3a475c6dae2915772b5b24d968d9d0ac0c351e594c4e9b7e4c3e8edf81a7b7c",
+    "tests/test_three_agent_quality.py": "7c4bb8ece75ce4a68aa77213a5403d91337eba1eac8d6cd62aa49a99caeee83e"
+  },
+  "protected_before": {
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/job.json": "6cafee0c48a2c78f5563341dbaa716ed1bfa56807953ce1a841564adbd7a5226",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/control.json": "7c285b40b66aa442eef33c38ef58eb66713a58a433cd0753f7e90b92c4ec32f4",
+    "/opt/monitor/geo-content/runtime/acceptance/20261022-three-agent/control.json": "38a685da30f14d61cbd7481f4756810d46246a75dc595ad5ec58ec9e6db7a25c",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/research/research_task.txt": "0187fc836ac40e52b37cf606ea313124619a055a094197a73e8e30b7d71b9662",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/research/stage_job.json": "c259249ac7f469356e32aa3f6821c4fa765b56b1d8db622cc65f8be0097ac0ed",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/research/stage.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/research/revision_note.txt": "1eed6882f9d212033629fad9f9470321bb64a00a10e73f5e28ebd321dc0cdfd4",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/research/research_input.json": "e2ebddf9ac5b943fbacd1fca72bd3451412ed28db01f4e4387ee8a811d154124",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/research/research_result.json": "9196637ae6ff09dafdd32e9bcc6673caa48a6fc874b429c9b4415c7e7a087f02",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/research/research_review.json": "e26327ab99496a97bfd5a4236e4b4b8224fa41a5258d52441e2b8bdff3e12932",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/writing_job.json": "c46f5da2f088c31d852cfa3eafc3b532e2ceeb1509d8ff9aeb080fc5968176e2",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/claim_map.json": "2bfc189de889be407898611ce140c4e42592d2833246dee656adeb9a70925f3f",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/knowledge_to_sections.json": "49480c23183e84e3f403f8211fd4063832b0da1e5e429e2c1610a541ddebf0fa",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/batch_rules.md": "f3de0e2f5f3ff2dc78bf57068e48b1f7ecdb7d3834f56af2ab79a955da688e2b",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/stage.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/writer_done.json": "2bfba58419c44144d0a51a47341cd73d53e8793600081ece81583e654d73fdae",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/article.docx": "2b284c40edf5a04fd4da7ecbb35b2f799b1af2e52c52f5de0316a2b4a65fcb15",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/product.json": "4c7ecaec7c55fdb06708dc09dd2684362e34b4e0de1e478c073b5d470056afab",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/revision_note.txt": "e2a46d6d43252f8a4273be4e5b4dff98d1afea6bd5c6643867419bf6e85dd830",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/writing_task.txt": "afdb07ab180ba916b177e86684c39f51cdb3e6147aff7cd3a0929216cbf2525a",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/category.json": "bd571fcf5675db2be9ccb4ee16c4e9d577ba28bc4fd0e84dec2b75d0df199bbe",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/product_detail_review.json": "822727ed07e4baa6b0557e06db8283f549ef7c42e6128108f809e1c2c982b57f",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/knowledge.json": "cd0239ca1dd031f36b3d04368821af67e454a5f830017acb51064bb28ea59b9c",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/writing_prompt.md": "d44ab934493b68e3e7129e6f66e4401106b11e307c8608308bec5b178be0ea0c",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/repair_route.json": "6702baad4f494b3a94c87cc825acf0249de9c8e6624d6795cbdf12dd3a1fde66",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/draft_review.json": "eab01b65cbcc77f02ef0cf1384a1495002e74f149a098722ef1246b59de0c29e",
+    "/opt/monitor/geo-content/runtime/runs/creation-1792575159-0a8f9221/days/2026-10-21/compiler-pilots/排行类/01/writer/draft.md": "c810b7411d8fb8e752d38b312acff3cbb1679903f0ccd8f878a928f6a2147d61",
+    "/opt/monitor/geo-capture/maintenance/20261023-b2-repair-entry-v2-final/manifest.json": "429da79e418a17a789243ef9422ece6503e7cd482fbcc95dfe6522cab4e09724",
+    "/opt/monitor/geo-capture/maintenance/20261023-b2-repair-entry-v2-final/candidate-source/geo_source_cards/structure_analyzer.py": "f4f213e49d18bc7f99855e1cc545779d3fa42db61c04043d569ee8605915eede",
+    "/opt/monitor/geo-capture/maintenance/20261023-b2-repair-entry-v2-final/candidate-source/geo_source_cards/review_arbitration.py": "03aed7119d9d8cac26937e620c3c6710656b85dcddd875c517ec870aea6cdf7e",
+    "/opt/monitor/geo-capture/maintenance/20261023-b2-repair-entry-v2-final/candidate-source/geo_source_cards/consumer_prompts.py": "d4f906ade8e9850ed7c7b5e4da388d25159867b00a15b7541904debd1871d2b0",
+    "/opt/monitor/geo-capture/maintenance/20261023-b2-repair-entry-v2-final/candidate-source/geo_source_cards/repair_router.py": "9cda2d0f1bdc9fb42881e16a48637efa74c4de08d9e0459914c5f5eb78bc3799",
+    "/opt/monitor/geo-capture/maintenance/20261023-b2-repair-entry-v2-final/candidate-source/geo_source_cards/review_inputs.py": "c8ff98708204ef2ce176c6dd2eeb7c9702e4421e5ef583c05895f612ca80a5ec",
+    "/opt/monitor/geo-capture/maintenance/20261023-b2-repair-entry-v2-final/candidate-source/geo_source_cards/section_writer.py": "c96957d1b2c6e82487841f487ac079df0b7c68fbbc6ac45f43debe189599d22c",
+    "/opt/monitor/geo-capture/maintenance/20261023-b2-repair-entry-v2-final/candidate-source/geo_source_cards/review_quality.py": "5da64b2cd498a58c3dffc83eb89da1d39d0629f8c420317dfe190728815d8dcf",
+    "/opt/monitor/geo-capture/maintenance/20261023-b2-repair-entry-v2-final/candidate-source/geo_source_cards/daily_editorial.py": "c98993370318ea24f0fdf2d72e7f62f64148503bd13570f43f5fbe7548d12c75",
+    "/opt/monitor/geo-capture/maintenance/20261023-b2-repair-entry-v2-final/candidate-source/creation/runtime.py": "abba3c1084e0953740a00916c03987efab9d71e1d60afc7aee0a637772cbfb8d",
+    "/opt/monitor/geo-capture/maintenance/20261023-b2-repair-entry-v2-final/candidate-source/tests/test_section_budget_revision.py": "a3a475c6dae2915772b5b24d968d9d0ac0c351e594c4e9b7e4c3e8edf81a7b7c",
+    "/opt/monitor/geo-capture/maintenance/20261023-b2-repair-entry-v2-final/candidate-source/tests/test_b2_repair_entry.py": "51308666531d8215f0ccb4b70664b08aee4ce5d5bf783b582b901c82916e99fd",
+    "/opt/monitor/geo-capture/maintenance/20261023-b2-repair-entry-v2-final/candidate-source/tests/test_arbitration_batches.py": "6f0835d15c3b695f9f236e2650a00768b655cd72ef1935b8d3963c9f8dd61185",
+    "/opt/monitor/geo-capture/maintenance/20261023-b2-repair-entry-v2-final/candidate-source/tests/test_three_agent_quality.py": "7c4bb8ece75ce4a68aa77213a5403d91337eba1eac8d6cd62aa49a99caeee83e",
+    "/opt/monitor/geo-capture/maintenance/20261023-b2-repair-entry-v2-final/candidate-source/tests/test_b1_b2_offline.py": "be144ebe82a5e10dbda1b229a7da2851e5ecca6e06a3f9992e7cced1bc561267"
+  },
+  "settings_before": {
+    "start_time": "05:00",
+    "max_per_category": 10,
+    "deepseek_interval": 600,
+    "search_interval": 60,
+    "article_budget_cny": 0.35,
+    "daily_budget_cny": 10,
+    "test_budget_cny": 1.3,
+    "max_revisions": 1
+  },
+  "ledger_before": {
+    "rows": 2004,
+    "article_used_cny": 0.6531943200000002,
+    "scope_used_cny": 4.624786440000001,
+    "today_used_cny": 0,
+    "unknown": [
+      {
+        "id": "6d5c862ba8f2abdbfe249ce62ff3315eb8c9856d25e9fd78cff054cab9edade1",
+        "state": "reserved",
+        "reserved": 0.06948
+      },
+      {
+        "id": "beb0fe71fe2ca8d2cfe72fa6f123190e74881ffbc961c2a897363259d88c4f11",
+        "state": "reserved",
+        "reserved": 0.075934
+      },
+      {
+        "id": "bf5fc05faa9ccb415ae4ad245c4833b0f572cbcfc59571d5f8a6524b2a7e243c",
+        "state": "reserved",
+        "reserved": 0.070376
+      }
+    ],
+    "run_rows": [],
+    "run_used_cny": 0,
+    "run_known_cost_cny": 0,
+    "run_reserved_unknown_cny": 0
+  },
+  "incremental_hard_cap_cny": 7.2,
+  "article_cap": 8,
+  "scope_cap": 12,
+  "daily_cap": 10,
+  "same_job_id": "creation-1792575159-0a8f9221",
+  "same_scope": "plan-33e7bfca8bb6497da10b28f0444a693b",
+  "no_content_repair": true,
+  "stage1_pending": {
+    "structure": 0.150272,
+    "part:INTRO": 0.172368,
+    "part:S1": 0.16344,
+    "part:S2": 0.172848,
+    "part:S3": 0.16344,
+    "part:S4": 0.16344,
+    "part:S5": 0.16344,
+    "part:S6": 0.16344,
+    "part:S7": 0.16344,
+    "part:S8": 0.16344,
+    "part:S9": 0.16344,
+    "part:S10": 0.16344,
+    "part:S11": 0.16344,
+    "part:S12": 0.16344,
+    "part:END": 0.162848,
+    "facts": 0.350272,
+    "logic": 0.281344
+  },
+  "stage1_upper_cny": 3.087792,
+  "stage1_calls": 17,
+  "analyzer_actual_bytes": 48757,
+  "section_actual_bytes": [
+    {
+      "id": "INTRO",
+      "bytes": 38519,
+      "output_tokens": 2090
+    },
+    {
+      "id": "S1",
+      "bytes": 7809,
+      "output_tokens": 974
+    },
+    {
+      "id": "S2",
+      "bytes": 18409,
+      "output_tokens": 2150
+    },
+    {
+      "id": "S3",
+      "bytes": 8847,
+      "output_tokens": 974
+    },
+    {
+      "id": "S4",
+      "bytes": 9780,
+      "output_tokens": 974
+    },
+    {
+      "id": "S5",
+      "bytes": 11037,
+      "output_tokens": 974
+    },
+    {
+      "id": "S6",
+      "bytes": 9483,
+      "output_tokens": 974
+    },
+    {
+      "id": "S7",
+      "bytes": 8877,
+      "output_tokens": 974
+    },
+    {
+      "id": "S8",
+      "bytes": 7914,
+      "output_tokens": 974
+    },
+    {
+      "id": "S9",
+      "bytes": 7584,
+      "output_tokens": 974
+    },
+    {
+      "id": "S10",
+      "bytes": 9950,
+      "output_tokens": 974
+    },
+    {
+      "id": "S11",
+      "bytes": 10814,
+      "output_tokens": 974
+    },
+    {
+      "id": "S12",
+      "bytes": 7796,
+      "output_tokens": 974
+    },
+    {
+      "id": "END",
+      "bytes": 38465,
+      "output_tokens": 900
+    }
+  ],
+  "checks": {
+    "incremental": true,
+    "article": true,
+    "scope": true,
+    "daily": true
+  },
+  "no_api_calls_during_preflight": true,
+  "revision_history_not_reset": true
+}

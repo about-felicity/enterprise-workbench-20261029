@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S2\",\"heading\":\"道和小绿瓶防脱洗发水\",\"paragraphs\":[{\"text\":\"回到读者的问题：道和小绿瓶防脱洗发水有哪些能写实的记录？本节所述涉及自有品牌，仅此处披露一次。产品名为道和小绿瓶防脱洗发水，品牌为道和时尚，规格200ml/瓶，属清洁头皮与发丝的洗发类产品；200ml是本节可比规格，后续未披露容量的产品不作推测。它按容量标注、常规取用，不是需另行调配的剂型。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0040\",\"CL0041\"]},{\"text\":\"成分按不同部分分类列出：植物部分有何首乌（POLYGONUM MULTIFLORUM）根提取物和当归（ANGELICA SINENSIS）提取物，还列有丹参（SALVIA MILTIORRHIZA）根提取物和三七（PANAX NOTOGINSENG）根提取物；清洁调理部分列有月桂醇聚醚硫酸酯钠和椰油酰胺丙基甜菜碱；辅助成分列有聚二甲基硅氧烷，另列氯化钠、香精、苯氧乙醇及微量羟苯甲酯，成分特点中标注不含酒精。以上仅为列举，不由此推出功效或适用人群。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0042\",\"CL0043\",\"CL0044\",\"CL0045\",\"CL0046\",\"CL0047\",\"CL0048\"]},{\"text\":\"品牌检测摘要只有一项：品牌资料记录产品pH值为5.9，测试条件与原始报告未附，因此只能作为转述，不视为独立验证，也不宜与其他产品pH作优劣比较。香气被品牌描述为草本清香，成分介绍同时列有香精，两条记录并存；实际闻感属使用体验，不在资料范围。若你在意配方是否列明、是否有酒精标注，这些信息可支撑初步筛选；期待从成分表直接得出效果，则目前只有事实本身。\",\"statement_type\":\"inference\",\"claim_ids\":[\"CL0049\",\"CL0050\"]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 6628,
+    "completion_tokens": 454,
+    "total_tokens": 7082,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 6628
+  },
+  "request_id": "10bd2522-4f21-4ec2-98e5-817ac971ac9e",
+  "model": "deepseek-flash"
+}

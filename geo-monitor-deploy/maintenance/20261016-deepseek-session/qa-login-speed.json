@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "heavy_panel_bootstrap_removed": true,
+  "fast_text_batch_preserves_order": true,
+  "input_not_replayed": true,
+  "frame_polling_independent": true,
+  "page_errors": [],
+  "fixture_posts": 3
+}

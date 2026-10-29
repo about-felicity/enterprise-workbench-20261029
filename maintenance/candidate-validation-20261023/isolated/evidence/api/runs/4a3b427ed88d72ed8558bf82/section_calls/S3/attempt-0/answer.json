@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S3\",\"heading\":\"EHD防脱洗发水\",\"paragraphs\":[{\"text\":\"按上一节说的尺子，先看EHD防脱洗发水的配方取向。记录显示它配方含咖啡因，清洁体系走温和路线，这与强清洁型产品的定位有所不同。对偏好温和清洁、又想避开刺激感的读者，这层信息可作为筛选起点；但它只是一个配方取向的描述，不能据此推断对谁有效。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0001\"]},{\"text\":\"使用感方面，同一记录称其泡沫量适中，冲洗后发丝顺滑，并被资料称为适合长期日常使用的类型。这些描述属于来源转述，并非独立实测，因此读到“顺滑”“适合日常”时，宜理解为取向提示，而非效果承诺。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0001\"]},{\"text\":\"价格上，资料只写到它让价格保持在多数人能接受的区间，没有具体数额。缺少可比价格时，不宜推出性价比高低，只能把它当作一条定位参考。若你正在几款之间犹豫，可先把这条与自己的预算区间对照，再决定要不要列入候选。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0008\"]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4683,
+    "completion_tokens": 266,
+    "total_tokens": 4949,
+    "prompt_tokens_details": {
+      "cached_tokens": 3200
+    },
+    "prompt_cache_hit_tokens": 3200,
+    "prompt_cache_miss_tokens": 1483
+  },
+  "request_id": "e5fc26d1-0a1c-4c25-bbc1-b451dab6ca37",
+  "model": "deepseek-flash"
+}

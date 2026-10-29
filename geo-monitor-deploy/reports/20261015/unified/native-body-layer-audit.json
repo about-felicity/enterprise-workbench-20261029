@@ -1,0 +1,102 @@
+[
+  {
+    "sequence": 42810,
+    "native_text_equals_database": true,
+    "native_length": 385,
+    "native_body_parts": 1,
+    "total_blocks": 2,
+    "all_native_blocks_finished": true,
+    "actual_sent_prompt": "推荐一款眉毛增长液\n\n（采集任务编号：1906790e-51a6-56f2-87bf-06754d0f2381；请仅回答上述问题。）",
+    "block_shapes": [
+      {
+        "content_keys": [
+          "pc_event_block",
+          "search_query_result_block"
+        ],
+        "text_keys": [],
+        "block_keys": [
+          "append_fields",
+          "block_id",
+          "block_type",
+          "content",
+          "extra_info",
+          "is_finish",
+          "meta_info",
+          "parent_id"
+        ]
+      },
+      {
+        "content_keys": [
+          "pc_event_block",
+          "text_block"
+        ],
+        "text_keys": [
+          "icon_url",
+          "icon_url_dark",
+          "summary",
+          "text"
+        ],
+        "block_keys": [
+          "append_fields",
+          "block_id",
+          "block_type",
+          "content",
+          "extra_info",
+          "is_finish",
+          "meta_info",
+          "parent_id"
+        ]
+      }
+    ]
+  },
+  {
+    "sequence": 42941,
+    "native_text_equals_database": true,
+    "native_length": 121,
+    "native_body_parts": 1,
+    "total_blocks": 2,
+    "all_native_blocks_finished": true,
+    "actual_sent_prompt": "推荐一款眉毛增长液\n\n（采集任务编号：e8df9a6c-3b17-5d48-a336-577d348b977c；请仅回答上述问题。）",
+    "block_shapes": [
+      {
+        "content_keys": [
+          "pc_event_block",
+          "search_query_result_block"
+        ],
+        "text_keys": [],
+        "block_keys": [
+          "append_fields",
+          "block_id",
+          "block_type",
+          "content",
+          "extra_info",
+          "is_finish",
+          "meta_info",
+          "parent_id"
+        ]
+      },
+      {
+        "content_keys": [
+          "pc_event_block",
+          "text_block"
+        ],
+        "text_keys": [
+          "icon_url",
+          "icon_url_dark",
+          "summary",
+          "text"
+        ],
+        "block_keys": [
+          "append_fields",
+          "block_id",
+          "block_type",
+          "content",
+          "extra_info",
+          "is_finish",
+          "meta_info",
+          "parent_id"
+        ]
+      }
+    ]
+  }
+]

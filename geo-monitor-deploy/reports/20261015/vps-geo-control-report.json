@@ -1,0 +1,18 @@
+{
+  "started_at": 1792036570.4282665,
+  "url": "https://1any.top/geo_monitor",
+  "unauthenticated_access_still_requires_login": true,
+  "public_five_channels_loaded": true,
+  "public_write_reaches_controller_with_auth_csrf_origin": true,
+  "control_cookie_secure_and_prefix_scoped": true,
+  "control_responses_live_not_shared_cached": true,
+  "foreign_origin_write_rejected": true,
+  "public_operational_button_uses_prefixed_endpoint": true,
+  "public_desktop_and_mobile_passed": true,
+  "separate_clients_do_not_share_control_session": true,
+  "main_analysis_api_stays_under_geo_prefix": true,
+  "passed": true,
+  "production_tasks_unchanged": true,
+  "browser_errors": [],
+  "finished_at": 1792036603.1320148
+}

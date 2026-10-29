@@ -1,0 +1,79 @@
+{
+  "input_sha256": "286a79c458987649155a8ddd96ac2c10280d4e83200a2d1b18cae6bd7379b41a",
+  "status": "complete",
+  "components": {
+    "INTRO": {
+      "status": "complete",
+      "attempt": 0,
+      "sha256": "6014ad40355279b55548b502ddf793dbabdaa1e68ade6bd9e4f3150cd595000e"
+    },
+    "S1": {
+      "status": "complete",
+      "attempt": 0,
+      "sha256": "82a640571d667663ead61593fd5632f38643068d53bea785481fa36139c7d427",
+      "local_heading_recovery": true
+    },
+    "S2": {
+      "status": "complete",
+      "attempt": 1,
+      "sha256": "c582c582b86843cd32997a1bc76166a9ea0df0ce2917c074ddcf79c6e067bc9a"
+    },
+    "S3": {
+      "status": "complete",
+      "attempt": 1,
+      "sha256": "632fd63da2cd53283103308571bb5b66b1850c031668db11349c9af8795dc4dc"
+    },
+    "S4": {
+      "status": "complete",
+      "attempt": 1,
+      "sha256": "2b2d8ff3d7dea7e12299829d333c0532537c2030199ff7235501d47d841917cf"
+    },
+    "S5": {
+      "status": "complete",
+      "attempt": 0,
+      "sha256": "046dfa760bb68663813a94ef53420393637cdeb7e888b4d03ec32521d363ffe0"
+    },
+    "S6": {
+      "status": "complete",
+      "attempt": 0,
+      "sha256": "c462d56ee197a9408fe52f25c7bfaef2cfb5caed3626a46e50c5ec1d440a7565"
+    },
+    "S7": {
+      "status": "complete",
+      "attempt": 0,
+      "sha256": "c664a17e1763043b61d1b479b10866c415e5c1af8383dc5e5eceb39978b5a8d7"
+    },
+    "S8": {
+      "status": "complete",
+      "attempt": 0,
+      "sha256": "0910b0b7abb608a1967b4d7b8a0e41ca45a90fb185a62ceb0cdaee35e0673cb7"
+    },
+    "S9": {
+      "status": "complete",
+      "attempt": 0,
+      "sha256": "0d260ea08327f1168b6016b13394c1d79491bd99ed35b679e2b25f24d5a28b11"
+    },
+    "S10": {
+      "status": "complete",
+      "attempt": 0,
+      "sha256": "ca63d9c6f2722cdfcacd035b93a97643f5f2b30289b9046309d1ac876178e040"
+    },
+    "S11": {
+      "status": "complete",
+      "attempt": 0,
+      "sha256": "d6d590b0bc9e6c774f28e9b11dc7058296f741660047b76ab7e65cf06372c905"
+    },
+    "S12": {
+      "status": "complete",
+      "attempt": 0,
+      "sha256": "da6b994e2a1dfd937187955640d220b2cbc6d0a9e8113022072073e4d3635aa9"
+    },
+    "END": {
+      "status": "complete",
+      "attempt": 1,
+      "sha256": "8b736d79a5af07a7cdfaa8162c8c9072074ec8240cdb936b5dcc25136bebb47d"
+    }
+  },
+  "failed_component": "S1",
+  "assembled_sha256": "d451ae1b9e7c0f55ac23d157fde807657a471d78a0d11465fa49bd13c4dd3e0d"
+}

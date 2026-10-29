@@ -1,0 +1,15 @@
+requests<3,>=2.31
+scrapling[fetchers]<0.5,>=0.4.14
+websocket-client<2,>=1.7
+
+[bridge]
+paramiko<5,>=3
+python-docx<2,>=1.1
+
+[desktop]
+PySide6<7,>=6.8
+paramiko<5,>=3
+python-docx<2,>=1.1
+
+[writing]
+python-docx<2,>=1.1

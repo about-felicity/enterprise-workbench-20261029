@@ -1,0 +1,37 @@
+{
+  "at": 1792728519.603792,
+  "preflight_sha256": "6510dae64908aa3bdf5d04bbbdc14f978719a4a043b7f56cafb6df3b64df4d08",
+  "ledger_before": {
+    "rows": 2004,
+    "article_used_cny": 0.6531943200000002,
+    "scope_used_cny": 4.624786440000001,
+    "today_used_cny": 0,
+    "unknown": [
+      {
+        "id": "6d5c862ba8f2abdbfe249ce62ff3315eb8c9856d25e9fd78cff054cab9edade1",
+        "state": "reserved",
+        "reserved": 0.06948
+      },
+      {
+        "id": "beb0fe71fe2ca8d2cfe72fa6f123190e74881ffbc961c2a897363259d88c4f11",
+        "state": "reserved",
+        "reserved": 0.075934
+      },
+      {
+        "id": "bf5fc05faa9ccb415ae4ad245c4833b0f572cbcfc59571d5f8a6524b2a7e243c",
+        "state": "reserved",
+        "reserved": 0.070376
+      }
+    ],
+    "run_rows": [],
+    "run_used_cny": 0,
+    "run_known_cost_cny": 0,
+    "run_reserved_unknown_cny": 0
+  },
+  "checks": {
+    "incremental": true,
+    "article": true,
+    "scope": true,
+    "daily": true
+  }
+}

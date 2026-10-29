@@ -1,0 +1,281 @@
+{
+  "at": "2026-10-15T14:06:20+08:00",
+  "containers": {
+    "monitor-postgres": {
+      "same_id": true,
+      "same_image": true,
+      "same_mounts": true,
+      "start_changed": true,
+      "running": true,
+      "health": "healthy"
+    },
+    "monitor-redis": {
+      "same_id": true,
+      "same_image": true,
+      "same_mounts": true,
+      "start_changed": true,
+      "running": true,
+      "health": null
+    },
+    "monitor-doubao-receiver": {
+      "same_id": true,
+      "same_image": true,
+      "same_mounts": true,
+      "start_changed": true,
+      "running": true,
+      "health": "healthy"
+    },
+    "monitor-result-receiver": {
+      "same_id": true,
+      "same_image": true,
+      "same_mounts": true,
+      "start_changed": true,
+      "running": true,
+      "health": "healthy"
+    },
+    "monitor-dashboard-api": {
+      "same_id": true,
+      "same_image": true,
+      "same_mounts": true,
+      "start_changed": true,
+      "running": true,
+      "health": "healthy"
+    },
+    "monitor-product-worker": {
+      "same_id": true,
+      "same_image": true,
+      "same_mounts": true,
+      "start_changed": true,
+      "running": true,
+      "health": "healthy"
+    },
+    "monitor-content-worker": {
+      "same_id": true,
+      "same_image": true,
+      "same_mounts": true,
+      "start_changed": true,
+      "running": true,
+      "health": "healthy"
+    },
+    "monitor-dashboard": {
+      "same_id": true,
+      "same_image": true,
+      "same_mounts": true,
+      "start_changed": true,
+      "running": true,
+      "health": null
+    },
+    "doubao-hpe14-13-test": {
+      "same_id": true,
+      "same_image": true,
+      "same_mounts": true,
+      "start_changed": true,
+      "running": true,
+      "health": null
+    },
+    "doubao-hpe14-account2": {
+      "same_id": true,
+      "same_image": true,
+      "same_mounts": true,
+      "start_changed": true,
+      "running": true,
+      "health": null
+    }
+  },
+  "services": {
+    "geo-editorial-scheduler.service": {
+      "MainPID": "35198",
+      "NRestarts": "0",
+      "ExecMainStartTimestampMonotonic": "3800714679268",
+      "ActiveState": "active"
+    },
+    "geo-editorial-api-worker.service": {
+      "MainPID": "35200",
+      "NRestarts": "0",
+      "ExecMainStartTimestampMonotonic": "3800714692255",
+      "ActiveState": "active"
+    },
+    "geo-editorial-coordinator.service": {
+      "MainPID": "35202",
+      "NRestarts": "0",
+      "ExecMainStartTimestampMonotonic": "3800714701701",
+      "ActiveState": "active"
+    },
+    "geo-editorial-session-watch.service": {
+      "MainPID": "35204",
+      "NRestarts": "0",
+      "ExecMainStartTimestampMonotonic": "3800714711149",
+      "ActiveState": "active"
+    },
+    "geo-monitor-status.service": {
+      "MainPID": "35206",
+      "NRestarts": "0",
+      "ExecMainStartTimestampMonotonic": "3800714720409",
+      "ActiveState": "active"
+    },
+    "redroid-doubao-native-log.service": {
+      "MainPID": "35208",
+      "NRestarts": "0",
+      "ExecMainStartTimestampMonotonic": "3800714741152",
+      "ActiveState": "active"
+    },
+    "monitor-live-display.service": {
+      "MainPID": "48132",
+      "NRestarts": "0",
+      "ExecMainStartTimestampMonotonic": "3800927578480",
+      "ActiveState": "active"
+    },
+    "monitor-vps2-tunnel.service": {
+      "MainPID": "48144",
+      "NRestarts": "0",
+      "ExecMainStartTimestampMonotonic": "3800927620373",
+      "ActiveState": "active"
+    }
+  },
+  "queues": {
+    "doubao1": {
+      "batch": "geo-panel-doubao1-20261015-102126-041120bd",
+      "before": {
+        "completed": 116,
+        "pending": 304
+      },
+      "after": {
+        "completed": 116,
+        "pending": 304
+      },
+      "unchanged": true
+    },
+    "doubao2": {
+      "batch": "geo-panel-doubao2-20261015-102128-d6e56b0a",
+      "before": {
+        "completed": 119,
+        "pending": 301
+      },
+      "after": {
+        "completed": 119,
+        "pending": 301
+      },
+      "unchanged": true
+    },
+    "deepseek": {
+      "batch": "geo-deepseek-21x3-20261015",
+      "before": {
+        "pending": 63
+      },
+      "after": {
+        "pending": 63
+      },
+      "unchanged": true
+    },
+    "wenxin_card": {
+      "batch": "geo-wenxin_card-21x6-20261015",
+      "before": {
+        "completed": 126
+      },
+      "after": {
+        "completed": 126
+      },
+      "unchanged": true
+    },
+    "baidu_ai": {
+      "batch": "geo-baidu_ai-21x5-20261015",
+      "before": {
+        "completed": 91,
+        "pending": 14
+      },
+      "after": {
+        "completed": 91,
+        "pending": 14
+      },
+      "unchanged": true
+    }
+  },
+  "native_login_checks": [
+    {
+      "model": "doubao1",
+      "status": "locally_logged_in"
+    },
+    {
+      "model": "doubao2",
+      "status": "locally_logged_in"
+    }
+  ],
+  "editorial_control_preserved": true,
+  "collectors": [
+    {
+      "name": "豆包 1",
+      "service": "geo-native@geo-panel-doubao1-20261015-102126-041120bd.service",
+      "service_state": "inactive",
+      "status": "stopped",
+      "batch": "geo-panel-doubao1-20261015-102126-041120bd",
+      "planned": 420,
+      "captured": 116,
+      "processed": 116,
+      "unique_processed": 116,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792038105.3846984
+    },
+    {
+      "name": "豆包 2",
+      "service": "geo-native@geo-panel-doubao2-20261015-102128-d6e56b0a.service",
+      "service_state": "inactive",
+      "status": "stopped",
+      "batch": "geo-panel-doubao2-20261015-102128-d6e56b0a",
+      "planned": 420,
+      "captured": 119,
+      "processed": 119,
+      "unique_processed": 119,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792038100.352838
+    },
+    {
+      "name": "DeepSeek",
+      "service": "geo-capture-deepseek.service",
+      "service_state": "failed",
+      "status": "waiting_login",
+      "batch": "geo-deepseek-21x3-20261015",
+      "planned": 63,
+      "captured": 0,
+      "processed": 0,
+      "unique_processed": 0,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792026816.408962
+    },
+    {
+      "name": "文心卡片",
+      "service": "geo-capture-wenxin-card.service",
+      "service_state": "inactive",
+      "status": "complete",
+      "batch": "geo-wenxin_card-21x6-20261015",
+      "planned": 126,
+      "captured": 126,
+      "processed": 126,
+      "unique_processed": 126,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792042621.9544358
+    },
+    {
+      "name": "百度卡片",
+      "service": "geo-capture-baidu-ai.service",
+      "service_state": "failed",
+      "status": "needs_attention",
+      "batch": "geo-baidu_ai-21x5-20261015",
+      "planned": 105,
+      "captured": 84,
+      "processed": 84,
+      "unique_processed": 28,
+      "duplicates": 56,
+      "unavailable": 6,
+      "delivery_errors": 0,
+      "updated_at": 1792037826.2105784
+    }
+  ]
+}

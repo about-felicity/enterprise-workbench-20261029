@@ -1,0 +1,88 @@
+{
+  "started_at": 1792114375.5759485,
+  "port": 3000,
+  "passed": true,
+  "layouts": [
+    {
+      "width": 1920,
+      "position": "left",
+      "errors": []
+    },
+    {
+      "width": 1920,
+      "position": "right",
+      "errors": []
+    },
+    {
+      "width": 1600,
+      "position": "left",
+      "errors": []
+    },
+    {
+      "width": 1600,
+      "position": "right",
+      "errors": []
+    },
+    {
+      "width": 1280,
+      "position": "left",
+      "errors": []
+    },
+    {
+      "width": 1280,
+      "position": "right",
+      "errors": []
+    },
+    {
+      "width": 390,
+      "position": "left",
+      "errors": []
+    },
+    {
+      "width": 390,
+      "position": "right",
+      "errors": []
+    },
+    {
+      "model": "文心",
+      "headers": [
+        "我的产品",
+        "对应问题",
+        "有数据天数",
+        "平均每天提及率",
+        "累计推荐 / 有效回答",
+        "文心日均（双卡片）"
+      ],
+      "errors": []
+    },
+    {
+      "model": "元宝",
+      "headers": [
+        "我的产品",
+        "对应问题",
+        "有数据天数",
+        "平均每天提及率",
+        "累计推荐 / 有效回答",
+        "元宝 日均"
+      ],
+      "errors": []
+    },
+    {
+      "model": "全部模型",
+      "headers": [
+        "我的产品",
+        "对应问题",
+        "有数据天数",
+        "平均每天提及率",
+        "累计推荐 / 有效回答",
+        "DeepSeek 日均",
+        "豆包 日均",
+        "文心日均（双卡片）",
+        "元宝 日均"
+      ],
+      "errors": []
+    }
+  ],
+  "finished_at": 1792114378.1758897,
+  "page_errors": []
+}

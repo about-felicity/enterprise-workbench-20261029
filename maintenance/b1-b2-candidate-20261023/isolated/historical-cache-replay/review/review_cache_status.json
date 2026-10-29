@@ -1,0 +1,6 @@
+{
+  "status": "needs_reaudit",
+  "reason": "legacy review cache has no complete source fingerprint",
+  "new_request_started_by_invalidation": false,
+  "old_evidence_preserved": true
+}

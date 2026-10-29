@@ -1,0 +1,13 @@
+[Unit]
+Description=GEO daily configured batch dispatch
+After=network-online.target docker.service geo-monitor-status.service
+Wants=network-online.target geo-monitor-status.service
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/opt/monitor/geo-capture
+ExecStart=/opt/monitor/geo-capture/venv/bin/python -B /opt/monitor/geo-capture/daily_dispatch.py
+TimeoutStartSec=240
+MemoryMax=256M
+TasksMax=128
+UMask=0077

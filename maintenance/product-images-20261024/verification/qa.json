@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "checks": [
+    "upload pending without analysis",
+    "reload retains uploads",
+    "manual publish makes product selectable",
+    "selection skips upload and save",
+    "update retains current version",
+    "manual edits persist",
+    "desktop and mobile",
+    "no browser errors"
+  ],
+  "calls": [
+    "/api/control/product_image_upload",
+    "/api/control/kb_upload",
+    "/api/control/kb_upload",
+    "/api/control/kb_edit"
+  ]
+}

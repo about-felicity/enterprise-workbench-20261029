@@ -1,0 +1,14 @@
+{
+  "started_at": 1792034995.8770802,
+  "port": 3000,
+  "real_authenticated_gateway_validation": true,
+  "cross_origin_write_blocked": true,
+  "pause_button_request_isolated": true,
+  "all_five_channels_and_draft_preserved": true,
+  "desktop_mobile_no_overflow": true,
+  "main_navigation_returned": true,
+  "passed": true,
+  "production_batches_settings_unchanged": true,
+  "browser_errors": [],
+  "finished_at": 1792035000.2368875
+}

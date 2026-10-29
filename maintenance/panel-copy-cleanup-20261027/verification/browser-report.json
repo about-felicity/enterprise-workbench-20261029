@@ -1,0 +1,28 @@
+{
+  "checked": [
+    "模型总览",
+    "问题对比",
+    "信源洞察",
+    "品牌与产品",
+    "回答审计",
+    "采集控制",
+    "采集通道0",
+    "采集通道1",
+    "采集通道2",
+    "采集通道3",
+    "采集通道4",
+    "采集通道5",
+    "采集通道6",
+    "内容创作中心",
+    "创作-tasks",
+    "创作-knowledge",
+    "创作-editor",
+    "创作-progress",
+    "创作-outputs",
+    "编辑-knowledge",
+    "编辑-dailyPlan",
+    "编辑-schedule"
+  ],
+  "page_errors": [],
+  "forbidden_phrases": 17
+}

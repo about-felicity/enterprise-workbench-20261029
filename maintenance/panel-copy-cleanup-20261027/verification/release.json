@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/Dashboard.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/Dashboard.tsx",
+      "sha256": "3e0fe3add077c4d588c93b6d3424e03ed2330e0f7dbb1fbc327d68b03020a807"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceBoard.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceBoard.tsx",
+      "sha256": "e006599789e06dfc32d387404326ba4f3e84891c19b2b79106d4d9b23161c717"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/globals.css",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/globals.css",
+      "sha256": "f6b4d247508c6b63e54961e2f8706e83862af40e61296e3005629724a02dfff2"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/CreationControl.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/CreationControl.tsx",
+      "sha256": "e5ae42236dd4d137d49f98cf5bd1126626369ec003e5fa5fbe130a7c8da3c8bd"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/CaptureControl.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/CaptureControl.tsx",
+      "sha256": "9bb81c86feddcf09224c4620696ff11529e2ca78d03b307c992a6ca0d104a811"
+    },
+    {
+      "source": "geo-monitor-deploy/creation/panel.html",
+      "server": "/opt/monitor/geo-content/creation/panel.html",
+      "sha256": "2d830ea435cf31123a4b612c90210e7f72c36c0a38955753a3c7ac52b82d6176"
+    },
+    {
+      "source": "geo-monitor-deploy/panel.html",
+      "server": "/opt/monitor/geo-capture/panel.html",
+      "sha256": "a807710359c5c8f6b1eaa13eb5c3d5ab29b58775a95327521c42a100a11bc08a"
+    }
+  ]
+}

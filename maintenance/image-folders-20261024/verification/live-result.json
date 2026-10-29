@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "actual_gateway_folder_upload": true,
+  "nested_images_uploaded": 2,
+  "non_image_skipped": 1,
+  "exact_image_bytes": true,
+  "reload_persistence": true,
+  "metadata": {
+    "width": 64,
+    "height": 80,
+    "uploaded_at": 1792822217.6236684
+  },
+  "browser_errors": [],
+  "test_image_removed": true
+}

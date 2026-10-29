@@ -1,0 +1,12 @@
+{
+  "tests": 78,
+  "failures": [],
+  "errors": [
+    "test_legacy_word_and_bundle_preserve_original_bytes (creation.test_materials.MaterialTests.test_legacy_word_and_bundle_preserve_original_bytes)",
+    "test_recovery_progress_reports_safe_fields_without_captcha_urls (creation.test_materials.MaterialTests.test_recovery_progress_reports_safe_fields_without_captcha_urls)",
+    "test_package_has_task_date_category_provenance_logs_and_original_word (creation.test_workflow.WorkflowTests.test_package_has_task_date_category_provenance_logs_and_original_word)",
+    "test_private_browser_identity_isolated_between_products (creation.test_workflow.WorkflowTests.test_private_browser_identity_isolated_between_products)"
+  ],
+  "external_network_attempts": 0,
+  "api_calls": 0
+}

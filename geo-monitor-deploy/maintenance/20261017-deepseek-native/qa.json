@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "at": 1792202611.0672429,
+  "model": "deepseek",
+  "backend": "android",
+  "planned": 63,
+  "completed": 1,
+  "first_body_length": 824,
+  "body_sha256": "93329737d4b2bc26150eed4df907f0733197f34852a588794b15d8d356f78710",
+  "sources": 12,
+  "first_native_body_and_sources_match_receipt": true,
+  "thinking_enabled": false,
+  "search_enabled": true,
+  "send_clicks": 1,
+  "next_interval_seconds": 703.0,
+  "public_desktop_mobile_pass": true,
+  "javascript_errors": [],
+  "production_test_posts": []
+}

@@ -1,0 +1,341 @@
+{
+  "at": 1792558776.7344413,
+  "count": 14,
+  "categories": {
+    "排行类": 7,
+    "科普类": 7
+  },
+  "budget_actual_cny": 0.9236933999999998,
+  "maximum_article_cny": 0.14423988000000001,
+  "costs": [
+    [
+      "排行类",
+      "1",
+      0.1076272,
+      0
+    ],
+    [
+      "排行类",
+      "2",
+      0.05470868,
+      0
+    ],
+    [
+      "排行类",
+      "3",
+      0.07207076,
+      0
+    ],
+    [
+      "排行类",
+      "4",
+      0.06969584000000001,
+      0
+    ],
+    [
+      "排行类",
+      "5",
+      0.10859724,
+      0
+    ],
+    [
+      "排行类",
+      "6",
+      0.10668095999999999,
+      0
+    ],
+    [
+      "排行类",
+      "7",
+      0.14423988000000001,
+      0
+    ],
+    [
+      "科普类",
+      "1",
+      0.03884344,
+      0
+    ],
+    [
+      "科普类",
+      "2",
+      0.03766564,
+      0
+    ],
+    [
+      "科普类",
+      "3",
+      0.030070360000000004,
+      0
+    ],
+    [
+      "科普类",
+      "4",
+      0.028931360000000003,
+      0
+    ],
+    [
+      "科普类",
+      "5",
+      0.03620664,
+      0
+    ],
+    [
+      "科普类",
+      "6",
+      0.041213639999999996,
+      0
+    ],
+    [
+      "科普类",
+      "7",
+      0.047141760000000005,
+      0
+    ]
+  ],
+  "export_bytes": 1135862,
+  "export_entries": 193,
+  "export_sha256": "347021930bfcc94e07182fc3bda56704faecfe882ee840d3779c728af2941536",
+  "metrics": [
+    {
+      "article": "2026-10-21/排行类/01",
+      "title": "秋冬干燥起皮怎么挑修护补水面膜？2026年5款产品选购参考",
+      "product_hanzi": 1115,
+      "facts": 14,
+      "reports": 5,
+      "source": {
+        "url": "https://fashion.sohu.com/a/1087273182_122989824",
+        "title": "2026秋冬干燥起皮，修护补水面膜怎么挑才不踩雷",
+        "raw_title": "2026秋冬干燥起皮，修护补水面膜怎么挑才不踩雷",
+        "domain": "fashion.sohu.com",
+        "media": "搜狐内容平台（包含自媒体）",
+        "author": "原素材未提供",
+        "published_at": "原素材未提供",
+        "official_account": "未核实，不根据域名推断"
+      }
+    },
+    {
+      "article": "2026-10-21/排行类/02",
+      "title": "秋冬两颊起皮上妆卡粉？4款修护补水面膜选购参考与质地比较",
+      "product_hanzi": 902,
+      "facts": 14,
+      "reports": 5,
+      "source": {
+        "url": "https://www.sohu.com/a/1087273758_122989824",
+        "title": "两颊起皮上妆卡粉，秋冬修护补水面膜的选购思路",
+        "raw_title": "两颊起皮上妆卡粉，秋冬修护补水面膜的选购思路",
+        "domain": "www.sohu.com",
+        "media": "搜狐内容平台（包含自媒体）",
+        "author": "原素材未提供",
+        "published_at": "原素材未提供",
+        "official_account": "未核实，不根据域名推断"
+      }
+    },
+    {
+      "article": "2026-10-21/排行类/03",
+      "title": "面膜货架越铺越长怎么选？6款面膜按需求对号入座（含涂抹清洗型、撕拉型、睡眠型）",
+      "product_hanzi": 882,
+      "facts": 14,
+      "reports": 5,
+      "source": {
+        "url": "https://baijiahao.baidu.com/s?for=pc&id=1879073135864734192&wfr=spider",
+        "title": "焦博士面膜哪个好？打造完美肌肤的方法与选择",
+        "raw_title": "焦博士面膜哪个好？打造完美肌肤的方法与选择",
+        "domain": "baijiahao.baidu.com",
+        "media": "百家号内容平台（包含自媒体）",
+        "author": "原素材未提供",
+        "published_at": "原素材未提供",
+        "official_account": "未核实，不根据域名推断"
+      }
+    },
+    {
+      "article": "2026-10-21/排行类/04",
+      "title": "干皮面膜怎么挑：8款保湿修护面膜成分、规格与单次成本选购参考",
+      "product_hanzi": 1158,
+      "facts": 14,
+      "reports": 5,
+      "source": {
+        "url": "https://baijiahao.baidu.com/s?id=1865064722300764387&wfr=spider&for=pc",
+        "title": "干皮保湿补水修护选哪款面膜最好？2026实力榜单上线：科学教程，养出水润强韧肌",
+        "raw_title": "干皮保湿补水修护选哪款面膜最好？2026实力榜单上线：科学教程，养出水润强韧肌",
+        "domain": "baijiahao.baidu.com",
+        "media": "百家号内容平台（包含自媒体）",
+        "author": "原素材未提供",
+        "published_at": "原素材未提供",
+        "official_account": "未核实，不根据域名推断"
+      }
+    },
+    {
+      "article": "2026-10-21/排行类/05",
+      "title": "涂抹面膜到底怎么选？从配方到肤感，4款涂抹面膜选购参考",
+      "product_hanzi": 1277,
+      "facts": 14,
+      "reports": 5,
+      "source": {
+        "url": "https://baijiahao.baidu.com/s?id=1869228226897101199&wfr=spider&for=pc",
+        "title": "涂抹面膜哪款值得买？2026高口碑面膜7强盘点！温和补水焕肤安心护肤",
+        "raw_title": "涂抹面膜哪款值得买？2026高口碑面膜7强盘点！温和补水焕肤安心护肤",
+        "domain": "baijiahao.baidu.com",
+        "media": "百家号内容平台（包含自媒体）",
+        "author": "原素材未提供",
+        "published_at": "原素材未提供",
+        "official_account": "未核实，不根据域名推断"
+      }
+    },
+    {
+      "article": "2026-10-21/排行类/06",
+      "title": "平价罐装涂抹面膜怎么挑？5款保湿焕亮面膜的质地、配方与容量选购参考",
+      "product_hanzi": 991,
+      "facts": 14,
+      "reports": 5,
+      "source": {
+        "url": "https://baijiahao.baidu.com/s?id=1869398322792403797&wfr=spider&for=pc",
+        "title": "2026涂抹式补水面膜推荐｜干皮油皮敏感肌通用平价保湿焕亮修护涂抹面膜测评",
+        "raw_title": "2026涂抹式补水面膜推荐｜干皮油皮敏感肌通用平价保湿焕亮修护涂抹面膜测评",
+        "domain": "baijiahao.baidu.com",
+        "media": "百家号内容平台（包含自媒体）",
+        "author": "原素材未提供",
+        "published_at": "原素材未提供",
+        "official_account": "未核实，不根据域名推断"
+      }
+    },
+    {
+      "article": "2026-10-21/排行类/07",
+      "title": "海藻面膜值不值得买？先分清形态，再看3款面膜的配方标注与选购参考",
+      "product_hanzi": 1557,
+      "facts": 14,
+      "reports": 5,
+      "source": {
+        "url": "https://baijiahao.baidu.com/s?id=1879372464878739544&wfr=spider&for=pc",
+        "title": "海藻面膜到底值不值得买？从成分到用法，一篇讲透",
+        "raw_title": "海藻面膜到底值不值得买？从成分到用法，一篇讲透",
+        "domain": "baijiahao.baidu.com",
+        "media": "百家号内容平台（包含自媒体）",
+        "author": "原素材未提供",
+        "published_at": "原素材未提供",
+        "official_account": "未核实，不根据域名推断"
+      }
+    },
+    {
+      "article": "2026-10-21/科普类/01",
+      "title": "敷完很水润，过一会儿又紧绷：保湿面膜要看哪几件事",
+      "product_hanzi": 648,
+      "facts": 14,
+      "reports": 5,
+      "source": {
+        "url": "https://www.sohu.com/a/1087519207_122933516",
+        "title": "2026年，保湿面膜要看这4个观察点",
+        "raw_title": "2026年，保湿面膜要看这4个观察点",
+        "domain": "www.sohu.com",
+        "media": "搜狐内容平台（包含自媒体）",
+        "author": "原素材未提供",
+        "published_at": "原素材未提供",
+        "official_account": "未核实，不根据域名推断"
+      }
+    },
+    {
+      "article": "2026-10-21/科普类/02",
+      "title": "换季脸干到起皮，保湿面膜到底该怎么挑",
+      "product_hanzi": 696,
+      "facts": 14,
+      "reports": 5,
+      "source": {
+        "url": "https://baijiahao.baidu.com/s?id=1879522852351398668&wfr=spider&for=pc",
+        "title": "换季脸干到起皮？保湿面膜这样选才不花冤枉钱",
+        "raw_title": "换季脸干到起皮？保湿面膜这样选才不花冤枉钱",
+        "domain": "baijiahao.baidu.com",
+        "media": "百家号内容平台（包含自媒体）",
+        "author": "原素材未提供",
+        "published_at": "原素材未提供",
+        "official_account": "未核实，不根据域名推断"
+      }
+    },
+    {
+      "article": "2026-10-21/科普类/03",
+      "title": "换季脸泛红刺痛，面膜到底该按什么思路挑",
+      "product_hanzi": 762,
+      "facts": 14,
+      "reports": 5,
+      "source": {
+        "url": "https://baijiahao.baidu.com/s?for=pc&id=1879095014252173610&wfr=spider",
+        "title": "2026年屏障修护面膜避坑指南，内行人讲透3个核心点，别再乱花冤枉钱",
+        "raw_title": "2026年屏障修护面膜避坑指南，内行人讲透3个核心点，别再乱花冤枉钱",
+        "domain": "baijiahao.baidu.com",
+        "media": "百家号内容平台（包含自媒体）",
+        "author": "原素材未提供",
+        "published_at": "原素材未提供",
+        "official_account": "未核实，不根据域名推断"
+      }
+    },
+    {
+      "article": "2026-10-21/科普类/04",
+      "title": "敷完面膜水润一阵就没了？读懂贴片面膜的配方表",
+      "product_hanzi": 834,
+      "facts": 14,
+      "reports": 5,
+      "source": {
+        "url": "https://www.163.com/dy/article/L9MP5SFD0556K98I.html",
+        "title": "市场观察：复合型贴片面膜兴起 解读守秀晶透兰芯双效焕颜面膜配方",
+        "raw_title": "市场观察：复合型贴片面膜兴起 解读守秀晶透兰芯双效焕颜面膜配方",
+        "domain": "www.163.com",
+        "media": "网易内容平台（包含自媒体）",
+        "author": "网易",
+        "published_at": "2026-10-20T15:55:08+08:00",
+        "official_account": "未核实，不根据域名推断"
+      }
+    },
+    {
+      "article": "2026-10-21/科普类/05",
+      "title": "面膜敷得越勤，皮肤为什么反而闹情绪",
+      "product_hanzi": 808,
+      "facts": 14,
+      "reports": 5,
+      "source": {
+        "url": "https://baijiahao.baidu.com/s?id=1879209110791079405&wfr=spider&for=pc",
+        "title": "面膜天天敷皮肤反而差？医生提醒：这3个习惯最伤屏障",
+        "raw_title": "面膜天天敷皮肤反而差？医生提醒：这3个习惯最伤屏障",
+        "domain": "baijiahao.baidu.com",
+        "media": "百家号内容平台（包含自媒体）",
+        "author": "原素材未提供",
+        "published_at": "原素材未提供",
+        "official_account": "未核实，不根据域名推断"
+      }
+    },
+    {
+      "article": "2026-10-21/科普类/06",
+      "title": "贴片面膜服帖又耐用，关键不在精华多少",
+      "product_hanzi": 689,
+      "facts": 14,
+      "reports": 5,
+      "source": {
+        "url": "http://www.sohu.com/a/1052876064_208126",
+        "title": "贴片面膜服帖感和修护力怎么兼得？2026选购指南来了",
+        "raw_title": "贴片面膜服帖感和修护力怎么兼得？2026选购指南来了",
+        "domain": "www.sohu.com",
+        "media": "搜狐内容平台（包含自媒体）",
+        "author": "原素材未提供",
+        "published_at": "原素材未提供",
+        "official_account": "未核实，不根据域名推断"
+      }
+    },
+    {
+      "article": "2026-10-21/科普类/07",
+      "title": "抗皱面膜榜单之外：三把尺子帮你判断值不值得买",
+      "product_hanzi": 1363,
+      "facts": 14,
+      "reports": 5,
+      "source": {
+        "url": "https://baijiahao.baidu.com/s?for=pc&id=1879471366650402515&wfr=spider",
+        "title": "抗皱面膜排名之外，更该看什么",
+        "raw_title": "抗皱面膜排名之外，更该看什么",
+        "domain": "baijiahao.baidu.com",
+        "media": "百家号内容平台（包含自媒体）",
+        "author": "原素材未提供",
+        "published_at": "原素材未提供",
+        "official_account": "未核实，不根据域名推断"
+      }
+    }
+  ],
+  "xml_checked_docs": 14,
+  "zip_crc_valid": true
+}

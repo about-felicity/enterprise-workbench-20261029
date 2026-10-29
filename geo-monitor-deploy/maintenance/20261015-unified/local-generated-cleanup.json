@@ -1,0 +1,37 @@
+﻿{
+    "scope":  "Reproducible Python bytecode in explicitly named source directories only",
+    "files":  [
+                  {
+                      "path":  "C:\\Users\\78567\\Desktop\\隐身浏览器\\geo-monitor-deploy\\creation\\__pycache__\\runtime.cpython-314.pyc",
+                      "bytes":  15144,
+                      "sha256":  "17F6B7779892EADF1B2352F6D48D1E895BE3A08D31E7D15B50E2BE9F2FBFEA1D"
+                  },
+                  {
+                      "path":  "C:\\Users\\78567\\Desktop\\隐身浏览器\\geo-monitor-deploy\\creation\\__pycache__\\service.cpython-314.pyc",
+                      "bytes":  9364,
+                      "sha256":  "51C2AD34B7C628C36F6B8919BEBA4C5938459DF4A7EFECD217D165D5F314A49D"
+                  },
+                  {
+                      "path":  "C:\\Users\\78567\\Desktop\\隐身浏览器\\geo-monitor-deploy\\creation\\__pycache__\\source_adapter.cpython-314.pyc",
+                      "bytes":  10967,
+                      "sha256":  "6FF95713781831C65116437EE1197B90B94415F68582E2047A37C39CF9447DA3"
+                  },
+                  {
+                      "path":  "C:\\Users\\78567\\Desktop\\隐身浏览器\\geo-monitor-deploy\\creation\\__pycache__\\test_source_adapter.cpython-314.pyc",
+                      "bytes":  8783,
+                      "sha256":  "7A80A702439CF0AACAC25278BD1B3292F4FC475665C58D612910E888742AB328"
+                  },
+                  {
+                      "path":  "C:\\Users\\78567\\Desktop\\隐身浏览器\\geo-monitor-deploy\\creation\\__pycache__\\worker.cpython-314.pyc",
+                      "bytes":  3522,
+                      "sha256":  "EC2B8E297E390A6F7DD715C086D9CF576C3CDD54F8F6E85FDC0D6D583FC90572"
+                  },
+                  {
+                      "path":  "C:\\Users\\78567\\Desktop\\隐身浏览器\\geo-monitor-deploy\\creation\\__pycache__\\__init__.cpython-314.pyc",
+                      "bytes":  237,
+                      "sha256":  "139BD831873DF1287F802097F8243D7407DD366DE09DA7670E2AD2D7477027FE"
+                  }
+              ],
+    "bytes":  48017,
+    "at":  "2026-10-15T18:56:42.3038532+08:00"
+}

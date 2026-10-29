@@ -1,0 +1,10 @@
+{
+  "ticket": "905428cf461994f01ca0fe7f",
+  "state": "failed",
+  "client": "e80b6d80455851a92c808620",
+  "execution": {
+    "run_id": "b13a1acdb95039a6fa6061c2",
+    "generation": 1
+  },
+  "error_code": "section_generation_exhausted"
+}

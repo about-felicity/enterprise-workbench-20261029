@@ -1,0 +1,30 @@
+{
+  "geo_source_cards/consumer_prompts.py": {
+    "candidate_sha256": "d4f906ade8e9850ed7c7b5e4da388d25159867b00a15b7541904debd1871d2b0",
+    "production_sha256": "f71986c09f0095758748470e7abd2d5c535b45d0242435caeab1f8dc128c4bea"
+  },
+  "geo_source_cards/review_arbitration.py": {
+    "candidate_sha256": "a605e907b4276a4810e4f47b053d46d65f3b2fd1edaa5f303b31f7af63d08c7e",
+    "production_sha256": "ad9a5d2f4f5aafb51942cdf920be7cc79f9c8227dc44ffef22a2d64f1655bfa8"
+  },
+  "geo_source_cards/section_writer.py": {
+    "candidate_sha256": "c96957d1b2c6e82487841f487ac079df0b7c68fbbc6ac45f43debe189599d22c",
+    "production_sha256": "7ec2e4554bd5b5a3348957de00338f92f5a99601e9c09048e63e9c360f213cc5"
+  },
+  "geo_source_cards/structure_analyzer.py": {
+    "candidate_sha256": "295a0f6a863030c69b4104a83151ac032e9c318cc69d4c66994ee9acd613990e",
+    "production_sha256": "e44a594643b3a063cd3922023e430a34a24120a3253833dd286a2fb86ee55baa"
+  },
+  "tests/test_arbitration_batches.py": {
+    "candidate_sha256": "6f0835d15c3b695f9f236e2650a00768b655cd72ef1935b8d3963c9f8dd61185",
+    "production_sha256": null
+  },
+  "tests/test_section_budget_revision.py": {
+    "candidate_sha256": "a3a475c6dae2915772b5b24d968d9d0ac0c351e594c4e9b7e4c3e8edf81a7b7c",
+    "production_sha256": null
+  },
+  "evidence_archive": {
+    "sha256": "2e8078862f587680594a12d545237062af7ffb69a0a444c6d4fdfd8ff6b05787",
+    "extracted_files": 593
+  }
+}

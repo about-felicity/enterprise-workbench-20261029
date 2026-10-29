@@ -1,0 +1,12 @@
+{
+  "models": ["doubao2", "yuanbao"],
+  "sample_seconds": 60,
+  "java_fraction": 0.85,
+  "app_pss_fraction": 0.65,
+  "container_fraction": 0.85,
+  "consecutive_samples": 2,
+  "cooldown_seconds": 900,
+  "restart_window_seconds": 21600,
+  "max_restarts": 3,
+  "history_days": 14
+}

@@ -1,0 +1,223 @@
+from __future__ import annotations
+
+import json
+import os
+import shutil
+import sys
+import time
+import urllib.request
+from pathlib import Path
+from typing import Any
+
+import websocket
+
+
+def chrome_executable() -> Path:
+    configured = str(os.environ.get("MONITOR_CHROME_PATH") or "").strip()
+    candidates = [Path(configured)] if configured else []
+    candidates.extend(
+        (
+            Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"),
+            Path("/Applications/Chromium.app/Contents/MacOS/Chromium"),
+            Path(os.environ.get("PROGRAMFILES", ""))
+            / "Google/Chrome/Application/chrome.exe",
+            Path(os.environ.get("PROGRAMFILES(X86)", ""))
+            / "Google/Chrome/Application/chrome.exe",
+            Path(os.environ.get("LOCALAPPDATA", ""))
+            / "Google/Chrome/Application/chrome.exe",
+            Path("/usr/bin/google-chrome"),
+            Path("/usr/bin/google-chrome-stable"),
+            Path("/usr/bin/chromium"),
+            Path("/usr/bin/chromium-browser"),
+        )
+    )
+    for path in candidates:
+        if path.is_file():
+            return path
+    for name in (
+        "google-chrome",
+        "google-chrome-stable",
+        "chromium",
+        "chromium-browser",
+    ):
+        resolved = shutil.which(name)
+        if resolved:
+            return Path(resolved)
+    raise RuntimeError(
+        f"找不到 Google Chrome（{sys.platform}）；可通过 MONITOR_CHROME_PATH 指定可执行文件"
+    )
+
+
+class CDPPage:
+    def __init__(self, port: int):
+        self.port = port
+        self.ws: websocket.WebSocket | None = None
+        self.target_id = ""
+        self.sequence = 0
+        self.connect()
+
+    def connect(self, target_id: str = "") -> None:
+        if self.ws is not None:
+            try:
+                self.ws.close()
+            except Exception:
+                pass
+            self.ws = None
+        tabs = json.load(
+            urllib.request.urlopen(f"http://127.0.0.1:{self.port}/json", timeout=10)
+        )
+        pages = [item for item in tabs if item.get("type") == "page"]
+        page = next(
+            (
+                item
+                for item in pages
+                if target_id and str(item.get("id") or "") == target_id
+            ),
+            None,
+        ) or next(
+            (
+                item
+                for item in pages
+                if str(item.get("url") or "").startswith(("http://", "https://"))
+            ),
+            pages[0] if pages else None,
+        )
+        if not page:
+            raise RuntimeError("Chrome 中没有可采集页面")
+        self.target_id = str(page.get("id") or "")
+        self.ws = websocket.create_connection(
+            page["webSocketDebuggerUrl"], timeout=3, origin="http://127.0.0.1"
+        )
+
+    def replace_tab(self, url: str, timeout: float = 20) -> dict[str, str]:
+        """Create one replacement tab, bind to it, then close the exact old tab."""
+        old_target = str(getattr(self, "target_id", "") or "")
+        created = self.call(
+            "Target.createTarget", {"url": str(url or "about:blank")}, timeout=timeout
+        )
+        new_target = str(created.get("targetId") or "")
+        if not new_target:
+            raise RuntimeError("Chrome 未返回新标签页标识")
+        deadline = time.monotonic() + max(3, timeout)
+        last_error: Exception | None = None
+        while time.monotonic() < deadline:
+            try:
+                self.connect(new_target)
+                if self.target_id == new_target:
+                    break
+            except Exception as exc:
+                last_error = exc
+            time.sleep(0.2)
+        else:
+            raise RuntimeError(
+                f"无法连接新建的 Chrome 标签页：{last_error}"
+            ) from last_error
+
+        closed = not old_target or old_target == new_target
+        if not closed:
+            close_url = f"http://127.0.0.1:{self.port}/json/close/{old_target}"
+            for _ in range(3):
+                try:
+                    with urllib.request.urlopen(close_url, timeout=5) as response:
+                        response.read()
+                    closed = True
+                    break
+                except Exception:
+                    time.sleep(0.2)
+            if not closed:
+                try:
+                    closed = bool(
+                        self.call(
+                            "Target.closeTarget", {"targetId": old_target}, timeout=5
+                        ).get("success")
+                    )
+                except Exception:
+                    closed = False
+        if not closed:
+            raise RuntimeError(f"新标签页已打开，但旧标签页 {old_target} 关闭失败")
+        return {
+            "old_target": old_target,
+            "new_target": new_target,
+            "url": str(url or "about:blank"),
+        }
+
+    def send(self, method: str, params: dict[str, Any] | None = None) -> int:
+        if self.ws is None:
+            self.connect()
+        self.sequence += 1
+        self.ws.send(
+            json.dumps({"id": self.sequence, "method": method, "params": params or {}})
+        )
+        return self.sequence
+
+    def recv(self, timeout: float = 3) -> dict[str, Any]:
+        assert self.ws is not None
+        self.ws.settimeout(timeout)
+        return json.loads(self.ws.recv())
+
+    def _call_once(
+        self, method: str, params: dict[str, Any] | None, timeout: float
+    ) -> dict[str, Any]:
+        request_id = self.send(method, params)
+        deadline = time.monotonic() + timeout
+        while time.monotonic() < deadline:
+            try:
+                message = self.recv(min(2, max(0.1, deadline - time.monotonic())))
+            except websocket.WebSocketTimeoutException:
+                continue
+            if message.get("id") == request_id:
+                if message.get("error"):
+                    raise RuntimeError(str(message["error"]))
+                return message.get("result") or {}
+        raise TimeoutError(f"Chrome 调试调用超时：{method}")
+
+    def call(
+        self, method: str, params: dict[str, Any] | None = None, timeout: float = 15
+    ) -> dict[str, Any]:
+        try:
+            return self._call_once(method, params, timeout)
+        except (TimeoutError, OSError, websocket.WebSocketException):
+            # A timed-out send/evaluate may already have run. Never replay input,
+            # clicks, navigation or arbitrary JavaScript after losing its reply.
+            if method not in {
+                "Browser.getVersion",
+                "Network.getAllCookies",
+                "Network.getCookies",
+                "DOM.getDocument",
+                "Runtime.getProperties",
+                "Page.getFrameTree",
+            }:
+                raise
+            self.connect()
+            return self._call_once(method, params, timeout)
+
+    def evaluate(self, expression: str, timeout: float = 15) -> Any:
+        result = self.call(
+            "Runtime.evaluate",
+            {"expression": expression, "returnByValue": True, "awaitPromise": True},
+            timeout,
+        )
+        if result.get("exceptionDetails"):
+            raise RuntimeError(
+                "JavaScript evaluation failed: "
+                + str(
+                    (result["exceptionDetails"].get("exception") or {}).get(
+                        "description"
+                    )
+                    or result["exceptionDetails"].get("text", "unknown error")
+                )[:800]
+            )
+        return (result.get("result") or {}).get("value")
+
+    def click(self, x: int, y: int) -> None:
+        for event in ("mousePressed", "mouseReleased"):
+            self.call(
+                "Input.dispatchMouseEvent",
+                {
+                    "type": event,
+                    "x": x,
+                    "y": y,
+                    "button": "left",
+                    "clickCount": 1,
+                },
+            )

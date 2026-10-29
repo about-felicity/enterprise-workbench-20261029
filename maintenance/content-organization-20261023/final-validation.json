@@ -1,0 +1,19 @@
+{
+  "preserved_files": 18239,
+  "missing": [],
+  "unexpected_changes": [],
+  "intentional_document_update": [
+    "geo-monitor-deploy/creation/README.md"
+  ],
+  "nested_git_status_unchanged": {
+    "geo-source-card-collectors": true,
+    "multi-agent-content-studio": true,
+    "writing-agent": true,
+    "Scrapling": true
+  },
+  "planned_removed_files_still_present": [],
+  "business_code_unchanged": true,
+  "status_document_exists": true,
+  "new_model_api_calls": 0,
+  "production_deployed": false
+}

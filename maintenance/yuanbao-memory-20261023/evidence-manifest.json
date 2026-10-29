@@ -1,0 +1,38 @@
+{
+  "files": {
+    "after.json": {
+      "sha256": "a655685544ae697b3ae03b78a7b5e30a25545f187cc0ad1e428ed2ae9e6b53b2",
+      "bytes": 2148
+    },
+    "before.json": {
+      "sha256": "1319aec685ce18eb81343d9336d27ca858360d334e09662a66c0cbdfe1193280",
+      "bytes": 2148
+    },
+    "register_resources.py": {
+      "sha256": "22234d9f519e029f4d588453602091a1e417f6831af74fa7baeec5d1bda46a54",
+      "bytes": 2323
+    },
+    "REPORT.md": {
+      "sha256": "2652e362828cff55cbec15843e3bf171dc4faaee591e71daa4e2cb94cc7055db",
+      "bytes": 2746
+    },
+    "resize.py": {
+      "sha256": "330282a0a57e9f1ff733cd5f7455b69a54b9fd5e240473c930648d0dd2d57ffb",
+      "bytes": 3821
+    },
+    "result.json": {
+      "sha256": "47e706a474049acbfd51584de8ca953e24f83f8365ae22c255ca646de63e7d29",
+      "bytes": 647
+    },
+    "verification.json": {
+      "sha256": "26bb20ab5887aab7f70f9ccf5487be7a3a50939139a7b1020ee1c2d5e4e7a172",
+      "bytes": 1911
+    },
+    "verify.py": {
+      "sha256": "6eac12fd74c18d5dc9b1aa536d141d806c1baee2087a133ca03a4598d8ff6f05",
+      "bytes": 2129
+    }
+  },
+  "resource_source": "yuanbao-deploy/config/container_resources.json",
+  "new_article_api_calls": 0
+}

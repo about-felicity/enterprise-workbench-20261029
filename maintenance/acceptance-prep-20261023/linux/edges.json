@@ -1,0 +1,16 @@
+{
+  "suite": "edges",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "tests": 10,
+  "failures": [
+    "test_non_arbitrated_repair_must_reject_stale_contract_before_routing (test_acceptance_edges.SourcePathTests)",
+    "test_non_arbitrated_repair_must_reject_stale_source_before_routing (test_acceptance_edges.SourcePathTests)"
+  ],
+  "errors": [],
+  "skips": [],
+  "blocked_network_attempts": 0,
+  "external_api_calls": 0,
+  "balance_calls": 0,
+  "synthetic_routing_only": true
+}

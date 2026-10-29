@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S1\",\"heading\":\"先统一比较维度与资料边界\",\"paragraphs\":[{\"text\":\"在逐款展开前，先定下比较口径。本轮按当前名单十一款产品计数，只围绕可核实信息推进，不按包装风格或宣传语排序。\",\"statement_type\":\"transition\",\"claim_ids\":[]},{\"text\":\"比较时，可把组成资料、净含量与同单位价格、包装取用、已提供报告指标放在同一张表里，让每项落在同一维度上，也便于看出哪些项目有记录、哪些暂缺。\",\"statement_type\":\"general_advice\",\"claim_ids\":[\"CL0011\"]},{\"text\":\"需要提醒的是，原文十款产品的资质、成分和规格披露详略差异很大；本轮十一款也存在这种差异，披露较少的产品不会被推定更好或更差。\",\"statement_type\":\"general_advice\",\"claim_ids\":[\"CL0012\"]},{\"text\":\"因此后续每款只写资料支持的内容：身份信息、已知组成、已知形态，以及描述与体验的界线。成分存在不推导效果或适用人群，价格未知不作性价比判断，缺少的属性直接省略。\",\"statement_type\":\"general_advice\",\"claim_ids\":[]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3727,
+    "completion_tokens": 258,
+    "total_tokens": 3985,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 3727
+  },
+  "request_id": "ded2efa9-cff6-4359-a121-689fb40e4159",
+  "model": "deepseek-flash"
+}

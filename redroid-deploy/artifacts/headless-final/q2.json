@@ -1,0 +1,82 @@
+{
+  "index": 2,
+  "question": "请联网检索：故宫博物院的官方购票预约入口是什么？用三句话回答并附官方信源。",
+  "time": "2026-10-06T17:43:53.472162+08:00",
+  "transport": "ADB",
+  "app": "com.larus.nova",
+  "headless": true,
+  "body_ui": "故宫博物院主要官方购票预约入口为微信端的“故宫博物院”小程序，同时官网设有在线订票页面ticket.dpm.org.cn跳转该预约渠道 。\n该院并未授权任何第三方机构、个人代办门票预约，全部观众都需要实名在此官方渠道完成购票预约 。\n门票会在参观日前7天的20点开放预约，景区不售卖当日现场门票 。\n官方信源：故宫博物院官网在线订票页面 http://ticket.dpm.org.cn/",
+  "body_with_citation_labels": "故宫博物院主要官方购票预约入口为微信端的“故宫博物院”小程序，同时官网设有在线订票页面ticket.dpm.org.cn跳转该预约渠道[(故宫博物院)]。\n该院并未授权任何第三方机构、个人代办门票预约，全部观众都需要实名在此官方渠道完成购票预约[(故宫博物院)]。\n门票会在参观日前7天的20点开放预约，景区不售卖当日现场门票[(故宫博物院)]。\n官方信源：故宫博物院官网在线订票页面 http://ticket.dpm.org.cn/[(故宫博物院)]",
+  "body": "故宫博物院主要官方购票预约入口为微信端的“故宫博物院”小程序，同时官网设有在线订票页面ticket.dpm.org.cn跳转该预约渠道 。\n该院并未授权任何第三方机构、个人代办门票预约，全部观众都需要实名在此官方渠道完成购票预约 。\n门票会在参观日前7天的20点开放预约，景区不售卖当日现场门票 。\n官方信源：故宫博物院官网在线订票页面 http://ticket.dpm.org.cn/",
+  "sources": [
+    {
+      "index": 1,
+      "title": "在线订票 - 故宫博物院",
+      "url": "http://ticket.dpm.org.cn/",
+      "raw_url": "https://seclink.bytedance.com/?app_version=null&channel=null&seclink_version=1.1.0&scene=im&target=http%3A%2F%2Fticket.dpm.org.cn%2F%3Fuse_xbridge3%3Dtrue%26loader_name%3Dforest%26need_sec_link%3D1%26sec_link_scene%3Dim%26theme%3Dlight&sec_link_biz_tag=argus&seclink_settings_version=B350AFCAB4F3218AF5D74ADC624143E2&jumper_version=1&device_platform=android&os_name=android&lang=cn&app_id=482431&aid=482431&did=null",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 2,
+      "title": "故宫博物院",
+      "url": "https://www.dpm.org.cn/Home.html#!/xh?use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "raw_url": "https://seclink.bytedance.com/?app_version=null&channel=null&seclink_version=1.1.0&scene=im&target=https%3A%2F%2Fwww.dpm.org.cn%2FHome.html%23%21%2Fxh%3Fuse_xbridge3%3Dtrue%26loader_name%3Dforest%26need_sec_link%3D1%26sec_link_scene%3Dim%26theme%3Dlight&sec_link_biz_tag=argus&seclink_settings_version=B350AFCAB4F3218AF5D74ADC624143E2&jumper_version=1&device_platform=android&os_name=android&lang=cn&app_id=482431&aid=482431&did=null",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 3,
+      "title": "关于2026年故宫博物院年票发售的公告 - 故宫博物院",
+      "url": "https://www.dpm.org.cn/announce_detail/372863.html",
+      "raw_url": "https://www.dpm.org.cn/announce_detail/372863.html?use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 4,
+      "title": "故宫博物院参观须知 - 故宫博物院",
+      "url": "https://www.dpm.org.cn/singles_detail/259831.html",
+      "raw_url": "https://www.dpm.org.cn/singles_detail/259831.html?use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 5,
+      "title": "故宫博物院",
+      "url": "https://www.dpm.org.cn/Home.html#!/xh?use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "raw_url": "https://www.dpm.org.cn/Home.html#!/xh?use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 6,
+      "title": "导览 - 故宫博物院",
+      "url": "https://www.dpm.org.cn/Visit.html?ivk_sa=1024320u",
+      "raw_url": "https://seclink.bytedance.com/?app_version=null&channel=null&seclink_version=1.1.0&scene=im&target=https%3A%2F%2Fwww.dpm.org.cn%2FVisit.html%3Fivk_sa%3D1024320u%26use_xbridge3%3Dtrue%26loader_name%3Dforest%26need_sec_link%3D1%26sec_link_scene%3Dim%26theme%3Dlight&sec_link_biz_tag=argus&seclink_settings_version=B350AFCAB4F3218AF5D74ADC624143E2&jumper_version=1&device_platform=android&os_name=android&lang=cn&app_id=482431&aid=482431&did=null",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 7,
+      "title": "在线订票 - 故宫博物院",
+      "url": "http://ticket.dpm.org.cn/",
+      "raw_url": "http://ticket.dpm.org.cn/?use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 8,
+      "title": "故宫博物院",
+      "url": "https://www.dpm.org.cn/Home.html#reloaded",
+      "raw_url": "https://www.dpm.org.cn/Home.html#reloaded",
+      "extraction": "Android App reference -> share -> copy link"
+    },
+    {
+      "index": 9,
+      "title": "故宫博物院关于2026年7月27日开放的公告 - 故宫博物院",
+      "url": "https://www.dpm.org.cn/announce_detail/379398.html",
+      "raw_url": "https://www.dpm.org.cn/announce_detail/379398.html?use_xbridge3=true&loader_name=forest&need_sec_link=1&sec_link_scene=im&theme=light",
+      "extraction": "Android App reference -> share -> copy link"
+    }
+  ],
+  "expected_sources": 9,
+  "source_status": "complete",
+  "status": "ok",
+  "body_urls": [
+    "http://ticket.dpm.org.cn/"
+  ]
+}

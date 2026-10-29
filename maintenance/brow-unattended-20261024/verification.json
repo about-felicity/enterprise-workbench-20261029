@@ -1,0 +1,32 @@
+{
+  "tests_run": 182,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "platform": "linux",
+  "success": true,
+  "network": "only loopback allowed",
+  "real_model_calls": 0,
+  "modules": [
+    "tests.test_rewrite_v2",
+    "tests.test_api_worker",
+    "tests.test_deepseek_api",
+    "tests.test_daily_editorial",
+    "tests.test_execution_runs",
+    "tests.test_auto_repair",
+    "tests.test_cost_controls",
+    "tests.test_genre_pools",
+    "tests.test_three_agent_quality",
+    "tests.test_staged_editorial",
+    "tests.test_word_layout",
+    "creation.test_workflow",
+    "creation.test_studio",
+    "creation.test_download_service",
+    "creation.test_article_export",
+    "creation.test_worker_recovery",
+    "creation.test_editorial_health",
+    "creation.test_client",
+    "creation.test_unattended_recovery"
+  ]
+}

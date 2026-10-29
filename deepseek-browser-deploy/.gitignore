@@ -1,0 +1,7 @@
+chrome-linux64.zip
+test-source.zip
+__pycache__/
+*.log
+login-check.jpg
+project/data/
+project/config/deepseek_sync.json

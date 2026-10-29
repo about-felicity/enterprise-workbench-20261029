@@ -1,0 +1,33 @@
+{
+  "lightweight_seconds": {
+    "lan": 0.033,
+    "public": 5.31
+  },
+  "public_small": {
+    "bytes": 30168,
+    "seconds": 3.701,
+    "ok": true
+  },
+  "duplicate_safe": true,
+  "original_download_sha_match": true,
+  "public_four_sessions": [
+    {
+      "id": "image-e41af3e1a7a2417e34aa4e67d97f7c54",
+      "seconds": 2.089
+    },
+    {
+      "id": "image-63d3c28c587888ab0823d31d66596a97",
+      "seconds": 1.481
+    },
+    {
+      "id": "image-3a6e3282d3241de0d79fac6ad5e5b7dd",
+      "seconds": 2.229
+    },
+    {
+      "id": "image-40d232ce7ba3a779c1fd35f7525b42bf",
+      "seconds": 2.028
+    }
+  ],
+  "ok": true,
+  "temporary_data_removed": true
+}

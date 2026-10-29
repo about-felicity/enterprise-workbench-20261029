@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-15T14:08:25+08:00",
+  "disabled_autostarts": [
+    "redroid-doubao-hpe14-worker.service",
+    "redroid-doubao-soak24h.service",
+    "redroid-geo-products.service",
+    "redroid-geo-products-account2.service"
+  ],
+  "reason": "Old acceptance workers and completed 105/105 jobs replaced by current immutable GEO jobs",
+  "current_five_jobs_untouched": true,
+  "historical_failure_status_not_reset": true,
+  "evidence_saved": "/opt/monitor/geo-capture/maintenance/20261015-reorganize/superseded-units"
+}

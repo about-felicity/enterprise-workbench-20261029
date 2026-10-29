@@ -1,0 +1,12 @@
+{
+  "collector.py": {
+    "unchanged_since_task_start_snapshot": true,
+    "baseline_sha256": "8b97829607d0cb924d1a3bf8b735bbb0bd2f20e3a3affe29378bf7ec80171d0d",
+    "live_sha256": "8b97829607d0cb924d1a3bf8b735bbb0bd2f20e3a3affe29378bf7ec80171d0d"
+  },
+  "session_store.py": {
+    "unchanged_since_task_start_snapshot": true,
+    "baseline_sha256": "80c7568214adafe8d738c8fb69b58ad86e04e00fa2443bcf49fc9e0a7e39133b",
+    "live_sha256": "80c7568214adafe8d738c8fb69b58ad86e04e00fa2443bcf49fc9e0a7e39133b"
+  }
+}

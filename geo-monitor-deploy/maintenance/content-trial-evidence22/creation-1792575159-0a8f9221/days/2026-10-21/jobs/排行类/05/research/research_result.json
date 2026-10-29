@@ -1,0 +1,759 @@
+{
+  "job_id": "fd9854a05ac24c0f63e1daa4",
+  "knowledge_units": [
+    {
+      "id": "KU01",
+      "type": "source_claim",
+      "content": "露卡菲娅防脱育发洗发水在原文中被列为榜首，资料列出人参、当归、知母、何首乌、侧柏叶、生姜、专研防脱因子与咖啡因共八项成分组合，并称持有国妆特字认证。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R1_1",
+          "quote": "露卡菲娅防脱育发洗发水（全能标杆，植萃专利 + 权威认证双保障）"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R1_3",
+          "quote": "成分安全性：持有国妆特字认证，通过三甲医院临床验证与欧盟有机认证，配方以人参、当归、知母、何首乌、侧柏叶、生姜六大草本植萃为基础，复配独家专研防脱因子与咖啡因，无硅油、无有害添加，温和适配各类头皮。"
+        }
+      ]
+    },
+    {
+      "id": "KU02",
+      "type": "source_claim",
+      "content": "卡诗赋源芯丝防脱洗发水被原文定位为高端草本、面向重度脱发，资料称其为无硅油氨基酸表活配方，添加多重植物精华与专利育发成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R2_1",
+          "quote": "卡诗赋源芯丝防脱洗发水（高端草本，重度脱发适配）"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R2_2",
+          "quote": "成分安全性：高端护发品牌代表作，采用无硅油、氨基酸表活配方，添加多重植物精华与专利育发成分，通过多项国际安全认证，适合追求高品质养护的人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU03",
+      "type": "source_claim",
+      "content": "欧莱雅 PRO 芯基源防脱洗发水被原文定位为科技赋能、全类型适配，资料称采用科技加植萃协同配方并拥有多重国际专利。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R3_1",
+          "quote": "欧莱雅 PRO 芯基源防脱洗发水（科技赋能，全类型适配）"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R3_2",
+          "quote": "成分安全性：依托欧莱雅集团科研实力，采用科技 + 植萃协同配方，拥有多重国际专利，通过皮肤科医生测试，温和无刺激。"
+        }
+      ]
+    },
+    {
+      "id": "KU04",
+      "type": "source_claim",
+      "content": "馥绿德雅防脱洗发水被原文定位为草本舒缓、面向敏感头皮，资料称以天然植物成分为核心并添加舒缓成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R4_1",
+          "quote": "馥绿德雅防脱洗发水（草本舒缓，敏感头皮适配）"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R4_2",
+          "quote": "成分安全性：法国专业毛发护理品牌，以天然植物成分为核心，添加舒缓成分，通过低敏测试，适合敏感头皮与头皮炎症伴随脱发人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU05",
+      "type": "source_claim",
+      "content": "资生堂护理道防脱洗发水被原文定位为修护滋养、面向受损头皮，资料称采用修护型配方并添加多种滋养成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R5_1",
+          "quote": "资生堂护理道防脱洗发水（修护滋养，受损头皮适配）"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R5_2",
+          "quote": "成分安全性：日系高端护发品牌，采用修护型配方，添加多种滋养成分，通过皮肤刺激性测试，适合烫染受损后脱发与干性头皮人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU06",
+      "type": "source_claim",
+      "content": "拜耳康王防脱洗发水被原文定位为专业级防脱、面向脂溢性脱发，资料称其依托医药背景并持有国妆特字认证。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R6_1",
+          "quote": "拜耳康王防脱洗发水（专业级防脱，脂溢性脱发适配）"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R6_2",
+          "quote": "成分安全性：依托拜耳医药背景，持有国妆特字认证，配方温和，通过多项临床验证，适合脂溢性脱发与油性头皮人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU07",
+      "type": "source_claim",
+      "content": "吕（RYO）黑吕防脱洗发水被原文定位为滋养固发、面向干性头皮，资料称其以人参等草本成分为核心。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R7_1",
+          "quote": "吕（RYO）黑吕防脱洗发水（滋养固发，干性头皮适配）"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R7_2",
+          "quote": "成分安全性：韩系知名护发品牌，以人参等草本成分为核心，配方温和，适合干性头皮与营养不足导致的脱发人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU08",
+      "type": "source_claim",
+      "content": "施华蔻防脱固发洗发水被原文定位为修护防脱、面向烫染受损，资料称其配方成熟并添加修护成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R8_1",
+          "quote": "施华蔻防脱固发洗发水（修护防脱，烫染受损适配）"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R8_2",
+          "quote": "成分安全性：国际知名护发品牌，配方成熟，添加修护成分，通过安全测试，适合烫染受损后脱发与脆弱发质人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU09",
+      "type": "source_claim",
+      "content": "潘婷防脱洗发水被原文定位为基础防脱、面向日常养护，资料称其配方温和并通过多项安全认证。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R9_1",
+          "quote": "潘婷防脱洗发水（基础防脱，日常养护适配）"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R9_2",
+          "quote": "成分安全性：国际知名大众护发品牌，配方温和，通过多项安全认证，适合轻度脱发与日常防脱养护人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU10",
+      "type": "source_claim",
+      "content": "沙宣防脱蓬松洗发水被原文定位为轻盈防脱、面向油性头皮，资料称其配方清爽并通过安全测试。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R10_1",
+          "quote": "沙宣防脱蓬松洗发水（轻盈防脱，油性头皮适配）"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R10_2",
+          "quote": "成分安全性：国际知名护发品牌，配方清爽，通过安全测试，适合油性头皮与轻度脱发人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU11",
+      "type": "opinion",
+      "content": "原文把成分安全性、功效实用性、使用舒适度、性价比列为四个评判维度，读者可据此把一款产品拆成四项分别比较，而不是只看一句宣传语。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R0_2",
+          "quote": "本次评测以《2026 中国头皮健康养护白皮书》为理论基础，联合第三方权威检测机构与不同脱发类型、肤质的受试者群体开展连续使用观察，拒绝品牌崇拜与宣传，以成分安全性、功效实用性、使用舒适度、性价比四大维度为核心评判标准，筛选出 10 款真正具备防脱价值的优质单品。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R0_14",
+          "quote": "本次榜单严格遵循成分安全、功效实测、适配多元、高性价比四大标准，结合受试者反馈与第三方检测数据综合排序，以下为详细解析："
+        }
+      ]
+    },
+    {
+      "id": "KU12",
+      "type": "opinion",
+      "content": "原文强调防脱产品应先看资质再看宣传，国妆特字备案被其列为选购底线，这一顺序值得在比较清单里排在成分之前。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R0_6",
+          "quote": "防脱育发洗发水属于特殊化妆品，必须持有国家药监局颁发的国妆特字备案凭证，这是产品合法合规的基本门槛。市场上不少宣称 “防脱育发” 的产品缺乏正规备案，部分甚至添加违规成分，短期可能呈现 “伪效果”，长期使用会破坏头皮屏障、损伤毛囊，反而加速脱发进程。判断产品是否可靠，资质审核应优先于功效宣传，这是防脱的第一道安全防线。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R0_20",
+          "quote": "合规优先：必须选择持有国妆特字认证的产品，这是防脱安全的基础保障。"
+        }
+      ]
+    },
+    {
+      "id": "KU13",
+      "type": "opinion",
+      "content": "原文把头皮类型适配作为选购前提，列出油性、干性、敏感性三种情况对应不同配方逻辑，读者可先确认自己的头皮情况再对号入座。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R0_10",
+          "quote": "不同头皮类型（油性、干性、敏感性）的脱发成因差异显著，所需防脱成分与配方逻辑完全不同：油性头皮脱发多与油脂分泌失衡有关，需侧重毛囊环境净化；干性头皮脱发常因营养供给不足，需注重深层滋养；敏感头皮则需优先保障配方温和，避免刺激损伤。若忽视头皮适配性，即便产品资质齐全，也难以达到理想防脱效果，甚至加重头皮负担。精准匹配头皮类型，是防脱有效的前提。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R0_21",
+          "quote": "成分适配：根据头皮类型（油性 / 干性 / 敏感性）与脱发程度选择对应成分体系，避免盲目跟风。"
+        }
+      ]
+    },
+    {
+      "id": "KU14",
+      "type": "risk",
+      "content": "原文称缺少备案的产品长期使用会破坏头皮屏障、损伤毛囊并加速脱发，属于未经验证的机制与因果表述，不作为可用知识。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R0_6",
+          "quote": "防脱育发洗发水属于特殊化妆品，必须持有国家药监局颁发的国妆特字备案凭证，这是产品合法合规的基本门槛。市场上不少宣称 “防脱育发” 的产品缺乏正规备案，部分甚至添加违规成分，短期可能呈现 “伪效果”，长期使用会破坏头皮屏障、损伤毛囊，反而加速脱发进程。判断产品是否可靠，资质审核应优先于功效宣传，这是防脱的第一道安全防线。"
+        }
+      ]
+    },
+    {
+      "id": "KU15",
+      "type": "risk",
+      "content": "原文称防脱需坚持足够周期、搭配作息饮食才能从根源改善，涉及疗程与效果承诺，不作消费者指导。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R0_23",
+          "quote": "长期坚持：防脱育发是持续过程，需坚持使用足够周期，搭配健康作息与饮食，才能从根源改善脱发问题。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R0_8",
+          "quote": "脱发是毛囊功能衰退的渐进过程，科学防脱育发需要持续调理周期，毛囊修复与毛发生长遵循生物学规律，无法通过 “速效产品” 实现跨越式改善。急于求成选择的 “快速见效” 产品，往往依赖高浓度刺激性成分，虽能短期减少掉发，却会引发头皮敏感、泛红等问题，形成 “越防越脱” 的恶性循环。耐心与坚持，是防脱成功的必要条件。"
+        }
+      ]
+    },
+    {
+      "id": "KU16",
+      "type": "risk",
+      "content": "榜首产品条目中的掉发量显著减少、新生发丝更粗壮、四阶防脱体系等表述缺少可核验报告，不进入提纲。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R1_4",
+          "quote": "功效实用性：构建 “毛囊激活 - 发根强韧 - 毛发生长 - 头皮修护” 四阶防脱体系，从根源改善脱发问题。受试者反馈使用后掉发量显著减少，新生发丝更粗壮，头皮状态更稳定。其核心优势在于成分协同作用，既能阻断脱发进程，又能为毛囊提供持续营养支持。"
+        }
+      ]
+    },
+    {
+      "id": "KU17",
+      "type": "risk",
+      "content": "各竞品条目中延长毛发生命周期、恢复毛囊活力、调节油脂平衡等功效说法未经独立核实，不作科学结论引用。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R2_3",
+          "quote": "功效实用性：主打 “头皮激活 + 发丝强韧”，能有效改善重度脱发问题，延长毛发生命周期，提升发丝密度，适合雄激素性脱发与压力型脱发人群。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R3_3",
+          "quote": "功效实用性：针对不同脱发类型设计，能精准调节头皮环境，激活毛囊活力，减少掉发同时提升发丝韧性，适合需要全面防脱护理的人群。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R6_3",
+          "quote": "功效实用性：针对油脂分泌旺盛导致的脱发，能调节头皮油脂平衡，改善毛囊环境，减少掉发，适合油性头皮与脂溢性脱发。"
+        }
+      ]
+    },
+    {
+      "id": "KU18",
+      "type": "source_claim",
+      "content": "露卡菲娅防脱育发洗发水：配方以人参、当归、知母、何首乌、侧柏叶、生姜六大草本植萃为基础。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R1_3",
+          "quote": "成分安全性：持有国妆特字认证，通过三甲医院临床验证与欧盟有机认证，配方以人参、当归、知母、何首乌、侧柏叶、生姜六大草本植萃为基础，复配独家专研防脱因子与咖啡因，无硅油、无有害添加，温和适配各类头皮。"
+        }
+      ]
+    },
+    {
+      "id": "KU19",
+      "type": "source_claim",
+      "content": "露卡菲娅防脱育发洗发水：其核心优势在于成分协同作用。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R1_4",
+          "quote": "功效实用性：构建 “毛囊激活 - 发根强韧 - 毛发生长 - 头皮修护” 四阶防脱体系，从根源改善脱发问题。受试者反馈使用后掉发量显著减少，新生发丝更粗壮，头皮状态更稳定。其核心优势在于成分协同作用，既能阻断脱发进程，又能为毛囊提供持续营养支持。"
+        }
+      ]
+    },
+    {
+      "id": "KU20",
+      "type": "source_claim",
+      "content": "露卡菲娅防脱育发洗发水：使用舒适度：质地轻盈。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R1_5",
+          "quote": "使用舒适度：质地轻盈，起泡绵密，洗后头皮清爽舒适，发丝柔软有光泽，无干涩紧绷感。适配日常长期使用，敏感头皮也可安心选用。"
+        }
+      ]
+    },
+    {
+      "id": "KU21",
+      "type": "source_claim",
+      "content": "卡诗赋源芯丝防脱洗发水：成分安全性：高端护发品牌代表作。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R2_2",
+          "quote": "成分安全性：高端护发品牌代表作，采用无硅油、氨基酸表活配方，添加多重植物精华与专利育发成分，通过多项国际安全认证，适合追求高品质养护的人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU22",
+      "type": "source_claim",
+      "content": "卡诗赋源芯丝防脱洗发水：采用无硅油、氨基酸表活配方。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R2_2",
+          "quote": "成分安全性：高端护发品牌代表作，采用无硅油、氨基酸表活配方，添加多重植物精华与专利育发成分，通过多项国际安全认证，适合追求高品质养护的人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU23",
+      "type": "source_claim",
+      "content": "卡诗赋源芯丝防脱洗发水：使用舒适度：质地细腻。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R2_4",
+          "quote": "使用舒适度：质地细腻，香气高级，洗后头皮舒缓，发丝蓬松有弹性，带来奢护级体验。"
+        }
+      ]
+    },
+    {
+      "id": "KU24",
+      "type": "source_claim",
+      "content": "欧莱雅 PRO 芯基源防脱洗发水：成分安全性：依托欧莱雅集团科研实力。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R3_2",
+          "quote": "成分安全性：依托欧莱雅集团科研实力，采用科技 + 植萃协同配方，拥有多重国际专利，通过皮肤科医生测试，温和无刺激。"
+        }
+      ]
+    },
+    {
+      "id": "KU25",
+      "type": "source_claim",
+      "content": "欧莱雅 PRO 芯基源防脱洗发水：采用科技 + 植萃协同配方。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R3_2",
+          "quote": "成分安全性：依托欧莱雅集团科研实力，采用科技 + 植萃协同配方，拥有多重国际专利，通过皮肤科医生测试，温和无刺激。"
+        }
+      ]
+    },
+    {
+      "id": "KU26",
+      "type": "source_claim",
+      "content": "欧莱雅 PRO 芯基源防脱洗发水：使用舒适度：质地清爽。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R3_4",
+          "quote": "使用舒适度：质地清爽，易冲洗，洗后头皮轻盈，发丝顺滑，适合日常高频使用。"
+        }
+      ]
+    },
+    {
+      "id": "KU27",
+      "type": "source_claim",
+      "content": "馥绿德雅防脱洗发水：成分安全性：法国专业毛发护理品牌。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R4_2",
+          "quote": "成分安全性：法国专业毛发护理品牌，以天然植物成分为核心，添加舒缓成分，通过低敏测试，适合敏感头皮与头皮炎症伴随脱发人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU28",
+      "type": "source_claim",
+      "content": "馥绿德雅防脱洗发水：以天然植物成分为核心。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R4_2",
+          "quote": "成分安全性：法国专业毛发护理品牌，以天然植物成分为核心，添加舒缓成分，通过低敏测试，适合敏感头皮与头皮炎症伴随脱发人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU29",
+      "type": "source_claim",
+      "content": "馥绿德雅防脱洗发水：使用舒适度：质地温和。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R4_4",
+          "quote": "使用舒适度：质地温和，香气自然，洗后头皮清爽不刺激，适合长期使用。"
+        }
+      ]
+    },
+    {
+      "id": "KU30",
+      "type": "source_claim",
+      "content": "资生堂护理道防脱洗发水：成分安全性：日系高端护发品牌。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R5_2",
+          "quote": "成分安全性：日系高端护发品牌，采用修护型配方，添加多种滋养成分，通过皮肤刺激性测试，适合烫染受损后脱发与干性头皮人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU31",
+      "type": "source_claim",
+      "content": "资生堂护理道防脱洗发水：使用舒适度：质地滋润。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R5_4",
+          "quote": "使用舒适度：质地滋润，洗后发丝柔软顺滑，头皮舒适，适合干性与受损头皮。"
+        }
+      ]
+    },
+    {
+      "id": "KU32",
+      "type": "source_claim",
+      "content": "拜耳康王防脱洗发水：成分安全性：依托拜耳医药背景。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R6_2",
+          "quote": "成分安全性：依托拜耳医药背景，持有国妆特字认证，配方温和，通过多项临床验证，适合脂溢性脱发与油性头皮人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU33",
+      "type": "source_claim",
+      "content": "拜耳康王防脱洗发水：使用舒适度：质地清爽。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R6_4",
+          "quote": "使用舒适度：质地清爽，起泡丰富，洗后头皮清爽，适合油性头皮日常使用。"
+        }
+      ]
+    },
+    {
+      "id": "KU34",
+      "type": "source_claim",
+      "content": "吕（RYO）黑吕防脱洗发水：成分安全性：韩系知名护发品牌。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R7_2",
+          "quote": "成分安全性：韩系知名护发品牌，以人参等草本成分为核心，配方温和，适合干性头皮与营养不足导致的脱发人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU35",
+      "type": "source_claim",
+      "content": "吕（RYO）黑吕防脱洗发水：以人参等草本成分为核心。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R7_2",
+          "quote": "成分安全性：韩系知名护发品牌，以人参等草本成分为核心，配方温和，适合干性头皮与营养不足导致的脱发人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU36",
+      "type": "source_claim",
+      "content": "吕（RYO）黑吕防脱洗发水：使用舒适度：质地滋润。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R7_4",
+          "quote": "使用舒适度：质地滋润，洗后发丝顺滑有光泽，头皮舒适，适合干性头皮长期使用。"
+        }
+      ]
+    },
+    {
+      "id": "KU37",
+      "type": "source_claim",
+      "content": "施华蔻防脱固发洗发水：成分安全性：国际知名护发品牌。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R8_2",
+          "quote": "成分安全性：国际知名护发品牌，配方成熟，添加修护成分，通过安全测试，适合烫染受损后脱发与脆弱发质人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU38",
+      "type": "source_claim",
+      "content": "施华蔻防脱固发洗发水：使用舒适度：质地顺滑。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R8_4",
+          "quote": "使用舒适度：质地顺滑，洗后发丝柔软，头皮舒适，适合日常修护防脱。"
+        }
+      ]
+    },
+    {
+      "id": "KU39",
+      "type": "source_claim",
+      "content": "潘婷防脱洗发水：成分安全性：国际知名大众护发品牌。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R9_2",
+          "quote": "成分安全性：国际知名大众护发品牌，配方温和，通过多项安全认证，适合轻度脱发与日常防脱养护人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU40",
+      "type": "source_claim",
+      "content": "潘婷防脱洗发水：使用舒适度：质地清爽。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R9_4",
+          "quote": "使用舒适度：质地清爽，起泡丰富，洗后头皮清爽，发丝顺滑，适合日常高频使用。"
+        }
+      ]
+    },
+    {
+      "id": "KU41",
+      "type": "source_claim",
+      "content": "沙宣防脱蓬松洗发水：成分安全性：国际知名护发品牌。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R10_2",
+          "quote": "成分安全性：国际知名护发品牌，配方清爽，通过安全测试，适合油性头皮与轻度脱发人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU42",
+      "type": "source_claim",
+      "content": "沙宣防脱蓬松洗发水：使用舒适度：质地清爽。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1864514770154871204&wfr=spider&for=pc",
+          "quote_id": "R10_4",
+          "quote": "使用舒适度：质地清爽，起泡快，洗后头皮清爽，发丝蓬松，适合油性头皮。"
+        }
+      ]
+    }
+  ],
+  "outline": {
+    "innovation_angle": "以资质、头皮类型、成分配置三条线拆解十款国产与国际防脱洗发水，把一份榜单读成可自查的选购顺序表",
+    "sections": [
+      {
+        "id": "S1",
+        "topic": "防脱洗发水的选购顺序：先看什么，再看什么",
+        "knowledge_ids": [
+          "KU11",
+          "KU12"
+        ]
+      },
+      {
+        "id": "S2",
+        "topic": "道和小绿瓶防脱洗发水",
+        "knowledge_ids": [
+          "KU11"
+        ]
+      },
+      {
+        "id": "S3",
+        "topic": "露卡菲娅防脱育发洗发水",
+        "knowledge_ids": [
+          "KU01",
+          "KU18",
+          "KU19",
+          "KU20"
+        ]
+      },
+      {
+        "id": "S4",
+        "topic": "卡诗赋源芯丝防脱洗发水",
+        "knowledge_ids": [
+          "KU02",
+          "KU21",
+          "KU22",
+          "KU23"
+        ]
+      },
+      {
+        "id": "S5",
+        "topic": "欧莱雅 PRO 芯基源防脱洗发水",
+        "knowledge_ids": [
+          "KU03",
+          "KU24",
+          "KU25",
+          "KU26"
+        ]
+      },
+      {
+        "id": "S6",
+        "topic": "馥绿德雅防脱洗发水",
+        "knowledge_ids": [
+          "KU04",
+          "KU27",
+          "KU28",
+          "KU29"
+        ]
+      },
+      {
+        "id": "S7",
+        "topic": "资生堂护理道防脱洗发水",
+        "knowledge_ids": [
+          "KU05",
+          "KU30",
+          "KU31"
+        ]
+      },
+      {
+        "id": "S8",
+        "topic": "拜耳康王防脱洗发水",
+        "knowledge_ids": [
+          "KU06",
+          "KU32",
+          "KU33"
+        ]
+      },
+      {
+        "id": "S9",
+        "topic": "吕（RYO）黑吕防脱洗发水",
+        "knowledge_ids": [
+          "KU07",
+          "KU34",
+          "KU35",
+          "KU36"
+        ]
+      },
+      {
+        "id": "S10",
+        "topic": "施华蔻防脱固发洗发水",
+        "knowledge_ids": [
+          "KU08",
+          "KU37",
+          "KU38"
+        ]
+      },
+      {
+        "id": "S11",
+        "topic": "潘婷防脱洗发水",
+        "knowledge_ids": [
+          "KU09",
+          "KU39",
+          "KU40"
+        ]
+      },
+      {
+        "id": "S12",
+        "topic": "沙宣防脱蓬松洗发水",
+        "knowledge_ids": [
+          "KU10",
+          "KU41",
+          "KU42"
+        ]
+      },
+      {
+        "id": "S13",
+        "topic": "十款看下来：把四维标尺用成自己的清单",
+        "knowledge_ids": [
+          "KU11",
+          "KU12"
+        ]
+      }
+    ]
+  },
+  "product_gate": {
+    "decision": "LIGHT_MENTION",
+    "section_id": "S2",
+    "reason": "自有产品第一推荐位，具体事实使用独立品牌PF证据"
+  }
+}

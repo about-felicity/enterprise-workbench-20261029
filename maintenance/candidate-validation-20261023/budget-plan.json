@@ -1,0 +1,209 @@
+{
+  "type": "offline_budget_plan_no_calls",
+  "price_rule": {
+    "version_date": "2026-10-08",
+    "input_miss_cny_per_million": 2.0,
+    "input_hit": 0.04,
+    "output": 8.0,
+    "off_peak_discount_assumed": false
+  },
+  "empirical_usage_projection": {
+    "structure": {
+      "samples": 5,
+      "max_input_token_byte_ratio": 0.23762461573821358,
+      "median_completion_tokens": 2399
+    },
+    "sections": {
+      "samples": 72,
+      "max_input_token_byte_ratio": 0.2638801854869031,
+      "median_completion_tokens": 274.5
+    },
+    "arbitration": {
+      "samples": 1,
+      "max_input_token_byte_ratio": 0.2501928140209037,
+      "median_completion_tokens": 2200
+    },
+    "facts": {
+      "samples": 1,
+      "max_input_token_byte_ratio": 0.24252959586338277,
+      "median_completion_tokens": 1626
+    },
+    "logic": {
+      "samples": 1,
+      "max_input_token_byte_ratio": 0.2363807171432492,
+      "median_completion_tokens": 979
+    }
+  },
+  "samples": [
+    {
+      "sample": "排行类01",
+      "body_sections": 12,
+      "initial_components": 14,
+      "phases": [
+        {
+          "stage": "structure",
+          "initial_calls": 1,
+          "measured_max_input_byte_bound": 48774,
+          "planned_per_request_input_byte_ceiling": 65536,
+          "initial_output_tokens_upper": 2400,
+          "estimated_initial_cny": 0.04237180601603126,
+          "initial_reservation_upper_cny": 0.150272
+        },
+        {
+          "stage": "sections",
+          "initial_calls": 14,
+          "measured_max_input_byte_bound": 50087,
+          "planned_per_request_input_byte_ceiling": 69632,
+          "initial_output_tokens_upper": 15854,
+          "estimated_initial_cny": 0.4008190718135105,
+          "initial_reservation_upper_cny": 2.076528
+        },
+        {
+          "stage": "facts",
+          "initial_calls": 1,
+          "measured_max_input_byte_bound": 143805,
+          "planned_per_request_input_byte_ceiling": 163840,
+          "initial_output_tokens_upper": 1800,
+          "estimated_initial_cny": 0.08276193706626753,
+          "initial_reservation_upper_cny": 0.34208
+        },
+        {
+          "stage": "logic",
+          "initial_calls": 1,
+          "measured_max_input_byte_bound": 109269,
+          "planned_per_request_input_byte_ceiling": 126976,
+          "initial_output_tokens_upper": 2400,
+          "estimated_initial_cny": 0.059490169163051394,
+          "initial_reservation_upper_cny": 0.273152
+        },
+        {
+          "stage": "arbitration",
+          "initial_calls": 9,
+          "measured_max_input_byte_bound": 187345,
+          "planned_per_request_input_byte_ceiling": 204800,
+          "initial_output_tokens_upper": 19800,
+          "estimated_initial_cny": 1.0021027093694317,
+          "initial_reservation_upper_cny": 3.8448
+        }
+      ],
+      "expected_initial_calls_with_26_findings": 26,
+      "expected_initial_cny": 1.5875456934282923,
+      "initial_full_output_reservation_upper_cny": 6.686832000000001,
+      "structure_second_attempt_extra_cny": 0.150272,
+      "all_components_two_supplement_attempts_extra_cny": 4.153056,
+      "one_repair_full_upper_cny": 11.116816,
+      "two_repairs_full_upper_cny": 22.233632,
+      "total_full_upper_cny": 33.650992,
+      "maximum_calls_in_planned_envelope": 164,
+      "phase_caps": {
+        "structure_total": 0.300544,
+        "initial_sections": 6.229584,
+        "initial_fact_logic_arbitration": 4.887232
+      },
+      "historical_article_used_cny": 0.6531943200000002,
+      "historically_authorized_article_remainder_cny": 1.3468056799999997,
+      "current_effective_article_remainder_cny": 0,
+      "fits_historical_authorization_for_complete_envelope": false,
+      "allowed_to_send_now": false,
+      "warning": "费用输入使用历史正文仅作长度与材料体积替身；不是新合格正文。26条为历史实测意见数量；未来最多30条作为方案容量，超出必须停止重算，不得丢弃意见。"
+    },
+    {
+      "sample": "测评类02",
+      "body_sections": 13,
+      "initial_components": 15,
+      "phases": [
+        {
+          "stage": "structure",
+          "initial_calls": 1,
+          "measured_max_input_byte_bound": 34824,
+          "planned_per_request_input_byte_ceiling": 53248,
+          "initial_output_tokens_upper": 2400,
+          "estimated_initial_cny": 0.0357420792369351,
+          "initial_reservation_upper_cny": 0.125696
+        },
+        {
+          "stage": "sections",
+          "initial_calls": 15,
+          "measured_max_input_byte_bound": 62657,
+          "planned_per_request_input_byte_ceiling": 81920,
+          "initial_output_tokens_upper": 16252,
+          "estimated_initial_cny": 0.5289582234615867,
+          "initial_reservation_upper_cny": 2.587616
+        },
+        {
+          "stage": "facts",
+          "initial_calls": 1,
+          "measured_max_input_byte_bound": 146630,
+          "planned_per_request_input_byte_ceiling": 163840,
+          "initial_output_tokens_upper": 1800,
+          "estimated_initial_cny": 0.08413222928289563,
+          "initial_reservation_upper_cny": 0.34208
+        },
+        {
+          "stage": "logic",
+          "initial_calls": 1,
+          "measured_max_input_byte_bound": 94387,
+          "planned_per_request_input_byte_ceiling": 114688,
+          "initial_output_tokens_upper": 2400,
+          "estimated_initial_cny": 0.05245453349799973,
+          "initial_reservation_upper_cny": 0.248576
+        },
+        {
+          "stage": "arbitration",
+          "initial_calls": 9,
+          "measured_max_input_byte_bound": 216783,
+          "planned_per_request_input_byte_ceiling": 233472,
+          "initial_output_tokens_upper": 19800,
+          "estimated_initial_cny": 1.1346758784340845,
+          "initial_reservation_upper_cny": 4.360896
+        }
+      ],
+      "expected_initial_calls_with_26_findings": 27,
+      "expected_initial_cny": 1.8359629439135017,
+      "initial_full_output_reservation_upper_cny": 7.664864000000001,
+      "structure_second_attempt_extra_cny": 0.125696,
+      "all_components_two_supplement_attempts_extra_cny": 5.175232,
+      "one_repair_full_upper_cny": 13.198944000000001,
+      "two_repairs_full_upper_cny": 26.397888000000002,
+      "total_full_upper_cny": 39.848224,
+      "maximum_calls_in_planned_envelope": 173,
+      "phase_caps": {
+        "structure_total": 0.251392,
+        "initial_sections": 7.762848,
+        "initial_fact_logic_arbitration": 5.436096
+      },
+      "historical_article_used_cny": 0.8206397599999999,
+      "historically_authorized_article_remainder_cny": 1.17936024,
+      "current_effective_article_remainder_cny": 0,
+      "fits_historical_authorization_for_complete_envelope": false,
+      "allowed_to_send_now": false,
+      "warning": "费用输入使用历史正文仅作长度与材料体积替身；不是新合格正文。26条为历史实测意见数量；未来最多30条作为方案容量，超出必须停止重算，不得丢弃意见。"
+    }
+  ],
+  "scope_used_cny": 4.624786440000001,
+  "scope_authorized_cap_cny": 8,
+  "scope_remaining_cny": 3.375213559999999,
+  "current_shared_article_cap_cny": 0.35,
+  "current_shared_daily_cap_cny": 10,
+  "current_daily_used_cny": 0,
+  "last_observed_balance_cny": 15.08,
+  "balance_observed_at": 1792664186.161203,
+  "balance_current_verified": false,
+  "balance_note": "15.08元为10月22日最终查询记录，隔离api/balance.json为更早15.21元缓存；本轮禁止查询余额API，不能称为当前余额。",
+  "fits_last_observed_balance_for_both_envelopes": false,
+  "hard_max_new_spend_with_current_settings_cny": 0,
+  "new_api_calls": 0,
+  "budget_or_history_changed": false,
+  "execution_decision": "STOP: two candidate blockers, current shared article cap exhausted, old content revision limits exhausted; preparation only",
+  "conditional_envelope_limits": {
+    "max_content_repairs": 2,
+    "max_section_attempts": 3,
+    "max_structure_attempts": 2,
+    "max_arbitration_findings_per_review": 30,
+    "max_arbitration_batch_size": 3,
+    "fact_logic_arbitration_technical_retries": 0,
+    "on_exceeded_input_byte_ceiling": "stop before send and recompute; never truncate evidence",
+    "on_more_than_30_findings": "stop before arbitration and recompute; never omit issues"
+  },
+  "important": "分阶段输入字节上限是本方案的执行前校验条件，目前未安装执行器、未提高额度。未加这些条件时不能宣称仅凭当前历史体积得到无条件完整闭环上界。现有账本始终是每次请求的硬费用保护。"
+}

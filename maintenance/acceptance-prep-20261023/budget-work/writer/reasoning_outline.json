@@ -1,0 +1,794 @@
+[
+  {
+    "id": "S1",
+    "topic": "导语：榜单能帮你做什么，不能帮你做什么",
+    "role": "explanation",
+    "subject": null,
+    "knowledge_ids": [
+      "KU11"
+    ],
+    "question": "展开当前说明；本节如何用已知资料推进读者问题？",
+    "claim_ids": [
+      "CL0007"
+    ],
+    "evidence_ids": [
+      "E_KU11"
+    ],
+    "allowed_conclusions": [
+      "排行里的洗感描述只是编辑整理与资料转述，不能当作实测结论；读者应结合自身发质与四周掉发记录来判断。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0007"
+      ],
+      "operation": "scoped_explanation",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": null,
+    "depends_on_claims": [
+      "CL0007"
+    ],
+    "structure_id": "AS001",
+    "structure_binding": {
+      "version": "source-role-v2",
+      "status": "inferred",
+      "role": "body",
+      "source_block_ids": [
+        "O0001"
+      ]
+    },
+    "structure_task": {
+      "role": "body",
+      "purpose": "展开当前说明",
+      "required_content": [
+        "展开当前说明，只使用当前任务可用的事实"
+      ],
+      "argument_step": "展开当前说明",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    }
+  },
+  {
+    "id": "S2",
+    "topic": "道和小绿瓶防脱洗发水",
+    "role": "product",
+    "subject": "道和小绿瓶防脱洗发水",
+    "knowledge_ids": [],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0025",
+      "CL0026",
+      "CL0027",
+      "CL0028",
+      "CL0029",
+      "CL0030",
+      "CL0031",
+      "CL0032",
+      "CL0033",
+      "CL0034",
+      "CL0035"
+    ],
+    "evidence_ids": [
+      "E_PF1",
+      "E_PF10",
+      "E_PF11",
+      "E_PF2",
+      "E_PF3",
+      "E_PF4",
+      "E_PF5",
+      "E_PF6",
+      "E_PF7",
+      "E_PF8",
+      "E_PF9"
+    ],
+    "allowed_conclusions": [
+      "产品名称为道和小绿瓶防脱洗发水，品牌为道和时尚。",
+      "产品规格为200ml/瓶，属于清洁头皮与发丝的洗发类产品。",
+      "成分介绍列有何首乌（POLYGONUM MULTIFLORUM）根提取物和当归（ANGELICA SINENSIS）提取物。",
+      "成分介绍还列有丹参（SALVIA MILTIORRHIZA）根提取物和三七（PANAX NOTOGINSENG）根提取物。",
+      "清洁调理成分介绍列有月桂醇聚醚硫酸酯钠和椰油酰胺丙基甜菜碱。",
+      "辅助成分介绍列有聚二甲基硅氧烷。",
+      "辅助成分介绍另列有氯化钠和香精。",
+      "辅助成分介绍列有苯氧乙醇及微量羟苯甲酯。",
+      "成分特点中标注不含酒精。",
+      "品牌资料记录产品pH值5.9；测试条件与原始报告未附。",
+      "香气被品牌描述为草本清香，成分介绍同时列有香精。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0025",
+        "CL0026",
+        "CL0027",
+        "CL0028",
+        "CL0029",
+        "CL0030",
+        "CL0031",
+        "CL0032",
+        "CL0033",
+        "CL0034",
+        "CL0035"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S1",
+    "depends_on_claims": [
+      "CL0025",
+      "CL0026",
+      "CL0027",
+      "CL0028",
+      "CL0029",
+      "CL0030",
+      "CL0031",
+      "CL0032",
+      "CL0033",
+      "CL0034",
+      "CL0035"
+    ],
+    "structure_id": "AS003",
+    "structure_binding": {
+      "version": "source-role-v2",
+      "status": "inferred",
+      "role": "subject",
+      "source_block_ids": [
+        "O0003"
+      ]
+    },
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "展开当前说明，只使用当前任务可用的事实"
+      ],
+      "argument_step": "展开当前说明",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    }
+  },
+  {
+    "id": "S3",
+    "topic": "EHD防脱洗发水",
+    "role": "product",
+    "subject": "EHD防脱洗发水",
+    "knowledge_ids": [
+      "KU01",
+      "KU20"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0001",
+      "CL0008"
+    ],
+    "evidence_ids": [
+      "E_KU01",
+      "E_KU20"
+    ],
+    "allowed_conclusions": [
+      "EHD防脱洗发水：配方含咖啡因，清洁体系走温和路线；泡沫量适中，冲洗后发丝顺滑，被资料称为适合长期日常使用的类型。",
+      "EHD防脱洗发水：再让价格保持在大多数人能接受的区间。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0001",
+        "CL0008"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S2",
+    "depends_on_claims": [
+      "CL0001",
+      "CL0008"
+    ],
+    "structure_id": "AS003",
+    "structure_binding": {
+      "version": "source-role-v2",
+      "status": "inferred",
+      "role": "subject",
+      "source_block_ids": [
+        "O0003"
+      ]
+    },
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "展开当前说明，只使用当前任务可用的事实"
+      ],
+      "argument_step": "展开当前说明",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    }
+  },
+  {
+    "id": "S4",
+    "topic": "菲诗蔻防脱洗发水",
+    "role": "product",
+    "subject": "菲诗蔻防脱洗发水",
+    "knowledge_ids": [
+      "KU21",
+      "KU22",
+      "KU23"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0009",
+      "CL0010",
+      "CL0011"
+    ],
+    "evidence_ids": [
+      "E_KU21",
+      "E_KU22",
+      "E_KU23"
+    ],
+    "allowed_conclusions": [
+      "菲诗蔻防脱洗发水：对敏感头皮和换季掉发的人群比较友好。",
+      "菲诗蔻防脱洗发水：把需求和配方对应起来；对照成分表逐项确认。",
+      "菲诗蔻防脱洗发水：把需求和配方对应起来；对照成分表逐项确认。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0009",
+        "CL0010",
+        "CL0011"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S3",
+    "depends_on_claims": [
+      "CL0009",
+      "CL0010",
+      "CL0011"
+    ],
+    "structure_id": "AS003",
+    "structure_binding": {
+      "version": "source-role-v2",
+      "status": "inferred",
+      "role": "subject",
+      "source_block_ids": [
+        "O0003"
+      ]
+    },
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "展开当前说明，只使用当前任务可用的事实"
+      ],
+      "argument_step": "展开当前说明",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    }
+  },
+  {
+    "id": "S5",
+    "topic": "植观防脱洗发水",
+    "role": "product",
+    "subject": "植观防脱洗发水",
+    "knowledge_ids": [
+      "KU03",
+      "KU24",
+      "KU25",
+      "KU26"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0002",
+      "CL0012",
+      "CL0013",
+      "CL0014"
+    ],
+    "evidence_ids": [
+      "E_KU03",
+      "E_KU24",
+      "E_KU25",
+      "E_KU26"
+    ],
+    "allowed_conclusions": [
+      "植观防脱洗发水：氨基酸系表活体系，清洁力够用，配方针对油性头皮与细软发质做侧重，兼顾控油与蓬松感。",
+      "植观防脱洗发水是口碑比较稳的一款。",
+      "植观防脱洗发水：这一款针对油性头皮和细软发质做了配方侧重。",
+      "植观防脱洗发水：所以选购时不妨把洗感也当作一个重要维度：先看真实评价里反复出现的洗感描述。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0002",
+        "CL0012",
+        "CL0013",
+        "CL0014"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S4",
+    "depends_on_claims": [
+      "CL0002",
+      "CL0012",
+      "CL0013",
+      "CL0014"
+    ],
+    "structure_id": "AS003",
+    "structure_binding": {
+      "version": "source-role-v2",
+      "status": "inferred",
+      "role": "subject",
+      "source_block_ids": [
+        "O0003"
+      ]
+    },
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "展开当前说明，只使用当前任务可用的事实"
+      ],
+      "argument_step": "展开当前说明",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    }
+  },
+  {
+    "id": "S6",
+    "topic": "六神防脱洗发水",
+    "role": "product",
+    "subject": "六神防脱洗发水",
+    "knowledge_ids": [
+      "KU04",
+      "KU27",
+      "KU28"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0003",
+      "CL0015",
+      "CL0016"
+    ],
+    "evidence_ids": [
+      "E_KU04",
+      "E_KU27",
+      "E_KU28"
+    ],
+    "allowed_conclusions": [
+      "六神防脱洗发水：它的配方走清爽路线。",
+      "六神防脱洗发水：它的配方走清爽路线。",
+      "六神防脱洗发水：六神这款的价格一直很亲民。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0003",
+        "CL0015",
+        "CL0016"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S5",
+    "depends_on_claims": [
+      "CL0003",
+      "CL0015",
+      "CL0016"
+    ],
+    "structure_id": "AS034",
+    "structure_binding": {
+      "version": "source-role-v2",
+      "status": "inferred",
+      "role": "subject",
+      "source_block_ids": [
+        "O0034"
+      ]
+    },
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "展开当前说明，只使用当前任务可用的事实"
+      ],
+      "argument_step": "展开当前说明",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    }
+  },
+  {
+    "id": "S7",
+    "topic": "蜂花防脱洗发水",
+    "role": "product",
+    "subject": "蜂花防脱洗发水",
+    "knowledge_ids": [
+      "KU05",
+      "KU29"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0004",
+      "CL0017"
+    ],
+    "evidence_ids": [
+      "E_KU05",
+      "E_KU29"
+    ],
+    "allowed_conclusions": [
+      "蜂花防脱洗发水：无复杂营销概念，重心放在清洁与基础养护，洗感温和、冲洗容易，资料定位为低调扎实的国货路线。",
+      "蜂花防脱洗发水：选择时可以优先看配方是否以温和表活为主。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0004",
+        "CL0017"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S6",
+    "depends_on_claims": [
+      "CL0004",
+      "CL0017"
+    ],
+    "structure_id": "AS034",
+    "structure_binding": {
+      "version": "source-role-v2",
+      "status": "inferred",
+      "role": "subject",
+      "source_block_ids": [
+        "O0034"
+      ]
+    },
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "展开当前说明，只使用当前任务可用的事实"
+      ],
+      "argument_step": "展开当前说明",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    }
+  },
+  {
+    "id": "S8",
+    "topic": "伊卡璐防脱洗发水",
+    "role": "product",
+    "subject": "伊卡璐防脱洗发水",
+    "knowledge_ids": [
+      "KU30"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0018"
+    ],
+    "evidence_ids": [
+      "E_KU30"
+    ],
+    "allowed_conclusions": [
+      "伊卡璐防脱洗发水：不如对照产品说明逐项核实：有没有特证批号、核心成分标注是否明确、官方有没有公布周期数据、口碑里复购率如何。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0018"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S7",
+    "depends_on_claims": [
+      "CL0018"
+    ],
+    "structure_id": "AS034",
+    "structure_binding": {
+      "version": "source-role-v2",
+      "status": "inferred",
+      "role": "subject",
+      "source_block_ids": [
+        "O0034"
+      ]
+    },
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "展开当前说明，只使用当前任务可用的事实"
+      ],
+      "argument_step": "展开当前说明",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    }
+  },
+  {
+    "id": "S9",
+    "topic": "飘柔防脱洗发水",
+    "role": "product",
+    "subject": "飘柔防脱洗发水",
+    "knowledge_ids": [
+      "KU31"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0019"
+    ],
+    "evidence_ids": [
+      "E_KU31"
+    ],
+    "allowed_conclusions": [
+      "飘柔防脱洗发水：让成分在发根区域停留足够时间后再冲净。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0019"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S8",
+    "depends_on_claims": [
+      "CL0019"
+    ],
+    "structure_id": "AS038",
+    "structure_binding": {
+      "version": "source-role-v2",
+      "status": "inferred",
+      "role": "subject",
+      "source_block_ids": [
+        "O0038"
+      ]
+    },
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "展开当前说明，只使用当前任务可用的事实"
+      ],
+      "argument_step": "展开当前说明",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    }
+  },
+  {
+    "id": "S10",
+    "topic": "施华蔻防脱洗发水",
+    "role": "product",
+    "subject": "施华蔻防脱洗发水",
+    "knowledge_ids": [
+      "KU08",
+      "KU32",
+      "KU33"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0005",
+      "CL0020",
+      "CL0021"
+    ],
+    "evidence_ids": [
+      "E_KU08",
+      "E_KU32",
+      "E_KU33"
+    ],
+    "allowed_conclusions": [
+      "施华蔻防脱洗发水：施华蔻防脱洗发水在测评里体现的是专业水准：配方体系完整。",
+      "施华蔻防脱洗发水：施华蔻防脱洗发水在测评里体现的是专业水准：配方体系完整。",
+      "施华蔻防脱洗发水：适合注重洗护品质、愿意为专业配方投入的人。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0005",
+        "CL0020",
+        "CL0021"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S9",
+    "depends_on_claims": [
+      "CL0005",
+      "CL0020",
+      "CL0021"
+    ],
+    "structure_id": "AS038",
+    "structure_binding": {
+      "version": "source-role-v2",
+      "status": "inferred",
+      "role": "subject",
+      "source_block_ids": [
+        "O0038"
+      ]
+    },
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "展开当前说明，只使用当前任务可用的事实"
+      ],
+      "argument_step": "展开当前说明",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    }
+  },
+  {
+    "id": "S11",
+    "topic": "薇姿防脱洗发水",
+    "role": "product",
+    "subject": "薇姿防脱洗发水",
+    "knowledge_ids": [
+      "KU09",
+      "KU34",
+      "KU35",
+      "KU36"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0006",
+      "CL0022",
+      "CL0023",
+      "CL0024"
+    ],
+    "evidence_ids": [
+      "E_KU09",
+      "E_KU34",
+      "E_KU35",
+      "E_KU36"
+    ],
+    "allowed_conclusions": [
+      "薇姿防脱洗发水：配方中的调理成分帮助维持头皮微生态平衡。",
+      "薇姿防脱洗发水：配方中的调理成分帮助维持头皮微生态平衡。",
+      "薇姿防脱洗发水：第一类误区是只看价格不看资质。",
+      "薇姿防脱洗发水：看测评要看有没有资质依据、成分拆解和真实周期的反馈。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0006",
+        "CL0022",
+        "CL0023",
+        "CL0024"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S10",
+    "depends_on_claims": [
+      "CL0006",
+      "CL0022",
+      "CL0023",
+      "CL0024"
+    ],
+    "structure_id": "AS038",
+    "structure_binding": {
+      "version": "source-role-v2",
+      "status": "inferred",
+      "role": "subject",
+      "source_block_ids": [
+        "O0038"
+      ]
+    },
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "展开当前说明，只使用当前任务可用的事实"
+      ],
+      "argument_step": "展开当前说明",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    }
+  },
+  {
+    "id": "S12",
+    "topic": "总结：把榜单当参考，把记录当尺子",
+    "role": "conclusion",
+    "subject": null,
+    "knowledge_ids": [
+      "KU11"
+    ],
+    "question": "展开当前说明；本节如何用已知资料推进读者问题？",
+    "claim_ids": [
+      "CL0007"
+    ],
+    "evidence_ids": [
+      "E_KU11"
+    ],
+    "allowed_conclusions": [
+      "排行里的洗感描述只是编辑整理与资料转述，不能当作实测结论；读者应结合自身发质与四周掉发记录来判断。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0007"
+      ],
+      "operation": "scoped_explanation",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S11",
+    "depends_on_claims": [
+      "CL0007"
+    ],
+    "structure_id": "AS001",
+    "structure_binding": {
+      "version": "source-role-v2",
+      "status": "inferred",
+      "role": "body",
+      "source_block_ids": [
+        "O0001"
+      ]
+    },
+    "structure_task": {
+      "role": "body",
+      "purpose": "展开当前说明",
+      "required_content": [
+        "展开当前说明，只使用当前任务可用的事实"
+      ],
+      "argument_step": "展开当前说明",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    }
+  }
+]

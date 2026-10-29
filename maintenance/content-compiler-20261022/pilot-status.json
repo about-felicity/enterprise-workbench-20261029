@@ -1,0 +1,57 @@
+{
+  "at": 1792641438.5120127,
+  "articles": [
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "排行类",
+      "number": 1,
+      "ticket": "e7f2851273ef470498e5fac0",
+      "location": "days/2026-10-21/compiler-pilots/排行类/01/writer",
+      "preserved_article_budget_cny": 0.35,
+      "latest": {
+        "id": "60c0db89d0fd33d9ae717881",
+        "stage": "writer",
+        "state": "needs_attention",
+        "error": "API generation rejected: article_budget_exceeded"
+      },
+      "call": null,
+      "logic": null,
+      "approved": false
+    },
+    {
+      "job": "creation-1792575159-0a8f9221",
+      "category": "测评类",
+      "number": 2,
+      "ticket": "bfefdd8b4b151bfb5ff2428e",
+      "location": "days/2026-10-21/compiler-pilots/测评类/02/writer",
+      "preserved_article_budget_cny": 0.35,
+      "latest": {
+        "id": "3ee463850a806b427f75d00c",
+        "stage": "review",
+        "state": "needs_attention",
+        "error": "Semantic review requests revision: [\"C60将“满足日常清洁”表述与植萃组合、乳液质地描述“相符”，由成分存在与外观推出用途表现，属无依据推断，应仅作产品用途说明。\", \"C34以“200ml/瓶适合短期试用或旅行携带”对小容量作便携性推定，资料未给包装取用设计，属无依据的具体使用场景判断。\"]"
+      },
+      "call": "RESPONDED",
+      "logic": null,
+      "approved": false
+    }
+  ],
+  "costs": [
+    [
+      "2026-10-21",
+      2.8020491200000004,
+      0
+    ],
+    [
+      "2026-10-22",
+      0.9096056000000002,
+      0
+    ]
+  ],
+  "unknown_count": 3,
+  "unknown_ids": [
+    "6d5c862ba8f2abdbfe249ce62ff3315eb8c9856d25e9fd78cff054cab9edade1",
+    "beb0fe71fe2ca8d2cfe72fa6f123190e74881ffbc961c2a897363259d88c4f11",
+    "bf5fc05faa9ccb415ae4ad245c4833b0f572cbcfc59571d5f8a6524b2a7e243c"
+  ]
+}

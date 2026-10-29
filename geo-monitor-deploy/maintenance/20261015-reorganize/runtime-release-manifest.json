@@ -1,0 +1,46 @@
+{
+  "purpose": "Current GEO control/capture source bundle, not an automatic installer",
+  "host_runtime_root": "/opt/monitor/geo-capture",
+  "files": [
+    {
+      "file": "runtime/capture_bridge.py",
+      "sha256": "57cd308d770a47c7cf1407c292de8b77ae389e9e3a6f9c73640d44f07e5c399e",
+      "production_path": "/opt/monitor/geo-capture/capture_bridge.py"
+    },
+    {
+      "file": "runtime/completion_guard.py",
+      "sha256": "c4220efa203daf84b9ebeb4d39617659f918ea3a463a54123ff8322be869e45e",
+      "production_path": "/opt/monitor/geo-capture/completion_guard.py"
+    },
+    {
+      "file": "runtime/control_panel.py",
+      "sha256": "1de956a52e3d2e247561de7c92ecebe6071dfc50e9f88f453f9a1ee0e918c5c8",
+      "production_path": "/opt/monitor/geo-capture/control_panel.py"
+    },
+    {
+      "file": "runtime/fleet_status.py",
+      "sha256": "6bde8d880a5e0a4b8b667980d0c18cfa249f791f8e1b25cecf647cbd928faa81",
+      "production_path": "/opt/monitor/geo-capture/fleet_status.py"
+    },
+    {
+      "file": "runtime/login_probe.py",
+      "sha256": "4c3d62f3ce0000710ea42957c8a16da69b53c2825f1c9b56692763b04300a346",
+      "production_path": "/opt/monitor/geo-capture/login_probe.py"
+    },
+    {
+      "file": "runtime/native_entry.py",
+      "sha256": "702dcee9d4f40a2825ce7e75a4639741dd181100315b406893c642f1f7f032f5",
+      "production_path": "/opt/monitor/geo-capture/native_entry.py"
+    },
+    {
+      "file": "runtime/native_soak.py",
+      "sha256": "0fd72e21ba4be791f07deb964c271936b2f2bff0c850ddd5736298edfedd69a4",
+      "production_path": "/opt/monitor/geo-capture/native_soak.py"
+    },
+    {
+      "file": "runtime/soak_monitor.py",
+      "sha256": "055597681112a17785e2f4c68a5114bf1bac1719aa2e64b4a9b829492bca6e5d",
+      "production_path": "/opt/monitor/geo-capture/soak_monitor.py"
+    }
+  ]
+}

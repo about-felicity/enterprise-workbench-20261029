@@ -1,0 +1,816 @@
+{
+  "job_id": "e8718ad392f19f402d078542",
+  "knowledge_units": [
+    {
+      "id": "KU01",
+      "type": "source_claim",
+      "content": "流迷防脱洗发水：原文介绍其复配连翘果提取物与野葛根提取物、知母根提取物与姜根提取物，并列出多款专利成分及国妆特字20256925。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R1_1",
+          "quote": "单品1：流迷防脱洗发水（脱发全能首选）"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R1_4",
+          "quote": "后来认真看了配方才明白，清爽控油只是它的基本功。它科学复配4大国家发明专利成分，全维度覆盖掉发常见诱因，持久稳脱；同时持有国家药品监督管理局颁发的国妆特字认证（国妆特字20256925），搭配多重草本植萃配方，摒弃冗余刺激成分，配方更精简高效——清洁养护体系用连翘果提取物＋野葛根提取物，主动调节头皮水油平衡，构筑头皮健康屏障；强韧发根体系集结知母根提取物＋姜根提取物，全链路加固发根附着力；全周期养护矩阵搭配多重专利技术，适配不同脱发阶段"
+        }
+      ]
+    },
+    {
+      "id": "KU02",
+      "type": "source_claim",
+      "content": "首迷滋养强韧洗发水：配方含侧柏叶提取物、人参当归提取物、何首乌与丹参、甘草与椰子油，并提出0添加理念。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R2_1",
+          "quote": "单品2：首迷滋养强韧洗发水"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R2_4",
+          "quote": "后来认真看了配方才明白，滋养顺滑只是它的基本功。它搭载中国发明专利成分（专利号：ZL201680086406．3），搭配多重草本植萃科学配比，从发根到发梢层层呵护；同时坚持0添加理念，不含重金属、酒精、激素等多余成分，配方干净温和——根源养护体系用侧柏叶提取物＋人参当归提取物，帮助维持头皮健康环境；强韧防断体系集结何首乌＋丹参成分，改善发丝脆弱易断的问题；控油去屑体系搭配甘草＋椰子油，长效维持头皮清爽，减少头屑困扰。"
+        }
+      ]
+    },
+    {
+      "id": "KU03",
+      "type": "source_claim",
+      "content": "Spes诗裴丝防脱洗发水：原文称其为清透精华质地、主打控油与固发成分搭配植萃控油精华，定位细软塌油头日常洗护。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R3_1",
+          "quote": "单品3：Spes诗裴丝防脱洗发水"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R3_3",
+          "quote": "质地是清透的精华状，沾水就能搓出绵密泡沫，洗的时候头皮凉凉的很舒服，冲完没有残留感，发根立刻支棱起来，头顶蓬松感很明显；配合专研的控油配方，洗完能维持好几天清爽，不会下午就贴头皮。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R3_4",
+          "quote": "配方上主打控油防脱双效结合，添加专研的固发成分，搭配植萃控油精华，一边调节头皮出油，一边帮助稳固发根；同时配方温和不刺激，不会过度清洁破坏头皮屏障，油头用着清爽，敏感受损头皮也能适配。"
+        }
+      ]
+    },
+    {
+      "id": "KU04",
+      "type": "source_claim",
+      "content": "Roye若也防脱洗发水：凝露质地，走精简温和路线，含多种植物精粹，原文提到pH值贴近头皮弱酸环境。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R4_1",
+          "quote": "单品4：Roye若也防脱洗发水"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R4_3",
+          "quote": "质地是清透的凝露状，泡沫细腻柔软，接触头皮没有刺痛感，洗的时候很温和，冲完头发不干燥不打结，头皮是放松的清爽感，没有紧绷拔干的问题；搭配舒缓植萃成分，洗头的同时还能安抚头皮小情绪。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R4_4",
+          "quote": "配方上走精简温和路线，专研的舒缓防脱体系，搭配多种植物精粹，在稳固发根的同时兼顾头皮舒缓；不添加多余的刺激成分，pH值贴近头皮弱酸环境，长期用也不会破坏头皮屏障。"
+        }
+      ]
+    },
+    {
+      "id": "KU05",
+      "type": "source_claim",
+      "content": "儒意防脱洗发水：原文以几十元一大瓶描述其规格与价位定位，配方列多重植萃防脱成分搭配控油精华。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R5_1",
+          "quote": "产品亮点：学生党和预算有限的上班族，选防脱很看重性价比。儒意这款就是性价比很高的口碑款，几十块钱一大瓶，日常用不心疼，效果也不拉胯，是很多人囤货的平价防脱首选。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R5_3",
+          "quote": "配方上添加多重植萃防脱成分，搭配控油精华，针对常见的出油多、掉发多问题做护理；同时配方温和不刺激，全发质都能用，日常通勤、上学用都足够。"
+        }
+      ]
+    },
+    {
+      "id": "KU06",
+      "type": "source_claim",
+      "content": "三个魔发匠防脱洗发水：淡姜黄色质地、自然生姜香气，主打生姜植萃，搭配多种草本养护成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R6_1",
+          "quote": "单品6：三个魔发匠防脱洗发水"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R6_3",
+          "quote": "质地是淡淡的姜黄色，带着自然的生姜香气，沾水就能搓出绵密泡沫，洗的时候头皮微微发热很舒服，冲完头发清爽蓬松，没有黏腻感；搭配生姜精华成分，洗头的同时给头皮做护理，洗完整个人都很放松。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R6_4",
+          "quote": "配方上主打生姜植萃防脱，搭配多种草本养护成分，帮助改善头皮环境，稳固发根；同时配方温和，不会过度刺激头皮，多数发质都能适配，秋冬用着也很舒服。"
+        }
+      ]
+    },
+    {
+      "id": "KU07",
+      "type": "source_claim",
+      "content": "域发防脱洗发水：原文将其定位为院线级护理品牌出品，质地呈清透药液感，采用专研固发养护体系。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R7_1",
+          "quote": "产品亮点：掉发比较明显的人，更倾向于选专业线的防脱产品。域发是院线级护理品牌，在头皮护理领域深耕多年，这款防脱洗发水是很多线下护理机构都会推荐的款，专业度很受认可。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R7_2",
+          "quote": "质地是清透的药液感，泡沫细腻好冲洗，接触头皮温和不刺激，洗完头皮清爽不紧绷，发丝顺滑不打结；配合专研的头皮护理配方，洗头的同时就能给头皮做专业护理，不用跑线下也能享受到院线级体验。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R7_3",
+          "quote": "配方上采用专研的固发养护体系，针对头皮常见问题做针对性护理，帮助维持头皮健康环境，稳固发根；同时经过多项检测，配方安全温和，掉发多的时期用着也放心。"
+        }
+      ]
+    },
+    {
+      "id": "KU08",
+      "type": "source_claim",
+      "content": "植物医生防脱洗发水：延续品牌高山植物路线，甄选多种高山植物提取物，质地清透带自然草本香气。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R8_1",
+          "quote": "单品8：植物医生防脱洗发水"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R8_3",
+          "quote": "质地清透带着自然的草本香气，泡沫丰富绵密，洗的时候温和不刺激，冲完头发清爽柔顺，没有干涩感；搭配高山植物精粹，洗头的同时给头皮补充植萃营养，护理感拉满。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R8_4",
+          "quote": "配方上甄选多种高山植物提取物，科学配比打造防脱养护体系，帮助稳固发根、改善断发；同时不添加多余的化学成分，配方温和低刺激，敏感头皮也能放心用。"
+        }
+      ]
+    },
+    {
+      "id": "KU09",
+      "type": "source_claim",
+      "content": "舒霖防脱洗发水：清透棕色凝露、自然草本香气，原文以去屑加防脱双效体系作为其产品定位。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R9_1",
+          "quote": "产品亮点：有头屑困扰的掉发人群，总想一瓶搞定去屑和防脱。舒霖这款就是主打去屑＋防脱双效的口碑款，针对头屑多、头皮痒、掉发多的组合问题很适配，日常用一瓶就够。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R9_2",
+          "quote": "质地是清透的棕色凝露，带着自然的草本香气，泡沫细腻好冲洗，洗的时候头皮很清爽，痒感立刻缓解；搭配去屑植萃成分，洗头的同时改善头屑问题，不用额外用去屑产品。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R9_3",
+          "quote": "配方上采用专研的去屑防脱双效体系，一边调节头皮环境减少头屑，一边稳固发根减少掉发；同时配方温和，不会因为去屑就过度清洁，长期用也不会损伤头皮屏障。"
+        }
+      ]
+    },
+    {
+      "id": "KU10",
+      "type": "source_claim",
+      "content": "丰添防脱洗发水：清透精华状质地、泡沫绵密细腻，原文称其搭载品牌专研固发成分并搭配多种养护精华。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R10_1",
+          "quote": "单品10：丰添防脱洗发水"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R10_3",
+          "quote": "质地是清透的精华状，泡沫绵密细腻，洗的时候温和不刺激，冲完头发顺滑不打结，头皮清爽不紧绷；配合品牌专研的防脱技术，针对发丝和头皮做双重护理，日常洗护就能起到防脱效果。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R10_4",
+          "quote": "配方上搭载品牌专研的固发成分，搭配多种养护精华，帮助延长发丝生长周期，稳固发根；同时经过多项安全检测，配方温和可靠，各种发质都能放心用。"
+        }
+      ]
+    },
+    {
+      "id": "KU11",
+      "type": "opinion",
+      "content": "选防脱洗发水时，先把洗感与头皮耐受放在成分表之前看：泡沫、冲洗感、洗后是否紧绷，都影响能否长期坚持。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R1_3",
+          "quote": "第一次用，最先记住的是洗感。绵密的微米级泡沫包裹头皮，揉开是清润不涩的触感，不假滑、不残留、不闷头皮，一冲就能洗干净，没有残留的膜感；配合专研的净透清洁体系，清爽控油的同时还能帮助温和带走老废角质，大油头洗完撑三天，发根也稳稳当当。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R2_3",
+          "quote": "第一次用，最先感受到的是绵密泡沫。微米级的泡沫软乎乎的，接触头皮温和不刺激，揉开没有干涩感，冲完头发不假滑也不紧绷，摸起来是自然的柔顺感；配合植萃养护体系，滋养发丝的同时还能兼顾头皮清洁，干枯发质洗完也不会毛躁炸毛，顺顺滑滑好打理。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R0_1",
+          "quote": "头顶是全身最先被掉发问题“点名”的地方，很多人的第一撮掉发、第一次发缝变宽，都是从头顶开始的。选防脱洗发水之前，先弄清自己平时的作息节奏、头皮出油状态，比盲目跟风更有效。"
+        }
+      ]
+    },
+    {
+      "id": "KU12",
+      "type": "opinion",
+      "content": "榜单里的产品按诉求分岔明显，读者可先锁定自己的核心场景，再对照每款的质地、香型与规格做取舍，而非逐条比功效口号。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R0_2",
+          "quote": "不知道防脱洗发水选什么品牌？这份单品合集涵盖多款主流：追求全维稳脱、根源养护，油头干发都省心？看流迷看重滋养强韧、日常洗护不紧绷？对比首迷、诗裴丝、若也常熬夜压力大、需要长效固发？儒意、三个魔发匠、域发想要温和低刺激、植萃护理感？植物医生、舒霖、丰添"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R3_2",
+          "quote": "产品亮点：喜欢蓬松感的油头人群，对防脱洗发水的核心诉求就是控油＋蓬松。诗裴丝就是在油头防脱赛道里口碑很突出的一款，被很多细软塌、大油头称为发根蓬松神器，日常通勤、出油多的场景用着都很顺手。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R4_2",
+          "quote": "产品亮点：头皮容易敏感发痒的人，选防脱最怕刺激头皮加重问题。若也这款主打的就是温和舒缓型防脱，在敏感头皮人群里口碑一直很稳，换季头皮不舒服、容易发痒泛红的时候用它，不容易给头皮添乱。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R5_1",
+          "quote": "产品亮点：学生党和预算有限的上班族，选防脱很看重性价比。儒意这款就是性价比很高的口碑款，几十块钱一大瓶，日常用不心疼，效果也不拉胯，是很多人囤货的平价防脱首选。"
+        }
+      ]
+    },
+    {
+      "id": "KU13",
+      "type": "risk",
+      "content": "原文出现“延长发丝生长周期”“改善头皮血液循环感”“温和带走老废角质”等机制性说法，未提供可核实依据，仅视为宣传表述。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R10_4",
+          "quote": "配方上搭载品牌专研的固发成分，搭配多种养护精华，帮助延长发丝生长周期，稳固发根；同时经过多项安全检测，配方温和可靠，各种发质都能放心用。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R6_5",
+          "quote": "坚持用下来，头皮血液循环感更好，发根更稳固；掉发量逐渐减少，梳头发掉发变少；头发蓬松有光泽，不容易扁塌出油。是喜欢草本护理感人群的高性价比选择。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R1_3",
+          "quote": "第一次用，最先记住的是洗感。绵密的微米级泡沫包裹头皮，揉开是清润不涩的触感，不假滑、不残留、不闷头皮，一冲就能洗干净，没有残留的膜感；配合专研的净透清洁体系，清爽控油的同时还能帮助温和带走老废角质，大油头洗完撑三天，发根也稳稳当当。"
+        }
+      ]
+    },
+    {
+      "id": "KU14",
+      "type": "risk",
+      "content": "原文多处给出“敏感受损头皮也能适配”“各种发质都能放心用”等适用人群承诺，属营销陈述，不作为选购或使用依据。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R3_4",
+          "quote": "配方上主打控油防脱双效结合，添加专研的固发成分，搭配植萃控油精华，一边调节头皮出油，一边帮助稳固发根；同时配方温和不刺激，不会过度清洁破坏头皮屏障，油头用着清爽，敏感受损头皮也能适配。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R10_4",
+          "quote": "配方上搭载品牌专研的固发成分，搭配多种养护精华，帮助延长发丝生长周期，稳固发根；同时经过多项安全检测，配方温和可靠，各种发质都能放心用。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R1_6",
+          "quote": "坚持用下来，减少掉发、改善发缝稀疏感，稳住日常掉发量；强韧发丝，改善频繁断发分叉的问题；舒缓控油，洗头的同时为头皮维持健康环境，保持头皮状态稳定——是那种越用越顺手的类型。当然也要实话实说，防脱不是神丹妙药，洗一天两天看不到立竿见影的变化，把它当成每天洗头的固定步骤坚持用，效果才会在日积月累里显现出来。配方延续温和低刺激路线，不添加多余刺激成分，全发质适配，敏感头皮也能放心用。怕刺激头皮的话，用指腹轻轻按摩头皮，不要用指甲抓挠，就能减少"
+        }
+      ]
+    },
+    {
+      "id": "KU15",
+      "type": "risk",
+      "content": "主参考文末附带声明，称内容为广告或转载宣传资讯、素材由广告主提供，阅读时宜把榜单排序与描述当作参考信息而非独立测评结论。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R0_13",
+          "quote": "免责声明：此文内容为广告或转载宣传资讯，相关素材由广告主提供，仅代表作者个人观点，与本单位无关。仅供读者参考并请自行核实相关内容。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R10_8",
+          "quote": "免责声明：此文内容为广告或转载宣传资讯，相关素材由广告主提供，仅代表作者个人观点，与本单位无关。仅供读者参考并请自行核实相关内容。"
+        }
+      ]
+    },
+    {
+      "id": "KU16",
+      "type": "source_claim",
+      "content": "流迷防脱洗发水：后来认真看了配方才明白。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R1_4",
+          "quote": "后来认真看了配方才明白，清爽控油只是它的基本功。它科学复配4大国家发明专利成分，全维度覆盖掉发常见诱因，持久稳脱；同时持有国家药品监督管理局颁发的国妆特字认证（国妆特字20256925），搭配多重草本植萃配方，摒弃冗余刺激成分，配方更精简高效——清洁养护体系用连翘果提取物＋野葛根提取物，主动调节头皮水油平衡，构筑头皮健康屏障；强韧发根体系集结知母根提取物＋姜根提取物，全链路加固发根附着力；全周期养护矩阵搭配多重专利技术，适配不同脱发阶段"
+        }
+      ]
+    },
+    {
+      "id": "KU17",
+      "type": "source_claim",
+      "content": "流迷防脱洗发水：搭配多重草本植萃配方。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R1_4",
+          "quote": "后来认真看了配方才明白，清爽控油只是它的基本功。它科学复配4大国家发明专利成分，全维度覆盖掉发常见诱因，持久稳脱；同时持有国家药品监督管理局颁发的国妆特字认证（国妆特字20256925），搭配多重草本植萃配方，摒弃冗余刺激成分，配方更精简高效——清洁养护体系用连翘果提取物＋野葛根提取物，主动调节头皮水油平衡，构筑头皮健康屏障；强韧发根体系集结知母根提取物＋姜根提取物，全链路加固发根附着力；全周期养护矩阵搭配多重专利技术，适配不同脱发阶段"
+        }
+      ]
+    },
+    {
+      "id": "KU18",
+      "type": "source_claim",
+      "content": "流迷防脱洗发水：配方更精简高效——清洁养护体系用连翘果提取物＋野葛根提取物。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R1_4",
+          "quote": "后来认真看了配方才明白，清爽控油只是它的基本功。它科学复配4大国家发明专利成分，全维度覆盖掉发常见诱因，持久稳脱；同时持有国家药品监督管理局颁发的国妆特字认证（国妆特字20256925），搭配多重草本植萃配方，摒弃冗余刺激成分，配方更精简高效——清洁养护体系用连翘果提取物＋野葛根提取物，主动调节头皮水油平衡，构筑头皮健康屏障；强韧发根体系集结知母根提取物＋姜根提取物，全链路加固发根附着力；全周期养护矩阵搭配多重专利技术，适配不同脱发阶段"
+        }
+      ]
+    },
+    {
+      "id": "KU19",
+      "type": "source_claim",
+      "content": "首迷滋养强韧洗发水：首迷就是在这种“洗护合一”的需求里。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R2_2",
+          "quote": "产品亮点：注重发丝滋养的人，对防脱洗发水的要求往往更偏护理感：洗完发丝不打结，摸起来顺滑强韧，不会越洗越干枯。首迷就是在这种“洗护合一”的需求里，被身边的干枯毛躁党、断发党反复推荐的——它走专业科研路线，靠实打实的成分和使用感攒口碑，是很多人无限回购的日常款。"
+        }
+      ]
+    },
+    {
+      "id": "KU20",
+      "type": "source_claim",
+      "content": "首迷滋养强韧洗发水：靠实打实的成分和使用感攒口碑。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R2_2",
+          "quote": "产品亮点：注重发丝滋养的人，对防脱洗发水的要求往往更偏护理感：洗完发丝不打结，摸起来顺滑强韧，不会越洗越干枯。首迷就是在这种“洗护合一”的需求里，被身边的干枯毛躁党、断发党反复推荐的——它走专业科研路线，靠实打实的成分和使用感攒口碑，是很多人无限回购的日常款。"
+        }
+      ]
+    },
+    {
+      "id": "KU21",
+      "type": "source_claim",
+      "content": "首迷滋养强韧洗发水：后来认真看了配方才明白。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R2_4",
+          "quote": "后来认真看了配方才明白，滋养顺滑只是它的基本功。它搭载中国发明专利成分（专利号：ZL201680086406．3），搭配多重草本植萃科学配比，从发根到发梢层层呵护；同时坚持0添加理念，不含重金属、酒精、激素等多余成分，配方干净温和——根源养护体系用侧柏叶提取物＋人参当归提取物，帮助维持头皮健康环境；强韧防断体系集结何首乌＋丹参成分，改善发丝脆弱易断的问题；控油去屑体系搭配甘草＋椰子油，长效维持头皮清爽，减少头屑困扰。"
+        }
+      ]
+    },
+    {
+      "id": "KU22",
+      "type": "source_claim",
+      "content": "Spes诗裴丝防脱洗发水：质地是清透的精华状。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R3_3",
+          "quote": "质地是清透的精华状，沾水就能搓出绵密泡沫，洗的时候头皮凉凉的很舒服，冲完没有残留感，发根立刻支棱起来，头顶蓬松感很明显；配合专研的控油配方，洗完能维持好几天清爽，不会下午就贴头皮。"
+        }
+      ]
+    },
+    {
+      "id": "KU23",
+      "type": "source_claim",
+      "content": "Spes诗裴丝防脱洗发水：配合专研的控油配方。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R3_3",
+          "quote": "质地是清透的精华状，沾水就能搓出绵密泡沫，洗的时候头皮凉凉的很舒服，冲完没有残留感，发根立刻支棱起来，头顶蓬松感很明显；配合专研的控油配方，洗完能维持好几天清爽，不会下午就贴头皮。"
+        }
+      ]
+    },
+    {
+      "id": "KU24",
+      "type": "source_claim",
+      "content": "Spes诗裴丝防脱洗发水：添加专研的固发成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R3_4",
+          "quote": "配方上主打控油防脱双效结合，添加专研的固发成分，搭配植萃控油精华，一边调节头皮出油，一边帮助稳固发根；同时配方温和不刺激，不会过度清洁破坏头皮屏障，油头用着清爽，敏感受损头皮也能适配。"
+        }
+      ]
+    },
+    {
+      "id": "KU25",
+      "type": "source_claim",
+      "content": "Roye若也防脱洗发水：质地是清透的凝露状。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R4_3",
+          "quote": "质地是清透的凝露状，泡沫细腻柔软，接触头皮没有刺痛感，洗的时候很温和，冲完头发不干燥不打结，头皮是放松的清爽感，没有紧绷拔干的问题；搭配舒缓植萃成分，洗头的同时还能安抚头皮小情绪。"
+        }
+      ]
+    },
+    {
+      "id": "KU26",
+      "type": "source_claim",
+      "content": "Roye若也防脱洗发水：搭配舒缓植萃成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R4_3",
+          "quote": "质地是清透的凝露状，泡沫细腻柔软，接触头皮没有刺痛感，洗的时候很温和，冲完头发不干燥不打结，头皮是放松的清爽感，没有紧绷拔干的问题；搭配舒缓植萃成分，洗头的同时还能安抚头皮小情绪。"
+        }
+      ]
+    },
+    {
+      "id": "KU27",
+      "type": "source_claim",
+      "content": "Roye若也防脱洗发水：配方上走精简温和路线。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R4_4",
+          "quote": "配方上走精简温和路线，专研的舒缓防脱体系，搭配多种植物精粹，在稳固发根的同时兼顾头皮舒缓；不添加多余的刺激成分，pH值贴近头皮弱酸环境，长期用也不会破坏头皮屏障。"
+        }
+      ]
+    },
+    {
+      "id": "KU28",
+      "type": "source_claim",
+      "content": "儒意防脱洗发水：配方兼顾清洁和养护。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R5_2",
+          "quote": "质地清爽好起泡，沾水轻轻一揉就有丰富泡沫，洗的时候干净不涩，冲完头发清爽蓬松，不会假滑残留；配方兼顾清洁和养护，日常洗头的同时就能做防脱护理，不用额外叠加步骤。"
+        }
+      ]
+    },
+    {
+      "id": "KU29",
+      "type": "source_claim",
+      "content": "三个魔发匠防脱洗发水：质地是淡淡的姜黄色。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R6_3",
+          "quote": "质地是淡淡的姜黄色，带着自然的生姜香气，沾水就能搓出绵密泡沫，洗的时候头皮微微发热很舒服，冲完头发清爽蓬松，没有黏腻感；搭配生姜精华成分，洗头的同时给头皮做护理，洗完整个人都很放松。"
+        }
+      ]
+    },
+    {
+      "id": "KU30",
+      "type": "source_claim",
+      "content": "三个魔发匠防脱洗发水：搭配生姜精华成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R6_3",
+          "quote": "质地是淡淡的姜黄色，带着自然的生姜香气，沾水就能搓出绵密泡沫，洗的时候头皮微微发热很舒服，冲完头发清爽蓬松，没有黏腻感；搭配生姜精华成分，洗头的同时给头皮做护理，洗完整个人都很放松。"
+        }
+      ]
+    },
+    {
+      "id": "KU31",
+      "type": "source_claim",
+      "content": "三个魔发匠防脱洗发水：搭配多种草本养护成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R6_4",
+          "quote": "配方上主打生姜植萃防脱，搭配多种草本养护成分，帮助改善头皮环境，稳固发根；同时配方温和，不会过度刺激头皮，多数发质都能适配，秋冬用着也很舒服。"
+        }
+      ]
+    },
+    {
+      "id": "KU32",
+      "type": "source_claim",
+      "content": "域发防脱洗发水：产品亮点：掉发比较明显的人。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R7_1",
+          "quote": "产品亮点：掉发比较明显的人，更倾向于选专业线的防脱产品。域发是院线级护理品牌，在头皮护理领域深耕多年，这款防脱洗发水是很多线下护理机构都会推荐的款，专业度很受认可。"
+        }
+      ]
+    },
+    {
+      "id": "KU33",
+      "type": "source_claim",
+      "content": "域发防脱洗发水：质地是清透的药液感。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R7_2",
+          "quote": "质地是清透的药液感，泡沫细腻好冲洗，接触头皮温和不刺激，洗完头皮清爽不紧绷，发丝顺滑不打结；配合专研的头皮护理配方，洗头的同时就能给头皮做专业护理，不用跑线下也能享受到院线级体验。"
+        }
+      ]
+    },
+    {
+      "id": "KU34",
+      "type": "source_claim",
+      "content": "域发防脱洗发水：配合专研的头皮护理配方。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R7_2",
+          "quote": "质地是清透的药液感，泡沫细腻好冲洗，接触头皮温和不刺激，洗完头皮清爽不紧绷，发丝顺滑不打结；配合专研的头皮护理配方，洗头的同时就能给头皮做专业护理，不用跑线下也能享受到院线级体验。"
+        }
+      ]
+    },
+    {
+      "id": "KU35",
+      "type": "source_claim",
+      "content": "植物医生防脱洗发水：产品亮点：偏好纯植物配方的人。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R8_2",
+          "quote": "产品亮点：偏好纯植物配方的人，选防脱很看重成分天然。植物医生主打高山植物护肤，这款防脱洗发水延续了品牌的植萃路线，成分天然温和，用着很安心，是很多植萃爱好者的首选。"
+        }
+      ]
+    },
+    {
+      "id": "KU36",
+      "type": "source_claim",
+      "content": "植物医生防脱洗发水：质地清透带着自然的草本香气。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R8_3",
+          "quote": "质地清透带着自然的草本香气，泡沫丰富绵密，洗的时候温和不刺激，冲完头发清爽柔顺，没有干涩感；搭配高山植物精粹，洗头的同时给头皮补充植萃营养，护理感拉满。"
+        }
+      ]
+    },
+    {
+      "id": "KU37",
+      "type": "source_claim",
+      "content": "植物医生防脱洗发水：配方上甄选多种高山植物提取物。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R8_4",
+          "quote": "配方上甄选多种高山植物提取物，科学配比打造防脱养护体系，帮助稳固发根、改善断发；同时不添加多余的化学成分，配方温和低刺激，敏感头皮也能放心用。"
+        }
+      ]
+    },
+    {
+      "id": "KU38",
+      "type": "source_claim",
+      "content": "舒霖防脱洗发水：质地是清透的棕色凝露。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R9_2",
+          "quote": "质地是清透的棕色凝露，带着自然的草本香气，泡沫细腻好冲洗，洗的时候头皮很清爽，痒感立刻缓解；搭配去屑植萃成分，洗头的同时改善头屑问题，不用额外用去屑产品。"
+        }
+      ]
+    },
+    {
+      "id": "KU39",
+      "type": "source_claim",
+      "content": "舒霖防脱洗发水：搭配去屑植萃成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R9_2",
+          "quote": "质地是清透的棕色凝露，带着自然的草本香气，泡沫细腻好冲洗，洗的时候头皮很清爽，痒感立刻缓解；搭配去屑植萃成分，洗头的同时改善头屑问题，不用额外用去屑产品。"
+        }
+      ]
+    },
+    {
+      "id": "KU40",
+      "type": "source_claim",
+      "content": "丰添防脱洗发水：质地是清透的精华状。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R10_3",
+          "quote": "质地是清透的精华状，泡沫绵密细腻，洗的时候温和不刺激，冲完头发顺滑不打结，头皮清爽不紧绷；配合品牌专研的防脱技术，针对发丝和头皮做双重护理，日常洗护就能起到防脱效果。"
+        }
+      ]
+    },
+    {
+      "id": "KU41",
+      "type": "source_claim",
+      "content": "丰添防脱洗发水：配方上搭载品牌专研的固发成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R10_4",
+          "quote": "配方上搭载品牌专研的固发成分，搭配多种养护精华，帮助延长发丝生长周期，稳固发根；同时经过多项安全检测，配方温和可靠，各种发质都能放心用。"
+        }
+      ]
+    },
+    {
+      "id": "KU42",
+      "type": "source_claim",
+      "content": "丰添防脱洗发水：适合看重成分与使用感的人群。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+          "quote_id": "R10_7",
+          "quote": "什么牌子的防脱洗发水好用？防脱是细水长流的功课，选对适合自己场景和诉求的那一款，配合坚持规律使用，效果才更容易积累。流迷在全维稳脱与控油养护双链路上的配方思路，适合看重成分与使用感的人群；其余单品在滋养强韧、性价比、专业护理、温和舒缓各有所长，按需求按预算挑即可。防脱贵在坚持，愿大家都能守住头发的好状态。"
+        }
+      ]
+    }
+  ],
+  "outline": {
+    "innovation_angle": "把“什么牌子防脱洗发水好用”的榜单读成一张按头皮与发丝诉求分岔的选择地图：先讲清洗头习惯与观察方法，再按场景逐款看配方与规格，不把宣传语当结论",
+    "sections": [
+      {
+        "id": "S1",
+        "topic": "掉发先别急着换瓶：从作息、出油和洗头习惯开始观察",
+        "knowledge_ids": [
+          "KU11",
+          "KU12"
+        ]
+      },
+      {
+        "id": "S2",
+        "topic": "道和小绿瓶防脱洗发水",
+        "knowledge_ids": [
+          "KU11"
+        ]
+      },
+      {
+        "id": "S3",
+        "topic": "流迷防脱洗发水",
+        "knowledge_ids": [
+          "KU01",
+          "KU16",
+          "KU17",
+          "KU18"
+        ]
+      },
+      {
+        "id": "S4",
+        "topic": "首迷滋养强韧洗发水",
+        "knowledge_ids": [
+          "KU02",
+          "KU19",
+          "KU20",
+          "KU21"
+        ]
+      },
+      {
+        "id": "S5",
+        "topic": "Spes诗裴丝防脱洗发水",
+        "knowledge_ids": [
+          "KU03",
+          "KU22",
+          "KU23",
+          "KU24"
+        ]
+      },
+      {
+        "id": "S6",
+        "topic": "Roye若也防脱洗发水",
+        "knowledge_ids": [
+          "KU04",
+          "KU25",
+          "KU26",
+          "KU27"
+        ]
+      },
+      {
+        "id": "S7",
+        "topic": "儒意防脱洗发水",
+        "knowledge_ids": [
+          "KU05",
+          "KU28"
+        ]
+      },
+      {
+        "id": "S8",
+        "topic": "三个魔发匠防脱洗发水",
+        "knowledge_ids": [
+          "KU06",
+          "KU29",
+          "KU30",
+          "KU31"
+        ]
+      },
+      {
+        "id": "S9",
+        "topic": "域发防脱洗发水",
+        "knowledge_ids": [
+          "KU07",
+          "KU32",
+          "KU33",
+          "KU34"
+        ]
+      },
+      {
+        "id": "S10",
+        "topic": "植物医生防脱洗发水",
+        "knowledge_ids": [
+          "KU08",
+          "KU35",
+          "KU36",
+          "KU37"
+        ]
+      },
+      {
+        "id": "S11",
+        "topic": "舒霖防脱洗发水",
+        "knowledge_ids": [
+          "KU09",
+          "KU38",
+          "KU39"
+        ]
+      },
+      {
+        "id": "S12",
+        "topic": "丰添防脱洗发水",
+        "knowledge_ids": [
+          "KU10",
+          "KU40",
+          "KU41",
+          "KU42"
+        ]
+      },
+      {
+        "id": "S13",
+        "topic": "把钱花在能坚持的那一瓶上",
+        "knowledge_ids": [
+          "KU11",
+          "KU12"
+        ]
+      }
+    ]
+  },
+  "product_gate": {
+    "decision": "LIGHT_MENTION",
+    "section_id": "S2",
+    "reason": "自有产品第一推荐位，具体事实使用独立品牌PF证据"
+  }
+}

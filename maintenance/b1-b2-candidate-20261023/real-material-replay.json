@@ -1,0 +1,696 @@
+{
+  "type": "zero_call_replay",
+  "samples": [
+    {
+      "sample": "review02",
+      "own_slot": "S2",
+      "source_section": "AS002",
+      "source_role": "subject",
+      "feasibility": "READY",
+      "roles": [
+        {
+          "id": "AS001",
+          "role": "opening",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0002"
+          ],
+          "subject_anchor": null,
+          "signals": [
+            "opening_purpose"
+          ]
+        },
+        {
+          "id": "AS002",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0003",
+            "O0004",
+            "O0005",
+            "O0006",
+            "O0007",
+            "O0008"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS003",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0009",
+            "O0010",
+            "O0011",
+            "O0012",
+            "O0013"
+          ],
+          "subject_anchor": "O0009",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS004",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0014",
+            "O0015",
+            "O0016",
+            "O0017",
+            "O0018"
+          ],
+          "subject_anchor": "O0014",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS005",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0019",
+            "O0020",
+            "O0021",
+            "O0022",
+            "O0023"
+          ],
+          "subject_anchor": "O0019",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS006",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0024",
+            "O0025",
+            "O0026",
+            "O0027",
+            "O0028"
+          ],
+          "subject_anchor": "O0024",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS007",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0029",
+            "O0030",
+            "O0031",
+            "O0032",
+            "O0033"
+          ],
+          "subject_anchor": "O0029",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS008",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0034",
+            "O0035",
+            "O0036",
+            "O0037",
+            "O0038"
+          ],
+          "subject_anchor": "O0034",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS009",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0039",
+            "O0040",
+            "O0041",
+            "O0042",
+            "O0043"
+          ],
+          "subject_anchor": "O0039",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS010",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0044",
+            "O0045",
+            "O0046",
+            "O0047",
+            "O0048"
+          ],
+          "subject_anchor": "O0044",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS011",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0049",
+            "O0050",
+            "O0051",
+            "O0052",
+            "O0053"
+          ],
+          "subject_anchor": "O0049",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS012",
+          "role": "summary",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0054",
+            "O0055"
+          ],
+          "subject_anchor": null,
+          "signals": [
+            "closing_purpose"
+          ]
+        }
+      ],
+      "paid_requests": 0
+    },
+    {
+      "sample": "ranking01",
+      "own_slot": "S2",
+      "source_section": "AS003",
+      "source_role": "subject",
+      "feasibility": "READY_WITH_LIMITS",
+      "roles": [
+        {
+          "id": "AS001",
+          "role": "body",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0001"
+          ],
+          "subject_anchor": null,
+          "signals": [
+            "abstract_source_move"
+          ]
+        },
+        {
+          "id": "AS002",
+          "role": "criteria",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0002"
+          ],
+          "subject_anchor": null,
+          "signals": [
+            "comparison_criteria"
+          ]
+        },
+        {
+          "id": "AS003",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0003"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS004",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0004"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS005",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0005"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS006",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0006"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS007",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0007"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS008",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0008"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS009",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0009"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS010",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0010"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS011",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0011"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS012",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0012"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS013",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0013"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS014",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0014"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS015",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0015"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS016",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0016"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS017",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0017"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS018",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0018"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS019",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0019"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS020",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0020"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS021",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0021"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS022",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0022"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS023",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0023"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS024",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0024"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS025",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0025"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS026",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0026"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS027",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0027"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS028",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0028"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS029",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0029"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS030",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0030"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS031",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0031"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS032",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0032"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS033",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0033"
+          ],
+          "subject_anchor": "O0003",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS034",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0034"
+          ],
+          "subject_anchor": "O0034",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS035",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0035"
+          ],
+          "subject_anchor": "O0034",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS036",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0036"
+          ],
+          "subject_anchor": "O0034",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS037",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0037"
+          ],
+          "subject_anchor": "O0034",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS038",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0038"
+          ],
+          "subject_anchor": "O0038",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        },
+        {
+          "id": "AS039",
+          "role": "criteria",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0039"
+          ],
+          "subject_anchor": null,
+          "signals": [
+            "comparison_criteria"
+          ]
+        },
+        {
+          "id": "AS040",
+          "role": "subject",
+          "status": "inferred",
+          "source_block_ids": [
+            "O0040"
+          ],
+          "subject_anchor": "O0038",
+          "signals": [
+            "source_item_heading_or_region"
+          ]
+        }
+      ],
+      "paid_requests": 0
+    }
+  ],
+  "old_cache": {
+    "old_cache_rejected": true,
+    "reason": "Stale review inputs: legacy review cache has no complete source fingerprint",
+    "new_requests": 0
+  }
+}

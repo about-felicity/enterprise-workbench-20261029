@@ -1,0 +1,19 @@
+{
+  "heartbeat_utc": "2026-10-16T00:04:36.641Z",
+  "scope": "Read-only monitoring access; server and collector health unverified during this round",
+  "target": "192.168.31.106",
+  "attempts": [
+    {"round": 1, "probe": "TCP connect TimeoutError", "validator": "TCP connect TimeoutError"},
+    {"round": 2, "probe": "TCP connect TimeoutError"},
+    {"round": 3, "probe": "SSHException: No existing session during key exchange"}
+  ],
+  "independent_tcp_22_reachable": true,
+  "last_successful_live_audit_epoch": 1792108786.5152247,
+  "test_id": "question-only-soak12h-rowidfix-1792072084",
+  "deadline_epoch": 1792115284.674704,
+  "remote_mutations": 0,
+  "manual_model_submissions": 0,
+  "restarts": 0,
+  "final_report_available": false,
+  "next_action": "Retry read-only access on next heartbeat; preserve original deadline and existing server supervisor/deadline timer; do not infer server crash or test success"
+}

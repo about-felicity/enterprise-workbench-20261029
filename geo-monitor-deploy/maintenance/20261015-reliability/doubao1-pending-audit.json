@@ -1,0 +1,317 @@
+{
+  "at": 1792109988.2037075,
+  "model": "doubao1",
+  "test_id": "question-only-soak12h-rowidfix-1792072084",
+  "task_id": "847f0122-32f5-54db-b479-0c6c9fcc42d2",
+  "ordinal": 761,
+  "question": "推荐一款沐浴精油",
+  "state": "needs_attention",
+  "error": "Original native request unresolved after 900s (waiting); automatic resend forbidden",
+  "prepared_at": 1792108823.7705364,
+  "elapsed": 1164.433171749115,
+  "events": [
+    {
+      "event": "enqueued",
+      "time": 1792059501.1170502,
+      "detail": "question-only-v1"
+    },
+    {
+      "event": "send_intent_committed",
+      "time": 1792108812.7798002,
+      "detail": ""
+    },
+    {
+      "event": "send_protocol_v2",
+      "time": 1792108812.7798107,
+      "detail": ""
+    },
+    {
+      "event": "send_click_intent_committed",
+      "time": 1792108823.770573,
+      "detail": ""
+    },
+    {
+      "event": "send_tap_returned",
+      "time": 1792108827.8008375,
+      "detail": ""
+    },
+    {
+      "event": "needs_attention",
+      "time": 1792109726.7703896,
+      "detail": "Original native request unresolved after 900s (waiting); automatic resend forbidden"
+    }
+  ],
+  "model_actions": 0,
+  "read_status": {
+    "status": "waiting",
+    "native_request_confirmed": true,
+    "request_id": "e127c85c-7a56-477c-b322-8186e8ba0633",
+    "answer_id": null
+  },
+  "native_messages": [
+    {
+      "rowid": 21214,
+      "local_message_id": "e127c85c-7a56-477c-b322-8186e8ba0633",
+      "local_index": 1000,
+      "message_id": "58665715323582210",
+      "server_index": 1,
+      "user_type": 1,
+      "blocks": [
+        {
+          "type": null,
+          "finished": false,
+          "content_keys": [
+            "pc_event_block",
+            "text_block"
+          ]
+        }
+      ],
+      "body_characters": 8,
+      "body_sha256": "bbe95af200cc7a600934d57c9e147b5b1ff3d30435d66da315c607c32c72f33f",
+      "native_status_fields": {
+        "status": 11,
+        "message_status": 0,
+        "create_time": 1792108827,
+        "image_upload_status": 0,
+        "regen_status": -1,
+        "time_group_id": 0
+      }
+    },
+    {
+      "rowid": 21220,
+      "local_message_id": "2ebfda49-8c8a-451b-aa8d-8ed55411660e",
+      "local_index": 2000,
+      "message_id": "58665715323591682",
+      "server_index": 2,
+      "user_type": 2,
+      "blocks": [
+        {
+          "type": null,
+          "finished": true,
+          "content_keys": [
+            "pc_event_block",
+            "search_query_result_block"
+          ]
+        },
+        {
+          "type": null,
+          "finished": false,
+          "content_keys": [
+            "pc_event_block",
+            "text_block"
+          ]
+        }
+      ],
+      "body_characters": 106,
+      "body_sha256": "aea8cf0772d13fa0661762b89c0f4126f762cae19db0aa7e4aa79e4eaa380bb4",
+      "native_status_fields": {
+        "status": 21,
+        "message_status": 0,
+        "create_time": 1792108830,
+        "image_upload_status": 0,
+        "regen_status": -1,
+        "time_group_id": 0
+      }
+    }
+  ],
+  "ui_markers": [
+    {
+      "text": "AI 生成可能有误 注意核实",
+      "description": "",
+      "resource_id": "com.larus.nova:id/subtitle"
+    },
+    {
+      "text": "",
+      "description": "重新生成",
+      "resource_id": "com.larus.nova:id/msg_action_regenerate"
+    }
+  ],
+  "ui_controls": [
+    {
+      "text": "12:19",
+      "description": "12:19 AM",
+      "resource_id": "com.android.systemui:id/clock",
+      "bounds": "[16,0][91,48]"
+    },
+    {
+      "text": "",
+      "description": "Ethernet.",
+      "resource_id": "",
+      "bounds": "[598,2][636,46]"
+    },
+    {
+      "text": "",
+      "description": "Battery charging, 94 percent.",
+      "resource_id": "com.android.systemui:id/battery",
+      "bounds": "[648,0][664,48]"
+    },
+    {
+      "text": "",
+      "description": "返回",
+      "resource_id": "com.larus.nova:id/back_icon",
+      "bounds": "[16,64][104,152]"
+    },
+    {
+      "text": "",
+      "description": "创建新对话",
+      "resource_id": "com.larus.nova:id/larus_chat_top_left_create_new_cvs",
+      "bounds": "[104,64][192,152]"
+    },
+    {
+      "text": "",
+      "description": "推荐沐浴精油，打开设置页",
+      "resource_id": "com.larus.nova:id/main_container",
+      "bounds": "[235,70][485,147]"
+    },
+    {
+      "text": "",
+      "description": "",
+      "resource_id": "com.larus.nova:id/real_time_call_ic_container",
+      "bounds": "[528,64][616,152]"
+    },
+    {
+      "text": "",
+      "description": "打电话",
+      "resource_id": "com.larus.nova:id/real_time_call",
+      "bounds": "[528,64][616,152]"
+    },
+    {
+      "text": "",
+      "description": "朗读已关闭",
+      "resource_id": "com.larus.nova:id/tts",
+      "bounds": "[616,64][704,152]"
+    },
+    {
+      "text": "推荐一款沐浴精油",
+      "description": "",
+      "resource_id": "",
+      "bounds": "[366,168][698,211]"
+    },
+    {
+      "text": "",
+      "description": "",
+      "resource_id": "com.larus.nova:id/ll_reference_title",
+      "bounds": "[22,241][607,314]"
+    },
+    {
+      "text": "先给结论：沐浴精油（沐浴油）主打以油养肤、洗卸合一，干皮、粗糙肌首选；遇水乳化，冲洗干净不假滑[(南方医科大...)]。下面分高端、平价两款，按需挑选。\n \n一",
+      "description": "先给结论：沐浴精油（沐浴油）主打以油养肤、洗卸合一，干皮、粗糙肌首选；遇水乳化，冲洗干净不假滑 。下面分高端、平价两款，按需挑选。\n \n一、高端滋润款（干皮/秋",
+      "resource_id": "",
+      "bounds": "[22,326][698,776]"
+    },
+    {
+      "text": "",
+      "description": "复制",
+      "resource_id": "com.larus.nova:id/msg_action_copy",
+      "bounds": "[54,801][122,869]"
+    },
+    {
+      "text": "",
+      "description": "朗读",
+      "resource_id": "com.larus.nova:id/msg_action_re_tts",
+      "bounds": "[138,801][206,869]"
+    },
+    {
+      "text": "",
+      "description": "点赞",
+      "resource_id": "com.larus.nova:id/msg_action_like",
+      "bounds": "[222,801][290,869]"
+    },
+    {
+      "text": "",
+      "description": "点踩",
+      "resource_id": "com.larus.nova:id/msg_action_dislike",
+      "bounds": "[306,801][374,869]"
+    },
+    {
+      "text": "",
+      "description": "",
+      "resource_id": "com.larus.nova:id/msg_action_common",
+      "bounds": "[390,801][458,869]"
+    },
+    {
+      "text": "",
+      "description": "重新生成",
+      "resource_id": "com.larus.nova:id/msg_action_regenerate",
+      "bounds": "[598,801][666,869]"
+    },
+    {
+      "text": "",
+      "description": "",
+      "resource_id": "com.larus.nova:id/input_delegate",
+      "bounds": "[0,924][720,1184]"
+    },
+    {
+      "text": "",
+      "description": "深度思考，已关闭",
+      "resource_id": "",
+      "bounds": "[24,948][184,1024]"
+    },
+    {
+      "text": "",
+      "description": "拍题答疑",
+      "resource_id": "",
+      "bounds": "[200,948][400,1024]"
+    },
+    {
+      "text": "",
+      "description": "买前问豆包",
+      "resource_id": "",
+      "bounds": "[416,948][644,1024]"
+    },
+    {
+      "text": "",
+      "description": "录音转写",
+      "resource_id": "",
+      "bounds": "[660,948][720,1024]"
+    },
+    {
+      "text": "",
+      "description": "相机",
+      "resource_id": "com.larus.nova:id/action_entrance",
+      "bounds": "[24,1048][112,1160]"
+    },
+    {
+      "text": "发消息或按住说话",
+      "description": "",
+      "resource_id": "com.larus.nova:id/input_text",
+      "bounds": "[112,1055][520,1153]"
+    },
+    {
+      "text": "",
+      "description": "语音输入",
+      "resource_id": "com.larus.nova:id/action_speak_group",
+      "bounds": "[520,1048][608,1160]"
+    },
+    {
+      "text": "",
+      "description": "",
+      "resource_id": "com.larus.nova:id/action_menu_entrance",
+      "bounds": "[608,1048][696,1160]"
+    },
+    {
+      "text": "",
+      "description": "更多面板",
+      "resource_id": "com.larus.nova:id/iv_action_menu_entrance",
+      "bounds": "[608,1048][672,1160]"
+    },
+    {
+      "text": "",
+      "description": "Back",
+      "resource_id": "com.android.systemui:id/back",
+      "bounds": "[100,1184][260,1280]"
+    },
+    {
+      "text": "",
+      "description": "Overview",
+      "resource_id": "com.android.systemui:id/recent_apps",
+      "bounds": "[460,1184][620,1280]"
+    },
+    {
+      "text": "",
+      "description": "Home",
+      "resource_id": "com.android.systemui:id/home",
+      "bounds": "[280,1184][440,1280]"
+    }
+  ]
+}

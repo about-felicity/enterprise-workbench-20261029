@@ -1,0 +1,299 @@
+{
+  "passed": true,
+  "mode": "public",
+  "at": 1792223084.4554377,
+  "resolutions": [
+    {
+      "width": 2560,
+      "height": 1440,
+      "pageOverflow": false,
+      "outside": [],
+      "boardWidth": 1904,
+      "bad": [],
+      "unequal": [],
+      "sizes": {
+        "summary": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 157.078125,
+          "maxWidth": 157.140625
+        },
+        "daily": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 239.28125,
+          "maxWidth": 239.28125
+        }
+      },
+      "summaryRows": 24,
+      "dailyRows": 24,
+      "layout": "table-row"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "pageOverflow": false,
+      "outside": [],
+      "boardWidth": 1554,
+      "bad": [],
+      "unequal": [],
+      "sizes": {
+        "summary": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 285.59375,
+          "maxWidth": 285.609375
+        },
+        "daily": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 285.59375,
+          "maxWidth": 285.609375
+        }
+      },
+      "summaryRows": 24,
+      "dailyRows": 24,
+      "layout": "grid"
+    },
+    {
+      "width": 1536,
+      "height": 864,
+      "pageOverflow": false,
+      "outside": [],
+      "boardWidth": 1170,
+      "bad": [],
+      "unequal": [],
+      "sizes": {
+        "summary": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 208.796875,
+          "maxWidth": 208.796875
+        },
+        "daily": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 208.796875,
+          "maxWidth": 208.796875
+        }
+      },
+      "summaryRows": 24,
+      "dailyRows": 24,
+      "layout": "grid"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "pageOverflow": false,
+      "outside": [],
+      "boardWidth": 1074.96875,
+      "bad": [],
+      "unequal": [],
+      "sizes": {
+        "summary": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 189.78125,
+          "maxWidth": 189.796875
+        },
+        "daily": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 189.78125,
+          "maxWidth": 189.796875
+        }
+      },
+      "summaryRows": 24,
+      "dailyRows": 24,
+      "layout": "grid"
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "pageOverflow": false,
+      "outside": [],
+      "boardWidth": 1005.875,
+      "bad": [],
+      "unequal": [],
+      "sizes": {
+        "summary": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 175.96875,
+          "maxWidth": 175.984375
+        },
+        "daily": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 175.96875,
+          "maxWidth": 175.984375
+        }
+      },
+      "summaryRows": 24,
+      "dailyRows": 24,
+      "layout": "grid"
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "pageOverflow": false,
+      "outside": [],
+      "boardWidth": 925.53125,
+      "bad": [],
+      "unequal": [],
+      "sizes": {
+        "summary": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 159.890625,
+          "maxWidth": 159.921875
+        },
+        "daily": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 159.90625,
+          "maxWidth": 159.90625
+        }
+      },
+      "summaryRows": 24,
+      "dailyRows": 24,
+      "layout": "grid"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "pageOverflow": false,
+      "outside": [],
+      "boardWidth": 686.4375,
+      "bad": [],
+      "unequal": [],
+      "sizes": {
+        "summary": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 194.8125,
+          "maxWidth": 194.8125
+        },
+        "daily": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 194.8125,
+          "maxWidth": 194.8125
+        }
+      },
+      "summaryRows": 24,
+      "dailyRows": 24,
+      "layout": "grid"
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "pageOverflow": false,
+      "outside": [],
+      "boardWidth": 495.90625,
+      "bad": [],
+      "unequal": [],
+      "sizes": {
+        "summary": {
+          "minHeight": 230,
+          "maxHeight": 230,
+          "minWidth": 206.953125,
+          "maxWidth": 206.953125
+        },
+        "daily": {
+          "minHeight": 230,
+          "maxHeight": 230,
+          "minWidth": 206.953125,
+          "maxWidth": 206.953125
+        }
+      },
+      "summaryRows": 24,
+      "dailyRows": 24,
+      "layout": "grid"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "pageOverflow": false,
+      "outside": [],
+      "boardWidth": 744,
+      "bad": [],
+      "unequal": [],
+      "sizes": {
+        "summary": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 214,
+          "maxWidth": 214
+        },
+        "daily": {
+          "minHeight": 190,
+          "maxHeight": 190,
+          "minWidth": 214,
+          "maxWidth": 214
+        }
+      },
+      "summaryRows": 24,
+      "dailyRows": 24,
+      "layout": "grid"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "pageOverflow": false,
+      "outside": [],
+      "boardWidth": 366,
+      "bad": [],
+      "unequal": [],
+      "sizes": {
+        "summary": {
+          "minHeight": 230,
+          "maxHeight": 230,
+          "minWidth": 142,
+          "maxWidth": 142
+        },
+        "daily": {
+          "minHeight": 230,
+          "maxHeight": 230,
+          "minWidth": 142,
+          "maxWidth": 142
+        }
+      },
+      "summaryRows": 24,
+      "dailyRows": 24,
+      "layout": "grid"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "pageOverflow": false,
+      "outside": [],
+      "boardWidth": 296,
+      "bad": [],
+      "unequal": [],
+      "sizes": {
+        "summary": {
+          "minHeight": 230,
+          "maxHeight": 230,
+          "minWidth": 107,
+          "maxWidth": 107
+        },
+        "daily": {
+          "minHeight": 230,
+          "maxHeight": 230,
+          "minWidth": 107,
+          "maxWidth": 107
+        }
+      },
+      "summaryRows": 24,
+      "dailyRows": 24,
+      "layout": "grid"
+    }
+  ],
+  "all_models_visible": true,
+  "wenxin_and_baidu_visible": true,
+  "data_unchanged_on_resize": true,
+  "filter_regression": "yuanbao 4/8 50%",
+  "javascript_errors": [],
+  "production_test_writes": []
+}

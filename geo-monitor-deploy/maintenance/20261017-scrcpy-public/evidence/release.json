@@ -1,0 +1,36 @@
+{
+  "at": 1792225958.0424612,
+  "status": "published",
+  "collectors_before": {
+    "geo-native@geo-panel-deepseek-app-20261017-094524.service": "30871",
+    "geo-native@geo-panel-deepseek2-20261017-134730-bf1a1e9e.service": "46395",
+    "geo-native@geo-panel-doubao1-20261015-181820-3d82b024.service": "0",
+    "geo-native@geo-panel-doubao1-20261017-050004-9fbe31cd.service": "0",
+    "geo-native@geo-panel-doubao2-20261015-181821-6fa7c803.service": "0",
+    "geo-native@geo-panel-doubao2-20261017-050004-ab993f92.service": "0",
+    "geo-native@geo-panel-yuanbao-20261015-181821-d56b0d20.service": "0",
+    "geo-native@geo-panel-yuanbao-20261017-050005-1cceeca1.service": "0",
+    "geo-web@geo-panel-baidu-ai-20261017-050004-ad6eb2dd.service": "0",
+    "geo-web@geo-panel-deepseek-20261015-181821-879aca5d.service": "0",
+    "geo-web@geo-panel-deepseek-20261016-094039-dc64b7e1.service": "0",
+    "geo-web@geo-panel-wenxin-card-20261017-072303-c984c073.service": "0"
+  },
+  "backup": "/opt/monitor/geo-capture/maintenance/20261017-scrcpy-public/backup",
+  "collectors_after": {
+    "geo-native@geo-panel-deepseek-app-20261017-094524.service": "30871",
+    "geo-native@geo-panel-deepseek2-20261017-134730-bf1a1e9e.service": "46395",
+    "geo-native@geo-panel-doubao1-20261015-181820-3d82b024.service": "0",
+    "geo-native@geo-panel-doubao1-20261017-050004-9fbe31cd.service": "0",
+    "geo-native@geo-panel-doubao2-20261015-181821-6fa7c803.service": "0",
+    "geo-native@geo-panel-doubao2-20261017-050004-ab993f92.service": "0",
+    "geo-native@geo-panel-yuanbao-20261015-181821-d56b0d20.service": "0",
+    "geo-native@geo-panel-yuanbao-20261017-050005-1cceeca1.service": "0",
+    "geo-web@geo-panel-baidu-ai-20261017-050004-ad6eb2dd.service": "0",
+    "geo-web@geo-panel-deepseek-20261015-181821-879aca5d.service": "0",
+    "geo-web@geo-panel-deepseek-20261016-094039-dc64b7e1.service": "0",
+    "geo-web@geo-panel-wenxin-card-20261017-072303-c984c073.service": "0"
+  },
+  "original_image": "sha256:9ff1a10c8a407941ecd57ae9c666544509d68466a6d4ea743903fdc5d67cab1e",
+  "rollback": "monitor-dashboard:before-scrcpy-navigation-1792226469",
+  "published_at": 1792226737.7645893
+}

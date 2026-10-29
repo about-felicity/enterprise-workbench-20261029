@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-10-17T07:57:21.748956+00:00",
+  "logout_detected_beijing": "2026-10-17 14:46:13",
+  "container_started_at": "2026-10-17T01:37:36.0326689Z",
+  "container_restarts": 0,
+  "container_oom_killed": false,
+  "data_mounts": [
+    {
+      "type": "volume",
+      "name": "deepseek-hpe14-android13-data",
+      "destination": "/data",
+      "rw": true
+    }
+  ],
+  "bounded_logcat_rows": 20667,
+  "bounded_logcat_earliest_utc": "2026-10-17T01:37:42.841000+00:00",
+  "bounded_logcat_latest_utc": "2026-10-17T07:57:21.319000+00:00",
+  "logout_window_log_rows": 2838,
+  "auth_signal_counts": {},
+  "app_exit_reasons": [
+    "13 (OTHER KILLS BY SYSTEM) subreason=17 (ISOLATED NOT NEEDED) status=0",
+    "13 (OTHER KILLS BY SYSTEM) subreason=17 (ISOLATED NOT NEEDED) status=0"
+  ],
+  "kernel_oom_events_in_window": 0,
+  "conclusion": "No server-side logout reason is inferred from missing client logs; raw logs and tokens are not exported."
+}

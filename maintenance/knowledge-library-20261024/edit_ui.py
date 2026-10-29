@@ -1,0 +1,31 @@
+from pathlib import Path
+W=Path(__file__).resolve().parents[2];p=W/'geo-monitor-deploy/creation/panel.html';s=p.read_text('utf8');wp=W/'geo-monitor-deploy/creation/wizard.js';old=wp.read_text('utf8');js=old
+js=js.replace('上传Word，或选择已有产品知识库。','选择已建好的产品知识库，再配置问题。')
+js=js.replace('确认产品信息，下一步','选择此产品，下一步')
+js=js.replace("loadKnowledge(id);$('planProduct').value=kbId;planDirty=true;", "loadKnowledge(id);$('planProduct').value=kbId;planDirty=true;renderSelectedKnowledge();")
+js=js.replace("showStep(1);buttons();", "showStep(1);renderSelectedKnowledge();buttons();")
+js=js.replace("renderDailyTasks();\n}","renderDailyTasks();renderLibrary();renderSelectedKnowledge();\n}",1)
+js=js.replace("'<option value=\"\">新增产品知识库</option>'", "'<option value=\"\">请选择已建好的产品</option>'")
+js=js.replace("function studioResult(name,r){", "function studioResult(name,r){\n if(name==='kb_upload'){$('libraryWord').value='';$('libraryNotes').value='';$('libraryName').value='';$('libraryTarget').value=r.library_id?'library:'+r.library_id:''}\n if(name==='kb_edit'){libraryEditVersion=r.version;$('libraryEditor').hidden=true}\n")
+assert old in s;s=s.replace(old,js);wp.write_text(js,'utf8')
+s=s.replace('<button data-view="editor"', '<button data-view="knowledge" onclick="showView(\'knowledge\')">产品知识库</button><button data-view="editor"',1)
+a=s.index('<section id="knowledge"');b=s.index('<section id="dailyPlan"',a)
+legacy=s[a:b];legacy=legacy[legacy.index('<div class="upload-box">'):legacy.index('<div class="wizard-actions">')]
+s=s[:a]+'''<section id="knowledge" data-step="1"><div class="step">选择产品</div><h2>本次为哪个产品创作？</h2><p class="muted">选择已有知识库即可，无需重复上传或填写产品资料。</p><label for="kbSearch">搜索产品</label><input id="kbSearch" type="search" placeholder="输入产品名称或品牌" oninput="filterKnowledgeOptions()"><label for="kbSelect">产品知识库</label><select id="kbSelect" onchange="selectKnowledge(this.value)"></select><p id="selectedKnowledge" class="hint"></p><button onclick="showView('knowledge')">前往产品知识库管理</button><div hidden>'''+legacy+'''</div><div class="wizard-actions"><button id="kbSave" class="primary">选择此产品，下一步</button></div></section>
+'''+s[b:]
+s=s.replace('1　产品知识库','1　选择产品',1)
+s=s.replace('<select id="planProduct" onchange="planDirty=true">','<select id="planProduct" onchange="selectKnowledge(this.value);confirmSelectedKnowledge()">',1)
+library='''<div data-workspace="knowledge" hidden><section><div class="row between"><div><h2>产品知识库</h2><p class="muted">先上传资料，人工分析入库后，创建任务时直接选择产品。</p></div><button onclick="newCreationTask()">新建创作任务</button></div><p id="libraryTotals" class="hint"></p><div class="upload-box" id="libraryUploadBox"><h3>上传产品资料</h3><label for="libraryTarget">新增产品或更新已有产品</label><select id="libraryTarget"><option value="">新增产品</option></select><label for="libraryName">产品名称（选填，新增时默认使用文件名）</label><input id="libraryName" maxlength="300"><label for="libraryWord">产品知识库 Word</label><input id="libraryWord" type="file" accept=".docx"><label for="libraryNotes">更新备注（选填）</label><textarea id="libraryNotes" maxlength="2000" style="min-height:70px" placeholder="例如：补充规格、价格或新版检测资料"></textarea><button id="libraryUpload" class="primary">上传并保存，等待人工分析</button><small>支持 .docx，最大 5MB。保存原文件、上传时间与版本记录；上传不会自动触发分析或创作。上传完成后请告诉助手分析哪些产品。</small><p id="libraryFeedback" class="action-feedback" role="status" aria-live="polite" hidden></p></div><div class="task-filters" style="margin-top:24px"><input id="librarySearch" type="search" placeholder="搜索产品、品牌或文件名" aria-label="搜索知识库" oninput="renderLibrary()"><select id="libraryState" aria-label="知识库状态" onchange="renderLibrary()"><option value="">全部产品</option><option value="ready">可用于创作</option><option value="pending">待人工分析</option></select></div><div id="knowledgeRows"></div></section><section id="libraryEditor" hidden><h2>手动更新产品资料</h2><p class="muted">保存后用于新建任务，已有任务保留原知识库版本。上传的新文件仍需人工分析。</p><label for="libraryEditName">产品名称</label><input id="libraryEditName"><label for="libraryEditBrand">品牌</label><input id="libraryEditBrand"><label for="libraryEditAudience">适用人群与目标读者</label><textarea id="libraryEditAudience"></textarea><label for="libraryEditFacts">产品资料（每行一条）</label><textarea id="libraryEditFacts" style="min-height:300px"></textarea><p id="libraryEditFeedback" class="action-feedback" role="status" hidden></p><div class="row"><button id="libraryEditSave" class="primary">保存资料更新</button><button onclick="$('libraryEditor').hidden=true">取消</button></div></section></div>'''
+s=s.replace('<div data-workspace="tasks"',library+'<div data-workspace="tasks"',1)
+s=s.replace(" const section=document.querySelector", " if(activeView==='knowledge'){const feedback=$(operation?.name==='kb_edit'?'libraryEditFeedback':'libraryFeedback');feedback.textContent=text;feedback.dataset.state=kind;feedback.hidden=false}\n const section=document.querySelector",1)
+s=s.replace("const ids={kb_import:","const ids={kb_upload:'libraryUpload',kb_edit:'libraryEditSave',kb_import:",1)
+s=s.replace("||(b.id==='kbImport'&&!$('kbWord').files.length)","||(b.id==='kbImport'&&!$('kbWord').files.length)||(b.id==='libraryUpload'&&!$('libraryWord').files.length)")
+s=s.replace("'[data-workspace=\"editor\"] input,[data-workspace=\"editor\"] textarea,[data-workspace=\"editor\"] select'", "'[data-workspace=\"editor\"] input,[data-workspace=\"editor\"] textarea,[data-workspace=\"editor\"] select,[data-workspace=\"knowledge\"] input,[data-workspace=\"knowledge\"] textarea,[data-workspace=\"knowledge\"] select'")
+s=s.replace("const labels={kb_import:","const labels={kb_upload:['正在上传…','正在保存原文件和上传记录，请稍候…'],kb_edit:['正在保存…','正在保存产品资料更新…'],kb_import:",1)
+s=s.replace("['kb_import','kb_save','plan_save'","['kb_upload','kb_edit','kb_import','kb_save','plan_save'",1)
+start=s.index("$('kbSave').onclick=");end=s.index('\n',start)
+s=s[:start]+"$('kbSave').onclick=()=>confirmSelectedKnowledge();"+s[end:]
+# Keep library code in its own editable source, embedded for the existing single-page service.
+code=(W/'geo-monitor-deploy/creation/library.js').read_text('utf8')
+s=s.replace('</script>',code+"\nfunction filterKnowledgeOptions(){const q=$('kbSearch').value.trim().toLowerCase();for(const o of $('kbSelect').options){const k=data?.studio?.products.find(p=>p.product_id===o.value);o.hidden=!!k&&![k.product.name,k.product.brand].join(' ').toLowerCase().includes(q)}}\n</script>")
+p.write_text(s,'utf8')

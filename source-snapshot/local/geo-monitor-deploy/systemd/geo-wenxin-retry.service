@@ -1,0 +1,9 @@
+[Unit]
+Description=Bounded Wenxin existing-session readiness rechecks
+After=network-online.target
+[Service]
+Type=oneshot
+ExecStart=/opt/monitor/geo-capture/venv/bin/python -B /opt/monitor/geo-capture/wenxin_retry.py
+TimeoutStartSec=360
+KillMode=control-group
+UMask=0077

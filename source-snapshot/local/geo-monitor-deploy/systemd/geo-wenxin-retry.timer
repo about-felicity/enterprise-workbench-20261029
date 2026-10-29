@@ -1,0 +1,8 @@
+[Unit]
+Description=Check due Wenxin recovery probes
+[Timer]
+OnBootSec=2min
+OnUnitInactiveSec=1min
+Unit=geo-wenxin-retry.service
+[Install]
+WantedBy=timers.target

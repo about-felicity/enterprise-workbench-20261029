@@ -1,0 +1,28 @@
+{
+  "exported_at": 1792056973.5641475,
+  "batch": "geo-panel-yuanbao-20261015-172455-b45ba5d3",
+  "planned": 420,
+  "captured": 13,
+  "processed": 13,
+  "status": "running",
+  "acceptance_batch": "geo-yuanbao-21x5-20261015",
+  "acceptance_captured": 15,
+  "acceptance_processed": 15,
+  "health_updated_at": 1792056972.7668097,
+  "projection_enabled": false,
+  "service_active": "active",
+  "reboot_enabled": "enabled",
+  "independent_volume": true,
+  "historical_doubao_batches_rerun": false,
+  "all_channel_soak_started": true,
+  "soak": {
+    "test_id": "all-channel-soak2h-1792056244",
+    "root": "/opt/monitor/geo-capture/soak/all-channel-soak2h-1792056244",
+    "service": "geo-all-channel-soak2h-1792056244.service",
+    "deadline_timer": "geo-all-channel-soak2h-1792056244-deadline.timer",
+    "started_at": 1792056293.950234,
+    "deadline": 1792063493.950234,
+    "duration_seconds": 7200
+  },
+  "search_queries_exposed": false
+}

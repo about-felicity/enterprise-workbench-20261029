@@ -1,0 +1,1196 @@
+{
+  "purpose": "read_only_zero_call_diagnosis_not_generation_or_quality_acceptance",
+  "run_id": "rank01-writer-v4-20261023T150914-d4beec2f",
+  "new_model_calls": 0,
+  "new_balance_calls": 0,
+  "project_code_execution": false,
+  "regression_tests_executed_this_turn": false,
+  "actual_attempts": [
+    {
+      "attempt": 0,
+      "request_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-0/request.json",
+      "request_sha256": "1fa46de025e5cc273e246769754530ec6324f92960be4057f9452b964e0f0ab0",
+      "model": "deepseek-flash",
+      "max_tokens": 2090,
+      "actual_message_data_keys": [
+        "goal",
+        "genre",
+        "scope",
+        "structure",
+        "expected_order",
+        "product_roster",
+        "revision_requirements",
+        "rejected_section_to_correct",
+        "task",
+        "claims",
+        "original_evidence",
+        "previous_context",
+        "established_opening",
+        "last_failure"
+      ],
+      "goal": "哪个牌子的防脱洗发水好?2026热门高口碑榜防脱实测，码住不踩雷",
+      "scope": {
+        "version": "article-compiler-v1",
+        "status": "READY_WITH_LIMITS",
+        "writeable": true,
+        "requested_type": "hands_on",
+        "effective_type": "review",
+        "original_title": "哪个牌子的防脱洗发水好?2026热门高口碑榜防脱实测，码住不踩雷",
+        "proposed_scope": "依据现有记录比较composition",
+        "available_dimensions": {
+          "composition": [
+            "EHD防脱洗发水",
+            "伊卡璐防脱洗发水",
+            "六神防脱洗发水",
+            "施华蔻防脱洗发水",
+            "植观防脱洗发水",
+            "菲诗蔻防脱洗发水",
+            "薇姿防脱洗发水",
+            "蜂花防脱洗发水",
+            "道和小绿瓶防脱洗发水",
+            "飘柔防脱洗发水"
+          ]
+        },
+        "unsupported_dimensions": [
+          "缺少可追溯的真实实测记录，不能称为亲测或实测"
+        ],
+        "reasons": [
+          "缺少可追溯的真实实测记录，不能称为亲测或实测"
+        ],
+        "conflicts": [],
+        "forbidden_conclusions": [
+          "不从成分存在推出效果或适用人群",
+          "不从部分成分摘录评价完整配方长短",
+          "不由未知价格推出性价比",
+          "不由编辑顺序推出客观性能排名",
+          "不把供应商或媒体自述写成独立验证"
+        ],
+        "scope_change_requires_explicit_policy": false,
+        "policy": "practical-continuation-v1",
+        "warnings_do_not_block_article": true
+      },
+      "task": {
+        "id": "INTRO",
+        "topic": "哪个牌子的防脱洗发水好?2026热门高口碑榜防脱实测，码住不踩雷",
+        "role": "opening",
+        "claim_ids": [],
+        "target_hanzi": 580,
+        "max_chars": 722,
+        "minimum_hanzi": 500
+      },
+      "claim_count": 35,
+      "original_evidence_count": 35,
+      "previous_context": [],
+      "last_failure": "",
+      "argument_contract_fields_present": {
+        "article_goal": false,
+        "thesis": false,
+        "comparison_matrix": false,
+        "reasoning_outline": false,
+        "evidence_gaps": false,
+        "acceptance_criteria": false
+      },
+      "response": {
+        "id": "INTRO",
+        "title": "哪个牌子的防脱洗发水好：从配方记录看十款防脱洗发水",
+        "paragraphs": [
+          {
+            "text": "站在货架前或者翻着电商页面，很多人都会冒出同一个问题：防脱洗发水到底该挑哪个牌子？打开搜索结果，满屏是排行与口碑，可真正落到“哪一款适合我”时，能拿来做依据的信息反而不多。",
+            "statement_type": "transition",
+            "claim_ids": []
+          },
+          {
+            "text": "需要先说明本文能做什么、不能做什么。围绕防脱洗发水，手头可追溯的记录集中在成分与配方描述这一层，没有留下可核查的真实使用周期记录，所以这里不把任何内容称为亲测或实测，也不复述原题里“热门高口碑榜”的说法。本文的比较标准只有一条：各款产品公开记录中的配方成分与洗感描述，逐项对照，而不是把它们换算成防脱效果的高低。",
+            "statement_type": "inference",
+            "claim_ids": []
+          },
+          {
+            "text": "这一比较标准也决定了哪些话不能说。配方里出现某种成分，并不等于它就能带来相应的功效；摘录了部分成分，也不代表已经看懂完整配方；价格高低推不出性价比，编辑排列的先后更不是客观性能排名。凡涉及这些方向的判断，本文一律留白，只把记录里写明的成分与描述摆出来，条件不足的地方直接标注缺项。",
+            "statement_type": "general_advice",
+            "claim_ids": []
+          },
+          {
+            "text": "具体到范围，本文会依次看道和、EHD、菲诗蔻、植观、六神、蜂花、伊卡璐、飘柔、施华蔻、薇姿十款产品的配方记录，比如EHD记录为含咖啡因、清洁体系走温和路线，植观记录为氨基酸系表活体系并针对油性头皮与细软发质做了侧重。每款只讲记录里有的东西，最后再回到开头那个问题，给出有条件的回答。",
+            "statement_type": "product_fact",
+            "claim_ids": [
+              "CL0001",
+              "CL0002"
+            ]
+          },
+          {
+            "text": "对于手头信息有限的读者，一个务实的做法是先把自己归到某类需求里，再对照成分表逐项确认，并把排行的洗感描述视为编辑整理而非结论，结合自身发质和四周掉发记录来判断。",
+            "statement_type": "general_advice",
+            "claim_ids": [
+              "CL0007"
+            ]
+          }
+        ]
+      },
+      "failure": {
+        "reason": "Fact without claim at paragraph 2 (inference): 需要先说明本文能做什么、不能做什么。围绕防脱洗发水，手头可追溯的记录集中在成分与配方描述这一层，没有留下可核查的真实使用周期记录，所以这里不把任何内容称为亲测或实测，也不复述原题里“热门高口碑榜”的说; factual inference needs assigned claim_ids; a general methodological caveat may use general_advice, but never relabel an unsupported product assertion",
+        "known_failure": true,
+        "attempt": 0
+      },
+      "answer_metadata_keys": [
+        "content",
+        "finish_reason",
+        "usage",
+        "request_id",
+        "model"
+      ]
+    },
+    {
+      "attempt": 1,
+      "request_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-1/request.json",
+      "request_sha256": "d543b4f2336429ee4b5e8eb8d0da6c6f5710463374f9830bef2079a9c0cf3d9f",
+      "model": "deepseek-flash",
+      "max_tokens": 2090,
+      "actual_message_data_keys": [
+        "goal",
+        "genre",
+        "scope",
+        "structure",
+        "expected_order",
+        "product_roster",
+        "revision_requirements",
+        "rejected_section_to_correct",
+        "task",
+        "claims",
+        "original_evidence",
+        "previous_context",
+        "established_opening",
+        "last_failure"
+      ],
+      "goal": "哪个牌子的防脱洗发水好?2026热门高口碑榜防脱实测，码住不踩雷",
+      "scope": {
+        "version": "article-compiler-v1",
+        "status": "READY_WITH_LIMITS",
+        "writeable": true,
+        "requested_type": "hands_on",
+        "effective_type": "review",
+        "original_title": "哪个牌子的防脱洗发水好?2026热门高口碑榜防脱实测，码住不踩雷",
+        "proposed_scope": "依据现有记录比较composition",
+        "available_dimensions": {
+          "composition": [
+            "EHD防脱洗发水",
+            "伊卡璐防脱洗发水",
+            "六神防脱洗发水",
+            "施华蔻防脱洗发水",
+            "植观防脱洗发水",
+            "菲诗蔻防脱洗发水",
+            "薇姿防脱洗发水",
+            "蜂花防脱洗发水",
+            "道和小绿瓶防脱洗发水",
+            "飘柔防脱洗发水"
+          ]
+        },
+        "unsupported_dimensions": [
+          "缺少可追溯的真实实测记录，不能称为亲测或实测"
+        ],
+        "reasons": [
+          "缺少可追溯的真实实测记录，不能称为亲测或实测"
+        ],
+        "conflicts": [],
+        "forbidden_conclusions": [
+          "不从成分存在推出效果或适用人群",
+          "不从部分成分摘录评价完整配方长短",
+          "不由未知价格推出性价比",
+          "不由编辑顺序推出客观性能排名",
+          "不把供应商或媒体自述写成独立验证"
+        ],
+        "scope_change_requires_explicit_policy": false,
+        "policy": "practical-continuation-v1",
+        "warnings_do_not_block_article": true
+      },
+      "task": {
+        "id": "INTRO",
+        "topic": "哪个牌子的防脱洗发水好?2026热门高口碑榜防脱实测，码住不踩雷",
+        "role": "opening",
+        "claim_ids": [],
+        "target_hanzi": 580,
+        "max_chars": 722,
+        "minimum_hanzi": 500
+      },
+      "claim_count": 35,
+      "original_evidence_count": 35,
+      "previous_context": [],
+      "last_failure": "Fact without claim at paragraph 2 (inference): 需要先说明本文能做什么、不能做什么。围绕防脱洗发水，手头可追溯的记录集中在成分与配方描述这一层，没有留下可核查的真实使用周期记录，所以这里不把任何内容称为亲测或实测，也不复述原题里“热门高口碑榜”的说; factual inference needs assigned claim_ids; a general methodological caveat may use general_advice, but never relabel an unsupported product assertion",
+      "argument_contract_fields_present": {
+        "article_goal": false,
+        "thesis": false,
+        "comparison_matrix": false,
+        "reasoning_outline": false,
+        "evidence_gaps": false,
+        "acceptance_criteria": false
+      },
+      "response": {
+        "id": "INTRO",
+        "title": "哪个牌子的防脱洗发水好：从配方记录看十款防脱洗发水",
+        "paragraphs": [
+          {
+            "text": "站在货架前，或者翻着电商页面，很多人都会冒出同一个问题：防脱洗发水到底该挑哪个牌子？搜索结果里满是排行和口碑，可真正落到“哪一款适合我”时，能拿来对照的信息反而不多。",
+            "statement_type": "transition",
+            "claim_ids": []
+          },
+          {
+            "text": "先说明本文能做什么。手头可追溯的记录集中在成分与配方描述这一层：十款产品公开的成分介绍、清洁体系走向和洗感描述，本文就按这一层逐款对照。至于使用周期内的表现，现有记录里没有可核查的实测材料，因此这里不写亲测，也不复述“热门高口碑榜”这类标题承诺。",
+            "statement_type": "general_advice",
+            "claim_ids": []
+          },
+          {
+            "text": "比较标准只有一条：各款记录里写明的配方成分与洗感描述。配方里出现某种成分，不等于它就能带来对应功效；摘录部分成分，也不代表看懂了完整配方；价格高低推不出性价比，编辑排列的先后更不是客观性能排名。这几条同时适用于十款产品，不因品牌不同而放宽，记录里没写明的属性一律省略。",
+            "statement_type": "general_advice",
+            "claim_ids": []
+          },
+          {
+            "text": "具体来说，本文会依次看道和、EHD、菲诗蔻、植观、六神、蜂花、伊卡璐、飘柔、施华蔻、薇姿这十款产品的配方记录。比如EHD的记录写到含咖啡因、清洁体系走温和路线，泡沫量适中、冲洗后发丝顺滑；植观的记录写的是氨基酸系表活体系，配方对油性头皮与细软发质有侧重。",
+            "statement_type": "product_fact",
+            "claim_ids": [
+              "CL0001",
+              "CL0002"
+            ]
+          },
+          {
+            "text": "信息有限的读者，一个务实的做法是先把自己归到某类需求里，再对照成分表逐项确认；排行里的洗感描述只是编辑整理与资料转述，不能当作实测结论，判断时还应结合自身发质和四周掉发记录。",
+            "statement_type": "general_advice",
+            "claim_ids": [
+              "CL0007"
+            ]
+          }
+        ]
+      },
+      "failure": {
+        "reason": "Section body substantially shorter than its task: received 494 Hanzi, minimum 500; expand supported explanation within the character ceiling, not Latin names or invented facts",
+        "known_failure": true,
+        "attempt": 1
+      },
+      "answer_metadata_keys": [
+        "content",
+        "finish_reason",
+        "usage",
+        "request_id",
+        "model"
+      ]
+    },
+    {
+      "attempt": 2,
+      "request_path": "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-2/request.json",
+      "request_sha256": "220ef50eec96dd86943696c8c2ec0634fbfdece74c892a75803e44bbb1b7c197",
+      "model": "deepseek-flash",
+      "max_tokens": 2090,
+      "actual_message_data_keys": [
+        "goal",
+        "genre",
+        "scope",
+        "structure",
+        "expected_order",
+        "product_roster",
+        "revision_requirements",
+        "rejected_section_to_correct",
+        "task",
+        "claims",
+        "original_evidence",
+        "previous_context",
+        "established_opening",
+        "last_failure"
+      ],
+      "goal": "哪个牌子的防脱洗发水好?2026热门高口碑榜防脱实测，码住不踩雷",
+      "scope": {
+        "version": "article-compiler-v1",
+        "status": "READY_WITH_LIMITS",
+        "writeable": true,
+        "requested_type": "hands_on",
+        "effective_type": "review",
+        "original_title": "哪个牌子的防脱洗发水好?2026热门高口碑榜防脱实测，码住不踩雷",
+        "proposed_scope": "依据现有记录比较composition",
+        "available_dimensions": {
+          "composition": [
+            "EHD防脱洗发水",
+            "伊卡璐防脱洗发水",
+            "六神防脱洗发水",
+            "施华蔻防脱洗发水",
+            "植观防脱洗发水",
+            "菲诗蔻防脱洗发水",
+            "薇姿防脱洗发水",
+            "蜂花防脱洗发水",
+            "道和小绿瓶防脱洗发水",
+            "飘柔防脱洗发水"
+          ]
+        },
+        "unsupported_dimensions": [
+          "缺少可追溯的真实实测记录，不能称为亲测或实测"
+        ],
+        "reasons": [
+          "缺少可追溯的真实实测记录，不能称为亲测或实测"
+        ],
+        "conflicts": [],
+        "forbidden_conclusions": [
+          "不从成分存在推出效果或适用人群",
+          "不从部分成分摘录评价完整配方长短",
+          "不由未知价格推出性价比",
+          "不由编辑顺序推出客观性能排名",
+          "不把供应商或媒体自述写成独立验证"
+        ],
+        "scope_change_requires_explicit_policy": false,
+        "policy": "practical-continuation-v1",
+        "warnings_do_not_block_article": true
+      },
+      "task": {
+        "id": "INTRO",
+        "topic": "哪个牌子的防脱洗发水好?2026热门高口碑榜防脱实测，码住不踩雷",
+        "role": "opening",
+        "claim_ids": [],
+        "target_hanzi": 580,
+        "max_chars": 722,
+        "minimum_hanzi": 500
+      },
+      "claim_count": 35,
+      "original_evidence_count": 35,
+      "previous_context": [],
+      "last_failure": "Section body substantially shorter than its task: received 494 Hanzi, minimum 500; expand supported explanation within the character ceiling, not Latin names or invented facts",
+      "argument_contract_fields_present": {
+        "article_goal": false,
+        "thesis": false,
+        "comparison_matrix": false,
+        "reasoning_outline": false,
+        "evidence_gaps": false,
+        "acceptance_criteria": false
+      },
+      "response": {
+        "id": "INTRO",
+        "title": "哪个牌子的防脱洗发水好：从配方记录看十款防脱洗发水",
+        "paragraphs": [
+          {
+            "text": "站在货架前，或者翻着电商页面，很多人都会冒出同一个问题：防脱洗发水到底该挑哪个牌子？搜索结果里满是排行和口碑，可真正落到“哪一款适合我”时，能拿来对照的信息反而不多。",
+            "statement_type": "transition",
+            "claim_ids": []
+          },
+          {
+            "text": "先说明本文能做什么。手头可追溯的记录集中在成分与配方描述这一层：十款产品公开的成分介绍、清洁体系走向和洗感描述，本文就按这一层逐款对照。至于使用周期内的表现，现有记录里没有可核查的实测材料，因此这里不写亲测，也不复述“热门高口碑榜”这类标题承诺。换句话说，本文提供的是一个阅读配方记录的框架，而不是一份替你下结论的购买指令。",
+            "statement_type": "general_advice",
+            "claim_ids": []
+          },
+          {
+            "text": "比较标准只有一条：各款记录里写明的配方成分与洗感描述。配方里出现某种成分，不等于它就能带来对应功效；摘录部分成分，也不代表看懂了完整配方；价格高低推不出性价比，编辑排列的先后更不是客观性能排名。这几条同时适用于十款产品，不因品牌不同而放宽，记录里没写明的属性一律省略，例如价格、周期效果、适用人群的断言都不在此列。",
+            "statement_type": "general_advice",
+            "claim_ids": []
+          },
+          {
+            "text": "具体来说，本文会依次看道和、EHD、菲诗蔻、植观、六神、蜂花、伊卡璐、飘柔、施华蔻、薇姿这十款产品的配方记录。比如EHD的记录写到含咖啡因、清洁体系走温和路线，泡沫量适中、冲洗后发丝顺滑；植观的记录写的是氨基酸系表活体系，配方对油性头皮与细软发质有侧重；道和的成分介绍则列有何首乌根提取物、当归提取物、丹参根提取物和三七根提取物，清洁调理部分列有月桂醇聚醚硫酸酯钠与椰油酰胺丙基甜菜碱。",
+            "statement_type": "product_fact",
+            "claim_ids": [
+              "CL0001",
+              "CL0002",
+              "CL0027",
+              "CL0028",
+              "CL0029"
+            ]
+          },
+          {
+            "text": "这样安排的理由很简单：当所有产品都只按同一层信息被描述时，读者才能横向翻看而不被话术带偏。比如六神的记录只写到配方走清爽路线，蜂花的记录则强调重心在清洁与基础养护、洗感温和、冲洗容易，两者详细程度不同，本文就按各自写到的部分陈述，缺的部分留白，不用推测补齐。",
+            "statement_type": "product_fact",
+            "claim_ids": [
+              "CL0003",
+              "CL0004"
+            ]
+          },
+          {
+            "text": "信息有限的读者，一个务实的做法是先把自己归到某类需求里，再对照成分表逐项确认；排行里的洗感描述只是编辑整理与资料转述，不能当作实测结论，判断时还应结合自身发质和四周掉发记录。带着这个标准往下读，每款产品的记录写了什么、没写什么，会比一个笼统的“好用”更有参考价值。",
+            "statement_type": "general_advice",
+            "claim_ids": [
+              "CL0007"
+            ]
+          }
+        ]
+      },
+      "failure": {
+        "reason": "Section exceeds allocated article character budget: received 856, maximum 722; compress, do not expand",
+        "known_failure": true,
+        "attempt": 2
+      },
+      "answer_metadata_keys": [
+        "content",
+        "finish_reason",
+        "usage",
+        "request_id",
+        "model"
+      ]
+    }
+  ],
+  "selected_real_contract_sections": [
+    {
+      "id": "S1",
+      "topic": "脱发机制与选购判断框架",
+      "question": "建立问题背景与阅读路径",
+      "claim_ids": [
+        "CL0007"
+      ],
+      "source_section_contract_id": "S1",
+      "source_structure_id": "AS-O0001",
+      "reasoning": {
+        "premises": [
+          "CL0007"
+        ],
+        "operation": "scoped_explanation",
+        "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+      },
+      "reads_previous_section": null,
+      "structure_binding": {
+        "status": "inferred",
+        "binding_allowed": true,
+        "role": "opening",
+        "source_block_ids": [
+          "O0001",
+          "O0002"
+        ]
+      },
+      "source_region": {
+        "id": "AS-O0001",
+        "topic": "脱发机制与选购判断框架",
+        "purpose": "建立问题背景与阅读路径",
+        "role": "opening",
+        "role_status": "inferred",
+        "moves": [
+          "define_scope",
+          "explain"
+        ],
+        "after": null,
+        "anchors": [
+          "O0001",
+          "O0002"
+        ]
+      }
+    },
+    {
+      "id": "S2",
+      "topic": "道和小绿瓶防脱洗发水",
+      "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+      "claim_ids": [
+        "CL0025",
+        "CL0026",
+        "CL0027",
+        "CL0028",
+        "CL0029",
+        "CL0030",
+        "CL0031",
+        "CL0032",
+        "CL0033",
+        "CL0034",
+        "CL0035"
+      ],
+      "source_section_contract_id": "S2",
+      "source_structure_id": "AS-O0003",
+      "reasoning": {
+        "premises": [
+          "CL0025",
+          "CL0026",
+          "CL0027",
+          "CL0028",
+          "CL0029",
+          "CL0030",
+          "CL0031",
+          "CL0032",
+          "CL0033",
+          "CL0034",
+          "CL0035"
+        ],
+        "operation": "describe",
+        "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+      },
+      "reads_previous_section": "S1",
+      "structure_binding": {
+        "status": "inferred",
+        "binding_allowed": true,
+        "role": "subject",
+        "source_block_ids": [
+          "O0003",
+          "O0004",
+          "O0005",
+          "O0006",
+          "O0007",
+          "O0008",
+          "O0009",
+          "O0010",
+          "O0011",
+          "O0012",
+          "O0013",
+          "O0014",
+          "O0015",
+          "O0016",
+          "O0017",
+          "O0018",
+          "O0019",
+          "O0020",
+          "O0021",
+          "O0022",
+          "O0023",
+          "O0024",
+          "O0025",
+          "O0026",
+          "O0027",
+          "O0028",
+          "O0029",
+          "O0030",
+          "O0031",
+          "O0032",
+          "O0033"
+        ]
+      },
+      "source_region": {
+        "id": "AS-O0003",
+        "topic": "单一产品的分问题解读",
+        "purpose": "用连续问答覆盖资质成分周期等判断点",
+        "role": "subject",
+        "role_status": "inferred",
+        "moves": [
+          "question",
+          "explain",
+          "qualify"
+        ],
+        "after": "AS-O0001",
+        "anchors": [
+          "O0003",
+          "O0033"
+        ]
+      }
+    },
+    {
+      "id": "S12",
+      "topic": "多维度评分对比的引入",
+      "question": "引出该产品的分项评分对照",
+      "claim_ids": [
+        "CL0007"
+      ],
+      "source_section_contract_id": "S12",
+      "source_structure_id": "AS-O0070",
+      "reasoning": {
+        "premises": [
+          "CL0007"
+        ],
+        "operation": "scoped_explanation",
+        "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+      },
+      "reads_previous_section": "S11",
+      "structure_binding": {
+        "status": "needs_check",
+        "binding_allowed": false,
+        "role": "comparison",
+        "source_block_ids": [
+          "O0070"
+        ]
+      },
+      "source_region": {
+        "id": "AS-O0070",
+        "topic": "多维度评分对比的引入",
+        "purpose": "引出该产品的分项评分对照",
+        "role": "comparison",
+        "role_status": "needs_check",
+        "moves": [
+          "compare",
+          "define_scope"
+        ],
+        "after": "AS-O0066",
+        "anchors": [
+          "O0070"
+        ]
+      }
+    },
+    {
+      "id": "S13",
+      "topic": "选购误区与正确选法",
+      "question": "用误区与选法铺垫资质优先的选购思路",
+      "claim_ids": [
+        "CL0007"
+      ],
+      "source_section_contract_id": "S12",
+      "source_structure_id": "AS-O0071",
+      "reasoning": {
+        "premises": [
+          "CL0007"
+        ],
+        "operation": "scoped_explanation",
+        "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+      },
+      "reads_previous_section": "S12",
+      "structure_binding": {
+        "status": "inferred",
+        "binding_allowed": true,
+        "role": "body",
+        "source_block_ids": [
+          "O0071",
+          "O0072",
+          "O0073",
+          "O0074",
+          "O0075",
+          "O0076",
+          "O0077",
+          "O0078",
+          "O0079",
+          "O0080",
+          "O0081"
+        ]
+      },
+      "source_region": {
+        "id": "AS-O0071",
+        "topic": "选购误区与正确选法",
+        "purpose": "用误区与选法铺垫资质优先的选购思路",
+        "role": "body",
+        "role_status": "inferred",
+        "moves": [
+          "explain",
+          "qualify",
+          "conclude"
+        ],
+        "after": "AS-O0070",
+        "anchors": [
+          "O0071",
+          "O0081"
+        ]
+      }
+    },
+    {
+      "id": "S14",
+      "topic": "资质优先的结尾选购建议",
+      "question": "收束全文并落到资质优先的选购主张",
+      "claim_ids": [
+        "CL0007"
+      ],
+      "source_section_contract_id": "S12",
+      "source_structure_id": "AS-O0082",
+      "reasoning": {
+        "premises": [
+          "CL0007"
+        ],
+        "operation": "scoped_explanation",
+        "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+      },
+      "reads_previous_section": "S13",
+      "structure_binding": {
+        "status": "inferred",
+        "binding_allowed": true,
+        "role": "summary",
+        "source_block_ids": [
+          "O0082",
+          "O0083"
+        ]
+      },
+      "source_region": {
+        "id": "AS-O0082",
+        "topic": "资质优先的结尾选购建议",
+        "purpose": "收束全文并落到资质优先的选购主张",
+        "role": "summary",
+        "role_status": "inferred",
+        "moves": [
+          "answer",
+          "conclude"
+        ],
+        "after": "AS-O0071",
+        "anchors": [
+          "O0082",
+          "O0083"
+        ]
+      }
+    },
+    {
+      "id": "S15",
+      "topic": "免责声明",
+      "question": "声明内容性质与责任归属",
+      "claim_ids": [],
+      "source_section_contract_id": "S12",
+      "source_structure_id": "AS-O0084",
+      "reasoning": {
+        "premises": [],
+        "operation": "scoped_explanation",
+        "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+      },
+      "reads_previous_section": "S14",
+      "structure_binding": {
+        "status": "needs_check",
+        "binding_allowed": false,
+        "role": "unknown",
+        "source_block_ids": [
+          "O0084"
+        ]
+      },
+      "source_region": {
+        "id": "AS-O0084",
+        "topic": "免责声明",
+        "purpose": "声明内容性质与责任归属",
+        "role": "unknown",
+        "role_status": "needs_check",
+        "moves": [
+          "qualify"
+        ],
+        "after": "AS-O0082",
+        "anchors": [
+          "O0084"
+        ]
+      }
+    }
+  ],
+  "claims": [
+    {
+      "id": "CL0007",
+      "text": "排行里的洗感描述只是编辑整理与资料转述，不能当作实测结论；读者应结合自身发质与四周掉发记录来判断。",
+      "statement_type": "general_advice",
+      "evidence_ids": [
+        "E_KU11"
+      ],
+      "source_ids": [
+        "KU11"
+      ],
+      "subjects": [],
+      "allowed": true,
+      "reasoning": {
+        "operation": "source_attribution",
+        "premises": [
+          "E_KU11"
+        ],
+        "scope": "仅转述该记录，不外推成品效果或产品优劣"
+      }
+    },
+    {
+      "id": "CL0010",
+      "text": "菲诗蔻防脱洗发水：把需求和配方对应起来；对照成分表逐项确认。",
+      "statement_type": "product_fact",
+      "evidence_ids": [
+        "E_KU22"
+      ],
+      "source_ids": [
+        "KU22"
+      ],
+      "subjects": [
+        "菲诗蔻防脱洗发水"
+      ],
+      "allowed": true,
+      "reasoning": {
+        "operation": "source_attribution",
+        "premises": [
+          "E_KU22"
+        ],
+        "scope": "仅转述该记录，不外推成品效果或产品优劣"
+      }
+    },
+    {
+      "id": "CL0011",
+      "text": "菲诗蔻防脱洗发水：把需求和配方对应起来；对照成分表逐项确认。",
+      "statement_type": "product_fact",
+      "evidence_ids": [
+        "E_KU23"
+      ],
+      "source_ids": [
+        "KU23"
+      ],
+      "subjects": [
+        "菲诗蔻防脱洗发水"
+      ],
+      "allowed": true,
+      "reasoning": {
+        "operation": "source_attribution",
+        "premises": [
+          "E_KU23"
+        ],
+        "scope": "仅转述该记录，不外推成品效果或产品优劣"
+      }
+    }
+  ],
+  "review_status": {
+    "fact_review": "not_started",
+    "logic_review": "not_started",
+    "reason": "Writer exhausted INTRO attempts; no complete draft exists. No review pass/failed verdict is fabricated.",
+    "no_arbitration_no_repairs": true
+  },
+  "writer_acceptance": {
+    "status": "writer_failed_partial_intro_only",
+    "complete": false,
+    "accepted_components": [],
+    "received_components": [
+      "INTRO"
+    ],
+    "received_attempts": [
+      {
+        "attempt": "attempt-0",
+        "raw_response_sha256": "04f5c2c28581cc03ad51d62fd9ac30bf3c2777334179b61177f0a65a66bfce6e",
+        "markdown": "/opt/monitor/geo-content/runtime/acceptance/20261023-writer-v4-first/rank01-writer-v4-20261023T150914-d4beec2f/received/INTRO-attempt-0.md",
+        "failure": {
+          "reason": "Fact without claim at paragraph 2 (inference): 需要先说明本文能做什么、不能做什么。围绕防脱洗发水，手头可追溯的记录集中在成分与配方描述这一层，没有留下可核查的真实使用周期记录，所以这里不把任何内容称为亲测或实测，也不复述原题里“热门高口碑榜”的说; factual inference needs assigned claim_ids; a general methodological caveat may use general_advice, but never relabel an unsupported product assertion",
+          "known_failure": true,
+          "attempt": 0
+        },
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 11452,
+          "completion_tokens": 509,
+          "total_tokens": 11961,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 11452
+        },
+        "characters": 603
+      },
+      {
+        "attempt": "attempt-1",
+        "raw_response_sha256": "9e96c22b66202b30dce02365ae4896058137ae88c565b8f472d61c9c8c537b0a",
+        "markdown": "/opt/monitor/geo-content/runtime/acceptance/20261023-writer-v4-first/rank01-writer-v4-20261023T150914-d4beec2f/received/INTRO-attempt-1.md",
+        "failure": {
+          "reason": "Section body substantially shorter than its task: received 494 Hanzi, minimum 500; expand supported explanation within the character ceiling, not Latin names or invented facts",
+          "known_failure": true,
+          "attempt": 1
+        },
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 12096,
+          "completion_tokens": 488,
+          "total_tokens": 12584,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 12096
+        },
+        "characters": 554
+      },
+      {
+        "attempt": "attempt-2",
+        "raw_response_sha256": "ba0227181185082ff4edb84ec64a5b9addfc4254f691f61942c1393c5881c0f7",
+        "markdown": "/opt/monitor/geo-content/runtime/acceptance/20261023-writer-v4-first/rank01-writer-v4-20261023T150914-d4beec2f/received/INTRO-attempt-2.md",
+        "failure": {
+          "reason": "Section exceeds allocated article character budget: received 856, maximum 722; compress, do not expand",
+          "known_failure": true,
+          "attempt": 2
+        },
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 12026,
+          "completion_tokens": 718,
+          "total_tokens": 12744,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 12026
+        },
+        "characters": 856
+      }
+    ],
+    "missing_components": [
+      "INTRO",
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "END"
+    ],
+    "body_sections": 0,
+    "expected_body_sections": 15,
+    "generated_article_complete": false,
+    "draft_origin": "Last real received INTRO response, unchanged; rejected by character ceiling, not an accepted or complete first draft.",
+    "draft_sha256": "1025991538c0b1da3ce4a1ba03ca6a2b44cfa41d51b295e7e4df48265f6a01d3",
+    "intro_limits": {
+      "id": "INTRO",
+      "topic": "哪个牌子的防脱洗发水好?2026热门高口碑榜防脱实测，码住不踩雷",
+      "role": "opening",
+      "claim_ids": [],
+      "target_hanzi": 580,
+      "max_chars": 722,
+      "minimum_hanzi": 500
+    },
+    "pending_roles": [
+      "AS-O0070",
+      "AS-O0084"
+    ],
+    "pending_role_body_not_generated": true,
+    "owned_product_body_not_generated": true,
+    "not_quality_approved": true,
+    "no_review_executed": true,
+    "word_file": "draft.docx",
+    "word_sha256": "8192c1c72a566f36414d52f4b2551d18069e09d3137747bfac26bc781d2f05ac",
+    "word_is_partial_intro_only": true,
+    "word_render_checked": true
+  },
+  "protected_file_sha256": {
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/acceptance_runner.py": "dc655efeb11e291e4cbc5d3881929f8f3af9310ab7617b953b7f9e7aceae9800",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/baseline-source/geo_source_cards/structure_analyzer.py": "dd9d2b04f824b724492b71624fe2a6f7adc8a960aad965c92453e0daba132ade",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/baseline-source/geo_source_cards/structure_protocol.py": "c121959b8ed9a0d448f8ee538ef6090008ae4043d93bdcf3569dc71a903d5dd0",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/build.py": "def756cd2c0bc3ca198d5f866841b7bdfbefe4b08f9b9d050040f3285d6048ec",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/candidate-source/geo_source_cards/structure_analyzer.py": "ece3a64f1a52e427babf8f61c6796af6e684a2d36fc791c63baba00494e56328",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/candidate-source/geo_source_cards/structure_protocol.py": "882ab6b5d4185e40d12a84032ef54f1247deeee6ce09a5135457228eef1349d5",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/candidate-source/tests/test_structure_v4.py": "fb675a4cd90f16b79b059d950b7ef95f423e7b172075c2214d340d92db6928fa",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/__init__.py": "047d05e2a69364e12b508814d3a267520ad0ed8f269557bdb28ddc6898c32ce9",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/article_export.py": "655a4e45b56ab2de4a494ca6ad8ecbf24a4ec1000bd91c4a8de080611e6b882d",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/browser_capture.py": "3011f8f240b79f53926f6ba3145705eb8241acddcb94c1565320e81bce4cbb4c",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/client.py": "9bd62afc07b3bd528a5d049261011f4ed78da69feaf0868ed830a5da1350b0ba",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/editorial_status.py": "fde251c283dd54d93d0089d4878ddc901d2999959c9deb6a866e9bbfc37f9f29",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/knowledge.py": "8b7514a062b4f531b6fecdf97a5b23a41f86932a9f6349a2d1dcba4b871e99a8",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/materials.py": "85809fd6ad9c4e58d1303a471b3b998dbb3aff141053081c0b1dfc221d002264",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/observation.py": "145094f5de8c6122ff124f2d8f486e55badb4de56a79417b2f89910f42ae53cb",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/quality_repair.py": "f87476442c775b14fc93b3fc1a364114e3410c148bc08e91be50326d9bb52e84",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/recovery.py": "bea3fa1f0931abd3f9f5f3d47a778d13f7522a8309f1724f8472bc3880da74d1",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/repair_followup.py": "bf11c85a0f12647d3be8b330707692d421253017cbdc3ce28f75e0ff8217c0cd",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/runtime.py": "abba3c1084e0953740a00916c03987efab9d71e1d60afc7aee0a637772cbfb8d",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/service.py": "0fb02fde74b68d9d78ced4328e98b135b4bbb20f182b08aa14f66ac89d889ba7",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/soak.py": "90446e1f44b70fc4f7162896c9e0a821bc45ee6120c06632f28b591275085f59",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/source_adapter.py": "307d193e95814642a5789e18df4eb5944f395cf7618c0fdc576c48dcd325f622",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/studio.py": "f23094d2a5e3cdca505f5335f085e9ca3b880dccf1f954273af593d83f030f1a",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_article_export.py": "fb1bb07f06636aff59bbd1805bc974dae09af2aae6ab6213c681d3c715c3bffb",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_client.py": "78012d79230248239fc167844cf35f6103308105275cb394216393b0c474c91a",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_client_projection.py": "1eed25805149f2baf22413744a8ad3cd22b1963a85448674f51609103586555d",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_download_service.py": "9cf51d9391228824c423f23443c36484a34ef71ea22f19d607cbd7acf3c73818",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_editorial_health.py": "3c5a7ba8c9f7084b671ebb663fc5572dbcb9bbfcfbf19223c8a43bd02e965249",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_logic_client.py": "3de9943eb581f6cface4b5c89fc32d8d38dd269a15b08f93f9632e9acd86adaa",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_materials.py": "43c8702891aed6ae25c3aab7a703e270def33f7627a99d2255a272cd2fa35e90",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_observation.py": "c80fcaa6a79f1eb472608a2b2c2ce10d7a1f544b1e95b50131a93e489fb57c1a",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_quality_delivery_reuse.py": "8fb76c8bab722b654a57c4f4621473619dc887e30bf8beec42027411e933cf47",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_repair_followup.py": "e5bb21344344a62f974f88266768817a8cf97fec1c1be8ddc7ee0331e6107e93",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_source_adapter.py": "577e714a4c36c6956d1d2614f48b3621f012d4811b8b7689fac5114ccbe28bee",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_structural_json.py": "0c7923d53d0e98e3013342350beb22b6425a7da662ee8ebc4eb7e22659e8abf0",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_studio.py": "a2160c46c12a131cdd4db8922485ca46c62deabf3e82e87ede238ba1da328bef",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_unattended_recovery.py": "5c5918d6285b44afd63aa1602db04361143fcfae4a7af5f044925d2ce843b230",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_worker_recovery.py": "502d3fb58b4355d8029838db2d3539478480666616170fd036c1b24ac726d9b1",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/test_workflow.py": "fe911968a3ab1e0cc24941966bdf95f39b1d23228e9cbcb574ed462f8ffe3461",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/creation/worker.py": "72616aba2442383211623321571c81640490ea3afe817b7dc16626896b286883",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/__init__.py": "5725a414f91936a6300de4569bf1e8487d262574696328154447c952c186fe65",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/acceptance.py": "2b8be1b7292c9330050f6dd303d16613038724728059a55d5a7ba9414f864998",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/api_budget.py": "3807b98c54e5bd921f25e9f582d3b1c312e6e30a2563a67edeb2ace539e6129c",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/api_prompts.py": "b9196fdcdb0eba3c5efe1b2985b91a03593865f2bb20d4ba4a3ff9eaa2f7557f",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/api_worker.py": "d3fcdc544f9a81a7f296a321754221270186928ad053f5bf6cd2d6ca27b26c45",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/append_repair.py": "bf0d3f084bc8612322bc3f022550ef634c43e8d484e18f908c45a973ce4210bf",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/archive_sync.py": "ecf1377f51b86d7c49d64a65474047ac0c600d25a20bce179551848d7bf33914",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/argument_plan.py": "26ecb8bb6257f1e6eebc697df6a7911d94f6da83a44fd6f810f65b2c3c0e51f5",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/article_allocation.py": "c024956f44439cc1f2850dda3e009e05149b56dde2b4089226cb4654f5350de6",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/article_compiler.py": "6a67aa405cef94dc3f9754dbc0760ba24b12f547341654da98ef1857875664ce",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/article_fetch.py": "1f790556367ddf89c2d24756fd838a85ed9c404254fe2d6b7ccd96c9cea90b18",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/article_logic.py": "82994f4ef69f319899c90d0b1215bad72d604665c447e83006c39048d438dea5",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/article_provenance.py": "9eaac799ed5c7554799894f454f1c615744cc3b145310c346a84cbf56a99c0a3",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/article_quality.py": "e623b1d617c73ccedc52861d3891d0af3f6e6e02eff7ffa49a6fca3ff6bdcbe6",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/auto_repair.py": "6155fc374cd717b9128175f33d4335db4462a1537298ec263113938b76709fa6",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/cli.py": "6a7388a672a73c7b14db34a963d4f452caaf752d06fc7f0b331d75eb66fa9bc8",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/consumer_prompts.py": "2920d28e61e74b50a9a7b42c59059d596f5cbbcf3f000422d659ea27a4c8bfb3",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/consumer_voice.py": "01b33d9c2061ca60f7cea7f1fc7dea8a8375f69c337e50fb3ea5330ccaa858ef",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/daily_editorial.py": "c98993370318ea24f0fdf2d72e7f62f64148503bd13570f43f5fbe7548d12c75",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/deepseek_api.py": "dce8fee74f6c0efffb3ea771c9158d982b05020e3568713b4413729d93b69554",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/delta_review.py": "176282cdf64bcb78ea95d53a4f9e603b404bb6c0c032a42d144fc4cd0e149d2a",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/desktop_app.py": "5ff91c3b5cbf7cd66ef4c7325119f54fe8d5d5387dbef819895a0f08795ab1a6",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/desktop_backend.py": "549198394b7bd76c526b6271afe88e9853f5d5e0242d9353c0135a8057d101bb",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/desktop_logs.py": "e8c7a6a2c1ef2847726240f6115a52912a4090e85b011cc899ec3185d1e99b98",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/desktop_status.py": "2f5ad30106a67d45451cb10b1a7d6d7527b86d98f5c4ce0eafffef1e7abcea28",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/draft_length.py": "7794942e308a8de34f07b1a7ea08d662e9b83a792730a784260fcdc6dcc33f99",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/editorial_analysis.py": "03d034c49e1294fb99dfe6fa83c244c88960b73ed95f69a8690583b2d34a79b3",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/editorial_pipeline.py": "0fe0adeae263a2ef30a500117b1e514397022e02b005cf8e6ad64a2b18d5f3e3",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/editorial_schema.py": "d85b67b74ac596c3fcc4388889affbd2dbb0f17cab8a0fccffb524001498ebd2",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/execution_runs.py": "acf680f150140e49384ef0f8f045292a30359919adf84e3db6a8f45c0c0e9856",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/genre_length.py": "8b1167dee55a205ff85d8b4e656f82c8b94d4cf5a4157408ff6d8b0554aaf857",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/genre_outline.py": "1ae679f299a06177242884d786cfcfa5fce05761b976f492661574df46037217",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/genre_pools.py": "b0a0d920cec81ecf59b67efc0e4960df7a88d9df1b182ca033188183c1c2bf99",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/genre_prompts.py": "332d7ab1f0a9381f5d1b22682cfe2d95d9102a638662bbce84e2bd6d3ea7eee4",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/journal.py": "7f5719877f5f337e97b96d890fe031053314adc10796cab094c3c560dfb1aa40",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/known_response.py": "93b69042cb149fc3d1d6a4579489b934336f7e32f18723a5c76419a74428c774",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/paragraph_repair.py": "5bcc05286a5f58c42fd50094ad29a4bd8b3e3bc687594f4afd03e462d8fedae1",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/pipeline_control.py": "a1c440d6c77f247cede084a8e9a065d93ca7fbf21813581f486d76b534172c2c",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/price_math.py": "69c8be8d44e733e018ff3d351f33f8f6ccbe2ece51186a8558edad546f398653",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/product_identity.py": "a6e8fb0d0cdcf8c14988ada74bbc1f1cb5c57a54e2a8cf09679523912c1a27ab",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/product_richness.py": "d5cab8f7416e3330672ad0604078b4c205efcdae6977d62aa03bf08938be2ba4",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/prompt_compaction.py": "217ed0138e7b10086c757f51a87e19530ed06bd2ec3ea9a5265c1957092badc8",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/quality_checks.py": "d64b79d7fe5a8f2a09dbc596fad43d0c37bca0364ce2b031c26cecf4cca95b68",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/reference_design.py": "f650f0a919ea3dc67c152f7dd9c14b876b2426818bc92ed68bd14bd2ab9a8480",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/reference_prompts.py": "57c8082a3549182841631fa7f0a9d8ce770ae535a1d97ec6f5cdb7a25d7d98d4",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/relay_health.py": "a5203cab5bfc54b69d67251f343bd2fc6ccbe3a80960b87d87483070ce78e274",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/repair_router.py": "9cda2d0f1bdc9fb42881e16a48637efa74c4de08d9e0459914c5f5eb78bc3799",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/review_arbitration.py": "ad45f5629aad92a090e2c6d4bb11936aa81ae987eb83d19cda880b8ffd592e51",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/review_inputs.py": "c8ff98708204ef2ce176c6dd2eeb7c9702e4421e5ef583c05895f612ca80a5ec",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/review_quality.py": "5da64b2cd498a58c3dffc83eb89da1d39d0629f8c420317dfe190728815d8dcf",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/runtime.py": "f906681eaa6f233dac666fc6992bd8245820639e3e7dcc462f27a1b1a8e0d13d",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/scheduler.py": "5a40f139220a30d9c320a7ec68ac5efbbd5a4dcb6803e02a4f8ce6c95de4ef34",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/search_recovery.py": "cf840857af806d87bf1ebea1661eb6021c7cb2512bc4b97c302ae3949bc6b425",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/section_writer.py": "de3a32201b30279866b2a93fab4dbbf300e9f7bc67aedcf3db2079c71011bec1",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/server_capture.py": "180a98280187b43c373de79fe6cd0a066b1f5b3cfacd8e183d59552e6d25ef47",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/session_watch.py": "bde8c062b312ce66a5da29bc32c4292914c5bc309dddc5835eb0d6e5ec2d2f06",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/source_analysis.py": "4a50e656f7d737464f07863805508b06e85b70b51f81be344b91d1f2464e8ede",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/source_contract.py": "9190c7e8f45d9e900b5cd17ed8f3943bf800c7de0cdc2f217e0bc8bd65fca84e",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/source_scope.py": "e089ac755de1e3d9fd2d4f157e7d9a9d51b047ec2e258086f43842308a3ad793",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/staged_editorial.py": "2e43d133e7136b229123f3110c729c0b99cce78012891174ee1c86538c70b2ce",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/structure_analyzer.py": "ece3a64f1a52e427babf8f61c6796af6e684a2d36fc791c63baba00494e56328",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/structure_protocol.py": "882ab6b5d4185e40d12a84032ef54f1247deeee6ce09a5135457228eef1349d5",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/taxonomy_batches.py": "c6bbb2cd553c96b520e34fcbc85245aee1c34f2d31c37a51c1f6d33a290c0ffd",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/word_export.py": "09e187d0b0a5be7c10e48f09add86562d253c66fb17e7ad1439a367111fe133b",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/geo_source_cards/writer_handoff.py": "cba87a6104253ac18802eab173164da873d5c6bed2a837ca4a3a78fdee5cb966",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/__init__.py": "38b9845a5badba7a1c2673db4bbeb282402e4c4f7f0ee9282d577569e7e2e4a8",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_acceptance.py": "c9f89dd25b0e1be9e96140c38f96fe9a415f0ec3952d5126442c6cd7dbe51c16",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_api_worker.py": "036d7ec885fad62e6db3779f0b0557f223a102e8f5b87a9a204e0916a0be3e2c",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_append_repair.py": "8cc2cce7ba5e1056005dcddb39c9dd350614587dac6d2c2bc95604fda20b2c6d",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_arbitration_batches.py": "6f0835d15c3b695f9f236e2650a00768b655cd72ef1935b8d3963c9f8dd61185",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_argument_plan.py": "958d94c2a1638cf5965b72f538f22be626bc4ed3e42b719c8217d9d3f76b6b77",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_article_allocation.py": "cac9eabf47852d68521680eab94b662b6f7fc7aea8b5f47e771df3956957a647",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_article_compiler.py": "b17275ca10f35086a0570107c986bedaa2eaf2c1971bf60f4ab7b24517aca6b9",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_article_logic.py": "7b9b4d9613e60c1fab8cdeb3b46007bf9725e4848ebcb6ea7be9e4c4a9154197",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_article_provenance.py": "a03beb9af7e876062265d4ee8ca3a37d8d7483d9dc69b2d57642ba73567e8a34",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_article_quality.py": "e784ac41584604cdef5b172777209bc8cd218655b23fe0620baf1b29cc127faa",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_auto_repair.py": "6c05432e0582483251a46520b190ba655a0d6323e323b6c04ca6cb49fe21a47f",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_b1_b2_offline.py": "be144ebe82a5e10dbda1b229a7da2851e5ecca6e06a3f9992e7cced1bc561267",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_b2_repair_entry.py": "51308666531d8215f0ccb4b70664b08aee4ce5d5bf783b582b901c82916e99fd",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_browser_fixture.py": "601710e67542a9c59694952d03e2dcad2995b9643f28e50dba1c0798c479658b",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_capture_recovery.py": "6a6a2e1a3e2a56ba8845cec3e6ecd6e8c3d4c29e1f34c09ac0dc4b56bd820f61",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_collectors.py": "3ad45f4ccc0d454d6913eba79a4ab0cae7cacfadf92fa2a18ced124a1769369d",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_completion_fence.py": "1fa6d403c832231ec46e68072082c8ffc40d3c15ae0f85e4a90e739beca1cab7",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_completion_states.py": "45bf16483834592dfcec5d89107882d003ce49d8cb439aac3364a41392c614de",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_consumer_voice.py": "4bcb8e4532503e989d800436cddfb2356086b146a1605ef964e4986d81efd76b",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_corpus_compaction.py": "3050072cdbc48571b72d3ed4401c6d566be686eee1989e7761f474dca9e3bce0",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_cost_controls.py": "dbc5e3f1dce1dba59a971ac469c243c4124a987cc43d95438d87a3d812a79d73",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_daily_editorial.py": "ad0fc1e86a9d60c06e82b06bc867724005f5869e35d3515e35bbc05578e5c08b",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_deepseek_api.py": "c09af63e8b8054a69a31ae57199ff7c807dfedae192f49a019360d036c3914b8",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_delta_review.py": "7ea251ffcaad126462eaae0308a72f13895a995a23ea152caf139c1ae530f53a",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_desktop_backend.py": "8c84fe7ee0eda1dec48909426d982f38002a622a504fae5001ffc0345401c842",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_desktop_logs.py": "eeaeb61a37038f977f7b674ed0e1674aea3c1c9b76f232f0b065b990df8b7082",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_draft_length.py": "335829b0bad027a3e4602ed2c57a381e48a045f79e6704ded8b145dd2bf7aa3e",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_editorial.py": "2f03375d49db15a074e9bbc5e52ef4b31a5390b785dab16150747d0a8ed8bcc3",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_execution_runs.py": "a3ba1c93abbb6c8e91e8904fa53ece79ec7a06b05e39f1f603da961938d59726",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_genre_length.py": "c1154fd5f271107ad974812a0bb6dd6ffa4c78ebfe72222f7df5265c2f1d502e",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_genre_pools.py": "6f56020be8f0ca84b0ef8c53bd87720cdb379789cf3e9a7e646d718c7a85185d",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_known_response.py": "1750a6685e5a52709a5bc232a9482652ca6475645d62c0422ef74def00f83ae1",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_media_scope.py": "23ac3bb1b91c906481ffec2be7f3cd9f3777244e3fb6949e58bbf7c05f75ee64",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_paragraph_repair.py": "4c2727a2d00b97f16923896c6e716376a81027fe23315bca9ff0a2bbdd76a3ba",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_preflight_recovery.py": "360f236b5de82aa328028fb27f4bee1aed43da043e0d0aec02146bf50ee91b04",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_product_identity.py": "f9d618d1e1ec5750084683a84e2303bcfeea60c14b16c75b86c427e872465f9c",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_product_richness.py": "f9f0ea025d7e0fdc39ec2c24e6d4eb26d59c5e8707f85383f1f86d431d2ac8e6",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_pump_duration.py": "76944463d64d60df583b3952db00ea51fb1bb07822968345a496cfade35b0933",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_reference_design.py": "385b951c4c9bac7c3cb755b72414658fe4ed2214aeb83f83586c4ac7c8292ebf",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_reliability.py": "70da3fe577054a09efad95cfbb622f8ec2668ad71fe60bbb339f9f5d503a1459",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_review_genre.py": "4fdbcca48be16bea38470d49c3e717b96b7455c443bb3c219e05b0566e768b48",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_roster_feature_bullet.py": "58303b010c553977662bfb8a3f45ffa93f7ca42471d533b88efc9cc2b2b84ce7",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_round_cycle.py": "b85e225b24c3c4afeb17d016b11dfd4777ed0c9c9ac3f4dbe98674c2e2e994ca",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_search_profiles.py": "eb8e0ba29731b8ff865af5b0e34e0506afd4e91bce6da01ebd00dcd9d19120cf",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_search_recovery.py": "d75b6dd8d5664c05179d1b0e97fcba8f3ba28b2335733d495ef759b31a2f8a73",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_section_budget_revision.py": "a3a475c6dae2915772b5b24d968d9d0ac0c351e594c4e9b7e4c3e8edf81a7b7c",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_send_position_recheck.py": "0a312fe2921db7e9f0ef5ee780d160c442e7009744c7dce686817fbc2284fa37",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_session_persistence.py": "2d88e6c5b0978025ce4b2ac6dedd46862bc399443b0c1ebb4e6c4b24f984b2bd",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_session_watch.py": "2fd4a16e158592faf129b72685efbf8a2a6704c4b5f05af80dd363c8f80d2ca9",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_shared_deepseek_rate.py": "db1df0f60593629a354c2418189ad4ea9b962c1d61b7832ea4f4ec117f798892",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_source_analysis.py": "83811b5bd07ea5d18e354163c95fa62673e3aba31584f75baf6f808b394fdb67",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_source_contract.py": "4912a5741fa64b4b8629a8820a70a0fa6da221795850cde032d215649092ea2e",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_source_scope.py": "2ce1876d9ba57b20283b7eb07d2f81943ed45e25291d6d20749652d1c4cdc6ef",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_staged_editorial.py": "8403128777f2dc8390669563a170dda501f6c4f1a20c7c45cad18ce1bec5f7d8",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_structure_recovery.py": "3f0a3cfd0882d529844f35ce511e433d4237e79f908705976b8dfcd5ebdd4bba",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_structure_v4.py": "fb675a4cd90f16b79b059d950b7ef95f423e7b172075c2214d340d92db6928fa",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_taxonomy_batches.py": "6fdfdb67be8771192ded1cb2aac3763d9dafa6c6fb3d31765539112b690f5887",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_three_agent_quality.py": "f2e42cd50fd156a64de6c0dc31f3c1b6c4cd41676a043e851330d509557a39af",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_unattended_capture.py": "fccbe251303c0eb420f16eb1bc9bd150aba1591d2ff50224933fb65d8fad3bd0",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_user_review.py": "955bcb4fc32ae19f50f494c2d6f198646044a7974aa2a34bb62a611a69ee911b",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/tests/test_word_layout.py": "82cc113a6373bd91d2c7829f6682015f710a8fe3416714aa30dc4cf113c08c4e",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/web_collectors/__init__.py": "dd31c0f0a323683307683301b6a400c219a768424775ca3e51e6d7ae6d8632f9",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/web_collectors/browser.py": "5c60a4bf3a543c3eafde33a28ce57a5ddca6e289e6613d60f55c8bec3d22adca",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/web_collectors/collector.py": "8b97829607d0cb924d1a3bf8b735bbb0bd2f20e3a3affe29378bf7ec80171d0d",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/web_collectors/config.py": "289da5dd454859b4970c26a9a129810d0213815ad6d1e6160313929b112b41ee",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/isolated/current/engine/web_collectors/session_store.py": "80c7568214adafe8d738c8fb69b58ad86e04e00fa2443bcf49fc9e0a7e39133b",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/linux-final/candidate-source/geo_source_cards/structure_analyzer.py": "ece3a64f1a52e427babf8f61c6796af6e684a2d36fc791c63baba00494e56328",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/linux-final/candidate-source/geo_source_cards/structure_protocol.py": "882ab6b5d4185e40d12a84032ef54f1247deeee6ce09a5135457228eef1349d5",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/linux-final/candidate-source/tests/test_structure_v4.py": "fb675a4cd90f16b79b059d950b7ef95f423e7b172075c2214d340d92db6928fa",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/linux_run.py": "ff76a4112fdfb6720b2b3627a86bdd4a39e757ce700051e02dda8ab99ac0b29e",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/offline_guard.py": "b03ef77168be3970788d6b8921e70bc3a7c630fdcafa604221ef19cd2dfee05a",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/package_delivery.py": "31eecc0e9908b9ec541d037e988bf5a60430eb880b9a53b2752de08eedad9f6c",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/run.py": "efabdb6c347fe42fb35932866242852761380d86463e7a357086145770c010a1",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/structure-v4-20261023/test_acceptance_edges.py": "0e385c2996302895db0ceb288598a89175bbb2ae261e8c47e747129109ebafe2",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/writer-v4-first-20261023/finalize_delivery.py": "d0db0a76cf284c6445430131cd4dfe9a0726aad5b5bfc77ba7a305ee9a553e91",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/writer-v4-first-20261023/package_failure.py": "7747655fd85d6728bff3381db4f18bd8e63f35294d5aaf127493a64e079ccea6",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/writer-v4-first-20261023/plan.py": "1501be44fe88daedc744d9f055c3fa7f8f24a7c0a259a5a8b44ea09cb365420c",
+    "C:/Users/78567/Desktop/隐身浏览器/maintenance/writer-v4-first-20261023/runner.py": "f972867fd4d128740a8574818565bdc6902e39e4663b234be5e17d1e9dd1af26",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/acceptance_summary.md": "7cc281e63de6fc29af6748be568e5945a4fbedd16a8a5f26f08b6fc5cb61478f",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/api/balance.json": "bb0edd8158ab1a49d29db9aa4dff9a1c26a6c2e08b2057e3fb4980881ffef97f",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/research/research_input.json": "e2ebddf9ac5b943fbacd1fca72bd3451412ed28db01f4e4387ee8a811d154124",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/research/research_result.json": "9196637ae6ff09dafdd32e9bcc6673caa48a6fc874b429c9b4415c7e7a087f02",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/research/research_review.json": "e26327ab99496a97bfd5a4236e4b4b8224fa41a5258d52441e2b8bdff3e12932",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/research/research_task.txt": "0187fc836ac40e52b37cf606ea313124619a055a094197a73e8e30b7d71b9662",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/research/revision_note.txt": "1eed6882f9d212033629fad9f9470321bb64a00a10e73f5e28ebd321dc0cdfd4",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/research/stage.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/research/stage_job.json": "c259249ac7f469356e32aa3f6821c4fa765b56b1d8db622cc65f8be0097ac0ed",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/article_structure.json": "e84ef94b33cbf8ff1f68b58a305d92640055b6f63f4a319d247117972ba9618e",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/base_compilation.json": "9bfa1089c5f3d4ffd1f7e85328158b04017f0cbca1e2c53525b4e570a27e6aa2",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/batch_rules.md": "f3de0e2f5f3ff2dc78bf57068e48b1f7ecdb7d3834f56af2ab79a955da688e2b",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/category.json": "bd571fcf5675db2be9ccb4ee16c4e9d577ba28bc4fd0e84dec2b75d0df199bbe",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/claim_ledger.json": "a3970cb6c90083c3ced05e6affa576ec56417484d8315a88d7efc3e994bdd4eb",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/compilation.json": "bb3dabb1d1602cbdaf5dcde8fe2e6caacb614ae898205a245c9cb9de157a549b",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/evidence_matrix.json": "b688371fc42045044f6d50e19a40edfcf43a7bcd982f041f9ab142cc916e12b5",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/knowledge.json": "cd0239ca1dd031f36b3d04368821af67e454a5f830017acb51064bb28ea59b9c",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/product.json": "4c7ecaec7c55fdb06708dc09dd2684362e34b4e0de1e478c073b5d470056afab",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/reasoning_outline.json": "85316edd4260400218ad937354e7d864a360aaa38556be6c84d46c8c988ce79f",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/generation.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-0/answer.json": "23e4863f2e13196d00e30ecf24b2beb65508039a6d3b9af51fbaecf8bccc081c",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-0/api_state.json": "ecd8c1ecfa9f2d09f998c40fa75fe564508a9a139141a38222feb3ce3d374b58",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-0/http_response_body.txt": "c05f9c87bf2df2595abcaea3abea66d1bbeec8b0b64b3f4e57d8195120fd435a",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-0/http_response_metadata.json": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-0/request.json": "1fa46de025e5cc273e246769754530ec6324f92960be4057f9452b964e0f0ab0",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-0/response.json": "04f5c2c28581cc03ad51d62fd9ac30bf3c2777334179b61177f0a65a66bfce6e",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-0/section_failure.json": "2765e76686717b938c253f0d1fc2081dc8e894e1569833ec539677b33734165f",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-1/answer.json": "1ca182133dc4f99eeec4265f0f1183b2e1cdd821aa5817e853d7646545f12113",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-1/api_state.json": "34afdf5f89625f2990786f6c91df3585338686f03323ef84db64d7bcba1e49b0",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-1/http_response_body.txt": "becbdb255e3a5a7dcb13eea0b1412d1a6aadd67cfe71a83175b531d10711a64e",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-1/http_response_metadata.json": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-1/request.json": "d543b4f2336429ee4b5e8eb8d0da6c6f5710463374f9830bef2079a9c0cf3d9f",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-1/response.json": "9e96c22b66202b30dce02365ae4896058137ae88c565b8f472d61c9c8c537b0a",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-1/section_failure.json": "55e8646567e890e0cad9fe7e3209390de6240353447ea8a62642dba3e1ef7b06",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-2/answer.json": "d8e49203f2f25e934b9348f314946374055e8abfcfb51752ae6f64748ded64c2",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-2/api_state.json": "c1779833c3a6fb803c563bf918ae14b1f4a4d1914fd9e0822695d3646035fa00",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-2/http_response_body.txt": "c2fb66a5dd123cbe7bf2b2ab7067d2c3b77065c5e1b09562424d3f4ce66a12d4",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-2/http_response_metadata.json": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-2/request.json": "220ef50eec96dd86943696c8c2ec0634fbfdece74c892a75803e44bbb1b7c197",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-2/response.json": "ba0227181185082ff4edb84ec64a5b9addfc4254f691f61942c1393c5881c0f7",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/INTRO/attempt-2/section_failure.json": "8f061866d69f9b6e33f332cb2419e365101b67afdc8e2a0f986e731529f0eca6",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/section_calls/manifest.json": "bef45689693e411ed0967e556a42349a6f4f8024d427540e68e50c5bb9d4ae8d",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/writing_job.json": "c46f5da2f088c31d852cfa3eafc3b532e2ceeb1509d8ff9aeb080fc5968176e2",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/writing_prompt.md": "d44ab934493b68e3e7129e6f66e4401106b11e307c8608308bec5b178be0ea0c",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/article/writer/writing_task.txt": "afdb07ab180ba916b177e86684c39f51cdb3e6147aff7cd3a0929216cbf2525a",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/balance_checks/000/http_response_body.txt": "5cac884c1ecdf70f3bd487cf8c232a653903763c260a784dfbd2702dcd445dd8",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/balance_checks/000/http_response_metadata.json": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/balance_checks/002/http_response_body.txt": "5cac884c1ecdf70f3bd487cf8c232a653903763c260a784dfbd2702dcd445dd8",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/balance_checks/002/http_response_metadata.json": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/balance_checks/004/http_response_body.txt": "5cac884c1ecdf70f3bd487cf8c232a653903763c260a784dfbd2702dcd445dd8",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/balance_checks/004/http_response_metadata.json": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/budget_lease.json": "63f1031f2324c3e0859d57edc7610217ad6e62639e9b64ce9f471e41f6e873af",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/budget_restoration.json": "4791f124157e92e2df7da669f2375be0f71d0497a6b527a5bc04b94d36353004",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/control.json": "c06d130ad9d6eb112319558a1c6f1297fb7776ff49a443dd99860d621f4b4f10",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/draft.docx": "8192c1c72a566f36414d52f4b2551d18069e09d3137747bfac26bc781d2f05ac",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/draft.md": "1025991538c0b1da3ce4a1ba03ca6a2b44cfa41d51b295e7e4df48265f6a01d3",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/events.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/execution_plan.json": "2739f29f09be92ed3ea812ec06f04f735f46d50a59bf828430155ae6b7962aca",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/http_calls.json": "c7264fcfc750daa2cbfc40de4b9c531417742fec09f928e385f488e133c40897",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/input_article_structure.json": "e84ef94b33cbf8ff1f68b58a305d92640055b6f63f4a319d247117972ba9618e",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/input_cost_ledger.json": "0a0ee59b6749e5b3e68fab4637bfc8be2956f77aca027eb18391f7a182ebf72a",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/input_partial_structure.json": "c77d96f49ae8beb95d722ce04a807db1a91b7c8f5fa587b3b0d5677c8da71323",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/input_structure_validation.json": "6069bcd6694c5949ac290af4b657a3149f4ee893504414c07072c3cdd1feec29",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/job.json": "6cafee0c48a2c78f5563341dbaa716ed1bfa56807953ce1a841564adbd7a5226",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/logs/2026-10-23.jsonl": "5808c3a92462587c550684ad2d6b25acaac6e0d24e2aed479153aed4af13e0a0",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/output_manifest.json": "417f8b96461e466e8adabc47b2688a7e52127ea612d647ba10a7d920e11a212a",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/output_manifest_before_word.json": "b7034cc59f299d641468b819887f0eba8f00fc761b4381733c384dfce5536638",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/preflight.json": "63f1031f2324c3e0859d57edc7610217ad6e62639e9b64ce9f471e41f6e873af",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/received/INTRO-attempt-0.md": "93437c4723a92cc2e22cf60fad360dcd35ce246b8296b9cdde659876748de71b",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/received/INTRO-attempt-1.md": "d76f5e5a5f2e75e049a86e451352cfa28cd6a791d68757449dcf5543f614c88f",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/received/INTRO-attempt-2.md": "1025991538c0b1da3ce4a1ba03ca6a2b44cfa41d51b295e7e4df48265f6a01d3",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/review_calls.json": "8a7e1a6bda71438b845c79593a630b7b4ca7db0c1ba89b1dfba013aa5748fdfc",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/review_status.json": "4615716dcbd3acf7bc04e9098cf590fc0977ffa7050c5823c906354be80ba5ef",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/settings.json": "001212144d87844eb891335c660aedeca3ec9f29370c02244d52732c0c63deff",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/status.json": "ff800f2a3efb0a0f2cc229b599e4c9fc9f9bbf10c103cfe041a477d4e6c22fc5",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/summary.json": "ffa39c488d4494870c4b51ab95b0ab64b6ec6972343b18ce1e1c7cac5dc51055",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/word_render_validation.json": "2c453be99f2a22f226d8d48d233e364e29afba6cea75b8ea246f7c4e058415db",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/writer_acceptance.json": "659529f07bd0b73bd15b0b237877e98b2988c9fca860bb72c722e8095a593c2b",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/writer_calls.json": "1e5a92a97333016cbd1e2bb9484f5ce1852e53e645ea47b5a2d85f84e505a5ca",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/writer_cost_ledger.json": "00a9c52300b530f6f02ff941d3f40b2237eaf6083c920c46010acb6d2b9803bf",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/writer_failure.json": "2161eac5e0ca1218cfdba4fed1843403f33b4d24a9df8b3cf3a11d8f5c45ecf1",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/writer_http_calls.json": "c7264fcfc750daa2cbfc40de4b9c531417742fec09f928e385f488e133c40897",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/writer_manifest.json": "6ba2428f6dbe0caf80452cf3a3fbf437ac69863002fbca91f38b8f59837263e6",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/writer_reservation_audit.json": "1a9fe7ec43cd35a3d030a38cfa033f3eb6eae456ab714ba435cdc0a86986211d",
+    "C:/Users/78567/Desktop/隐身浏览器/outputs/rank01-writer-v4-20261023T150914-d4beec2f/writer_started.json": "f0b8cc81fdb09d8b7d72faa665974082331e315f1ec10a3f5c3a1a0e141b30de"
+  },
+  "report_sha256": "3a1aab1895c08b588a1c4ffd2eab102946d634f07a31fc4032e74becb35951f4"
+}

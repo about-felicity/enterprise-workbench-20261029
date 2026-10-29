@@ -1,0 +1,1008 @@
+{
+  "scope": "Current non-secret changed runtime source; not a blind installer. Original creation engine snapshot and protected private configs remain on server.",
+  "files": [
+    {
+      "source": "deepseek-deploy/auth_policy.py",
+      "server": "/home/user/redroid-deepseek/code/auth_policy.py",
+      "sha256": "029d636b72201333a63cfe3a5ad45619b407cde29b7fbe0e2f391a96c8491e1f",
+      "bytes": 3689
+    },
+    {
+      "source": "redroid-deploy/artifacts/scrcpy/scrcpy-win64-v5.0/scrcpy-server",
+      "server": "/opt/monitor/geo-capture/vendor/scrcpy-server-v5.0",
+      "sha256": "26cbc9ad0aced6c2282455bef4fb43462605c1f8758c74b4ab1dbf818c229daa",
+      "bytes": 733974
+    },
+    {
+      "source": "redroid-deploy/artifacts/scrcpy/scrcpy-win64-v5.0/LICENSE.txt",
+      "server": "/opt/monitor/geo-capture/vendor/SCRCPY-LICENSE.txt",
+      "sha256": "01c12035bf35af37241298dc7ad538eb2a07e5c940437bc6876feeaa9d1951d0",
+      "bytes": 11387
+    },
+    {
+      "source": "geo-monitor-deploy/scrcpy_stream.py",
+      "server": "/opt/monitor/geo-capture/scrcpy_stream.py",
+      "sha256": "9e14ba8e7af0930086bb3231ede41b2fd27a535e7972e1b7446c0f5a0f24e049",
+      "bytes": 7030
+    },
+    {
+      "source": "geo-monitor-deploy/deepseek_auth_monitor.py",
+      "server": "/opt/monitor/geo-capture/deepseek_auth_monitor.py",
+      "sha256": "34deaaec2cf9d9e8b404ab5c348c11ac56a4b01930c5faf9110bf4a91ba4f3eb",
+      "bytes": 3538
+    },
+    {
+      "source": "geo-monitor-deploy/deepseek_test_auth.py",
+      "server": "/opt/monitor/geo-capture/deepseek_test_auth.py",
+      "sha256": "aaf22c8a4dcd6b89d20cbdc246495adcc02a20705b49bac66a5d0f679240934c",
+      "bytes": 1777
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/geo-deepseek-auth-check.service",
+      "server": "/etc/systemd/system/geo-deepseek-auth-check.service",
+      "sha256": "01b0c77337c3958e0a5db093fdaba1227ffd92396464dd54d19c52d32d7c5fe3",
+      "bytes": 343
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/geo-deepseek-auth-check.timer",
+      "server": "/etc/systemd/system/geo-deepseek-auth-check.timer",
+      "sha256": "ceb7c3cfa819489c637791f1ca362878fe98aeeee0d927d058ae71534aebadc4",
+      "bytes": 215
+    },
+    {
+      "source": "deepseek-deploy/device.py",
+      "server": "/home/user/redroid-deepseek/code/device.py",
+      "sha256": "20ac74fc837cfde502362d01a7138b286934525bfb3171c8d1c0f8d907891def",
+      "bytes": 1898
+    },
+    {
+      "source": "deepseek-deploy/android.py",
+      "server": "/home/user/redroid-deepseek/code/android.py",
+      "sha256": "078e229b7f272f4296b2da053e64cdc768e3b23aaffd6d09f5d53b92f8b5dbbe",
+      "bytes": 4718
+    },
+    {
+      "source": "deepseek-deploy/reader.py",
+      "server": "/home/user/redroid-deepseek/code/reader.py",
+      "sha256": "828434d9d586ef18060ec130de4e34dd45c29fcc4c15470fbb263ad43b2b43be",
+      "bytes": 6933
+    },
+    {
+      "source": "deepseek-deploy/worker.py",
+      "server": "/home/user/redroid-deepseek/code/worker.py",
+      "sha256": "fbacc2569466ec3ec4908dcf273e06475e2eb67689d04e5fd754996d8699df59",
+      "bytes": 16060
+    },
+    {
+      "source": "deepseek-deploy/delivery.py",
+      "server": "/home/user/redroid-deepseek/code/delivery.py",
+      "sha256": "0ed3ea23d4c7aa0adaf8941e0cdc4d932cba2c158801e929d8eec5d146ca4dbf",
+      "bytes": 2915
+    },
+    {
+      "source": "deepseek-deploy/policy.py",
+      "server": "/home/user/redroid-deepseek/code/policy.py",
+      "sha256": "3b52acb752b3fb8ee8ad42e77817f153a569a58581fecbc6bf61bae79db91db8",
+      "bytes": 368
+    },
+    {
+      "source": "deepseek-deploy/private_capture.py",
+      "server": "/home/user/redroid-deepseek/code/private_capture.py",
+      "sha256": "4c00950f08be428c3711ca52248811860dbf5b76ba78810b173945c82d1dbd57",
+      "bytes": 1643
+    },
+    {
+      "source": "deepseek-deploy/account2/device.py",
+      "server": "/home/user/redroid-deepseek-account2/code/device.py",
+      "sha256": "55b8b7d8f4a292b81b8b70ffbd574d27f07cdd027bda9e4f635d74d6690a7bd2",
+      "bytes": 1949
+    },
+    {
+      "source": "deepseek-deploy/account2/worker.py",
+      "server": "/home/user/redroid-deepseek-account2/code/worker.py",
+      "sha256": "6fafb056396ca8527dea3c30a1fa90825079350e13f860a776ac5331fae62b25",
+      "bytes": 16071
+    },
+    {
+      "source": "deepseek-deploy/account2/delivery.py",
+      "server": "/home/user/redroid-deepseek-account2/code/delivery.py",
+      "sha256": "4903dba2d982ab1ad08c19f6bb530b43d632f7f1eeba4d9df40e0dd74edadd31",
+      "bytes": 2958
+    },
+    {
+      "source": "redroid-deploy/question_only_core.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/question_only_core.py",
+      "sha256": "ddc0b351865a0a2d0b52db2415b5e335908dd891e1464ad80f285a31622dd4bb",
+      "bytes": 17110
+    },
+    {
+      "source": "redroid-deploy/question_only_adapters.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/question_only_adapters.py",
+      "sha256": "65e0cb778d981a2c4e2f5e0e63f2123ad82c88d43a7148167eb771061e08fda0",
+      "bytes": 10253
+    },
+    {
+      "source": "redroid-deploy/question_only_delivery.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/question_only_delivery.py",
+      "sha256": "080a93aad3e9721eecee4da90542709b2abf3d9c7154e7712efc125332aee305",
+      "bytes": 4359
+    },
+    {
+      "source": "redroid-deploy/question_only_worker.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/question_only_worker.py",
+      "sha256": "a76e16a0f8203448431e26929ab73a4de93d9343ac980cea4baa6669d326e789",
+      "bytes": 18792
+    },
+    {
+      "source": "redroid-deploy/native_readback_guard.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/native_readback_guard.py",
+      "sha256": "ff92237e48df3dad8070639c14fb3deddee2c606361057965ae12a3fd26ff1bb",
+      "bytes": 2071
+    },
+    {
+      "source": "redroid-deploy/native_memory_guard.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/native_memory_guard.py",
+      "sha256": "92d7db5188d8749dc51979aac49fc71609994cf62d0a7a7be6378ed4ce442f0a",
+      "bytes": 9449
+    },
+    {
+      "source": "redroid-deploy/unattended_core.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/unattended_core.py",
+      "sha256": "15a1e704fb369b76b18a2bfcbe2f3401c562f72aa78ceabe0a79ffdfc6574876",
+      "bytes": 17824
+    },
+    {
+      "source": "redroid-deploy/geo_batch_bridge.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/geo_batch_bridge.py",
+      "sha256": "3904271e701a1dc5e8dbde45825c340970af2bee24b919e99357d41d113e78a6",
+      "bytes": 8258
+    },
+    {
+      "source": "yuanbao-deploy/delivery.py",
+      "server": "/home/user/redroid-yuanbao/delivery.py",
+      "sha256": "59a343ebd6234a10d4bff9850a5e34669771809295de5de6956e2a12c092b3fc",
+      "bytes": 10048
+    },
+    {
+      "source": "yuanbao-deploy/android_ui.py",
+      "server": "/home/user/redroid-yuanbao/android_ui.py",
+      "sha256": "0e6bbcd15a23d3eecd01711caf157eb422ed6be2605765dd0da2de58302cdf72",
+      "bytes": 3817
+    },
+    {
+      "source": "yuanbao-deploy/native_core.py",
+      "server": "/home/user/redroid-yuanbao/native_core.py",
+      "sha256": "cdb702c45571830ff2699f4e173c0ea0c80e761113d3b7b0521d95142b42fa5e",
+      "bytes": 9731
+    },
+    {
+      "source": "yuanbao-deploy/native_client.py",
+      "server": "/home/user/redroid-yuanbao/native_client.py",
+      "sha256": "26540d71f38fb0decc340a75114593d0c2252a41ad402d34123940a6e40bdca2",
+      "bytes": 7316
+    },
+    {
+      "source": "yuanbao-deploy/native_models.js",
+      "server": "/home/user/redroid-yuanbao/native_models.js",
+      "sha256": "3522e55b0c4e2dcfa09228e9ebe9f991628e1a3750eb366494336ab5787761b8",
+      "bytes": 7846
+    },
+    {
+      "source": "yuanbao-deploy/binding_recovery.py",
+      "server": "/home/user/redroid-yuanbao/binding_recovery.py",
+      "sha256": "9ae186fc2132ff0ed53c33e90ecb0bbc1386790a634c0430f84ace17a6357095",
+      "bytes": 1682
+    },
+    {
+      "source": "yuanbao-deploy/history_refresh.py",
+      "server": "/home/user/redroid-yuanbao/history_refresh.py",
+      "sha256": "865e3877a9d813d23fd2619469f3d740d97354f4c3d2124cf33fcdf172604639",
+      "bytes": 3965
+    },
+    {
+      "source": "yuanbao-deploy/tests/test_native_core.py",
+      "server": "/home/user/redroid-yuanbao/tests/test_native_core.py",
+      "sha256": "221a8f350d6e3bba0ebbd97210f9db2d568d5ab42967736df1f3cff4ac315964",
+      "bytes": 9828
+    },
+    {
+      "source": "yuanbao-deploy/tests/test_binding_recovery.py",
+      "server": "/home/user/redroid-yuanbao/tests/test_binding_recovery.py",
+      "sha256": "457abbb86695df92d0e1261846cf7d4c729e19f33768c9c85d73a4683dbf541e",
+      "bytes": 2433
+    },
+    {
+      "source": "yuanbao-deploy/tests/test_history_refresh.py",
+      "server": "/home/user/redroid-yuanbao/tests/test_history_refresh.py",
+      "sha256": "be3446b691b441550917ed451f66a7226278840a7e2f2ab7823d845c71107120",
+      "bytes": 3759
+    },
+    {
+      "source": "yuanbao-deploy/tests/test_native_client_recovery.py",
+      "server": "/home/user/redroid-yuanbao/tests/test_native_client_recovery.py",
+      "sha256": "fbce5b4f0a43e62b5a1b298fa17fda49bd8d4fb14c4945fd94286316723ceb71",
+      "bytes": 1609
+    },
+    {
+      "source": "geo-monitor-deploy/control_panel.py",
+      "server": "/opt/monitor/geo-capture/control_panel.py",
+      "sha256": "9b0d85194a47b2c8e2b15caad45556e8ab51cb259d426b5c9fe10f4a46aba964",
+      "bytes": 42224
+    },
+    {
+      "source": "geo-monitor-deploy/native_entry.py",
+      "server": "/opt/monitor/geo-capture/native_entry.py",
+      "sha256": "e73f290e4d4f9d437daf8c12a5717bfd35fc32fbe7692bfdb4650cc243918bfc",
+      "bytes": 2552
+    },
+    {
+      "source": "geo-monitor-deploy/panel.html",
+      "server": "/opt/monitor/geo-capture/panel.html",
+      "sha256": "8f1fca3d22fec0e5ebcfa6cdc635baa4a91b0c8a973b6561d8134c76f9b78fc5",
+      "bytes": 77975
+    },
+    {
+      "source": "geo-monitor-deploy/all_channel_soak.py",
+      "server": "/opt/monitor/geo-capture/all_channel_soak.py",
+      "sha256": "40b40963fa1c444527ba897c8ec4f1650f4462fe9f0162a9da030b6a7d50081b",
+      "bytes": 17716
+    },
+    {
+      "source": "geo-monitor-deploy/capture_bridge.py",
+      "server": "/opt/monitor/geo-capture/capture_bridge.py",
+      "sha256": "7ead217f3a50df88af092a8524f9ca40f1f9f921b65b421cdacd3a8a37115bd1",
+      "bytes": 19417
+    },
+    {
+      "source": "geo-monitor-deploy/runtime_reliability.py",
+      "server": "/opt/monitor/geo-capture/runtime_reliability.py",
+      "sha256": "d6296b0ea9822a03a2f0bdc253b57f8a9b98033afdc07666718aec3eb516fbc8",
+      "bytes": 4993
+    },
+    {
+      "source": "geo-monitor-deploy/baidu_body_delivery.py",
+      "server": "/opt/monitor/geo-capture/baidu_body_delivery.py",
+      "sha256": "464ad369772a6a4f026f430f03cfa4b107ad80bf08ed7747d5b33b7d853612ac",
+      "bytes": 10125
+    },
+    {
+      "source": "geo-monitor-deploy/fleet_status.py",
+      "server": "/opt/monitor/geo-capture/fleet_status.py",
+      "sha256": "845eaf239ab74e5a3e1d76f54aa116c7ddb5c8c74bc19e3bfdbe3e18589cf543",
+      "bytes": 16279
+    },
+    {
+      "source": "geo-monitor-deploy/manual_login.py",
+      "server": "/opt/monitor/geo-capture/manual_login.py",
+      "sha256": "9de75e07eb72d8b2b57466fdeee9f7a1932617a5a2e910fdb3deb6ee827f0e21",
+      "bytes": 6497
+    },
+    {
+      "source": "geo-monitor-deploy/deepseek_login_ui.py",
+      "server": "/opt/monitor/geo-capture/deepseek_login_ui.py",
+      "sha256": "4ec301b7c0fd9a42072e02cc31fd89e296be027f98e41082dcfd55638db18259",
+      "bytes": 7647
+    },
+    {
+      "source": "geo-monitor-deploy/deepseek_android_login.py",
+      "server": "/opt/monitor/geo-capture/deepseek_android_login.py",
+      "sha256": "6638b971f90670cf18c36f5e037a1422d7967f2ac599b99077ae259afb94316c",
+      "bytes": 8171
+    },
+    {
+      "source": "geo-monitor-deploy/deepseek_login.html",
+      "server": "/opt/monitor/geo-capture/deepseek_login.html",
+      "sha256": "9626b1c3051cd4ce690097367b7ed869e3bca5c8ad98362f85fff386ff80734d",
+      "bytes": 14271
+    },
+    {
+      "source": "geo-monitor-deploy/login_probe.py",
+      "server": "/opt/monitor/geo-capture/login_probe.py",
+      "sha256": "6ed747748c3a0df62d7144c87525d765f193e32889f9c58d58c28055bcca3063",
+      "bytes": 3922
+    },
+    {
+      "source": "geo-monitor-deploy/daily_dispatch.py",
+      "server": "/opt/monitor/geo-capture/daily_dispatch.py",
+      "sha256": "e7434499fe89cd7af9fdac44271a1c4ffe32fcadd3b016cb6ccd9a1c417a49e4",
+      "bytes": 7544
+    },
+    {
+      "source": "geo-monitor-deploy/daily_tasks.py",
+      "server": "/opt/monitor/geo-capture/daily_tasks.py",
+      "sha256": "8276a52a03d3a69d98bcd845ea7c52cbf74098370cf45729051ef7eafd5953cc",
+      "bytes": 20521
+    },
+    {
+      "source": "geo-monitor-deploy/schedule_control.py",
+      "server": "/opt/monitor/geo-capture/schedule_control.py",
+      "sha256": "bf0dd186706132e40dbc24ae4a4fd8d30d065499f54da7b9f1271a2e506d971e",
+      "bytes": 3015
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/doubao_dashboard_server.py",
+      "server": "/opt/monitor/doubao_dashboard_server.py",
+      "sha256": "1eddddb5744f0e353431c4e6909501d4ea4ef5db8b1ddc53c98580354cb2c22d",
+      "bytes": 456314
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/source_activity_index.py",
+      "server": "/opt/monitor/monitor_core/source_activity_index.py",
+      "sha256": "f1723e34a4dac8f7cf3b56d05f37b27584f08fe1b2e259d6986a6b9e7f8ccf0d",
+      "bytes": 4683
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/native_text.py",
+      "server": "/opt/monitor/monitor_core/native_text.py",
+      "sha256": "89ba3aa32c07b25b5b8240c6fd34c47a58d7e18b660259d51cfef1766dc40189",
+      "bytes": 2730
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/ingestion.py",
+      "server": "/opt/monitor/monitor_core/ingestion.py",
+      "sha256": "7f8bfc211e1c8badd1ec4e7d5957a4158f4c08c1e366b6817838294ddd6f6e83",
+      "bytes": 9176
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/owned_products.py",
+      "server": "/opt/monitor/monitor_core/owned_products.py",
+      "sha256": "149fc54dec63f2435072836373a01ad1869d2abda5ea795d22ff6995e49b3737",
+      "bytes": 10783
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/product_analysis.py",
+      "server": "/opt/monitor/monitor_core/product_analysis.py",
+      "sha256": "a69233cf391b017c7f24479b79e8cb8daf2ab974b84942ea185164b4ff13b0aa",
+      "bytes": 21867
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/analytics.py",
+      "server": "/opt/monitor/monitor_core/analytics.py",
+      "sha256": "05c6c2754ba0713038426955c260baf4025bbedaf5c0458e049d771186701518",
+      "bytes": 111885
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/save_doubao_refs.py",
+      "server": "/opt/monitor/save_doubao_refs.py",
+      "sha256": "8b772bea4ef52cb0c21bea2606c5bc87cbf9f7cbcab696a8e2581f4c98d24ac3",
+      "bytes": 138679
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/model_plugins/doubao/plugin.py",
+      "server": "/opt/monitor/model_plugins/doubao/plugin.py",
+      "sha256": "2bd048d87a068e2cc115fd7ad1404f7fd0c3879b5e73f155e9960db8d5daf5b6",
+      "bytes": 11647
+    },
+    {
+      "source": "geo-source-card-collectors/web_collectors/collector.py",
+      "server": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/web_collectors/collector.py",
+      "sha256": "8b97829607d0cb924d1a3bf8b735bbb0bd2f20e3a3affe29378bf7ec80171d0d",
+      "bytes": 37675
+    },
+    {
+      "source": "geo-source-card-collectors/web_collectors/browser.py",
+      "server": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/web_collectors/browser.py",
+      "sha256": "5c60a4bf3a543c3eafde33a28ce57a5ddca6e289e6613d60f55c8bec3d22adca",
+      "bytes": 8701
+    },
+    {
+      "source": "geo-source-card-collectors/web_collectors/session_store.py",
+      "server": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/web_collectors/session_store.py",
+      "sha256": "80c7568214adafe8d738c8fb69b58ad86e04e00fa2443bcf49fc9e0a7e39133b",
+      "bytes": 4348
+    },
+    {
+      "source": "geo-source-card-collectors/wenxin_monitor/controller.py",
+      "server": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/wenxin_monitor/controller.py",
+      "sha256": "461a06401eaf73a643e48e19f14c1fef45ef8b135b61f4c266d0185ad498770b",
+      "bytes": 53933
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/journal.py",
+      "server": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/journal.py",
+      "sha256": "773b171c1c81db136878a342bcabd1f12e8fcb0edbc19a9b20531f5cbd76f74b",
+      "bytes": 11301
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/search_recovery.py",
+      "server": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/search_recovery.py",
+      "sha256": "efae218472781fd72187aeaf5d4a937c6d1d6309c20358c7a0a4f8821e5c03c8",
+      "bytes": 7383
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/geo-daily-dispatch.service",
+      "server": "/etc/systemd/system/geo-daily-dispatch.service",
+      "sha256": "02a2f79fc2e5a513b6cdadecec28e94bab2c3131bb70b8669e56cbd367637e8f",
+      "bytes": 411
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/geo-daily-dispatch.timer",
+      "server": "/etc/systemd/system/geo-daily-dispatch.timer",
+      "sha256": "6d16c676adc15798fd7084e19e815525953fbb4b6590d277751f5e4d6fc2a010",
+      "bytes": 243
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/geo-daily-control.service",
+      "server": "/etc/systemd/system/geo-daily-control.service",
+      "sha256": "6547118efab1284cb03660365e3961021654aba6570635e40f9b6ea61e971f2f",
+      "bytes": 401
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/geo-creation-materials.service",
+      "server": "/etc/systemd/system/geo-creation-materials.service",
+      "sha256": "b41678948b7b2905294d901701d6696abd5510f0430e559b675ca1498e85cd03",
+      "bytes": 522
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/geo-creation-studio.service",
+      "server": "/etc/systemd/system/geo-creation-studio.service",
+      "sha256": "e435a9e2f2f06ed9efd53f989c42407e8623c618da4046eee22e2a635f5d792b",
+      "bytes": 534
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/geo-project-observe.service",
+      "server": "/etc/systemd/system/geo-project-observe.service",
+      "sha256": "bd7ad3a6f1c0102e1dda4b535e2e984e0367d01ec68e527ecb439551e8f21788",
+      "bytes": 394
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/geo-project-observe.timer",
+      "server": "/etc/systemd/system/geo-project-observe.timer",
+      "sha256": "8a612c892544997be0c08ff93c31ce0b4f3d9b785adba15357e79741a97fc1bd",
+      "bytes": 291
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/20-unattended.conf",
+      "server": "/etc/systemd/system/geo-web@.service.d/20-unattended.conf",
+      "sha256": "2803f813a3743ef548683d077457fe3aa4bc70c656574b0c302c38f71e9570f5",
+      "bytes": 129
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/30-schedule.conf",
+      "server": "/etc/systemd/system/geo-daily-dispatch.timer.d/30-schedule.conf",
+      "sha256": "77e03208434f881146d83d36b98a55c8d8fa4ea0cc35a17efa9294ad22c47ae7",
+      "bytes": 60
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/40-deepseek-android.conf",
+      "server": "/etc/systemd/system/geo-capture-deepseek.service.d/40-deepseek-android.conf",
+      "sha256": "a78b185da005c9bd94eb27ad35126ae6fda1d458b739698bebbe0f1f807486f0",
+      "bytes": 151
+    },
+    {
+      "source": "geo-monitor-deploy/config/daily_plan.json",
+      "server": "/opt/monitor/geo-capture/daily_plan.json",
+      "sha256": "9d0e0b24aaab2828d2103718039ba60a5a8ecaf17bfdaf853febcddd2cddddfd",
+      "bytes": 702
+    },
+    {
+      "source": "geo-monitor-deploy/config/unattended_policy.json",
+      "server": "/opt/monitor/geo-capture/unattended_policy.json",
+      "sha256": "c3e953b55484be76517bd31d54eb9f2cda130b39249d8da897e3b83b90bd9f67",
+      "bytes": 88
+    },
+    {
+      "source": "geo-monitor-deploy/config/deepseek_backend.json",
+      "server": "/opt/monitor/geo-capture/deepseek_backend.json",
+      "sha256": "1c924c22e540047ff36ae99bad11d1f4fc01004016da653189bba288c486277b",
+      "bytes": 178
+    },
+    {
+      "source": "geo-monitor-deploy/config/native_memory_policy.json",
+      "server": "/opt/monitor/geo-capture/native_memory_policy.json",
+      "sha256": "7aeffe625e640f5df6f2f047daebfa642be0e4a5aad7771faaaf56acaf3adf9c",
+      "bytes": 268
+    },
+    {
+      "source": "geo-monitor-deploy/config/creation_materials.json",
+      "server": "/opt/monitor/geo-content/materials/settings.json",
+      "sha256": "96386b1a253dfa2c646279d0621b5c9ea0b334f29af1d5e41463128819ccd04d",
+      "bytes": 1135
+    },
+    {
+      "source": "geo-monitor-deploy/config/creation_search_pool.json",
+      "server": "/opt/monitor/geo-content/creation_search_pool.json",
+      "sha256": "0da4a829f890cfdabea0e04be3ca020fc7b54e5e4b7df894f7ccd3dd21319f37",
+      "bytes": 197
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/cli.py",
+      "server": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/cli.py",
+      "sha256": "84f52dcf8f7b58480403ca238fb7e7044b0bb72fef380ba18b339e11ead5021c",
+      "bytes": 36346
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/reference_design.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/reference_design.py",
+      "sha256": "288fa149c18b75d6baf8b645af50642cd493e28153ce91f8854fd93d8534595b",
+      "bytes": 13857
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/article_logic.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/article_logic.py",
+      "sha256": "9759e752e89e6d6babf4b7056106982a7c7c67006c4527ac8bb70a0d98e44ed5",
+      "bytes": 10231
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/product_richness.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/product_richness.py",
+      "sha256": "d5cab8f7416e3330672ad0604078b4c205efcdae6977d62aa03bf08938be2ba4",
+      "bytes": 3840
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/product_identity.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/product_identity.py",
+      "sha256": "a6e8fb0d0cdcf8c14988ada74bbc1f1cb5c57a54e2a8cf09679523912c1a27ab",
+      "bytes": 1596
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/daily_editorial.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/daily_editorial.py",
+      "sha256": "7546a642b01a8246804f2414db08cbce71f96277d4ef7edb771d8bc57c6ebce9",
+      "bytes": 50628
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/genre_outline.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/genre_outline.py",
+      "sha256": "efb8e5dc0f7f6e942ad24d37c9903ac711d5381933ac84b880712274647a4e46",
+      "bytes": 7691
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/genre_length.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/genre_length.py",
+      "sha256": "f233347c4e42f17193ec11c68875db17e1042102a1cbf780e5c1cba19ea38662",
+      "bytes": 2132
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/genre_prompts.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/genre_prompts.py",
+      "sha256": "d6488956bc4cd7f7bee25672de1d2087712a0cfca7895bbb7945e9ef035cd2e3",
+      "bytes": 24477
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/article_allocation.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/article_allocation.py",
+      "sha256": "d1a2b5f5163b155a9b02864a51ebfee8f646dadd5696c270c009fbeea4cb4b5b",
+      "bytes": 1543
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/article_quality.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/article_quality.py",
+      "sha256": "e623b1d617c73ccedc52861d3891d0af3f6e6e02eff7ffa49a6fca3ff6bdcbe6",
+      "bytes": 1242
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/genre_pools.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/genre_pools.py",
+      "sha256": "ea139f4fccc40d3eaf77c9e50d0a8b4b04174432db5700cc2f1c2c69b40c911e",
+      "bytes": 8093
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/source_scope.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/source_scope.py",
+      "sha256": "e089ac755de1e3d9fd2d4f157e7d9a9d51b047ec2e258086f43842308a3ad793",
+      "bytes": 1852
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/word_export.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/word_export.py",
+      "sha256": "09e187d0b0a5be7c10e48f09add86562d253c66fb17e7ad1439a367111fe133b",
+      "bytes": 5787
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/api_worker.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/api_worker.py",
+      "sha256": "c4e781d23008c772dce4ff8b3dc3cf8f74cf828ae0c5725cd8da5153caa2decf",
+      "bytes": 26418
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/append_repair.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/append_repair.py",
+      "sha256": "bf0d3f084bc8612322bc3f022550ef634c43e8d484e18f908c45a973ce4210bf",
+      "bytes": 1970
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/auto_repair.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/auto_repair.py",
+      "sha256": "81e3ed26c725dc9915c3018746b05228ccdc5f25990ee4d46933703165956c45",
+      "bytes": 11700
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/consumer_voice.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/consumer_voice.py",
+      "sha256": "59552d35e1b72f1ee0d6ae1a72d8e0733024a167211046da8af5c2e9af4ddf85",
+      "bytes": 3587
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/consumer_prompts.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/consumer_prompts.py",
+      "sha256": "32db5510048be4c897604ed8e8a6367f77716865aca79ccbae83946d7b4009f9",
+      "bytes": 24434
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/api_prompts.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/api_prompts.py",
+      "sha256": "1d6afff2fff45e948a716eda2d7e4291d71dffe7bf03589c6a7c13fd0c9acc17",
+      "bytes": 20545
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/reference_prompts.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/reference_prompts.py",
+      "sha256": "2b5a1851ec089e4c182404de631b5e1e7c619656f396456ec6ae81aa1884cc8b",
+      "bytes": 9395
+    },
+    {
+      "source": "geo-source-card-collectors/geo_source_cards/staged_editorial.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/staged_editorial.py",
+      "sha256": "b133b1ea6b6fe42e2f2778168ab44db1812da6c57742e7efd93450511328a183",
+      "bytes": 28734
+    },
+    {
+      "source": "geo-monitor-deploy/creation/article_export.py",
+      "server": "/opt/monitor/geo-content/creation/article_export.py",
+      "sha256": "655a4e45b56ab2de4a494ca6ad8ecbf24a4ec1000bd91c4a8de080611e6b882d",
+      "bytes": 8846
+    },
+    {
+      "source": "geo-monitor-deploy/creation/browser_capture.py",
+      "server": "/opt/monitor/geo-content/creation/browser_capture.py",
+      "sha256": "3011f8f240b79f53926f6ba3145705eb8241acddcb94c1565320e81bce4cbb4c",
+      "bytes": 4996
+    },
+    {
+      "source": "geo-monitor-deploy/creation/client.py",
+      "server": "/opt/monitor/geo-content/creation/client.py",
+      "sha256": "ee5692782d24d74f992ea881566a41203a82cf071b5538732a2c9546d57b5a00",
+      "bytes": 2931
+    },
+    {
+      "source": "geo-monitor-deploy/creation/knowledge.py",
+      "server": "/opt/monitor/geo-content/creation/knowledge.py",
+      "sha256": "8b7514a062b4f531b6fecdf97a5b23a41f86932a9f6349a2d1dcba4b871e99a8",
+      "bytes": 2781
+    },
+    {
+      "source": "geo-monitor-deploy/creation/materials.py",
+      "server": "/opt/monitor/geo-content/creation/materials.py",
+      "sha256": "85809fd6ad9c4e58d1303a471b3b998dbb3aff141053081c0b1dfc221d002264",
+      "bytes": 17053
+    },
+    {
+      "source": "geo-monitor-deploy/creation/observation.py",
+      "server": "/opt/monitor/geo-content/creation/observation.py",
+      "sha256": "145094f5de8c6122ff124f2d8f486e55badb4de56a79417b2f89910f42ae53cb",
+      "bytes": 9702
+    },
+    {
+      "source": "geo-monitor-deploy/creation/panel.html",
+      "server": "/opt/monitor/geo-content/creation/panel.html",
+      "sha256": "12aea708bbb9dfc48fab4065bff06d19cb85027157929a8f443f10f66527794a",
+      "bytes": 72206
+    },
+    {
+      "source": "geo-monitor-deploy/creation/quality_repair.py",
+      "server": "/opt/monitor/geo-content/creation/quality_repair.py",
+      "sha256": "f87476442c775b14fc93b3fc1a364114e3410c148bc08e91be50326d9bb52e84",
+      "bytes": 14226
+    },
+    {
+      "source": "geo-monitor-deploy/creation/README.md",
+      "server": "/opt/monitor/geo-content/creation/README.md",
+      "sha256": "ea8b33eac443de9b353535aa9d0d13e17806cf05594773d8cad3ca2b66bd0f72",
+      "bytes": 3668
+    },
+    {
+      "source": "geo-monitor-deploy/creation/repair_followup.py",
+      "server": "/opt/monitor/geo-content/creation/repair_followup.py",
+      "sha256": "bf11c85a0f12647d3be8b330707692d421253017cbdc3ce28f75e0ff8217c0cd",
+      "bytes": 4586
+    },
+    {
+      "source": "geo-monitor-deploy/creation/runtime.py",
+      "server": "/opt/monitor/geo-content/creation/runtime.py",
+      "sha256": "50dd5b870e54711cc6ff1e8ed839a32798c8b92be7b218bd3ef2fd8524a3f4ce",
+      "bytes": 22197
+    },
+    {
+      "source": "geo-monitor-deploy/creation/service.py",
+      "server": "/opt/monitor/geo-content/creation/service.py",
+      "sha256": "0fb02fde74b68d9d78ced4328e98b135b4bbb20f182b08aa14f66ac89d889ba7",
+      "bytes": 5085
+    },
+    {
+      "source": "geo-monitor-deploy/creation/soak.py",
+      "server": "/opt/monitor/geo-content/creation/soak.py",
+      "sha256": "90446e1f44b70fc4f7162896c9e0a821bc45ee6120c06632f28b591275085f59",
+      "bytes": 6092
+    },
+    {
+      "source": "geo-monitor-deploy/creation/source_adapter.py",
+      "server": "/opt/monitor/geo-content/creation/source_adapter.py",
+      "sha256": "307d193e95814642a5789e18df4eb5944f395cf7618c0fdc576c48dcd325f622",
+      "bytes": 6715
+    },
+    {
+      "source": "geo-monitor-deploy/creation/studio.py",
+      "server": "/opt/monitor/geo-content/creation/studio.py",
+      "sha256": "d3853b3da9d3b5276cfcf4dd89624acf010e3abaff4bce308d5927d8c1193bbd",
+      "bytes": 22741
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_article_export.py",
+      "server": "/opt/monitor/geo-content/creation/test_article_export.py",
+      "sha256": "fb1bb07f06636aff59bbd1805bc974dae09af2aae6ab6213c681d3c715c3bffb",
+      "bytes": 1683
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_client.py",
+      "server": "/opt/monitor/geo-content/creation/test_client.py",
+      "sha256": "78012d79230248239fc167844cf35f6103308105275cb394216393b0c474c91a",
+      "bytes": 1557
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_client_projection.py",
+      "server": "/opt/monitor/geo-content/creation/test_client_projection.py",
+      "sha256": "1eed25805149f2baf22413744a8ad3cd22b1963a85448674f51609103586555d",
+      "bytes": 581
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_download_service.py",
+      "server": "/opt/monitor/geo-content/creation/test_download_service.py",
+      "sha256": "9cf51d9391228824c423f23443c36484a34ef71ea22f19d607cbd7acf3c73818",
+      "bytes": 1649
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_logic_client.py",
+      "server": "/opt/monitor/geo-content/creation/test_logic_client.py",
+      "sha256": "3de9943eb581f6cface4b5c89fc32d8d38dd269a15b08f93f9632e9acd86adaa",
+      "bytes": 1206
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_materials.py",
+      "server": "/opt/monitor/geo-content/creation/test_materials.py",
+      "sha256": "43c8702891aed6ae25c3aab7a703e270def33f7627a99d2255a272cd2fa35e90",
+      "bytes": 9992
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_observation.py",
+      "server": "/opt/monitor/geo-content/creation/test_observation.py",
+      "sha256": "c80fcaa6a79f1eb472608a2b2c2ce10d7a1f544b1e95b50131a93e489fb57c1a",
+      "bytes": 3387
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_quality_delivery_reuse.py",
+      "server": "/opt/monitor/geo-content/creation/test_quality_delivery_reuse.py",
+      "sha256": "8fb76c8bab722b654a57c4f4621473619dc887e30bf8beec42027411e933cf47",
+      "bytes": 1910
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_repair_followup.py",
+      "server": "/opt/monitor/geo-content/creation/test_repair_followup.py",
+      "sha256": "e5bb21344344a62f974f88266768817a8cf97fec1c1be8ddc7ee0331e6107e93",
+      "bytes": 3303
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_source_adapter.py",
+      "server": "/opt/monitor/geo-content/creation/test_source_adapter.py",
+      "sha256": "577e714a4c36c6956d1d2614f48b3621f012d4811b8b7689fac5114ccbe28bee",
+      "bytes": 2935
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_studio.py",
+      "server": "/opt/monitor/geo-content/creation/test_studio.py",
+      "sha256": "a2160c46c12a131cdd4db8922485ca46c62deabf3e82e87ede238ba1da328bef",
+      "bytes": 6915
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_worker_recovery.py",
+      "server": "/opt/monitor/geo-content/creation/test_worker_recovery.py",
+      "sha256": "502d3fb58b4355d8029838db2d3539478480666616170fd036c1b24ac726d9b1",
+      "bytes": 2032
+    },
+    {
+      "source": "geo-monitor-deploy/creation/test_workflow.py",
+      "server": "/opt/monitor/geo-content/creation/test_workflow.py",
+      "sha256": "9a9c7cbf85697b9bbf58505a7e9951a7a9cf0c642cb9c67f4878a4a7020a680b",
+      "bytes": 10762
+    },
+    {
+      "source": "geo-monitor-deploy/creation/wizard.js",
+      "server": "/opt/monitor/geo-content/creation/wizard.js",
+      "sha256": "2f7fe16c25319902a2063b6ff2deef7cf7185d479c65114bc3ab3401b465c385",
+      "bytes": 26353
+    },
+    {
+      "source": "geo-monitor-deploy/creation/wizard_sections.html",
+      "server": "/opt/monitor/geo-content/creation/wizard_sections.html",
+      "sha256": "c4a1bd42c75be080b7be3c58a32526c022325ec9c98403fa2a761ce0baa2e5ca",
+      "bytes": 6594
+    },
+    {
+      "source": "geo-monitor-deploy/creation/worker.py",
+      "server": "/opt/monitor/geo-content/creation/worker.py",
+      "sha256": "e8400557f237a883ba1ca69af5b31a6f807f8b49f08431dda679998244f6f6e6",
+      "bytes": 3374
+    },
+    {
+      "source": "geo-monitor-deploy/creation/__init__.py",
+      "server": "/opt/monitor/geo-content/creation/__init__.py",
+      "sha256": "047d05e2a69364e12b508814d3a267520ad0ed8f269557bdb28ddc6898c32ce9",
+      "bytes": 91
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/CaptureControl.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/CaptureControl.tsx",
+      "sha256": "259d751dcb755029c4b3470e70ea9114f31da112beb35bbdc4865d463817cba7",
+      "bytes": 2072
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/CreationControl.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/CreationControl.tsx",
+      "sha256": "293024b8e20cd59fe0b68cabe71c8637ab1dcc83800cc9c8f416e2b3ca7951db",
+      "bytes": 1222
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/Dashboard.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/Dashboard.tsx",
+      "sha256": "e8bd28062c414763814d5567c445f94af02a3c3f44eed62e097f02e824ffa7e1",
+      "bytes": 121666
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/dashboardPaths.ts",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/dashboardPaths.ts",
+      "sha256": "bb850895d405d253e014b8c6ece09c9466c336f45dd6f237a7bb9c41b215da3c",
+      "bytes": 256
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/globals.css",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/globals.css",
+      "sha256": "acec86b38671a3f4943af8eea2c2d8e52e8a7a695361c2a690bf427f84c27c54",
+      "bytes": 65887
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/api/geo-creation/[...path]/route.ts",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/api/geo-creation/[...path]/route.ts",
+      "sha256": "f83b229023a10b5dd55337ef40b79f56329d810a8c8aa0ca2d9882d1a85faa00",
+      "bytes": 3690
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/api/geo-capture/[...path]/route.ts",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/api/geo-capture/[...path]/route.ts",
+      "sha256": "36e96ad1e40071f9e3904df6ca8e887d02960adb9d92467e0fd09a43b16afed8",
+      "bytes": 7189
+    },
+    {
+      "source": "deepseek-browser-deploy/browser_backend.py",
+      "server": "/opt/monitor/geo-capture/browser_backend.py",
+      "sha256": "e5dc4e2bd5bf5e92e9e6d7ca385e059d868e2a587c36837e623846cf91b330bf",
+      "bytes": 2371
+    },
+    {
+      "source": "deepseek-browser-deploy/browser_task_bridge.py",
+      "server": "/opt/monitor/geo-capture/browser_task_bridge.py",
+      "sha256": "38fb8db900a7cbf56f8bf09ea0ff54fef23cfc62c421360052021e665cb44d81",
+      "bytes": 8098
+    },
+    {
+      "source": "deepseek-browser-deploy/browser_test.py",
+      "server": "/opt/monitor/geo-deepseek-browser-test/browser_test.py",
+      "sha256": "45deafae558d6abb17803249418083dae86bddb79255470c8e1a9ac9afd66a8d",
+      "bytes": 11476
+    },
+    {
+      "source": "deepseek-browser-deploy/auth_probe.js",
+      "server": "/opt/monitor/geo-deepseek-browser-test/auth_probe.js",
+      "sha256": "4d47dfbeed42d7aa33e83684097b202fbaced19a4d8d4f838938295fe8ed887d",
+      "bytes": 1332
+    },
+    {
+      "source": "deepseek-browser-deploy/login.html",
+      "server": "/opt/monitor/geo-deepseek-browser-test/login.html",
+      "sha256": "0de88ce8ae9b03a69b512ff892e02342140b9f2e2be0e0acb41e6463da194ba7",
+      "bytes": 6413
+    },
+    {
+      "source": "deepseek-browser-deploy/project/extension/background.js",
+      "server": "/opt/monitor/geo-deepseek-browser-test/project/extension/background.js",
+      "sha256": "293470c641bee0b4c9ee8e9a8f862ac22521998cc4088f5ee6668862c5c13d84",
+      "bytes": 30781
+    },
+    {
+      "source": "deepseek-browser-deploy/project/extension/content.js",
+      "server": "/opt/monitor/geo-deepseek-browser-test/project/extension/content.js",
+      "sha256": "9b5f38ad0e51b506b7c019eba78ae80f94855e0f8367883ef1c29cd23013bb54",
+      "bytes": 60043
+    },
+    {
+      "source": "deepseek-browser-deploy/project/extension/core.js",
+      "server": "/opt/monitor/geo-deepseek-browser-test/project/extension/core.js",
+      "sha256": "9e1112d102c8a830568a753cafa2bd62491d37a863fb4025d572824de87f875e",
+      "bytes": 14608
+    },
+    {
+      "source": "deepseek-browser-deploy/project/extension/injected.js",
+      "server": "/opt/monitor/geo-deepseek-browser-test/project/extension/injected.js",
+      "sha256": "356ee1ea3faa137c6caed0b6eaa9787abcb800eca8bb76626a5338a9262cb3a2",
+      "bytes": 4520
+    },
+    {
+      "source": "deepseek-browser-deploy/project/extension/manifest.json",
+      "server": "/opt/monitor/geo-deepseek-browser-test/project/extension/manifest.json",
+      "sha256": "44d466ed815d6eab183801c2eb5e1fd15ed959acf1040ef83c1343a0088a1789",
+      "bytes": 1009
+    },
+    {
+      "source": "deepseek-browser-deploy/project/extension/popup.html",
+      "server": "/opt/monitor/geo-deepseek-browser-test/project/extension/popup.html",
+      "sha256": "41eaa5ee3d85a6d2284225f9d0efead2b734ae6c95fbe7e7a7d7053db448d31d",
+      "bytes": 5543
+    },
+    {
+      "source": "deepseek-browser-deploy/project/extension/popup.js",
+      "server": "/opt/monitor/geo-deepseek-browser-test/project/extension/popup.js",
+      "sha256": "20650ad0feb8d9adf9f8461b5c2a452b18f01f61fe7d5514336eeac4cb5515a6",
+      "bytes": 29281
+    },
+    {
+      "source": "deepseek-browser-deploy/project/extension/ui.css",
+      "server": "/opt/monitor/geo-deepseek-browser-test/project/extension/ui.css",
+      "sha256": "63fc1a465db818b24d9efe509640691e6cdf18de9ddfc6779a768e394c41e42c",
+      "bytes": 7808
+    },
+    {
+      "source": "deepseek-browser-deploy/project/local_receiver.py",
+      "server": "/opt/monitor/geo-deepseek-browser-test/project/local_receiver.py",
+      "sha256": "3aec63fa74218de38f89d726581670b8daa8584caf2c054f26bdbce4c60d55b5",
+      "bytes": 17698
+    },
+    {
+      "source": "deepseek-browser-deploy/project/remote_sync.py",
+      "server": "/opt/monitor/geo-deepseek-browser-test/project/remote_sync.py",
+      "sha256": "e6408991304c09d2b12bdda7fdda8ceb6cbfca772fa4aecfb55a408dabde9e06",
+      "bytes": 11471
+    },
+    {
+      "source": "deepseek-deploy/android.py",
+      "server": "/home/user/redroid-deepseek-account2/code/android.py",
+      "sha256": "078e229b7f272f4296b2da053e64cdc768e3b23aaffd6d09f5d53b92f8b5dbbe",
+      "bytes": 4718
+    },
+    {
+      "source": "deepseek-deploy/reader.py",
+      "server": "/home/user/redroid-deepseek-account2/code/reader.py",
+      "sha256": "828434d9d586ef18060ec130de4e34dd45c29fcc4c15470fbb263ad43b2b43be",
+      "bytes": 6933
+    },
+    {
+      "source": "deepseek-deploy/policy.py",
+      "server": "/home/user/redroid-deepseek-account2/code/policy.py",
+      "sha256": "3b52acb752b3fb8ee8ad42e77817f153a569a58581fecbc6bf61bae79db91db8",
+      "bytes": 368
+    },
+    {
+      "source": "deepseek-deploy/auth_policy.py",
+      "server": "/home/user/redroid-deepseek-account2/code/auth_policy.py",
+      "sha256": "029d636b72201333a63cfe3a5ad45619b407cde29b7fbe0e2f391a96c8491e1f",
+      "bytes": 3689
+    },
+    {
+      "source": "geo-monitor-deploy/runtime_reliability.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/runtime_reliability.py",
+      "sha256": "d6296b0ea9822a03a2f0bdc253b57f8a9b98033afdc07666718aec3eb516fbc8",
+      "bytes": 4993
+    },
+    {
+      "source": "geo-monitor-deploy/runtime_reliability.py",
+      "server": "/home/user/redroid-yuanbao/runtime_reliability.py",
+      "sha256": "d6296b0ea9822a03a2f0bdc253b57f8a9b98033afdc07666718aec3eb516fbc8",
+      "bytes": 4993
+    },
+    {
+      "source": "geo-monitor-deploy/systemd/20-unattended.conf",
+      "server": "/etc/systemd/system/geo-native@.service.d/20-unattended.conf",
+      "sha256": "2803f813a3743ef548683d077457fe3aa4bc70c656574b0c302c38f71e9570f5",
+      "bytes": 129
+    }
+  ],
+  "zip_sha256": "da2502a3782c500fb9a5e2fd3cdcf70d8fa7bf6e618f2e66357dfff8732c3b9a"
+}

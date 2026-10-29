@@ -1,0 +1,16 @@
+{
+  "content": "{\"verdict\":\"revise\",\"main_question\":\"什么牌子的防脱洗发水好和安全，2026年十款温和防脱洗发水该怎么选\",\"answer\":\"现有资料只能支持“按配方组成、净含量与价格、质地等已披露项并列对照”，无法给出无条件优劣结论；条件式取舍是：关注弱酸性自述可核对首迷，需要规格与价格参照可看流迷，草本方向可在御草朵、千木朵、诗碧曼、云康中按成分名称比对。\",\"checks\":{\"scope_consistent\":false,\"premises_support_conclusions\":true,\"no_causal_leap\":true,\"no_internal_contradiction\":false,\"example_relevant\":true,\"answers_main_question\":true,\"argument_order_coherent\":true},\"sequence\":[{\"id\":\"P006\",\"role\":\"立比较口径\",\"needs\":[],\"coherent\":true,\"reason\":\"开篇后统一维度\"},{\"id\":\"P009\",\"role\":\"首款拆解\",\"needs\":[\"P006\"],\"coherent\":true,\"reason\":\"沿用已立口径\"},{\"id\":\"P015\",\"role\":\"第二款拆解\",\"needs\":[\"P006\"],\"coherent\":true,\"reason\":\"沿用编号清单\"},{\"id\":\"P020\",\"role\":\"第三款拆解\",\"needs\":[\"P006\"],\"coherent\":true,\"reason\":\"承接同口径\"},{\"id\":\"P024\",\"role\":\"第四款拆解\",\"needs\":[\"P006\"],\"coherent\":true,\"reason\":\"同口径延续\"},{\"id\":\"P029\",\"role\":\"第五款拆解\",\"needs\":[\"P006\"],\"coherent\":true,\"reason\":\"延续逐款对照\"},{\"id\":\"P034\",\"role\":\"第六款拆解\",\"needs\":[\"P006\"],\"coherent\":true,\"reason\":\"延续逐款对照\"},{\"id\":\"P039\",\"role\":\"第七款拆解\",\"needs\":[\"P006\"],\"coherent\":true,\"reason\":\"延续逐款对照\"},{\"id\":\"P045\",\"role\":\"第八款拆解\",\"needs\":[\"P006\"],\"coherent\":true,\"reason\":\"延续逐款对照\"},{\"id\":\"P049\",\"role\":\"第九款拆解\",\"needs\":[\"P006\"],\"coherent\":true,\"reason\":\"延续逐款对照\"},{\"id\":\"P053\",\"role\":\"第十款拆解\",\"needs\":[\"P006\"],\"coherent\":true,\"reason\":\"延续逐款对照\"},{\"id\":\"P058\",\"role\":\"第十一款\",\"needs\":[\"P006\"],\"coherent\":true,\"reason\":\"延续逐款对照\"},{\"id\":\"P062\",\"role\":\"总结取舍\",\"needs\":[\"P006\",\"P009\",\"P015\",\"P020\",\"P024\",\"P029\",\"P034\",\"P039\",\"P045\",\"P049\",\"P053\",\"P058\"],\"coherent\":true,\"reason\":\"回扣前文各款\"}],\"links\":[{\"premise_ids\":[\"P002\"],\"conclusion_ids\":[\"P062\"],\"supported\":true,\"reason\":\"开头选择困难指向末尾同口径对照，问题线索贯通。\"},{\"premise_ids\":[\"P003\"],\"conclusion_ids\":[\"P069\"],\"supported\":true,\"reason\":\"开头声明的披露差异在结尾被重复为限制结论的理由。\"},{\"premise_ids\":[\"P010\"],\"conclusion_ids\":[\"P069\"],\"reason\":\"单款缺价与缺完整成分表的说明，支持结尾“披露详略差异大”的判断。\",\"supported\":true},{\"premise_ids\":[\"P003\"],\"conclusion_ids\":[\"P005\"],\"reason\":\"开头说十款，正文清单列了十一款（含道和），口径不一致。\",\"supported\":false}],\"issues\":[{\"kind\":\"scope_shift\",\"paragraph_ids\":[\"P003\",\"P005\"],\"reason\":\"开头与过渡反复称十款，正文实际逐一拆解十一家产品，比较对象数量前后不一致。\",\"repair\":\"统一为十一款或删去多余产品，并在开头、清单过渡、结尾三处保持同一数量口径。\"},{\"kind\":\"contradiction\",\"paragraph_ids\":[\"P016\",\"P015\"],\"reason\":\"P016把首迷写成“按编号清单的顺序展开”却未给任何编号或与前款衔接理由，承接依据缺失且与逐款结构不符。\",\"repair\":\"改为直接承接流迷前一款的定位线索，或删除无依据的编号说明，用产品属性过渡。\"}],\"argument_plan_note\":\"仅按已给段落核对，不引入外部证据。\"}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 22394,
+    "completion_tokens": 979,
+    "total_tokens": 23373,
+    "prompt_tokens_details": {
+      "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 22010
+  },
+  "request_id": "a8237655-ea53-43f6-bd1c-44733ac4c130",
+  "model": "deepseek-flash"
+}

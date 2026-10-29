@@ -1,0 +1,62 @@
+[
+  {
+    "name": "/monitor-dashboard",
+    "status": "running",
+    "health": null,
+    "restart_count": 0
+  },
+  {
+    "name": "/monitor-dashboard-api",
+    "status": "running",
+    "health": "healthy",
+    "restart_count": 0
+  },
+  {
+    "name": "/monitor-result-receiver",
+    "status": "running",
+    "health": "healthy",
+    "restart_count": 0
+  },
+  {
+    "name": "/monitor-doubao-receiver",
+    "status": "running",
+    "health": "healthy",
+    "restart_count": 0
+  },
+  {
+    "name": "/monitor-product-worker",
+    "status": "running",
+    "health": "healthy",
+    "restart_count": 0
+  },
+  {
+    "name": "/monitor-content-worker",
+    "status": "running",
+    "health": "healthy",
+    "restart_count": 0
+  },
+  {
+    "name": "/monitor-postgres",
+    "status": "running",
+    "health": "healthy",
+    "restart_count": 0
+  },
+  {
+    "name": "/monitor-redis",
+    "status": "running",
+    "health": null,
+    "restart_count": 0
+  },
+  {
+    "name": "/doubao-hpe14-13-test",
+    "status": "running",
+    "health": null,
+    "restart_count": 0
+  },
+  {
+    "name": "/doubao-hpe14-account2",
+    "status": "running",
+    "health": null,
+    "restart_count": 0
+  }
+]

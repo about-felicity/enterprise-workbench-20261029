@@ -1,0 +1,42 @@
+{
+  "id": "1f075c298a21627d0d8b2941",
+  "stage": "writer",
+  "location": "days/2026-10-21/articles/测评类/02/writer",
+  "inputs": {
+    "writing_prompt.md": "70d456fa3fe867a5ad76dc6ef379765aa2490f6e7ee8d1b83fff6971f5e21edf",
+    "writing_job.json": "885b0e44a7a89e094d5a00a24aaf1ba6bd9ef8466553283371c62432edd0b839",
+    "knowledge.json": "0ea4522952f4a8ebb090f75eb3bf83176e6685e09662106886a711a1f5de292f",
+    "product.json": "4c7ecaec7c55fdb06708dc09dd2684362e34b4e0de1e478c073b5d470056afab",
+    "writing_task.txt": "6b43807599d7d357a5533836e2fa996846222a0de0db901c2569bb50deea25ed",
+    "category.json": "eed39aeab8fcd8830de29fdf75187b0afa902008beddbe8d2119b711e8316cd9",
+    "batch_rules.md": "f3de0e2f5f3ff2dc78bf57068e48b1f7ecdb7d3834f56af2ab79a955da688e2b"
+  },
+  "outputs": [
+    "draft.md",
+    "article.docx",
+    "claim_map.json",
+    "knowledge_to_sections.json",
+    "writer_done.json"
+  ],
+  "meta": {
+    "date": "2026-10-21",
+    "category": "测评类",
+    "number": 2,
+    "revision": 1,
+    "consumer_rewrite": true,
+    "paragraph_repair": false,
+    "known_response_replay": false,
+    "acceptance_version": "three-agent-20261022-v1"
+  },
+  "state": "revision_requested",
+  "created_at": "2026-10-22T17:45:00.562479+08:00",
+  "client": "e80b6d80455851a92c808620",
+  "claimed_at": "2026-10-22T17:45:00.582948+08:00",
+  "execution": {
+    "run_id": "08ee3e1b3de618d868e94cda",
+    "generation": 1
+  },
+  "error": "Draft checks rejected: 正文超过约定长度; 正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：对照下来会发现，原文十款产品的资质、成分和规格披露详略差",
+  "replaced_by": "c787449f1bab119f1caa4baf",
+  "operator_reason": "自动定向修复第1/3轮，策略：consumer_voice,length。\n重写来源解读段为直接面向读者的文章。原文/主参考/知识库/编排等只属于内部溯源，不改成相关资料作替身；有证据的产品组成直接简洁介绍，未经证实的功效省略，不能删除归属后升级为事实。\n压缩重复和冗长段落，符合本稿上下限，同时保留全部提纲与产品名单，不能改成摘要。\n实际错误：Draft checks rejected: 正文超过约定长度; 正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：对照下来会发现，原文十款产品的资质、成分和规格披露详略差\n保留当天资料、来源合同、全部质量门槛与预算上限。"
+}

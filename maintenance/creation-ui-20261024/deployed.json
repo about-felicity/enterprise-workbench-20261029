@@ -1,0 +1,48 @@
+{
+  "at": 1792812151.5814798,
+  "files": [
+    {
+      "server": "/opt/monitor/geo-content/creation/panel.html",
+      "sha256": "4b42baacd622bf22ecc5d7d3212bf9b8520a9eacaf5dd28f057ed6cb7b8b5065",
+      "previous_sha256": "22901201429ca0b3826f826a73760846b4693a0a3fc57c2153b1814f6f722550"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/studio.py",
+      "sha256": "2c1900930f8514a9c02348c5dff30d1a5777ef839cbc9fe66fc798d1104344b4",
+      "previous_sha256": "69d9a3f790a8479b9c83e173ec840cc16dddbfd4cd71adb7d4cd0a10ef5f802a"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/runtime.py",
+      "sha256": "b1014b5c9cdb953c2ed638738bbfd5a00796bd0bad75e3cf5146cee4062678b3",
+      "previous_sha256": "d88e8365c83283a572639a08efbb24276e419dff994b3e3234b30beeb184b23c"
+    }
+  ],
+  "tests": 66,
+  "ui": {
+    "success": true,
+    "checks": [
+      "所有终态无可点击暂停/继续按钮",
+      "暂停/继续反馈和重复点击防护",
+      "Word导入、字段回填、保存失败后保留输入并恢复按钮",
+      "新建保存成功返回任务列表，仅建立一次任务",
+      "删除取消/确认、响应丢失后按原编号核对，不重复执行",
+      "断线时禁止写操作，筛选刷新不绕过锁定，重连后恢复",
+      "390px移动端无横向溢出"
+    ],
+    "page_errors": [],
+    "requests": {
+      "day_pause": 1,
+      "day_resume": 1,
+      "kb_import": 1,
+      "kb_save": 1,
+      "plan_save": 2,
+      "plan_delete": 2
+    },
+    "paid_requests": 0
+  },
+  "services": {
+    "geo-content-api": "active",
+    "geo-creation-studio": "active",
+    "geo-content-worker": "active"
+  }
+}

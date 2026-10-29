@@ -1,0 +1,43 @@
+{
+  "input_sha256": "91e96509a55a0f5e5f47b2a530054e257c40e0c7ba26ea1e92dafc91c3f63036",
+  "result_sha256": "abe3d88e1f7a355505b7c78fc570beb2172f7e66be3d647cab8fc38bbb0940ae",
+  "result": {
+    "article_topic": "可用资料的组织方式",
+    "article_purpose": "以同一问题组织已有资料",
+    "genre": "review",
+    "sections": [
+      {
+        "section_id": "AS-O0044",
+        "role": "subject",
+        "role_status": "inferred",
+        "topic": "说明当前部分",
+        "purpose": "解释前提并承接下文",
+        "moves": [
+          "explain",
+          "qualify"
+        ],
+        "after": "AS-O0039",
+        "anchors": [
+          "O0044",
+          "O0048"
+        ]
+      },
+      {
+        "section_id": "AS-O0049",
+        "role": "subject",
+        "role_status": "inferred",
+        "topic": "说明当前部分",
+        "purpose": "解释前提并承接下文",
+        "moves": [
+          "explain",
+          "qualify"
+        ],
+        "after": "AS-O0044",
+        "anchors": [
+          "O0049",
+          "O0055"
+        ]
+      }
+    ]
+  }
+}

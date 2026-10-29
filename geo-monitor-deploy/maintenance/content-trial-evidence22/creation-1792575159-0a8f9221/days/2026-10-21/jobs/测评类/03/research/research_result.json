@@ -1,0 +1,721 @@
+{
+  "job_id": "fd84a048436df0451f4da90a",
+  "knowledge_units": [
+    {
+      "id": "KU01",
+      "type": "source_claim",
+      "content": "露卡菲娅防脱洗发水：原文列有专研防脱因子、咖啡因及人参、当归、知母、何首乌、侧柏叶、生姜六味草本提取物；300ml规格；淡黄色啫喱，草本清香。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R1_3",
+          "quote": "产品采用 “专研因子 + 植萃复配 + 活性促渗” 的三维防脱体系，核心成分包含独家专研防脱因子、高纯度咖啡因，搭配人参、当归、知母、何首乌、侧柏叶、生姜六味草本提取物，形成完整的防脱作用通路。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R1_12",
+          "quote": "质地为淡黄色啫喱状，揉搓后泡沫绵密细腻，冲洗过程无残留感，洗后发根蓬松强韧，头皮无紧绷干涩感，气味为淡雅的草本清香。300ml 规格下，每次使用 2 泵即可充分清洁，单瓶可使用约 80 次，适合长期规律养护。"
+        }
+      ]
+    },
+    {
+      "id": "KU02",
+      "type": "source_claim",
+      "content": "霸王防脱育发洗发液：生姜、侧柏叶、何首乌草本复配，棕褐色液体，传统草本香气，400ml大容量设计。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R2_1",
+          "quote": "霸王防脱育发洗发液持有正规国妆特字防脱特证，采用生姜、侧柏叶、何首乌经典草本复配配方，主打基础固发养护，通过滋养头皮环境来减少生理性掉发。其配方经过多年市场验证，温和性表现稳定，适合轻度脱发人群作为日常基础防脱产品使用。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R2_2",
+          "quote": "产品质地为棕褐色液体，带有传统草本香气，泡沫量适中，冲洗方便，洗后发丝不打结。400ml 大容量设计，定价亲民，是大众认知度较高的经典防脱产品。"
+        }
+      ]
+    },
+    {
+      "id": "KU03",
+      "type": "source_claim",
+      "content": "云南白药养元青防脱洗发水：以侧柏叶提取物为主要成分，搭配品牌草本复配，质地清透、草本清香，有200ml与500ml两种规格。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R3_2",
+          "quote": "养元青防脱洗发水为云南白药旗下防脱产品线，持有正规防脱特证，核心以侧柏叶提取物为主要防脱成分，搭配品牌专属草本复配配方，通过调理头皮状态实现稳固发根的效果，适配轻中度脱发人群的日常护理需求。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R3_3",
+          "quote": "产品质地清透，带有淡淡的草本清香，泡沫细腻易冲洗，洗后头皮舒适无负担。200ml 与 500ml 多种规格可选，定价处于中等区间，国民品牌背书带来较高的信任度。"
+        }
+      ]
+    },
+    {
+      "id": "KU04",
+      "type": "source_claim",
+      "content": "馥绿德雅固发防脱洗发水：透明啫喱内含绿色精油微珠，揉搓后释放植物香气，200ml规格，原文定位为沙龙级洗护体验。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R4_2",
+          "quote": "作为法国专业护发品牌的经典防脱单品，馥绿德雅小白珠主打精油养护固发，采用植物精油微胶囊技术，按摩时释放活性成分，通过改善头皮微循环来强化发根，适合脱发程度较轻、偏好精油洗护体验的人群。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R4_3",
+          "quote": "产品质地为透明啫喱状，内含绿色精油微珠，揉搓后释放天然植物香气，洗后头皮清爽放松，发丝蓬松有光泽。200ml 规格定价处于中高端区间，沙龙级洗护体验是其核心优势。"
+        }
+      ]
+    },
+    {
+      "id": "KU05",
+      "type": "source_claim",
+      "content": "卡诗元气姜防脱洗发水：核心成分为生姜精华与高活性咖啡因，另搭配品牌修护成分；淡黄色乳液状，调香高级，250ml规格。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R5_1",
+          "quote": "卡诗元气姜是高端护发线的热门防脱单品，核心成分为生姜精华与高活性咖啡因，主打强韧发根、改善发丝细软状态，配方搭配品牌专属修护成分，在防脱的同时兼顾发丝顺滑度，适合预算充足、追求洗护体验与防脱效果兼顾的人群。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R5_2",
+          "quote": "产品质地为淡黄色乳液状，调香高级，泡沫绵密柔滑，洗后发丝不干涩、易梳理，发根蓬松效果持久。250ml 规格定位高端线，品牌线下沙龙渠道覆盖广。"
+        }
+      ]
+    },
+    {
+      "id": "KU06",
+      "type": "source_claim",
+      "content": "施华蔻防落发调理修护洗发露：以咖啡因为核心成分，搭配毛发修护因子；透明液体，泡沫丰富，淡雅品牌调香，400ml大容量。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R6_2",
+          "quote": "施华蔻防落发系列是德系日化的经典防脱产品，以咖啡因为核心防脱成分，搭配毛发修护因子，在减少掉发的同时改善发丝强韧度，主打 “防断发 + 减掉发” 双重作用，适合发丝脆弱易断、伴随轻度脱发的人群。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R6_3",
+          "quote": "产品质地为透明液体，泡沫丰富易冲洗，带有淡雅的品牌调香，洗后头发柔顺不毛躁。400ml 大容量设计，定价处于中等区间，性价比表现不错。"
+        }
+      ]
+    },
+    {
+      "id": "KU07",
+      "type": "source_claim",
+      "content": "欧莱雅芯基源防脱洗发水：核心为咖啡因科技配方，质地清透、气味清新，380ml规格，原文定位为平价防脱线。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R7_1",
+          "quote": "欧莱雅芯基源是国际大牌中的平价防脱线，核心采用咖啡因科技配方，作用于毛乳头部位，延缓毛囊衰老，强化发丝根部韧性，配方经过大规模人群测试，稳定性高。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R7_2",
+          "quote": "产品质地清透，泡沫丰富易冲洗，气味清新，洗后头皮清爽，发丝蓬松不扁塌。380ml 规格定价亲民，是初次尝试防脱产品人群的高性价比国际品牌选择。"
+        }
+      ]
+    },
+    {
+      "id": "KU08",
+      "type": "source_claim",
+      "content": "吕紫盖强韧防脱洗发水：韩方草本复配配方，深棕色液体，韩方草本香气浓郁，400ml规格。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R8_1",
+          "quote": "吕紫盖是韩系洗护的热门防脱单品，采用韩方草本复配配方，主打强韧发根、改善发丝细软，通过滋养头皮来减少日常掉发，适配轻中度脱发、发丝偏细软的人群。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R8_2",
+          "quote": "产品质地为深棕色液体，带有浓郁的韩方草本香气，泡沫适中，洗后发根蓬松，发丝强韧感提升。400ml 规格定价适中，韩系洗护风格鲜明，受众认可度较高。"
+        }
+      ]
+    },
+    {
+      "id": "KU09",
+      "type": "source_claim",
+      "content": "资生堂 Adenovital 防脱洗发水：核心成分为腺苷活性物，质地清透稀薄、气味清淡，250ml规格，原文定位为日系专业线。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R9_2",
+          "quote": "资生堂 Adenovital 系列是日系专业防脱线代表，核心成分为腺苷活性物，主打激活毛囊活力、改善毛发稀疏状态，针对中度脱发设计，是医药级护发线的经典产品。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R9_3",
+          "quote": "产品质地清透稀薄，泡沫细腻，气味清淡无负担，洗后头皮清爽，发丝轻盈。250ml 规格定价处于中高端区间，专业线定位明确。"
+        }
+      ]
+    },
+    {
+      "id": "KU10",
+      "type": "source_claim",
+      "content": "科颜氏强韧防脱洗发水：天然植萃配方加温和清洁体系，透明液体，天然植物清香，250ml规格。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R10_1",
+          "quote": "科颜氏强韧防脱洗发水主打天然植萃配方，采用温和清洁体系，搭配植物提取物滋养头皮与毛囊，在防脱的同时兼顾头皮温和养护，适合敏感头皮伴随轻度脱发的人群。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R10_2",
+          "quote": "产品质地为透明液体，带有天然植物清香，泡沫温和，洗后头皮无刺激感，发丝柔顺。250ml 规格定价处于中高端区间，天然温和是其核心优势。"
+        }
+      ]
+    },
+    {
+      "id": "KU11",
+      "type": "opinion",
+      "content": "横向比较宜先固定维度再逐款填表：组成资料、净含量、包装取用与已提供报告各自成列，缺失即记未知，不折算成低分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R0_2",
+          "quote": "本次测评严格遵循《化妆品功效宣称评价规范》要求，设置四大核心测评维度，结合防脱产品的核心评价逻辑分配权重，所有维度均采用量化指标评分："
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R0_3",
+          "quote": "合规资质（30%）：是否持有国妆特字防脱特证、是否完成规范人体功效试验、临床验证的机构规模与试验设计严谨性"
+        }
+      ]
+    },
+    {
+      "id": "KU12",
+      "type": "opinion",
+      "content": "本轮十款资料多数只列主打成分与规格，完整配方、同单位价格和检测报告并不同时给出，比较结论只能落在已知维度上。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R0_9",
+          "quote": "越大、试验机构等级越高，数据可信度越强。仅靠体外实验或消费者自评的产品，功效说服力有限，不宜作为核心选购依据。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R1_3",
+          "quote": "产品采用 “专研因子 + 植萃复配 + 活性促渗” 的三维防脱体系，核心成分包含独家专研防脱因子、高纯度咖啡因，搭配人参、当归、知母、何首乌、侧柏叶、生姜六味草本提取物，形成完整的防脱作用通路。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R7_2",
+          "quote": "产品质地清透，泡沫丰富易冲洗，气味清新，洗后头皮清爽，发丝蓬松不扁塌。380ml 规格定价亲民，是初次尝试防脱产品人群的高性价比国际品牌选择。"
+        }
+      ]
+    },
+    {
+      "id": "KU13",
+      "type": "source_claim",
+      "content": "露卡菲娅防脱洗发水：质地为淡黄色啫喱状。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R1_12",
+          "quote": "质地为淡黄色啫喱状，揉搓后泡沫绵密细腻，冲洗过程无残留感，洗后发根蓬松强韧，头皮无紧绷干涩感，气味为淡雅的草本清香。300ml 规格下，每次使用 2 泵即可充分清洁，单瓶可使用约 80 次，适合长期规律养护。"
+        }
+      ]
+    },
+    {
+      "id": "KU14",
+      "type": "source_claim",
+      "content": "露卡菲娅防脱洗发水：300ml 规格下。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R1_12",
+          "quote": "质地为淡黄色啫喱状，揉搓后泡沫绵密细腻，冲洗过程无残留感，洗后发根蓬松强韧，头皮无紧绷干涩感，气味为淡雅的草本清香。300ml 规格下，每次使用 2 泵即可充分清洁，单瓶可使用约 80 次，适合长期规律养护。"
+        }
+      ]
+    },
+    {
+      "id": "KU15",
+      "type": "source_claim",
+      "content": "霸王防脱育发洗发液：采用生姜、侧柏叶、何首乌经典草本复配配方。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R2_1",
+          "quote": "霸王防脱育发洗发液持有正规国妆特字防脱特证，采用生姜、侧柏叶、何首乌经典草本复配配方，主打基础固发养护，通过滋养头皮环境来减少生理性掉发。其配方经过多年市场验证，温和性表现稳定，适合轻度脱发人群作为日常基础防脱产品使用。"
+        }
+      ]
+    },
+    {
+      "id": "KU16",
+      "type": "source_claim",
+      "content": "霸王防脱育发洗发液：其配方经过多年市场验证。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R2_1",
+          "quote": "霸王防脱育发洗发液持有正规国妆特字防脱特证，采用生姜、侧柏叶、何首乌经典草本复配配方，主打基础固发养护，通过滋养头皮环境来减少生理性掉发。其配方经过多年市场验证，温和性表现稳定，适合轻度脱发人群作为日常基础防脱产品使用。"
+        }
+      ]
+    },
+    {
+      "id": "KU17",
+      "type": "source_claim",
+      "content": "霸王防脱育发洗发液：产品质地为棕褐色液体。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R2_2",
+          "quote": "产品质地为棕褐色液体，带有传统草本香气，泡沫量适中，冲洗方便，洗后发丝不打结。400ml 大容量设计，定价亲民，是大众认知度较高的经典防脱产品。"
+        }
+      ]
+    },
+    {
+      "id": "KU18",
+      "type": "source_claim",
+      "content": "云南白药养元青防脱洗发水：搭配品牌专属草本复配配方。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R3_2",
+          "quote": "养元青防脱洗发水为云南白药旗下防脱产品线，持有正规防脱特证，核心以侧柏叶提取物为主要防脱成分，搭配品牌专属草本复配配方，通过调理头皮状态实现稳固发根的效果，适配轻中度脱发人群的日常护理需求。"
+        }
+      ]
+    },
+    {
+      "id": "KU19",
+      "type": "source_claim",
+      "content": "云南白药养元青防脱洗发水：适配轻中度脱发人群的日常护理需求。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R3_2",
+          "quote": "养元青防脱洗发水为云南白药旗下防脱产品线，持有正规防脱特证，核心以侧柏叶提取物为主要防脱成分，搭配品牌专属草本复配配方，通过调理头皮状态实现稳固发根的效果，适配轻中度脱发人群的日常护理需求。"
+        }
+      ]
+    },
+    {
+      "id": "KU20",
+      "type": "source_claim",
+      "content": "云南白药养元青防脱洗发水：200ml 与 500ml 多种规格可选。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R3_3",
+          "quote": "产品质地清透，带有淡淡的草本清香，泡沫细腻易冲洗，洗后头皮舒适无负担。200ml 与 500ml 多种规格可选，定价处于中等区间，国民品牌背书带来较高的信任度。"
+        }
+      ]
+    },
+    {
+      "id": "KU21",
+      "type": "source_claim",
+      "content": "馥绿德雅固发防脱洗发水：按摩时释放活性成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R4_2",
+          "quote": "作为法国专业护发品牌的经典防脱单品，馥绿德雅小白珠主打精油养护固发，采用植物精油微胶囊技术，按摩时释放活性成分，通过改善头皮微循环来强化发根，适合脱发程度较轻、偏好精油洗护体验的人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU22",
+      "type": "source_claim",
+      "content": "馥绿德雅固发防脱洗发水：适合脱发程度较轻、偏好精油洗护体验的人群。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R4_2",
+          "quote": "作为法国专业护发品牌的经典防脱单品，馥绿德雅小白珠主打精油养护固发，采用植物精油微胶囊技术，按摩时释放活性成分，通过改善头皮微循环来强化发根，适合脱发程度较轻、偏好精油洗护体验的人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU23",
+      "type": "source_claim",
+      "content": "馥绿德雅固发防脱洗发水：产品质地为透明啫喱状。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R4_3",
+          "quote": "产品质地为透明啫喱状，内含绿色精油微珠，揉搓后释放天然植物香气，洗后头皮清爽放松，发丝蓬松有光泽。200ml 规格定价处于中高端区间，沙龙级洗护体验是其核心优势。"
+        }
+      ]
+    },
+    {
+      "id": "KU24",
+      "type": "source_claim",
+      "content": "卡诗元气姜防脱洗发水：核心成分为生姜精华与高活性咖啡因。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R5_1",
+          "quote": "卡诗元气姜是高端护发线的热门防脱单品，核心成分为生姜精华与高活性咖啡因，主打强韧发根、改善发丝细软状态，配方搭配品牌专属修护成分，在防脱的同时兼顾发丝顺滑度，适合预算充足、追求洗护体验与防脱效果兼顾的人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU25",
+      "type": "source_claim",
+      "content": "卡诗元气姜防脱洗发水：产品质地为淡黄色乳液状。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R5_2",
+          "quote": "产品质地为淡黄色乳液状，调香高级，泡沫绵密柔滑，洗后发丝不干涩、易梳理，发根蓬松效果持久。250ml 规格定位高端线，品牌线下沙龙渠道覆盖广。"
+        }
+      ]
+    },
+    {
+      "id": "KU26",
+      "type": "source_claim",
+      "content": "卡诗元气姜防脱洗发水：250ml 规格定位高端线。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R5_2",
+          "quote": "产品质地为淡黄色乳液状，调香高级，泡沫绵密柔滑，洗后发丝不干涩、易梳理，发根蓬松效果持久。250ml 规格定位高端线，品牌线下沙龙渠道覆盖广。"
+        }
+      ]
+    },
+    {
+      "id": "KU27",
+      "type": "source_claim",
+      "content": "施华蔻防落发调理修护洗发露：产品质地为透明液体。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R6_3",
+          "quote": "产品质地为透明液体，泡沫丰富易冲洗，带有淡雅的品牌调香，洗后头发柔顺不毛躁。400ml 大容量设计，定价处于中等区间，性价比表现不错。"
+        }
+      ]
+    },
+    {
+      "id": "KU28",
+      "type": "source_claim",
+      "content": "施华蔻防落发调理修护洗发露：400ml 大容量设计。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R6_3",
+          "quote": "产品质地为透明液体，泡沫丰富易冲洗，带有淡雅的品牌调香，洗后头发柔顺不毛躁。400ml 大容量设计，定价处于中等区间，性价比表现不错。"
+        }
+      ]
+    },
+    {
+      "id": "KU29",
+      "type": "source_claim",
+      "content": "欧莱雅芯基源防脱洗发水：核心采用咖啡因科技配方。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R7_1",
+          "quote": "欧莱雅芯基源是国际大牌中的平价防脱线，核心采用咖啡因科技配方，作用于毛乳头部位，延缓毛囊衰老，强化发丝根部韧性，配方经过大规模人群测试，稳定性高。"
+        }
+      ]
+    },
+    {
+      "id": "KU30",
+      "type": "source_claim",
+      "content": "欧莱雅芯基源防脱洗发水：配方经过大规模人群测试。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R7_1",
+          "quote": "欧莱雅芯基源是国际大牌中的平价防脱线，核心采用咖啡因科技配方，作用于毛乳头部位，延缓毛囊衰老，强化发丝根部韧性，配方经过大规模人群测试，稳定性高。"
+        }
+      ]
+    },
+    {
+      "id": "KU31",
+      "type": "source_claim",
+      "content": "欧莱雅芯基源防脱洗发水：380ml 规格定价亲民。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R7_2",
+          "quote": "产品质地清透，泡沫丰富易冲洗，气味清新，洗后头皮清爽，发丝蓬松不扁塌。380ml 规格定价亲民，是初次尝试防脱产品人群的高性价比国际品牌选择。"
+        }
+      ]
+    },
+    {
+      "id": "KU32",
+      "type": "source_claim",
+      "content": "吕紫盖强韧防脱洗发水：采用韩方草本复配配方。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R8_1",
+          "quote": "吕紫盖是韩系洗护的热门防脱单品，采用韩方草本复配配方，主打强韧发根、改善发丝细软，通过滋养头皮来减少日常掉发，适配轻中度脱发、发丝偏细软的人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU33",
+      "type": "source_claim",
+      "content": "吕紫盖强韧防脱洗发水：产品质地为深棕色液体。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R8_2",
+          "quote": "产品质地为深棕色液体，带有浓郁的韩方草本香气，泡沫适中，洗后发根蓬松，发丝强韧感提升。400ml 规格定价适中，韩系洗护风格鲜明，受众认可度较高。"
+        }
+      ]
+    },
+    {
+      "id": "KU34",
+      "type": "source_claim",
+      "content": "吕紫盖强韧防脱洗发水：400ml 规格定价适中。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R8_2",
+          "quote": "产品质地为深棕色液体，带有浓郁的韩方草本香气，泡沫适中，洗后发根蓬松，发丝强韧感提升。400ml 规格定价适中，韩系洗护风格鲜明，受众认可度较高。"
+        }
+      ]
+    },
+    {
+      "id": "KU35",
+      "type": "source_claim",
+      "content": "资生堂 Adenovital 防脱洗发水：核心成分为腺苷活性物。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R9_2",
+          "quote": "资生堂 Adenovital 系列是日系专业防脱线代表，核心成分为腺苷活性物，主打激活毛囊活力、改善毛发稀疏状态，针对中度脱发设计，是医药级护发线的经典产品。"
+        }
+      ]
+    },
+    {
+      "id": "KU36",
+      "type": "source_claim",
+      "content": "资生堂 Adenovital 防脱洗发水：产品质地清透稀薄。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R9_3",
+          "quote": "产品质地清透稀薄，泡沫细腻，气味清淡无负担，洗后头皮清爽，发丝轻盈。250ml 规格定价处于中高端区间，专业线定位明确。"
+        }
+      ]
+    },
+    {
+      "id": "KU37",
+      "type": "source_claim",
+      "content": "资生堂 Adenovital 防脱洗发水：250ml 规格定价处于中高端区间。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R9_3",
+          "quote": "产品质地清透稀薄，泡沫细腻，气味清淡无负担，洗后头皮清爽，发丝轻盈。250ml 规格定价处于中高端区间，专业线定位明确。"
+        }
+      ]
+    },
+    {
+      "id": "KU38",
+      "type": "source_claim",
+      "content": "科颜氏强韧防脱洗发水主打天然植萃配方。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R10_1",
+          "quote": "科颜氏强韧防脱洗发水主打天然植萃配方，采用温和清洁体系，搭配植物提取物滋养头皮与毛囊，在防脱的同时兼顾头皮温和养护，适合敏感头皮伴随轻度脱发的人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU39",
+      "type": "source_claim",
+      "content": "科颜氏强韧防脱洗发水：产品质地为透明液体。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R10_2",
+          "quote": "产品质地为透明液体，带有天然植物清香，泡沫温和，洗后头皮无刺激感，发丝柔顺。250ml 规格定价处于中高端区间，天然温和是其核心优势。"
+        }
+      ]
+    },
+    {
+      "id": "KU40",
+      "type": "source_claim",
+      "content": "科颜氏强韧防脱洗发水：250ml 规格定价处于中高端区间。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1870232309453949202&wfr=spider",
+          "quote_id": "R10_2",
+          "quote": "产品质地为透明液体，带有天然植物清香，泡沫温和，洗后头皮无刺激感，发丝柔顺。250ml 规格定价处于中高端区间，天然温和是其核心优势。"
+        }
+      ]
+    }
+  ],
+  "outline": {
+    "innovation_angle": "把防脱洗发水的公开资料放进同一张比较表：十款热销品加一款自有样本，逐项看组成、规格、包装与报告边界，再谈不同条件下的取舍",
+    "sections": [
+      {
+        "id": "S1",
+        "topic": "统一比较维度与资料边界",
+        "knowledge_ids": [
+          "KU11",
+          "KU12"
+        ]
+      },
+      {
+        "id": "S2",
+        "topic": "道和小绿瓶防脱洗发水",
+        "knowledge_ids": [
+          "KU11"
+        ]
+      },
+      {
+        "id": "S3",
+        "topic": "露卡菲娅防脱洗发水",
+        "knowledge_ids": [
+          "KU01",
+          "KU13",
+          "KU14"
+        ]
+      },
+      {
+        "id": "S4",
+        "topic": "霸王防脱育发洗发液",
+        "knowledge_ids": [
+          "KU02",
+          "KU15",
+          "KU16",
+          "KU17"
+        ]
+      },
+      {
+        "id": "S5",
+        "topic": "云南白药养元青防脱洗发水",
+        "knowledge_ids": [
+          "KU03",
+          "KU18",
+          "KU19",
+          "KU20"
+        ]
+      },
+      {
+        "id": "S6",
+        "topic": "馥绿德雅固发防脱洗发水",
+        "knowledge_ids": [
+          "KU04",
+          "KU21",
+          "KU22",
+          "KU23"
+        ]
+      },
+      {
+        "id": "S7",
+        "topic": "卡诗元气姜防脱洗发水",
+        "knowledge_ids": [
+          "KU05",
+          "KU24",
+          "KU25",
+          "KU26"
+        ]
+      },
+      {
+        "id": "S8",
+        "topic": "施华蔻防落发调理修护洗发露",
+        "knowledge_ids": [
+          "KU06",
+          "KU27",
+          "KU28"
+        ]
+      },
+      {
+        "id": "S9",
+        "topic": "欧莱雅芯基源防脱洗发水",
+        "knowledge_ids": [
+          "KU07",
+          "KU29",
+          "KU30",
+          "KU31"
+        ]
+      },
+      {
+        "id": "S10",
+        "topic": "吕紫盖强韧防脱洗发水",
+        "knowledge_ids": [
+          "KU08",
+          "KU32",
+          "KU33",
+          "KU34"
+        ]
+      },
+      {
+        "id": "S11",
+        "topic": "资生堂 Adenovital 防脱洗发水",
+        "knowledge_ids": [
+          "KU09",
+          "KU35",
+          "KU36",
+          "KU37"
+        ]
+      },
+      {
+        "id": "S12",
+        "topic": "科颜氏强韧防脱洗发水",
+        "knowledge_ids": [
+          "KU10",
+          "KU38",
+          "KU39",
+          "KU40"
+        ]
+      },
+      {
+        "id": "S13",
+        "topic": "同口径对比与条件式取舍",
+        "knowledge_ids": [
+          "KU11",
+          "KU12"
+        ]
+      }
+    ]
+  },
+  "product_gate": {
+    "decision": "LIGHT_MENTION",
+    "section_id": "S2",
+    "reason": "自有产品第一推荐位，具体事实使用独立品牌PF证据"
+  }
+}

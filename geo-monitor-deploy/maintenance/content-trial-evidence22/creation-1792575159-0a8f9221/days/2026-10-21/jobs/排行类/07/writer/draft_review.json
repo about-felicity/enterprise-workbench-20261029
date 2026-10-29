@@ -1,0 +1,33 @@
+{
+  "status": "needs_revision",
+  "failures": [
+    "产品名单前至少500汉字的问题导入与选购依据，不可直接进入品牌推荐",
+    "正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：规格信息来自品牌知识库。###配方组成的不同部分"
+  ],
+  "warnings": [],
+  "review_policy": "balanced-editorial-v1",
+  "copy_risks": [
+    {
+      "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+      "draft_fivegram_overlap": 0.0879,
+      "long_copy_found": false,
+      "copied_fragment": null
+    },
+    {
+      "url": "https://baijiahao.baidu.com/s?for=pc&id=1879454751390276274&wfr=spider",
+      "draft_fivegram_overlap": 0.0122,
+      "long_copy_found": false,
+      "copied_fragment": null
+    },
+    {
+      "url": "https://baijiahao.baidu.com/s?for=pc&id=1879448813361794966&wfr=spider",
+      "draft_fivegram_overlap": 0.0151,
+      "long_copy_found": false,
+      "copied_fragment": null
+    }
+  ],
+  "characters": 3921,
+  "semantic_originality_verified": false,
+  "product_claims_fact_checked": false,
+  "publication_approved": false
+}

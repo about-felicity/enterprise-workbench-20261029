@@ -1,0 +1,175 @@
+{
+  "at": 1792719019.3142974,
+  "daily": [
+    {
+      "model": "baidu_ai",
+      "day": "2026-10-23",
+      "config": {
+        "questions": [
+          "推荐一款护发精油",
+          "推荐一款护发素",
+          "推荐一款控油蓬松洗发水",
+          "推荐一款二硫化硒洗发水",
+          "推荐一款沐浴精油",
+          "推荐一款眉毛增长液",
+          "推荐一款祛痘精华液",
+          "推荐一款美白面霜",
+          "推荐一款造型喷雾",
+          "推荐一款染发剂",
+          "推荐一款睫毛增长液",
+          "推荐一款防脱洗发水",
+          "推荐一款防脱精华液",
+          "推荐一款面膜",
+          "推荐一款眼霜",
+          "推荐一款卸妆油",
+          "推荐一款爽肤水",
+          "推荐一款洗面奶",
+          "推荐一款身体乳",
+          "推荐一款护手霜",
+          "推荐一款防晒霜"
+        ],
+        "rounds": 5,
+        "interval": 60
+      },
+      "revision": 8,
+      "desired": "running",
+      "status": "running",
+      "batch": "geo-panel-baidu-ai-20261023-090003-1a1735de",
+      "updated": 1792717204.1609159,
+      "error": null
+    },
+    {
+      "model": "wenxin_card",
+      "day": "2026-10-23",
+      "config": {
+        "questions": [
+          "推荐一款护发精油",
+          "推荐一款护发素",
+          "推荐一款控油蓬松洗发水",
+          "推荐一款二硫化硒洗发水",
+          "推荐一款沐浴精油",
+          "推荐一款眉毛增长液",
+          "推荐一款祛痘精华液",
+          "推荐一款美白面霜",
+          "推荐一款造型喷雾",
+          "推荐一款染发剂",
+          "推荐一款睫毛增长液",
+          "推荐一款防脱洗发水",
+          "推荐一款防脱精华液",
+          "推荐一款面膜",
+          "推荐一款眼霜",
+          "推荐一款卸妆油",
+          "推荐一款爽肤水",
+          "推荐一款洗面奶",
+          "推荐一款身体乳",
+          "推荐一款护手霜",
+          "推荐一款防晒霜"
+        ],
+        "rounds": 8,
+        "interval": 60
+      },
+      "revision": 8,
+      "desired": "running",
+      "status": "waiting_for_baidu",
+      "batch": null,
+      "updated": 1792717200.9525778,
+      "error": null
+    }
+  ],
+  "baidu_health": {
+    "time": 1792719018.4117708,
+    "heartbeat_expires_at": 1792719063.4117708,
+    "bridge_pid": 13608,
+    "model": "baidu_ai",
+    "batch": "geo-panel-baidu-ai-20261023-090003-1a1735de",
+    "planned": 105,
+    "tasks": {
+      "completed": 4,
+      "pending": 101
+    },
+    "status": "running",
+    "worker_exit": 0,
+    "worker_pid": 60370,
+    "captured": 4,
+    "unique": 4,
+    "processed": 4,
+    "duplicates": 0,
+    "unavailable": 0,
+    "body_only_observations": 0,
+    "errors": [],
+    "unique_processed": 4,
+    "body_only_delivery": {
+      "observations": 0,
+      "processed": 0,
+      "pending_delivery": 0,
+      "errors": [],
+      "unique_processed": 0
+    },
+    "progress": {
+      "phase": "rate_wait",
+      "pending_delivery": 0,
+      "changed_at": 1792719016.130251,
+      "ordinal": 5,
+      "next_at": 1792719067.569578
+    }
+  },
+  "database_counts": [
+    {
+      "source_device": "geo-headless-baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261023-090003-1a1735de",
+      "n": 4
+    }
+  ],
+  "wenxin_diagnostic": {
+    "at": 1792718864.8904026,
+    "diagnostic_only": true,
+    "daily_count_not_modified": true,
+    "body_chars": 495,
+    "source_count": 39,
+    "expected_source_count": 39,
+    "body_capture_complete": true,
+    "source_capture_complete": true,
+    "question": "推荐一款染发剂"
+  },
+  "daily_control": "active",
+  "profile_migrations": {
+    "baidu_ai": {
+      "version": "search-profile-v1",
+      "model": "baidu_ai",
+      "at": 1792718606.8487039,
+      "initial_batch": "geo-panel-baidu-ai-20261023-090003-1a1735de",
+      "source_profile": "/opt/monitor/geo-capture/batches/geo-panel-baidu-ai-20261022-090004-2041e20f/collector/profiles/baidu/scrapling_profile",
+      "source_batch": "geo-panel-baidu-ai-20261022-090004-2041e20f",
+      "source_completed": true,
+      "original_profile_preserved": true,
+      "task_journal_copied": false
+    },
+    "wenxin_card": null
+  },
+  "deployment": {
+    "at": 1792718605.816258,
+    "deployed": {
+      "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/cli.py": "cceb58b987324ba32529d3ea0919db380216e311b0621686f6eb4a9d7b573bdc",
+      "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/search_profiles.py": "ff262079914f849ad9813f85dad44550ec214de617f1df14cdd15b18d6a01309"
+    },
+    "daily_tasks_unchanged": "b0184775c235450e0a97e9c7a22b96ffea41f7a6d4946f8683dd75f362005947",
+    "capture_bridge_unchanged": "7ead217f3a50df88af092a8524f9ca40f1f9f921b65b421cdacd3a8a37115bd1",
+    "scheduler_fairness_not_deployed": true,
+    "no_task_journal_reset": true
+  },
+  "regressions": [
+    {
+      "suite": "profile-engine",
+      "code": 0
+    },
+    {
+      "suite": "profile-controller",
+      "code": 0
+    }
+  ],
+  "recovery": {
+    "files": 219,
+    "matching": 219,
+    "mismatches": []
+  }
+}

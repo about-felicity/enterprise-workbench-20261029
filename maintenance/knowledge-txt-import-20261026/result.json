@@ -1,0 +1,23 @@
+[
+  {
+    "name": "梵玢FBCY龙胆黑钻护发精油",
+    "status": "created",
+    "product_id": "product-69afe943267d4946a5a30c2dc5212cd7",
+    "sha256": "b52551fd51ae43be5ed07375715ad09ae101173fa164e02322ca95a58bc35079",
+    "facts": 26
+  },
+  {
+    "name": "梵玢FBCY植萃奢护染发剂",
+    "status": "created",
+    "product_id": "product-3a0148248056499a82fefe5d59e3d166",
+    "sha256": "c5576513e4ff16872b2b5cb7bb11b470ea812166fefeaf527e3ea8d1ad32f3a5",
+    "facts": 49
+  },
+  {
+    "name": "科熙本植萃奢护染发剂",
+    "status": "created",
+    "product_id": "product-042c2551f5da4b1eb4f14a0b20d4b64a",
+    "sha256": "19fb8c14f548eab1b23c368d4576b5e498c36b4a3db65ce8c4da2a7b0cf61f49",
+    "facts": 29
+  }
+]

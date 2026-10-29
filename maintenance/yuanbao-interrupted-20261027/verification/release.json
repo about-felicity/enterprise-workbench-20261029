@@ -1,0 +1,14 @@
+{
+  "files": [
+    {
+      "source": "yuanbao-deploy/history_refresh.py",
+      "server": "/home/user/redroid-yuanbao/history_refresh.py",
+      "sha256": "13739ad18e1ad76ad9130b0b350127719f6817705394f59e7f6dc7dbd10fe8e0"
+    },
+    {
+      "source": "yuanbao-deploy/tests/test_history_refresh.py",
+      "server": "/home/user/redroid-yuanbao/tests/test_history_refresh.py",
+      "sha256": "e3d9a335d4b7cb18389b09cbe4f712a4664912eb4824be99594b3a0b16797865"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "source": "geo-source-card-collectors/geo_source_cards/cli.py",
+  "server": "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/cli.py",
+  "sha256": "b481449bd68449c768156ece6c1841af3e279f994155f2c4c3d71b558ad2523c",
+  "production_code_verified": true
+}

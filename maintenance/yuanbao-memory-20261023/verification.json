@@ -1,0 +1,65 @@
+{
+  "at": 1792725268.4271317,
+  "memory_bytes": 4294967296,
+  "memory_swap_total_bytes": 6442450944,
+  "persisted_memory_bytes": 4294967296,
+  "persisted_memory_swap_total_bytes": 6442450944,
+  "app_pid": "4403",
+  "cgroup_memory_max": "4294967296",
+  "cgroup_events": "low 0\nhigh 0\nmax 47802\noom 7\noom_kill 4\noom_group_kill 0",
+  "health": {
+    "batch": "geo-panel-yuanbao-20261023-090004-d6b66215",
+    "planned": 168,
+    "prompt_mode": "question_only",
+    "model": "yuanbao",
+    "captured": 58,
+    "geo_processed": 58,
+    "delivery_errors": [],
+    "nontext_observations": 0,
+    "nontext_processed": 0,
+    "nontext_pending": 0,
+    "unavailable": 0,
+    "time": 1792725266.8601778,
+    "heartbeat_expires_at": 1792725416.860178,
+    "bridge_pid": 22962,
+    "tasks": {
+      "completed": 58,
+      "pending": 109,
+      "prepared": 1
+    },
+    "status": "running",
+    "memory": {
+      "app_alive": true,
+      "pid": 4403,
+      "java_alloc_kib": 38391,
+      "java_size_kib": 136695,
+      "java_limit_kib": 524288,
+      "java_fraction": 0.07322502136230469,
+      "native_alloc_kib": 278676,
+      "app_pss_kib": 820192,
+      "container_bytes": 1353891840,
+      "container_working_bytes": 1204879360,
+      "container_limit_bytes": 4294967296,
+      "container_fraction": 0.2805328369140625,
+      "app_pss_fraction": 0.19554901123046875,
+      "sampled_at": 1792725262.447615,
+      "last_exit": {
+        "pid": 17671,
+        "reason": "low_memory"
+      },
+      "pending": "",
+      "high_samples": 0
+    },
+    "progress": {
+      "phase": "generating",
+      "task_id": "a1ffabc6-faa3-5ac3-9fc6-b1e3cbe9bff3",
+      "ordinal": 59,
+      "changed_at": 1792725263.8576481,
+      "reason": "",
+      "deadline_at": 1792726149.6445115
+    }
+  },
+  "postgres_success": 58,
+  "service": "active",
+  "resource_sha256": "2fc1dbc5f280822e8e921f78b57a0607f8cc8163d22a8a1e07310d943e5566e8"
+}

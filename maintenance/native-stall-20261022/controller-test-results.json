@@ -1,0 +1,5 @@
+{
+  "at": 1792644387.737668,
+  "exit_code": 0,
+  "output": "{\"day\": \"2026-10-17\", \"models\": [{\"model\": \"baidu_ai\", \"state\": \"running\"}, {\"model\": \"wenxin_card\", \"state\": \"waiting_for_baidu\"}, {\"model\": \"yuanbao\", \"state\": \"running\"}]}\n{\"day\": \"2026-10-17\", \"models\": [{\"model\": \"baidu_ai\", \"state\": \"running\"}, {\"model\": \"wenxin_card\", \"state\": \"waiting_for_baidu\"}, {\"model\": \"yuanbao\", \"state\": \"running\"}]}\n{\"day\": \"2026-10-17\", \"models\": [{\"model\": \"deepseek\", \"state\": \"waiting_login\"}, {\"model\": \"baidu_ai\", \"state\": \"running\"}]}\n{\"day\": \"2026-10-17\", \"models\": [{\"model\": \"deepseek\", \"state\": \"waiting_login\"}, {\"model\": \"baidu_ai\", \"state\": \"running\"}]}\n...........................................\n----------------------------------------------------------------------\nRan 43 tests in 1.833s\n\nOK\n"
+}

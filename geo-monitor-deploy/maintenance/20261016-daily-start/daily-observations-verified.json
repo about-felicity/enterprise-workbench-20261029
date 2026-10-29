@@ -1,0 +1,255 @@
+{
+  "at": 1792121303.2044458,
+  "complete": true,
+  "full_observations_verified": 183,
+  "after": [
+    {
+      "question": "二硫化硒洗发水推荐",
+      "mode": "baidu_search_ai",
+      "observations": 10
+    },
+    {
+      "question": "二硫化硒洗发水推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    },
+    {
+      "question": "卸妆油推荐",
+      "mode": "baidu_search_ai",
+      "observations": 5
+    },
+    {
+      "question": "卸妆油推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    },
+    {
+      "question": "护发精油推荐",
+      "mode": "baidu_search_ai",
+      "observations": 5
+    },
+    {
+      "question": "护发精油推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 3
+    },
+    {
+      "question": "护发素推荐",
+      "mode": "baidu_search_ai",
+      "observations": 9
+    },
+    {
+      "question": "护发素推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    },
+    {
+      "question": "护手霜推荐",
+      "mode": "baidu_search_ai",
+      "observations": 10
+    },
+    {
+      "question": "护手霜推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    },
+    {
+      "question": "控油蓬松洗发水推荐",
+      "mode": "baidu_search_ai",
+      "observations": 10
+    },
+    {
+      "question": "控油蓬松洗发水推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    },
+    {
+      "question": "染发剂推荐",
+      "mode": "baidu_search_ai",
+      "observations": 10
+    },
+    {
+      "question": "染发剂推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 11
+    },
+    {
+      "question": "沐浴精油推荐",
+      "mode": "baidu_search_ai",
+      "observations": 10
+    },
+    {
+      "question": "沐浴精油推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    },
+    {
+      "question": "洗面奶推荐",
+      "mode": "baidu_search_ai",
+      "observations": 10
+    },
+    {
+      "question": "洗面奶推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    },
+    {
+      "question": "爽肤水推荐",
+      "mode": "baidu_search_ai",
+      "observations": 10
+    },
+    {
+      "question": "爽肤水推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    },
+    {
+      "question": "眉毛增长液推荐",
+      "mode": "baidu_search_ai",
+      "observations": 10
+    },
+    {
+      "question": "眉毛增长液推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    },
+    {
+      "question": "眼霜推荐",
+      "mode": "baidu_search_ai",
+      "observations": 11
+    },
+    {
+      "question": "眼霜推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    },
+    {
+      "question": "睫毛增长液推荐",
+      "mode": "baidu_search_ai",
+      "observations": 10
+    },
+    {
+      "question": "睫毛增长液推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    },
+    {
+      "question": "祛痘精华液推荐",
+      "mode": "baidu_search_ai",
+      "observations": 10
+    },
+    {
+      "question": "祛痘精华液推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 11
+    },
+    {
+      "question": "美白面霜推荐",
+      "mode": "baidu_search_ai",
+      "observations": 10
+    },
+    {
+      "question": "美白面霜推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 11
+    },
+    {
+      "question": "身体乳推荐",
+      "mode": "baidu_search_ai",
+      "observations": 10
+    },
+    {
+      "question": "身体乳推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    },
+    {
+      "question": "造型喷雾推荐",
+      "mode": "baidu_search_ai",
+      "observations": 10
+    },
+    {
+      "question": "造型喷雾推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 11
+    },
+    {
+      "question": "防晒霜推荐",
+      "mode": "baidu_search_ai",
+      "observations": 5
+    },
+    {
+      "question": "防晒霜推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    },
+    {
+      "question": "防脱洗发水推荐",
+      "mode": "baidu_search_ai",
+      "observations": 11
+    },
+    {
+      "question": "防脱洗发水推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    },
+    {
+      "question": "防脱精华液推荐",
+      "mode": "baidu_search_ai",
+      "observations": 6
+    },
+    {
+      "question": "防脱精华液推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    },
+    {
+      "question": "面膜推荐",
+      "mode": "baidu_search_ai",
+      "observations": 11
+    },
+    {
+      "question": "面膜推荐",
+      "mode": "baidu_wenxin_search",
+      "observations": 10
+    }
+  ],
+  "lanes": [
+    {
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "captured": 178,
+      "unique": 50,
+      "processed": 178,
+      "duplicates": 128,
+      "unavailable": 0,
+      "body_only_observations": 0,
+      "errors": [],
+      "unique_processed": 50,
+      "body_only_delivery": {
+        "observations": 0,
+        "processed": 0,
+        "pending_delivery": 0,
+        "errors": [],
+        "unique_processed": 0
+      }
+    },
+    {
+      "batch": "geo-panel-baidu-ai-20261016-095851-ff407fd3",
+      "captured": 5,
+      "unique": 1,
+      "processed": 5,
+      "duplicates": 4,
+      "unavailable": 0,
+      "body_only_observations": 0,
+      "errors": [],
+      "unique_processed": 1,
+      "body_only_delivery": {
+        "observations": 0,
+        "processed": 0,
+        "pending_delivery": 0,
+        "errors": [],
+        "unique_processed": 0
+      }
+    }
+  ]
+}

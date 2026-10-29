@@ -1,0 +1,75 @@
+{
+  "at": 1792725138.3063035,
+  "container_id": "37b186540f3715361796338fbf5a6bf7f1f092c4d282f340db45a446594b9d5b",
+  "container_pid": 20889,
+  "container_started_at": "2026-10-15T06:35:03.318897147Z",
+  "running": true,
+  "data_volume": "yuanbao-hpe14-android13-data",
+  "memory": 4294967296,
+  "memory_swap_total": 6442450944,
+  "memory_reservation": 0,
+  "app_pid": "4403",
+  "host": {
+    "MemTotal": 16480649216,
+    "MemAvailable": 5636575232,
+    "SwapTotal": 4294963200,
+    "SwapFree": 586911744
+  },
+  "cgroup": {
+    "memory.max": "4294967296",
+    "memory.current": "1370763264",
+    "memory.events": "low 0\nhigh 0\nmax 47802\noom 7\noom_kill 4\noom_group_kill 0",
+    "memory.swap.max": "2147483648",
+    "memory.swap.current": "581910528"
+  },
+  "health": {
+    "batch": "geo-panel-yuanbao-20261023-090004-d6b66215",
+    "planned": 168,
+    "prompt_mode": "question_only",
+    "model": "yuanbao",
+    "captured": 56,
+    "geo_processed": 56,
+    "delivery_errors": [],
+    "nontext_observations": 0,
+    "nontext_processed": 0,
+    "nontext_pending": 0,
+    "unavailable": 0,
+    "time": 1792725136.573843,
+    "heartbeat_expires_at": 1792725286.573843,
+    "bridge_pid": 22962,
+    "tasks": {
+      "completed": 56,
+      "pending": 112
+    },
+    "status": "running",
+    "memory": {
+      "app_alive": true,
+      "pid": 4403,
+      "java_alloc_kib": 39984,
+      "java_size_kib": 138288,
+      "java_limit_kib": 524288,
+      "java_fraction": 0.076263427734375,
+      "native_alloc_kib": 285132,
+      "app_pss_kib": 863700,
+      "container_bytes": 1367924736,
+      "container_working_bytes": 1221890048,
+      "container_limit_bytes": 3221225472,
+      "container_fraction": 0.37932459513346356,
+      "app_pss_fraction": 0.2745628356933594,
+      "sampled_at": 1792725135.948969,
+      "last_exit": {
+        "pid": 17671,
+        "reason": "low_memory"
+      },
+      "pending": "",
+      "high_samples": 0
+    },
+    "progress": {
+      "phase": "rate_wait",
+      "task_id": "4fba9a48-d27e-5cef-be3a-899c396e424e",
+      "ordinal": 57,
+      "changed_at": 1792725129.5995202,
+      "next_at": 1792725139.584962
+    }
+  }
+}

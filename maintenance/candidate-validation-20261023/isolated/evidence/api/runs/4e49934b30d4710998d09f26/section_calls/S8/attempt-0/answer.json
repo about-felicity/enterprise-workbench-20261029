@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S8\",\"heading\":\"伊卡璐防脱洗发水\",\"paragraphs\":[{\"text\":\"关于伊卡璐防脱洗发水，现有记录并未给出成分清单或洗感细节，只提出一个核实思路：对照产品说明逐项确认，有没有特证批号、核心成分标注是否明确、官方有没有公布周期数据、口碑里复购率如何。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0018\"]},{\"text\":\"这四项都指向可查的书面信息，而不是单凭印象下判断。特证批号与官方周期数据能反映产品在合规和公开说明上的完整程度，核心成分标注是否明确则决定你能否读懂配方；复购率属于口碑参考，仍需结合自己连续使用的记录来看。\",\"statement_type\":\"general_advice\",\"claim_ids\":[]},{\"text\":\"因此，把伊卡璐放进候选时，不妨按上述四项逐一对照，与前面几款沿用同一比较标准。资料未提供它的具体成分表现和使用结果，是否适合你，只能靠这些核实步骤和个人记录来判断。\",\"statement_type\":\"inference\",\"claim_ids\":[\"CL0018\"]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4344,
+    "completion_tokens": 245,
+    "total_tokens": 4589,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 4344
+  },
+  "request_id": "f81a268f-ef0c-4afe-801d-99f729d4e393",
+  "model": "deepseek-flash"
+}

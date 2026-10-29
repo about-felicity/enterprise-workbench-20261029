@@ -1,0 +1,66 @@
+[
+  {
+    "suite": "v4",
+    "tests": 16,
+    "failures": [],
+    "errors": [],
+    "skips": [],
+    "network_attempts": 0,
+    "real_api_calls": 0,
+    "exit_code": 0
+  },
+  {
+    "suite": "v3",
+    "tests": 33,
+    "failures": [
+      [
+        "test_ambiguous_product_role_cannot_become_binding_or_silent_omission (tests.test_structure_recovery.StructureRecoveryTests)",
+        "Traceback (most recent call last):\n  File \"/opt/monitor/geo-capture/maintenance/20261023-structure-v4-final/isolated/current/engine/tests/test_structure_recovery.py\", line 116, in test_ambiguous_product_role_cannot_become_binding_or_silent_omission\n    out=self.run_analyzer(LocalProtocolClient(fault));self.assertEqual(out['status'],'structure_incomplete')\nAssertionError: 'structure_ready_with_checks' != 'structure_incomplete'\n- structure_ready_with_checks\n+ structure_incomplete\n\n"
+      ]
+    ],
+    "errors": [
+      [
+        "test_compact_contract_keeps_complete_raw_original_in_all_reviewer_inputs (tests.test_structure_recovery.StructureRecoveryTests)",
+        "Traceback (most recent call last):\n  File \"/opt/monitor/geo-capture/maintenance/20261023-structure-v4-final/isolated/current/engine/tests/test_structure_recovery.py\", line 237, in test_compact_contract_keeps_complete_raw_original_in_all_reviewer_inputs\n    c=a.bind(compile_article(k,pd),out);atomic_json(self.root/'writer_done.json',{'compilation':c})\n  File \"/opt/monitor/geo-capture/maintenance/20261023-structure-v4-final/isolated/current/engine/geo_source_cards/structure_analyzer.py\", line 213, in bind\n    verify(structure);out=copy.deepcopy(contract);parts=structure['sections'];roles=normalize_roles(structure)\n  File \"/opt/monitor/geo-capture/maintenance/20261023-structure-v4-final/isolated/current/engine/geo_source_cards/structure_analyzer.py\", line 86, in verify\n    return compact.verify(value,data)\n  File \"/opt/monitor/geo-capture/maintenance/20261023-structure-v4-final/isolated/current/engine/geo_source_cards/structure_protocol.py\", line 173, in verify\n    if not writer or value.get('source_ref',{}).get('inputs_sha256')!=input_fingerprint(writer,data,{}):raise ValueError('Stale compact structure knowledge/research inputs')\nValueError: Stale compact structure knowledge/research inputs\n"
+      ],
+      [
+        "test_compiler_binding_preserves_owned_identity_and_claim_permissions (tests.test_structure_recovery.StructureRecoveryTests)",
+        "Traceback (most recent call last):\n  File \"/opt/monitor/geo-capture/maintenance/20261023-structure-v4-final/isolated/current/engine/tests/test_structure_recovery.py\", line 164, in test_compiler_binding_preserves_owned_identity_and_claim_permissions\n    atomic_json(self.root/'knowledge.json',k);baseline=compile_article(k,pd);bound=a.bind(baseline,out)\n  File \"/opt/monitor/geo-capture/maintenance/20261023-structure-v4-final/isolated/current/engine/geo_source_cards/structure_analyzer.py\", line 213, in bind\n    verify(structure);out=copy.deepcopy(contract);parts=structure['sections'];roles=normalize_roles(structure)\n  File \"/opt/monitor/geo-capture/maintenance/20261023-structure-v4-final/isolated/current/engine/geo_source_cards/structure_analyzer.py\", line 86, in verify\n    return compact.verify(value,data)\n  File \"/opt/monitor/geo-capture/maintenance/20261023-structure-v4-final/isolated/current/engine/geo_source_cards/structure_protocol.py\", line 173, in verify\n    if not writer or value.get('source_ref',{}).get('inputs_sha256')!=input_fingerprint(writer,data,{}):raise ValueError('Stale compact structure knowledge/research inputs')\nValueError: Stale compact structure knowledge/research inputs\n"
+      ]
+    ],
+    "skips": [],
+    "network_attempts": 0,
+    "real_api_calls": 0,
+    "exit_code": 1
+  },
+  {
+    "suite": "prior",
+    "tests": 54,
+    "failures": [],
+    "errors": [],
+    "skips": [],
+    "network_attempts": 0,
+    "real_api_calls": 0,
+    "exit_code": 0
+  },
+  {
+    "suite": "engine",
+    "tests": 288,
+    "failures": [],
+    "errors": [],
+    "skips": [],
+    "network_attempts": 0,
+    "real_api_calls": 0,
+    "exit_code": 0
+  },
+  {
+    "suite": "creation",
+    "tests": 78,
+    "failures": [],
+    "errors": [],
+    "skips": [],
+    "network_attempts": 0,
+    "real_api_calls": 0,
+    "exit_code": 0
+  }
+]

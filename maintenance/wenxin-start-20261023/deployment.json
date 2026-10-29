@@ -1,0 +1,11 @@
+{
+  "at": 1792718605.816258,
+  "deployed": {
+    "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/cli.py": "cceb58b987324ba32529d3ea0919db380216e311b0621686f6eb4a9d7b573bdc",
+    "/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/search_profiles.py": "ff262079914f849ad9813f85dad44550ec214de617f1df14cdd15b18d6a01309"
+  },
+  "daily_tasks_unchanged": "b0184775c235450e0a97e9c7a22b96ffea41f7a6d4946f8683dd75f362005947",
+  "capture_bridge_unchanged": "7ead217f3a50df88af092a8524f9ca40f1f9f921b65b421cdacd3a8a37115bd1",
+  "scheduler_fairness_not_deployed": true,
+  "no_task_journal_reset": true
+}

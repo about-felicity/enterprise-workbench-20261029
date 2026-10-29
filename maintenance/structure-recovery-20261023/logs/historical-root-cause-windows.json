@@ -1,0 +1,93 @@
+{
+  "type": "saved_real_request_audit_no_new_calls",
+  "historical": [
+    {
+      "request_sha256": "bfe9e07def295bb611bf0320c30711f0860be89299e760dab69abc750f99fcc0",
+      "answer_sha256": "067a1c0ae7fc7f96498eda9e5ea97d250a06c2deda614f203833b6be7205151b",
+      "model": "deepseek-flash",
+      "response_format": {
+        "type": "json_object"
+      },
+      "max_tokens": 2400,
+      "finish_reason": "length",
+      "usage": {
+        "prompt_tokens": 11100,
+        "completion_tokens": 2399,
+        "total_tokens": 13499,
+        "prompt_tokens_details": {
+          "cached_tokens": 10880
+        },
+        "prompt_cache_hit_tokens": 10880,
+        "prompt_cache_miss_tokens": 220
+      },
+      "characters": 4912,
+      "json_error": {
+        "reason": "Invalid control character at",
+        "position": 481,
+        "line": 1,
+        "column": 482,
+        "context": "度\",\"市场规模数据及其来源标注\",\"资质、成分、周期反馈三层依据并声明\n\n展开顺序\"],\"argument_step\":\"从脱发成因的客观性推导单一产品难立竿见影，再引入市场数据确认刚需，最"
+      },
+      "last_section_id": "AS014",
+      "tail": "0049\"],\"source_quote\":\"毛囊的生长周期以月计算，头发的明显变化通常需要两到三个月的持续积累\"},{\"id\":\"AS014\",\"order\":14,\"purpose\":\"转述蜂花的经典基础养护定位，并插入温和安全与试敏建议。\",\"required_content\":[\"清洁与基础养护重心、洗感温和冲洗容易\",\"家庭长期使用与出油改善\",\"温和表活、舒缓修护成分、防脱特证可核对\",\"耳后手腕试敏与不适暂停\"],\"argument_step\":\"先述产品风格与",
+      "redundant_verbose_fields": {
+        "purpose": 14,
+        "required_content": 14,
+        "argument_step": 14,
+        "transition": 13,
+        "source_quote": 13
+      }
+    },
+    {
+      "request_sha256": "0518e82856407b8dcb8e0890d0001997bd6e5606bc184298574dd9dea15590c8",
+      "answer_sha256": "b6ab06726825ddf8ed0982ed3f6209b5fbedf910691e74c988fa04fe3fcb7c34",
+      "model": "deepseek-flash",
+      "response_format": {
+        "type": "json_object"
+      },
+      "max_tokens": 2400,
+      "finish_reason": "length",
+      "usage": {
+        "prompt_tokens": 11103,
+        "completion_tokens": 2400,
+        "total_tokens": 13503,
+        "prompt_tokens_details": {
+          "cached_tokens": 10880
+        },
+        "prompt_cache_hit_tokens": 10880,
+        "prompt_cache_miss_tokens": 223
+      },
+      "characters": 4785,
+      "json_error": {
+        "reason": "Unterminated string starting at",
+        "position": 4770,
+        "line": 1,
+        "column": 4771,
+        "context": ",{\"id\":\"AS014\",\"order\":14,\"purpose\":\"转述蜂花的经典务实路线并补充"
+      },
+      "last_section_id": "AS014",
+      "tail": "到三个月积累、每四周记录\"],\"argument_step\":\"产品定位→使用反馈与价格→引出长期护理思路→周期与记录方法\",\"transition\":\"由长期护理习惯过渡到同样走稳定路线的国货\",\"source_block_ids\":[\"O0047\",\"O0048\",\"O0049\"],\"source_quote\":\"长期护理的思路，是把防脱当作一项日常习惯而不是一次短跑\"},{\"id\":\"AS014\",\"order\":14,\"purpose\":\"转述蜂花的经典务实路线并补充",
+      "redundant_verbose_fields": {
+        "purpose": 14,
+        "required_content": 13,
+        "argument_step": 13,
+        "transition": 13,
+        "source_quote": 13
+      }
+    }
+  ],
+  "retry_protocol_and_ceiling_unchanged": true,
+  "old_request_source_fields": [
+    "original_url",
+    "original_title",
+    "original_text",
+    "blocks",
+    "requirements"
+  ],
+  "source_blocks": 84,
+  "source_original_text_characters": 7006,
+  "original_text_also_repeated_in_blocks": 6840,
+  "provider_parameter_form_observed": "Saved JSON request used top-level max_tokens and response_format.type=json_object; real usage and finish_reason received. Full provider documentation/maximum and raw HTTP headers not queried or independently verified.",
+  "old_fallback_covered_blocks": 40,
+  "specific_remaining_output_token_need": "Cannot infer exact complete-token requirement from two partial outputs; both were incomplete at AS014, leaving later source regions uncovered."
+}

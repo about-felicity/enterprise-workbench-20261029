@@ -1,0 +1,30 @@
+{
+  "at": 1792066936.955322,
+  "suites": [
+    {
+      "tests": [
+        "test_runtime_reliability",
+        "test_capture_bridge",
+        "test_control_panel",
+        "test_native_core",
+        "test_question_only",
+        "test_reliability",
+        "test_completion_states",
+        "test_send_position_recheck",
+        "test_round_cycle",
+        "test_completion_fence",
+        "test_all_channel_soak"
+      ],
+      "exit_code": 0,
+      "output": "{\"batch\": \"original\", \"planned\": 2}\n{\"model\": \"wenxin_card\", \"round\": 1, \"source_count\": 1, \"duplicate\": false}\n{\"batch\": \"original\", \"planned\": 2}\n{\"model\": \"wenxin_card\", \"round\": 2, \"source_count\": 1, \"duplicate\": false}\n{\"batch\": \"original\", \"planned\": 2}\n{\"saved\": 0, \"output\": \"/tmp/tmpv3dnrtzq/collector/results/2026-10-15.jsonl\"}\n----------------------------------------------------------------------\nRan 100 tests in 1.458s\n\nOK\n"
+    },
+    {
+      "tests": [
+        "test_native_worker_reliability"
+      ],
+      "exit_code": 0,
+      "output": "{\"event\": \"captured\", \"ordinal\": 1, \"body_length\": 2, \"sources\": 1}\n{\"event\": \"nontext_observed\", \"ordinal\": 1, \"body_length\": 24, \"sources\": 0}\n----------------------------------------------------------------------\nRan 3 tests in 0.121s\n\nOK\n"
+    }
+  ],
+  "passed": true
+}

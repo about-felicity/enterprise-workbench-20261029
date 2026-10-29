@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S7\",\"heading\":\"蜂花防脱洗发水\",\"paragraphs\":[{\"text\":\"蜂花这款的路线比较朴素，记录里没有复杂的营销概念，重心放在清洁与基础养护上，洗感温和、冲洗容易，资料把它定位成低调扎实的国货方向。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0004\"]},{\"text\":\"顺着这个定位看，它与前文几款一样，公开可查的信息集中在基础配方思路上，没有更细的成分清单、数值或效果结论可以对照。\",\"statement_type\":\"inference\",\"claim_ids\":[]},{\"text\":\"至于蜂花怎么挑，记录给出的意见很直接：优先看配方是否以温和表活为主。这与前面判断其他产品的标准一致，都是看配方构成，而不是由成分存在推出效果或适合哪类人。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0017\"]},{\"text\":\"把它放进候选名单时，可以对照这同一把尺子：表活是否温和、成分标识是否清楚、洗后冲洗是否顺滑。使用感受是否合拍，仍需用自己的连续记录来判断。\",\"statement_type\":\"general_advice\",\"claim_ids\":[]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4620,
+    "completion_tokens": 254,
+    "total_tokens": 4874,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 4620
+  },
+  "request_id": "a06b49f4-dacb-4c6e-9690-15589a3842fc",
+  "model": "deepseek-flash"
+}

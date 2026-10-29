@@ -1,0 +1,122 @@
+{
+  "time": 1792372315.3730605,
+  "day": "2026-10-19",
+  "models": [
+    {
+      "model": "doubao1",
+      "batch": "geo-panel-doubao1-20261019-090810-41d5da92",
+      "service": "active",
+      "status": "running",
+      "processed": 3,
+      "captured": 3,
+      "tasks": {
+        "completed": 3,
+        "pending": 101,
+        "prepared": 1
+      },
+      "progress": {
+        "phase": "generating",
+        "task_id": "5f843f2b-6544-5a55-8b62-a084bab9504a",
+        "ordinal": 4,
+        "changed_at": 1792372305.6869442,
+        "reason": "",
+        "deadline_at": 1792373201.2110555
+      },
+      "delivery_errors": [],
+      "today_real_receipts": 4
+    },
+    {
+      "model": "doubao2",
+      "batch": "geo-panel-doubao2-20261019-090003-88e4f45b",
+      "service": "active",
+      "status": "running",
+      "processed": 11,
+      "captured": 11,
+      "tasks": {
+        "completed": 11,
+        "pending": 93,
+        "prepared": 1
+      },
+      "progress": {
+        "phase": "generating",
+        "task_id": "3fbe3df5-814c-5dee-8d70-b31b4987fdf1",
+        "ordinal": 12,
+        "changed_at": 1792372300.6833258,
+        "reason": "",
+        "deadline_at": 1792373197.8348916
+      },
+      "delivery_errors": [],
+      "today_real_receipts": 11
+    },
+    {
+      "model": "yuanbao",
+      "batch": "geo-panel-yuanbao-20261018-090005-1655ce1c",
+      "service": "active",
+      "status": "running",
+      "processed": 3,
+      "captured": 3,
+      "tasks": {
+        "completed": 3,
+        "pending": 164,
+        "prepared": 1
+      },
+      "progress": {
+        "phase": "generating",
+        "task_id": "a1068461-8be8-5ec9-a5cd-565399f97ccf",
+        "ordinal": 4,
+        "changed_at": 1792372310.7336032,
+        "reason": "",
+        "deadline_at": 1792373200.4380083
+      },
+      "delivery_errors": [],
+      "today_real_receipts": 3
+    },
+    {
+      "model": "baidu_ai",
+      "batch": "geo-panel-baidu-ai-20261019-090003-5bc10c7d",
+      "service": "active",
+      "status": "running",
+      "processed": null,
+      "captured": 8,
+      "tasks": {
+        "completed": 9,
+        "pending": 96
+      },
+      "progress": {
+        "phase": "collecting",
+        "pending_delivery": 0,
+        "changed_at": 1792372282.0504646,
+        "ordinal": 9
+      },
+      "delivery_errors": null,
+      "today_real_receipts": 9
+    },
+    {
+      "model": "wenxin_card",
+      "batch": "geo-panel-wenxin-card-20261018-112223-30cda607",
+      "service": "inactive",
+      "status": "complete",
+      "processed": null,
+      "captured": 168,
+      "tasks": {
+        "completed": 168
+      },
+      "progress": {
+        "phase": "complete",
+        "pending_delivery": 0
+      },
+      "delivery_errors": null,
+      "today_real_receipts": 0
+    }
+  ],
+  "recovered_original": {
+    "task_id": "ca66e81b-e8db-55fb-8c1f-38013de179f5",
+    "body_length": 360,
+    "source_count": 0,
+    "source_availability": "not_provided",
+    "raw_blocks_preserved": true,
+    "single_click": true,
+    "receipt_verified": true,
+    "run_id": "doubao-5efda4f245363349fe75"
+  }
+}

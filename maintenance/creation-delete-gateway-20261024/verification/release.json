@@ -1,0 +1,21 @@
+{
+  "original_image": "sha256:1f6cd423a4f93dadc7970b0e5a6ead1acb3bdd9974180bb6b6a0570172d03119",
+  "status": "published",
+  "files": [
+    {
+      "source_name": "panel.html",
+      "server": "/opt/monitor/geo-content/creation/panel.html",
+      "sha256": "5977e18bd91f25a6d66c762bd30a8a3a494f16bdad54eb64c0bf3c84817d019a"
+    },
+    {
+      "source_name": "route.ts",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/api/geo-creation/[...path]/route.ts",
+      "sha256": "a54322dba56d7057a9bfe8ea52d09609d5ad75219fcde2690038aae1e49f8b48"
+    },
+    {
+      "source_name": "creation-gateway.test.mjs",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/tests/creation-gateway.test.mjs",
+      "sha256": "fc2f23d4c4ee600b64cae414085a6827a8ad5ea65ad6c4799e8a37516c3b0f8e"
+    }
+  ]
+}

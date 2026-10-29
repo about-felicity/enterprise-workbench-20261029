@@ -1,0 +1,96 @@
+{
+  "components": [
+    {
+      "id": "INTRO",
+      "initial_bytes": 53090,
+      "repair_bytes": 56389,
+      "output_tokens": 2090
+    },
+    {
+      "id": "S1",
+      "initial_bytes": 23449,
+      "repair_bytes": 24972,
+      "output_tokens": 974
+    },
+    {
+      "id": "S2",
+      "initial_bytes": 34521,
+      "repair_bytes": 36406,
+      "output_tokens": 2150
+    },
+    {
+      "id": "S3",
+      "initial_bytes": 24905,
+      "repair_bytes": 26498,
+      "output_tokens": 974
+    },
+    {
+      "id": "S4",
+      "initial_bytes": 25862,
+      "repair_bytes": 27612,
+      "output_tokens": 974
+    },
+    {
+      "id": "S5",
+      "initial_bytes": 26936,
+      "repair_bytes": 28500,
+      "output_tokens": 974
+    },
+    {
+      "id": "S6",
+      "initial_bytes": 25202,
+      "repair_bytes": 26880,
+      "output_tokens": 974
+    },
+    {
+      "id": "S7",
+      "initial_bytes": 24665,
+      "repair_bytes": 26275,
+      "output_tokens": 974
+    },
+    {
+      "id": "S8",
+      "initial_bytes": 23672,
+      "repair_bytes": 25308,
+      "output_tokens": 974
+    },
+    {
+      "id": "S9",
+      "initial_bytes": 23279,
+      "repair_bytes": 24931,
+      "output_tokens": 974
+    },
+    {
+      "id": "S10",
+      "initial_bytes": 25660,
+      "repair_bytes": 27444,
+      "output_tokens": 974
+    },
+    {
+      "id": "S11",
+      "initial_bytes": 26540,
+      "repair_bytes": 28422,
+      "output_tokens": 974
+    },
+    {
+      "id": "S12",
+      "initial_bytes": 23523,
+      "repair_bytes": 25092,
+      "output_tokens": 974
+    },
+    {
+      "id": "END",
+      "initial_bytes": 56478,
+      "repair_bytes": 58206,
+      "output_tokens": 900
+    }
+  ],
+  "measured": {
+    "structure": 48757,
+    "sections": 56478,
+    "facts": 147838,
+    "logic": 113302,
+    "arbitration": 196873
+  },
+  "compiled_sha": "2dda7f9d53a090752501188ec7256e953f472332aa82f99ee6302119e534e6d4"
+}

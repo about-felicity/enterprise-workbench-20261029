@@ -1,0 +1,71 @@
+{
+  "time": "2026-10-06T10:26:02.512582+00:00",
+  "unattended_acceptance_passed": false,
+  "reason": "App failed readiness on three attempts; ARM translation CHECK failures remain",
+  "unit_tests": {
+    "passed": 22,
+    "platform": "Linux server"
+  },
+  "live_exit_code": 2,
+  "health": {
+    "time": 1791282360.1592596,
+    "status": "needs_attention",
+    "tasks": {
+      "needs_attention": 1,
+      "pending": 2
+    },
+    "task_id": null,
+    "attention_task_ids": [
+      "49ec5f10-c4ff-585e-9c49-7aecdb40723c"
+    ]
+  },
+  "tasks": [
+    {
+      "task_id": "49ec5f10-c4ff-585e-9c49-7aecdb40723c",
+      "state": "needs_attention",
+      "attempts": 3,
+      "error": "App did not become ready; login/native crash/UI must be checked"
+    },
+    {
+      "task_id": "2f20c8c3-7cfd-517c-b70e-510ded6e60d4",
+      "state": "pending",
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "task_id": "c7568e47-ad06-5882-8e67-43770422a0c7",
+      "state": "pending",
+      "attempts": 0,
+      "error": null
+    }
+  ],
+  "watchdog_smoke": "Result=watchdog\nExecMainStatus=6",
+  "existing_answer_audit": [
+    {
+      "status": "complete",
+      "sources": 12,
+      "citations": 4
+    },
+    {
+      "status": "complete",
+      "sources": 9,
+      "citations": 4
+    },
+    {
+      "status": "complete",
+      "sources": 16,
+      "citations": 7
+    }
+  ],
+  "native_errors": [
+    "10-06 17:55:50.407 19499 19681 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 19681 (DefaultDispatch), pid 19499 (com.larus.nova)",
+    "10-06 18:20:55.986 20803 21042 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 21042 (DefaultDispatch), pid 20803 (com.larus.nova)",
+    "10-06 18:22:17.405 21529 21728 F berberis: frameworks/libs/binary_translation/guest_abi/arm64/include/berberis/guest_abi/guest_params_arch.h:278: CHECK failed: 32080 <= 0",
+    "10-06 18:22:28.190 21529 21728 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 21728 (DefaultDispatch), pid 21529 (com.larus.nova)",
+    "10-06 18:23:12.797 22331 22567 F berberis: frameworks/libs/binary_translation/guest_abi/arm64/include/berberis/guest_abi/guest_params_arch.h:278: CHECK failed: 32080 <= 0",
+    "10-06 18:23:23.604 22331 22567 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 22567 (DefaultDispatch), pid 22331 (com.larus.nova)"
+  ],
+  "business_containers_unchanged": true,
+  "service_enabled": false,
+  "service_note": "Systemd template verified; production service not activated"
+}

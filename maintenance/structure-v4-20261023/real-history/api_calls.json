@@ -1,0 +1,296 @@
+{
+  "run_id": "rank01-structure-real-20261023T141521-70888873",
+  "status": "structure_incomplete",
+  "real_completion_calls": 5,
+  "balance_checks": 5,
+  "requests": [
+    {
+      "directory": "article/writer/structure_calls/compact-v2/chunk-000/primary",
+      "request_sha256": "ea6632943876674f9d201885f19e6212ce4a211dcb60e979286462b32c880b78",
+      "max_tokens": 1607,
+      "state": {
+        "payload_sha256": "d3893d6bb7a3a649dea2b4ac6a6ac8ae1c633939c541d6678d316efd08455295",
+        "model": "deepseek-flash",
+        "reservation": "6fd7c422b29e8ded613534777aff74d52371b92632eb9f46dfda188f9cb23c0d",
+        "state": "RESPONDED",
+        "finished_epoch": 1792736175.3133447,
+        "usage": {
+          "prompt_tokens": 2931,
+          "completion_tokens": 256,
+          "total_tokens": 3187,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 2931
+        }
+      },
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 2931,
+        "completion_tokens": 256,
+        "total_tokens": 3187,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 2931
+      },
+      "parsed_response_exists": true,
+      "accepted": true,
+      "known_failure": {},
+      "raw_answer_sha256": "d7fa5e223d6ff89e0334cebc9853ec0a387207927ee007b2171d8ac6278ac04c",
+      "recovery": false
+    },
+    {
+      "directory": "article/writer/structure_calls/compact-v2/chunk-001/primary",
+      "request_sha256": "d6e97fe5dad9b0247cbf9822c4edee7e08d3d37e9906bc8095c3f0500eced5d5",
+      "max_tokens": 1613,
+      "state": {
+        "payload_sha256": "d3b86fe0adf735dd18bb5c2aaf8872efa77e87b8c8662eeeb0e8ff86547789d8",
+        "model": "deepseek-flash",
+        "reservation": "09c86469b4274a35d705b597743c5481b5a61dd54cfc6f498444f22ba36fa1c7",
+        "state": "RESPONDED",
+        "finished_epoch": 1792736177.87507,
+        "usage": {
+          "prompt_tokens": 1541,
+          "completion_tokens": 250,
+          "total_tokens": 1791,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 1285
+        }
+      },
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 1541,
+        "completion_tokens": 250,
+        "total_tokens": 1791,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1285
+      },
+      "parsed_response_exists": true,
+      "accepted": true,
+      "known_failure": {},
+      "raw_answer_sha256": "2be59e01b935c3e654fe14c8a5236b2e714064487b57702d1fe110129592bda2",
+      "recovery": false
+    },
+    {
+      "directory": "article/writer/structure_calls/compact-v2/chunk-002/primary",
+      "request_sha256": "ea3a3324a5f7641191bc36790a3786fb01ee08d1b4ef903eaf6e28e0e58e9e83",
+      "max_tokens": 1613,
+      "state": {
+        "payload_sha256": "7bc51b36e78b00aec7c59d0dd38c6d3c6b23f1458d0de0754d438bf7ecbe4fc5",
+        "model": "deepseek-flash",
+        "reservation": "874e3262625b0f6d7d2398b4bdba8e19f24bef535424219f2bd8ed7b19be301b",
+        "state": "RESPONDED",
+        "finished_epoch": 1792736180.070227,
+        "usage": {
+          "prompt_tokens": 1529,
+          "completion_tokens": 243,
+          "total_tokens": 1772,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 1273
+        }
+      },
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 1529,
+        "completion_tokens": 243,
+        "total_tokens": 1772,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 1273
+      },
+      "parsed_response_exists": true,
+      "accepted": true,
+      "known_failure": {},
+      "raw_answer_sha256": "1da69333a38f80a85e47a9206095c574d33a04cae92432e0cb51916cff21e6cd",
+      "recovery": false
+    },
+    {
+      "directory": "article/writer/structure_calls/compact-v2/chunk-003/primary",
+      "request_sha256": "37a947143ec10e2f58315ab2bf532fc8342ef043440507c0f967cacb57e034ad",
+      "max_tokens": 1605,
+      "state": {
+        "payload_sha256": "23719c81e9e6890b3862d81df313130a77e92b7d16949cd199a2a577be36afd9",
+        "model": "deepseek-flash",
+        "reservation": "6190abfb8bb565f0554a38c3cb5c8a7696b110b0ed210ddef9764f317aa4a4ba",
+        "state": "RESPONDED",
+        "finished_epoch": 1792736182.2208242,
+        "usage": {
+          "prompt_tokens": 1218,
+          "completion_tokens": 255,
+          "total_tokens": 1473,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 962
+        }
+      },
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 1218,
+        "completion_tokens": 255,
+        "total_tokens": 1473,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 962
+      },
+      "parsed_response_exists": true,
+      "accepted": false,
+      "known_failure": {
+        "reason": "Source anchor/range/dependency differs from plan",
+        "raw_preserved": true
+      },
+      "raw_answer_sha256": "46f734f8b05b6fdb887e5a7a173210250fef2a291cddfda5f01887e803b4c41d",
+      "recovery": false
+    },
+    {
+      "directory": "article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062",
+      "request_sha256": "f92ba4fa2d7e2d4c20cf1e1d59a2f54b3ce351b88374a6d6ba6a86ad81cd5328",
+      "max_tokens": 615,
+      "state": {
+        "payload_sha256": "e0f1c8f5d2ff7afe6a3b7437df71dd1ca8b014bf5d037e2547c7f400029185f3",
+        "model": "deepseek-flash",
+        "reservation": "59431c83796b7e731afed37b33c3f5dbfbca906631d65406e27fd0d94fb236ed",
+        "state": "RESPONDED",
+        "finished_epoch": 1792736184.8972611,
+        "usage": {
+          "prompt_tokens": 789,
+          "completion_tokens": 449,
+          "total_tokens": 1238,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 661
+        }
+      },
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 789,
+        "completion_tokens": 449,
+        "total_tokens": 1238,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 661
+      },
+      "parsed_response_exists": true,
+      "accepted": false,
+      "known_failure": {
+        "reason": "Structure schema fields missing or unexpected",
+        "raw_preserved": true
+      },
+      "raw_answer_sha256": "307a7d4dd81ad9916076900b0f003a593e59dae7a038551d123904ee7d1b1d65",
+      "recovery": true
+    }
+  ],
+  "http_calls": [
+    {
+      "method": "GET",
+      "url": "https://api.deepseek.com/user/balance",
+      "kind": "balance",
+      "started": 1792736172.821658,
+      "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/000",
+      "status": 200,
+      "finished": 1792736173.1608133
+    },
+    {
+      "method": "POST",
+      "url": "https://api.deepseek.com/chat/completions",
+      "kind": "completion",
+      "started": 1792736173.2507038,
+      "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-000/primary",
+      "status": 200,
+      "finished": 1792736175.2329447
+    },
+    {
+      "method": "GET",
+      "url": "https://api.deepseek.com/user/balance",
+      "kind": "balance",
+      "started": 1792736175.3313763,
+      "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/002",
+      "status": 200,
+      "finished": 1792736175.4575224
+    },
+    {
+      "method": "POST",
+      "url": "https://api.deepseek.com/chat/completions",
+      "kind": "completion",
+      "started": 1792736175.6263855,
+      "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-001/primary",
+      "status": 200,
+      "finished": 1792736177.8634367
+    },
+    {
+      "method": "GET",
+      "url": "https://api.deepseek.com/user/balance",
+      "kind": "balance",
+      "started": 1792736177.8931487,
+      "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/004",
+      "status": 200,
+      "finished": 1792736177.9578247
+    },
+    {
+      "method": "POST",
+      "url": "https://api.deepseek.com/chat/completions",
+      "kind": "completion",
+      "started": 1792736178.0916348,
+      "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-002/primary",
+      "status": 200,
+      "finished": 1792736180.0126204
+    },
+    {
+      "method": "GET",
+      "url": "https://api.deepseek.com/user/balance",
+      "kind": "balance",
+      "started": 1792736180.0957956,
+      "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/006",
+      "status": 200,
+      "finished": 1792736180.1989462
+    },
+    {
+      "method": "POST",
+      "url": "https://api.deepseek.com/chat/completions",
+      "kind": "completion",
+      "started": 1792736180.321857,
+      "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/primary",
+      "status": 200,
+      "finished": 1792736182.2087286
+    },
+    {
+      "method": "GET",
+      "url": "https://api.deepseek.com/user/balance",
+      "kind": "balance",
+      "started": 1792736182.2946806,
+      "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/008",
+      "status": 200,
+      "finished": 1792736182.3744583
+    },
+    {
+      "method": "POST",
+      "url": "https://api.deepseek.com/chat/completions",
+      "kind": "completion",
+      "started": 1792736182.4477527,
+      "directory": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062",
+      "status": 200,
+      "finished": 1792736184.8332417
+    }
+  ]
+}

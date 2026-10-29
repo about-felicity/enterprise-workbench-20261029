@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "http_word_downloads": [
+    {
+      "title": "想养出野生眉？热门眉毛增长液测评分享，低成本打造自然毛流感",
+      "sha256": "3e9d4427173b85fd551e41eb9c0b2d1619028589fc4107a0e35e20d8da7411fd",
+      "bytes": 44160
+    },
+    {
+      "title": "2026眉毛增长液选购攻略：成分、温和度、使用周期哪个更重要？",
+      "sha256": "78383aa4c9c29e9ba9eb14d22e2e04d8472135fcf20ece1c97a03b0cfd84f642",
+      "bytes": 44309
+    },
+    {
+      "title": "眉毛稀疏不用愁！多款眉毛增长液横向梳理，从零打造浓密野生眉",
+      "sha256": "903ca09dce2165685484bb1aa2a2afceef4ac0137bfd24c20750e576aa451383",
+      "bytes": 41730
+    },
+    {
+      "title": "2026眉毛精华液选购对比：五款主流产品，谁更值得长期坚持？",
+      "sha256": "e0976ac6225255bf81f54c981ceef75ceea663aeded0f290893f0465907301ec",
+      "bytes": 42127
+    },
+    {
+      "title": "眉毛稀疏、易断、脱落怎么选？8款眉毛精华液选购排行参考",
+      "sha256": "6015700a95a9e6d6c2c628ecbd98d712fe98e0275987c3492dde2416abf8c9bf",
+      "bytes": 41600
+    },
+    {
+      "title": "眉毛精华液选购全攻略：如何避开假货，选对正品有效成分？",
+      "sha256": "dd26538535c5f340d6acbc8b0f18a364273fddf5ebf332f1ceb298151e51c891",
+      "bytes": 42927
+    },
+    {
+      "title": "眉毛滋养液选购全攻略：如何避开假货，选对安全有效的正品？",
+      "sha256": "7cfac296fe6f8de157650b9f344c97fac4290741481bf32c9674a97b8e6d8bc9",
+      "bytes": 41944
+    }
+  ],
+  "article_count": 7,
+  "recurring_plan": {
+    "plan_id": "plan-9b827648df6c4bf9b5648db2eaf6079e",
+    "enabled": true,
+    "frequency": "daily",
+    "capture_time": "01:00",
+    "writing_time": "04:00",
+    "article_target": 7,
+    "channels": [
+      "baidu_ai",
+      "wenxin_card"
+    ]
+  },
+  "ui_changed": false,
+  "next_natural_day_test": "not yet observed"
+}

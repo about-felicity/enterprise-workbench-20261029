@@ -1,0 +1,30 @@
+{
+  "public": [
+    {
+      "path": "ui",
+      "status": 200
+    },
+    {
+      "path": "panel",
+      "status": 200
+    }
+  ],
+  "pending_product": "科熙本二硫化硒清爽去屑止痒洗发水",
+  "existing_plan_count": 1,
+  "existing_job_count": 2,
+  "export_word_sha_identical": true,
+  "export_contains_information_logs_and_audits": true,
+  "directory": "科熙本二硫化硒清爽去屑止痒洗发水历史创作任务_2026-10-10/排行类/01_头屑反复还越洗越痒？2026年11款去屑洗发水选购参考_25942991",
+  "reference": {
+    "url": "https://www.163.com/dy/article/KTCQPEQB0550EWRZ.html?spss=dy_author&referFrom=",
+    "title": "去屑洗发水什么牌子好？2026 十大公认去屑止痒洗发水深度测评，清爽头皮告别头屑尴尬",
+    "domain": "www.163.com",
+    "media": "网易内容平台（包含自媒体）",
+    "author": "原素材未提供",
+    "published_at": "原素材未提供",
+    "official_account": "未核实，不根据域名推断"
+  },
+  "mobile_no_horizontal_overflow": true,
+  "page_errors": [],
+  "mutations": "none; only read existing approved article, no live task saved or paid request"
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "key": "conditioner",
+    "health": {
+      "at": 1792751750.720072,
+      "day": "2026-10-23",
+      "status": "complete",
+      "geo_ingest_enabled": false,
+      "search_resource_pool": "creation_only",
+      "active_channels": []
+    },
+    "progress": [
+      {
+        "id": "baidu_ai",
+        "name": "百度卡片",
+        "completed": 2,
+        "counts": {
+          "completed": 2
+        },
+        "recovery": {},
+        "blocked": {}
+      },
+      {
+        "id": "wenxin_card",
+        "name": "文心卡片",
+        "completed": 2,
+        "counts": {
+          "completed": 2
+        },
+        "recovery": {},
+        "blocked": {}
+      }
+    ],
+    "records": 4,
+    "source_count": 73
+  },
+  {
+    "key": "essence",
+    "health": {
+      "at": 1792751751.5772848,
+      "day": "2026-10-23",
+      "status": "complete",
+      "geo_ingest_enabled": false,
+      "search_resource_pool": "creation_only",
+      "active_channels": []
+    },
+    "progress": [
+      {
+        "id": "baidu_ai",
+        "name": "百度卡片",
+        "completed": 2,
+        "counts": {
+          "completed": 2
+        },
+        "recovery": {},
+        "blocked": {}
+      },
+      {
+        "id": "wenxin_card",
+        "name": "文心卡片",
+        "completed": 2,
+        "counts": {
+          "completed": 2
+        },
+        "recovery": {},
+        "blocked": {}
+      }
+    ],
+    "records": 4,
+    "source_count": 79
+  },
+  {
+    "key": "cream",
+    "health": {
+      "at": 1792751751.573166,
+      "day": "2026-10-23",
+      "status": "complete",
+      "geo_ingest_enabled": false,
+      "search_resource_pool": "creation_only",
+      "active_channels": []
+    },
+    "progress": [
+      {
+        "id": "baidu_ai",
+        "name": "百度卡片",
+        "completed": 2,
+        "counts": {
+          "completed": 2
+        },
+        "recovery": {},
+        "blocked": {}
+      },
+      {
+        "id": "wenxin_card",
+        "name": "文心卡片",
+        "completed": 2,
+        "counts": {
+          "completed": 2
+        },
+        "recovery": {},
+        "blocked": {}
+      }
+    ],
+    "records": 4,
+    "source_count": 80
+  }
+]

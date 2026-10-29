@@ -1,0 +1,597 @@
+{
+  "type": "zero_api_historical_replay",
+  "new_api_calls": 0,
+  "new_cost_cny": 0,
+  "samples": [
+    {
+      "category": "排行类",
+      "number": 1,
+      "run_id": "4a3b427ed88d72ed8558bf82",
+      "work_dir": "C:\\Users\\78567\\Desktop\\隐身浏览器\\maintenance\\candidate-validation-20261023\\isolated\\replay-1792719660077350000\\1",
+      "structure_response_origin": "C:\\Users\\78567\\Desktop\\隐身浏览器\\maintenance\\candidate-validation-20261023\\isolated\\evidence\\api\\runs\\b13a1acdb95039a6fa6061c2",
+      "own_slot": "S2",
+      "own_source_ids": [
+        "PF1",
+        "PF10",
+        "PF11",
+        "PF2",
+        "PF3",
+        "PF4",
+        "PF5",
+        "PF6",
+        "PF7",
+        "PF8",
+        "PF9"
+      ],
+      "all_product_claims_subject_scoped": true,
+      "no_insert_releases_no_pf": true,
+      "feasibility": "READY_WITH_LIMITS",
+      "source_units": 36,
+      "source_chars": 7006,
+      "structure_replayed_calls": 2,
+      "structure_degraded": true,
+      "expected_body_sections": 12,
+      "components_including_intro_end": 14,
+      "allotted_body_chars": 4841,
+      "article_max_chars": 6000,
+      "old_answer_cannot_be_rebound": "Writer used another compilation",
+      "historical_section_checks": [
+        {
+          "id": "INTRO",
+          "body_chars": 708,
+          "target_hanzi": 580,
+          "max_chars": 770,
+          "compatibility_error": null,
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S1",
+          "body_chars": 196,
+          "target_hanzi": 208,
+          "max_chars": 276,
+          "compatibility_error": null,
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S2",
+          "body_chars": 283,
+          "target_hanzi": 600,
+          "max_chars": 796,
+          "compatibility_error": "Unassigned section claim",
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S3",
+          "body_chars": 226,
+          "target_hanzi": 208,
+          "max_chars": 276,
+          "compatibility_error": null,
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S4",
+          "body_chars": 241,
+          "target_hanzi": 208,
+          "max_chars": 276,
+          "compatibility_error": null,
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S5",
+          "body_chars": 200,
+          "target_hanzi": 208,
+          "max_chars": 276,
+          "compatibility_error": null,
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S6",
+          "body_chars": 218,
+          "target_hanzi": 208,
+          "max_chars": 276,
+          "compatibility_error": null,
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S7",
+          "body_chars": 199,
+          "target_hanzi": 208,
+          "max_chars": 276,
+          "compatibility_error": null,
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S8",
+          "body_chars": 221,
+          "target_hanzi": 208,
+          "max_chars": 276,
+          "compatibility_error": null,
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S9",
+          "body_chars": 223,
+          "target_hanzi": 208,
+          "max_chars": 276,
+          "compatibility_error": null,
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S10",
+          "body_chars": 252,
+          "target_hanzi": 208,
+          "max_chars": 276,
+          "compatibility_error": null,
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S11",
+          "body_chars": 276,
+          "target_hanzi": 208,
+          "max_chars": 276,
+          "compatibility_error": null,
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S12",
+          "body_chars": 214,
+          "target_hanzi": 208,
+          "max_chars": 276,
+          "compatibility_error": null,
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "END",
+          "body_chars": 234,
+          "target_hanzi": 180,
+          "max_chars": 239,
+          "compatibility_error": null,
+          "not_a_fresh_model_output": true
+        }
+      ],
+      "historical_writer_result": "section_generation_exhausted",
+      "historical_writer_calls": [
+        {
+          "id": "INTRO",
+          "revision_inherited": true
+        },
+        {
+          "id": "S1",
+          "revision_inherited": true
+        },
+        {
+          "id": "S2",
+          "revision_inherited": true
+        },
+        {
+          "id": "S2",
+          "revision_inherited": true
+        },
+        {
+          "id": "S2",
+          "revision_inherited": true
+        }
+      ],
+      "structure_own_binding": "AS004"
+    },
+    {
+      "category": "测评类",
+      "number": 2,
+      "run_id": "08ee3e1b3de618d868e94cda",
+      "work_dir": "C:\\Users\\78567\\Desktop\\隐身浏览器\\maintenance\\candidate-validation-20261023\\isolated\\replay-1792719660077350000\\2",
+      "structure_response_origin": "C:\\Users\\78567\\Desktop\\隐身浏览器\\maintenance\\candidate-validation-20261023\\isolated\\evidence\\api\\runs\\d5a3294bcf0da69f7e82ea87",
+      "own_slot": "S2",
+      "own_source_ids": [
+        "PF1",
+        "PF10",
+        "PF11",
+        "PF2",
+        "PF3",
+        "PF4",
+        "PF5",
+        "PF6",
+        "PF7",
+        "PF8",
+        "PF9"
+      ],
+      "all_product_claims_subject_scoped": true,
+      "no_insert_releases_no_pf": true,
+      "feasibility": "READY",
+      "source_units": 42,
+      "source_chars": 4992,
+      "structure_replayed_calls": 2,
+      "structure_degraded": false,
+      "expected_body_sections": 13,
+      "components_including_intro_end": 15,
+      "allotted_body_chars": 4753,
+      "article_max_chars": 6000,
+      "old_answer_cannot_be_rebound": "Writer used another compilation",
+      "historical_section_checks": [
+        {
+          "id": "INTRO",
+          "body_chars": 566,
+          "target_hanzi": 580,
+          "max_chars": 753,
+          "compatibility_error": null,
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S1",
+          "body_chars": 317,
+          "target_hanzi": 192,
+          "max_chars": 249,
+          "compatibility_error": "Section exceeds allocated article character budget: received 317, maximum 249; compress, do not expand",
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S2",
+          "body_chars": 770,
+          "target_hanzi": 600,
+          "max_chars": 779,
+          "compatibility_error": null,
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S3",
+          "body_chars": 339,
+          "target_hanzi": 192,
+          "max_chars": 249,
+          "compatibility_error": "Section exceeds allocated article character budget: received 339, maximum 249; compress, do not expand",
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S4",
+          "body_chars": 317,
+          "target_hanzi": 192,
+          "max_chars": 249,
+          "compatibility_error": "Section exceeds allocated article character budget: received 317, maximum 249; compress, do not expand",
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S5",
+          "body_chars": 635,
+          "target_hanzi": 192,
+          "max_chars": 249,
+          "compatibility_error": "Section exceeds allocated article character budget: received 635, maximum 249; compress, do not expand",
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S6",
+          "body_chars": 386,
+          "target_hanzi": 192,
+          "max_chars": 249,
+          "compatibility_error": "Section exceeds allocated article character budget: received 386, maximum 249; compress, do not expand",
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S7",
+          "body_chars": 503,
+          "target_hanzi": 192,
+          "max_chars": 249,
+          "compatibility_error": "Section exceeds allocated article character budget: received 503, maximum 249; compress, do not expand",
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S8",
+          "body_chars": 565,
+          "target_hanzi": 192,
+          "max_chars": 249,
+          "compatibility_error": "Section exceeds allocated article character budget: received 565, maximum 249; compress, do not expand",
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S9",
+          "body_chars": 416,
+          "target_hanzi": 192,
+          "max_chars": 249,
+          "compatibility_error": "Section exceeds allocated article character budget: received 416, maximum 249; compress, do not expand",
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S10",
+          "body_chars": 406,
+          "target_hanzi": 192,
+          "max_chars": 249,
+          "compatibility_error": "Section exceeds allocated article character budget: received 406, maximum 249; compress, do not expand",
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S11",
+          "body_chars": 503,
+          "target_hanzi": 192,
+          "max_chars": 249,
+          "compatibility_error": "Section exceeds allocated article character budget: received 503, maximum 249; compress, do not expand",
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S12",
+          "body_chars": 393,
+          "target_hanzi": 192,
+          "max_chars": 249,
+          "compatibility_error": "Section exceeds allocated article character budget: received 393, maximum 249; compress, do not expand",
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "S13",
+          "body_chars": 364,
+          "target_hanzi": 192,
+          "max_chars": 249,
+          "compatibility_error": "Section exceeds allocated article character budget: received 364, maximum 249; compress, do not expand",
+          "not_a_fresh_model_output": true
+        },
+        {
+          "id": "END",
+          "body_chars": 397,
+          "target_hanzi": 180,
+          "max_chars": 233,
+          "compatibility_error": "Section exceeds allocated article character budget: received 397, maximum 233; compress, do not expand",
+          "not_a_fresh_model_output": true
+        }
+      ],
+      "historical_writer_result": "section_generation_exhausted",
+      "historical_writer_calls": [
+        {
+          "id": "INTRO",
+          "revision_inherited": true
+        },
+        {
+          "id": "S1",
+          "revision_inherited": true
+        },
+        {
+          "id": "S1",
+          "revision_inherited": true
+        },
+        {
+          "id": "S1",
+          "revision_inherited": true
+        }
+      ],
+      "structure_own_binding": "AS002"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "B1",
+      "kind": "structure_mapping",
+      "evidence": {
+        "first_original_product": "AS002",
+        "purpose": "以第一名身份完整展示首迷的综合资质、配方体系、功效、安全性与使用体验",
+        "regenerated_from_old_api_own_binding": "AS002",
+        "saved_artifact_own_binding": "AS001",
+        "candidate_roles": [
+          [
+            "AS001",
+            "opening"
+          ],
+          [
+            "AS002",
+            "body"
+          ],
+          [
+            "AS003",
+            "body"
+          ],
+          [
+            "AS004",
+            "body"
+          ],
+          [
+            "AS005",
+            "body"
+          ],
+          [
+            "AS006",
+            "body"
+          ],
+          [
+            "AS007",
+            "body"
+          ],
+          [
+            "AS008",
+            "body"
+          ],
+          [
+            "AS009",
+            "body"
+          ],
+          [
+            "AS010",
+            "body"
+          ],
+          [
+            "AS011",
+            "body"
+          ],
+          [
+            "AS012",
+            "summary"
+          ]
+        ]
+      },
+      "minimal_fix": "统一识别原文各产品介绍的结构角色，再按产品叙述顺序绑定；保留事实边界，不依赖是否出现“产品/品牌”等词。"
+    },
+    {
+      "id": "B2",
+      "kind": "stale_original_source",
+      "evidence": "保存真实初审+合成needs_check仲裁后，仅修改research_result.json原始来源；quality_pipeline快路径直接返回旧结果。分批输入校验能拒绝变化，但最终缓存快路径未重新构建来源指纹。",
+      "minimal_fix": "把完整原始来源的摘要纳入最终质量证书，并在缓存复用及终验时重新读取核对；来源变化后失效审稿及仲裁，不重写或清空历史。"
+    }
+  ],
+  "synthetic_checks": {},
+  "structure_binding_evidence": {
+    "first_original_product": "AS002",
+    "purpose": "以第一名身份完整展示首迷的综合资质、配方体系、功效、安全性与使用体验",
+    "regenerated_from_old_api_own_binding": "AS002",
+    "saved_artifact_own_binding": "AS001",
+    "candidate_roles": [
+      [
+        "AS001",
+        "opening"
+      ],
+      [
+        "AS002",
+        "body"
+      ],
+      [
+        "AS003",
+        "body"
+      ],
+      [
+        "AS004",
+        "body"
+      ],
+      [
+        "AS005",
+        "body"
+      ],
+      [
+        "AS006",
+        "body"
+      ],
+      [
+        "AS007",
+        "body"
+      ],
+      [
+        "AS008",
+        "body"
+      ],
+      [
+        "AS009",
+        "body"
+      ],
+      [
+        "AS010",
+        "body"
+      ],
+      [
+        "AS011",
+        "body"
+      ],
+      [
+        "AS012",
+        "summary"
+      ]
+    ]
+  },
+  "arbitration": {
+    "real_initial_fact_failures": 16,
+    "real_logic_status": "needs_revision",
+    "total_proposals": 26,
+    "batch_sizes": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2
+    ],
+    "unique_decisions": 26,
+    "all_full_context": true,
+    "resume_extra_calls": 0,
+    "invalidations": {
+      "body": "Stale arbitration batch inputs",
+      "knowledge": "Stale arbitration batch inputs",
+      "original_source": "Stale arbitration batch inputs"
+    },
+    "semantic_arbitration": "NOT_TESTED_SYNTHETIC_NEEDS_CHECK_ONLY",
+    "cost_inputs": [
+      {
+        "ids": [
+          "ISS1",
+          "ISS2",
+          "ISS3"
+        ],
+        "max_tokens": 2200,
+        "full_context": true,
+        "bytes": 217591
+      },
+      {
+        "ids": [
+          "ISS4",
+          "ISS5",
+          "ISS6"
+        ],
+        "max_tokens": 2200,
+        "full_context": true,
+        "bytes": 217770
+      },
+      {
+        "ids": [
+          "ISS7",
+          "ISS8",
+          "ISS9"
+        ],
+        "max_tokens": 2200,
+        "full_context": true,
+        "bytes": 217722
+      },
+      {
+        "ids": [
+          "ISS10",
+          "ISS11",
+          "ISS12"
+        ],
+        "max_tokens": 2200,
+        "full_context": true,
+        "bytes": 217673
+      },
+      {
+        "ids": [
+          "ISS13",
+          "ISS14",
+          "ISS15"
+        ],
+        "max_tokens": 2200,
+        "full_context": true,
+        "bytes": 217453
+      },
+      {
+        "ids": [
+          "ISS16",
+          "ISS17",
+          "ISS18"
+        ],
+        "max_tokens": 2200,
+        "full_context": true,
+        "bytes": 217758
+      },
+      {
+        "ids": [
+          "ISS19",
+          "ISS20",
+          "ISS21"
+        ],
+        "max_tokens": 2200,
+        "full_context": true,
+        "bytes": 217972
+      },
+      {
+        "ids": [
+          "ISS22",
+          "ISS23",
+          "ISS24"
+        ],
+        "max_tokens": 2200,
+        "full_context": true,
+        "bytes": 217972
+      },
+      {
+        "ids": [
+          "ISS25",
+          "ISS26"
+        ],
+        "max_tokens": 2200,
+        "full_context": true,
+        "bytes": 217559
+      }
+    ]
+  },
+  "source_only_final_pipeline_invalidated": false,
+  "blocked_network_attempts": 0
+}

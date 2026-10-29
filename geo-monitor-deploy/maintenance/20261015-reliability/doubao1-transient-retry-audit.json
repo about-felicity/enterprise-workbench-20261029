@@ -1,0 +1,816 @@
+{
+  "at": 1792101907.6462758,
+  "test_id": "question-only-soak12h-rowidfix-1792072084",
+  "model_actions": 0,
+  "attempts": [
+    {
+      "task_id": "ad3b04f3-935a-507d-bccc-6f92e3a02b82",
+      "ordinal": 576,
+      "question": "推荐一款造型喷雾",
+      "failed_attempt": {
+        "task_id": "ad3b04f3-935a-507d-bccc-6f92e3a02b82",
+        "attempt": 0,
+        "wire_question": "推荐一款造型喷雾",
+        "request_id": "2c4c2d72-a7ba-4c38-a792-26bb780311e1",
+        "answer_id": "056728ab-106a-481d-87fa-ffb5afd2acbb",
+        "reason": "confirmed_transient_error",
+        "archived_at": 1792096351.5627766
+      },
+      "original_proof": {
+        "status": "complete",
+        "finished": true,
+        "native_request_confirmed": true,
+        "first_user_turn": true,
+        "request_id": "2c4c2d72-a7ba-4c38-a792-26bb780311e1",
+        "answer_id": "056728ab-106a-481d-87fa-ffb5afd2acbb",
+        "body_markdown": "出了点问题，请稍后重试。",
+        "sources": [],
+        "wire_question": "推荐一款造型喷雾"
+      },
+      "events": [
+        {
+          "time": 1792059501.1152816,
+          "event": "enqueued",
+          "detail": "question-only-v1"
+        },
+        {
+          "time": 1792096321.108922,
+          "event": "send_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792096321.1089356,
+          "event": "send_protocol_v2",
+          "detail": ""
+        },
+        {
+          "time": 1792096333.682652,
+          "event": "send_click_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792096336.4678352,
+          "event": "send_tap_returned",
+          "detail": ""
+        },
+        {
+          "time": 1792096351.5633876,
+          "event": "capture_retry_scheduled",
+          "detail": "{\"request_id\": \"2c4c2d72-a7ba-4c38-a792-26bb780311e1\", \"delay\": 90, \"prompt_unchanged\": true}"
+        },
+        {
+          "time": 1792096446.6418066,
+          "event": "send_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792096446.6418161,
+          "event": "send_protocol_v2",
+          "detail": ""
+        },
+        {
+          "time": 1792096456.8142002,
+          "event": "send_click_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792096459.8648899,
+          "event": "send_tap_returned",
+          "detail": ""
+        },
+        {
+          "time": 1792096484.153552,
+          "event": "completed",
+          "detail": ""
+        }
+      ],
+      "current_state": "completed",
+      "capture_retries": 1,
+      "native_reads": [
+        {
+          "attempt": 0,
+          "binding": {
+            "conversation_id": "38447408550924546",
+            "request_id": "2c4c2d72-a7ba-4c38-a792-26bb780311e1",
+            "answer_id": null
+          },
+          "observed": {
+            "status": "complete",
+            "finished": true,
+            "native_request_confirmed": true,
+            "first_user_turn": true,
+            "request_id": "2c4c2d72-a7ba-4c38-a792-26bb780311e1",
+            "answer_id": "056728ab-106a-481d-87fa-ffb5afd2acbb"
+          },
+          "body_characters": 12,
+          "body_sha256": "1f7aa7ba8cc0b0a09673feeb8e6deded8e81ef43d214e3ba96c420deedff5e0c",
+          "source_count": 0
+        },
+        {
+          "attempt": 1,
+          "binding": {
+            "conversation_id": "38447372636520706",
+            "request_id": "b3928e0b-bf4f-435d-b066-cc21f250908d",
+            "answer_id": null
+          },
+          "observed": {
+            "status": "complete",
+            "finished": true,
+            "native_request_confirmed": true,
+            "first_user_turn": true,
+            "request_id": "b3928e0b-bf4f-435d-b066-cc21f250908d",
+            "answer_id": "351940b7-4766-45f3-89ba-d727c767763f"
+          },
+          "body_characters": 536,
+          "body_sha256": "e1a33e75ca38e336ef9eff8f88869253f24d02b4e8928875e0702a606d7eb447",
+          "source_count": 12
+        }
+      ],
+      "current_result": {
+        "status": "complete",
+        "finished": true,
+        "native_request_confirmed": true,
+        "first_user_turn": true,
+        "request_id": "b3928e0b-bf4f-435d-b066-cc21f250908d",
+        "answer_id": "351940b7-4766-45f3-89ba-d727c767763f"
+      },
+      "current_body_characters": 536,
+      "current_sources": 12
+    },
+    {
+      "task_id": "891a5ae1-9951-593a-97ed-3c561559d36e",
+      "ordinal": 608,
+      "question": "推荐一款护手霜",
+      "failed_attempt": {
+        "task_id": "891a5ae1-9951-593a-97ed-3c561559d36e",
+        "attempt": 0,
+        "wire_question": "推荐一款护手霜",
+        "request_id": "4049687d-1c68-4d90-8684-d5c418ef7022",
+        "answer_id": "deb70912-36a7-4215-9ac9-c2285a84a175",
+        "reason": "confirmed_transient_error",
+        "archived_at": 1792098516.903274
+      },
+      "original_proof": {
+        "status": "complete",
+        "finished": true,
+        "native_request_confirmed": true,
+        "first_user_turn": true,
+        "request_id": "4049687d-1c68-4d90-8684-d5c418ef7022",
+        "answer_id": "deb70912-36a7-4215-9ac9-c2285a84a175",
+        "body_markdown": "出了点问题，请稍后重试。",
+        "sources": [],
+        "wire_question": "推荐一款护手霜"
+      },
+      "events": [
+        {
+          "time": 1792059501.115586,
+          "event": "enqueued",
+          "detail": "question-only-v1"
+        },
+        {
+          "time": 1792098481.4926097,
+          "event": "prepare_failed",
+          "detail": "TimeoutError"
+        },
+        {
+          "time": 1792098491.9936967,
+          "event": "send_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792098491.9937024,
+          "event": "send_protocol_v2",
+          "detail": ""
+        },
+        {
+          "time": 1792098501.6199107,
+          "event": "send_click_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792098504.6597977,
+          "event": "send_tap_returned",
+          "detail": ""
+        },
+        {
+          "time": 1792098516.903581,
+          "event": "capture_retry_scheduled",
+          "detail": "{\"request_id\": \"4049687d-1c68-4d90-8684-d5c418ef7022\", \"delay\": 90, \"prompt_unchanged\": true}"
+        },
+        {
+          "time": 1792098611.9860556,
+          "event": "send_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792098611.9860656,
+          "event": "send_protocol_v2",
+          "detail": ""
+        },
+        {
+          "time": 1792098626.1465573,
+          "event": "send_click_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792098628.9848034,
+          "event": "send_tap_returned",
+          "detail": ""
+        },
+        {
+          "time": 1792098650.1103432,
+          "event": "completed",
+          "detail": ""
+        }
+      ],
+      "current_state": "completed",
+      "capture_retries": 1,
+      "native_reads": [
+        {
+          "attempt": 0,
+          "binding": {
+            "conversation_id": "38447372994080770",
+            "request_id": "4049687d-1c68-4d90-8684-d5c418ef7022",
+            "answer_id": null
+          },
+          "observed": {
+            "status": "complete",
+            "finished": true,
+            "native_request_confirmed": true,
+            "first_user_turn": true,
+            "request_id": "4049687d-1c68-4d90-8684-d5c418ef7022",
+            "answer_id": "deb70912-36a7-4215-9ac9-c2285a84a175"
+          },
+          "body_characters": 12,
+          "body_sha256": "1f7aa7ba8cc0b0a09673feeb8e6deded8e81ef43d214e3ba96c420deedff5e0c",
+          "source_count": 0
+        },
+        {
+          "attempt": 1,
+          "binding": {
+            "conversation_id": "38447303723000578",
+            "request_id": "cf657e26-8c9c-46c5-a92c-cb0c193f297e",
+            "answer_id": null
+          },
+          "observed": {
+            "status": "complete",
+            "finished": true,
+            "native_request_confirmed": true,
+            "first_user_turn": true,
+            "request_id": "cf657e26-8c9c-46c5-a92c-cb0c193f297e",
+            "answer_id": "2166befd-61bf-4f5c-8348-98ab4fb29f43"
+          },
+          "body_characters": 511,
+          "body_sha256": "0c5c6298756e9865bbbb14f2b57fc95d7f7412c83ca4db07738c4893c3b54eec",
+          "source_count": 12
+        }
+      ],
+      "current_result": {
+        "status": "complete",
+        "finished": true,
+        "native_request_confirmed": true,
+        "first_user_turn": true,
+        "request_id": "cf657e26-8c9c-46c5-a92c-cb0c193f297e",
+        "answer_id": "2166befd-61bf-4f5c-8348-98ab4fb29f43"
+      },
+      "current_body_characters": 511,
+      "current_sources": 12
+    },
+    {
+      "task_id": "172d200e-115a-5018-8919-5abc77609f73",
+      "ordinal": 612,
+      "question": "推荐一款控油蓬松洗发水",
+      "failed_attempt": {
+        "task_id": "172d200e-115a-5018-8919-5abc77609f73",
+        "attempt": 0,
+        "wire_question": "推荐一款控油蓬松洗发水",
+        "request_id": "56f4b4d9-3092-49bc-9d42-081490066dba",
+        "answer_id": "a1b2560f-23a2-40a6-9f5d-cf4cecf823de",
+        "reason": "confirmed_transient_error",
+        "archived_at": 1792098891.2515624
+      },
+      "original_proof": {
+        "status": "complete",
+        "finished": true,
+        "native_request_confirmed": true,
+        "first_user_turn": true,
+        "request_id": "56f4b4d9-3092-49bc-9d42-081490066dba",
+        "answer_id": "a1b2560f-23a2-40a6-9f5d-cf4cecf823de",
+        "body_markdown": "出了点问题，请稍后重试。",
+        "sources": [],
+        "wire_question": "推荐一款控油蓬松洗发水"
+      },
+      "events": [
+        {
+          "time": 1792059501.115621,
+          "event": "enqueued",
+          "detail": "question-only-v1"
+        },
+        {
+          "time": 1792098865.1884372,
+          "event": "send_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792098865.1884472,
+          "event": "send_protocol_v2",
+          "detail": ""
+        },
+        {
+          "time": 1792098875.2160196,
+          "event": "send_click_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792098879.182829,
+          "event": "send_tap_returned",
+          "detail": ""
+        },
+        {
+          "time": 1792098891.2516363,
+          "event": "capture_retry_scheduled",
+          "detail": "{\"request_id\": \"56f4b4d9-3092-49bc-9d42-081490066dba\", \"delay\": 90, \"prompt_unchanged\": true}"
+        },
+        {
+          "time": 1792098986.2539759,
+          "event": "send_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792098986.2539828,
+          "event": "send_protocol_v2",
+          "detail": ""
+        },
+        {
+          "time": 1792098996.2188346,
+          "event": "send_click_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792098999.8058028,
+          "event": "send_tap_returned",
+          "detail": ""
+        },
+        {
+          "time": 1792099023.9361253,
+          "event": "completed",
+          "detail": ""
+        }
+      ],
+      "current_state": "completed",
+      "capture_retries": 1,
+      "native_reads": [
+        {
+          "attempt": 0,
+          "binding": {
+            "conversation_id": "38447390773213186",
+            "request_id": "56f4b4d9-3092-49bc-9d42-081490066dba",
+            "answer_id": null
+          },
+          "observed": {
+            "status": "complete",
+            "finished": true,
+            "native_request_confirmed": true,
+            "first_user_turn": true,
+            "request_id": "56f4b4d9-3092-49bc-9d42-081490066dba",
+            "answer_id": "a1b2560f-23a2-40a6-9f5d-cf4cecf823de"
+          },
+          "body_characters": 12,
+          "body_sha256": "1f7aa7ba8cc0b0a09673feeb8e6deded8e81ef43d214e3ba96c420deedff5e0c",
+          "source_count": 0
+        },
+        {
+          "attempt": 1,
+          "binding": {
+            "conversation_id": "38447355058426626",
+            "request_id": "8b1ce3ff-4287-4435-ba7a-a3109653bf37",
+            "answer_id": null
+          },
+          "observed": {
+            "status": "complete",
+            "finished": true,
+            "native_request_confirmed": true,
+            "first_user_turn": true,
+            "request_id": "8b1ce3ff-4287-4435-ba7a-a3109653bf37",
+            "answer_id": "bc9d1bf4-7467-4b3e-a814-0795a8d47e5a"
+          },
+          "body_characters": 569,
+          "body_sha256": "77deb3f2a912b536b49ddebf2ed150ca833101013eca7180dba3bca4de19eeb5",
+          "source_count": 12
+        }
+      ],
+      "current_result": {
+        "status": "complete",
+        "finished": true,
+        "native_request_confirmed": true,
+        "first_user_turn": true,
+        "request_id": "8b1ce3ff-4287-4435-ba7a-a3109653bf37",
+        "answer_id": "bc9d1bf4-7467-4b3e-a814-0795a8d47e5a"
+      },
+      "current_body_characters": 569,
+      "current_sources": 12
+    },
+    {
+      "task_id": "4af8636e-6c77-5954-8713-4480626f832a",
+      "ordinal": 629,
+      "question": "推荐一款护手霜",
+      "failed_attempt": {
+        "task_id": "4af8636e-6c77-5954-8713-4480626f832a",
+        "attempt": 0,
+        "wire_question": "推荐一款护手霜",
+        "request_id": "bde99aaa-7ee4-4f42-9384-a19528c4ef4c",
+        "answer_id": "61c89b21-9a85-40bc-b191-4ea9db20d262",
+        "reason": "confirmed_transient_error",
+        "archived_at": 1792100046.2272327
+      },
+      "original_proof": {
+        "status": "complete",
+        "finished": true,
+        "native_request_confirmed": true,
+        "first_user_turn": true,
+        "request_id": "bde99aaa-7ee4-4f42-9384-a19528c4ef4c",
+        "answer_id": "61c89b21-9a85-40bc-b191-4ea9db20d262",
+        "body_markdown": "出了点问题，请稍后重试。",
+        "sources": [],
+        "wire_question": "推荐一款护手霜"
+      },
+      "events": [
+        {
+          "time": 1792059501.115792,
+          "event": "enqueued",
+          "detail": "question-only-v1"
+        },
+        {
+          "time": 1792100026.0129824,
+          "event": "send_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792100026.0129876,
+          "event": "send_protocol_v2",
+          "detail": ""
+        },
+        {
+          "time": 1792100036.8186126,
+          "event": "send_click_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792100040.1857514,
+          "event": "send_tap_returned",
+          "detail": ""
+        },
+        {
+          "time": 1792100046.2272685,
+          "event": "capture_retry_scheduled",
+          "detail": "{\"request_id\": \"bde99aaa-7ee4-4f42-9384-a19528c4ef4c\", \"delay\": 90, \"prompt_unchanged\": true}"
+        },
+        {
+          "time": 1792100141.1800544,
+          "event": "send_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792100141.180064,
+          "event": "send_protocol_v2",
+          "detail": ""
+        },
+        {
+          "time": 1792100150.5455685,
+          "event": "send_click_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792100153.9257941,
+          "event": "send_tap_returned",
+          "detail": ""
+        },
+        {
+          "time": 1792100175.043897,
+          "event": "completed",
+          "detail": ""
+        }
+      ],
+      "current_state": "completed",
+      "capture_retries": 1,
+      "native_reads": [
+        {
+          "attempt": 0,
+          "binding": {
+            "conversation_id": "38447409000915202",
+            "request_id": "bde99aaa-7ee4-4f42-9384-a19528c4ef4c",
+            "answer_id": null
+          },
+          "observed": {
+            "status": "complete",
+            "finished": true,
+            "native_request_confirmed": true,
+            "first_user_turn": true,
+            "request_id": "bde99aaa-7ee4-4f42-9384-a19528c4ef4c",
+            "answer_id": "61c89b21-9a85-40bc-b191-4ea9db20d262"
+          },
+          "body_characters": 12,
+          "body_sha256": "1f7aa7ba8cc0b0a09673feeb8e6deded8e81ef43d214e3ba96c420deedff5e0c",
+          "source_count": 0
+        },
+        {
+          "attempt": 1,
+          "binding": {
+            "conversation_id": "38447303848872962",
+            "request_id": "a6a0f899-8074-4578-9f38-623fbb518406",
+            "answer_id": null
+          },
+          "observed": {
+            "status": "complete",
+            "finished": true,
+            "native_request_confirmed": true,
+            "first_user_turn": true,
+            "request_id": "a6a0f899-8074-4578-9f38-623fbb518406",
+            "answer_id": "4c22e7e6-5301-4e2e-9a28-945d58e263d7"
+          },
+          "body_characters": 410,
+          "body_sha256": "9c165d7126a59a958ccad2bbde319e7ead4f52c0198ec25ae0c0711956c6bedf",
+          "source_count": 12
+        }
+      ],
+      "current_result": {
+        "status": "complete",
+        "finished": true,
+        "native_request_confirmed": true,
+        "first_user_turn": true,
+        "request_id": "a6a0f899-8074-4578-9f38-623fbb518406",
+        "answer_id": "4c22e7e6-5301-4e2e-9a28-945d58e263d7"
+      },
+      "current_body_characters": 410,
+      "current_sources": 12
+    },
+    {
+      "task_id": "75b90373-8ec9-59fb-acf2-6a583d80a9ad",
+      "ordinal": 631,
+      "question": "推荐一款护发精油",
+      "failed_attempt": {
+        "task_id": "75b90373-8ec9-59fb-acf2-6a583d80a9ad",
+        "attempt": 0,
+        "wire_question": "推荐一款护发精油",
+        "request_id": "59bb0472-6b65-4106-baf6-2a5f7ad9751b",
+        "answer_id": "14a3f162-6980-4fd5-8e36-078d22c11b1c",
+        "reason": "confirmed_transient_error",
+        "archived_at": 1792100287.270454
+      },
+      "original_proof": {
+        "status": "complete",
+        "finished": true,
+        "native_request_confirmed": true,
+        "first_user_turn": true,
+        "request_id": "59bb0472-6b65-4106-baf6-2a5f7ad9751b",
+        "answer_id": "14a3f162-6980-4fd5-8e36-078d22c11b1c",
+        "body_markdown": "出了点问题，请稍后重试。",
+        "sources": [],
+        "wire_question": "推荐一款护发精油"
+      },
+      "events": [
+        {
+          "time": 1792059501.1158104,
+          "event": "enqueued",
+          "detail": "question-only-v1"
+        },
+        {
+          "time": 1792100261.0211008,
+          "event": "send_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792100261.0211136,
+          "event": "send_protocol_v2",
+          "detail": ""
+        },
+        {
+          "time": 1792100272.3474479,
+          "event": "send_click_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792100275.1948857,
+          "event": "send_tap_returned",
+          "detail": ""
+        },
+        {
+          "time": 1792100287.2705138,
+          "event": "capture_retry_scheduled",
+          "detail": "{\"request_id\": \"59bb0472-6b65-4106-baf6-2a5f7ad9751b\", \"delay\": 90, \"prompt_unchanged\": true}"
+        },
+        {
+          "time": 1792100382.3056288,
+          "event": "send_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792100382.3056374,
+          "event": "send_protocol_v2",
+          "detail": ""
+        },
+        {
+          "time": 1792100393.1461322,
+          "event": "send_click_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792100396.5867763,
+          "event": "send_tap_returned",
+          "detail": ""
+        },
+        {
+          "time": 1792100417.7211986,
+          "event": "completed",
+          "detail": ""
+        }
+      ],
+      "current_state": "completed",
+      "capture_retries": 1,
+      "native_reads": [
+        {
+          "attempt": 0,
+          "binding": {
+            "conversation_id": "38447409104709378",
+            "request_id": "59bb0472-6b65-4106-baf6-2a5f7ad9751b",
+            "answer_id": null
+          },
+          "observed": {
+            "status": "complete",
+            "finished": true,
+            "native_request_confirmed": true,
+            "first_user_turn": true,
+            "request_id": "59bb0472-6b65-4106-baf6-2a5f7ad9751b",
+            "answer_id": "14a3f162-6980-4fd5-8e36-078d22c11b1c"
+          },
+          "body_characters": 12,
+          "body_sha256": "1f7aa7ba8cc0b0a09673feeb8e6deded8e81ef43d214e3ba96c420deedff5e0c",
+          "source_count": 0
+        },
+        {
+          "attempt": 1,
+          "binding": {
+            "conversation_id": "38447355215044866",
+            "request_id": "6ec0e84d-6cc5-411b-9c5a-154f66e08f0e",
+            "answer_id": null
+          },
+          "observed": {
+            "status": "complete",
+            "finished": true,
+            "native_request_confirmed": true,
+            "first_user_turn": true,
+            "request_id": "6ec0e84d-6cc5-411b-9c5a-154f66e08f0e",
+            "answer_id": "6ae333b6-771a-45ea-ba0c-aed70070a053"
+          },
+          "body_characters": 486,
+          "body_sha256": "52d5eee922a99d1e520c9f6a7f23e17edc8f3f73e27998577c2e884fd6e92a23",
+          "source_count": 11
+        }
+      ],
+      "current_result": {
+        "status": "complete",
+        "finished": true,
+        "native_request_confirmed": true,
+        "first_user_turn": true,
+        "request_id": "6ec0e84d-6cc5-411b-9c5a-154f66e08f0e",
+        "answer_id": "6ae333b6-771a-45ea-ba0c-aed70070a053"
+      },
+      "current_body_characters": 486,
+      "current_sources": 11
+    },
+    {
+      "task_id": "8045bdf2-dfd8-5374-bd69-a2b0c9e393d4",
+      "ordinal": 652,
+      "question": "推荐一款护发精油",
+      "failed_attempt": {
+        "task_id": "8045bdf2-dfd8-5374-bd69-a2b0c9e393d4",
+        "attempt": 0,
+        "wire_question": "推荐一款护发精油",
+        "request_id": "3aa11a5b-677a-46ae-8dff-204e6944b54b",
+        "answer_id": "b9327b49-22a0-4188-b245-507ac6cb6d4f",
+        "reason": "confirmed_transient_error",
+        "archived_at": 1792101666.7042837
+      },
+      "original_proof": {
+        "status": "complete",
+        "finished": true,
+        "native_request_confirmed": true,
+        "first_user_turn": true,
+        "request_id": "3aa11a5b-677a-46ae-8dff-204e6944b54b",
+        "answer_id": "b9327b49-22a0-4188-b245-507ac6cb6d4f",
+        "body_markdown": "出了点问题，请稍后重试。",
+        "sources": [],
+        "wire_question": "推荐一款护发精油"
+      },
+      "events": [
+        {
+          "time": 1792059501.1160095,
+          "event": "enqueued",
+          "detail": "question-only-v1"
+        },
+        {
+          "time": 1792101647.0994508,
+          "event": "send_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792101647.0994613,
+          "event": "send_protocol_v2",
+          "detail": ""
+        },
+        {
+          "time": 1792101657.2805753,
+          "event": "send_click_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792101660.5866401,
+          "event": "send_tap_returned",
+          "detail": ""
+        },
+        {
+          "time": 1792101666.7045705,
+          "event": "capture_retry_scheduled",
+          "detail": "{\"request_id\": \"3aa11a5b-677a-46ae-8dff-204e6944b54b\", \"delay\": 90, \"prompt_unchanged\": true}"
+        },
+        {
+          "time": 1792101761.6741078,
+          "event": "send_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792101761.6741147,
+          "event": "send_protocol_v2",
+          "detail": ""
+        },
+        {
+          "time": 1792101772.8796487,
+          "event": "send_click_intent_committed",
+          "detail": ""
+        },
+        {
+          "time": 1792101776.1350727,
+          "event": "send_tap_returned",
+          "detail": ""
+        },
+        {
+          "time": 1792101794.604507,
+          "event": "completed",
+          "detail": ""
+        }
+      ],
+      "current_state": "completed",
+      "capture_retries": 1,
+      "native_reads": [
+        {
+          "attempt": 0,
+          "binding": {
+            "conversation_id": "38447390975518210",
+            "request_id": "3aa11a5b-677a-46ae-8dff-204e6944b54b",
+            "answer_id": null
+          },
+          "observed": {
+            "status": "complete",
+            "finished": true,
+            "native_request_confirmed": true,
+            "first_user_turn": true,
+            "request_id": "3aa11a5b-677a-46ae-8dff-204e6944b54b",
+            "answer_id": "b9327b49-22a0-4188-b245-507ac6cb6d4f"
+          },
+          "body_characters": 12,
+          "body_sha256": "1f7aa7ba8cc0b0a09673feeb8e6deded8e81ef43d214e3ba96c420deedff5e0c",
+          "source_count": 0
+        },
+        {
+          "attempt": 1,
+          "binding": {
+            "conversation_id": "38447303826082306",
+            "request_id": "7b4962ea-6033-4fd8-9263-34a13016965d",
+            "answer_id": null
+          },
+          "observed": {
+            "status": "complete",
+            "finished": true,
+            "native_request_confirmed": true,
+            "first_user_turn": true,
+            "request_id": "7b4962ea-6033-4fd8-9263-34a13016965d",
+            "answer_id": "36bb531b-e61d-4a1b-bbdc-e7b4e893ca39"
+          },
+          "body_characters": 528,
+          "body_sha256": "0607b31c04b19d79189fe9e94a20956d034b76519bcbe6b37063bdeffa383741",
+          "source_count": 11
+        }
+      ],
+      "current_result": {
+        "status": "complete",
+        "finished": true,
+        "native_request_confirmed": true,
+        "first_user_turn": true,
+        "request_id": "7b4962ea-6033-4fd8-9263-34a13016965d",
+        "answer_id": "36bb531b-e61d-4a1b-bbdc-e7b4e893ca39"
+      },
+      "current_body_characters": 528,
+      "current_sources": 11
+    }
+  ]
+}

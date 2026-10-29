@@ -1,0 +1,21 @@
+{
+  "repaired_verified": 104,
+  "http_status": true,
+  "downloads": [
+    {
+      "kind": "markdown",
+      "bytes": 11533,
+      "status": 200
+    },
+    {
+      "kind": "word",
+      "bytes": 42886,
+      "status": 200
+    },
+    {
+      "kind": "package",
+      "bytes": 80918,
+      "status": 200
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "at": 1792728548.4265628,
+  "state": "finished",
+  "run_id": "rank01-staged-20261023T120816-e50a98ac",
+  "status": "technical_failure",
+  "detail": {
+    "error_type": "RuntimeError",
+    "code": null,
+    "uncertain": false,
+    "message": "Fresh model structure analysis failed; saved fallback is not real model acceptance",
+    "traceback": "Traceback (most recent call last):\n  File \"/tmp/rank01-staged-runner.py\", line 156, in execute\n    if structure.get('degraded'):raise RuntimeError('Fresh model structure analysis failed; saved fallback is not real model acceptance')\nRuntimeError: Fresh model structure analysis failed; saved fallback is not real model acceptance\n"
+  },
+  "article_md_exists": false,
+  "article_docx_exists": false,
+  "known_cost_cny": 0.0200742,
+  "calls": 2,
+  "protected_inputs_unchanged": true,
+  "settings_restored": true,
+  "settings_after": {
+    "start_time": "05:00",
+    "max_per_category": 10,
+    "deepseek_interval": 600,
+    "search_interval": 60,
+    "article_budget_cny": 0.35,
+    "daily_budget_cny": 10,
+    "test_budget_cny": 1.3,
+    "max_revisions": 1
+  },
+  "no_deployment": true,
+  "no_content_repair": true
+}

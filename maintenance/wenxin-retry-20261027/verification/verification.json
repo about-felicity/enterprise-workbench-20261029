@@ -1,0 +1,53 @@
+{
+  "at": 1793068908.4406931,
+  "channels": [
+    {
+      "plan": "plan-195abff2413a421dac589112f24c7596",
+      "day": "2026-10-27",
+      "status": "complete",
+      "wenxin": {
+        "completed": 6
+      },
+      "retry": {
+        "attempts": 0,
+        "next_at": 0,
+        "status": "resumed",
+        "last_status": "checking",
+        "at": 1793068526.4175913
+      }
+    },
+    {
+      "plan": "plan-53eaaebbc537459f81d55a3f8a43f969",
+      "day": "2026-10-27",
+      "status": "running",
+      "wenxin": {
+        "completed": 4,
+        "pending": 6
+      },
+      "retry": {
+        "attempts": 0,
+        "next_at": 0,
+        "status": "resumed",
+        "last_status": "checking",
+        "at": 1793068545.4243433
+      }
+    },
+    {
+      "main_geo": true,
+      "status": "running",
+      "tasks": {
+        "completed": 158,
+        "pending": 10
+      },
+      "captured": 158,
+      "processed": 158,
+      "retry": {
+        "attempts": 0,
+        "next_at": 0,
+        "status": "resumed",
+        "last_status": "checking",
+        "at": 1793068678.4461915
+      }
+    }
+  ]
+}

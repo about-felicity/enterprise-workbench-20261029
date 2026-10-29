@@ -1,0 +1,67 @@
+{
+  "snapshot_utc": "2026-10-07T01:28:43.094377+00:00",
+  "tasks": {
+    "completed": 111
+  },
+  "sources": 1148,
+  "citations": 320,
+  "unique_request_ids": 111,
+  "completed_records": 111,
+  "body_lengths": {
+    "min": 79,
+    "max": 1005
+  },
+  "errors": [],
+  "phase_v2_recovery": {
+    "legacy_draft_recovered": "23588c18-debd-5040-a73a-446eadef9333",
+    "v2_interrupted_before_click_task": "1ad75b8c-2491-568b-8cc7-6275b18b3ff8",
+    "injected_time": 1791284399.6844087,
+    "state": "completed",
+    "click_intents": 1,
+    "resumed_before_click": 1
+  },
+  "native_fault_lines": [],
+  "container_started": "2026-10-06T11:22:43.134118275Z",
+  "oom_killed": false,
+  "container_restarts": 0,
+  "service": [
+    "Result=success",
+    "NRestarts=0",
+    "ActiveState=active"
+  ],
+  "business_container_ids_unchanged": true,
+  "business_containers_running": true,
+  "event_counts": {
+    "completed": 111,
+    "enqueued": 111,
+    "operator_verified_unsent_draft": 1,
+    "prepare_failed": 1,
+    "resume_before_first_click": 2,
+    "send_click_intent_committed": 70,
+    "send_intent_committed": 111,
+    "send_protocol_v2": 69,
+    "send_uncertain": 1
+  },
+  "soak24h": {
+    "status": "running",
+    "start_utc_epoch": 1791334794.8264837,
+    "start_monotonic": 3091419.770798273,
+    "boot_id": "311dc8ee-6cf9-47fb-8479-bb08a40a6d19",
+    "duration": 86400,
+    "interval": 600,
+    "batch": "hpe14-soak-1791334794",
+    "enqueued": 3,
+    "planned": 144,
+    "last_check_utc_epoch": 1791336507.527773,
+    "observed_seconds": 1712.7012850041501,
+    "tasks": {
+      "completed": 3
+    },
+    "last_monotonic": 3093132.472083277
+  },
+  "validation_24h_complete": false,
+  "initial_batch_tasks": {
+    "completed": 106
+  },
+  "validation_batch_106_complete": true
+}

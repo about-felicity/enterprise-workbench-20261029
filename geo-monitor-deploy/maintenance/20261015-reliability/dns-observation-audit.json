@@ -1,0 +1,31 @@
+{
+  "at": 1792069102.796606,
+  "test_id": "question-only-soak12h-videofix-1792066775",
+  "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+  "incidents": [
+    {
+      "task_id": "11376fa9dc54eda6776fe2e75ff22f4d528ba9d3b20d08b3027ec4b604d0ac8d",
+      "ordinal": 15,
+      "round": 2,
+      "state": "completed",
+      "finished": 1792067809.0212252,
+      "availability": "supplement_unavailable",
+      "body_capture_complete": false,
+      "source_capture_complete": false,
+      "recovery_attempts": [
+        {
+          "kind": "read_error",
+          "dns_failure": false,
+          "epoch": 1792067741.3292928
+        },
+        {
+          "kind": "read_error",
+          "dns_failure": true,
+          "epoch": 1792067808.938279
+        }
+      ],
+      "later_complete_observations": 5
+    }
+  ],
+  "dns_resolves_now": true
+}

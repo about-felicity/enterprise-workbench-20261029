@@ -1,0 +1,37 @@
+{
+  "version": "article-logic-v2",
+  "total": 209,
+  "current_versions": 173,
+  "other_saved_drafts": 36,
+  "states": {
+    "needs_revision": 197,
+    "passed": 12
+  },
+  "current_states": {
+    "needs_revision": 164,
+    "passed": 9
+  },
+  "download_states": {
+    "needs_revision": 169,
+    "ready": 4
+  },
+  "manual_reviewed": 90,
+  "independent_api_reviewed": 119,
+  "original_controls_unchanged": true,
+  "paid_audit_added_cny": 2.60101584,
+  "today_charged_cny": 9.72466572,
+  "original_unknown_reserved_cny": 0.21579,
+  "new_unknown_requests": 0,
+  "mapped_sources_matched": 167,
+  "regression_tests_passed": 146,
+  "browser": {
+    "browser_word_matches_receipt": true,
+    "zip_crc_ok": true,
+    "zip_articles": 4,
+    "held_word_http": 400,
+    "empty_filter_http": 400,
+    "page_errors": [],
+    "held_current_articles": 169
+  },
+  "passed_bundle_sha256": "17de998b6205e15f446cd529cbbca2d79b6fc8393c3a9c7cc8b9fd8ba6d4b1c7"
+}

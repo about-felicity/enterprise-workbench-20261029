@@ -1,0 +1,22 @@
+{
+  "question": "推荐一款适合烫染后干枯毛躁的护发素",
+  "model": "wenxin_card",
+  "source": {
+    "url": "https://baijiahao.baidu.com/s?id=1879803787750956876&wfr=spider&for=pc",
+    "title": "护发素什么牌子效果好？口碑修护速览清单，烫染干枯发质适用，日常护理选购指南-百家号",
+    "media": "",
+    "article": {
+      "status": "failed",
+      "requested_url": "https://baijiahao.baidu.com/s?id=1879803787750956876&wfr=spider&for=pc",
+      "text": "",
+      "attempts": [
+        {
+          "backend": "http",
+          "status": "failed",
+          "error": "Verification/access-denied page is not an article"
+        }
+      ],
+      "error": "All enabled Scrapling readers failed; inspect attempts or provide a permitted source copy"
+    }
+  }
+}

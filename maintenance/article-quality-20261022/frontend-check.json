@@ -1,0 +1,6 @@
+{
+  "panel_sha256": "22901201429ca0b3826f826a73760846b4693a0a3fc57c2153b1814f6f722550",
+  "method": "local bundled Node --check",
+  "browser_acceptance": false,
+  "script_sha256": "276ae185a6b04f29bae55dd6ab67ad5b0a6a4641c31abb2825e5187829ebd095"
+}

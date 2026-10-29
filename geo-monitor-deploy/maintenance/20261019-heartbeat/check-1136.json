@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-19T11:36:35+08:00",
+  "deepseek_browser": {
+    "auth": "ready",
+    "captured": 3,
+    "processed": 3,
+    "cursor": 3,
+    "phase": "rate_wait",
+    "next_send": "2026-10-19T12:03:03+08:00",
+    "receipts": 3,
+    "all_local_upstream_receipts_equal": true,
+    "pending_delivery": 0
+  },
+  "doubao1": {
+    "today": 105,
+    "target": 105,
+    "state": "complete"
+  },
+  "doubao2": {
+    "today": 14,
+    "target": 105,
+    "state": "running",
+    "phase": "verifying_complete_snapshot",
+    "ordinal": 15,
+    "pending_delivery": 0,
+    "recovery_continues": true
+  },
+  "baidu_ai": {
+    "today": 64,
+    "target": 105,
+    "state": "running"
+  },
+  "wenxin_today": "waiting_for_baidu",
+  "yuanbao": {
+    "active_batch_day": "2026-10-18",
+    "received_today": 165,
+    "phase": "awaiting_ack",
+    "pending_delivery": 0
+  },
+  "services": "browser/receiver/bridge/daily active",
+  "mutation": "none; no tasks changed or resent",
+  "notification": "none: normal progress, previous recovery already reported"
+}

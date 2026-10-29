@@ -1,0 +1,20 @@
+{
+  "deployed_at": 1792389620.448699,
+  "backup": "/opt/monitor/geo-content/maintenance/20261019-studio-workflow/backup-1792389620",
+  "import_id": "upload-1a8df13244954d88914aeedc1ce95b99",
+  "product_analysis": {
+    "name": "科熙本二硫化硒清爽去屑止痒洗发水",
+    "brand": "科熙本",
+    "specification": "200ml/瓶"
+  },
+  "saved_plans_unchanged": true,
+  "paid_jobs_created": 0,
+  "main_collector_pids_unchanged": true,
+  "shared_budget_geo_and_0100_settings_unchanged": true,
+  "services": {
+    "geo-creation-studio.service": "active",
+    "geo-creation-materials.service": "active",
+    "geo-content-worker.service": "active",
+    "geo-content-api.service": "active"
+  }
+}

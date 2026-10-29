@@ -1,0 +1,45 @@
+{
+  "checked_at": 1792466159.286513,
+  "memory": {
+    "app_alive": true,
+    "pid": 2195,
+    "java_alloc_kib": 220143,
+    "java_limit_kib": 524288,
+    "native_alloc_kib": 408682,
+    "app_pss_kib": 1369290,
+    "container_working_bytes": 1783803904,
+    "container_limit_bytes": 4294967296,
+    "sampled_at": 1792466096.262189,
+    "pending": ""
+  },
+  "samples": {
+    "count": 6,
+    "first": 1792465198.437308,
+    "last": 1792466096.262189
+  },
+  "maintenance_attempts": [],
+  "services": {
+    "geo-native@geo-panel-doubao2-20261020-090001-6bcafb90.service": "active",
+    "geo-monitor-status.service": "active",
+    "geo-daily-control.service": "active"
+  },
+  "panel_memory_served": true,
+  "policy": {
+    "models": [
+      "doubao2"
+    ],
+    "sample_seconds": 60,
+    "java_fraction": 0.85,
+    "app_pss_fraction": 0.65,
+    "container_fraction": 0.85,
+    "consecutive_samples": 2,
+    "cooldown_seconds": 900,
+    "restart_window_seconds": 21600,
+    "max_restarts": 3,
+    "history_days": 14
+  },
+  "mapping": {
+    "files": 126,
+    "matched": 126
+  }
+}

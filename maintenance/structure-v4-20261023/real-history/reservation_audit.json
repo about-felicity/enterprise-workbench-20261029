@@ -1,0 +1,42 @@
+[
+  {
+    "at": 1792736173.244552,
+    "key": "chunk-000/primary",
+    "id": "6fd7c422b29e8ded613534777aff74d52371b92632eb9f46dfda188f9cb23c0d",
+    "input_bytes": 12620,
+    "max_tokens": 1607,
+    "upper_cny": 0.038096
+  },
+  {
+    "at": 1792736175.5475059,
+    "key": "chunk-001/primary",
+    "id": "09c86469b4274a35d705b597743c5481b5a61dd54cfc6f498444f22ba36fa1c7",
+    "input_bytes": 7105,
+    "max_tokens": 1613,
+    "upper_cny": 0.027114
+  },
+  {
+    "at": 1792736178.0497203,
+    "key": "chunk-002/primary",
+    "id": "874e3262625b0f6d7d2398b4bdba8e19f24bef535424219f2bd8ed7b19be301b",
+    "input_bytes": 7060,
+    "max_tokens": 1613,
+    "upper_cny": 0.027024
+  },
+  {
+    "at": 1792736180.315388,
+    "key": "chunk-003/primary",
+    "id": "6190abfb8bb565f0554a38c3cb5c8a7696b110b0ed210ddef9764f317aa4a4ba",
+    "input_bytes": 5592,
+    "max_tokens": 1605,
+    "upper_cny": 0.024024
+  },
+  {
+    "at": 1792736182.441956,
+    "key": "chunk-003/recover-AS-O0062",
+    "id": "59431c83796b7e731afed37b33c3f5dbfbca906631d65406e27fd0d94fb236ed",
+    "input_bytes": 3740,
+    "max_tokens": 615,
+    "upper_cny": 0.0124
+  }
+]

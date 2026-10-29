@@ -1,0 +1,71 @@
+{
+  "at": "2026-10-23T09:52:08.996022+08:00",
+  "frozen_files": {
+    "geo_source_cards/consumer_prompts.py": {
+      "sha256": "d4f906ade8e9850ed7c7b5e4da388d25159867b00a15b7541904debd1871d2b0",
+      "matches_frozen": true,
+      "matches_previous_server_stage": true
+    },
+    "geo_source_cards/review_arbitration.py": {
+      "sha256": "a605e907b4276a4810e4f47b053d46d65f3b2fd1edaa5f303b31f7af63d08c7e",
+      "matches_frozen": true,
+      "matches_previous_server_stage": true
+    },
+    "geo_source_cards/section_writer.py": {
+      "sha256": "c96957d1b2c6e82487841f487ac079df0b7c68fbbc6ac45f43debe189599d22c",
+      "matches_frozen": true,
+      "matches_previous_server_stage": true
+    },
+    "geo_source_cards/structure_analyzer.py": {
+      "sha256": "295a0f6a863030c69b4104a83151ac032e9c318cc69d4c66994ee9acd613990e",
+      "matches_frozen": true,
+      "matches_previous_server_stage": true
+    },
+    "tests/test_arbitration_batches.py": {
+      "sha256": "6f0835d15c3b695f9f236e2650a00768b655cd72ef1935b8d3963c9f8dd61185",
+      "matches_frozen": true,
+      "matches_previous_server_stage": true
+    },
+    "tests/test_section_budget_revision.py": {
+      "sha256": "a3a475c6dae2915772b5b24d968d9d0ac0c351e594c4e9b7e4c3e8edf81a7b7c",
+      "matches_frozen": true,
+      "matches_previous_server_stage": true
+    }
+  },
+  "production_unchanged": true,
+  "originals_unchanged": true,
+  "ledger_rows_before": 2004,
+  "ledger_rows_after": 2004,
+  "ledger_rows_sha256": "e4b0801e7e0ab39688cf6d41269196a7b0f03736c71ffe05fc696ac590fc6b59",
+  "ledger_and_scope_rows_unchanged": true,
+  "unknown_requests_unchanged": true,
+  "budget_settings_unchanged": true,
+  "acceptance_control_unchanged": true,
+  "new_api_calls": 0,
+  "new_cost_cny": 0,
+  "linux_regressions": {
+    "engine": {
+      "type": "offline_mock_regressions",
+      "tests": 288,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "blocked_network_attempts": 0,
+      "new_api_calls": 0
+    },
+    "creation": {
+      "type": "offline_mock_regressions",
+      "tests": 78,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "blocked_network_attempts": 0,
+      "new_api_calls": 0
+    }
+  },
+  "candidate_ready_for_real_acceptance": false,
+  "blocker_ids": [
+    "B1",
+    "B2"
+  ]
+}

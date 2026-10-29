@@ -1,0 +1,84 @@
+{
+  "test_id": "question-only-acceptance-1792058307",
+  "at": 1792059398.4011457,
+  "question": "推荐一款睫毛增长液",
+  "models": {
+    "doubao1": {
+      "batch": "geo-panel-doubao1-20261015-175827-7cb020bc",
+      "completed": 3,
+      "processed": 3,
+      "database_fidelity_verified": 3,
+      "new_conversations": 3,
+      "exact_question_only": true,
+      "send_clicks": 3,
+      "min_interval": 61.25628471374512,
+      "body_lengths": [
+        481,
+        334,
+        553
+      ],
+      "source_counts": [
+        11,
+        11,
+        11
+      ],
+      "body_sha256": [
+        "e8902acbf2f3522189d4f62ef566ebfc63f04a6b1a74f6ced101e13182bddf94",
+        "c237299a6069d7349451f98865d3c29a20d3bd0d5770d159739dbe193f1ac84d",
+        "b8ea026f780dc987771b07e0c11347fc74983add766b32edb32fd243d697d149"
+      ]
+    },
+    "doubao2": {
+      "batch": "geo-panel-doubao2-20261015-175827-76e30eae",
+      "completed": 3,
+      "processed": 3,
+      "database_fidelity_verified": 3,
+      "new_conversations": 3,
+      "exact_question_only": true,
+      "send_clicks": 3,
+      "min_interval": 57.930848598480225,
+      "body_lengths": [
+        402,
+        551,
+        524
+      ],
+      "source_counts": [
+        11,
+        10,
+        9
+      ],
+      "body_sha256": [
+        "5527c5dc613309582c206c96b40b6ceb76d69c821d782168f8e2fd7ad273124c",
+        "158b23a28c8d2966f7d7f87b93f2b65aeb5eff51aafe7012dbb6853064c6e36d",
+        "5048759443fddd5cae95361988a62f55b9cce4b854f4e0c0a4f05707d4dc6b36"
+      ]
+    },
+    "yuanbao": {
+      "batch": "geo-panel-yuanbao-20261015-175828-60d0d3fc",
+      "completed": 3,
+      "processed": 3,
+      "database_fidelity_verified": 3,
+      "new_conversations": 3,
+      "exact_question_only": true,
+      "send_clicks": 3,
+      "min_interval": 51.81665515899658,
+      "body_lengths": [
+        1510,
+        2037,
+        2154
+      ],
+      "source_counts": [
+        17,
+        43,
+        42
+      ],
+      "body_sha256": [
+        "cb7b5edf804ff0038cc325d94e7cf188cdc0ab7e219bc47f613559f512e5e0c7",
+        "7372ef53d0f8034c6c7757ecc5d29a009f568009fedd324aac16dcb6d03ee0b7",
+        "740038404f480e0fa4035b92e9a2d800771ce9362719ddff82e0834a14159119"
+      ]
+    }
+  },
+  "passed": true,
+  "scope": "Three repeated exact questions per device; complete native body and all sources ingested. Not a duration pass. Original two-hour test was interrupted for changed prompt requirements."
+}

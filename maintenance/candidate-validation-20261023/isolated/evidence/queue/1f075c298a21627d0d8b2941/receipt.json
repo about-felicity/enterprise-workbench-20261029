@@ -1,0 +1,16 @@
+{
+  "ticket": "1f075c298a21627d0d8b2941",
+  "state": "completed",
+  "client": "e80b6d80455851a92c808620",
+  "execution": {
+    "run_id": "08ee3e1b3de618d868e94cda",
+    "generation": 1
+  },
+  "files": {
+    "draft.md": "14fe677454c4de9333ebb7b59499f9ce98da9921c5518f5f616b22ed9156ba94",
+    "article.docx": "6606d8f1f5d6705841ae326a7433113441c5dc813f7864913824aca62183993a",
+    "claim_map.json": "8762a9cecbc44b14bbddd6c42c9668c6aee3e9fb0256a4ca61036e0e7be8f244",
+    "knowledge_to_sections.json": "36a0800c68f07f679f0634bbabd467aee343eeeea99d59faa478ecf1e07881cb",
+    "writer_done.json": "947a4266b34f445265fa28886fe93e026579e2d88d550b8bd81c56c08566f404"
+  }
+}

@@ -1,0 +1,486 @@
+{
+  "run_id": "rank01-structure-real-20261023T141521-70888873",
+  "status": "structure_incomplete",
+  "files": {
+    "acceptance_summary.md": {
+      "sha256": "d90fe9afcb030be69dbe18517061bb0929160f117f76e9e3b4e9e880c55da86e",
+      "bytes": 4860,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/acceptance_summary.md"
+    },
+    "activity_before_lease.json": {
+      "sha256": "f94f338ec7a97ef97da16c384232582108fce409650a584643d9e5a5c0c0926d",
+      "bytes": 3576,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/activity_before_lease.json"
+    },
+    "api/balance.json": {
+      "sha256": "ee218b666a48d483e452e3c8ac88a49e93f720f50de83db1d8aa22c3c2faf95e",
+      "bytes": 159,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/api/balance.json"
+    },
+    "api_calls.json": {
+      "sha256": "8312586253a85d3be5c409aa0959e69df332747acf33cfb9c2539b69fd7f60ac",
+      "bytes": 11065,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/api_calls.json"
+    },
+    "article/research/research_input.json": {
+      "sha256": "e2ebddf9ac5b943fbacd1fca72bd3451412ed28db01f4e4387ee8a811d154124",
+      "bytes": 185290,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/research/research_input.json"
+    },
+    "article/research/research_result.json": {
+      "sha256": "9196637ae6ff09dafdd32e9bcc6673caa48a6fc874b429c9b4415c7e7a087f02",
+      "bytes": 30667,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/research/research_result.json"
+    },
+    "article/research/research_review.json": {
+      "sha256": "e26327ab99496a97bfd5a4236e4b4b8224fa41a5258d52441e2b8bdff3e12932",
+      "bytes": 138,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/research/research_review.json"
+    },
+    "article/research/research_task.txt": {
+      "sha256": "0187fc836ac40e52b37cf606ea313124619a055a094197a73e8e30b7d71b9662",
+      "bytes": 2119,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/research/research_task.txt"
+    },
+    "article/research/revision_note.txt": {
+      "sha256": "1eed6882f9d212033629fad9f9470321bb64a00a10e73f5e28ebd321dc0cdfd4",
+      "bytes": 119,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/research/revision_note.txt"
+    },
+    "article/research/stage.lock": {
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "bytes": 1,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/research/stage.lock"
+    },
+    "article/research/stage_job.json": {
+      "sha256": "c259249ac7f469356e32aa3f6821c4fa765b56b1d8db622cc65f8be0097ac0ed",
+      "bytes": 215,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/research/stage_job.json"
+    },
+    "article/writer/article_structure.json": {
+      "sha256": "7e820f4002ec679feecf2e28fce0f17b67c5b5eb130643170f903e7676d169f6",
+      "bytes": 612,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/article_structure.json"
+    },
+    "article/writer/batch_rules.md": {
+      "sha256": "f3de0e2f5f3ff2dc78bf57068e48b1f7ecdb7d3834f56af2ab79a955da688e2b",
+      "bytes": 602,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/batch_rules.md"
+    },
+    "article/writer/category.json": {
+      "sha256": "bd571fcf5675db2be9ccb4ee16c4e9d577ba28bc4fd0e84dec2b75d0df199bbe",
+      "bytes": 501,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/category.json"
+    },
+    "article/writer/knowledge.json": {
+      "sha256": "cd0239ca1dd031f36b3d04368821af67e454a5f830017acb51064bb28ea59b9c",
+      "bytes": 20848,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/knowledge.json"
+    },
+    "article/writer/product.json": {
+      "sha256": "4c7ecaec7c55fdb06708dc09dd2684362e34b4e0de1e478c073b5d470056afab",
+      "bytes": 6161,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/product.json"
+    },
+    "article/writer/structure_calls/compact-v2/analysis.lock": {
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "bytes": 1,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/analysis.lock"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-000/primary/accepted.json": {
+      "sha256": "e78f5e8e20f91fa7ac1af21691543b7fe07df253d42ff66f2e0b01160ca8f644",
+      "bytes": 1660,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-000/primary/accepted.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-000/primary/answer.json": {
+      "sha256": "d7fa5e223d6ff89e0334cebc9853ec0a387207927ee007b2171d8ac6278ac04c",
+      "bytes": 1439,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-000/primary/answer.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-000/primary/api_state.json": {
+      "sha256": "a79101c8c10cb323bca83c95dd9ed2c50f574d3e3e72be38a668d1d78c2340c5",
+      "bytes": 503,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-000/primary/api_state.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-000/primary/attempt_status.json": {
+      "sha256": "34c8f74408bc4183b49f04a8136d278cf1d85c3415647a3e734dc82d5dd7e5c0",
+      "bytes": 26,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-000/primary/attempt_status.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-000/primary/http_response_body.txt": {
+      "sha256": "2669f66664811227492ea22d88e29ad379b8dbc77e518018b64b9f4abc57cc36",
+      "bytes": 1533,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-000/primary/http_response_body.txt"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-000/primary/http_response_metadata.json": {
+      "sha256": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+      "bytes": 79,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-000/primary/http_response_metadata.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-000/primary/request.json": {
+      "sha256": "ea6632943876674f9d201885f19e6212ce4a211dcb60e979286462b32c880b78",
+      "bytes": 12598,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-000/primary/request.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-000/primary/response.json": {
+      "sha256": "bdd4ff0501ffbad2a11b143bbcaf85d7e3418b2df03c63f6ef06577d25aa312a",
+      "bytes": 1359,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-000/primary/response.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-001/primary/accepted.json": {
+      "sha256": "19b134a4b068d3d68faaf9ce32f47d656a31fe3fee2a5fa59d95bebeebfff1b1",
+      "bytes": 1610,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-001/primary/accepted.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-001/primary/answer.json": {
+      "sha256": "2be59e01b935c3e654fe14c8a5236b2e714064487b57702d1fe110129592bda2",
+      "bytes": 1386,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-001/primary/answer.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-001/primary/api_state.json": {
+      "sha256": "738e64cdfa4682e80312ada6795b0ba4513a4748dcbceb706eb0b1e9ca177757",
+      "bytes": 505,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-001/primary/api_state.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-001/primary/attempt_status.json": {
+      "sha256": "34c8f74408bc4183b49f04a8136d278cf1d85c3415647a3e734dc82d5dd7e5c0",
+      "bytes": 26,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-001/primary/attempt_status.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-001/primary/http_response_body.txt": {
+      "sha256": "ecd320e6ffe5e30fbe4b2153128de2797ae9d03db5a1f8555cd1484ca3382810",
+      "bytes": 1480,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-001/primary/http_response_body.txt"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-001/primary/http_response_metadata.json": {
+      "sha256": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+      "bytes": 79,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-001/primary/http_response_metadata.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-001/primary/request.json": {
+      "sha256": "d6e97fe5dad9b0247cbf9822c4edee7e08d3d37e9906bc8095c3f0500eced5d5",
+      "bytes": 7083,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-001/primary/request.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-001/primary/response.json": {
+      "sha256": "35263d098d664ecf649b4af73486a5470d3e8d4902b7047bd3bd6f58e2860c4d",
+      "bytes": 1307,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-001/primary/response.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-002/primary/accepted.json": {
+      "sha256": "24a0cfe319d05b2228836944b0f5a8666e0a01e30fc1ee4c3301a1914788be8a",
+      "bytes": 1535,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-002/primary/accepted.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-002/primary/answer.json": {
+      "sha256": "1da69333a38f80a85e47a9206095c574d33a04cae92432e0cb51916cff21e6cd",
+      "bytes": 1356,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-002/primary/answer.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-002/primary/api_state.json": {
+      "sha256": "fee5f6cdb2389315e05c81cb923bd8421a1d770b076ec8c572a29dac51ece260",
+      "bytes": 506,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-002/primary/api_state.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-002/primary/attempt_status.json": {
+      "sha256": "34c8f74408bc4183b49f04a8136d278cf1d85c3415647a3e734dc82d5dd7e5c0",
+      "bytes": 26,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-002/primary/attempt_status.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-002/primary/http_response_body.txt": {
+      "sha256": "e0b3e4c98ba62502a895658196a6ec795026db1548ff96d03fbdf6d8262f4aad",
+      "bytes": 1450,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-002/primary/http_response_body.txt"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-002/primary/http_response_metadata.json": {
+      "sha256": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+      "bytes": 79,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-002/primary/http_response_metadata.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-002/primary/request.json": {
+      "sha256": "ea3a3324a5f7641191bc36790a3786fb01ee08d1b4ef903eaf6e28e0e58e9e83",
+      "bytes": 7038,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-002/primary/request.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-002/primary/response.json": {
+      "sha256": "e52f8872e139296665743335010d822348b0cd663ab228703f8a90a5a734b733",
+      "bytes": 1242,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-002/primary/response.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/primary/answer.json": {
+      "sha256": "46f734f8b05b6fdb887e5a7a173210250fef2a291cddfda5f01887e803b4c41d",
+      "bytes": 1440,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/primary/answer.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/primary/api_state.json": {
+      "sha256": "eeff439620293dbb442ee0b63c0fcc9e5d1af31a836dbdfddb522610854a3ac0",
+      "bytes": 506,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/primary/api_state.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/primary/attempt_status.json": {
+      "sha256": "06cac5413a325bf1bef65f67463c1b2d3781e39b2d8d9b3d198058514fa51aed",
+      "bytes": 31,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/primary/attempt_status.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/primary/http_response_body.txt": {
+      "sha256": "2168e11ce341846018673bfdb2b3f4938004379bf3c9b2ffe56656a1a0da78e1",
+      "bytes": 1534,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/primary/http_response_body.txt"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/primary/http_response_metadata.json": {
+      "sha256": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+      "bytes": 79,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/primary/http_response_metadata.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/primary/known_failure.json": {
+      "sha256": "2b86a0db1f7b19cb74b87d568597b2bf8449b2cd27ac8a1ec2b9a2647cf1b200",
+      "bytes": 91,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/primary/known_failure.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/primary/request.json": {
+      "sha256": "37a947143ec10e2f58315ab2bf532fc8342ef043440507c0f967cacb57e034ad",
+      "bytes": 5570,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/primary/request.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/primary/response.json": {
+      "sha256": "61554ea6b1fb92cdbf44bfa48a02dd9e033a909c28f87de42d370253b61ffe0f",
+      "bytes": 1341,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/primary/response.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/answer.json": {
+      "sha256": "307a7d4dd81ad9916076900b0f003a593e59dae7a038551d123904ee7d1b1d65",
+      "bytes": 2317,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/answer.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/api_state.json": {
+      "sha256": "1beaa68d72b23c2eae257b8992119a605cf2e465ab38e4e4893e0b6fe3ad9129",
+      "bytes": 505,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/api_state.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/attempt_status.json": {
+      "sha256": "06cac5413a325bf1bef65f67463c1b2d3781e39b2d8d9b3d198058514fa51aed",
+      "bytes": 31,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/attempt_status.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/http_response_body.txt": {
+      "sha256": "6a27b00a2e60c268b0e25029f985d1507429f4cc252c049e828726cc6b907727",
+      "bytes": 2411,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/http_response_body.txt"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/http_response_metadata.json": {
+      "sha256": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+      "bytes": 79,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/http_response_metadata.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/known_failure.json": {
+      "sha256": "532c5d7323db4cdf743c5af8e2c6b18a393919814d8d772cf23731ba26125a1c",
+      "bytes": 88,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/known_failure.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/request.json": {
+      "sha256": "f92ba4fa2d7e2d4c20cf1e1d59a2f54b3ce351b88374a6d6ba6a86ad81cd5328",
+      "bytes": 3717,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/request.json"
+    },
+    "article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/response.json": {
+      "sha256": "fc903a67bb62939dea8e2bafb476ce247b73e0c3961317b9f3c55482c8a71146",
+      "bytes": 2284,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/chunk-003/recover-AS-O0062/response.json"
+    },
+    "article/writer/structure_calls/compact-v2/inputs.json": {
+      "sha256": "4dce30b487a449ae13e2d223a4af8dd0ca24acd86a0997920d103dbdc107967a",
+      "bytes": 82,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/inputs.json"
+    },
+    "article/writer/structure_calls/compact-v2/plan.json": {
+      "sha256": "ca8b08fba7773dc50c8f906c0c1a03ec16bcae68ce36fa6f5352649a33a96877",
+      "bytes": 138449,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/plan.json"
+    },
+    "article/writer/structure_calls/compact-v2/status.json": {
+      "sha256": "ac731210668c12e1d399caf590e3c68aedae318c0a3ec7d6a4ea08c73c194f62",
+      "bytes": 189,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/structure_calls/compact-v2/status.json"
+    },
+    "article/writer/writing_job.json": {
+      "sha256": "c46f5da2f088c31d852cfa3eafc3b532e2ceeb1509d8ff9aeb080fc5968176e2",
+      "bytes": 368,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/writing_job.json"
+    },
+    "article/writer/writing_prompt.md": {
+      "sha256": "d44ab934493b68e3e7129e6f66e4401106b11e307c8608308bec5b178be0ea0c",
+      "bytes": 23261,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/writing_prompt.md"
+    },
+    "article/writer/writing_task.txt": {
+      "sha256": "afdb07ab180ba916b177e86684c39f51cdb3e6147aff7cd3a0929216cbf2525a",
+      "bytes": 440,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article/writer/writing_task.txt"
+    },
+    "article_structure.json": {
+      "sha256": "7e820f4002ec679feecf2e28fce0f17b67c5b5eb130643170f903e7676d169f6",
+      "bytes": 612,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/article_structure.json"
+    },
+    "balance_checks/000/http_response_body.txt": {
+      "sha256": "02429d0bbad687306db881e6a47a55f343860d53e090889ebd75ac34f4261fff",
+      "bytes": 135,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/000/http_response_body.txt"
+    },
+    "balance_checks/000/http_response_metadata.json": {
+      "sha256": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+      "bytes": 79,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/000/http_response_metadata.json"
+    },
+    "balance_checks/002/http_response_body.txt": {
+      "sha256": "02429d0bbad687306db881e6a47a55f343860d53e090889ebd75ac34f4261fff",
+      "bytes": 135,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/002/http_response_body.txt"
+    },
+    "balance_checks/002/http_response_metadata.json": {
+      "sha256": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+      "bytes": 79,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/002/http_response_metadata.json"
+    },
+    "balance_checks/004/http_response_body.txt": {
+      "sha256": "02429d0bbad687306db881e6a47a55f343860d53e090889ebd75ac34f4261fff",
+      "bytes": 135,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/004/http_response_body.txt"
+    },
+    "balance_checks/004/http_response_metadata.json": {
+      "sha256": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+      "bytes": 79,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/004/http_response_metadata.json"
+    },
+    "balance_checks/006/http_response_body.txt": {
+      "sha256": "02429d0bbad687306db881e6a47a55f343860d53e090889ebd75ac34f4261fff",
+      "bytes": 135,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/006/http_response_body.txt"
+    },
+    "balance_checks/006/http_response_metadata.json": {
+      "sha256": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+      "bytes": 79,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/006/http_response_metadata.json"
+    },
+    "balance_checks/008/http_response_body.txt": {
+      "sha256": "02429d0bbad687306db881e6a47a55f343860d53e090889ebd75ac34f4261fff",
+      "bytes": 135,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/008/http_response_body.txt"
+    },
+    "balance_checks/008/http_response_metadata.json": {
+      "sha256": "9b30223a5b916fcc865dc32f798fcfc9f5414a5513fa380eb9fe77db4540b393",
+      "bytes": 79,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/balance_checks/008/http_response_metadata.json"
+    },
+    "budget_lease.json": {
+      "sha256": "0a6d6fea647e7fe2476700ba6923be182ea77db0b7dbe95c248d751647fe7c5e",
+      "bytes": 2120,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/budget_lease.json"
+    },
+    "budget_restoration.json": {
+      "sha256": "9523e246f895e89198d5e14e83b32350cf0a653c0415e7a5ff69e3b4ecbb049e",
+      "bytes": 633,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/budget_restoration.json"
+    },
+    "control.json": {
+      "sha256": "6df96b88c84b33ddca6bd3d5850c347c21b89d2b8a64c6597edead5b2b9ae95f",
+      "bytes": 92,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/control.json"
+    },
+    "cost_ledger.json": {
+      "sha256": "e386457f1ae629914e2aba498eb6646e66681506c8f725a6eb64091bbfbcf9c3",
+      "bytes": 1569751,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/cost_ledger.json"
+    },
+    "events.lock": {
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "bytes": 1,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/events.lock"
+    },
+    "execution_started.json": {
+      "sha256": "2edd55482a13a0080e1ab00faa74b52834e2b0318ed1cd857aba058e2d6fe5c9",
+      "bytes": 120,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/execution_started.json"
+    },
+    "http_calls.json": {
+      "sha256": "9fcb90601151b81d0187e744ffc5608744efa8239d5a2c0e6607662ae1be28c2",
+      "bytes": 3734,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/http_calls.json"
+    },
+    "job.json": {
+      "sha256": "6cafee0c48a2c78f5563341dbaa716ed1bfa56807953ce1a841564adbd7a5226",
+      "bytes": 1594,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/job.json"
+    },
+    "logs/2026-10-23.jsonl": {
+      "sha256": "f7c561b52f0916f8ba14528c836d5053143a440063eb565480fabd6c65cf31ae",
+      "bytes": 2155,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/logs/2026-10-23.jsonl"
+    },
+    "partial_structure.json": {
+      "sha256": "c77d96f49ae8beb95d722ce04a807db1a91b7c8f5fa587b3b0d5677c8da71323",
+      "bytes": 12560,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/partial_structure.json"
+    },
+    "post_lease_preflight.json": {
+      "sha256": "75680ee0e21b67156cdb3560ac1143123d53c63e3d16d3b3ff4253bc8e349b47",
+      "bytes": 5895,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/post_lease_preflight.json"
+    },
+    "preflight.json": {
+      "sha256": "070c5db2a8eb790944f402f4e4bc42342d618b3ddf6026abe93bc7e00d486a30",
+      "bytes": 1762062,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/preflight.json"
+    },
+    "preservation_audit.json": {
+      "sha256": "55f3a316b17242f89aaaec8c50b9672a92418550f0711496fe11301e1b7bbb7e",
+      "bytes": 303,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/preservation_audit.json"
+    },
+    "report_initial/acceptance_summary.md": {
+      "sha256": "7505d879201af43be7d43f4b8d1dd217c19f6f589a7051e092ac8390a6a5a030",
+      "bytes": 1518,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/report_initial/acceptance_summary.md"
+    },
+    "report_initial/output_manifest.json": {
+      "sha256": "d528bace105540cc65b7ae9e97e221dd2dfd7fc97fe93282df0c9bedf8cb8076",
+      "bytes": 33078,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/report_initial/output_manifest.json"
+    },
+    "report_initial/structure_validation.json": {
+      "sha256": "7d2e14382e28806237bc467822fd62306e990086dfb9bf20b67e23c7e6b7d68d",
+      "bytes": 90,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/report_initial/structure_validation.json"
+    },
+    "report_initial/summary.json": {
+      "sha256": "86310a38fc9bea8f72fe5c33b1ac582a94c3589f9441fa9f7e2db73590b535c2",
+      "bytes": 1373,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/report_initial/summary.json"
+    },
+    "reservation_audit.json": {
+      "sha256": "d5dc8d7b355a1318256ca1f80b4b4e41f22e4a885d83462e664a4a1472503661",
+      "bytes": 1126,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/reservation_audit.json"
+    },
+    "settings.json": {
+      "sha256": "f253db05aa5966a786932d4e0bbbea11ea10443fea56e6233f05da555062a526",
+      "bytes": 210,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/settings.json"
+    },
+    "status.json": {
+      "sha256": "7cda85ab63c5649a6f3ece6755847657622b2c0b46c5fa9fc25cf9c999e66b74",
+      "bytes": 169,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/status.json"
+    },
+    "structure_validation.json": {
+      "sha256": "021dfbd44de46054f7cb57816f0acc7d642a87d84dfa767f2c960456d5f3f14f",
+      "bytes": 6221,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/structure_validation.json"
+    },
+    "summary.json": {
+      "sha256": "3dcad8fc184814a84c5d7a397c4a922062b4adec74f424bd8e570f3ed8ec8f5e",
+      "bytes": 8311,
+      "server_path": "/opt/monitor/geo-content/runtime/acceptance/20261023-structure-real/rank01-structure-real-20261023T141521-70888873/summary.json"
+    }
+  }
+}

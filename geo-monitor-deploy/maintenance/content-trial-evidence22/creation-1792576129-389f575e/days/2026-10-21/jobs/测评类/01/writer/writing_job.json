@@ -1,0 +1,8 @@
+{
+  "job_id": "782746e7b6b7e99ba8c42d07",
+  "status": "needs_revision",
+  "prompt_sha256": "23b21ecf6628177c1f15624a677fa8f0eec248574310a114ae41fdb831d9a70c",
+  "knowledge_sha256": "3bc97c01c127e5288af9ff227ce258cb6462aeac6560ef914e031e8fcb698878",
+  "publication_approved": false,
+  "draft_sha256": "a12845db397dba3c180296affeef9df0dcbe7ea5b33a94e381f0549858a997a2"
+}

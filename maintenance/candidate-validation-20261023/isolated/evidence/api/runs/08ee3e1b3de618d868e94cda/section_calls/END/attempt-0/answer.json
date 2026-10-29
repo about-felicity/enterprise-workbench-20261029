@@ -1,0 +1,16 @@
+{
+  "content": "{\n  \"id\": \"END\",\n  \"paragraphs\": [\n    {\n      \"text\": \"回到开头那个问题：什么牌子的防脱洗发水好又安全？按全文统一的比较标准——配方组成、净含量与价格、以及披露的质地与使用描述——并不能给出一个无条件的答案。资料里十款产品的资质、成分和规格披露详略差异很大，有的写明了pH值但测试条件与原始报告未附，有的给出净含量与价格，有的只记到植萃方向和质地，因此任何排名都不具备同等证据基础。\",\n      \"statement_type\": \"general_advice\",\n      \"claim_ids\": [\"CL0012\"]\n    },\n    {\n      \"text\": \"如果说要有条件式的取舍：关注弱酸性表述与相对完整的配方记录，可以优先核对首迷滋养强韧洗发水；需要明确净含量和价格参照的，流迷防脱洗发水是记录中少数给出规格与价格的产品；草本植萃方向则可在御草朵、千木朵、诗碧曼、云康等记录中按自己看重的成分名称逐一比对。以上都只是基于已披露信息的并列，不构成效果优劣结论。\",\n      \"statement_type\": \"general_advice\",\n      \"claim_ids\": [\"CL0001\", \"CL0002\", \"CL0003\", \"CL0006\", \"CL0007\", \"CL0010\"]\n    },\n    {\n      \"text\": \"选购时仍建议先看资质与温和度这类可查信息，再结合自身头皮情况筛选，选定后坚持使用一段时间观察变化；凡记录中没有出现的成分细节、实测数据与使用反馈，都不宜替产品预设。\",\n      \"statement_type\": \"general_advice\",\n      \"claim_ids\": [\"CL0011\"]\n    }\n  ]\n}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 17496,
+    "completion_tokens": 383,
+    "total_tokens": 17879,
+    "prompt_tokens_details": {
+      "cached_tokens": 2432
+    },
+    "prompt_cache_hit_tokens": 2432,
+    "prompt_cache_miss_tokens": 15064
+  },
+  "request_id": "64d928b1-fc36-48a8-959e-567a5ac3bfa6",
+  "model": "deepseek-flash"
+}

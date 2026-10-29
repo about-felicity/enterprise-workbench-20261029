@@ -1,0 +1,188 @@
+{
+  "time": 1793067462.8857934,
+  "health": {
+    "batch": "geo-panel-yuanbao-20261027-090005-e7c7269a",
+    "planned": 168,
+    "prompt_mode": "question_only",
+    "model": "yuanbao",
+    "captured": 20,
+    "geo_processed": 20,
+    "delivery_errors": [],
+    "nontext_observations": 0,
+    "nontext_processed": 0,
+    "nontext_pending": 0,
+    "unavailable": 0,
+    "time": 1793067461.8051615,
+    "heartbeat_expires_at": 1793067611.8051627,
+    "bridge_pid": 60157,
+    "tasks": {
+      "completed": 20,
+      "pending": 148
+    },
+    "status": "running",
+    "memory": {
+      "app_alive": true,
+      "pid": 30236,
+      "java_alloc_kib": 38592,
+      "java_size_kib": 136896,
+      "java_limit_kib": 524288,
+      "java_fraction": 0.0736083984375,
+      "native_alloc_kib": 225513,
+      "app_pss_kib": 729446,
+      "container_bytes": 1249656832,
+      "container_working_bytes": 1000148992,
+      "container_limit_bytes": 4294967296,
+      "container_fraction": 0.2328653335571289,
+      "app_pss_fraction": 0.17391347885131836,
+      "sampled_at": 1793067404.7005727,
+      "last_exit": {
+        "pid": 57526,
+        "reason": "low_memory"
+      },
+      "pending": "",
+      "high_samples": 0
+    },
+    "progress": {
+      "phase": "sending_once",
+      "task_id": "5578456e-f821-592c-ba51-66d7b76f5d65",
+      "ordinal": 21,
+      "changed_at": 1793067461.8051589
+    }
+  },
+  "tasks": [
+    {
+      "ordinal": 18,
+      "task_id": "f8cbfe28-d669-5ee5-babf-f355d84f3fa4",
+      "state": "completed",
+      "request_id": "a7fbea03815046e41d8be3f87d888b56",
+      "answer_id": "0RZcEZqeVUX_2",
+      "capture_retries": 0,
+      "error": null,
+      "events": [
+        {
+          "event": "completed",
+          "detail": "",
+          "time": 1793067345.0181832
+        },
+        {
+          "event": "native_existing_draft_submit_returned",
+          "detail": "Await native acknowledgement; never repeat recovery tap",
+          "time": 1793067278.7727332
+        },
+        {
+          "event": "native_existing_draft_submit_intent",
+          "detail": "Two stable draft/native/history checks; one bounded submission, original baseline retained",
+          "time": 1793067278.41208
+        },
+        {
+          "event": "send_tap_returned",
+          "detail": "",
+          "time": 1793063738.1097984
+        },
+        {
+          "event": "send_click_intent_committed",
+          "detail": "",
+          "time": 1793063738.0596
+        }
+      ]
+    },
+    {
+      "ordinal": 19,
+      "task_id": "2857e0b2-c6c9-5927-aa5a-ee08f4f121d6",
+      "state": "completed",
+      "request_id": "b0ca788680d8f9d8c766d42d2c105acd",
+      "answer_id": "0RZcILIsDUu_2",
+      "capture_retries": 0,
+      "error": null,
+      "events": [
+        {
+          "event": "completed",
+          "detail": "",
+          "time": 1793067396.776112
+        },
+        {
+          "event": "send_tap_returned",
+          "detail": "",
+          "time": 1793067359.9719625
+        },
+        {
+          "event": "send_click_intent_committed",
+          "detail": "",
+          "time": 1793067359.6965523
+        },
+        {
+          "event": "send_protocol_v2",
+          "detail": "",
+          "time": 1793067355.2909484
+        },
+        {
+          "event": "send_intent_committed",
+          "detail": "",
+          "time": 1793067355.2909343
+        }
+      ]
+    },
+    {
+      "ordinal": 20,
+      "task_id": "1d558feb-c61c-58df-91a2-e46e179c5b27",
+      "state": "completed",
+      "request_id": "3638da5859e95a07db2e53946a82579d",
+      "answer_id": "0RZcM6hP6Po_2",
+      "capture_retries": 0,
+      "error": null,
+      "events": [
+        {
+          "event": "completed",
+          "detail": "",
+          "time": 1793067437.806491
+        },
+        {
+          "event": "send_tap_returned",
+          "detail": "",
+          "time": 1793067413.063253
+        },
+        {
+          "event": "send_click_intent_committed",
+          "detail": "",
+          "time": 1793067412.8134532
+        },
+        {
+          "event": "send_protocol_v2",
+          "detail": "",
+          "time": 1793067408.5928028
+        },
+        {
+          "event": "send_intent_committed",
+          "detail": "",
+          "time": 1793067408.5927877
+        }
+      ]
+    },
+    {
+      "ordinal": 21,
+      "task_id": "5578456e-f821-592c-ba51-66d7b76f5d65",
+      "state": "prepared",
+      "request_id": null,
+      "answer_id": null,
+      "capture_retries": 0,
+      "error": null,
+      "events": [
+        {
+          "event": "send_protocol_v2",
+          "detail": "",
+          "time": 1793067461.804004
+        },
+        {
+          "event": "send_intent_committed",
+          "detail": "",
+          "time": 1793067461.8039896
+        },
+        {
+          "event": "enqueued",
+          "detail": "question-only-v1",
+          "time": 1793062805.9746575
+        }
+      ]
+    }
+  ]
+}

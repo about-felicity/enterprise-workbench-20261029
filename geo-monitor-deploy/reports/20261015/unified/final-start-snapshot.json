@@ -1,0 +1,161 @@
+{
+  "at": 1792063240.8379793,
+  "capture": {
+    "pointer": {
+      "test_id": "question-only-soak12h-fencefix-1792063163",
+      "started_at": 1792063163.2620137,
+      "deadline": 1792106363.2620137,
+      "duration_seconds": 43200,
+      "root": "/opt/monitor/geo-capture/soak/question-only-soak12h-fencefix-1792063163",
+      "service": "geo-question-only-soak12h-fencefix-1792063163.service",
+      "deadline_timer": "geo-question-only-soak12h-fencefix-1792063163-deadline.timer"
+    },
+    "status": "running",
+    "anomalies": [],
+    "models": {
+      "doubao1": {
+        "captured": 61,
+        "processed": 60,
+        "unique_processed": 60,
+        "duplicates": 0,
+        "window_counts": {
+          "captured": 1,
+          "processed": 0,
+          "unique_processed": 0,
+          "duplicates": 0,
+          "verified_unique_receipts": 0
+        },
+        "min_send_interval": null,
+        "duplicate_native_requests": 0,
+        "duplicate_conversations": null
+      },
+      "doubao2": {
+        "captured": 62,
+        "processed": 62,
+        "unique_processed": 62,
+        "duplicates": 0,
+        "window_counts": {
+          "captured": 1,
+          "processed": 2,
+          "unique_processed": 2,
+          "duplicates": 0,
+          "verified_unique_receipts": 2
+        },
+        "min_send_interval": null,
+        "duplicate_native_requests": 0,
+        "duplicate_conversations": null
+      },
+      "yuanbao": {
+        "captured": 72,
+        "processed": 72,
+        "unique_processed": 72,
+        "duplicates": 0,
+        "window_counts": {
+          "captured": 1,
+          "processed": 1,
+          "unique_processed": 1,
+          "duplicates": 0,
+          "verified_unique_receipts": 1
+        },
+        "min_send_interval": 50.19973611831665,
+        "duplicate_native_requests": 0,
+        "duplicate_conversations": null
+      },
+      "deepseek": {
+        "captured": 5,
+        "processed": 5,
+        "unique_processed": 5,
+        "duplicates": 0,
+        "window_counts": {
+          "captured": 0,
+          "processed": 0,
+          "unique_processed": 0,
+          "duplicates": 0,
+          "verified_unique_receipts": 0
+        },
+        "min_send_interval": null,
+        "duplicate_native_requests": null,
+        "duplicate_conversations": 0
+      },
+      "wenxin_card": {
+        "captured": 22,
+        "processed": 22,
+        "unique_processed": 22,
+        "duplicates": 0,
+        "window_counts": {
+          "captured": 1,
+          "processed": 1,
+          "unique_processed": 1,
+          "duplicates": 0,
+          "verified_unique_receipts": 1
+        },
+        "min_send_interval": null,
+        "duplicate_native_requests": null,
+        "duplicate_conversations": null
+      },
+      "baidu_ai": {
+        "captured": 32,
+        "processed": 32,
+        "unique_processed": 9,
+        "duplicates": 23,
+        "window_counts": {
+          "captured": 0,
+          "processed": 0,
+          "unique_processed": 0,
+          "duplicates": 0,
+          "verified_unique_receipts": 0
+        },
+        "min_send_interval": null,
+        "duplicate_native_requests": null,
+        "duplicate_conversations": null
+      }
+    },
+    "core_and_android_containers_unchanged_since_retest": true,
+    "prompt_and_cycle_checks": {
+      "doubao1": {
+        "non_question_prompt_rows": 0
+      },
+      "doubao2": {
+        "non_question_prompt_rows": 0
+      },
+      "yuanbao": {
+        "non_question_prompt_rows": 0
+      },
+      "deepseek": {
+        "latest_completed_question_ordinal": 0,
+        "round": 5,
+        "question": "推荐一款护发精油"
+      },
+      "wenxin_card": {
+        "latest_completed_question_ordinal": 6,
+        "round": 1,
+        "question": "推荐一款祛痘精华液"
+      },
+      "baidu_ai": {
+        "latest_completed_question_ordinal": 7,
+        "round": 1,
+        "question": "推荐一款美白面霜"
+      }
+    }
+  },
+  "creation": {
+    "pointer": {
+      "test_id": "creation-soak6h-rosterfix-1792062355",
+      "started_at": 1792062355.8455582,
+      "deadline": 1792083955.8455582,
+      "duration_seconds": 21600,
+      "jobs": [
+        "creation-1792060761-3c2baae0"
+      ],
+      "root": "/opt/monitor/geo-capture/soak/creation-soak6h-rosterfix-1792062355",
+      "service": "geo-creation-soak6h-rosterfix-1792062355.service",
+      "deadline_timer": "geo-creation-soak6h-rosterfix-1792062355-deadline.timer"
+    },
+    "approved_total": 10,
+    "approved_new_in_window": 1,
+    "full_word_hash_review_GEO_provenance_verified": true,
+    "unknown_api_calls": 0,
+    "queue_complete": true,
+    "scope": "Fixed queue complete; remainder of six-hour window observes availability and fidelity, without repeated paid generation."
+  }
+}

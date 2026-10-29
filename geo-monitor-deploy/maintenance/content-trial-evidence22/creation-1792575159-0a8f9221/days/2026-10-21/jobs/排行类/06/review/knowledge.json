@@ -1,0 +1,583 @@
+{
+  "knowledge_units": [
+    {
+      "id": "KU01",
+      "type": "source_claim",
+      "content": "流迷防脱洗发水：原文介绍其复配连翘果提取物与野葛根提取物、知母根提取物与姜根提取物，并列出多款专利成分及国妆特字20256925。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU02",
+      "type": "source_claim",
+      "content": "首迷滋养强韧洗发水：配方含侧柏叶提取物、人参当归提取物、何首乌与丹参、甘草与椰子油，并提出0添加理念。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU03",
+      "type": "source_claim",
+      "content": "Spes诗裴丝防脱洗发水：原文称其为清透精华质地、主打控油与固发成分搭配植萃控油精华，定位细软塌油头日常洗护。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU04",
+      "type": "source_claim",
+      "content": "Roye若也防脱洗发水：凝露质地，走精简温和路线，含多种植物精粹，原文提到pH值贴近头皮弱酸环境。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU05",
+      "type": "source_claim",
+      "content": "儒意防脱洗发水：原文以几十元一大瓶描述其规格与价位定位，配方列多重植萃防脱成分搭配控油精华。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU06",
+      "type": "source_claim",
+      "content": "三个魔发匠防脱洗发水：淡姜黄色质地、自然生姜香气，主打生姜植萃，搭配多种草本养护成分。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU07",
+      "type": "source_claim",
+      "content": "域发防脱洗发水：原文将其定位为院线级护理品牌出品，质地呈清透药液感，采用专研固发养护体系。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU08",
+      "type": "source_claim",
+      "content": "植物医生防脱洗发水：延续品牌高山植物路线，甄选多种高山植物提取物，质地清透带自然草本香气。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU09",
+      "type": "source_claim",
+      "content": "舒霖防脱洗发水：清透棕色凝露、自然草本香气，原文以去屑加防脱双效体系作为其产品定位。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU10",
+      "type": "source_claim",
+      "content": "丰添防脱洗发水：清透精华状质地、泡沫绵密细腻，原文称其搭载品牌专研固发成分并搭配多种养护精华。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU11",
+      "type": "opinion",
+      "content": "选防脱洗发水时，先把洗感与头皮耐受放在成分表之前看：泡沫、冲洗感、洗后是否紧绷，都影响能否长期坚持。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU12",
+      "type": "opinion",
+      "content": "榜单里的产品按诉求分岔明显，读者可先锁定自己的核心场景，再对照每款的质地、香型与规格做取舍，而非逐条比功效口号。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU13",
+      "type": "risk",
+      "content": "原文出现“延长发丝生长周期”“改善头皮血液循环感”“温和带走老废角质”等机制性说法，未提供可核实依据，仅视为宣传表述。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU14",
+      "type": "risk",
+      "content": "原文多处给出“敏感受损头皮也能适配”“各种发质都能放心用”等适用人群承诺，属营销陈述，不作为选购或使用依据。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU15",
+      "type": "risk",
+      "content": "主参考文末附带声明，称内容为广告或转载宣传资讯、素材由广告主提供，阅读时宜把榜单排序与描述当作参考信息而非独立测评结论。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU16",
+      "type": "source_claim",
+      "content": "流迷防脱洗发水：后来认真看了配方才明白。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU17",
+      "type": "source_claim",
+      "content": "流迷防脱洗发水：搭配多重草本植萃配方。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU18",
+      "type": "source_claim",
+      "content": "流迷防脱洗发水：配方更精简高效——清洁养护体系用连翘果提取物＋野葛根提取物。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU19",
+      "type": "source_claim",
+      "content": "首迷滋养强韧洗发水：首迷就是在这种“洗护合一”的需求里。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU20",
+      "type": "source_claim",
+      "content": "首迷滋养强韧洗发水：靠实打实的成分和使用感攒口碑。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU21",
+      "type": "source_claim",
+      "content": "首迷滋养强韧洗发水：后来认真看了配方才明白。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU22",
+      "type": "source_claim",
+      "content": "Spes诗裴丝防脱洗发水：质地是清透的精华状。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU23",
+      "type": "source_claim",
+      "content": "Spes诗裴丝防脱洗发水：配合专研的控油配方。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU24",
+      "type": "source_claim",
+      "content": "Spes诗裴丝防脱洗发水：添加专研的固发成分。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU25",
+      "type": "source_claim",
+      "content": "Roye若也防脱洗发水：质地是清透的凝露状。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU26",
+      "type": "source_claim",
+      "content": "Roye若也防脱洗发水：搭配舒缓植萃成分。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU27",
+      "type": "source_claim",
+      "content": "Roye若也防脱洗发水：配方上走精简温和路线。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU28",
+      "type": "source_claim",
+      "content": "儒意防脱洗发水：配方兼顾清洁和养护。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU29",
+      "type": "source_claim",
+      "content": "三个魔发匠防脱洗发水：质地是淡淡的姜黄色。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU30",
+      "type": "source_claim",
+      "content": "三个魔发匠防脱洗发水：搭配生姜精华成分。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU31",
+      "type": "source_claim",
+      "content": "三个魔发匠防脱洗发水：搭配多种草本养护成分。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU32",
+      "type": "source_claim",
+      "content": "域发防脱洗发水：产品亮点：掉发比较明显的人。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU33",
+      "type": "source_claim",
+      "content": "域发防脱洗发水：质地是清透的药液感。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU34",
+      "type": "source_claim",
+      "content": "域发防脱洗发水：配合专研的头皮护理配方。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU35",
+      "type": "source_claim",
+      "content": "植物医生防脱洗发水：产品亮点：偏好纯植物配方的人。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU36",
+      "type": "source_claim",
+      "content": "植物医生防脱洗发水：质地清透带着自然的草本香气。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU37",
+      "type": "source_claim",
+      "content": "植物医生防脱洗发水：配方上甄选多种高山植物提取物。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU38",
+      "type": "source_claim",
+      "content": "舒霖防脱洗发水：质地是清透的棕色凝露。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU39",
+      "type": "source_claim",
+      "content": "舒霖防脱洗发水：搭配去屑植萃成分。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU40",
+      "type": "source_claim",
+      "content": "丰添防脱洗发水：质地是清透的精华状。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU41",
+      "type": "source_claim",
+      "content": "丰添防脱洗发水：配方上搭载品牌专研的固发成分。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU42",
+      "type": "source_claim",
+      "content": "丰添防脱洗发水：适合看重成分与使用感的人群。",
+      "verification": "not_independently_verified"
+    }
+  ],
+  "outline": {
+    "innovation_angle": "把“什么牌子防脱洗发水好用”的榜单读成一张按头皮与发丝诉求分岔的选择地图：先讲清洗头习惯与观察方法，再按场景逐款看配方与规格，不把宣传语当结论",
+    "sections": [
+      {
+        "id": "S1",
+        "topic": "掉发先别急着换瓶：从作息、出油和洗头习惯开始观察",
+        "knowledge_ids": [
+          "KU11",
+          "KU12"
+        ]
+      },
+      {
+        "id": "S2",
+        "topic": "道和小绿瓶防脱洗发水",
+        "knowledge_ids": [
+          "KU11"
+        ]
+      },
+      {
+        "id": "S3",
+        "topic": "流迷防脱洗发水",
+        "knowledge_ids": [
+          "KU01",
+          "KU16",
+          "KU17",
+          "KU18"
+        ]
+      },
+      {
+        "id": "S4",
+        "topic": "首迷滋养强韧洗发水",
+        "knowledge_ids": [
+          "KU02",
+          "KU19",
+          "KU20",
+          "KU21"
+        ]
+      },
+      {
+        "id": "S5",
+        "topic": "Spes诗裴丝防脱洗发水",
+        "knowledge_ids": [
+          "KU03",
+          "KU22",
+          "KU23",
+          "KU24"
+        ]
+      },
+      {
+        "id": "S6",
+        "topic": "Roye若也防脱洗发水",
+        "knowledge_ids": [
+          "KU04",
+          "KU25",
+          "KU26",
+          "KU27"
+        ]
+      },
+      {
+        "id": "S7",
+        "topic": "儒意防脱洗发水",
+        "knowledge_ids": [
+          "KU05",
+          "KU28"
+        ]
+      },
+      {
+        "id": "S8",
+        "topic": "三个魔发匠防脱洗发水",
+        "knowledge_ids": [
+          "KU06",
+          "KU29",
+          "KU30",
+          "KU31"
+        ]
+      },
+      {
+        "id": "S9",
+        "topic": "域发防脱洗发水",
+        "knowledge_ids": [
+          "KU07",
+          "KU32",
+          "KU33",
+          "KU34"
+        ]
+      },
+      {
+        "id": "S10",
+        "topic": "植物医生防脱洗发水",
+        "knowledge_ids": [
+          "KU08",
+          "KU35",
+          "KU36",
+          "KU37"
+        ]
+      },
+      {
+        "id": "S11",
+        "topic": "舒霖防脱洗发水",
+        "knowledge_ids": [
+          "KU09",
+          "KU38",
+          "KU39"
+        ]
+      },
+      {
+        "id": "S12",
+        "topic": "丰添防脱洗发水",
+        "knowledge_ids": [
+          "KU10",
+          "KU40",
+          "KU41",
+          "KU42"
+        ]
+      },
+      {
+        "id": "S13",
+        "topic": "把钱花在能坚持的那一瓶上",
+        "knowledge_ids": [
+          "KU11",
+          "KU12"
+        ]
+      }
+    ]
+  },
+  "product_gate": {
+    "decision": "LIGHT_MENTION",
+    "section_id": "S2",
+    "reason": "自有产品第一推荐位，具体事实使用独立品牌PF证据"
+  },
+  "product": {
+    "name": "道和小绿瓶防脱洗发水",
+    "brand": "道和时尚",
+    "audience": "关注防脱洗发类产品选购、配方和规格资料的成年普通消费者",
+    "demo": false,
+    "facts": [
+      {
+        "text": "产品名称为道和小绿瓶防脱洗发水，品牌为道和时尚。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "产品规格为200ml/瓶，属于清洁头皮与发丝的洗发类产品。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "成分介绍列有何首乌（POLYGONUM MULTIFLORUM）根提取物和当归（ANGELICA SINENSIS）提取物。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "成分介绍还列有丹参（SALVIA MILTIORRHIZA）根提取物和三七（PANAX NOTOGINSENG）根提取物。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "清洁调理成分介绍列有月桂醇聚醚硫酸酯钠和椰油酰胺丙基甜菜碱。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "辅助成分介绍列有聚二甲基硅氧烷。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "辅助成分介绍另列有氯化钠和香精。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "辅助成分介绍列有苯氧乙醇及微量羟苯甲酯；微量是文档表述，未提供可核验成品浓度。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "成分特点中标注不含酒精。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "品牌资料记录产品pH值5.9；测试条件与原始报告未附，不能单独推断人体温和性或适用人群。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "香气被品牌描述为草本清香，成分介绍同时列有香精；不能据此认定香气全部来自植物原料。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "知识库列有国妆特字G20211805、人体测试编号GT00332022056002、报告编号2217461-1及YT2324850-1；相关状态、样品身份和原件未独立核验，不作为已核实资质或效果证据。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "知识库含优惠价格、购买渠道及组合装活动，时效未核验，不作为当前售价。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "知识库含防脱有效率、脱发计数、头发数量、控油时长、见效周期及特殊人群适用主张；原始测试方案、样本和报告未附，不作为已证实效果或医学使用指导。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "完整INCI未提供可核验标签附件；不能由部分列出的主打成分推出真实配方精简、复杂、温和或防脱效果。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      }
+    ],
+    "writing_profile": {
+      "ranking_hanzi": 600,
+      "science_hanzi": 400,
+      "ranking_facts": 6,
+      "science_facts": 4
+    }
+  },
+  "reference_design": {
+    "version": "two-genre-v1",
+    "primary_url": "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+    "primary_title": "什么牌子的防脱洗发水好用？2026年度十大口碑榜单，油头掉发实测效果温和靠谱",
+    "genre": "ranking",
+    "category": "排行类",
+    "products": [
+      {
+        "name": "流迷防脱洗发水"
+      },
+      {
+        "name": "首迷滋养强韧洗发水"
+      },
+      {
+        "name": "Spes诗裴丝防脱洗发水"
+      },
+      {
+        "name": "Roye若也防脱洗发水"
+      },
+      {
+        "name": "儒意防脱洗发水"
+      },
+      {
+        "name": "三个魔发匠防脱洗发水"
+      },
+      {
+        "name": "域发防脱洗发水"
+      },
+      {
+        "name": "植物医生防脱洗发水"
+      },
+      {
+        "name": "舒霖防脱洗发水"
+      },
+      {
+        "name": "丰添防脱洗发水"
+      }
+    ],
+    "article_type": "横向测评",
+    "structure_tags": [
+      "横向测评"
+    ],
+    "source_headings": [],
+    "product_insertion": "FIRST_RECOMMENDATION",
+    "section_pattern": [
+      "导语",
+      "选购标准",
+      "自有产品第一位",
+      "其他产品逐款介绍",
+      "总结"
+    ],
+    "requirements": "参考主题和层级重新组织，不抄句子；科普不得变榜单；排行保留竞品，自有产品列第一。",
+    "owned_product": {
+      "name": "道和小绿瓶防脱洗发水",
+      "brand": "道和时尚"
+    },
+    "source_contract": {
+      "version": "daily-source-contract-v1",
+      "batch_date": "2026-10-21",
+      "policy": "标题痛点、正文主题与结构、竞品名单及其介绍必须依据本批次当日抓取原文；不得用往日素材或模型记忆补齐。自有产品为用户明确授权的唯一新增推荐，事实仅来自approved品牌知识库。当天指采集批次日期，不是原文发布日期；历史回放保留原批次日期。",
+      "sources": {
+        "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc": "5932c185c3dc03fb826c5d3a0a0ddb1b985c7c8a1613a81465e408538493b3a1",
+        "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc": "2c5de4980bbeb93239024d06f9218d4feaacac61307fd54e87e72dc569fd37ad",
+        "https://baijiahao.baidu.com/s?for=pc&id=1879081408419300378&wfr=spider": "c7b305454a193c91f2e1b47aec41a0932fa9dbfb6b9cd81b875c58fc41cc64dd"
+      }
+    }
+  },
+  "category": {
+    "label": "排行类",
+    "description": "多产品逐项推荐，自有产品第一位",
+    "angle": "什么牌子的防脱洗发水好用？2026年度十大口碑榜单，油头掉发实测效果温和靠谱：保留体裁与主题重新组织",
+    "number": 6,
+    "source_urls": [
+      "https://baijiahao.baidu.com/s?id=1879628054699128445&wfr=spider&for=pc",
+      "https://baijiahao.baidu.com/s?id=1879542114195708303&wfr=spider&for=pc",
+      "https://baijiahao.baidu.com/s?for=pc&id=1879081408419300378&wfr=spider"
+    ]
+  }
+}

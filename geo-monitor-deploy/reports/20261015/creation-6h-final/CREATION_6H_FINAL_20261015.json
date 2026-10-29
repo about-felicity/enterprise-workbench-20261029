@@ -1,0 +1,262 @@
+{
+  "exported_at": 1792084241.3686087,
+  "test_id": "creation-soak6h-rosterfix-1792062355",
+  "verdict": "passed",
+  "scope": "Six-hour service + actual evidence-bound creation, independent review, full Word and GEO provenance. Idle after fixed queue completion is reported; not six continuous hours of paid generation.",
+  "started_at": 1792062355.8455582,
+  "deadline": 1792083955.8455582,
+  "finished_at": 1792083965.139549,
+  "started_beijing": "2026-10-15T19:05:55.845+08:00",
+  "deadline_beijing": "2026-10-16T01:05:55.845+08:00",
+  "finished_beijing": "2026-10-16T01:06:05.139+08:00",
+  "planned_seconds": 21600,
+  "actual_elapsed_seconds": 21609.29399085045,
+  "deadline_to_final_report_seconds": 9.293990850448608,
+  "anomalies": [],
+  "job_id": "creation-1792060761-3c2baae0",
+  "baseline_approved": 9,
+  "approved_total": 10,
+  "approved_new_in_window": 1,
+  "approved": [
+    {
+      "id": "2026-10-15/排行类/01",
+      "word_sha256": "82d280d63ac9aeee895d08878189d779d793798ea6a2e58ea2838cb385c805be",
+      "normalized_text_similarity": 1.0,
+      "markdown_characters": 3596,
+      "word_characters": 3596,
+      "independent_review": {
+        "category_fit": true,
+        "structure_fit": true,
+        "innovation_present": true,
+        "product_gate_respected": true,
+        "no_invented_tests": true,
+        "no_unsupported_claims": true,
+        "consumer_article": true
+      }
+    },
+    {
+      "id": "2026-10-15/排行类/02",
+      "word_sha256": "b642cf5c7fbe5b87e45b35d2973e7df4c08dbf7b03da07389efbd462eec398f0",
+      "normalized_text_similarity": 1.0,
+      "markdown_characters": 4152,
+      "word_characters": 4152,
+      "independent_review": {
+        "category_fit": true,
+        "structure_fit": true,
+        "innovation_present": true,
+        "product_gate_respected": true,
+        "no_invented_tests": true,
+        "no_unsupported_claims": true,
+        "consumer_article": true
+      }
+    },
+    {
+      "id": "2026-10-15/排行类/03",
+      "word_sha256": "92d5b49670f5fda2a5c76b858f69697f37cfe0ba717fb25a4c0b5b9da6f59a31",
+      "normalized_text_similarity": 1.0,
+      "markdown_characters": 4535,
+      "word_characters": 4535,
+      "independent_review": {
+        "category_fit": true,
+        "structure_fit": true,
+        "innovation_present": true,
+        "product_gate_respected": true,
+        "no_invented_tests": true,
+        "no_unsupported_claims": true,
+        "consumer_article": true
+      }
+    },
+    {
+      "id": "2026-10-15/排行类/04",
+      "word_sha256": "c5561b6a7261db3e24dc189ea97e340a82071b0272cbde0eca870cd5f4474a49",
+      "normalized_text_similarity": 1.0,
+      "markdown_characters": 3556,
+      "word_characters": 3556,
+      "independent_review": {
+        "category_fit": true,
+        "structure_fit": true,
+        "innovation_present": true,
+        "product_gate_respected": true,
+        "no_invented_tests": true,
+        "no_unsupported_claims": true,
+        "consumer_article": true
+      }
+    },
+    {
+      "id": "2026-10-15/科普类/01",
+      "word_sha256": "4dd08fd3e3d4328b6011372f5e8a9774263f2f7343405646e1dc629bc8b5843b",
+      "normalized_text_similarity": 1.0,
+      "markdown_characters": 3324,
+      "word_characters": 3324,
+      "independent_review": {
+        "category_fit": true,
+        "structure_fit": true,
+        "innovation_present": true,
+        "product_gate_respected": true,
+        "no_invented_tests": true,
+        "no_unsupported_claims": true,
+        "consumer_article": true
+      }
+    },
+    {
+      "id": "2026-10-15/科普类/02",
+      "word_sha256": "77031c52ab1ccc065c5be54be88afd8a712f9e993a518a9cb5f0845a35116421",
+      "normalized_text_similarity": 1.0,
+      "markdown_characters": 2923,
+      "word_characters": 2923,
+      "independent_review": {
+        "category_fit": true,
+        "structure_fit": true,
+        "innovation_present": true,
+        "product_gate_respected": true,
+        "no_invented_tests": true,
+        "no_unsupported_claims": true,
+        "consumer_article": true
+      }
+    },
+    {
+      "id": "2026-10-15/科普类/03",
+      "word_sha256": "cfc4cf5346c5c029d3fb92f37b1c4230fb29a586415365b2c42b6a89e2f98308",
+      "normalized_text_similarity": 1.0,
+      "markdown_characters": 2713,
+      "word_characters": 2713,
+      "independent_review": {
+        "category_fit": true,
+        "structure_fit": true,
+        "innovation_present": true,
+        "product_gate_respected": true,
+        "no_invented_tests": true,
+        "no_unsupported_claims": true,
+        "consumer_article": true
+      }
+    },
+    {
+      "id": "2026-10-15/科普类/04",
+      "word_sha256": "0818be9bf8137138d852e6c26f97000a664476702515ce077d23417b47ed1120",
+      "normalized_text_similarity": 1.0,
+      "markdown_characters": 2882,
+      "word_characters": 2882,
+      "independent_review": {
+        "category_fit": true,
+        "structure_fit": true,
+        "innovation_present": true,
+        "product_gate_respected": true,
+        "no_invented_tests": true,
+        "no_unsupported_claims": true,
+        "consumer_article": true
+      }
+    },
+    {
+      "id": "2026-10-15/科普类/05",
+      "word_sha256": "c07bef81bf7cd6b0b4960947a65bc5efd3f38b55881d04a57b090179e856cb48",
+      "normalized_text_similarity": 1.0,
+      "markdown_characters": 2719,
+      "word_characters": 2719,
+      "independent_review": {
+        "category_fit": true,
+        "structure_fit": true,
+        "innovation_present": true,
+        "product_gate_respected": true,
+        "no_invented_tests": true,
+        "no_unsupported_claims": true,
+        "consumer_article": true
+      }
+    },
+    {
+      "id": "2026-10-15/科普类/06",
+      "word_sha256": "c8d757e8624a3f9ce61dc49bea79b1b155ae390e7e62b050c2831d553bef7214",
+      "normalized_text_similarity": 1.0,
+      "markdown_characters": 2632,
+      "word_characters": 2632,
+      "independent_review": {
+        "category_fit": true,
+        "structure_fit": true,
+        "innovation_present": true,
+        "product_gate_respected": true,
+        "no_invented_tests": true,
+        "no_unsupported_claims": true,
+        "consumer_article": true
+      }
+    }
+  ],
+  "new_article_ids": [
+    "2026-10-15/排行类/04"
+  ],
+  "material_counts": {
+    "geo_observations": 8,
+    "unique_source_urls": 73,
+    "full_articles": 37,
+    "excluded_sources": 36
+  },
+  "material_hashes_verified": true,
+  "Word_Markdown_receipts_review_verified": true,
+  "platform_extra_questions": 0,
+  "unknown_api_calls": 0,
+  "api_calls": 48,
+  "metrics": {
+    "samples": 360,
+    "first_at": 1792062356.3165748,
+    "last_at": 1792083964.9507246,
+    "max_sample_gap_seconds": 61.0940306186676,
+    "first_idle_with_all_ten_sample_at": 1792062416.521716,
+    "first_idle_beijing": "2026-10-15T19:06:56.521+08:00",
+    "idle_observed_seconds_to_deadline": 21539.323842048645,
+    "idle_scope": "Sampled idle after all ten approved; not a claim of continuous paid generation or exact API compute duration"
+  },
+  "costs": [
+    {
+      "job_id": "creation-1792060761-3c2baae0",
+      "batch_total": {
+        "calls": 48,
+        "settled_estimate_cny": 0.536386,
+        "outstanding_reservation_cny": 0,
+        "usage_unknown_or_reserved": 0
+      },
+      "window_new_calls": {
+        "calls": 1,
+        "settled_estimate_cny": 0.013517,
+        "outstanding_reservation_cny": 0,
+        "usage_unknown_or_reserved": 0
+      }
+    }
+  ],
+  "cost_scope": "Existing shared ledger conservative estimates, not provider invoice. Window is reservation creation time.",
+  "actual_control": {
+    "paused": true,
+    "reason": "soak_deadline",
+    "message": "六小时测试截止，排空当前API请求；其他任务不受影响",
+    "revision": 8,
+    "paused_epoch": 1792083957.0360389
+  },
+  "actual_api_active_state": null,
+  "actual_worker_result": {
+    "status": "idle",
+    "date": "2026-10-15",
+    "failed_tickets": 0,
+    "historical_failed_tickets": 0
+  },
+  "units": {
+    "geo-content-api.service": "active",
+    "geo-content-worker.service": "active",
+    "geo-creation-soak6h-rosterfix-1792062355.service": "inactive",
+    "geo-creation-soak6h-rosterfix-1792062355-deadline.timer": "active"
+  },
+  "independent_deadline_marker": {
+    "at": 1792083957.040183,
+    "jobs": [
+      "creation-1792060761-3c2baae0"
+    ]
+  },
+  "original_report_sha256": "be31836bebcd20bb91f83499938f9ea01e6c48fe61a178fcfbab814d0c97c936",
+  "budget": {
+    "article_cny": 0.35,
+    "shared_daily_cny": 10,
+    "ledger": "Existing shared original ledger, never reset or raised"
+  },
+  "limits": [
+    "Nine articles predate this window; only one was newly approved.",
+    "Separate two-article acceptance job is excluded.",
+    "Costs are existing conservative ledger estimates, not provider bills.",
+    "Capture twelve-hour test remains independent and incomplete; its blockers do not disappear when creation passes."
+  ]
+}

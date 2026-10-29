@@ -1,0 +1,73 @@
+{
+  "at": 1792812991.2605238,
+  "ready": true,
+  "recovered_task": 53,
+  "original_task_id": "d47e8f30-c2d0-58c7-ae72-17ead49eebb6",
+  "request_id": "e763d4f3-79a0-4d4a-a65c-b91a1dfd476a",
+  "conversation_id": "38448892545553666",
+  "native_user_messages": 1,
+  "question_unchanged": true,
+  "capture_retries": 0,
+  "body_length": 572,
+  "sources": 16,
+  "events": {
+    "completed": 1,
+    "enqueued": 1,
+    "infrastructure_error": 1,
+    "native_draft_trailing_newline_normalize_intent": 1,
+    "native_existing_draft_submit_intent": 1,
+    "native_existing_draft_submit_returned": 1,
+    "send_click_intent_committed": 1,
+    "send_intent_committed": 1,
+    "send_protocol_v2": 1,
+    "send_tap_returned": 1
+  },
+  "postgres": [
+    {
+      "run_id": "doubao-f8b1016af56590af4c8c",
+      "day": "2026-10-24",
+      "complete": "true",
+      "answer_sha256": "f7cab86cb9118092bf0860a1f341aae67d95ca17dc2afe1fcf810d57442f65e8"
+    }
+  ],
+  "following_tasks": [
+    {
+      "ordinal": 53,
+      "state": "completed",
+      "request_id": "e763d4f3-79a0-4d4a-a65c-b91a1dfd476a",
+      "capture_retries": 0
+    },
+    {
+      "ordinal": 54,
+      "state": "completed",
+      "request_id": "1c0a6d8f-3358-49ab-8100-af3c7548e239",
+      "capture_retries": 0
+    },
+    {
+      "ordinal": 55,
+      "state": "prepared",
+      "request_id": "a9594454-3a16-4271-bdd6-328fdc9c60b1",
+      "capture_retries": 0
+    },
+    {
+      "ordinal": 56,
+      "state": "pending",
+      "request_id": null,
+      "capture_retries": 0
+    }
+  ],
+  "current": {
+    "status": "running",
+    "captured": 54,
+    "geo_processed": 54,
+    "delivery_errors": [],
+    "progress": {
+      "phase": "generating",
+      "task_id": "73a87de2-f2c8-5f16-bd11-63c67e697b8a",
+      "ordinal": 55,
+      "changed_at": 1792812972.516475,
+      "reason": "",
+      "deadline_at": 1792813867.806436
+    }
+  }
+}

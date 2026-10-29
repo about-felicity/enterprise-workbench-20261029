@@ -1,0 +1,22 @@
+{
+  "question": "推荐一款适合烫染后干枯毛躁的护发素",
+  "model": "baidu_ai",
+  "source": {
+    "url": "https://baijiahao.baidu.com/s?id=1855612103641886191&wfr=spider&for=pc",
+    "title": "护发素啥牌子好?2026实测10款毛躁干枯护发素,适配染烫重度受损人",
+    "media": "江西快报",
+    "article": {
+      "status": "failed",
+      "requested_url": "https://baijiahao.baidu.com/s?id=1855612103641886191&wfr=spider&for=pc",
+      "text": "",
+      "attempts": [
+        {
+          "backend": "http",
+          "status": "failed",
+          "error": "Verification/access-denied page is not an article"
+        }
+      ],
+      "error": "All enabled Scrapling readers failed; inspect attempts or provide a permitted source copy"
+    }
+  }
+}

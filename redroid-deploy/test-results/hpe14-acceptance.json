@@ -1,0 +1,57 @@
+{
+  "snapshot_utc": "2026-10-06T11:21:51.687009+00:00",
+  "tasks": {
+    "completed": 106
+  },
+  "sources": 1095,
+  "citations": 300,
+  "unique_request_ids": 106,
+  "completed_records": 106,
+  "body_lengths": {
+    "min": 79,
+    "max": 1005
+  },
+  "errors": [],
+  "phase_v2_recovery": {
+    "legacy_draft_recovered": "23588c18-debd-5040-a73a-446eadef9333",
+    "v2_interrupted_before_click_task": "1ad75b8c-2491-568b-8cc7-6275b18b3ff8",
+    "injected_time": 1791284399.6844087,
+    "state": "completed",
+    "click_intents": 1,
+    "resumed_before_click": 1
+  },
+  "native_fault_lines": [],
+  "container_started": "2026-10-06T10:43:48.164167829Z",
+  "oom_killed": false,
+  "container_restarts": 0,
+  "service": [
+    "Result=success",
+    "NRestarts=0",
+    "ActiveState=active"
+  ],
+  "business_container_ids_unchanged": true,
+  "business_containers_running": true,
+  "event_counts": {
+    "completed": 106,
+    "enqueued": 106,
+    "operator_verified_unsent_draft": 1,
+    "prepare_failed": 1,
+    "resume_before_first_click": 2,
+    "send_click_intent_committed": 65,
+    "send_intent_committed": 106,
+    "send_protocol_v2": 64,
+    "send_uncertain": 1
+  },
+  "soak24h": null,
+  "validation_24h_complete": false,
+  "initial_batch_tasks": {
+    "completed": 106
+  },
+  "validation_batch_106_complete": true,
+  "unit_tests_passed": 30,
+  "runtime_files_sha256": {
+    "unattended_core.py": "bb973a7776e27d846206296cdcb411c6b9ea8d9e32a9a02d7191d6bc6819727e",
+    "unattended_worker.py": "c9d6ef707efcdf43b51d8900fd9c6d84769ef3440e4f454b79b5df1e8c013b23",
+    "runtime_preflight.py": "60a4408f9d23b630497b33598a9506c616ac932487550a6fbae455194728547e"
+  }
+}

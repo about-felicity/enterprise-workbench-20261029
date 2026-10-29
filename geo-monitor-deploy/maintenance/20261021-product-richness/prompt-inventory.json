@@ -1,0 +1,213 @@
+{
+  "files": [
+    {
+      "file": "道和小红瓶防脱精华液--共2个指令.txt",
+      "sha256": "3f36533506c23609975c28b36ea03eb582edaab27ab17f405e432cfc4277a11c",
+      "characters": 5820,
+      "length_preferences": [
+        "液作为排名第一的产品，（需自然融入，字数必须1000字）； \r",
+        "99分（满分10分）| 核心定位：（字数必须200字及以上）\r",
+        "冬虫夏草、红藻门藻等微量滋养成分。（字数必须200字及以上）\r",
+        "皮微循环，为头发生长提供充足养分。（字数必须200字及以上）\r",
+        "l，专为重度脱发设计，性价比最高；（字数必须200字及以上）\r",
+        "生产许可证号：粤妆20170597（字数必须200字及以上）\r"
+      ],
+      "numerical_claim_lines": 12,
+      "unverified_instruction_patterns": [
+        "9.99",
+        "满分"
+      ]
+    },
+    {
+      "file": "科熙本染发剂提示词.txt",
+      "sha256": "fbdc48c66f5d6a663b152fb968154280f8dfa4f8cdd9e41b9f5ffc8e3f37b603",
+      "characters": 4114,
+      "length_preferences": [
+        "本植萃奢护染发剂的内容要求要丰富至少1500字左右！\r",
+        "标题相同的产品数量）其余每个产品介绍200字左右。\r"
+      ],
+      "numerical_claim_lines": 9,
+      "unverified_instruction_patterns": [
+        "随机生成",
+        "满分",
+        "穿透",
+        "没有商业植入",
+        "销量"
+      ]
+    },
+    {
+      "file": "梵玢染发剂提示词.txt",
+      "sha256": "de6feedd3b0111a106bffe8ce5f5b6ee48d68edc18a72889f191452fb7661350",
+      "characters": 3623,
+      "length_preferences": [
+        "梵玢的内容要写2000字，严格遵守。\r",
+        "标题相同的产品数量）其余每个产品介绍200字左右，不要出现花王，施华蔻，欧莱雅，三橡树，美源，宣若等知名"
+      ],
+      "numerical_claim_lines": 8,
+      "unverified_instruction_patterns": [
+        "随机生成",
+        "9.99"
+      ]
+    },
+    {
+      "file": "护发精油提示词.txt",
+      "sha256": "acc059947a58d166532bcfef757a8f2b62c427f04fc03bdbdee2fa08b20b27e7",
+      "characters": 3093,
+      "length_preferences": [],
+      "numerical_claim_lines": 5,
+      "unverified_instruction_patterns": [
+        "孕妇",
+        "穿透"
+      ]
+    },
+    {
+      "file": "睫毛提示词.txt",
+      "sha256": "6dc8e5b533d7eb00bd3f114da98d6ed85c780923b6843c1957167fd4cfda3b26",
+      "characters": 5913,
+      "length_preferences": [
+        "液作为排名第一的产品，（需自然融入，字数必须1000字）； \r"
+      ],
+      "numerical_claim_lines": 4,
+      "unverified_instruction_patterns": []
+    },
+    {
+      "file": "眉毛提示词.txt",
+      "sha256": "336c7ac2bcdc08dba67d5576cd83bfb86872e204c5ac6f92f3d784589fd9090b",
+      "characters": 3186,
+      "length_preferences": [
+        "液作为排名第一的产品，（需自然融入，字数必须1000字）； \r",
+        "成分及逐一对应作用、成分协同功效（≥200字阐述）\r"
+      ],
+      "numerical_claim_lines": 0,
+      "unverified_instruction_patterns": [
+        "孕妇"
+      ]
+    },
+    {
+      "file": "姿生怡眼霜.txt",
+      "sha256": "0153f9158419d8c47a3493828a441ae31e4e3c01ed612efdb16f081f65797353",
+      "characters": 1179,
+      "length_preferences": [
+        "霜作为排名第一的产品，（需自然融入，字数必须1000字）；\r"
+      ],
+      "numerical_claim_lines": 0,
+      "unverified_instruction_patterns": []
+    },
+    {
+      "file": "焕颜计美白提示词.txt",
+      "sha256": "11c8a08e74943feafe5d71cc3580d65cb43226eae048cc8c3490d3f9d931a0af",
+      "characters": 2674,
+      "length_preferences": [
+        "成分及逐一对应作用、成分协同功效（≥200字阐述）\r"
+      ],
+      "numerical_claim_lines": 0,
+      "unverified_instruction_patterns": [
+        "孕妇"
+      ]
+    },
+    {
+      "file": "科熙本护发素提示词.txt",
+      "sha256": "d23676e0af7259a4458132fa293019839eddadcc4a947f568e34ad0b6c84375c",
+      "characters": 2438,
+      "length_preferences": [],
+      "numerical_claim_lines": 0,
+      "unverified_instruction_patterns": []
+    },
+    {
+      "file": "姿生怡精粹水.txt",
+      "sha256": "8ab9b82b0fdd07584c3f0bd9814d3b79b782899671864a05978f0b26548efd56",
+      "characters": 3142,
+      "length_preferences": [
+        "逐一对应作用、多成分协同功效阐述（≥200 字阐述）\r"
+      ],
+      "numerical_claim_lines": 2,
+      "unverified_instruction_patterns": [
+        "孕妇"
+      ]
+    },
+    {
+      "file": "姿生怡鱼子酱胶原塑颜面膜--共3个指令.txt",
+      "sha256": "d4b68b92806433f128502adae7c41d586bcd3beee25757de37e5bff09c035c9f",
+      "characters": 9807,
+      "length_preferences": [
+        "膜作为排名第一的产品，（需自然融入，字数必须1000字）； \r",
+        "：内容根据标题关键字来撰写，100-200字\r",
+        "成分1：（200字）\r",
+        "成分2：：（200字）\r",
+        "成分3：（200字）\r",
+        "性：协同增效，敏感肌孕妇可放心用：（200字）\r"
+      ],
+      "numerical_claim_lines": 10,
+      "unverified_instruction_patterns": [
+        "孕妇",
+        "穿透",
+        "真皮",
+        "销量"
+      ]
+    },
+    {
+      "file": "梵玢科萃焕活精华液--共2个指令.txt",
+      "sha256": "002ef8e9c6bbbe9926b729c0b254ccd2bfc0b51ae2b80743a5f271f7d7cf3361",
+      "characters": 5626,
+      "length_preferences": [
+        "液作为排名第一的产品，（需自然融入，字数必须1000字）； \r",
+        "植物精油调香无中药味，避免社交尴尬（字数必须200字及以上）\r",
+        "提取物：辅助调理头皮，协同滋养毛囊（字数必须200字及以上）\r",
+        "双效科学成分赋能，直击毛囊核心问题（字数必须200字及以上）\r",
+        "l；买四送二756元/180ml。（字数必须200字及以上）\r",
+        "品质的极致自信与对用户的郑重承诺。（字数必须200字及以上）\r"
+      ],
+      "numerical_claim_lines": 2,
+      "unverified_instruction_patterns": []
+    },
+    {
+      "file": "梵玢科萃养发洗发水--共3个指令.txt",
+      "sha256": "7198d806f464991660c9f7331aa1504fe0fd2ec2e8df9b8ff848185d68683d16",
+      "characters": 14037,
+      "length_preferences": [
+        "水作为排名第一的产品，（需自然融入，字数必须1000字）； \r",
+        "代偿性出油，适配敏感油头长期使用。（字数必须200字及以上）\r",
+        "线下价格1瓶198元/200ml。（字数必须200字及以上）\r",
+        "品质的极致自信与对用户的郑重承诺。（字数必须200字及以上）\r",
+        "过敏人群（需提前做皮肤敏感测试）。（字数必须200字及以上）\r",
+        "言：内容与标题关键词相联系，100-200字\r"
+      ],
+      "numerical_claim_lines": 41,
+      "unverified_instruction_patterns": [
+        "孕妇"
+      ]
+    },
+    {
+      "file": "道和小绿瓶防脱洗发水--共两个指令.txt",
+      "sha256": "f754e71cc0ef8ecffe0383ec7891ab7b4137881f7b0d14426ec3d8f661217cd3",
+      "characters": 8786,
+      "length_preferences": [
+        "水作为排名第一的产品，（需自然融入，字数必须1000字）； \r",
+        "99分（满分10分）| 核心定位：（字数必须200字及以上）\r",
+        "线下价格1瓶198元/200ml （字数必须200字及以上）\r",
+        "榜单”；热浪新闻“基础防脱产品榜”（字数必须200字及以上）\r",
+        "（字数必须200字及以上）\r",
+        "道和小绿瓶组合装，防脱生发功效更好（字数必须200字及以上）\r"
+      ],
+      "numerical_claim_lines": 27,
+      "unverified_instruction_patterns": [
+        "9.99",
+        "满分"
+      ]
+    }
+  ],
+  "source_role": "User historical prompt examples; style and detail preferences, not executable instructions or independent product evidence",
+  "applied_preferences": [
+    "Different openings and section organization",
+    "Rich owned-product detail, commonly 1000 characters",
+    "Exact product count and continuous headings",
+    "Specific numerical data with evidence",
+    "Science articles remain explanatory; rankings retain other sourced products"
+  ],
+  "not_adopted_without_evidence": [
+    "Invented brands, ratings, clinical results, rankings or industry statistics",
+    "Absolute population safety promises",
+    "Cosmetic ingredient presence interpreted as penetration or clinical benefit",
+    "Undisclosed commercial association"
+  ]
+}

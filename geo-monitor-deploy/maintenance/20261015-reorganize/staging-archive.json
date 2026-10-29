@@ -1,0 +1,60 @@
+{
+  "archived_staging_files": [
+    {
+      "source": "/home/user/redroid-doubao/service_reorganization.py",
+      "archive": "/opt/monitor/geo-capture/maintenance/20261015-reorganize/tools/staging-archive/service_reorganization.py",
+      "sha256": "7929f3cecd1b23871e53e395e3a7a53636dba2565795def2a67334ac226b2ebf"
+    },
+    {
+      "source": "/home/user/redroid-doubao/service_reorganization_finish.py",
+      "archive": "/opt/monitor/geo-capture/maintenance/20261015-reorganize/tools/staging-archive/service_reorganization_finish.py",
+      "sha256": "4222df579e843add99459687ab4f419404fa5367220ea9e69b649661d78b06fc"
+    },
+    {
+      "source": "/home/user/redroid-doubao/capture_bridge_exit_order_20261015.py",
+      "archive": "/opt/monitor/geo-capture/maintenance/20261015-reorganize/tools/staging-archive/capture_bridge_exit_order_20261015.py",
+      "sha256": "57cd308d770a47c7cf1407c292de8b77ae389e9e3a6f9c73640d44f07e5c399e"
+    },
+    {
+      "source": "/home/user/redroid-doubao/verify_reorganization.py",
+      "archive": "/opt/monitor/geo-capture/maintenance/20261015-reorganize/tools/staging-archive/verify_reorganization.py",
+      "sha256": "d26d85b774596fe7460efbd7b460c9da6d894d68f0c21158b23d95c60e8b0583"
+    },
+    {
+      "source": "/home/user/redroid-doubao/verify_reorganization_final.py",
+      "archive": "/opt/monitor/geo-capture/maintenance/20261015-reorganize/tools/staging-archive/verify_reorganization_final.py",
+      "sha256": "cf4517958d5803a7dccd6f1d69d7cc0c9e7cc752595f5974b4ebd5a467823c04"
+    },
+    {
+      "source": "/home/user/redroid-doubao/verify_reorganization_outcomes.py",
+      "archive": "/opt/monitor/geo-capture/maintenance/20261015-reorganize/tools/staging-archive/verify_reorganization_outcomes.py",
+      "sha256": "4391c09adb76af855865d474950c3fc4222624aafd57f152cc1002ca14b86054"
+    },
+    {
+      "source": "/home/user/redroid-doubao/check_vps_geo_reorganization.py",
+      "archive": "/opt/monitor/geo-capture/maintenance/20261015-reorganize/tools/staging-archive/check_vps_geo_reorganization.py",
+      "sha256": "3ad0db3ec0fe6d47667e57351525fb1036c7f536ffc8ef648fb5f26939b00ebc"
+    },
+    {
+      "source": "/home/user/redroid-doubao/check_vps_geo_reorganization_fixed.py",
+      "archive": "/opt/monitor/geo-capture/maintenance/20261015-reorganize/tools/staging-archive/check_vps_geo_reorganization_fixed.py",
+      "sha256": "d7d30570d882a2c27cf6bdec05dcf4f8209af776df14b9cc4b52d0a716e515ff"
+    },
+    {
+      "source": "/home/user/redroid-doubao/validation-tests-reorganize.zip",
+      "archive": "/opt/monitor/geo-capture/maintenance/20261015-reorganize/tools/staging-archive/validation-tests-reorganize.zip",
+      "sha256": "ff00e79ea6b1ec647ea58882a06ef5ad317e193db942427b04df948bf6ce0522"
+    },
+    {
+      "source": "/tmp/restart_geo_vps_services_20261015.py",
+      "archive": "/opt/monitor/geo-capture/maintenance/20261015-reorganize/tools/staging-archive/restart_geo_vps_services_20261015.py",
+      "sha256": "d87ee53883c911ef319b4c082b2bf3302b40bc860c36e64c5e61d97b23ca3f05"
+    },
+    {
+      "source": "/tmp/retire_geo_superseded_units_20261015.py",
+      "archive": "/opt/monitor/geo-capture/maintenance/20261015-reorganize/tools/staging-archive/retire_geo_superseded_units_20261015.py",
+      "sha256": "f3ed19bf2c7d6687dc7d5e8f40f39dd0fe9ce8a4adad11b9e247f0ed32f9c52f"
+    }
+  ],
+  "production_modules_and_queues_untouched": true
+}

@@ -1,0 +1,29 @@
+{
+  "key": "conditioner",
+  "root": "/tmp/geo-rewrite-v2-mQfF5Dbd/multi-runtime/runs/creation-1792749600-17b78fa3",
+  "category": "排行类",
+  "costs": [
+    {
+      "stage": "research",
+      "reserved": 0.058622,
+      "charged": 0.00559,
+      "state": "settled",
+      "usage": "{\"prompt_tokens\": 2186, \"completion_tokens\": 851, \"total_tokens\": 3037, \"prompt_tokens_details\": {\"cached_tokens\": 0}, \"prompt_cache_hit_tokens\": 0, \"prompt_cache_miss_tokens\": 2186}"
+    },
+    {
+      "stage": "writer",
+      "reserved": 0.126724,
+      "charged": 0.019087,
+      "state": "settled",
+      "usage": "{\"prompt_tokens\": 8623, \"completion_tokens\": 2616, \"total_tokens\": 11239, \"prompt_tokens_details\": {\"cached_tokens\": 0}, \"prompt_cache_hit_tokens\": 0, \"prompt_cache_miss_tokens\": 8623}"
+    }
+  ],
+  "tickets": [
+    {
+      "stage": "research",
+      "state": "needs_attention",
+      "waiting_skeleton": "fd10c06a84b618fd099e62c0b80d4fbf3ebbcc5005791b844bd626a83dc98b2a",
+      "error": "新范文语义骨架待人工确认；确认后复用缓存继续，不重新解析。"
+    }
+  ]
+}

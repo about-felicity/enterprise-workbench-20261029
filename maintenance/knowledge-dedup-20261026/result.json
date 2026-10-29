@@ -1,0 +1,234 @@
+{
+  "at": 1792978809.5834904,
+  "aliases": {
+    "product-ae04b5d593044c62bd59f77a3eb83987": "product-7fd5fad9bef04e4ca2b00045443ea372",
+    "product-18d49f719f2c4ef7a341241ccf540102": "product-cbdab5bf17454acaa1996253f6c50ac9"
+  },
+  "deduplicated_uploads": [
+    {
+      "library_id": "library-1a11b9665229426d98771b355b615e81",
+      "import_id": "upload-c15f454e06934515aa558141040cdb74"
+    },
+    {
+      "library_id": "library-98e8f363255342c5a83867659be0d91a",
+      "import_id": "upload-29b469cbfc04470cbd8225e21c87c349"
+    },
+    {
+      "library_id": "library-240ea3d2569b40c3a56381ec6741823c",
+      "import_id": "upload-ad8ba4a0666f4665a5c781bb08f03546"
+    },
+    {
+      "library_id": "library-150bf8432e1444b49542366df56cbda2",
+      "import_id": "upload-bb949e81d1a34f7d96f94b4ce183aeac"
+    },
+    {
+      "library_id": "library-7f8ed58881d94768aae8ea40bc1ff004",
+      "import_id": "upload-969e78acd2df449f8b18c2ee7b46bba9"
+    }
+  ],
+  "reused_analysis": [
+    {
+      "library_id": "library-7f8ed58881d94768aae8ea40bc1ff004",
+      "product_id": "product-e75e49c909804f7b9dd5227a8151197d",
+      "version": "e764b293e13f9ad71c30d59bf71d3e49cd3d13e41d57e14802c5419a019bac42",
+      "message": "人工分析结果已发布，产品可以用于新任务。已有任务保留原知识库版本。"
+    },
+    {
+      "library_id": "library-150bf8432e1444b49542366df56cbda2",
+      "product_id": "product-697871a4be224716adebdaf53562bb45",
+      "version": "c85b840297aa4faa1dc86e7446a2f6a329bd8f4d006ab904c1ccdff0f96c467e",
+      "message": "人工分析结果已发布，产品可以用于新任务。已有任务保留原知识库版本。"
+    },
+    {
+      "library_id": "library-240ea3d2569b40c3a56381ec6741823c",
+      "product_id": "product-7fd5fad9bef04e4ca2b00045443ea372",
+      "version": "7032fc5c4ac3538ad3f1f9aa5fc153ed02f3a2f14c7fb8c42548754a6261ab4a",
+      "message": "人工分析结果已发布，产品可以用于新任务。已有任务保留原知识库版本。"
+    },
+    {
+      "library_id": "library-98e8f363255342c5a83867659be0d91a",
+      "product_id": "product-0e4dde223a8c40ec9a28e7d722ab180a",
+      "version": "75c536c1beebe8e8d2c5a6da72e982f81fdd5b2522f6fe103dea6ac9fcbbdbd3",
+      "message": "人工分析结果已发布，产品可以用于新任务。已有任务保留原知识库版本。"
+    },
+    {
+      "library_id": "library-1a11b9665229426d98771b355b615e81",
+      "product_id": "product-48e0cab94cb34eca8f9e0e090dcf645a",
+      "version": "71d979a617d0986a9c88904203e349ed5a27aa00319e749c0b800273f5426ae1",
+      "message": "人工分析结果已发布，产品可以用于新任务。已有任务保留原知识库版本。"
+    }
+  ],
+  "created_library_records": [
+    "library-ebb3ccf161d24bca996167829911a1bb",
+    "library-78ccbc48478b42f3af227a7c753a635c"
+  ],
+  "relinked_images": [],
+  "products": 9,
+  "library_records": 20,
+  "visible_products": 20,
+  "images": 27,
+  "rows": [
+    {
+      "name": "道和小绿瓶防脱洗发水",
+      "product_id": "product-48e0cab94cb34eca8f9e0e090dcf645a",
+      "library_id": "library-1a11b9665229426d98771b355b615e81",
+      "versions": 1,
+      "latest_status": "published",
+      "images": 0
+    },
+    {
+      "name": "姿生怡奢养铂金紧塑抗皱眼霜",
+      "product_id": "product-0e4dde223a8c40ec9a28e7d722ab180a",
+      "library_id": "library-98e8f363255342c5a83867659be0d91a",
+      "versions": 1,
+      "latest_status": "published",
+      "images": 0
+    },
+    {
+      "name": "焕颜计小白罐美白精华霜",
+      "product_id": "product-7fd5fad9bef04e4ca2b00045443ea372",
+      "library_id": "library-240ea3d2569b40c3a56381ec6741823c",
+      "versions": 1,
+      "latest_status": "published",
+      "images": 1
+    },
+    {
+      "name": "科熙本鱼子酱修护柔顺护发素",
+      "product_id": "product-697871a4be224716adebdaf53562bb45",
+      "library_id": "library-150bf8432e1444b49542366df56cbda2",
+      "versions": 1,
+      "latest_status": "published",
+      "images": 0
+    },
+    {
+      "name": "姿生怡阿尔卑斯冰川焕肤精粹水",
+      "product_id": "product-e75e49c909804f7b9dd5227a8151197d",
+      "library_id": "library-7f8ed58881d94768aae8ea40bc1ff004",
+      "versions": 1,
+      "latest_status": "published",
+      "images": 0
+    },
+    {
+      "name": "梵玢护发精油",
+      "product_id": "",
+      "library_id": "library-3e3a558b9ef4409bbbcd2560fbefc51c",
+      "versions": 1,
+      "latest_status": "pending",
+      "images": 5
+    },
+    {
+      "name": "姿生怡手部保湿修护霜",
+      "product_id": "",
+      "library_id": "library-76e7f97c756145118eb13940080881db",
+      "versions": 1,
+      "latest_status": "pending",
+      "images": 0
+    },
+    {
+      "name": "梵玢FBCY植萃祛痘精华液",
+      "product_id": "",
+      "library_id": "library-13a3bfbc08e3441c935b75752f4c2540",
+      "versions": 1,
+      "latest_status": "pending",
+      "images": 8
+    },
+    {
+      "name": "科熙本染发剂",
+      "product_id": "",
+      "library_id": "library-1ec41916a4274125af9ee1b01a694631",
+      "versions": 1,
+      "latest_status": "pending",
+      "images": 4
+    },
+    {
+      "name": "梵玢FBCY睫毛精华液",
+      "product_id": "",
+      "library_id": "library-dddbfbae554645c0bbfd731445cc1bb6",
+      "versions": 1,
+      "latest_status": "pending",
+      "images": 2
+    },
+    {
+      "name": "梵玢染发剂",
+      "product_id": "",
+      "library_id": "library-81f59dbbdb8a4d6da83464c368cacdbd",
+      "versions": 1,
+      "latest_status": "pending",
+      "images": 4
+    },
+    {
+      "name": "梵玢FBCY科萃养发洗发水",
+      "product_id": "",
+      "library_id": "library-73273ff108e0496aa875852a76d96145",
+      "versions": 1,
+      "latest_status": "pending",
+      "images": 0
+    },
+    {
+      "name": "梵玢FBCY科萃焕活精华液",
+      "product_id": "",
+      "library_id": "library-ab4176dd4bd5475681a2903423eed81d",
+      "versions": 1,
+      "latest_status": "pending",
+      "images": 0
+    },
+    {
+      "name": "梵玢FBCY眉毛精华液",
+      "product_id": "product-cbdab5bf17454acaa1996253f6c50ac9",
+      "library_id": "library-66e70aa086d847eea61da251afcbbfd2",
+      "versions": 2,
+      "latest_status": "pending",
+      "images": 1
+    },
+    {
+      "name": "道和小红瓶防脱精华液",
+      "product_id": "",
+      "library_id": "library-a0f274f70e4c4c868353ebb7212cebd7",
+      "versions": 1,
+      "latest_status": "pending",
+      "images": 0
+    },
+    {
+      "name": "科熙本植物防脱赋活多效精华液",
+      "product_id": "product-1bed01fe0cd540da8e578f4ac0ca8f78",
+      "library_id": "library-f882754963754235a5676d1435013652",
+      "versions": 2,
+      "latest_status": "pending",
+      "images": 0
+    },
+    {
+      "name": "科熙本控油蓬松造型喷雾",
+      "product_id": "",
+      "library_id": "library-bccdb2bf452146a0a67313527d906338",
+      "versions": 1,
+      "latest_status": "pending",
+      "images": 1
+    },
+    {
+      "name": "科熙本控油蓬松洗发水",
+      "product_id": "",
+      "library_id": "library-25dabbf3d0864da8ae39a92771674b26",
+      "versions": 1,
+      "latest_status": "pending",
+      "images": 1
+    },
+    {
+      "name": "姿生怡鱼子酱胶原塑颜面膜",
+      "product_id": "product-61d95de1c1414daaa343604ac6baaa87",
+      "library_id": "library-ebb3ccf161d24bca996167829911a1bb",
+      "versions": 1,
+      "latest_status": "published",
+      "images": 0
+    },
+    {
+      "name": "科熙本二硫化硒清爽去屑止痒洗发水",
+      "product_id": "product-215fe900d3c24bbf8fd2579bc3deb678",
+      "library_id": "library-78ccbc48478b42f3af227a7c753a635c",
+      "versions": 0,
+      "latest_status": "manual",
+      "images": 0
+    }
+  ],
+  "protected_files": 137,
+  "protected_unchanged": true
+}

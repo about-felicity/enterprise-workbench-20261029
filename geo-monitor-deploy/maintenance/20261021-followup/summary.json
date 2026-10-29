@@ -1,0 +1,399 @@
+{
+  "at": 1792563789.3084664,
+  "states": {
+    "needs_attention": 95,
+    "complete": 27,
+    "unknown_request": 3
+  },
+  "reasons": {
+    "不能由泵数推断一瓶可用多久：缺少每泵毫升数的明确依据或假设; 正文超过约定长度": 1,
+    "Semantic review requests revision: [\"C57『体验洗感和冲洗感受』是未经证实的产品使用体验，不能由规格声明推出；C13『洗发水是消耗品』为品类经验，缺一致依据；C35『每天洗头消耗更快』未提供证据；C36『久放变质』无依据；C48/C60『小规格试用』为使用建议，仅KU05意见且未独立核验，不能写成结论。\", \"C53将去屑效果作为可观察项，属功效暗示，证据未提供，且以『不提功效』包装，需整项删除。\", \"C32、C38、C52等对儿童用量、冲洗习惯的说法无来源支撑。\"]": 1,
+    "正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：担，但这一说法尚未独立验证，只适合当作谨慎行事的提醒，而不是必": 1,
+    "主参考缺少产品中性资料，未进行收费写作：首迷洗发水": 1,
+    "invalid_response": 7,
+    "主参考缺少产品中性资料，未进行收费写作：潘婷氨基酸去屑洗发露、馥绿德雅小绿珠控油去屑洗发露、施华蔻净屑调理洗发露": 1,
+    "已送达稿件仅允许复用并审稿；未授权重复writer请求": 2,
+    "主参考缺少产品中性资料，未进行收费写作：国颐堂头皮养护去屑洗发露、再出发修护去屑洗发露": 1,
+    "主参考缺少产品中性资料，未进行收费写作：曼图雅去屑控油止痒洗发水": 1,
+    "主参考缺少产品中性资料，未进行收费写作：施华蔻净屑修护洗发露": 1,
+    "主参考缺少产品中性资料，未进行收费写作：黛熙梦清爽去屑止痒洗发水、清扬男士去屑洗发水": 1,
+    "主参考缺少产品中性资料，未进行收费写作：清扬男士头皮劲活专研去屑洗发露、海飞丝护根防掉发型去屑洗发水、Off & Relax温泉净澈清爽洗发水": 1,
+    "容量不能直接推断可用时长；当前资料没有读者实际用量记录，请删除时长预测; 排行稿第一款推荐必须为当前任务产品：自有产品; 出现不在当日主参考名单中的产品小标题：1. 科熙本二硫化硒清爽去屑止痒洗发水; 正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：算。本文的排序是编排选择，不构成功效排名，读者完全可以根据自；清单；其中排序为编排选择，不代表客观功效冠军。希望这份清单能；编排选择，不代表客观功效冠军。希望这份清单能成为你比较的起点，而": 1,
+    "主参考缺少产品中性资料，未进行收费写作：首迷滋养强韧洗发水": 1,
+    "主参考缺少产品中性资料，未进行收费写作：馥绿德雅小绿珠控油去屑洗发露": 1,
+    "主参考缺少产品中性资料，未进行收费写作：流迷去屑洗发水、国颐堂头皮养护去屑洗发露、再出发修护去屑洗发露": 1,
+    "主参考缺少产品中性资料，未进行收费写作：沙宣去屑清爽洗发水、力士去屑洗发水": 1,
+    "主参考缺少产品中性资料，未进行收费写作：卡诗元气姜洗发水、康王清爽止痒洗发液、施华蔻多效修护洗发水、吕棕瓶滋养洗发水": 3,
+    "主参考缺少产品中性资料，未进行收费写作：薇姿德科丝去屑清爽洗发水、黛熙梦清爽去屑止痒洗发水": 2,
+    "主参考缺少产品中性资料，未进行收费写作：WMP二硫化硒去屑止痒洗发水、The Body Shop生姜头皮护理洗发水": 1,
+    "主参考缺少产品中性资料，未进行收费写作：卡诗元气姜洗发水、康王清爽止痒洗发液、吕棕瓶滋养洗发水": 1,
+    "主参考缺少产品中性资料，未进行收费写作：三蒂丝控油去屑洗发水、阿道夫去屑洗发露、黛丝恩控油去屑洗发水、紫郁二硫化硒洗发水": 1,
+    "主参考缺少产品中性资料，未进行收费写作：颜之初盈润去屑止痒洗发水、修衍去屑舒缓洗发水、薇芒清爽控油去屑洗发水、施华蔻去屑控油洗发水、卡诗去屑舒缓洗发水、沙宣去屑控油洗发水": 2,
+    "主参考缺少产品中性资料，未进行收费写作：奥帕夫亚麻籽丰盈洗发水": 2,
+    "主参考缺少产品中性资料，未进行收费写作：植总管侧柏叶控油去屑洗发水、黛熙梦清爽去屑止痒洗发水": 1,
+    "主参考缺少产品中性资料，未进行收费写作：嘉肤本二硫化硒控油去屑洗发水、曼图雅去屑控油止痒洗发水、三蒂丝控油去屑洗发水、阿道夫去屑洗发露、黛丝恩控油去屑洗发水、紫郁二硫化硒洗发水、芝兰密语控油去屑洗发露": 1,
+    "Document sections must cover the complete outline": 4,
+    "正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：的公开说明，属于待核验的产品信息，不能替代实际使用体验，也": 1,
+    "正文汉字不足：2292，至少2400，标题和英文品牌名不计入; 产品决策禁止植入但正文出现品牌": 1,
+    "正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：的一个名字。按照原文的说法，它本身并不承担去屑职能，但能；脱发归因于硅油。原文对这一说法持否定态度，认为把脱发全怪；前自行归因。原文还提出，无硅油并非简单地把硅油从配方": 1,
+    "主参考缺少产品中性资料，未进行收费写作：Selsun Blue二硫化硒洗发水、海飞丝经典去屑洗发水": 1,
+    "单位容量成本公式颠倒：每毫升价格应为到手总价除以总毫升数; 正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：说明其宣称方向，未独立核验，购买时仍应以瓶身实际标注为准。": 1,
+    "主参考缺少产品中性资料，未进行收费写作：植总管侧柏叶控油去屑洗发水、奥帕夫亚麻籽丰盈洗发水": 1,
+    "主参考缺少产品中性资料，未进行收费写作：瑛派儿修护去屑洗发水": 1,
+    "network_delivery_unknown": 3,
+    "主参考缺少以下产品的中性资料，未进行收费写作：赫莲娜黑绷带眼霜": 1,
+    "主参考缺少以下产品的中性资料，未进行收费写作：悦罗兰咖啡因紧致抗皱眼霜": 1,
+    "标题款数与自有产品加竞品总数不一致; 缺少独立产品小标题：澜慕熙菁纯淡纹眼霜; 缺少独立产品小标题：STUNNER眼霜; 缺少独立产品小标题：森畹密集紧致赋活眼霜": 1,
+    "缺少独立产品小标题：jsv 多肽淡纹眼霜": 1,
+    "标题款数与自有产品加竞品总数不一致": 3,
+    "Semantic review requests revision: [\"C55：脂肪粒成因“涉及角蛋白堆积等因素”为无来源的医学断言。\", \"C70：干纹与真性皱纹区分及胶原流失的机制结论无证据支持。\", \"C67：早期保湿“可能有助于延缓干燥引起的细纹”属功效暗示，无依据。\", \"C5、C6等生产措辞：正文出现“本文从这些疑问出发”“接下来要看的”“比较眼霜与面霜时”等提纲式写作说明，且C7“文章不承诺任何产品效果”为审计套话，读者无法独立阅读。\"]": 1,
+    "Semantic review requests revision: [\"C36“重组胶原蛋白……其结构与人体胶原蛋白有相似之处”为无独立证据的机制/功效类断言（KU07未独立核验且属高活性可利用表述），应整项省略或只写原料名称层面。\", \"C32“这些修饰基团……用来改善其在配方中的稳定性或溶解性”属无依据的配方机制解释，建议删除。\", \"C40“配方设计者希望从不同角度覆盖抗皱需求”为推测性配方意图，建议删去。\", \"C52“两者同框，说明配方设计同时纳入了多肽和玻色因类原料”可用PF4支撑，但“玻色因类”为俗称归类，宜直接写羟丙基四氢吡喃三醇，避免泛化成分归类。\"]": 1,
+    "缺少独立产品小标题：安法斯凯黛眉毛精华液; 缺少独立产品小标题：蕴姿眉毛精华液; 缺少独立产品小标题：H18眉毛精华液": 1,
+    "正文汉字不足：2466，至少2800，标题和英文品牌名不计入; 标题款数与自有产品加竞品总数不一致; 缺少独立产品小标题：诗蒂琳卡眉毛精华液": 1,
+    "标题款数与自有产品加竞品总数不一致; 缺少独立产品小标题：onlso眉毛增长液; 缺少独立产品小标题：生研美肌眉毛增长液": 1,
+    "缺少独立产品小标题：墨眉雅滋养精华液; 缺少独立产品小标题：舒眉堂眉部护理液; 正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：效果。选购时先看原文列出的成分组合与剂型规格，再对照自身": 1,
+    "排行稿第一款推荐必须为当前任务产品：梵玢FBCY眉毛精华液; 标题款数与自有产品加竞品总数不一致": 1,
+    "Semantic review requests revision: [\"C43：由5ml规格推出“日常使用中可以支撑一段时间”属无依据的用量/频率推断，规格本身不等于使用时长。\", \"C44：由刷头设计推出“减少涂到其他区域的可能”属无依据的功效/使用效果推断，PF5仅描述薄涂方式。\", \"C67：将森序“滋养液”与精华液归为“同属眉部日常护理品类”缺乏标签或备案依据的产品形态归类。\", \"C68：称其他产品“未必有同样的描述”系对未提供信息作负面推定。\", \"C80：以规格相同推出“用量层面的差异不大”，属无依据推算。\"]": 1,
+    "Semantic review requests revision: [\"C100 将科颜氏直接定为“基础性价比档”样本并称低单价、小规格，KU08仅标注5ml/200元左右，价格档位表述超出证据，属新增具体品牌属性。\", \"C10 称价格档位“直接决定”成分体系与技术工艺的信息量，KU11仅表示读者可比对规格与价格，属无依据因果推断。\", \"C15/C29 安全体系要看植物与合成成分占比及致敏原筛查，KU12为选购意见，但正文写成判断标准而未标明为资料观点，且C30“成分多不等于稳妥”与本条自设标准形成冲突。\", \"C24 概括中高端产品成分表列出更多植物提取物、基础款常见角鲨烷与维生素E，仅KU08支持后者，前者无来源，属泛化品类断言。\", \"C92 海蓝之谜“定位通常落在中高端一档”无对应KU，属新增品牌属性。\", \"C55 将POLA归入中高端档与兰蔻、雅诗兰黛并列，无证据支撑品牌档位，属新增具体品牌属性。\", \"C34/C117 排行以梵玢FBCY为第一款推荐，但S2与全篇对该产品除成分与规格外无任何比较结论，推荐位缺乏比较依据，属编排层面问题。\", \"全篇多处“资料列有”“本文只呈现列明成分”“不补充资料外的信息”等审计式表述反复出现（C38、C46、C53、C62、C77、C93、C108等），构成生产过程措辞与凑字，文章不可独立阅读。\"]": 1,
+    "缺少独立产品小标题：雅诗兰黛特润修护眉部精华液; 缺少独立产品小标题：黛珂白檀眉部滋养精华; 缺少独立产品小标题：娇韵诗双萃眉部精华液": 1,
+    "排行稿第一款推荐必须为当前任务产品：梵玢FBCY眉毛精华液": 1,
+    "Semantic review requests revision: [\"C107/C108把“泛醇、多肽”等成分名称用于日常读表并无不当，但C108“关注自己是否对某个名称有顾虑”接近引导个人安全性判断，宜限于看标签而非暗示成分风险\", \"C23-C36对笔头容错率、上手难度与适配人群属来源单方说法，未独立核实，正文以确定语气陈述（如“容错率很低”“新手可能觉得不好控制”）超出可核验范围，应降为选购经验而非事实结论\"]": 1,
+    "主参考缺少产品中性资料，未进行收费写作：产后多久可以开始使用防脱精华液": 1,
+    "Semantic review requests revision: [\"C47『长期熬夜、精神紧绷的人，可能发现洗头时的落发比平常多，发根也不如从前蓬松』属无证据的具体功效/因果关联，加“可能”不能替代依据。\", \"C53『减少高糖高油饮食的频率』作为防脱相关饮食建议，无对应证据支持（KU与PF均未提供饮食与掉发关系依据）。\", \"C29-C30对“洗头掉发皆休止期”的解释缺证据支撑，属机制断言。\"]": 1,
+    "主参考缺少产品中性资料，未进行收费写作：诗蒂琳卡眉毛精华液": 1,
+    "主参考缺少产品中性资料，未进行收费写作：POLA抗衰焕活眉精华、雅诗兰黛特润修护眉部精华液、娇韵诗双萃眉部精华液、科颜氏眉部滋养精华、修丽可眉毛修护精华": 1,
+    "主参考缺少产品中性资料，未进行收费写作：墨眉雅滋养精华液、眉萃语眉部滋养液": 1,
+    "主参考缺少产品中性资料，未进行收费写作：白瑾堂白檀眉部滋养精华": 1,
+    "Semantic review requests revision: [\"C56：称产品名含“抗衰焕活”属命名描述，尚可；但C81对“护理液”与“精华液”命名的差异做了归类判断，属轻微属性区分，可接受——真正问题在C69/C73：把“无色无味”与含香精产品并排时暗示选择逻辑，属一般比较意见，尚不算虚构\", \"C11/C27/C33/C38/C47/C57/C72/C83：反复出现“本文不虚构/不推断/以标签为准”等审计式免责句，且C51/C62/C76/C87/C99反复写“资料未列明/待确认”，属生产过程措辞与凑字，违反独立成稿要求\", \"C13/C8：出现“阅读顺序建议这样安排”“之后再讲清楚”等编排说明，属提纲说明而非消费文章\", \"C35：把5ml称为“属于可记录、可对照的规格”并延伸比较，属对自有产品规格的正面推断性评价，超出标签事实\", \"C92：将梵玢“黄色透明液体并配刷头”与其他四款质地并列比较，无来源冲突，但配刷头混入质地维度表述，宜拆开；不构成虚构，作提示\"]": 1,
+    "主参考缺少产品中性资料，未进行收费写作：兰蔻眉部修护精华液": 1,
+    "主参考缺少产品中性资料，未进行收费写作：肌萃源抗衰焕活眉精华、舒眉堂眉部护理液、白瑾堂白檀眉部滋养精华、植萃眉养液、润颜堂毛囊滋养眉精华": 1,
+    "主参考缺少产品中性资料，未进行收费写作：悦萃活眉滋养液": 1,
+    "主参考缺少产品中性资料，未进行收费写作：资生堂悦薇焕活眉增长液、雅诗兰黛特润修护眉部精华液、可考虑资生堂悦薇焕活眉增长液": 1,
+    "主参考缺少产品中性资料，未进行收费写作：赫莲娜黑绷带眼霜": 1,
+    "主参考缺少产品中性资料，未进行收费写作：STUNNER眼霜、娜涟水光淡纹抗皱眼霜": 1,
+    "正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：身情况判断。原文把产品按凝胶、精华、乳霜、凝露、油状": 1,
+    "主参考缺少产品中性资料，未进行收费写作：科颜氏牛油果眼霜、优时颜冰美式眼霜、美颜笔记玻色因眼霜、步长肝素钠眼霜": 1,
+    "主参考缺少产品中性资料，未进行收费写作：露卡菲娅小蓝瓶淡纹眼霜": 1,
+    "主参考缺少产品中性资料，未进行收费写作：丸美小红笔眼霜": 1,
+    "Semantic review requests revision: [{\"sentence\": \"C27、C61：产品事实虽与PF一致，但C61将乙酰基六肽-8、羟丙基四氢吡喃三醇、水解胶原等成分与“紧致抗皱”产品名并置，并以C70仅把“紧致淡纹方向”归类标为待核实，易让读者把成分出现理解为功效依据；C58–C60正确回避了功效，C61–C62未同步声明成分名单不等于效果，语义存在落差。\", \"reason\": \"成分出现本身不等于效果，且KU09仅作中性成分列举，不能作为紧致淡纹依据；需在C61附近明确“成分列出不构成功效承诺”或省略功效方向的并置暗示。\"}]": 1,
+    "正文汉字不足：2385，至少2400，标题和英文品牌名不计入": 1,
+    "Semantic review requests revision: [\"C25、C26、C27、C28：“皮脂腺分布较少”“眼周油脂自给能力不如皮脂分泌旺盛区域”等具体结构机制未在所给KU中提供，KU06仅概括脆弱干燥，属无来源具体化。\", \"C23、C24：“眼周与面部其他区域相比更脆弱”“对外界变化反应更敏感”是泛化比较与功效推断，KU06仅为来源主张且未独立核验，不能当结构事实。\", \"C38、C74：“面霜通常含较多油性成分、质地相对厚重”被写成品类普遍取向；KU07为未独立核验的来源主张，排除清单也标为neutral_clauses_only，不能作普遍结论。\", \"C48写“目的是防止初生细纹发展成难以逆转的皱纹”属无依据的医学式后果断言，虽C49称其为主张，仍保留具体后果。\", \"C51将“滋润相关成分、规格、按摩头”与不同关注点对应，暗示成分带来滋润效果，属于成分出现即暗示功效。\"]": 1,
+    "正文超过约定长度": 1,
+    "主参考缺少产品中性资料，未进行收费写作：采乐二硫化硒去屑洗发水": 2,
+    "Semantic review requests revision: [\"C30 将“500ml装、售价37元”与“规格上有明显吸引力”直接挂钩，属于跨产品规格与价格的推荐判断，KU12为“not_independently_verified”的源声明，且未说明该产品定位，属于新增具体产品属性+推算，无法核验。\", \"C79 称“孩子洗头频率高、用量不小，500ml可以减少补货次数”，基于未验证的用量假设，形成对具体产品大容量的使用效果推断，超出KU12仅有的规格与售价事实。\", \"C82 将贝亲归入“家庭共用、关注配方简洁”一档，虽有无添加标注支撑，但“家庭共用”是新增定位，KU无依据。\", \"C85 概括四款产品定位对比时，把RWB说成“名称强调控油与蓬松”，虽与KU06方向一致，但把贝亲概括为“无香精、无酒精、无硅油、无皂基的标注和500ml大规格为特点”，属于把无添加标注当作特点（配方特征），且未提及该产品被排除的机制或效果，属于将成分罗列当作产品卖点，可接受但需谨慎；该句未超过KU范围，判为可接受，不列failed。\", \"C99 将四款产品分别概括为“小规格成分列举型、名称直指成分型、名称强调控油蓬松型和家庭大规格简洁配方型”，其中“家庭大规格”为新增定位，无KU支撑；“成分列举型”是对可核验事实的概括，可接受；但“家庭大规格”超出KU12。\", \"C30、C79、C82、C99 中涉及贝亲“家庭共用/家庭大规格”的定位判断无KU依据，且KU12未验证，不能因有KU编号或加“可能”通过。\"]": 1,
+    "主参考缺少产品中性资料，未进行收费写作：嘉肤本二硫化硒控油去屑洗发水": 1,
+    "正文混入来源解读或生产过程，须独立叙述并把溯源移至附件：、漂过发的人群，原文还提示尽量避开发丝，只把泡沫用在头皮": 1,
+    "Semantic review requests revision: [\"C33/C34把“绵密奶泡状、便于覆盖头皮”写成产品形态事实，KU04为未独立核实的源文描述，且该产品资料未提供质地信息，属无依据的具体产品属性\", \"C22“微囊包裹技术”“复配吡啶硫酮锌”作为常见配方陈述仅有未核实来源，宜归为来源说法或省略\"]": 1
+  },
+  "ledger": [
+    [
+      "2026-10-21",
+      408,
+      6.093164760000002,
+      0.21578999999999998,
+      3
+    ],
+    [
+      "2026-10-20",
+      208,
+      5.138809879999996,
+      0,
+      0
+    ]
+  ],
+  "verified_complete_docs": [
+    {
+      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "article": "2026-10-09/去屑产品多款横向实测/03",
+      "root": "/home/user/geo-editorial/runtime-api",
+      "word_sha256": "87bd310ca6d472506dc311898899a85daee8702cd0967de24ffd37cf1fa52771",
+      "bytes": 40169,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "article": "2026-10-09/国货高性价比盘点/01",
+      "root": "/home/user/geo-editorial/runtime-api",
+      "word_sha256": "e52aab0e720e68bebb7fa3c5ba936c6ecd097d7a8c934b0504ef4002bde57200",
+      "bytes": 40238,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "article": "2026-10-09/成分与选购避开误区/01",
+      "root": "/home/user/geo-editorial/runtime-api",
+      "word_sha256": "bc1ab81c18621cd97944a062474c18e1773f3fb29d51406fdf5bc186bcae395d",
+      "bytes": 40268,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "article": "2026-10-09/成分与选购避开误区/02",
+      "root": "/home/user/geo-editorial/runtime-api",
+      "word_sha256": "bb28312228809d95ad6b901f3618f7dee67879de50c476e530b3242bdf30d781",
+      "bytes": 39821,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "article": "2026-10-09/成分与选购避开误区/03",
+      "root": "/home/user/geo-editorial/runtime-api",
+      "word_sha256": "1d68db93730fb941d113e1ed61e8fd0e12abf7f570f775668bfaabb1f376d9cc",
+      "bytes": 39622,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "2ef5e0701d1dee280654de0e",
+      "article": "2026-10-10/排行类/07",
+      "root": "/home/user/geo-editorial/runtime-api",
+      "word_sha256": "6306fa53d0826ebef4d2fc0bead543efbe335571c88a0601f9cabecdd00ac9a8",
+      "bytes": 43195,
+      "xml_crc_ok": true,
+      "has_identity_projection": true
+    },
+    {
+      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "article": "2026-10-11/排行类/06",
+      "root": "/home/user/geo-editorial/runtime-api",
+      "word_sha256": "0e1ca32626c6e59d348630fbd95225028912c2b8cf103fe562e14aaabe82f745",
+      "bytes": 42611,
+      "xml_crc_ok": true,
+      "has_identity_projection": true
+    },
+    {
+      "key": "9cb2fa6ff95fecebc6aeaf87",
+      "article": "2026-10-12/排行类/03",
+      "root": "/home/user/geo-editorial/runtime-api",
+      "word_sha256": "fdc2fa421a21ae9f889db17cc433513c2780388725d92a355467209b0ba02e59",
+      "bytes": 44274,
+      "xml_crc_ok": true,
+      "has_identity_projection": true
+    },
+    {
+      "key": "5b54e30ddfcfa4d8ae10ffff",
+      "article": "2026-10-12/科普类/01",
+      "root": "/home/user/geo-editorial/runtime-api",
+      "word_sha256": "fb5532640e287b162818f568148d5e184b72a96b786e561559f534061c666906",
+      "bytes": 42225,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "8a4704a478c0c9c5ad4bf6c6",
+      "article": "2026-10-12/科普类/02",
+      "root": "/home/user/geo-editorial/runtime-api",
+      "word_sha256": "c98d2100ff12f3da488b3a1f1cd9d88cd878c13fce125fbe765b935b3d8fab7e",
+      "bytes": 42319,
+      "xml_crc_ok": true,
+      "has_identity_projection": true
+    },
+    {
+      "key": "d76595f2399968546c53c55a",
+      "article": "2026-10-21/科普类/01",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca",
+      "word_sha256": "524233fd628311a4ef8dd1b101aaf6c38cb01809dd56623591021c53dae20907",
+      "bytes": 42576,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "article": "2026-10-21/科普类/02",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca",
+      "word_sha256": "42a2350b8f5a2a0ea8ec2a35feb79a0e1833c1312063cc66d8b5f42afabc8922",
+      "bytes": 41799,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "9c596d8ad8afa9a6176e0f87",
+      "article": "2026-10-21/科普类/05",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca",
+      "word_sha256": "79af215a6a805e1d8cdbceda775225485424a3d4ef7ed37a7edbb327cb0ce5a4",
+      "bytes": 41424,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "c9098ffbcbcc311047c6050f",
+      "article": "2026-10-21/科普类/06",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca",
+      "word_sha256": "bfc276d1a6529d0441d9278b4c5fc51b09c39af21c6c139536065a8568723529",
+      "bytes": 41509,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "1f51900bc4294a2efccb4949",
+      "article": "2026-10-21/科普类/01",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-06126e43",
+      "word_sha256": "7547cdfc56459429900cc8f5172fc2c085b229b8bb226bda194750cbff954d64",
+      "bytes": 43078,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "dba3eeb7a084de65d3eaaca0",
+      "article": "2026-10-21/科普类/03",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-06126e43",
+      "word_sha256": "7ad2c262ffe37bf99496129505b5086be7bee63c5d3788be82e0a129e4ac3cf4",
+      "bytes": 42531,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "b455bb2005c4b2d1b981b297",
+      "article": "2026-10-20/科普类/02",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792487912-b64bc49a",
+      "word_sha256": "7f6fcaec2977184cb43d1a06dc42ce7588ec49dc195bb5cdde07b61a6d891251",
+      "bytes": 41771,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "3d9850878395ec75dae95ec3",
+      "article": "2026-10-20/排行类/01",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792487019-ffa40955",
+      "word_sha256": "c4f9bf1d72777bc8fb7d0b642e3a0d695fb3b37a9ca72491630ca5a13f2bdd57",
+      "bytes": 42168,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "article": "2026-10-20/排行类/02",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792487019-ffa40955",
+      "word_sha256": "eacd647e4d017d41fb1936bcec112b190d186df0708e7a7a45455d320a6be5d5",
+      "bytes": 43046,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "fab99ff2dc2f679532e3f3b1",
+      "article": "2026-10-20/排行类/09",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792487019-ffa40955",
+      "word_sha256": "eccf6d392822851caf9b85d68d1df8ff507dbf8c78fb23cb58412fa6b0339712",
+      "bytes": 42785,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "article": "2026-10-20/排行类/02",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792479954-8a96bc88",
+      "word_sha256": "df31d36cf60181c1393e6702477e549c98b25fbf96544931d434815f5a6f3c22",
+      "bytes": 43445,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "ac275073b3f90fbb1a53839c",
+      "article": "2026-10-20/排行类/01",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792475798-7d2fc250",
+      "word_sha256": "691336b71479f8f634e8a5af6b56a747df66e9894b49bbb4d57492dffa20b54d",
+      "bytes": 43290,
+      "xml_crc_ok": true,
+      "has_identity_projection": false
+    },
+    {
+      "key": "7f258f1f76792498b3f82bce",
+      "article": "2026-10-15/排行类/04",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792060761-3c2baae0",
+      "word_sha256": "4a9da2a46b0dfe17e62005d2e46940c16038c1c8d6249fb45f08b4a0819393d6",
+      "bytes": 42527,
+      "xml_crc_ok": true,
+      "has_identity_projection": true
+    },
+    {
+      "key": "6c87877edf969dfa9e720dc7",
+      "article": "2026-10-15/科普类/01",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792060761-3c2baae0",
+      "word_sha256": "c39c1d89322447cf9543532d4f49cba809951e5a01aa96181ba4ca09e2941479",
+      "bytes": 41885,
+      "xml_crc_ok": true,
+      "has_identity_projection": true
+    },
+    {
+      "key": "efbaae713d2978272ed03722",
+      "article": "2026-10-15/科普类/02",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792060761-3c2baae0",
+      "word_sha256": "aae377d89d9f38d42f72e783e7e12aba91742e5ca34afbfe70d6255dd4776083",
+      "bytes": 41953,
+      "xml_crc_ok": true,
+      "has_identity_projection": true
+    },
+    {
+      "key": "c81d9008d4ff59f588512f29",
+      "article": "2026-10-15/科普类/05",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792060761-3c2baae0",
+      "word_sha256": "dc9191e4b2174230c13e0e2179a92fc364c1f4002ddd22e57bd912e22a899f31",
+      "bytes": 42357,
+      "xml_crc_ok": true,
+      "has_identity_projection": true
+    },
+    {
+      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "article": "2026-10-15/科普类/06",
+      "root": "/opt/monitor/geo-content/runtime/runs/creation-1792060761-3c2baae0",
+      "word_sha256": "fcf8f82e28f8e1055d65d5b5599c7186c461f571c549f53c1025341acbd768d6",
+      "bytes": 42599,
+      "xml_crc_ok": true,
+      "has_identity_projection": true
+    }
+  ],
+  "passes": {
+    "followup-20261021": {
+      "selected": 13,
+      "processed": 13,
+      "finished": true,
+      "results": {
+        "complete": 5,
+        "needs_attention": 8
+      },
+      "controls_unchanged": true
+    },
+    "followup-paused-20261021": {
+      "selected": 31,
+      "processed": 31,
+      "finished": true,
+      "results": {
+        "complete": 6,
+        "needs_attention": 25
+      },
+      "controls_unchanged": true
+    },
+    "identity-recovery-20261021": {
+      "selected": 21,
+      "processed": 21,
+      "finished": true,
+      "results": {
+        "needs_attention": 14,
+        "complete": 7
+      },
+      "controls_unchanged": true
+    },
+    "delivered-recovery-20261021": {
+      "selected": 4,
+      "processed": 4,
+      "finished": true,
+      "results": {
+        "needs_attention": 2,
+        "complete": 2
+      },
+      "controls_unchanged": true
+    }
+  },
+  "observation": {
+    "state": "observing",
+    "issues": [],
+    "cross_day_passed": false,
+    "checked_at": "2026-10-21T14:15:01.885980+08:00",
+    "window_end": "2026-10-22T17:00:00+08:00",
+    "no_automatic_recovery_or_paid_requests": true
+  }
+}

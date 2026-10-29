@@ -1,0 +1,42 @@
+{
+  "at": 1792491301.2732358,
+  "task": {
+    "plan_id": "plan-9b827648df6c4bf9b5648db2eaf6079e",
+    "date": "2026-10-20",
+    "status": "complete",
+    "articles": 15,
+    "article_target": 15,
+    "writing_complete": 1,
+    "writing_jobs": 1,
+    "capture_time": "01:00",
+    "writing_time": "04:00",
+    "article_budget_cny": 0.35,
+    "task_budget_cny": 5.25
+  },
+  "cost_calls": 101,
+  "cost_cny": 2.4181702000000014,
+  "max_article_cost_cny": 0.2652644,
+  "unsettled_calls": 0,
+  "geo_ingest_rows_for_creation_batches": 0,
+  "tomorrow": "2026-10-21",
+  "captures": {
+    "baidu_ai": 8,
+    "wenxin_card": 8
+  },
+  "services": {
+    "geo-creation-studio.service": {
+      "active": "active",
+      "enabled": "enabled"
+    },
+    "geo-content-worker.service": {
+      "active": "active",
+      "enabled": "enabled"
+    },
+    "geo-content-api.service": {
+      "active": "active",
+      "enabled": "enabled"
+    }
+  },
+  "scope": "creation_only",
+  "limits_unchanged": true
+}

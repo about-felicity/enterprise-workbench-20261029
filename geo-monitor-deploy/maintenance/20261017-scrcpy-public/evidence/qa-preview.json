@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "mode": "preview",
+  "at": 1792226716.1810708,
+  "seven_channels": true,
+  "healthy_gray_buttons": 2,
+  "interval_seconds": 300,
+  "fixture_second_account_popup_routed": true,
+  "risk_and_verifying_not_success": true,
+  "ready_closed_popup": true,
+  "mobile_no_overflow": true,
+  "production_writes": [],
+  "fixture_login_opens": 1,
+  "javascript_errors": []
+}

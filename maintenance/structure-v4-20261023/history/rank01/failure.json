@@ -1,0 +1,7 @@
+{
+  "error_type": "RuntimeError",
+  "code": null,
+  "uncertain": false,
+  "message": "Fresh model structure analysis failed; saved fallback is not real model acceptance",
+  "traceback": "Traceback (most recent call last):\n  File \"/tmp/rank01-staged-runner.py\", line 156, in execute\n    if structure.get('degraded'):raise RuntimeError('Fresh model structure analysis failed; saved fallback is not real model acceptance')\nRuntimeError: Fresh model structure analysis failed; saved fallback is not real model acceptance\n"
+}

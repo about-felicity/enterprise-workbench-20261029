@@ -1,0 +1,18 @@
+{
+  "files": [
+    {
+      "path": "/home/user/geo-editorial/downloads/chrome.deb",
+      "bytes": 143552428,
+      "sha256": "c58aa0f2cd66179c9f050e062c882d27aa9b9f8c2b7c73fee3498560b5ed0b38",
+      "reason": "Downloaded installer, exact same version already installed",
+      "installed_version": "155.0.8059.39-1"
+    },
+    {
+      "path": "/home/user/redroid-doubao/frida-server-account2",
+      "bytes": 116335128,
+      "sha256": "36a71bc569cfbcdba0475713c79bf41257607bdfafe4062c97030ab9e01fca09",
+      "reason": "Exact decompressed duplicate; .xz retained"
+    }
+  ],
+  "docker_operation": "docker builder prune --force; unused build cache only"
+}

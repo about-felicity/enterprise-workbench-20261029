@@ -1,0 +1,10 @@
+{
+  "at": 1792751181.2851226,
+  "before_sha256": "51e6dd1fc5ac360d6147404aa550fcc83e2d7a72e9dccbc5a949b66209ef5958",
+  "after_sha256": "b481449bd68449c768156ece6c1841af3e279f994155f2c4c3d71b558ad2523c",
+  "backup": "/tmp/geo-rewrite-v2-mQfF5Dbd/capture-cli-before-fairness.py",
+  "tests_run": 67,
+  "tests_passed": true,
+  "change": "Prefer fewer failed read-only search attempts within a round; preserve cooldown and completed evidence",
+  "running_collectors_interrupted": false
+}

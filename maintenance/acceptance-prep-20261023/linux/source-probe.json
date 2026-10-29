@@ -1,0 +1,21 @@
+{
+  "type": "zero_call_source_path_probe",
+  "arbitration_present": false,
+  "source_content_before": "乙牌洗发水规格300ml，成分含有甘油。",
+  "source_content_after": "乙牌洗发水规格300ml，成分含有甘油。原始来源更新：规格改为350ml。",
+  "draft_and_knowledge_and_product_changed": false,
+  "final_verification": {
+    "rejected": true,
+    "reason": "Stale final review sources/mappings/contracts; fresh review required"
+  },
+  "route_action": "PATCH",
+  "route_issue_origins": [
+    "deterministic"
+  ],
+  "prepare_action": "PATCH",
+  "prepare_error": null,
+  "new_mock_requests": 0,
+  "external_api_calls": 0,
+  "blocked_network_attempts": 0,
+  "note": "PATCH routing is not final article acceptance; final verifier still rejects. Source gate is incomplete at repair entry."
+}

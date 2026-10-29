@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(工作流导演)",
+      "Skill(工作流导演:*)",
+      "Skill(风格建模)",
+      "Skill(风格建模:*)",
+      "Skill(公众号文章获取)",
+      "Skill(公众号文章获取:*)",
+      "Bash(python:*)",
+      "Bash(node:*)"
+    ]
+  }
+}

@@ -1,0 +1,4276 @@
+{
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ActionContainerEntity": {
+    "b": "scenes"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ActionContainerSceneItem": {
+    "b": "scene",
+    "c": "type"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.AgentCapabilitiesAgentInfoEntity": {
+    "b": "scene"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.AgentCapabilitiesEntity": {
+    "b": "interruptHint",
+    "c": "directGenerate",
+    "d": "agentInfo",
+    "e": "agentStartTime"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.AgentCapabilitiesIconEntity": {
+    "b": "iconId",
+    "c": "needTint"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.AgentCapabilityEntity": {
+    "b": "supported",
+    "c": "taskId",
+    "d": "icon"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.AiTaskCardEntity": {
+    "b": "taskScene",
+    "c": "taskStatus",
+    "d": "title",
+    "e": "taskId",
+    "f": "aiTaskId",
+    "g": "thingId",
+    "h": "todoId",
+    "i": "content",
+    "j": "rrule",
+    "k": "source",
+    "l": "displayRule",
+    "m": "meetingTaskId",
+    "n": "meetingToken",
+    "o": "aiTaskCreateSource",
+    "p": "aiTaskExtraInfo",
+    "q": "startTime",
+    "r": "endTime",
+    "s": "isStreamData"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.AiTaskCardListEntity": {
+    "b": "cards"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.AnswerImageItem": {
+    "b": "imageUrlLow",
+    "c": "imageUrlHigh",
+    "d": "width",
+    "e": "height",
+    "f": "idx",
+    "g": "prompt",
+    "h": "promptHint",
+    "i": "source",
+    "j": "sourceUrl",
+    "k": "intentionStatus",
+    "l": "reportInfo"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.AnswerImageListEntity": {
+    "b": "imageList",
+    "c": "imageScene"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.AsrTemporaryMsgEntity": {
+    "b": "state",
+    "c": "asrSessionId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.B0": {
+    "b": "inputBoxId",
+    "c": "hasAttachment",
+    "d": "attachmentTypes"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.BannerEntity": {
+    "b": "scene",
+    "c": "bannerInfo"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.C": {
+    "b": "conversationId",
+    "c": "msgId",
+    "d": "contentIdx",
+    "e": "capabilities"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatInputBoxButtonItem": {
+    "b": "itemType",
+    "c": "itemId",
+    "d": "imageUrl",
+    "e": "title",
+    "f": "subTitle",
+    "g": "disable",
+    "h": "selected",
+    "i": "pinned",
+    "j": "pinnedIndex",
+    "k": "sortedIndex",
+    "l": "noSupportControl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatInputDidClickItem": {
+    "b": "itemType",
+    "c": "itemId",
+    "d": "title",
+    "e": "disable",
+    "f": "selected"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatInputModeConfig": {
+    "b": "mode",
+    "c": "priority",
+    "d": "modeAbility",
+    "e": "hiddenAddButton",
+    "f": "hiddenCameraButton",
+    "g": "hiddenQuickView",
+    "h": "skillId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.Content": {
+    "b": "contentId",
+    "c": "traceId",
+    "d": "serverId",
+    "e": "modelId",
+    "f": "state",
+    "g": "isEof",
+    "h": "isLike",
+    "i": "isDislike",
+    "j": "entityCount",
+    "k": "ic",
+    "l": "isAutoRepeat",
+    "m": "repeatType",
+    "n": "fromStream",
+    "o": "isOpened",
+    "p": "speechType",
+    "q": "permission",
+    "r": "speechTypes"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ContinueStepEntity": {
+    "b": "text",
+    "c": "iconType",
+    "d": "mask"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.Conversation": {
+    "b": "state",
+    "c": "agentId",
+    "d": "hasMoreMessage",
+    "e": "hasNewMessage",
+    "f": "isEndConv",
+    "g": "detailLoaded",
+    "h": "hasVoiceRecorderCardMessage",
+    "i": "showRepeatPaging",
+    "j": "bizType",
+    "k": "hasAutoCancelStreaming",
+    "l": "hasKeepAliveStreaming",
+    "m": "isBusy"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ConversationInfoId": {
+    "b": "projectId",
+    "c": "agentId",
+    "d": "cid",
+    "e": "inputBoxType",
+    "f": "bizType",
+    "g": "imDataInfo",
+    "h": "chatScene"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.CorrectImageEntity": {
+    "b": "mainMessageId",
+    "c": "mainCid",
+    "d": "imageUrl",
+    "e": "isRemoteUrl",
+    "f": "imagePixelWidth",
+    "g": "imagePixelHeight",
+    "h": "eduBizType",
+    "i": "eduSearchScene",
+    "j": "ocrList",
+    "k": "correctResultList",
+    "l": "initialSelectedItem",
+    "m": "isSensitive"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.D0": {
+    "b": "inputBoxId",
+    "c": "hasText",
+    "d": "hasContent",
+    "e": "text",
+    "f": "isNotConfirmedInput"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.DeepSearchAgentColorInfo": {
+    "b": "light",
+    "c": "lssc",
+    "d": "lsbc",
+    "e": "dark",
+    "f": "dssc",
+    "g": "dsbc"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.DeepSearchAgentEntity": {
+    "b": "title",
+    "c": "icon",
+    "d": "titleIcons",
+    "e": "titleColor",
+    "f": "itemCount",
+    "g": "schemaVersion",
+    "h": "finished",
+    "i": "disableThinkExpand"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.DeepSearchEntity": {
+    "b": "title",
+    "c": "iconType",
+    "d": "itemCount"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.DocPercentEntity": {
+    "b": "content",
+    "c": "fileNumber"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.DrawWithSearchGuideEntity": {
+    "b": "title",
+    "c": "subTitle",
+    "d": "footnote",
+    "e": "prompt",
+    "f": "botPrompt",
+    "g": "entranceIndex",
+    "h": "messageId",
+    "i": "sourceType",
+    "j": "docs",
+    "k": "citations",
+    "l": "hitDeepMode",
+    "m": "hitHelpDraw",
+    "n": "hitDrawMore",
+    "o": "hitSearchAiImg",
+    "p": "topic",
+    "q": "count",
+    "r": "deepModeCid",
+    "s": "aiImageTotal",
+    "t": "realImageTotal"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.E": {
+    "b": "conversationId",
+    "c": "state"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.EduCorrectOcrBoxItem": {
+    "b": "mainId",
+    "c": "boundingBox"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.EduCorrectQuestionItem": {
+    "b": "id",
+    "c": "questionType",
+    "d": "questionTitle",
+    "e": "boundingBox",
+    "f": "isAnswered",
+    "g": "isCorrect",
+    "h": "gradingStatus",
+    "i": "subQuestionList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.EduCorrectSelectedQuestion": {
+    "b": "mainId",
+    "c": "subId",
+    "d": "flatIndex"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.EduGradingSummaryEntity": {
+    "b": "totalCount",
+    "c": "correctCount",
+    "d": "wrongCount",
+    "e": "unansweredCount",
+    "f": "isComplete"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.EduQAnswerContainerEntity": {
+    "b": "mainMessageId",
+    "c": "mainCid",
+    "d": "initialSubCid",
+    "e": "initialMsgId",
+    "f": "mainTraceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.EduQuestionItem": {
+    "b": "subCid",
+    "c": "subMsgId",
+    "d": "questionId",
+    "e": "mistakeRecordId",
+    "f": "flatIndex",
+    "g": "isMain",
+    "h": "mainId",
+    "i": "subId",
+    "j": "label",
+    "k": "correctness",
+    "l": "subItems"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.EduQuestionTabEntity": {
+    "b": "mainMessageId",
+    "c": "mainCid",
+    "d": "items",
+    "e": "initialFlatIndex"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.GradingResult": {
+    "b": "id",
+    "c": "questionType",
+    "d": "boundingBox",
+    "e": "isAnswered",
+    "f": "gradingStatus",
+    "g": "gradingTool"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.GradingResultBoundingBox": {
+    "b": "id",
+    "c": "ltX",
+    "d": "ltY",
+    "e": "rbX",
+    "f": "rbY",
+    "g": "center"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.GradingResultEntity": {
+    "b": "gradingResult",
+    "c": "rawJson"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.GuideEntity": {
+    "b": "text",
+    "c": "iconType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.HandleSkillRouteParams": {
+    "b": "skillId",
+    "c": "skillAction"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.HintEntity": {
+    "b": "title",
+    "c": "hintsJson",
+    "d": "easterEggsJson",
+    "e": "hintsCount",
+    "f": "isInternetSearch"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.IconUrl": {
+    "b": "iconId",
+    "c": "url",
+    "d": "colorfulUrl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ImDataInfo": {
+    "b": "imGroupId",
+    "c": "source",
+    "d": "userId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ImMsgCardEntity": {
+    "b": "forwardMsgId",
+    "c": "forwardMsgTitle",
+    "d": "msgContent",
+    "e": "msgCount",
+    "f": "msgTime"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.L": {
+    "b": "conversationId",
+    "c": "msgIdx",
+    "d": "id",
+    "e": "state"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.LifeHubEntity": {
+    "b": "text",
+    "c": "subType",
+    "d": "jumpUrl",
+    "e": "cardData"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.LinkCardEntity": {
+    "b": "appId",
+    "c": "iconUrl",
+    "d": "source",
+    "e": "content",
+    "f": "coverUrl",
+    "g": "url",
+    "h": "clickJumpUrl",
+    "i": "mediaId",
+    "j": "chatRecordId",
+    "k": "extra",
+    "l": "index",
+    "m": "parseStatus",
+    "n": "wordCount",
+    "o": "valid",
+    "p": "reason",
+    "q": "parseResultType",
+    "r": "reportParam"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.LinkCardEntityExternalReportParam": {
+    "b": "newsOpenId",
+    "c": "extendTraceId",
+    "d": "traceId",
+    "e": "operationId",
+    "f": "modId",
+    "g": "docType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.MarketCommentParams": {
+    "b": "messageId",
+    "c": "traceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.MeetingAiNotesSaveEntity": {
+    "b": "linkUrl",
+    "c": "content",
+    "d": "defaultMsg"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.MeetingHostEntity": {
+    "b": "linkUrl",
+    "c": "content"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.Message": {
+    "b": "id",
+    "c": "serverId",
+    "d": "serverIndex",
+    "e": "pairId",
+    "f": "serverPairId",
+    "g": "serverPairIndex",
+    "h": "createTime",
+    "i": "state",
+    "j": "speaker",
+    "k": "contentCount",
+    "l": "isLocalMessage",
+    "m": "isSensitive",
+    "n": "unsupportedRepeat",
+    "o": "securityData",
+    "p": "buttonAttribute",
+    "q": "abilityData",
+    "r": "multiAnswerData",
+    "s": "messageType",
+    "t": "msgVersion",
+    "u": "dataSource",
+    "v": "interruptedByFollowUp",
+    "w": "followUpNewQBizType",
+    "x": "triggeredByHelpMeCorrect"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.MessageEntity": {
+    "b": "type",
+    "c": "textEntity",
+    "d": "previewTextEntity",
+    "e": "continueStepEntity",
+    "f": "stepEntity",
+    "g": "questionImageEntity",
+    "h": "answerImageListEntity",
+    "i": "securityEntity",
+    "j": "bannerEntity",
+    "k": "thinkEntity",
+    "l": "searchEntity",
+    "m": "deepSearchEntity",
+    "n": "deepSearchAgentEntity",
+    "o": "multiFileEntity",
+    "p": "linkCardEntity",
+    "q": "drawWithSearchGuideEntity",
+    "r": "docPercentEntity",
+    "s": "entityId",
+    "t": "progressListEntity",
+    "u": "taskCardEntity",
+    "v": "guideEntity",
+    "w": "taskFileEntity",
+    "x": "hintEntity",
+    "y": "gradingResultEntity",
+    "z": "wxMessageCardEntity",
+    "A": "imMsgCardEntity",
+    "B": "oralEvaluationEntity",
+    "C": "meetingHostEntity",
+    "D": "meetingAiNotesSaveEntity",
+    "E": "asrTemporaryMsgEntity",
+    "F": "voiceRecorderCardEntity",
+    "G": "aiTaskCardListEntity",
+    "H": "paTodoCardListEntity",
+    "I": "promptUrlCardEntity",
+    "J": "agentCapabilitiesEntity",
+    "K": "lifeHubEntity",
+    "L": "eduQuestionTabEntity",
+    "M": "eduQAnswerContainerEntity",
+    "N": "eduGradingSummaryEntity",
+    "O": "correctImageEntity",
+    "P": "actionContainerEntity",
+    "Q": "quoteEntity"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.MessageFinishedParams": {
+    "b": "messageId",
+    "c": "isError",
+    "d": "isManualInterrupted",
+    "e": "hasVoiceRecorderCard"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.MultiFileEntity": {
+    "b": "fileType",
+    "c": "docType",
+    "d": "url",
+    "e": "fileName",
+    "f": "size",
+    "g": "width",
+    "h": "height",
+    "i": "mediaId",
+    "j": "chatRecordId",
+    "k": "extra",
+    "l": "index",
+    "m": "parseStatus",
+    "n": "wordCount",
+    "o": "valid",
+    "p": "reason",
+    "q": "parseResultType",
+    "r": "filePath",
+    "s": "uploadUniqueId",
+    "t": "uploadStatus",
+    "u": "uploadProgress"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.NewStepItem": {
+    "b": "msg",
+    "c": "subMsg",
+    "d": "stage",
+    "e": "enableStageLayer",
+    "f": "showLoadingIcon",
+    "g": "status",
+    "h": "scene",
+    "i": "index",
+    "j": "iconType",
+    "k": "enableFeatures"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.OralEvaluationEntity": {
+    "b": "pronunciation",
+    "c": "grammar",
+    "d": "pronLevel"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.PreviewTextEntity": {
+    "b": "text",
+    "c": "textVersion"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ProgressItem": {
+    "b": "value",
+    "c": "idx",
+    "d": "taskId",
+    "e": "desc"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ProgressListEntity": {
+    "b": "progressItems",
+    "c": "scene"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.PromptUrlCardEntity": {
+    "b": "url",
+    "c": "title",
+    "d": "source",
+    "e": "iconUrl",
+    "f": "coverUrl",
+    "g": "exportId",
+    "h": "linkType",
+    "i": "parseStatus"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.QuestionImageEntity": {
+    "b": "url",
+    "c": "fileName",
+    "d": "size",
+    "e": "width",
+    "f": "height",
+    "g": "mediaId",
+    "h": "chatRecordId",
+    "i": "docType",
+    "j": "extra",
+    "k": "isHidden",
+    "l": "imageScene",
+    "m": "filePath",
+    "n": "uploadUniqueId",
+    "o": "uploadStatus",
+    "p": "uploadProgress",
+    "q": "eduContextJson",
+    "r": "directionCorrected"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.RecommendCardExperimentExposureInfo": {
+    "b": "recommendCardsLatencyMs",
+    "c": "useFallbackCard",
+    "d": "userCacheImmediately",
+    "e": "showRecommendCardInNewConversation",
+    "f": "preShowSkeleton"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.SearchGuideDocItem": {
+    "b": "refSourceWeight",
+    "c": "disableRefInMainText",
+    "d": "citationDisplayIcon",
+    "e": "citationDisplayName",
+    "f": "citationDisplayIconDark",
+    "g": "sourceType",
+    "h": "docIndex"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.SearchGuideEntity": {
+    "b": "title",
+    "c": "botPrompt",
+    "d": "sourceType",
+    "e": "docsJson",
+    "f": "docs",
+    "g": "citations",
+    "h": "enabledFeatures"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.SecurityEntity": {
+    "b": "text"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.SelectMode": {
+    "b": "isSelectMode",
+    "c": "selectType",
+    "d": "message",
+    "e": "shareEntrySource"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.SelectedMessageId": {
+    "b": "conversationId",
+    "c": "msgId",
+    "d": "contentIndex",
+    "e": "itemIndex",
+    "f": "isInMainAgentView"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.StepEntity": {
+    "b": "text",
+    "c": "iconType",
+    "d": "iconList",
+    "e": "enabledFeatures",
+    "f": "stepVersion",
+    "g": "newStepList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.TaskCardEntity": {
+    "b": "taskScene",
+    "c": "taskStatus",
+    "d": "title",
+    "e": "taskId",
+    "f": "startTime",
+    "g": "endTime",
+    "h": "taskUrl",
+    "i": "periodicRule",
+    "j": "meetingToken",
+    "k": "meetingTaskId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.TaskFileEntity": {
+    "b": "taskScene",
+    "c": "title",
+    "d": "taskId",
+    "e": "startTime",
+    "f": "endTime",
+    "g": "periodicRule",
+    "h": "multimedias"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.TextEntity": {
+    "b": "text",
+    "c": "textVersion",
+    "d": "materialExtras",
+    "e": "promptParams",
+    "f": "writingParamJson",
+    "g": "options",
+    "h": "skillInfoJson",
+    "i": "isRolePlayPrompt",
+    "j": "isAsr",
+    "k": "isReplaceResidue"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ThinkEntity": {
+    "b": "title",
+    "c": "content",
+    "d": "iconType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.VoiceRecorderCardEntity": {
+    "b": "recordId",
+    "c": "title",
+    "d": "timestamp",
+    "e": "content",
+    "f": "status",
+    "g": "deviceId",
+    "h": "deviceMatch",
+    "i": "durationMs",
+    "j": "reviewStatus",
+    "k": "tempContent",
+    "l": "tipsMsg",
+    "m": "entry"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.WXMessageCardEntity": {
+    "b": "forwardMsgId",
+    "c": "msgContent",
+    "d": "msgCount",
+    "e": "msgTime",
+    "f": "extra"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.X": {
+    "b": "filtered",
+    "c": "newReplacedPos",
+    "d": "changed"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.o1": {
+    "b": "cid",
+    "c": "msgId",
+    "d": "streamToken",
+    "e": "chatOptionsJson",
+    "f": "isFromRetry"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.photopickerinputattachment.InputAttachmentItem": {
+    "b": "valid",
+    "c": "attachmentId",
+    "d": "url",
+    "e": "filePath",
+    "f": "thumbnailPath",
+    "g": "width",
+    "h": "height",
+    "i": "loadStatus",
+    "j": "fileName",
+    "k": "attachmentSize",
+    "l": "imageSource",
+    "m": "progress",
+    "n": "extra"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.t0": {
+    "b": "inputBoxId",
+    "c": "oldMode",
+    "d": "newMode",
+    "e": "reason",
+    "f": "source"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.t1": {
+    "b": "success",
+    "c": "msg",
+    "d": "statusCode",
+    "e": "bizCode",
+    "f": "from",
+    "g": "isFromLocalStorage"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.z1": {
+    "b": "selectMode",
+    "c": "conversationId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.AHint": {
+    "b": "hintId",
+    "c": "hintText",
+    "d": "title",
+    "e": "prompt",
+    "f": "promptTraceId",
+    "g": "paramsAttachPrompt",
+    "h": "hintType",
+    "i": "renderType",
+    "j": "jumpData",
+    "k": "icon",
+    "l": "darkIcon",
+    "m": "targetFunctionId",
+    "n": "tapTips",
+    "o": "extra",
+    "p": "flag",
+    "q": "style",
+    "r": "itemReportData"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.AHintExtra": {
+    "b": "fontColor",
+    "c": "bgColor",
+    "d": "rewardType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.AHintItemReportData": {
+    "b": "slotId",
+    "c": "bannerSlotId",
+    "d": "activityId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.AHintJumpData": {
+    "b": "type",
+    "c": "params"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.AHintJumpParams": {
+    "b": "functionId",
+    "c": "prompt",
+    "d": "jumpUrl",
+    "e": "path"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.AHintStyle": {
+    "b": "bgColor",
+    "c": "darkBgColor",
+    "d": "icon",
+    "e": "darkIcon",
+    "f": "fontColor",
+    "g": "darkFontColor",
+    "h": "showArrow",
+    "i": "bgImgUrl",
+    "j": "darkBgImgUrl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.AMenuButtons": {
+    "b": "topButtons",
+    "c": "buttons",
+    "d": "excerptButtons",
+    "e": "bottomButtons"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.AToolbarButtons": {
+    "b": "buttons"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.AgentListLoadResult": {
+    "b": "errorCode",
+    "c": "errorMsg",
+    "d": "statusCode",
+    "e": "businessErrorCode",
+    "f": "businessErrorMsg"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.AgentUIAction": {
+    "b": "seq",
+    "c": "conversationId",
+    "d": "actionType",
+    "e": "params"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.BottomDocBean": {
+    "b": "index",
+    "c": "docId",
+    "d": "title",
+    "e": "url",
+    "f": "exposed",
+    "g": "sourceType",
+    "h": "quote",
+    "i": "publishTime",
+    "j": "publishTimestamp",
+    "k": "iconUrl",
+    "l": "iconType",
+    "m": "sourceName",
+    "n": "webSiteName",
+    "o": "showIndex",
+    "p": "isDisable",
+    "q": "disableToast",
+    "r": "tags",
+    "s": "refSourceWeight",
+    "t": "displayRefIcon",
+    "u": "webSiteSource",
+    "v": "disableRefInMainText",
+    "w": "jumpData",
+    "x": "coverUrl",
+    "y": "resourceType",
+    "z": "subResourceType",
+    "A": "imageViewUrl",
+    "B": "viewerType",
+    "C": "docIndex",
+    "D": "labels",
+    "E": "wxMiniProgramAppid",
+    "F": "wxMiniProgramUrl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.Button": {
+    "b": "id",
+    "c": "enable",
+    "d": "visible",
+    "e": "name"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ButtonActionResult": {
+    "b": "buttonId",
+    "c": "success",
+    "d": "successCount"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatAMenuDataContext": {
+    "b": "ic",
+    "c": "isSpeaker",
+    "d": "reportHy152",
+    "e": "reportHy153"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatCheckBoxState": {
+    "b": "showCheckbox",
+    "c": "checked",
+    "d": "enable"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatDeleteData": {
+    "b": "isSelected"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatDislikeData": {
+    "b": "isSelected",
+    "c": "isVisible"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatFavoriteData": {
+    "b": "isSelected"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputAbilityOptions": {
+    "b": "enableAiEdit",
+    "c": "enableReEdit"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputAccessOptions": {
+    "b": "disableAccessMeetingAuth",
+    "c": "disableAccessLocation",
+    "d": "replacePreviousMessage",
+    "e": "disableAccessMicrophone"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputAttachmentOptions": {
+    "b": "multiMedia",
+    "c": "docOpenId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputBypassOptions": {
+    "b": "uiQLocalId",
+    "c": "uiALocalId",
+    "d": "streamToken"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputContextOptions": {
+    "b": "isTemporary",
+    "c": "hideConv",
+    "d": "chatScene",
+    "e": "chatSource",
+    "f": "pushId",
+    "g": "msgScene",
+    "h": "activitySource",
+    "i": "activityInfo",
+    "j": "entry",
+    "k": "needGuidance",
+    "l": "needGuidanceSource",
+    "m": "imageQuestionSource",
+    "n": "imageQuestionScene",
+    "o": "isImgToVideoSkillSource",
+    "p": "deleteIndex",
+    "q": "stopLast",
+    "r": "hideLast",
+    "s": "offsetOfHour",
+    "t": "offsetOfMinute",
+    "u": "groupChatId",
+    "v": "inputBoxVersion",
+    "w": "isFirstStart",
+    "x": "agentTaskId",
+    "y": "primaryConversationId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputContinueOptions": {
+    "b": "isContinue",
+    "c": "continueMsgId",
+    "d": "continueSpeechIndex",
+    "e": "isTakeStockMessage"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputCustomOptions": {
+    "b": "optionsJson",
+    "c": "boundingBoxesJson",
+    "d": "locationJson",
+    "e": "promptTraceIdJson",
+    "f": "micAuthStatus",
+    "g": "micOccupancyStatus",
+    "h": "thingId",
+    "i": "todoId",
+    "j": "thingScene",
+    "k": "userSkillsJson"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputEduBoundingBox": {
+    "b": "id",
+    "c": "ltX",
+    "d": "ltY",
+    "e": "rbX",
+    "f": "rbY",
+    "g": "center"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputEduImageInfo": {
+    "b": "imageUrl",
+    "c": "imagePath",
+    "d": "imageWidth",
+    "e": "imageHeight",
+    "f": "imageTraceId",
+    "g": "uploadAttemptId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputEduOptions": {
+    "b": "bizType",
+    "c": "imageQuestionScene",
+    "d": "imageQuestionSource",
+    "e": "skillId",
+    "f": "rawImage",
+    "g": "overlayImage",
+    "h": "ocrImageUrl",
+    "i": "boundingBoxes"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputExternalOptions": {
+    "b": "externalHeaders",
+    "c": "reportData"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputHintOptions": {
+    "b": "isHint",
+    "c": "hintPromptTraceId",
+    "d": "paramsAttachPrompt",
+    "e": "hintParentIndex",
+    "f": "hintParentAnswerIndex",
+    "g": "hintType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputHotRecommendOptions": {
+    "b": "isHotRecommend",
+    "c": "isSug",
+    "d": "searchSuggestionSessionId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputMsgForwardUploadStateInfo": {
+    "b": "taskId",
+    "c": "msgId",
+    "d": "state",
+    "e": "cause",
+    "f": "errorCode",
+    "g": "errorMsg"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputMultiAnswerOptions": {
+    "b": "isMultiAnswer",
+    "c": "repeatIndex",
+    "d": "multiAnswerExtraInfo"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputOptions": {
+    "b": "promptOptions",
+    "c": "contextOptions",
+    "d": "attachmentOptions",
+    "e": "customOptions",
+    "f": "continueOptions",
+    "g": "accessOptions",
+    "h": "hotRecommendOptions",
+    "i": "hintOptions",
+    "j": "skillOptions",
+    "k": "reportOptions",
+    "l": "externalOptions",
+    "m": "bypassOptions",
+    "n": "abilityOptions",
+    "o": "multiAnswerOptions",
+    "p": "eduOptions",
+    "q": "clarifyOptions",
+    "r": "universalCardOptions"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputOptionsExternalHeader": {
+    "b": "eventInputType",
+    "c": "eventChatSource",
+    "d": "xAgentId",
+    "e": "xInputType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputOptionsMultiMediaEntity": {
+    "b": "type",
+    "c": "url",
+    "d": "from",
+    "e": "multimediaSourceIndex",
+    "f": "mediaId",
+    "g": "docType",
+    "h": "fileName",
+    "i": "chatRecordId",
+    "j": "size",
+    "k": "width",
+    "l": "height",
+    "m": "downloadUrl",
+    "n": "fileExtra",
+    "o": "filePath",
+    "p": "uploadUniqueId",
+    "q": "uploadStatus",
+    "r": "uploadProgress",
+    "s": "localIdentifier",
+    "t": "appId",
+    "u": "iconUrl",
+    "v": "source",
+    "w": "content",
+    "x": "coverUrl",
+    "y": "clickJumpUrl",
+    "z": "externalParam",
+    "A": "forwardMsgId",
+    "B": "forwardMsgTitle",
+    "C": "forwardContent",
+    "D": "forwardMsgCount",
+    "E": "forwardMsgTime",
+    "F": "forwardExtraJsonStr",
+    "G": "forwardFrom",
+    "H": "wxForwardScene",
+    "I": "linkUrl",
+    "J": "isHidden"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputPromptOptions": {
+    "b": "prompt",
+    "c": "displayPrompt",
+    "d": "chatModelId",
+    "e": "chatModelExtInfo",
+    "f": "extraJson",
+    "g": "projectId",
+    "h": "interventionId",
+    "i": "customIntent",
+    "j": "repeatType",
+    "k": "supportFunctions",
+    "l": "forceUserActions",
+    "m": "repeatActionType",
+    "n": "replacePreviousContent"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputQuickBarAllItems": {
+    "b": "chatInputQuickBarAllItems"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputQuickBarListItem": {
+    "b": "itemType",
+    "c": "itemId",
+    "d": "imageUrl",
+    "e": "title",
+    "f": "subTitle",
+    "g": "disable",
+    "h": "selected",
+    "i": "pinned",
+    "j": "pinnedIndex"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputQuickBarMoreButtonStatus": {
+    "b": "needHide"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputQuickBarPinneditems": {
+    "b": "chatInputQuickBarPinnedItems"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputQuickBarUserPinPushCallback": {
+    "b": "receivedPush"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputQuickPanelAutoSearchItemData": {
+    "b": "itemType",
+    "c": "itemId",
+    "d": "imageUrl",
+    "e": "title",
+    "f": "subTitle",
+    "g": "disable",
+    "h": "selected"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputQuickPanelDisplayStatus": {
+    "b": "isVisible"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputQuickPanelListData": {
+    "b": "quickPanelList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputQuickPanelListItemData": {
+    "b": "itemType",
+    "c": "itemId",
+    "d": "pinned",
+    "e": "pinnedIndex",
+    "f": "sortedIndex",
+    "g": "isDisable"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputQuickPanelSkillItemData": {
+    "b": "itemType",
+    "c": "itemId",
+    "d": "imageUrl",
+    "e": "title",
+    "f": "subTitle",
+    "g": "disable",
+    "h": "selected",
+    "i": "pinned",
+    "j": "pinnedIndex"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputReportOptions": {
+    "b": "inputType",
+    "c": "netSwitch",
+    "d": "asrSessionId",
+    "e": "proTaskId",
+    "f": "contentCompositionType",
+    "g": "inputEntryType",
+    "h": "promptEntrance",
+    "i": "reportIsFirstLaunch",
+    "j": "reportUserClickTrace",
+    "k": "reportPromptLength",
+    "l": "reportQuaSendEntrance"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputSkillOptions": {
+    "b": "skillId",
+    "c": "skillIdParam",
+    "d": "plugin",
+    "e": "writingParamJson",
+    "f": "promptParamJson",
+    "g": "applicationIdList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputSkillVMPinCountResult": {
+    "b": "pinCount"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputSkillVMPinErrorResult": {
+    "b": "errorType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputSkillVMVoiceRecordState": {
+    "b": "recordingState"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatLikeData": {
+    "b": "isSelected",
+    "c": "isVisible"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatNextPageData": {
+    "b": "isVisible",
+    "c": "isClickable"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatPageIndexData": {
+    "b": "isVisible",
+    "c": "pageCount",
+    "d": "selectPage",
+    "e": "pageIndicatorText"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatPlayTTSData": {
+    "b": "isSelected",
+    "c": "playStatus",
+    "d": "playSpeed",
+    "e": "voiceType",
+    "f": "voiceSource"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatPrevPageData": {
+    "b": "isVisible",
+    "c": "isClickable"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatRepeatData": {
+    "b": "isVisible",
+    "c": "isDisableMenu"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatRepeatMenuData": {
+    "b": "isVisible",
+    "c": "items"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatToast": {
+    "b": "type"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatUIContentMetaInfo": {
+    "b": "skillId",
+    "c": "msgScene",
+    "d": "groupChatId",
+    "e": "springFestivalKeywords"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatUniversalNextRequest": {
+    "b": "needRequest",
+    "c": "cardId",
+    "d": "cardType",
+    "e": "requestType",
+    "f": "repeatType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.CitationClickData": {
+    "b": "traceId",
+    "c": "messageType",
+    "d": "chatPageType",
+    "e": "nonce"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ConversationDetail": {
+    "b": "conversationId",
+    "c": "httpSuccess",
+    "d": "statusCode",
+    "e": "errorMessage",
+    "f": "data",
+    "g": "token",
+    "h": "localDataList",
+    "i": "messageServerIdList",
+    "j": "streamingMessageList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ConversationSelector": {
+    "b": "conversationId",
+    "c": "serverIndex",
+    "d": "contentIndex",
+    "e": "source"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.DetailFromDb": {
+    "b": "token",
+    "c": "asc",
+    "d": "jsonStrList",
+    "e": "messageServerIdList",
+    "f": "conversationJson"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.DocBeanList": {
+    "b": "docList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.DtmpMessage": {
+    "b": "messageId",
+    "c": "traceId",
+    "d": "index"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.EarlierPrefetchStatus": {
+    "b": "seq",
+    "c": "stage"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.EditModeInfo": {
+    "b": "isEditing",
+    "c": "editType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.Entities": {
+    "b": "entities"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.Entity": {
+    "b": "type",
+    "c": "id"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.EntityId": {
+    "b": "conversationId",
+    "c": "messageId",
+    "d": "contentIndex",
+    "e": "entityId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.FeedbackWnd": {
+    "b": "type",
+    "c": "visible",
+    "d": "serverIndex",
+    "e": "contentIndex",
+    "f": "traceId",
+    "g": "conversationId",
+    "h": "title",
+    "i": "inputHint",
+    "j": "submitLabel",
+    "k": "multiSelect",
+    "l": "tags"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.Hints": {
+    "b": "hintList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.IconList": {
+    "b": "urls",
+    "c": "iconPosition"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ImageAttr": {
+    "b": "width",
+    "c": "height"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.InputRecommendItem": {
+    "b": "id",
+    "c": "text",
+    "d": "displayStyle",
+    "e": "hotContentId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.InputRecommendItems": {
+    "b": "type",
+    "c": "sessionId",
+    "d": "searchKey",
+    "e": "inputRecommendItems"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.InterruptedTips": {
+    "b": "type"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.JumpData": {
+    "b": "url",
+    "c": "type",
+    "d": "params"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.JumpDataParams": {
+    "b": "viewerType",
+    "c": "resourceName",
+    "d": "resourceType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.Label": {
+    "b": "title",
+    "c": "desc",
+    "d": "type"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.LinkCardExternalParam": {
+    "b": "newsOpenId",
+    "c": "extendTraceId",
+    "d": "traceId",
+    "e": "operationId",
+    "f": "modId",
+    "g": "docType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MarkdownSearchGuideDocItem": {
+    "b": "refSourceWeight",
+    "c": "disableRefInMainText",
+    "d": "citationDisplayIcon",
+    "e": "citationDisplayName",
+    "f": "citationDisplayIconDark",
+    "g": "sourceType",
+    "h": "docIndex"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MarkdownSearchGuideDocList": {
+    "b": "searchGuideDocs"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MenuItem": {
+    "b": "id",
+    "c": "title",
+    "d": "subTitle",
+    "e": "icon",
+    "f": "darkIcon",
+    "g": "enable",
+    "h": "selected",
+    "i": "style"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MessageContentId": {
+    "b": "conversationId",
+    "c": "messageId",
+    "d": "contentIndex"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MessageEvent": {
+    "b": "type",
+    "c": "data",
+    "d": "streamToken"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MessageId": {
+    "b": "conversationId",
+    "c": "messageId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MessageMarkdownData": {
+    "b": "messageId",
+    "c": "entities"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MessageMarkdownDataRequest": {
+    "b": "messageIds"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MessageMarkdownDataResult": {
+    "b": "messageIds",
+    "c": "messages"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MessageMetadata": {
+    "b": "type",
+    "c": "id",
+    "d": "serverIndex"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MessageMetadataList": {
+    "b": "metadataList",
+    "c": "hasEarlierMore",
+    "d": "conversationId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MessageStreamingState": {
+    "b": "messageId",
+    "c": "streaming"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.NewRoundTick": {
+    "b": "seq",
+    "c": "kind"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.OpenEvent": {
+    "b": "header",
+    "c": "streamToken"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.OpinionFeedbackContext": {
+    "b": "agentId",
+    "c": "msgId",
+    "d": "traceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.PermissionAutoRegenerateTick": {
+    "b": "seq",
+    "c": "show",
+    "d": "conversationId",
+    "e": "messageId",
+    "f": "permission",
+    "g": "permissionParams"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.QuickShareToImClickData": {
+    "b": "msgId",
+    "c": "imGroupId",
+    "d": "agentId",
+    "e": "msgIndex",
+    "f": "pairMsgIndex",
+    "g": "nodeIndex",
+    "h": "closeExtendBrowsingGuide",
+    "i": "closeThink",
+    "j": "extraParamsBase",
+    "k": "nonce"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.RecommendCardColor": {
+    "b": "cardColor",
+    "c": "titleColor",
+    "d": "subTitleColor",
+    "e": "arrowColor",
+    "f": "tagColor",
+    "g": "tagTextColor",
+    "h": "gradientColors"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.RecommendCardItem": {
+    "b": "id",
+    "c": "skillId",
+    "d": "category",
+    "e": "sourceType",
+    "f": "cardType",
+    "g": "cardTemplate",
+    "h": "index",
+    "i": "cardVersion",
+    "j": "title",
+    "k": "subTitle",
+    "l": "tag",
+    "m": "lightColor",
+    "n": "darkColor",
+    "o": "imageUrl",
+    "p": "cardImgAttr",
+    "q": "tagIconUrl",
+    "r": "tagIconV2Url",
+    "s": "arrowIconUrl",
+    "t": "arrowColor",
+    "u": "jumpType",
+    "v": "screenOnType",
+    "w": "screenOnData",
+    "x": "activityUrl",
+    "y": "prompt",
+    "z": "jumpData",
+    "A": "interventionId",
+    "B": "showTipTypes",
+    "C": "itemResources",
+    "D": "cameraTip",
+    "E": "cameraTab",
+    "F": "isDefaultValue",
+    "G": "internetSearch",
+    "H": "chatModelId",
+    "I": "bannerId",
+    "J": "materialId",
+    "K": "materialType",
+    "L": "eventId",
+    "M": "sceneTag",
+    "N": "contentType",
+    "O": "pushMsgId",
+    "P": "showsArrow"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.RecommendCardPage": {
+    "b": "refreshType",
+    "c": "layout",
+    "d": "traceId",
+    "e": "expKey",
+    "f": "cardList",
+    "g": "welcomeText",
+    "h": "homeCardsHitType",
+    "i": "uiStyle",
+    "j": "loaded",
+    "k": "verticalPosition"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.RecommendCardPageId": {
+    "b": "modelId",
+    "c": "internetSearchStatus"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.RecommendCardScreenOnDataItem": {
+    "b": "from",
+    "c": "url",
+    "d": "type",
+    "e": "width",
+    "f": "height"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ReplaceData": {
+    "b": "replaceId",
+    "c": "customKey",
+    "d": "jsonData",
+    "e": "type",
+    "f": "status",
+    "g": "display",
+    "h": "style",
+    "i": "replaceBefore",
+    "j": "replaceAfter",
+    "k": "topic",
+    "l": "sceneId",
+    "m": "drawImageRatio",
+    "n": "isDrawImageWa"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ReplaceDataList": {
+    "b": "replaceDataList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ReportData": {
+    "b": "traceId",
+    "c": "modelId",
+    "d": "agentId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.RequirePermission": {
+    "b": "requestSeq",
+    "c": "conversationId",
+    "d": "permissionType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ResendMessageDetail": {
+    "b": "conversationId",
+    "c": "localId",
+    "d": "streamToken"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ScreenshotSharePanelState": {
+    "b": "presentation",
+    "c": "operation",
+    "d": "activeChannel",
+    "e": "generationId",
+    "f": "channels",
+    "g": "actionsEnabled"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ScreenshotSharePosterState": {
+    "b": "stage",
+    "c": "failure",
+    "d": "generationId",
+    "e": "posterFilePath",
+    "f": "targetUrl",
+    "g": "shareId",
+    "h": "pixelWidth",
+    "i": "pixelHeight",
+    "j": "contentMode",
+    "k": "originalPosterFilePath",
+    "l": "completeQaPosterFilePath",
+    "m": "canCaptureFullConversation"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.SelectEditMode": {
+    "b": "isEditing",
+    "c": "editType",
+    "d": "itemIndex",
+    "e": "messageType",
+    "f": "traceId",
+    "g": "result",
+    "h": "shareSource"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.SelectedData": {
+    "b": "conversationId",
+    "c": "editMode",
+    "d": "isAllSelected",
+    "e": "valid",
+    "f": "serverIdsValid",
+    "g": "selectedUnitCount",
+    "h": "items",
+    "i": "selectAllItems"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.SelectedItem": {
+    "b": "serverIndex",
+    "c": "contentIndex",
+    "d": "msgId",
+    "e": "serverId",
+    "f": "traceId",
+    "g": "subStreamCid",
+    "h": "isThinkExpand",
+    "i": "mediaBoxType",
+    "j": "questionHidden"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ShareDirectlyContext": {
+    "b": "agentId",
+    "c": "conversationId",
+    "d": "msgId",
+    "e": "contentIndex",
+    "f": "imageUrl",
+    "g": "prompt",
+    "h": "traceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ShareTextContext": {
+    "b": "agentId",
+    "c": "conversationId",
+    "d": "msgId",
+    "e": "serverIndex",
+    "f": "contentIndex",
+    "g": "pairMsgId",
+    "h": "pairServerIndex",
+    "i": "pairContentIndex",
+    "j": "selectedText",
+    "k": "selectedHtml",
+    "l": "traceId",
+    "m": "qFold",
+    "n": "aFold",
+    "o": "mediaBoxType",
+    "p": "pluginId",
+    "q": "groupChatId",
+    "r": "isSensitive",
+    "s": "subStreamCid"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.StreamResult": {
+    "b": "code",
+    "c": "message",
+    "d": "streamToken"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.StreamStateEvent": {
+    "b": "state",
+    "c": "streamToken"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.StreamingMessage": {
+    "b": "serverId",
+    "c": "streamToken"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.UIConversationBaseContext": {
+    "b": "inputBoxVersion",
+    "c": "hideConv",
+    "d": "projectId",
+    "e": "agentId",
+    "f": "bizType",
+    "g": "chatScene",
+    "h": "isTemporary",
+    "i": "chatGroupId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.agentinputguide.AgentInputGuideCand": {
+    "b": "sug",
+    "c": "source",
+    "d": "sugId",
+    "e": "title",
+    "f": "desc",
+    "g": "image",
+    "h": "interventionSource",
+    "i": "interventionId",
+    "j": "fileList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.agentinputguide.AgentInputGuideData": {
+    "b": "visible",
+    "c": "hintType",
+    "d": "headerTitle",
+    "e": "headerSubtitle",
+    "f": "skillId",
+    "g": "cands"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.MessageContentInfo": {
+    "b": "currentContentIndex",
+    "c": "totalContentCount"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.MessageContext": {
+    "b": "traceId",
+    "c": "agentId",
+    "d": "chatModelId",
+    "e": "serverMsgId",
+    "f": "questionMsgId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentEntityData": {
+    "b": "iconUrl",
+    "c": "title",
+    "d": "titleColor",
+    "e": "titleIconList",
+    "f": "showGroup",
+    "g": "disableThinkExpand"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentEntityGroup": {
+    "b": "groupId",
+    "c": "title"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentEntityItem": {
+    "b": "itemId",
+    "c": "type"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentEntityItemWithGroup": {
+    "b": "isGroup",
+    "c": "group",
+    "d": "entityItem"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentEntityItems": {
+    "b": "items"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentEntityItemsWithGroups": {
+    "b": "items"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentEntityOutsideThink": {
+    "b": "data",
+    "c": "groupId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentEntityOutsideToolCall": {
+    "b": "data"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentGroupDiffData": {
+    "b": "isShow",
+    "c": "addNum",
+    "d": "delNum"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentIconUrl": {
+    "b": "url",
+    "c": "iconId",
+    "d": "colorfulUrl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentItemId": {
+    "b": "entityId",
+    "c": "componentId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentTextEntityItem": {
+    "b": "componentId",
+    "c": "state",
+    "d": "text",
+    "e": "textVersion"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentThinkEntityItem": {
+    "b": "itemId",
+    "c": "text",
+    "d": "title",
+    "e": "state"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentToolCallEntityItem": {
+    "b": "componentId",
+    "c": "toolCallName",
+    "d": "state",
+    "e": "icon",
+    "f": "title",
+    "g": "titleColor"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentToolCallGroupBindInfo": {
+    "b": "entityId",
+    "c": "groupId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ExposureReportedIndexList": {
+    "b": "indexes"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ImageData": {
+    "b": "id",
+    "c": "imageUrlLow",
+    "d": "imageUrlHigh",
+    "e": "width",
+    "f": "height",
+    "g": "source",
+    "h": "sourceUrl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ImageItem": {
+    "b": "image",
+    "c": "aspectRatio"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ImageLayout": {
+    "b": "rows",
+    "c": "moreCount",
+    "d": "isAdaptive"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ImageRow": {
+    "b": "items",
+    "c": "aspectRatio"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.MarkdownData": {
+    "b": "markdown",
+    "c": "version",
+    "d": "msgId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.MarkdownTextSelectionResult": {
+    "b": "requestId",
+    "c": "markdownVersion",
+    "d": "status",
+    "e": "startCodepoint",
+    "f": "endCodepoint",
+    "g": "matchType",
+    "h": "degradeReason"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.MdGradingResultJsonList": {
+    "b": "jsons"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.MdSearchGuideDocList": {
+    "b": "items",
+    "c": "docsJson"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.MediaBoxContentOffset": {
+    "b": "x",
+    "c": "y"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.OpenImagePreviewData": {
+    "b": "valid",
+    "c": "position",
+    "d": "images",
+    "e": "conversationId",
+    "f": "agentId",
+    "g": "traceId",
+    "h": "isTempConv"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ProgressData": {
+    "b": "update"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ProgressItemInfo": {
+    "b": "idx",
+    "c": "progressValue",
+    "d": "desc",
+    "e": "taskId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ProgressItemInfoList": {
+    "b": "items"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.Step": {
+    "b": "text",
+    "c": "subText",
+    "d": "textAnimation",
+    "e": "showArrow",
+    "f": "showLoadingIcon",
+    "g": "iconType",
+    "h": "stage",
+    "i": "status",
+    "j": "scene",
+    "k": "stepVersion",
+    "l": "enableStageLayer",
+    "m": "enableFeatures"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.Steps": {
+    "b": "steps"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.YbAnimatedIdList": {
+    "b": "ids"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.YbMarkdownContextInfo": {
+    "b": "conversationId",
+    "c": "msgId",
+    "d": "traceId",
+    "e": "agentId",
+    "f": "chatModelId",
+    "g": "pluginId",
+    "h": "isAgentMode",
+    "i": "isDeepSearch",
+    "j": "componentId",
+    "k": "toolCallName",
+    "l": "unsupportedRepeat",
+    "m": "questionServerMsgId",
+    "n": "serverIndex",
+    "o": "speechType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.YbQuestionSourceImageInfo": {
+    "b": "url",
+    "c": "width",
+    "d": "height"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.YbReplaceContextInfo": {
+    "b": "sceneId",
+    "c": "drawImageRatio",
+    "d": "topic",
+    "e": "replacesJson"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.OpenAiEditPageQuestionImageData": {
+    "b": "valid",
+    "c": "url",
+    "d": "messageIndex",
+    "e": "traceId",
+    "f": "agentId",
+    "g": "conversationId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.OpenFullScreenQuestionImageData": {
+    "b": "valid",
+    "c": "enableFullPageCorrection",
+    "d": "currentIndex",
+    "e": "images",
+    "f": "agentId",
+    "g": "traceId",
+    "h": "messageIndex",
+    "i": "serverMsgId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.OpenUrlLinkData": {
+    "b": "valid",
+    "c": "isWxChannel",
+    "d": "url",
+    "e": "coverUrl",
+    "f": "title",
+    "g": "agentId",
+    "h": "conversationId",
+    "i": "traceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.QuestionFileData": {
+    "b": "fileType",
+    "c": "docType",
+    "d": "url",
+    "e": "fileName",
+    "f": "size",
+    "g": "parseStatus",
+    "h": "wordCount",
+    "i": "reason",
+    "j": "parseResultType",
+    "k": "isOnlineDoc",
+    "l": "filePath",
+    "m": "uploadUniqueId",
+    "n": "uploadStatus",
+    "o": "uploadProgress"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.QuestionFilePreviewData": {
+    "b": "valid",
+    "c": "fileType",
+    "d": "docType",
+    "e": "url",
+    "f": "fileName",
+    "g": "isOnlineDoc",
+    "h": "filePath",
+    "i": "agentId",
+    "j": "conversationId",
+    "k": "traceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.QuestionFiles": {
+    "b": "entities"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.QuestionImageData": {
+    "b": "url",
+    "c": "size",
+    "d": "width",
+    "e": "height",
+    "f": "filePath",
+    "g": "uploadUniqueId",
+    "h": "uploadStatus",
+    "i": "uploadProgress",
+    "j": "eduContextJson",
+    "k": "directionCorrected"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.QuestionMaterialData": {
+    "b": "materialExtras",
+    "c": "promptParams"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.TextRichData": {
+    "b": "text",
+    "c": "urlInfos",
+    "d": "richItems"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.TextRichItem": {
+    "b": "type",
+    "c": "text",
+    "d": "iconUrl",
+    "e": "darkIconUrl",
+    "f": "iconId",
+    "g": "textColorLight",
+    "h": "textColorDark",
+    "i": "iconWidth",
+    "j": "iconHeight",
+    "k": "copyText"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.TextUrlInfo": {
+    "b": "url",
+    "c": "startPos",
+    "d": "endPos"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.tips.android.AndroidViewHolderTipsData": {
+    "b": "type",
+    "c": "id"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.tips.entity.AutoSearchTipsClickArgs": {
+    "b": "targetFunctionId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.tips.entity.ProjectKnowledgeAddLibraryTipsClickArgs": {
+    "b": "resourceUrlList",
+    "c": "resourceIdList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.tips.entity.TipsMsgWithTime": {
+    "b": "tipsMsg",
+    "c": "timestamp"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.universalcard.ChatUniversalShowEvent": {
+    "b": "show",
+    "c": "cardType",
+    "d": "cardId",
+    "e": "cid"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.AccessSplit": {
+    "b": "permission"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.AccessSubItem": {
+    "b": "necessity",
+    "c": "payload"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.AccessSubItemAccountPayload": {
+    "b": "authKind",
+    "c": "connectorName"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.AiTaskCardRepeatRule": {
+    "b": "freq",
+    "c": "interval",
+    "d": "count",
+    "e": "until",
+    "f": "byMonth",
+    "g": "byWeekDay",
+    "h": "byMonthDay",
+    "i": "dtstart",
+    "j": "offsetOfHour",
+    "k": "offsetOfMinute"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.BizChatFileDownloadProgressResult": {
+    "b": "requestId",
+    "c": "url",
+    "d": "receivedLength",
+    "e": "totalLength"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.BizSkillInfo": {
+    "b": "skillAction",
+    "c": "skillType",
+    "d": "skillId",
+    "e": "skillName",
+    "f": "skillIcon",
+    "g": "pluginId",
+    "h": "cmsId",
+    "i": "skillDetail",
+    "j": "modelId",
+    "k": "functionList",
+    "l": "bannerId",
+    "m": "skillStyle",
+    "n": "skillToolBarStyle",
+    "o": "pinned",
+    "p": "anonIsGuideLogin",
+    "q": "pinnedIndex",
+    "r": "notSupportControl",
+    "s": "hideControl",
+    "t": "interventionId",
+    "u": "sortedIndex",
+    "v": "usedIndex",
+    "w": "desc",
+    "x": "skillDisableIcon",
+    "y": "skillPureIcon",
+    "z": "skillSelectedIcon"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.BoolValue": {
+    "b": "value"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ButtonSplit": {
+    "b": "msg"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.BypassStreamingMessage": {
+    "b": "serverId",
+    "c": "streamToken"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatAbilityOptions": {
+    "b": "enableAiEdit",
+    "c": "enableReEdit"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatAccessOptions": {
+    "b": "disableAccessMeetingAuth",
+    "c": "disableAccessLocation",
+    "d": "replacePreviousMessage",
+    "e": "disableAccessMicrophone"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatAttachmentOptions": {
+    "b": "multiMedia",
+    "c": "docOpenId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatBypassOptions": {
+    "b": "uiQLocalId",
+    "c": "uiALocalId",
+    "d": "streamToken"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatContextOptions": {
+    "b": "isTemporary",
+    "c": "hideConv",
+    "d": "chatScene",
+    "e": "chatSource",
+    "f": "pushId",
+    "g": "msgScene",
+    "h": "activitySource",
+    "i": "activityInfo",
+    "j": "entry",
+    "k": "needGuidance",
+    "l": "needGuidanceSource",
+    "m": "imageQuestionSource",
+    "n": "imageQuestionScene",
+    "o": "isImgToVideoSkillSource",
+    "p": "deleteIndex",
+    "q": "stopLast",
+    "r": "hideLast",
+    "s": "offsetOfHour",
+    "t": "offsetOfMinute",
+    "u": "groupChatId",
+    "v": "inputBoxVersion",
+    "w": "isFirstStart",
+    "x": "agentTaskId",
+    "y": "primaryConversationId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatContinueOptions": {
+    "b": "continueMsgId",
+    "c": "continueSpeechIndex",
+    "d": "isTakeStockMessage"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatCustomOptions": {
+    "b": "optionsJson",
+    "c": "boundingBoxesJson",
+    "d": "locationJson",
+    "e": "promptTraceIdJson",
+    "f": "micAuthStatus",
+    "g": "micOccupancyStatus",
+    "h": "thingId",
+    "i": "todoId",
+    "j": "thingScene",
+    "k": "userSkillsJson"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatEduBoundingBox": {
+    "b": "id",
+    "c": "ltX",
+    "d": "ltY",
+    "e": "rbX",
+    "f": "rbY",
+    "g": "center"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatEduImageInfo": {
+    "b": "imageUrl",
+    "c": "imagePath",
+    "d": "imageWidth",
+    "e": "imageHeight",
+    "f": "imageTraceId",
+    "g": "uploadAttemptId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatEduOptions": {
+    "b": "bizType",
+    "c": "imageQuestionScene",
+    "d": "imageQuestionSource",
+    "e": "skillId",
+    "f": "rawImage",
+    "g": "overlayImage",
+    "h": "ocrImageUrl",
+    "i": "boundingBoxes",
+    "j": "pieceImages",
+    "k": "triggeredByHelpMeCorrect"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatEduPieceImage": {
+    "b": "boxId",
+    "c": "imagePath",
+    "d": "imageUrl",
+    "e": "imageWidth",
+    "f": "imageHeight"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatExternalOptions": {
+    "b": "externalHeaders",
+    "c": "reportData"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatHintOptions": {
+    "b": "isHint",
+    "c": "hintPromptTraceId",
+    "d": "paramsAttachPrompt",
+    "e": "hintParentIndex",
+    "f": "hintParentAnswerIndex",
+    "g": "hintType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatHotRecommendOptions": {
+    "b": "isHotRecommend",
+    "c": "isSug",
+    "d": "searchSuggestionSessionId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatInputPinCountResult": {
+    "b": "pinCount"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatInputPinErrorResult": {
+    "b": "pinErrorType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatInputQuickPanelItem": {
+    "b": "itemType",
+    "c": "itemId",
+    "d": "pinned",
+    "e": "pinnedIndex",
+    "f": "sortedIndex",
+    "g": "isDisable"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatMultiAnswerOptions": {
+    "b": "isMultianswer",
+    "c": "repeatIndex",
+    "d": "multiAnswerExtraInfo"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatOptions": {
+    "b": "promptOptions",
+    "c": "contextOptions",
+    "d": "attachmentOptions",
+    "e": "customOptions",
+    "f": "continueOptions",
+    "g": "quoteOptions",
+    "h": "accessOptions",
+    "i": "hotRecommendOptions",
+    "j": "hintOptions",
+    "k": "skillOptions",
+    "l": "reportOptions",
+    "m": "externalOptions",
+    "n": "abilityOptions",
+    "o": "multiAnswerOptions",
+    "p": "bypassOptions",
+    "q": "eduOptions"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatOptionsExternalHeader": {
+    "b": "eventInputType",
+    "c": "eventChatSource",
+    "d": "xAgentId",
+    "e": "xInputType",
+    "f": "xEnableDtmp"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatOptionsForwardMessageCard": {
+    "b": "forwardMsgId",
+    "c": "forwardMsgTitle",
+    "d": "forwardContent",
+    "e": "forwardMsgCount",
+    "f": "forwardMsgTime",
+    "g": "forwardExtraJsonStr"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatOptionsImageFileExt": {
+    "b": "width",
+    "c": "height",
+    "d": "downloadUrl",
+    "e": "extra",
+    "f": "filePath",
+    "g": "uploadUniqueId",
+    "h": "uploadStatus",
+    "i": "uploadProgress",
+    "j": "localIdentifier",
+    "k": "exifInfoJson"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatOptionsLinkCardExt": {
+    "b": "appId",
+    "c": "iconUrl",
+    "d": "source",
+    "e": "content",
+    "f": "coverUrl",
+    "g": "clickJumpUrl",
+    "h": "reportParam"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatOptionsMeetingAiNotesSaveCardExt": {
+    "b": "linkUrl",
+    "c": "content"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatOptionsMeetingHostCardExt": {
+    "b": "linkUrl",
+    "c": "content"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatOptionsMultiMediaCommon": {
+    "b": "type",
+    "c": "docType",
+    "d": "chatRecordId",
+    "e": "url",
+    "f": "fileName",
+    "g": "size",
+    "h": "from",
+    "i": "multimediaSourceIndex",
+    "j": "isHidden",
+    "k": "mediaId",
+    "l": "signUrl",
+    "m": "presetFileId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatOptionsMultiMediaEntity": {
+    "b": "common",
+    "c": "imageFileExt",
+    "d": "linkCardExt",
+    "e": "forwardMessageCard",
+    "f": "meetingHostCardExt",
+    "g": "meetingAiNotesSaveCardExt"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatPromptOptions": {
+    "b": "prompt",
+    "c": "displayPrompt",
+    "d": "chatModelId",
+    "e": "chatModelExtInfo",
+    "f": "extraJson",
+    "g": "projectId",
+    "h": "interventionId",
+    "i": "interventionSource",
+    "j": "customIntent",
+    "k": "repeatType",
+    "l": "supportFunctions",
+    "m": "forceUserActions",
+    "n": "repeatActionType",
+    "o": "replacePreviousContent",
+    "p": "asrSessionId",
+    "q": "universalCardParam"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatQuoteOptions": {
+    "b": "type",
+    "c": "msg",
+    "d": "subType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatReportOptions": {
+    "b": "inputType",
+    "c": "netSwitch",
+    "d": "asrSessionId",
+    "e": "proTaskId",
+    "f": "contentCompositionType",
+    "g": "inputEntryType",
+    "h": "promptEntrance",
+    "i": "reportIsFirstLaunch",
+    "j": "reportUserClickTrace",
+    "k": "reportPromptLength",
+    "l": "reportQuaSendEntrance",
+    "m": "reportSendPath"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatShareCapturableQaResult": {
+    "b": "canCaptureFullConversation",
+    "c": "errorCode",
+    "d": "nonStreamingHitMessages",
+    "e": "qaPairs"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatShareMaterialResult": {
+    "b": "success",
+    "c": "errorCode",
+    "d": "targetUrl",
+    "e": "shareId",
+    "f": "qrPngBase64"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatShareMessageRef": {
+    "b": "msgId",
+    "c": "serverId",
+    "d": "contentIndex",
+    "e": "serverIndex",
+    "f": "questionHidden"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatShareQaPairRef": {
+    "b": "question",
+    "c": "answer"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatShareUrlResult": {
+    "b": "success",
+    "c": "errorCode",
+    "d": "targetUrl",
+    "e": "shareId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatSkillOptions": {
+    "b": "skillId",
+    "c": "plugin",
+    "d": "writingParamJson",
+    "e": "promptParamJson",
+    "f": "applicationIdList",
+    "g": "skillSlug",
+    "h": "skillName",
+    "i": "skillIcon",
+    "j": "brandColorLight",
+    "k": "brandColorDark"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatStorageData": {
+    "b": "isThinkFold",
+    "c": "isDeepsearchFold",
+    "d": "isDsaGroupExpand",
+    "e": "isPromptFold",
+    "f": "multiAnswerCurrentIndex",
+    "g": "codeImageData",
+    "h": "toolcallFoldStateMap",
+    "i": "toolcallUserFoldMap",
+    "j": "reportStatusMap",
+    "k": "cotPopPageReportStatusMap",
+    "l": "replaceBoxContentOffsetX",
+    "m": "shootAnswerPreviewImageFail",
+    "n": "animatedIds",
+    "o": "mediaBoxContentOffset",
+    "p": "mediaBoxHadResetContentOffset",
+    "q": "mediaExposureReportedIndexes",
+    "r": "wxLinkageExposureReported",
+    "s": "mediaBoxExposureReported",
+    "t": "createExamExposureReported",
+    "u": "iconAnimFinish",
+    "v": "directGenerateTaskId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatStorageMediaBoxContentOffset": {
+    "b": "x",
+    "c": "y"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatTextUrlInfo": {
+    "b": "url",
+    "c": "startPos",
+    "d": "endPos"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ChatUniversalCardParam": {
+    "b": "cardId",
+    "c": "cardType",
+    "d": "key",
+    "e": "answerParamJsonStr"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ClarifyAnswer": {
+    "b": "selectedOptions",
+    "c": "editOption",
+    "d": "defaultOption"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ClarifyIdentity": {
+    "b": "cid",
+    "c": "msgId",
+    "d": "clarifyId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ClarifyOption": {
+    "b": "optionId",
+    "c": "text"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ClarifyQuestion": {
+    "b": "question",
+    "c": "questionId",
+    "d": "options",
+    "e": "editOptionHint",
+    "f": "multiSelect",
+    "g": "answer"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.CommonTipsSplit": {
+    "b": "scene",
+    "c": "msg",
+    "d": "jumpMsg",
+    "e": "jumpUrl",
+    "f": "icon",
+    "g": "darkIcon",
+    "h": "bannerId",
+    "i": "activitySource"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ContentMetaInfo": {
+    "b": "skillId",
+    "c": "msgScene",
+    "d": "groupChatId",
+    "e": "questionTag",
+    "f": "springFestivalKeywords",
+    "g": "requireLogin",
+    "h": "loginTips",
+    "i": "requireLoginType",
+    "j": "luckinPasswordActId",
+    "k": "luckinRewardId",
+    "l": "luckinIconUrl",
+    "m": "luckinBackgroundUrl",
+    "n": "luckinJumpUrl",
+    "o": "hasRedPacketPasswordTips",
+    "p": "redPacketId",
+    "q": "redPacketCoverId",
+    "r": "redPacketAmount",
+    "s": "redPacketStatusCode",
+    "t": "redPacketPassword",
+    "u": "redPacketPasswordId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ContentSplit": {
+    "b": "type",
+    "c": "id",
+    "d": "tipsSplit",
+    "e": "commonTipsSplit",
+    "f": "buttonSplit",
+    "g": "jumpNoticeSplit",
+    "h": "accessSplit",
+    "i": "feedbackTipsSplit"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ConversationBaseContext": {
+    "b": "inputBoxVersion",
+    "c": "hideConv",
+    "d": "projectId",
+    "e": "agentId",
+    "f": "chatScene",
+    "g": "isTemporary",
+    "h": "chatGroupId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.CorrectImageAnswerInfo": {
+    "b": "correctResult",
+    "c": "id",
+    "d": "center",
+    "e": "ltX",
+    "f": "ltY",
+    "g": "rbX",
+    "h": "rbY"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.CorrectImageInitialSelectedItem": {
+    "b": "mainId",
+    "c": "subId",
+    "d": "flatIndex"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.CorrectImageOcrItem": {
+    "b": "mainId",
+    "c": "ltX",
+    "d": "ltY",
+    "e": "rbX",
+    "f": "rbY"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.CorrectImageQuestionItem": {
+    "b": "id",
+    "c": "questionType",
+    "d": "questionTitle",
+    "e": "isAnswered",
+    "f": "isCorrect",
+    "g": "gradingStatus",
+    "h": "boundingBoxId",
+    "i": "boundingBoxCenter",
+    "j": "boundingBoxLtX",
+    "k": "boundingBoxLtY",
+    "l": "boundingBoxRbX",
+    "m": "boundingBoxRbY",
+    "n": "subQuestionList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.CorrectImageSubQuestion": {
+    "b": "subQuestionId",
+    "c": "id",
+    "d": "center",
+    "e": "ltX",
+    "f": "ltY",
+    "g": "rbX",
+    "h": "rbY",
+    "i": "answerList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.DSAEntityItemWithGroup": {
+    "b": "isGroup",
+    "c": "groupInfo",
+    "d": "entityItem"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.DSAGroupInfo": {
+    "b": "groupId",
+    "c": "title"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.DSAMessageEntityItem": {
+    "b": "type",
+    "c": "textEntityItem",
+    "d": "toolCallEntityItem",
+    "e": "thinkEntityItem"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.DSATextEntityItem": {
+    "b": "text",
+    "c": "textVersion",
+    "d": "componentId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.DSAThinkEntityItem": {
+    "b": "componentId",
+    "c": "text",
+    "d": "title",
+    "e": "state"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.DSAToolCallEntityItem": {
+    "b": "text",
+    "c": "textVersion",
+    "d": "componentId",
+    "e": "toolCallName",
+    "f": "state",
+    "g": "title",
+    "h": "icon",
+    "i": "titleColor",
+    "j": "startTime",
+    "k": "items",
+    "l": "groupId",
+    "m": "cat"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.EduAnnotation": {
+    "b": "questionId",
+    "c": "absX",
+    "d": "absY",
+    "e": "result"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.EduBoundingBox": {
+    "b": "id",
+    "c": "ltX",
+    "d": "ltY",
+    "e": "rbX",
+    "f": "rbY"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.EduCorrectAnswerInfo": {
+    "b": "correctResult",
+    "c": "boundingBox"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.EduCorrectBoundingBox": {
+    "b": "id",
+    "c": "center",
+    "d": "rect"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.EduCorrectRectF": {
+    "b": "ltX",
+    "c": "ltY",
+    "d": "rbX",
+    "e": "rbY"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.EduCorrectSubQuestionInfo": {
+    "b": "subQuestionId",
+    "c": "boundingBox",
+    "d": "answerList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.FeedbackTipsButton": {
+    "b": "id",
+    "c": "text",
+    "d": "clicked"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.FeedbackTipsClicked": {
+    "b": "toast",
+    "c": "title",
+    "d": "itemToast",
+    "e": "items"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.FeedbackTipsMD": {
+    "b": "title",
+    "c": "plugin",
+    "d": "traceId",
+    "e": "helpfulBtn",
+    "f": "notHelpfulBtn",
+    "g": "notHelpfulItems"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.FeedbackTipsSplit": {
+    "b": "title",
+    "c": "plugin",
+    "d": "traceId",
+    "e": "buttons"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.FileDownloadProgressResult": {
+    "b": "sessionId",
+    "c": "url",
+    "d": "receivedLength",
+    "e": "totalLength"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.FirstTextReceivedParams": {
+    "b": "messageId",
+    "c": "contentId",
+    "d": "traceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.H": {
+    "b": "conversationId",
+    "c": "msgIdx",
+    "d": "id",
+    "e": "contentIdx",
+    "f": "entityId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ImageAttrInfo": {
+    "b": "width",
+    "c": "height"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ImageInfo": {
+    "b": "originImageUrl",
+    "c": "displayImageUrl",
+    "d": "index",
+    "e": "imageWidth",
+    "f": "imageHeight",
+    "g": "mediaId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ImageSearchImage": {
+    "b": "idx",
+    "c": "url",
+    "d": "urlHigh",
+    "e": "prompt",
+    "f": "source",
+    "g": "sourceUrl",
+    "h": "width",
+    "i": "height"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.InputBarViewState": {
+    "b": "viewType",
+    "c": "display"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.InputInnerViewState": {
+    "b": "viewType",
+    "c": "display"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.InputToolBarViewState": {
+    "b": "viewType",
+    "c": "display"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.Int64Value": {
+    "b": "value"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.J": {
+    "b": "conversationId",
+    "c": "msgIdx",
+    "d": "id",
+    "e": "contentIdx",
+    "f": "entityId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.JumpNoticeSplit": {
+    "b": "text",
+    "c": "projectId",
+    "d": "cid"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.LinkCardReportParam": {
+    "b": "newsOpenId",
+    "c": "extendTraceId",
+    "d": "traceId",
+    "e": "operationId",
+    "f": "modId",
+    "g": "docType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.LoadOptions": {
+    "b": "direction",
+    "c": "bidirection",
+    "d": "prefetchOnly",
+    "e": "skipCgi"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.LoadingItemInfos": {
+    "b": "url",
+    "c": "md5",
+    "d": "itemId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.LuckinCouponParams": {
+    "b": "passwordActId",
+    "c": "rewardId",
+    "d": "iconUrl",
+    "e": "backgroundUrl",
+    "f": "jumpUrl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.M0": {
+    "b": "inputBoxId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.M1": {
+    "b": "msgId",
+    "c": "state"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.MDCodeImageData": {
+    "b": "selectedTabIndex",
+    "c": "code",
+    "d": "lineCode",
+    "e": "isStreaming",
+    "f": "isComplete",
+    "g": "state",
+    "h": "startRenderTimer",
+    "i": "hasSegmentControl",
+    "j": "isDark"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.MessageAbilityData": {
+    "b": "enableAiEdit",
+    "c": "enableFullPageCorrection",
+    "d": "abilityReceived"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.MessageButtonAttribute": {
+    "b": "repeatButtonHide",
+    "c": "repeatButtonDisable",
+    "d": "modifyButtonHide",
+    "e": "modifyButtonDisable",
+    "f": "copyButtonHide",
+    "g": "copyButtonDisable",
+    "h": "collectButtonHide",
+    "i": "collectButtonDisable",
+    "j": "shareButtonHide",
+    "k": "shareButtonDisable",
+    "l": "likeButtonHide",
+    "m": "likeButtonDisable",
+    "n": "unlikeButtonHide",
+    "o": "unlikeButtonDisable",
+    "p": "playButtonHide",
+    "q": "playButtonDisable",
+    "r": "quickShareToImButtonHide",
+    "s": "quickShareToImButtonDisable"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.MessageEntityItem": {
+    "b": "type",
+    "c": "textEntityItem",
+    "d": "toolCallEntityItem"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.MessageMultiAnswerData": {
+    "b": "isMultiAnswer",
+    "c": "repeatIndex",
+    "d": "multiAnswerExpGroupName",
+    "e": "isHy3MultiAnswer",
+    "f": "repeatAnswerGuideline",
+    "g": "chatModelId",
+    "h": "multiAnswerExtraInfo"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.MessageSecurityData": {
+    "b": "revokeQaPair",
+    "c": "endCurrentTopic",
+    "d": "buttonDisableOrHide"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.MultiMediaGenParams": {
+    "b": "msgId",
+    "c": "pairId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.OptionButtonMD": {
+    "b": "text",
+    "c": "selected"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.PaTodoCardEntity": {
+    "b": "title",
+    "c": "thingId",
+    "d": "todoId",
+    "e": "conversationId",
+    "f": "ownerId",
+    "g": "description",
+    "h": "kind",
+    "i": "displayRule",
+    "j": "iconUrl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.PaTodoCardListEntity": {
+    "b": "cards"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.Q": {
+    "b": "success",
+    "c": "errorCode",
+    "d": "errorMsg"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.QuestionForwardMessageEntity": {
+    "b": "a"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.QuestionTagInfo": {
+    "b": "questionTypeTag",
+    "c": "questionSubjectTag",
+    "d": "questionStageTag",
+    "e": "isQuestionTag",
+    "f": "isCompleteTag",
+    "g": "questionNumMarkingTag",
+    "h": "isSingleAnswerMarkingTag",
+    "i": "figureTableMarkingTag",
+    "j": "isPicIncluded"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.QuoteEntity": {
+    "b": "quoteText"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.RecommendCardBannerIds": {
+    "b": "bannerIds"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.RecommendCardColorInfo": {
+    "b": "cardColor",
+    "c": "titleColor",
+    "d": "subTitleColor",
+    "e": "arrowColor",
+    "f": "tagColor",
+    "g": "tagTextColor",
+    "h": "gradientColors"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.RecommendCardExpV4Info": {
+    "b": "recommendCardExpV4NewUser",
+    "c": "recommendCardExpV4ExprNeedCache",
+    "d": "recommendCardExpV4Group"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.RecommendCardInfo": {
+    "b": "id",
+    "c": "skillId",
+    "d": "category",
+    "e": "sourceType",
+    "f": "cardType",
+    "g": "cardTemplateType",
+    "h": "index",
+    "i": "title",
+    "j": "subTitle",
+    "k": "tag",
+    "l": "lightColor",
+    "m": "darkColor",
+    "n": "imageUrl",
+    "o": "cardImgAttr",
+    "p": "tagIconUrl",
+    "q": "tagIconV2Url",
+    "r": "arrowIconUrl",
+    "s": "arrowColor",
+    "t": "jumpType",
+    "u": "contentType",
+    "v": "screenOnType",
+    "w": "screenOnData",
+    "x": "activityUrl",
+    "y": "prompt",
+    "z": "jumpData",
+    "A": "interventionId",
+    "B": "showTipTypes",
+    "C": "itemResources",
+    "D": "cameraTip",
+    "E": "cameraTab",
+    "F": "isDefaultValue",
+    "G": "internetSearch",
+    "H": "chatModelId",
+    "I": "bannerId",
+    "J": "materialId",
+    "K": "materialType",
+    "L": "eventId",
+    "M": "sceneTag",
+    "N": "pushMsgId",
+    "O": "pushShowRc",
+    "P": "showsArrow"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.RecommendCardPageIdInfo": {
+    "b": "modelId",
+    "c": "internetSearchStatus"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.RecommendCardPageInfo": {
+    "b": "layout",
+    "c": "homeCardsHitType",
+    "d": "traceId",
+    "e": "expKey",
+    "f": "cardList",
+    "g": "welcomeText",
+    "h": "isFromLocalStorage",
+    "i": "isFallbackCard",
+    "j": "verticalPosition"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.RecommendCardReportParam": {
+    "b": "pageId",
+    "c": "agentId",
+    "d": "cid",
+    "e": "afterHorizontalScroll",
+    "f": "contentDisplayIncomplete"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.RecommendCardScreenOnDataItemInfo": {
+    "b": "from",
+    "c": "url",
+    "d": "type",
+    "e": "width",
+    "f": "height"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.RedPacketPasswordParams": {
+    "b": "redPacketId",
+    "c": "coverId",
+    "d": "amount",
+    "e": "statusCode",
+    "f": "password",
+    "g": "passwordId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ReplaceConfig": {
+    "b": "isLinkOptStyle"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ReplaceEntity": {
+    "b": "replaceId",
+    "c": "customKey",
+    "d": "jsonData",
+    "e": "type",
+    "f": "status",
+    "g": "display",
+    "h": "style",
+    "i": "replaceBefore",
+    "j": "replaceAfter",
+    "k": "topic",
+    "l": "sceneId",
+    "m": "drawImageRatio",
+    "n": "isDrawImageWa"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.RequireLoginParams": {
+    "b": "loginTips",
+    "c": "requireLoginType",
+    "d": "loginSource"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.SelectedMessage": {
+    "b": "msgId",
+    "c": "serverId",
+    "d": "contentIndex",
+    "e": "serverIndex",
+    "f": "questionHidden"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ShowJumpKnowledgeBaseTipParams": {
+    "b": "successCount",
+    "c": "projectId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ShowLoadingItem": {
+    "b": "itemId",
+    "c": "url",
+    "d": "imagePath"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ShowNormalLoadingItem": {
+    "b": "firstFrame",
+    "c": "showLoadingItem"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ShowRecoverLoadingItems": {
+    "b": "showLoadingItems"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.StopOptions": {
+    "b": "agentTaskId",
+    "c": "messageId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.StreamOpenedParams": {
+    "b": "messageId",
+    "c": "contentIndex"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.StringMapValue": {
+    "b": "value"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.StringValue": {
+    "b": "value"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.StringVectorValue": {
+    "b": "value"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.SuitableMessage": {
+    "b": "conversationId",
+    "c": "msgId",
+    "d": "traceId",
+    "e": "contentIndex",
+    "f": "serverIndex"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.SuitableResponse": {
+    "b": "success",
+    "c": "errorCode",
+    "d": "errorMsg"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.SwitchMainModelParams": {
+    "b": "modelId",
+    "c": "subModelId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.SwitchThinkingModeParams": {
+    "b": "modelId",
+    "c": "subId",
+    "d": "toastTip",
+    "e": "disableTips"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.TextEntityItem": {
+    "b": "text",
+    "c": "textVersion",
+    "d": "componentId",
+    "e": "toolCallName",
+    "f": "state",
+    "g": "docsJson"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.TipsSplit": {
+    "b": "status",
+    "c": "internetFlag",
+    "d": "targetFunctionId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ToolCallBubble": {
+    "b": "icon",
+    "c": "text",
+    "d": "link",
+    "e": "textColor"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ToolCallEntityItem": {
+    "b": "text",
+    "c": "textVersion",
+    "d": "componentId",
+    "e": "toolCallName",
+    "f": "styleJson",
+    "g": "state",
+    "h": "docsJson",
+    "i": "docsCount",
+    "j": "imagesJson",
+    "k": "imagesCount",
+    "l": "title"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ToolCallItem": {
+    "b": "id",
+    "c": "type",
+    "d": "textItem",
+    "e": "bubbleListItem",
+    "f": "markdownItem",
+    "g": "diffItem",
+    "h": "imageSearchItem",
+    "i": "videoSearchItem",
+    "j": "clarifyItem",
+    "k": "tdocAuthItem",
+    "l": "accessPrerequisitesItem"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ToolCallItemAccessPrerequisitesItem": {
+    "b": "id",
+    "c": "accessId",
+    "d": "status",
+    "e": "accessItems"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ToolCallItemBubbleList": {
+    "b": "bubbles",
+    "c": "overflowStyle",
+    "d": "maxLines"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ToolCallItemClarify": {
+    "b": "clarifyId",
+    "c": "status",
+    "d": "questions",
+    "e": "startTime",
+    "f": "timeout"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ToolCallItemDiff": {
+    "b": "addNum",
+    "c": "delNum"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ToolCallItemImageSearch": {
+    "b": "images"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ToolCallItemMarkdown": {
+    "b": "text"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ToolCallItemTDocAuth": {
+    "b": "id",
+    "c": "status"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ToolCallItemText": {
+    "b": "text",
+    "c": "textColor"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.ToolCallItemVideoSearch": {
+    "b": "videos"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.VideoSearchAuthor": {
+    "b": "name",
+    "c": "headImgUrl",
+    "d": "authIconUrl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.VideoSearchSource": {
+    "b": "name",
+    "c": "icon",
+    "d": "authIconUrl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.VideoSearchVideo": {
+    "b": "idx",
+    "c": "url",
+    "d": "title",
+    "e": "description",
+    "f": "duration",
+    "g": "publishTime",
+    "h": "videoType",
+    "i": "mediaId",
+    "j": "resourceUrl",
+    "k": "scene",
+    "l": "jumpUrl",
+    "m": "rawSource",
+    "n": "videoReportInfo",
+    "o": "exportId",
+    "p": "deepLink",
+    "q": "author",
+    "r": "ext"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.VideoSearchVideoExt": {
+    "b": "videoDuration",
+    "c": "likeNum",
+    "d": "lovePraiseCount",
+    "e": "feedNonceId",
+    "f": "publishTime",
+    "g": "coverRatio",
+    "h": "videoRecallQuery",
+    "i": "certifyIcon",
+    "j": "source",
+    "k": "videoFromSource",
+    "l": "videoTrackId",
+    "m": "videoIsAiTake",
+    "n": "videoSourceId",
+    "o": "videoPid",
+    "p": "videoCp"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.VoiceRecorderAutoNavigateParams": {
+    "b": "traceId",
+    "c": "recordId",
+    "d": "title"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.XCardIdentity": {
+    "b": "conversationId",
+    "c": "messageId",
+    "d": "contentIndex",
+    "e": "replaceId",
+    "f": "customKey"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.XCardWebCardLifecycleEvent": {
+    "b": "identity",
+    "c": "contentType",
+    "d": "sourceKey",
+    "e": "nativeId",
+    "f": "loadToken",
+    "g": "type",
+    "h": "renderGeneration",
+    "i": "protocolStatus",
+    "j": "errorCode",
+    "k": "errorMessage",
+    "l": "poolResult",
+    "m": "webviewReuse",
+    "n": "isOffline"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.XCardWebCardMedia": {
+    "b": "type",
+    "c": "uriPath",
+    "d": "defaultHeight",
+    "e": "copyText",
+    "f": "cardId",
+    "g": "cardData",
+    "h": "host"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.XCardWebCardRenderAdmission": {
+    "b": "allowed",
+    "c": "isProbe",
+    "d": "state",
+    "e": "probeLeaseId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.XCardWebCardRenderKey": {
+    "b": "contentType",
+    "c": "sourceKey"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.XCardWebCardViewState": {
+    "b": "identity",
+    "c": "protocolStatus",
+    "d": "phase",
+    "e": "media",
+    "f": "data"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.inputhint.ImageSugData": {
+    "b": "sugId",
+    "c": "sug",
+    "d": "sugType",
+    "e": "source",
+    "f": "templateId",
+    "g": "templateTag",
+    "h": "templateThumbUrl",
+    "i": "templatePrompt"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.inputhint.ImageSugResult": {
+    "b": "commonResponse",
+    "c": "hints",
+    "d": "cands",
+    "e": "tag",
+    "f": "tagType",
+    "g": "imageOcrJson",
+    "h": "compressedImageWidth",
+    "i": "compressedImageHeight",
+    "j": "traceId",
+    "k": "showConfig",
+    "l": "perfMetrics"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.inputhint.ImageSugShowConfig": {
+    "b": "sugType",
+    "c": "maxCount"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.inputhint.InputGuideSugCand": {
+    "b": "sug",
+    "c": "source",
+    "d": "sugId",
+    "e": "title",
+    "f": "desc",
+    "g": "image",
+    "h": "interventionSource",
+    "i": "interventionId",
+    "j": "fileList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.inputhint.InputGuideSugFileInfo": {
+    "b": "url",
+    "c": "signUrl",
+    "d": "fileName",
+    "e": "size",
+    "f": "width",
+    "g": "height",
+    "h": "uploadStatus",
+    "i": "progress",
+    "j": "type",
+    "k": "docType",
+    "l": "fileId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.inputhint.InputGuideSugResult": {
+    "b": "hintType",
+    "c": "cands",
+    "d": "traceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.inputhint.InputHintCommonResponse": {
+    "b": "success",
+    "c": "statusCode",
+    "d": "bizCode",
+    "e": "msg"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.inputhint.InputHintImageSugPerfMetrics": {
+    "b": "imageLoadDecodeMs",
+    "c": "imageResizeMs",
+    "d": "imageCompressMs",
+    "e": "base64EncodeMs",
+    "f": "apiRoundTripMs",
+    "g": "base64PayloadBytes",
+    "h": "useBase64"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.photopicker.InputBoxRelationInfo": {
+    "b": "currentInputBoxId",
+    "c": "sourceInputBoxId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.photopicker.InputBoxSnapshotData": {
+    "b": "visible",
+    "c": "text",
+    "d": "attachments",
+    "e": "inputMode",
+    "f": "placeholderText"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.photopicker.PendingPhotoPickerSend": {
+    "b": "hasPending",
+    "c": "sourceInputBoxId",
+    "d": "inputEntryType",
+    "e": "eventInputType",
+    "f": "text",
+    "g": "attachments",
+    "h": "extraDataKeys",
+    "i": "extraDataValues"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.universalcard.UniversalCardInfo": {
+    "b": "cid",
+    "c": "cardType",
+    "d": "cardId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.universalcard.f": {
+    "b": "pageSequenceId",
+    "c": "resultCode",
+    "d": "errorMessage"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.universalcard.l": {
+    "b": "info"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.universalcard.n": {
+    "b": "info",
+    "c": "requestType",
+    "d": "repeatType",
+    "e": "key",
+    "f": "answerParamJson"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.universalcard.o": {
+    "b": "info"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.v0": {
+    "b": "conversationInfoId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.bizmodel.z0": {
+    "b": "inputBoxId",
+    "c": "newState"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.AiPicEditOutsideVMData": {
+    "b": "isEditing",
+    "c": "url",
+    "d": "width",
+    "e": "height",
+    "f": "index"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.BottomSearchGuideDataContext": {
+    "b": "isFold",
+    "c": "chatModelId",
+    "d": "agentId",
+    "e": "traceId",
+    "f": "isSensitive",
+    "g": "isSearchGuide",
+    "h": "ic"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatAMenuButtonClickExtParam": {
+    "b": "selectTextLength",
+    "c": "selectText",
+    "d": "selectHtml"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatAbilities": {
+    "b": "reEdit",
+    "c": "internetSearchSwitch",
+    "d": "continueGenerate",
+    "e": "showJumpNoticeTips",
+    "f": "showAccessLocationTips",
+    "g": "showAiGenerateTips",
+    "h": "showProjectKnowledgeEmptyTips",
+    "i": "showProjectKnowledgeAddBibraryTips",
+    "j": "showGaokaoActivityTips",
+    "k": "showGaokaoShareTips",
+    "l": "showMemoryTips",
+    "m": "newContextTipsShowCreateNewConversation",
+    "n": "showAutoSearchSwitchTips"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatAnswerMediaContent": {
+    "b": "speechContentType",
+    "c": "url",
+    "d": "replaceType",
+    "e": "appCardId",
+    "f": "imageIndex",
+    "g": "imageSceneId",
+    "h": "drawImageWaType",
+    "i": "downloadUrl",
+    "j": "originUrl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatFillInputRequest": {
+    "b": "triggerSeq",
+    "c": "question",
+    "d": "hasUnderLine"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputClarifyAnswerParam": {
+    "b": "questionId",
+    "c": "optionId",
+    "d": "editOption",
+    "e": "defaultOption"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputClarifyOptions": {
+    "b": "cid",
+    "c": "msgId",
+    "d": "clarifyId",
+    "e": "repeatSource",
+    "f": "answerParam"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputMsgForwardAbstractInfo": {
+    "b": "msgCount",
+    "c": "msgTime",
+    "d": "subType",
+    "e": "msgAbstractContent",
+    "f": "singleMsgAbstractContent"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputMsgForwardItem": {
+    "b": "time",
+    "c": "sender",
+    "d": "plainText",
+    "e": "mutliMedia"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputMsgForwardMultiMedia": {
+    "b": "type",
+    "c": "content",
+    "d": "path",
+    "e": "size",
+    "f": "width",
+    "g": "height"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputMsgForwardUpload": {
+    "b": "chatModelId",
+    "c": "subType",
+    "d": "msg",
+    "e": "forwardFrom"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputMsgForwardUploadProgress": {
+    "b": "taskId",
+    "c": "percent"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputMsgForwardZipUpload": {
+    "b": "chatModelId",
+    "c": "preparedTaskId",
+    "d": "subType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputQuickPanelWelfareCenterDetailData": {
+    "b": "descText",
+    "c": "descColor",
+    "d": "descColorDark",
+    "e": "descTextIsBold",
+    "f": "descLightTextIsBold",
+    "g": "descLightText",
+    "h": "descLightColor",
+    "i": "descLightColorDark",
+    "j": "descImgUrl",
+    "k": "descImgUrlDark",
+    "l": "clickUrl",
+    "m": "isValid"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatInputUniversalCardOptions": {
+    "b": "cid",
+    "c": "cardId",
+    "d": "cardType",
+    "e": "key",
+    "f": "answerParamJsonStr"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ChatSuccessTipsWnd": {
+    "b": "visible",
+    "c": "type",
+    "d": "message",
+    "e": "primaryActionText",
+    "f": "closeVisible",
+    "g": "autoDismissMillis"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ConnectorAuthPermissionParams": {
+    "b": "connectorId",
+    "c": "cardId",
+    "d": "authUrl",
+    "e": "pageSequenceId",
+    "f": "authKind"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ConversationConfig": {
+    "b": "modelId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.CopyExcerptClickOptions": {
+    "b": "excerptText"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.DTMPRichImageBox": {
+    "b": "type",
+    "c": "status",
+    "d": "replaceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.DownloadProgressResponse": {
+    "b": "sessionId",
+    "c": "url",
+    "d": "receivedLength",
+    "e": "totalLength"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.DownloadResponse": {
+    "b": "sessionId",
+    "c": "url",
+    "d": "path",
+    "e": "downloadStates",
+    "f": "downloadResult",
+    "g": "httpStatusCode",
+    "h": "connErrorCode",
+    "i": "detailErrorCode"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.DuplicateToastData": {
+    "b": "valid",
+    "c": "message"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.EduQuestionImageContext": {
+    "b": "rawImage",
+    "c": "overlayImage",
+    "d": "bizType",
+    "e": "imageQuestionScene",
+    "f": "imageQuestionSource"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ExitMultiAnswerState": {
+    "b": "conversationId",
+    "c": "msgId",
+    "d": "contentIndex"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.FavoriteExcerptClickOptions": {
+    "b": "excerptText"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.FeedbackTag": {
+    "b": "id",
+    "c": "label",
+    "d": "groupTitle"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ImageSugCandidate": {
+    "b": "sugId",
+    "c": "sug",
+    "d": "sugType",
+    "e": "source",
+    "f": "templateId",
+    "g": "templateTag",
+    "h": "templateThumbUrl",
+    "i": "templatePrompt"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ImageSugCommonResponse": {
+    "b": "success",
+    "c": "statusCode",
+    "d": "bizCode",
+    "e": "msg"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ImageSugPerfMetrics": {
+    "b": "imageLoadDecodeMs",
+    "c": "imageResizeMs",
+    "d": "imageCompressMs",
+    "e": "base64EncodeMs",
+    "f": "apiRoundTripMs",
+    "g": "base64PayloadBytes",
+    "h": "useBase64"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ImageSugResultData": {
+    "b": "commonResponse",
+    "c": "hints",
+    "d": "cands",
+    "e": "tag",
+    "f": "tagType",
+    "g": "imageOcrJson",
+    "h": "compressedImageWidth",
+    "i": "compressedImageHeight",
+    "j": "traceId",
+    "k": "showConfig",
+    "l": "perfMetrics"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ImageSugShowConfigItem": {
+    "b": "sugType",
+    "c": "maxCount"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.InputAttachmentData": {
+    "b": "valid",
+    "c": "attachmentId",
+    "d": "url",
+    "e": "filePath",
+    "f": "thumbnailPath",
+    "g": "width",
+    "h": "height",
+    "i": "loadStatus",
+    "j": "fileName",
+    "k": "attachmentSize",
+    "l": "imageSource",
+    "m": "progress",
+    "n": "extra"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.InputAttachmentItemCore": {
+    "b": "attachmentId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.InputHintItem": {
+    "b": "id",
+    "c": "title",
+    "d": "prompt",
+    "e": "sugType",
+    "f": "templateId",
+    "g": "templateThumbUrl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.InputHintListDataSource": {
+    "b": "status",
+    "c": "items",
+    "d": "errorMessage"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.InputHintShowConfig": {
+    "b": "sugType",
+    "c": "maxCount"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.InputHintShowConfigList": {
+    "b": "items"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.InternetSearch": {
+    "b": "openInternetSearch",
+    "c": "autoInternetSearch"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.LoadingImageItem": {
+    "b": "url",
+    "c": "md5"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.LocationAccessPermissionParams": {
+    "b": "cardId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.LocationPermissionParams": {
+    "b": "traceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MDCodeHeaderTabState": {
+    "b": "selectedTabIndex",
+    "c": "hasSegmentControl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MarkdownEntityData": {
+    "b": "type",
+    "c": "entityId",
+    "d": "markdown",
+    "e": "version",
+    "f": "msgId",
+    "g": "itemId",
+    "h": "replaceDataList",
+    "i": "searchGuideDocs"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MeetingAuthPermissionParams": {
+    "b": "appName"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.Menu": {
+    "b": "scene",
+    "c": "isVisible",
+    "d": "groups"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MenuGroup": {
+    "b": "title",
+    "c": "items"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MessageLevelOverrides": {
+    "b": "chatModelId",
+    "c": "internetSearchFunctionId",
+    "d": "interventionId",
+    "e": "chatSource"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MicrophoneAuthPermissionParams": {
+    "b": "traceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.MsgRecommendCardPage": {
+    "b": "traceId",
+    "c": "cardList",
+    "d": "homeCardsHitType",
+    "e": "uiStyle",
+    "f": "layout"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.NotificationPermissionGuideDisplay": {
+    "b": "canShow",
+    "c": "title",
+    "d": "subtitle",
+    "e": "actionText",
+    "f": "lottie",
+    "g": "expGroupId",
+    "h": "positionCode"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.NotificationPermissionGuideFreqConfig": {
+    "b": "windowDays",
+    "c": "maxTotalShow",
+    "d": "expGroupId",
+    "e": "firstLaunchGraceHours",
+    "f": "allowVisitor"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.OpenFileResponse": {
+    "b": "sessionId",
+    "c": "url",
+    "d": "fileStates"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.OpenPreviewData": {
+    "b": "valid",
+    "c": "image"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.PromptHintClickState": {
+    "b": "conversationId",
+    "c": "contentIndex",
+    "d": "hintJson",
+    "e": "isSensitive",
+    "f": "totalNode",
+    "g": "index",
+    "h": "traceId",
+    "i": "ic"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.QMenuButtons": {
+    "b": "buttons",
+    "c": "excerptButtons",
+    "d": "bottomButtons"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ReplaceBaseEntity": {
+    "b": "type",
+    "c": "status",
+    "d": "replaceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ReplaceDataId": {
+    "b": "conversationId",
+    "c": "messageId",
+    "d": "contentIndex",
+    "e": "replaceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ResetResponse": {
+    "b": "contextId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.SaveContextResponse": {
+    "b": "contextId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.SaveLoadedImageResponse": {
+    "b": "contextId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.SaveToKnowledgeClickOptions": {
+    "b": "projectId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ScreenshotShareChannelItem": {
+    "b": "channel"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.SearchGuideCitationClickState": {
+    "b": "conversationId",
+    "c": "msgId",
+    "d": "contentIndex",
+    "e": "docsJson",
+    "f": "isFold",
+    "g": "traceId",
+    "h": "chatModelId",
+    "i": "isSensitive",
+    "j": "isSearchGuide",
+    "k": "ic",
+    "l": "agentId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ShowImageItem": {
+    "b": "itemId",
+    "c": "url",
+    "d": "imagePath"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ShowNormalImage": {
+    "b": "contextId",
+    "c": "firstFrame",
+    "d": "showImageItem"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.ShowRecoverImage": {
+    "b": "contextId",
+    "c": "showImageItems"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.StreamLifecycleEvent": {
+    "b": "seq",
+    "c": "conversationId",
+    "d": "type",
+    "e": "params"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.TencentDocAuthPermissionParams": {
+    "b": "tdocAuthId",
+    "c": "cardId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.UIBoolValue": {
+    "b": "value"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.UIInt64Value": {
+    "b": "value"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.UIStringMapValue": {
+    "b": "value"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.UIStringValue": {
+    "b": "value"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.UIStringVectorValue": {
+    "b": "value"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.XCardDataIdentity": {
+    "b": "conversationId",
+    "c": "messageId",
+    "d": "contentIndex",
+    "e": "replaceId",
+    "f": "customKey"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.XCardDataState": {
+    "b": "identity",
+    "c": "dataToken",
+    "d": "cardId",
+    "e": "mode",
+    "f": "dataSource",
+    "g": "protocolStatus",
+    "h": "phase",
+    "i": "message",
+    "j": "revision",
+    "k": "errorCode"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.XCardWebAdmissionState": {
+    "b": "resolved",
+    "c": "allowed",
+    "d": "errorTitle",
+    "e": "errorMessage"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.XCardWebIdentity": {
+    "b": "conversationId",
+    "c": "messageId",
+    "d": "contentIndex",
+    "e": "replaceId",
+    "f": "customKey"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.XCardWebInjectedData": {
+    "b": "contentType",
+    "c": "uriPath",
+    "d": "cardId",
+    "e": "cardData",
+    "f": "hasInlineData",
+    "g": "copyText",
+    "h": "host"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.XCardWebViewState": {
+    "b": "protocolStatus",
+    "c": "phase",
+    "d": "contentType",
+    "e": "uriPath",
+    "f": "defaultHeight",
+    "g": "hasData",
+    "h": "host"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.agentinputguide.AgentInputGuideFileInfo": {
+    "b": "url",
+    "c": "signUrl",
+    "d": "fileName",
+    "e": "size",
+    "f": "width",
+    "g": "height",
+    "h": "uploadStatus",
+    "i": "progress",
+    "j": "type",
+    "k": "docType",
+    "l": "fileId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ActionButtonItem": {
+    "b": "type",
+    "c": "scene",
+    "d": "eduBizType",
+    "e": "isActivated",
+    "f": "title",
+    "g": "iconName"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ActionContainerState": {
+    "b": "actions"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ActionSceneItem": {
+    "b": "scene",
+    "c": "type"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.AiTaskCardListData": {
+    "b": "cards"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.AiTaskCardListItem": {
+    "b": "valid",
+    "c": "taskScene",
+    "d": "taskStatus",
+    "e": "title",
+    "f": "taskId",
+    "g": "aiTaskId",
+    "h": "thingId",
+    "i": "todoId",
+    "j": "content",
+    "k": "rrule",
+    "l": "source",
+    "m": "displayRule",
+    "n": "meetingTaskId",
+    "o": "meetingToken",
+    "p": "aiTaskCreateSource",
+    "q": "aiTaskExtraInfo",
+    "r": "startTime",
+    "s": "endTime",
+    "t": "needPopup"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.AiTaskCardListItemRule": {
+    "b": "freq",
+    "c": "interval",
+    "d": "count",
+    "e": "until",
+    "f": "dtstart",
+    "g": "offsetOfHour",
+    "h": "offsetOfMinute"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.BottomPanelDataContext": {
+    "b": "isFold",
+    "c": "chatModelId",
+    "d": "agentId",
+    "e": "traceId",
+    "f": "isSensitive",
+    "g": "isSearchGuide",
+    "h": "ic"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ChatADeepSearchAgentClarifyCardSelectedOptions": {
+    "b": "selectedOptions"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.CodePreviewContinueStep": {
+    "b": "text"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.CodePreviewJumpInfo": {
+    "b": "isShow",
+    "c": "agentId",
+    "d": "conversationId",
+    "e": "msgId",
+    "f": "traceId",
+    "g": "modelId",
+    "h": "questionMsgId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.CodePreviewText": {
+    "b": "text"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.CodeRenderToImageData": {
+    "b": "code",
+    "c": "isStreaming",
+    "d": "isComplete"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentBubble": {
+    "b": "iconUrl",
+    "c": "text",
+    "d": "textColor",
+    "e": "link"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentBubbleList": {
+    "b": "id",
+    "c": "entityId",
+    "d": "componentId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentBubbleListData": {
+    "b": "bubbles",
+    "c": "overflowStyle",
+    "d": "maxLines"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentClarifyAnswer": {
+    "b": "selectedOptions",
+    "c": "editOption",
+    "d": "defaultOption"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentClarifyOption": {
+    "b": "optionId",
+    "c": "text"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentClarifyQuestion": {
+    "b": "question",
+    "c": "questionId",
+    "d": "options",
+    "e": "editOptionHint",
+    "f": "multiSelect",
+    "g": "answer"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentClarifyToolCallItem": {
+    "b": "id",
+    "c": "entityId",
+    "d": "componentId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentClarifyToolCallItemData": {
+    "b": "status",
+    "c": "questions",
+    "d": "startTime",
+    "e": "timeout"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentColor": {
+    "b": "light",
+    "c": "lightShimmerShineColor",
+    "d": "lightShimmerBaseColor",
+    "e": "dark",
+    "f": "darkShimmerShineColor",
+    "g": "darkShimmerBaseColor"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentDiffToolCallItem": {
+    "b": "id",
+    "c": "entityId",
+    "d": "componentId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentDiffToolCallItemData": {
+    "b": "addNum",
+    "c": "delNum"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentImageSearchImage": {
+    "b": "idx",
+    "c": "url",
+    "d": "urlHigh",
+    "e": "prompt",
+    "f": "source",
+    "g": "sourceUrl",
+    "h": "width",
+    "i": "height"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentImageSearchToolCallItem": {
+    "b": "id",
+    "c": "entityId",
+    "d": "componentId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentImageSearchToolCallItemData": {
+    "b": "images"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentMarkdownToolCallItem": {
+    "b": "id",
+    "c": "entityId",
+    "d": "componentId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentMarkdownToolCallItemData": {
+    "b": "text",
+    "c": "textVersion",
+    "d": "isStreaming"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentTextToolCallItem": {
+    "b": "id",
+    "c": "entityId",
+    "d": "componentId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentTextToolCallItemData": {
+    "b": "text",
+    "c": "textColor"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentToolCallItem": {
+    "b": "item"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentToolCallItemList": {
+    "b": "data"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentVideoSearchAuthor": {
+    "b": "name",
+    "c": "headImgUrl",
+    "d": "authIconUrl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentVideoSearchExt": {
+    "b": "videoDuration",
+    "c": "likeNum",
+    "d": "lovePraiseCount",
+    "e": "feedNonceId",
+    "f": "publishTime",
+    "g": "coverRatio",
+    "h": "videoRecallQuery",
+    "i": "certifyIcon",
+    "j": "source",
+    "k": "videoFromSource",
+    "l": "videoTrackId",
+    "m": "videoIsAiTake",
+    "n": "videoSourceId",
+    "o": "videoPid",
+    "p": "videoCp"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentVideoSearchSource": {
+    "b": "name",
+    "c": "icon",
+    "d": "authIconUrl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentVideoSearchToolCallItem": {
+    "b": "id",
+    "c": "entityId",
+    "d": "componentId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentVideoSearchToolCallItemData": {
+    "b": "videos"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchAgentVideoSearchVideo": {
+    "b": "idx",
+    "c": "url",
+    "d": "title",
+    "e": "description",
+    "f": "duration",
+    "g": "publishTime",
+    "h": "videoType",
+    "i": "mediaId",
+    "j": "resourceUrl",
+    "k": "scene",
+    "l": "jumpUrl",
+    "m": "rawSource",
+    "n": "videoReportInfo",
+    "o": "exportId",
+    "p": "deepLink",
+    "q": "author",
+    "r": "ext"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchEntityItem": {
+    "b": "type",
+    "c": "textEntityItem",
+    "d": "toolCallEntityItem",
+    "e": "itemIds",
+    "f": "traceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchEntityItems": {
+    "b": "items"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchItemId": {
+    "b": "entityId",
+    "c": "itemIdx"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchTextEntityItem": {
+    "b": "text",
+    "c": "textVersion",
+    "d": "componentId",
+    "e": "toolCallName",
+    "f": "state",
+    "g": "docsJson"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DeepSearchToolCallEntityItem": {
+    "b": "componentId",
+    "c": "toolCallName",
+    "d": "styleJson",
+    "e": "state",
+    "f": "docsJson",
+    "g": "title"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.DocPercentData": {
+    "b": "valid",
+    "c": "content",
+    "d": "fileNumber"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.LifeHubCardContent": {
+    "b": "title",
+    "c": "buttonText",
+    "d": "image"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.LifeHubCardData": {
+    "b": "valid",
+    "c": "text",
+    "d": "subType",
+    "e": "jumpUrl",
+    "f": "cardContent"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.MarkdownItemData": {
+    "b": "markdown",
+    "c": "version",
+    "d": "msgId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.MarkdownTextSelectionFormatRange": {
+    "b": "type",
+    "c": "startCodepoint",
+    "d": "endCodepoint"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.MdSearchGuideDocItem": {
+    "b": "refSourceWeight",
+    "c": "disableRefInMainText",
+    "d": "citationDisplayIcon",
+    "e": "citationDisplayName",
+    "f": "citationDisplayIconDark",
+    "g": "sourceType",
+    "h": "docIndex"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.MeetingBotGuideData": {
+    "b": "valid",
+    "c": "text",
+    "d": "iconType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.MeetingBotTaskCardData": {
+    "b": "valid",
+    "c": "taskId",
+    "d": "title",
+    "e": "startTime",
+    "f": "endTime",
+    "g": "taskUrl",
+    "h": "periodicRule",
+    "i": "meetingToken",
+    "j": "meetingTaskId",
+    "k": "taskStatus",
+    "l": "taskScene"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.MeetingBotTaskFileData": {
+    "b": "valid",
+    "c": "taskId",
+    "d": "title",
+    "e": "startTime",
+    "f": "endTime",
+    "g": "periodicRule",
+    "h": "multimedias",
+    "i": "taskScene"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.MessageContentList": {
+    "b": "contentList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.MessageContextInfo": {
+    "b": "conversationId",
+    "c": "msgId",
+    "d": "traceId",
+    "e": "agentId",
+    "f": "questionMsgId",
+    "g": "chatModelId",
+    "h": "isAgentMode"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.MistakeTip": {
+    "b": "showTip",
+    "c": "isAdded"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.MultiAnswerContentItem": {
+    "b": "contentId",
+    "c": "traceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.PaTodoCardListData": {
+    "b": "cards"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.PaTodoCardListItem": {
+    "b": "valid",
+    "c": "title",
+    "d": "thingId",
+    "e": "todoId",
+    "f": "conversationId",
+    "g": "ownerId",
+    "h": "description",
+    "i": "kind",
+    "j": "displayRule",
+    "k": "iconUrl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ShowDocWnd": {
+    "b": "visible",
+    "c": "doc"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ToolCallContext": {
+    "b": "agentId",
+    "c": "conversationId",
+    "d": "isSensitive",
+    "e": "traceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ToolCallDocItem": {
+    "b": "linkUrl"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.ToolCallItemData": {
+    "b": "componentId",
+    "c": "toolCallName",
+    "d": "styleJson",
+    "e": "state",
+    "f": "docsJson",
+    "g": "imagesJson",
+    "h": "title",
+    "i": "msg"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.answer.entity.VoiceRecorderCardInfo": {
+    "b": "recordId",
+    "c": "title",
+    "d": "timestamp",
+    "e": "content",
+    "f": "status",
+    "g": "deviceId",
+    "h": "deviceMatch",
+    "i": "durationMs",
+    "j": "reviewStatus",
+    "k": "tempContent",
+    "l": "tipsMsg",
+    "m": "entry",
+    "n": "agentId",
+    "o": "traceId",
+    "p": "cid",
+    "q": "msgIndx",
+    "r": "isStreaming"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.photopicker.PhotoPickerInputBoxDisplayData": {
+    "b": "display",
+    "c": "animation",
+    "d": "attachmentList"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.photopickerinputhint.AttachmentUploadAggregateState": {
+    "b": "hasLoading",
+    "c": "hasFailed"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.ImMsgCardForwardMessageData": {
+    "b": "content",
+    "c": "forwardMsgTitle",
+    "d": "forwardMsgId",
+    "e": "msgCount",
+    "f": "msgTime"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.ImMsgCardPage": {
+    "b": "conversationId",
+    "c": "forwardMsgId",
+    "d": "useNewNavbar"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.MeetingAiNotesSaveContext": {
+    "b": "agentId",
+    "c": "conversationId",
+    "d": "isSensitive",
+    "e": "traceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.MeetingHostContext": {
+    "b": "agentId",
+    "c": "conversationId",
+    "d": "isSensitive",
+    "e": "traceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.OpenForwardMessagePage": {
+    "b": "conversationId",
+    "c": "forwardMsgId",
+    "d": "useNewNavbar"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.OpenLinkData": {
+    "b": "valid",
+    "c": "openExternally",
+    "d": "url",
+    "e": "webUrl",
+    "f": "agentId",
+    "g": "conversationId",
+    "h": "traceId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.OpenPromptUrlCardLinkData": {
+    "b": "valid",
+    "c": "url",
+    "d": "agentId",
+    "e": "conversationId",
+    "f": "traceId",
+    "g": "isWxChannel"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.PromptUrlCardData": {
+    "b": "url",
+    "c": "coverUrl",
+    "d": "iconUrl",
+    "e": "source",
+    "f": "content",
+    "g": "exportId",
+    "h": "linkType"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.QuestionForwardMessageData": {
+    "b": "content",
+    "c": "forwardMsgId",
+    "d": "msgCount",
+    "e": "msgTime",
+    "f": "extra"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.QuestionLinkCardData": {
+    "b": "url",
+    "c": "clickJumpUrl",
+    "d": "coverUrl",
+    "e": "iconUrl",
+    "f": "source",
+    "g": "content",
+    "h": "externalParam"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.QuestionMeetingAiNotesSaveData": {
+    "b": "linkUrl",
+    "c": "content",
+    "d": "msgId",
+    "e": "defaultMsg"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.QuestionMeetingHostData": {
+    "b": "linkUrl",
+    "c": "content",
+    "d": "msgId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.question.entity.QuestionOralEvaluationData": {
+    "b": "pronunciation",
+    "c": "grammar",
+    "d": "pronLevel",
+    "e": "msgId"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.tips.entity.CommonV1Tips": {
+    "b": "type",
+    "c": "text",
+    "d": "link",
+    "e": "linkUrl",
+    "f": "icon",
+    "g": "darkIcon",
+    "h": "bannerId",
+    "i": "activitySource"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.tips.entity.FeedbackTips": {
+    "b": "title",
+    "c": "plugin",
+    "d": "helpfulBtn",
+    "e": "notHelpfulBtn",
+    "f": "notHelpfulItems"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.tips.entity.JumpNoticeTips": {
+    "b": "text",
+    "c": "projectId",
+    "d": "cid"
+  },
+  "com.tencent.hunyuan.mpcommon.generated.biz.chat.viewmodel.tips.entity.OptionButton": {
+    "b": "text",
+    "c": "selected"
+  }
+}

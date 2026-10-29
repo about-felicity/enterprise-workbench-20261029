@@ -1,0 +1,50 @@
+{
+  "run_id": "rank01-structure-real-20261023T141521-70888873",
+  "status": "structure_incomplete",
+  "error": null,
+  "real_completion_calls": 5,
+  "balance_checks": 5,
+  "known_cost_cny": 0.025883839999999998,
+  "validation": {
+    "status": "not_complete",
+    "passed": false,
+    "source_blocks": 84,
+    "failures": []
+  },
+  "restoration": {
+    "at": 1792736184.9137824,
+    "settings_before": {
+      "start_time": "05:00",
+      "max_per_category": 10,
+      "deepseek_interval": 600,
+      "search_interval": 60,
+      "article_budget_cny": 0.35,
+      "daily_budget_cny": 10,
+      "test_budget_cny": 1.3,
+      "max_revisions": 1
+    },
+    "settings_after": {
+      "start_time": "05:00",
+      "max_per_category": 10,
+      "deepseek_interval": 600,
+      "search_interval": 60,
+      "article_budget_cny": 0.35,
+      "daily_budget_cny": 10,
+      "test_budget_cny": 1.3,
+      "max_revisions": 1
+    },
+    "shared_exactly_restored": true,
+    "isolated_job_restored": true,
+    "original_job_unchanged": true
+  },
+  "preservation": {
+    "protected_unchanged": true,
+    "old_ledger_rows_unchanged": true,
+    "new_rows_only_this_run": true,
+    "unknown_preserved": true,
+    "new_unknown": [],
+    "no_writer_reviewer_repair_deploy": true,
+    "original_job_id": "creation-1792575159-0a8f9221",
+    "scope": "plan-33e7bfca8bb6497da10b28f0444a693b"
+  }
+}

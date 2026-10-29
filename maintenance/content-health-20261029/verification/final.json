@@ -1,0 +1,112 @@
+{
+  "at": "2026-10-29T09:21:45.117134+08:00",
+  "tasks": [
+    {
+      "name": "梵玢防脱精华",
+      "status": "complete",
+      "articles": 11,
+      "error": ""
+    },
+    {
+      "name": "睫毛增长液每天",
+      "status": "scheduled",
+      "articles": 0,
+      "error": ""
+    },
+    {
+      "name": "眉毛增长液每天",
+      "status": "scheduled",
+      "articles": 0,
+      "error": ""
+    },
+    {
+      "name": "美白1",
+      "status": "scheduled",
+      "articles": 0,
+      "error": ""
+    },
+    {
+      "name": "眼霜",
+      "status": "scheduled",
+      "articles": 0,
+      "error": ""
+    },
+    {
+      "name": "小绿瓶防脱",
+      "status": "complete",
+      "articles": 10,
+      "error": ""
+    },
+    {
+      "name": "科熙本控油蓬松洗发水日常创作",
+      "status": "complete",
+      "articles": 32,
+      "error": ""
+    },
+    {
+      "name": "梵玢防脱洗发水",
+      "status": "complete",
+      "articles": 17,
+      "error": ""
+    },
+    {
+      "name": "科熙本造型喷雾",
+      "status": "supplementing",
+      "articles": 10,
+      "error": "本轮仍缺少合格素材，等待轮换补采其他未完成问题"
+    },
+    {
+      "name": "梵玢祛痘精华",
+      "status": "complete",
+      "articles": 34,
+      "error": ""
+    },
+    {
+      "name": "小红瓶防脱",
+      "status": "complete",
+      "articles": 9,
+      "error": ""
+    },
+    {
+      "name": "科熙本防脱精华",
+      "status": "scheduled",
+      "articles": 0,
+      "error": ""
+    },
+    {
+      "name": "眼霜日常创造",
+      "status": "scheduled",
+      "articles": 0,
+      "error": ""
+    }
+  ],
+  "articles": 123,
+  "article_states": {
+    "ready": 123
+  },
+  "scheduler_health": {
+    "at": 1793236908.426764,
+    "status": "ready"
+  },
+  "supplement": {
+    "status": "waiting",
+    "question": "推荐一款男士造型喷雾",
+    "attempt": 8,
+    "root": "/opt/monitor/geo-content/studio/capture/plan-4c988f3863344f52aff3aa2b1f96beb2/supplements/2026-10-29/4e0967ebdd3c/round-8",
+    "channels": [
+      "baidu_ai",
+      "wenxin_card"
+    ],
+    "unit": "creation-supplement-7d4fbe5ab8ba3c1748b9b5af",
+    "started_at": 1793235284.4218535,
+    "message": "本轮仍缺少合格素材，等待轮换补采其他未完成问题",
+    "next_at": 1793237177.0432997
+  },
+  "gateway_http": 200,
+  "uploads_http": 200,
+  "services": [
+    "active",
+    "active",
+    "active"
+  ]
+}

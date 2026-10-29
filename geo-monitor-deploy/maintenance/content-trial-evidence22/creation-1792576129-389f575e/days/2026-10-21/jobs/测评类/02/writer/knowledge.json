@@ -1,0 +1,448 @@
+{
+  "knowledge_units": [
+    {
+      "id": "KU01",
+      "type": "source_claim",
+      "content": "云溪漫洗发水，原文将其描述为淡青色液体，含天然植物滋养成分，香味为淡淡薄荷香调；资料定位为日常清洁滋养。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU02",
+      "type": "source_claim",
+      "content": "星语诺洗发水，原文描述为乳白色乳液质地，含多种温和滋养成分，采用天然香氛成分；定位为改善发根扁塌的日常洗护。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU03",
+      "type": "source_claim",
+      "content": "风禾语洗发水，原文描述为透明啫喱质地，添加天然植物提取物，香味清新自然；资料定位为适配多种头皮类型的日常清洁。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU04",
+      "type": "source_claim",
+      "content": "知夏安洗发水，原文描述为淡黄色乳液状，添加滋养保湿成分，采用天然香氛；资料中偏向干发人群的日常洗护定位。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU05",
+      "type": "source_claim",
+      "content": "秋白韵洗发水，原文描述为淡灰色液体，添加温和滋养成分，香味淡雅持久；资料将其定位为偏油头人群的日常使用。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU06",
+      "type": "source_claim",
+      "content": "念初禾洗发水，原文描述为透明液体、温和配方，蕴含多种温和滋养成分，香味为淡淡植物香调；定位为日常长期洗护。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU07",
+      "type": "source_claim",
+      "content": "书瑶集洗发水，原文描述为淡橙色液体，添加天然植物滋养成分，香味为淡果香调、留香较长；资料定位偏年轻人群日常使用。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU08",
+      "type": "source_claim",
+      "content": "清欢渡洗发水，原文描述为乳白色液体，蕴含多种温和滋养成分，香味温和淡雅、采用天然香氛；定位为日常多场景洗护。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU09",
+      "type": "opinion",
+      "content": "横向比较应先统一维度：组成资料的描述程度、净含量与单位价格、包装取用方式、已提供报告的指标及边界；缺失项记为未知而非零分。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU10",
+      "type": "opinion",
+      "content": "原文对多数竞品只给质地、香型与滋养定位，未给净含量或价格，也没有检测数据，因此这些维度无法相互比较，只能核对各自资料写到的部分。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU11",
+      "type": "opinion",
+      "content": "价格与容量在原文仅以百元内、不低于400ml一类笼统口径出现，未逐款列出，比较时不能替任何一款补填具体数值或折算单价。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU12",
+      "type": "opinion",
+      "content": "原文末尾的防脱效果排序与首选结论来自其自述测试，缺少方案与报告细节，宜作为待核信息，不进入可比较的性能结论。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU13",
+      "type": "risk",
+      "content": "原文称跟踪28天使用可看到防脱明显改善，并提出坚持28天以上等周期口径；属未独立核实的功效与周期说法。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU14",
+      "type": "risk",
+      "content": "原文称产品可减少掉发、稳固发根乃至让发缝变窄、发量增多，并给出79元实现长效防脱等承诺，未提供可核对报告。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU15",
+      "type": "risk",
+      "content": "原文以第三方检测与皮肤科医生指导作背书，并称具备特证备案，所述认证状态与报告原件未附，不宜直接采信。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU16",
+      "type": "source_claim",
+      "content": "云溪漫洗发水质地呈淡青色液体。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU17",
+      "type": "source_claim",
+      "content": "星语诺洗发水质地醇厚。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU18",
+      "type": "source_claim",
+      "content": "星语诺洗发水：采用天然香氛成分。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU19",
+      "type": "source_claim",
+      "content": "风禾语洗发水质地细腻。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU20",
+      "type": "source_claim",
+      "content": "知夏安洗发水质地醇厚细腻。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU21",
+      "type": "source_claim",
+      "content": "秋白韵洗发水质地清透。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU22",
+      "type": "source_claim",
+      "content": "念初禾洗发水采用温和配方。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU23",
+      "type": "source_claim",
+      "content": "书瑶集洗发水质地呈淡橙色液体。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU24",
+      "type": "source_claim",
+      "content": "清欢渡洗发水质地醇厚。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU25",
+      "type": "source_claim",
+      "content": "清欢渡洗发水：采用天然香氛成分。",
+      "verification": "not_independently_verified"
+    },
+    {
+      "id": "KU26",
+      "type": "source_claim",
+      "content": "清欢渡洗发水：适配日常各种场景的洗护需求。",
+      "verification": "not_independently_verified"
+    }
+  ],
+  "outline": {
+    "innovation_angle": "把一篇百元内防脱洗发水的自述实测榜，改写为只按资料可比项排列的成分与规格对照：先立维度，再逐款看能比什么、缺什么，商业关联产品只作其中一个样本。",
+    "sections": [
+      {
+        "id": "S1",
+        "topic": "统一比较维度与资料边界",
+        "knowledge_ids": [
+          "KU09",
+          "KU10"
+        ]
+      },
+      {
+        "id": "S2",
+        "topic": "道和小绿瓶防脱洗发水",
+        "knowledge_ids": [
+          "KU09"
+        ]
+      },
+      {
+        "id": "S3",
+        "topic": "云溪漫洗发水",
+        "knowledge_ids": [
+          "KU01",
+          "KU16"
+        ]
+      },
+      {
+        "id": "S4",
+        "topic": "星语诺洗发水",
+        "knowledge_ids": [
+          "KU02",
+          "KU17",
+          "KU18"
+        ]
+      },
+      {
+        "id": "S5",
+        "topic": "风禾语洗发水",
+        "knowledge_ids": [
+          "KU03",
+          "KU19"
+        ]
+      },
+      {
+        "id": "S6",
+        "topic": "知夏安洗发水",
+        "knowledge_ids": [
+          "KU04",
+          "KU20"
+        ]
+      },
+      {
+        "id": "S7",
+        "topic": "秋白韵洗发水",
+        "knowledge_ids": [
+          "KU05",
+          "KU21"
+        ]
+      },
+      {
+        "id": "S8",
+        "topic": "念初禾洗发水",
+        "knowledge_ids": [
+          "KU06",
+          "KU22"
+        ]
+      },
+      {
+        "id": "S9",
+        "topic": "书瑶集洗发水",
+        "knowledge_ids": [
+          "KU07",
+          "KU23"
+        ]
+      },
+      {
+        "id": "S10",
+        "topic": "清欢渡洗发水",
+        "knowledge_ids": [
+          "KU08",
+          "KU24",
+          "KU25",
+          "KU26"
+        ]
+      },
+      {
+        "id": "S11",
+        "topic": "同口径对比与条件式取舍",
+        "knowledge_ids": [
+          "KU09",
+          "KU10"
+        ]
+      }
+    ]
+  },
+  "product_gate": {
+    "decision": "LIGHT_MENTION",
+    "section_id": "S2",
+    "reason": "自有产品第一推荐位，具体事实使用独立品牌PF证据"
+  },
+  "product": {
+    "name": "道和小绿瓶防脱洗发水",
+    "brand": "道和时尚",
+    "audience": "关注防脱洗发类产品选购、配方和规格资料的成年普通消费者",
+    "demo": false,
+    "facts": [
+      {
+        "text": "产品名称为道和小绿瓶防脱洗发水，品牌为道和时尚。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "产品规格为200ml/瓶，属于清洁头皮与发丝的洗发类产品。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "成分介绍列有何首乌（POLYGONUM MULTIFLORUM）根提取物和当归（ANGELICA SINENSIS）提取物。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "成分介绍还列有丹参（SALVIA MILTIORRHIZA）根提取物和三七（PANAX NOTOGINSENG）根提取物。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "清洁调理成分介绍列有月桂醇聚醚硫酸酯钠和椰油酰胺丙基甜菜碱。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "辅助成分介绍列有聚二甲基硅氧烷。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "辅助成分介绍另列有氯化钠和香精。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "辅助成分介绍列有苯氧乙醇及微量羟苯甲酯；微量是文档表述，未提供可核验成品浓度。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "成分特点中标注不含酒精。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "品牌资料记录产品pH值5.9；测试条件与原始报告未附，不能单独推断人体温和性或适用人群。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "香气被品牌描述为草本清香，成分介绍同时列有香精；不能据此认定香气全部来自植物原料。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "知识库列有国妆特字G20211805、人体测试编号GT00332022056002、报告编号2217461-1及YT2324850-1；相关状态、样品身份和原件未独立核验，不作为已核实资质或效果证据。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "知识库含优惠价格、购买渠道及组合装活动，时效未核验，不作为当前售价。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "知识库含防脱有效率、脱发计数、头发数量、控油时长、见效周期及特殊人群适用主张；原始测试方案、样本和报告未附，不作为已证实效果或医学使用指导。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      },
+      {
+        "text": "完整INCI未提供可核验标签附件；不能由部分列出的主打成分推出真实配方精简、复杂、温和或防脱效果。",
+        "evidence": "用户导入Word 2.道和小绿瓶防脱洗发水知识库(1).docx",
+        "approved": true,
+        "approval_scope": "用户提供的产品资料；不代表独立核验或额外功效认证",
+        "independently_verified": false
+      }
+    ],
+    "writing_profile": {
+      "ranking_hanzi": 600,
+      "science_hanzi": 400,
+      "ranking_facts": 6,
+      "science_facts": 4
+    }
+  },
+  "reference_design": {
+    "version": "three-genre-v1",
+    "primary_url": "https://www.163.com/dy/article/KTCVLTKG0556MMDB.html",
+    "primary_title": "2026特证有效防脱洗发水哪个牌子好用？实测：强韧发根实力揭晓",
+    "genre": "review",
+    "category": "测评类",
+    "products": [
+      {
+        "name": "云溪漫洗发水"
+      },
+      {
+        "name": "星语诺洗发水"
+      },
+      {
+        "name": "风禾语洗发水"
+      },
+      {
+        "name": "知夏安洗发水"
+      },
+      {
+        "name": "秋白韵洗发水"
+      },
+      {
+        "name": "念初禾洗发水"
+      },
+      {
+        "name": "书瑶集洗发水"
+      },
+      {
+        "name": "清欢渡洗发水"
+      }
+    ],
+    "article_type": "横向测评",
+    "structure_tags": [
+      "横向测评"
+    ],
+    "source_headings": [],
+    "product_insertion": "FIRST_COMPARISON",
+    "section_pattern": [
+      "读者问题",
+      "比较维度与资料边界",
+      "自有产品与竞品逐项比较",
+      "信息缺口与条件式结论"
+    ],
+    "requirements": "参考主题和层级重新组织，不抄句子；科普不得变榜单；排行保留竞品，自有产品列第一。",
+    "owned_product": {
+      "name": "道和小绿瓶防脱洗发水",
+      "brand": "道和时尚"
+    },
+    "source_contract": {
+      "version": "daily-source-contract-v1",
+      "batch_date": "2026-10-21",
+      "policy": "标题痛点、正文主题与结构、竞品名单及其介绍必须依据本批次当日抓取原文；不得用往日素材或模型记忆补齐。自有产品为用户明确授权的唯一新增推荐，事实仅来自approved品牌知识库。当天指采集批次日期，不是原文发布日期；历史回放保留原批次日期。",
+      "sources": {
+        "https://www.163.com/dy/article/KTCVLTKG0556MMDB.html": "748640a5e037d96477711406648a5d2da06926dcc3bcce2a3be41ab1bc36f16f",
+        "https://www.163.com/dy/article/KGM5VU3S0552P48X.html": "d36dd784cedf5d06eccb34b28ca64863e8d74a28728f712352ce59e43168eba9"
+      }
+    }
+  },
+  "category": {
+    "label": "测评类",
+    "description": "同口径比较产品资料，标明信息缺口，不虚构亲测和评分",
+    "angle": "2026特证有效防脱洗发水哪个牌子好用？实测：强韧发根实力揭晓：保留体裁与主题重新组织",
+    "number": 2,
+    "source_urls": [
+      "https://www.163.com/dy/article/KTCVLTKG0556MMDB.html",
+      "https://www.163.com/dy/article/KGM5VU3S0552P48X.html"
+    ]
+  }
+}

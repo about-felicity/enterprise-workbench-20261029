@@ -1,0 +1,892 @@
+import {
+  UI_BRIDGE_PROTOCOL_VERSION,
+  type BridgeCommandOptions,
+  type BridgeHandshake,
+  type BridgeSnapshot,
+  type ClientBridge,
+  type CreateProjectInput,
+  type DeliveryExportView,
+  type ExportPublicationOptions,
+  type RunTraceDetail,
+  type RunTraceDetailInput,
+  type UiSettings,
+} from "./protocol.js";
+
+export interface WebClientBridgeOptions {
+  readonly baseUrl: string;
+  readonly bootstrapCapability: string;
+  readonly fetchImpl?: typeof fetch;
+  readonly operationIdFactory?: () => string;
+  readonly pollDelayMs?: number;
+}
+
+interface ErrorEnvelope {
+  readonly error?: { readonly code?: unknown; readonly message?: unknown };
+}
+
+export class WebBridgeError extends Error {
+  constructor(
+    readonly code: string,
+    message: string,
+    readonly status: number,
+  ) {
+    super(message);
+    this.name = "WebBridgeError";
+  }
+}
+
+function emptySnapshot(): BridgeSnapshot {
+  return {
+    revision: 0,
+    generation: 0,
+    workspaceId: "",
+    mode: "application",
+    connection: "offline",
+    selectedProjectId: "",
+    selectedSessionId: "",
+    projects: [],
+    sessions: [],
+    timelineBySession: {},
+    runRecords: [],
+    materialProcessWorkspace: {
+      materials: [],
+      evidence: null,
+      outline: null,
+      reviews: [],
+      notice: "连接完成后显示材料与写作过程。",
+    },
+    previewDocument: {
+      id: null,
+      title: "正在连接本地服务",
+      version: 0,
+      status: "empty",
+      body: "正在读取已持久保存的项目状态。",
+    },
+    revisionWorkspace: {
+      bodyVersionId: null,
+      projectRevision: 0,
+      blocks: [],
+      versions: [],
+      proposals: [],
+    },
+    factCheckWorkspace: {
+      status: "not_checked",
+      snapshot: null,
+      assessment: null,
+      invalidations: [],
+      provenance: [],
+      notice:
+        "来源关系仅说明产物如何形成；核查通过表示该输入快照通过既定流程，不承诺事实绝对正确。",
+    },
+    deliveryWorkspace: {
+      bodyVersionId: null,
+      projectRevision: 0,
+      gateStatus: "not_checked",
+      formalExportEnabled: false,
+      exports: [],
+      notice:
+        "工作备份不代表可发布；正式 TXT/HTML 仅在当前正文、标题、证据与核查快照一致时生成。",
+    },
+    settings: {
+      theme: "paper",
+      language: "zh-CN",
+      contentFontSize: 14,
+      providerLabel: "本地服务连接中",
+      credentialReference: null,
+    },
+    activeRunId: null,
+    brief: null,
+    recoverableRuns: [],
+    lastError: null,
+    environmentNotice: "正在连接受保护的本地服务",
+    composerHint: "连接完成后可提交写作指令",
+  };
+}
+
+function responseRecord(value: unknown): Record<string, unknown> {
+  if (typeof value !== "object" || value === null || Array.isArray(value)) {
+    throw new WebBridgeError(
+      "INVALID_HOST_RESPONSE",
+      "Local runtime returned an invalid response",
+      502,
+    );
+  }
+  return value as Record<string, unknown>;
+}
+
+function responseSnapshot(value: unknown): BridgeSnapshot {
+  const record = responseRecord(value);
+  if (
+    typeof record.revision !== "number" ||
+    typeof record.generation !== "number" ||
+    typeof record.workspaceId !== "string" ||
+    record.mode !== "application" ||
+    !Array.isArray(record.projects) ||
+    !Array.isArray(record.sessions)
+  ) {
+    throw new WebBridgeError(
+      "INVALID_HOST_SNAPSHOT",
+      "Local runtime snapshot does not match the client protocol",
+      502,
+    );
+  }
+  return record as unknown as BridgeSnapshot;
+}
+
+function responseDeliveryExport(value: unknown): DeliveryExportView {
+  const record = responseRecord(value);
+  if (
+    typeof record.id !== "string" ||
+    typeof record.operationId !== "string" ||
+    (record.mode !== "working_copy" && record.mode !== "publication") ||
+    (record.format !== "markdown" && record.format !== "txt" && record.format !== "html") ||
+    (record.state !== "prepared" && record.state !== "completed") ||
+    typeof record.relativePath !== "string" ||
+    typeof record.contentHash !== "string"
+  ) {
+    throw new WebBridgeError(
+      "INVALID_HOST_RESPONSE",
+      "Local runtime returned an invalid export record",
+      502,
+    );
+  }
+  return record as unknown as DeliveryExportView;
+}
+
+export class WebClientBridge implements ClientBridge {
+  readonly #baseUrl: string;
+  #bootstrapCapability: string;
+  readonly #fetch: typeof fetch;
+  readonly #operationIdFactory: () => string;
+  readonly #pollDelayMs: number;
+  readonly #listeners = new Set<() => void>();
+  #snapshot = emptySnapshot();
+  #capability: string | null = null;
+  #handshake: BridgeHandshake | null = null;
+  #handshakePromise: Promise<BridgeHandshake> | null = null;
+  #polling = false;
+  #pollTimer: ReturnType<typeof setTimeout> | null = null;
+  #disposed = false;
+  #reconnectPromise: Promise<void> | null = null;
+  #pollFailures = 0;
+  #restoringSelection = false;
+
+  constructor(options: WebClientBridgeOptions) {
+    const url = new URL(options.baseUrl);
+    if (url.protocol !== "http:" || url.hostname !== "127.0.0.1") {
+      throw new Error("LOCAL_WEB_ORIGIN_REQUIRED");
+    }
+    this.#baseUrl = url.origin;
+    this.#bootstrapCapability = options.bootstrapCapability;
+    if (this.#bootstrapCapability.length < 32) {
+      throw new Error("BOOTSTRAP_CAPABILITY_REQUIRED");
+    }
+    this.#fetch = options.fetchImpl ?? globalThis.fetch.bind(globalThis);
+    this.#operationIdFactory =
+      options.operationIdFactory ?? (() => globalThis.crypto.randomUUID());
+    this.#pollDelayMs = options.pollDelayMs ?? 25;
+  }
+
+  async handshake(): Promise<BridgeHandshake> {
+    this.#ensureLive();
+    if (this.#handshake !== null) return this.#handshake;
+    if (this.#snapshot.workspaceId) {
+      // A failed restoration kept the old visible selection. Subsequent
+      // attempts must restore it too, not publish a fresh default session.
+      await this.#reconnect();
+      this.#ensureLive();
+      return this.#handshake!;
+    }
+    if (this.#handshakePromise !== null) return this.#handshakePromise;
+    this.#handshakePromise = this.#establishSession();
+    try {
+      return await this.#handshakePromise;
+    } finally {
+      this.#handshakePromise = null;
+    }
+  }
+
+  async #establishSession(): Promise<BridgeHandshake> {
+    let response: Record<string, unknown>;
+    try {
+      response = await this.#request(
+        "/api/v6/handshake",
+        { protocolVersion: UI_BRIDGE_PROTOCOL_VERSION },
+        this.#bootstrapCapability,
+      );
+    } catch (error) {
+      if (!(error instanceof WebBridgeError) || error.status !== 401 || error.code !== 'CAPABILITY_REJECTED') throw error;
+      await this.#refreshBootstrap();
+      response = await this.#request('/api/v6/handshake', { protocolVersion: UI_BRIDGE_PROTOCOL_VERSION }, this.#bootstrapCapability);
+    }
+    const handshake = responseRecord(response.handshake) as unknown as BridgeHandshake;
+    if (
+      handshake.protocolVersion !== UI_BRIDGE_PROTOCOL_VERSION ||
+      handshake.mock ||
+      !handshake.persistsUserProjects ||
+      typeof handshake.workspaceId !== "string"
+    ) {
+      throw new WebBridgeError(
+        "PROTOCOL_VERSION_MISMATCH",
+        "Local runtime handshake is incompatible with this client",
+        409,
+      );
+    }
+    if (typeof response.capability !== "string" || response.capability.length < 32) {
+      throw new WebBridgeError(
+        "INVALID_HOST_RESPONSE",
+        "Local runtime did not issue a session capability",
+        502,
+      );
+    }
+    this.#ensureLive();
+    if (this.#snapshot.workspaceId && handshake.workspaceId !== this.#snapshot.workspaceId) {
+      throw new WebBridgeError('WORKSPACE_SCOPE_MISMATCH', 'Reconnect returned another workspace', 409);
+    }
+    const snapshotResponse = await this.#request(
+      "/api/v6/snapshot",
+      {},
+      response.capability,
+    );
+    const next = responseSnapshot(snapshotResponse.snapshot);
+    if (next.workspaceId !== handshake.workspaceId) throw new WebBridgeError('WORKSPACE_SCOPE_MISMATCH', 'Local runtime returned another workspace', 409);
+    this.#ensureLive();
+    this.#capability = response.capability;
+    this.#handshake = handshake;
+    this.#accept(next, true);
+    return handshake;
+  }
+
+  getSnapshot = (): BridgeSnapshot => this.#snapshot;
+
+  async getRunTraceDetail(input: RunTraceDetailInput): Promise<RunTraceDetail> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest('/api/v6/trace/detail', { ...input, generation: this.#snapshot.generation });
+    return response.result as RunTraceDetail;
+  }
+
+  subscribe = (listener: () => void): (() => void) => {
+    this.#listeners.add(listener);
+    this.#schedulePoll(0);
+    return () => {
+      this.#listeners.delete(listener);
+      if (this.#listeners.size === 0 && this.#pollTimer !== null) {
+        clearTimeout(this.#pollTimer);
+        this.#pollTimer = null;
+      }
+    };
+  };
+
+  async selectProject(projectId: string): Promise<void> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest(
+      "/api/v6/command/select-project",
+      {
+        generation: this.#snapshot.generation,
+        projectId,
+      },
+    );
+    this.#accept(responseSnapshot(response.snapshot));
+  }
+
+  async selectSession(projectId: string, sessionId: string): Promise<void> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest(
+      "/api/v6/command/select-session",
+      {
+        generation: this.#snapshot.generation,
+        projectId,
+        sessionId,
+      },
+    );
+    this.#accept(responseSnapshot(response.snapshot));
+  }
+
+  async updateSettings(
+    patch: Partial<Pick<UiSettings, "theme" | "contentFontSize">>,
+  ): Promise<void> {
+    this.#ensureLive();
+    const contentFontSize =
+      patch.contentFontSize ?? this.#snapshot.settings.contentFontSize;
+    const theme = patch.theme ?? this.#snapshot.settings.theme;
+    if (![13, 14, 16].includes(contentFontSize)) {
+      throw new Error("CONTENT_FONT_SIZE_INVALID");
+    }
+    if (!(["light", "dark", "system", "paper"] as const).includes(theme)) {
+      throw new Error("THEME_INVALID");
+    }
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest("/api/v6/command/update-settings", {
+      generation: this.#snapshot.generation,
+      theme,
+      contentFontSize,
+    });
+    this.#accept(responseSnapshot(response.snapshot));
+  }
+
+  async createProject(
+    input: CreateProjectInput,
+    options: BridgeCommandOptions = {},
+  ): Promise<{ projectId: string }> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest("/api/v6/command/create-project", {
+      generation: this.#snapshot.generation,
+      operationId: options.operationId ?? this.#operationIdFactory(),
+      ...input,
+    });
+    this.#accept(responseSnapshot(response.snapshot));
+    const result = responseRecord(response.result);
+    if (typeof result.projectId !== "string") {
+      throw new WebBridgeError(
+        "INVALID_HOST_RESPONSE",
+        "Local runtime did not return a project ID",
+        502,
+      );
+    }
+    return { projectId: result.projectId };
+  }
+
+  async renameProject(
+    projectId: string,
+    name: string,
+    options: BridgeCommandOptions = {},
+  ): Promise<void> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest("/api/v6/command/rename-project", {
+      generation: this.#snapshot.generation,
+      operationId: options.operationId ?? this.#operationIdFactory(),
+      projectId,
+      name,
+    });
+    this.#accept(responseSnapshot(response.snapshot));
+  }
+
+  async confirmBrief(options: BridgeCommandOptions = {}): Promise<void> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest("/api/v6/command/confirm-brief", {
+      generation: this.#snapshot.generation,
+      operationId: options.operationId ?? this.#operationIdFactory(),
+    });
+    this.#accept(responseSnapshot(response.snapshot));
+  }
+
+  async updateBrief(
+    input: Parameters<ClientBridge["updateBrief"]>[0],
+    options: BridgeCommandOptions = {},
+  ): Promise<void> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest("/api/v6/command/update-brief", {
+      generation: this.#snapshot.generation,
+      operationId: options.operationId ?? this.#operationIdFactory(),
+      ...input,
+    });
+    this.#accept(responseSnapshot(response.snapshot));
+  }
+
+  async startConversation(text: string, options: BridgeCommandOptions = {}): Promise<{ runId: string }> {
+    return this.#conversationCommand("start-conversation", { text }, options);
+  }
+
+  async confirmConversation(proposalVersionId: string, options: BridgeCommandOptions = {}): Promise<{ runId: string }> {
+    return this.#conversationCommand("confirm-conversation", { proposalVersionId }, options);
+  }
+
+  async #conversationCommand(route: string, payload: Record<string, string>, options: BridgeCommandOptions): Promise<{ runId: string }> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest(`/api/v6/command/${route}`, {
+      generation: this.#snapshot.generation,
+      operationId: options.operationId ?? this.#operationIdFactory(),
+      ...payload,
+    });
+    this.#accept(responseSnapshot(response.snapshot));
+    const result = responseRecord(response.result);
+    if (typeof result.runId !== "string") throw new WebBridgeError("INVALID_HOST_RESPONSE", "Local runtime did not return a run ID", 502);
+    return { runId: result.runId };
+  }
+
+  async sendMessage(
+    text: string,
+    options: BridgeCommandOptions = {},
+  ): Promise<{ runId: string }> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest("/api/v6/command/start-run", {
+      generation: this.#snapshot.generation,
+      operationId: options.operationId ?? this.#operationIdFactory(),
+      text,
+    });
+    this.#accept(responseSnapshot(response.snapshot));
+    const result = responseRecord(response.result);
+    if (typeof result.runId !== "string") {
+      throw new WebBridgeError(
+        "INVALID_HOST_RESPONSE",
+        "Local runtime did not return a run ID",
+        502,
+      );
+    }
+    return { runId: result.runId };
+  }
+
+  async runFactCheck(
+    options: BridgeCommandOptions = {},
+  ): Promise<{ runId: string }> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest("/api/v6/command/run-fact-check", {
+      generation: this.#snapshot.generation,
+      operationId: options.operationId ?? this.#operationIdFactory(),
+    });
+    this.#accept(responseSnapshot(response.snapshot));
+    const result = responseRecord(response.result);
+    if (typeof result.runId !== "string") {
+      throw new WebBridgeError(
+        "INVALID_HOST_RESPONSE",
+        "Local runtime did not return a run ID",
+        502,
+      );
+    }
+    return { runId: result.runId };
+  }
+
+  async cancelRun(
+    runId: string,
+    options: BridgeCommandOptions = {},
+  ): Promise<void> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest("/api/v6/command/cancel-run", {
+      generation: this.#snapshot.generation,
+      operationId: options.operationId ?? this.#operationIdFactory(),
+      runId,
+    });
+    this.#accept(responseSnapshot(response.snapshot));
+  }
+
+  async resumeRun(
+    runId: string,
+    decision: "resume" | "retry_unknown",
+    options: Parameters<ClientBridge["resumeRun"]>[2] = {},
+  ): Promise<void> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest("/api/v6/command/resume-run", {
+      generation: this.#snapshot.generation,
+      operationId: options.operationId ?? this.#operationIdFactory(),
+      runId,
+      decision,
+      ...(options.feedback === undefined ? {} : { feedback: options.feedback }),
+      ...(options.checkpointApproval === undefined ? {} : { checkpointApproval: options.checkpointApproval }),
+      ...(options.factSearchDecision === undefined ? {} : { factSearchDecision: options.factSearchDecision }),
+    });
+    this.#accept(responseSnapshot(response.snapshot));
+  }
+
+  async proposeRevision(
+    input: Parameters<ClientBridge["proposeRevision"]>[0],
+    options: BridgeCommandOptions = {},
+  ): Promise<{ proposalId: string }> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest(
+      "/api/v6/command/propose-revision",
+      {
+        generation: this.#snapshot.generation,
+        operationId: options.operationId ?? this.#operationIdFactory(),
+        ...input,
+      },
+    );
+    this.#accept(responseSnapshot(response.snapshot));
+    const result = responseRecord(response.result);
+    if (typeof result.proposalId !== "string") {
+      throw new WebBridgeError(
+        "INVALID_HOST_RESPONSE",
+        "Local runtime did not return a proposal ID",
+        502,
+      );
+    }
+    return { proposalId: result.proposalId };
+  }
+
+  async acceptRevision(
+    proposalId: string,
+    options: BridgeCommandOptions = {},
+  ): Promise<{ versionId: string; status: "created" | "no_change" }> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest(
+      "/api/v6/command/accept-revision",
+      {
+        generation: this.#snapshot.generation,
+        operationId: options.operationId ?? this.#operationIdFactory(),
+        proposalId,
+      },
+    );
+    this.#accept(responseSnapshot(response.snapshot));
+    return this.#versionResult(response.result);
+  }
+
+  async rejectRevision(
+    proposalId: string,
+    reason: string,
+    options: BridgeCommandOptions = {},
+  ): Promise<void> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest(
+      "/api/v6/command/reject-revision",
+      {
+        generation: this.#snapshot.generation,
+        operationId: options.operationId ?? this.#operationIdFactory(),
+        proposalId,
+        reason,
+      },
+    );
+    this.#accept(responseSnapshot(response.snapshot));
+  }
+
+  async saveBody(
+    baseBodyVersionId: string,
+    content: string,
+    reason: string,
+    options: BridgeCommandOptions = {},
+  ): Promise<{ versionId: string; status: "created" | "no_change" }> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest("/api/v6/command/save-body", {
+      generation: this.#snapshot.generation,
+      operationId: options.operationId ?? this.#operationIdFactory(),
+      baseBodyVersionId,
+      content,
+      reason,
+    });
+    this.#accept(responseSnapshot(response.snapshot));
+    return this.#versionResult(response.result);
+  }
+
+  async setBlockLock(
+    baseBodyVersionId: string,
+    blockId: string,
+    blockHash: string,
+    action: "lock" | "unlock",
+    options: BridgeCommandOptions = {},
+  ): Promise<void> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest("/api/v6/command/block-lock", {
+      generation: this.#snapshot.generation,
+      operationId: options.operationId ?? this.#operationIdFactory(),
+      baseBodyVersionId,
+      blockId,
+      blockHash,
+      action,
+    });
+    this.#accept(responseSnapshot(response.snapshot));
+  }
+
+  async rollbackBody(
+    targetVersionId: string,
+    reason: string,
+    options: BridgeCommandOptions = {},
+  ): Promise<{ versionId: string }> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest("/api/v6/command/rollback-body", {
+      generation: this.#snapshot.generation,
+      operationId: options.operationId ?? this.#operationIdFactory(),
+      targetVersionId,
+      reason,
+    });
+    this.#accept(responseSnapshot(response.snapshot));
+    const result = responseRecord(response.result);
+    if (typeof result.versionId !== "string") {
+      throw new WebBridgeError(
+        "INVALID_HOST_RESPONSE",
+        "Local runtime did not return a body version ID",
+        502,
+      );
+    }
+    return { versionId: result.versionId };
+  }
+
+  async saveWorkingCopy(
+    options: BridgeCommandOptions = {},
+  ): Promise<DeliveryExportView> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest(
+      "/api/v6/command/save-working-copy",
+      {
+        generation: this.#snapshot.generation,
+        operationId: options.operationId ?? this.#operationIdFactory(),
+      },
+    );
+    this.#accept(responseSnapshot(response.snapshot));
+    return responseDeliveryExport(response.result);
+  }
+
+  async exportPublication(
+    format: "txt" | "html",
+    options: ExportPublicationOptions = {},
+  ): Promise<DeliveryExportView> {
+    await this.#ensureHandshake();
+    if (format !== "txt" && format !== "html") {
+      throw new Error("EXPORT_FORMAT_INVALID");
+    }
+    const response = await this.#sessionRequest(
+      "/api/v6/command/export-publication",
+      {
+        generation: this.#snapshot.generation,
+        operationId: options.operationId ?? this.#operationIdFactory(),
+        format,
+        layoutPreset: options.layoutPreset ?? "clean",
+      },
+    );
+    this.#accept(responseSnapshot(response.snapshot));
+    return responseDeliveryExport(response.result);
+  }
+
+  async refresh(): Promise<void> {
+    await this.#ensureHandshake();
+    const response = await this.#sessionRequest("/api/v6/snapshot", {});
+    this.#accept(responseSnapshot(response.snapshot));
+  }
+
+  dispose(): void {
+    this.#disposed = true;
+    if (this.#pollTimer !== null) clearTimeout(this.#pollTimer);
+    this.#pollTimer = null;
+    this.#listeners.clear();
+    this.#capability = null;
+  }
+
+  async #ensureHandshake(): Promise<void> {
+    this.#ensureLive();
+    if (this.#handshake === null) await this.handshake();
+  }
+
+  #ensureLive(): void {
+    if (this.#disposed) throw new Error("BRIDGE_DISPOSED");
+  }
+
+  #accept(next: BridgeSnapshot, newEpoch = false): void {
+    if (
+      this.#handshake !== null &&
+      next.workspaceId !== this.#handshake.workspaceId
+    ) {
+      throw new WebBridgeError(
+        "WORKSPACE_SCOPE_MISMATCH",
+        "Local runtime returned another workspace",
+        409,
+      );
+    }
+    if (!newEpoch && next.generation < this.#snapshot.generation) return;
+    if (
+      !newEpoch && next.generation === this.#snapshot.generation &&
+      next.revision < this.#snapshot.revision
+    ) {
+      return;
+    }
+    this.#snapshot = next;
+    this.#emit();
+  }
+
+  #emit(): void {
+    if (this.#restoringSelection || this.#disposed) return;
+    for (const listener of this.#listeners) listener();
+  }
+
+  #schedulePoll(delay: number): void {
+    if (
+      this.#disposed ||
+      this.#listeners.size === 0 ||
+      this.#pollTimer !== null ||
+      this.#polling
+    ) {
+      return;
+    }
+    this.#pollTimer = setTimeout(() => {
+      this.#pollTimer = null;
+      void this.#poll();
+    }, delay);
+  }
+
+  async #poll(): Promise<void> {
+    if (this.#polling || this.#disposed || this.#listeners.size === 0) return;
+    this.#polling = true;
+    try {
+      await this.#ensureHandshake();
+      const response = await this.#sessionRequest("/api/v6/events/poll", {
+        generation: this.#snapshot.generation,
+        afterRevision: this.#snapshot.revision,
+      });
+      this.#accept(responseSnapshot(response.snapshot));
+      this.#pollFailures = 0;
+    } catch (error) {
+      this.#pollFailures++;
+      if (error instanceof WebBridgeError && error.code === "STALE_CLIENT_GENERATION") {
+        try {
+          await this.refresh();
+        } catch {
+          this.#offline(error);
+        }
+      } else {
+        this.#offline(error);
+      }
+    } finally {
+      this.#polling = false;
+      this.#schedulePoll(this.#pollFailures ? Math.min(5_000, Math.max(250, this.#pollDelayMs) * 2 ** Math.min(this.#pollFailures - 1, 5)) : this.#pollDelayMs);
+    }
+  }
+
+  #versionResult(value: unknown): {
+    versionId: string;
+    status: "created" | "no_change";
+  } {
+    const result = responseRecord(value);
+    if (
+      typeof result.versionId !== "string" ||
+      (result.status !== "created" && result.status !== "no_change")
+    ) {
+      throw new WebBridgeError(
+        "INVALID_HOST_RESPONSE",
+        "Local runtime returned an invalid body version result",
+        502,
+      );
+    }
+    return { versionId: result.versionId, status: result.status };
+  }
+
+  #offline(error: unknown): void {
+    const code = error instanceof WebBridgeError ? error.code : "LOCAL_SERVICE_OFFLINE";
+    if (
+      this.#snapshot.connection === "offline" &&
+      this.#snapshot.lastError?.code === code
+    ) {
+      return;
+    }
+    this.#snapshot = {
+      ...this.#snapshot,
+      connection: "offline",
+      lastError: {
+        code,
+        message:
+          error instanceof Error
+            ? error.message
+            : "Local Writing Agent service is unavailable",
+      },
+    };
+    this.#emit();
+  }
+
+  async #sessionRequest(
+    route: string,
+    body: Readonly<Record<string, unknown>>,
+  ): Promise<Record<string, unknown>> {
+    if (this.#reconnectPromise) await this.#reconnectPromise;
+    if (this.#capability === null) {
+      throw new WebBridgeError(
+        "CAPABILITY_MISSING",
+        "Local session capability is unavailable",
+        401,
+      );
+    }
+    const capability = this.#capability;
+    try {
+      const response = await this.#request(route, body, capability);
+      if (capability !== this.#capability) {
+        if (this.#reconnectPromise) await this.#reconnectPromise;
+        if (route === '/api/v6/snapshot' || route === '/api/v6/events/poll') return this.#request('/api/v6/snapshot', {}, this.#capability!);
+        throw new WebBridgeError('STALE_SESSION_RESPONSE', '会话已重新连接，旧响应未覆盖当前状态；请检查已保存结果，不自动重复写入。', 409);
+      }
+      return response;
+    }
+    catch (error) {
+      // Only a definitive pre-execution authentication rejection is replayed.
+      // Transport errors have unknown outcomes and must not replay mutations.
+      if (!(error instanceof WebBridgeError) || error.status !== 401 || error.code !== 'CAPABILITY_REJECTED') throw error;
+      if (capability === this.#capability) await this.#reconnect();
+      else if (this.#reconnectPromise) await this.#reconnectPromise;
+      this.#ensureLive();
+      return this.#request(route, { ...body, ...('generation' in body ? { generation: this.#snapshot.generation } : {}) }, this.#capability!);
+    }
+  }
+
+  async #reconnect(): Promise<void> {
+    if (this.#reconnectPromise) return this.#reconnectPromise;
+    this.#reconnectPromise = (async () => {
+      const selected = { projectId: this.#snapshot.selectedProjectId, sessionId: this.#snapshot.selectedSessionId };
+      await this.#refreshBootstrap();
+      const previous = this.#snapshot;
+      this.#restoringSelection = true;
+      try {
+        await this.#establishSession();
+        if (selected.projectId && this.#snapshot.projects.some(p => p.id === selected.projectId)) {
+          const hasSession = selected.sessionId && this.#snapshot.sessions.some(s => s.id === selected.sessionId && s.projectId === selected.projectId);
+          const restored = await this.#request(hasSession ? '/api/v6/command/select-session' : '/api/v6/command/select-project',
+            { generation: this.#snapshot.generation, projectId: selected.projectId, ...(hasSession ? { sessionId: selected.sessionId } : {}) }, this.#capability!);
+          this.#accept(responseSnapshot(restored.snapshot));
+        }
+      } catch (error) {
+        this.#snapshot = previous; this.#handshake = null; this.#capability = null;
+        throw error;
+      } finally { this.#restoringSelection = false; this.#emit(); }
+    })();
+    try { await this.#reconnectPromise; } finally { this.#reconnectPromise = null; }
+  }
+
+  async #refreshBootstrap(): Promise<void> {
+    // Read the existing same-origin page as inert text; never execute its HTML.
+    const response = await this.#fetch(`${this.#baseUrl}/`, { method: 'GET', cache: 'no-store', credentials: 'same-origin', redirect: 'error', referrerPolicy: 'no-referrer' });
+    if (!response.ok) throw new WebBridgeError('LOCAL_SERVICE_OFFLINE', '无法重新连接本地服务，请稍后再试。', response.status);
+    const html = await response.text();
+    const token = html.length <= 2_000_000 ? html.match(/<meta name="writing-agent-bootstrap-capability" content="([A-Za-z0-9_-]{32,})">/u)?.[1] : undefined;
+    if (!token) throw new WebBridgeError('CAPABILITY_REJECTED', '本地会话已过期，重新连接未成功；已保存的稿件仍保留。', 401);
+    this.#ensureLive(); this.#bootstrapCapability = token;
+  }
+
+  async #request(
+    route: string,
+    body: Readonly<Record<string, unknown>>,
+    capability: string,
+  ): Promise<Record<string, unknown>> {
+    let response: Response;
+    try {
+      response = await this.#fetch(`${this.#baseUrl}${route}`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-writing-agent-protocol": String(UI_BRIDGE_PROTOCOL_VERSION),
+          "x-writing-agent-capability": capability,
+        },
+        body: JSON.stringify(body),
+        cache: "no-store",
+        credentials: "same-origin",
+        referrerPolicy: "no-referrer",
+      });
+    } catch {
+      throw new WebBridgeError(
+        "LOCAL_SERVICE_OFFLINE",
+        "Local Writing Agent service is unavailable",
+        0,
+      );
+    }
+    let payload: unknown;
+    try {
+      payload = await response.json();
+    } catch {
+      throw new WebBridgeError(
+        "INVALID_HOST_RESPONSE",
+        "Local runtime returned non-JSON data",
+        response.status,
+      );
+    }
+    if (!response.ok) {
+      const envelope = payload as ErrorEnvelope;
+      const code =
+        typeof envelope.error?.code === "string"
+          ? envelope.error.code
+          : "LOCAL_BRIDGE_REQUEST_FAILED";
+      const message =
+        typeof envelope.error?.message === "string"
+          ? envelope.error.message
+          : "Local bridge request failed";
+      throw new WebBridgeError(code, message, response.status);
+    }
+    return responseRecord(payload);
+  }
+}
+
+export function createWebClientBridge(
+  options: WebClientBridgeOptions,
+): ClientBridge {
+  return new WebClientBridge(options);
+}

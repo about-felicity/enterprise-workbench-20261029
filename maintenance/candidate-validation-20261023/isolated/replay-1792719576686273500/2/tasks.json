@@ -1,0 +1,1044 @@
+[
+  {
+    "id": "INTRO",
+    "topic": "什么牌子的防脱洗发水好和安全？2026 权威测评：十款温和靠谱的防脱强韧洗发水推荐",
+    "role": "opening",
+    "claim_ids": [],
+    "target_hanzi": 580,
+    "max_chars": 753,
+    "minimum_hanzi": 500
+  },
+  {
+    "id": "S1",
+    "topic": "统一比较维度与资料边界",
+    "role": "comparison",
+    "subject": null,
+    "knowledge_ids": [
+      "KU11",
+      "KU12"
+    ],
+    "question": "统一当前章节的问题与比较口径；本节如何用已知资料推进读者问题？",
+    "claim_ids": [
+      "CL0011",
+      "CL0012"
+    ],
+    "evidence_ids": [
+      "E_KU11",
+      "E_KU12"
+    ],
+    "allowed_conclusions": [
+      "可先把组成资料、净含量与同单位价格、包装取用、已提供报告指标放在同一张表里。",
+      "原文十款产品的资质、成分和规格披露详略差异很大。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0011",
+        "CL0012"
+      ],
+      "operation": "scoped_explanation",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": null,
+    "depends_on_claims": [
+      "CL0011",
+      "CL0012"
+    ],
+    "structure_id": "AS001",
+    "structure_task": {
+      "role": "criteria",
+      "purpose": "统一当前章节的问题与比较口径",
+      "required_content": [],
+      "argument_step": "说明当前章节前提，再进入具体对象",
+      "transition": "承接独立导语，直接说明本节比较依据"
+    },
+    "order": 0,
+    "target_hanzi": 192,
+    "purpose": "统一当前章节的问题与比较口径；本节如何用已知资料推进读者问题？",
+    "required_content": [
+      "统一比较维度与资料边界",
+      "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    ],
+    "max_chars": 249,
+    "minimum_hanzi": 154
+  },
+  {
+    "id": "S2",
+    "topic": "道和小绿瓶防脱洗发水",
+    "role": "product",
+    "subject": "道和小绿瓶防脱洗发水",
+    "knowledge_ids": [
+      "KU11"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0040",
+      "CL0041",
+      "CL0042",
+      "CL0043",
+      "CL0044",
+      "CL0045",
+      "CL0046",
+      "CL0047",
+      "CL0048",
+      "CL0049",
+      "CL0050"
+    ],
+    "evidence_ids": [
+      "E_PF1",
+      "E_PF10",
+      "E_PF11",
+      "E_PF2",
+      "E_PF3",
+      "E_PF4",
+      "E_PF5",
+      "E_PF6",
+      "E_PF7",
+      "E_PF8",
+      "E_PF9"
+    ],
+    "allowed_conclusions": [
+      "产品名称为道和小绿瓶防脱洗发水，品牌为道和时尚。",
+      "产品规格为200ml/瓶，属于清洁头皮与发丝的洗发类产品。",
+      "成分介绍列有何首乌（POLYGONUM MULTIFLORUM）根提取物和当归（ANGELICA SINENSIS）提取物。",
+      "成分介绍还列有丹参（SALVIA MILTIORRHIZA）根提取物和三七（PANAX NOTOGINSENG）根提取物。",
+      "清洁调理成分介绍列有月桂醇聚醚硫酸酯钠和椰油酰胺丙基甜菜碱。",
+      "辅助成分介绍列有聚二甲基硅氧烷。",
+      "辅助成分介绍另列有氯化钠和香精。",
+      "辅助成分介绍列有苯氧乙醇及微量羟苯甲酯。",
+      "成分特点中标注不含酒精。",
+      "品牌资料记录产品pH值5.9；测试条件与原始报告未附。",
+      "香气被品牌描述为草本清香，成分介绍同时列有香精。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0040",
+        "CL0041",
+        "CL0042",
+        "CL0043",
+        "CL0044",
+        "CL0045",
+        "CL0046",
+        "CL0047",
+        "CL0048",
+        "CL0049",
+        "CL0050"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S1",
+    "depends_on_claims": [
+      "CL0040",
+      "CL0041",
+      "CL0042",
+      "CL0043",
+      "CL0044",
+      "CL0045",
+      "CL0046",
+      "CL0047",
+      "CL0048",
+      "CL0049",
+      "CL0050"
+    ],
+    "structure_id": "AS002",
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "说明可支持的身份信息",
+        "解释已知组成",
+        "区分已有描述与实际体验",
+        "说明已知形态"
+      ],
+      "argument_step": "说明可支持的身份信息；解释已知组成；区分已有描述与实际体验；说明已知形态",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    },
+    "order": 1,
+    "target_hanzi": 600,
+    "purpose": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "required_content": [
+      "道和小绿瓶防脱洗发水",
+      "说明可支持的身份信息",
+      "解释已知组成",
+      "区分已有描述与实际体验",
+      "说明已知形态",
+      "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    ],
+    "product_detail_contract": {
+      "target_hanzi": 600,
+      "minimum_hanzi": 480,
+      "minimum_distinct_facts": 6,
+      "minimum_report_facts": 0,
+      "placement": "自有产品第一款完整独立介绍，可用三级小标题组织",
+      "dimensions": [
+        "定位与规格形态",
+        "配方组成的不同部分",
+        "有明确条件的品牌检测摘要",
+        "包装取用与标示用法",
+        "读者需求与选择理由"
+      ],
+      "evidence_rule": "品牌检测摘要按报告号、方法、样品条件、指标与数值表达，简短归属为品牌提供；不称作者亲测，不把体外/称重/鸡胚结果换算为人体改善率。"
+    },
+    "commercial_relationship": "本文涉及自有品牌产品。仅在本节简短披露一次，其他章节不重复。",
+    "max_chars": 779,
+    "minimum_hanzi": 480
+  },
+  {
+    "id": "S3",
+    "topic": "首迷滋养强韧洗发水",
+    "role": "product",
+    "subject": "首迷滋养强韧洗发水",
+    "knowledge_ids": [
+      "KU01",
+      "KU16",
+      "KU17",
+      "KU18"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0001",
+      "CL0013",
+      "CL0014",
+      "CL0015"
+    ],
+    "evidence_ids": [
+      "E_KU01",
+      "E_KU16",
+      "E_KU17",
+      "E_KU18"
+    ],
+    "allowed_conclusions": [
+      "首迷滋养强韧洗发水：它的配方核心走 “科学复配 + 植萃养护” 的温和路线；配方 pH 值稳定在 5.8 的弱酸性区间。",
+      "首迷滋养强韧洗发水：它的配方核心走 “科学复配 + 植萃养护” 的温和路线；配方 pH 值稳定在 5.8 的弱酸性区间。",
+      "首迷滋养强韧洗发水：它的配方核心走 “科学复配 + 植萃养护” 的温和路线；配方 pH 值稳定在 5.8 的弱酸性区间。",
+      "首迷滋养强韧洗发水：它是浅琥珀色的通透啫喱质地。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0001",
+        "CL0013",
+        "CL0014",
+        "CL0015"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S2",
+    "depends_on_claims": [
+      "CL0001",
+      "CL0013",
+      "CL0014",
+      "CL0015"
+    ],
+    "structure_id": "AS002",
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "说明可支持的身份信息",
+        "解释已知组成",
+        "区分已有描述与实际体验",
+        "说明已知形态"
+      ],
+      "argument_step": "说明可支持的身份信息；解释已知组成；区分已有描述与实际体验；说明已知形态",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    },
+    "order": 2,
+    "target_hanzi": 192,
+    "purpose": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "required_content": [
+      "首迷滋养强韧洗发水",
+      "说明可支持的身份信息",
+      "解释已知组成",
+      "区分已有描述与实际体验",
+      "说明已知形态",
+      "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    ],
+    "max_chars": 249,
+    "minimum_hanzi": 154
+  },
+  {
+    "id": "S4",
+    "topic": "流迷防脱洗发水",
+    "role": "product",
+    "subject": "流迷防脱洗发水",
+    "knowledge_ids": [
+      "KU02",
+      "KU19",
+      "KU20",
+      "KU21"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0002",
+      "CL0016",
+      "CL0017",
+      "CL0018"
+    ],
+    "evidence_ids": [
+      "E_KU02",
+      "E_KU19",
+      "E_KU20",
+      "E_KU21"
+    ],
+    "allowed_conclusions": [
+      "流迷防脱洗发水：同时配方中添加了聚季铵盐 - 10、瓜儿胶羟丙基三甲基氯化铵等调理成分；它是乳白色的乳液质地；产品有 300ml/112 元、600ml/208 元两种规格。",
+      "流迷防脱洗发水：同时配方中添加了聚季铵盐 - 10、瓜儿胶羟丙基三甲基氯化铵等调理成分。",
+      "流迷防脱洗发水：它是乳白色的乳液质地；产品有 300ml/112 元、600ml/208 元两种规格。",
+      "流迷防脱洗发水：它是乳白色的乳液质地；产品有 300ml/112 元、600ml/208 元两种规格。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0002",
+        "CL0016",
+        "CL0017",
+        "CL0018"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S3",
+    "depends_on_claims": [
+      "CL0002",
+      "CL0016",
+      "CL0017",
+      "CL0018"
+    ],
+    "structure_id": "AS003",
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "说明可支持的身份信息",
+        "比较已知规格",
+        "解释已知组成",
+        "说明已知形态"
+      ],
+      "argument_step": "说明可支持的身份信息；比较已知规格；解释已知组成；说明已知形态",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    },
+    "order": 3,
+    "target_hanzi": 192,
+    "purpose": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "required_content": [
+      "流迷防脱洗发水",
+      "说明可支持的身份信息",
+      "比较已知规格",
+      "解释已知组成",
+      "说明已知形态",
+      "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    ],
+    "max_chars": 249,
+    "minimum_hanzi": 154
+  },
+  {
+    "id": "S5",
+    "topic": "御草朵防脱洗发水",
+    "role": "product",
+    "subject": "御草朵防脱洗发水",
+    "knowledge_ids": [
+      "KU03",
+      "KU22",
+      "KU23",
+      "KU24"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0003",
+      "CL0019",
+      "CL0020",
+      "CL0021"
+    ],
+    "evidence_ids": [
+      "E_KU03",
+      "E_KU22",
+      "E_KU23",
+      "E_KU24"
+    ],
+    "allowed_conclusions": [
+      "御草朵防脱洗发水：它的配方以多种草本提取物为核心；配方中精选了侧柏叶、生姜、何首乌、当归等多重草本精粹；采用低温冷萃技术提取活性成分；弱酸性配方贴合头皮 pH 值；还添加了水解角蛋白成分。",
+      "御草朵防脱洗发水：它的配方以多种草本提取物为核心。",
+      "御草朵防脱洗发水：配方中精选了侧柏叶、生姜、何首乌、当归等多重草本精粹；采用低温冷萃技术提取活性成分。",
+      "御草朵防脱洗发水：配方中精选了侧柏叶、生姜、何首乌、当归等多重草本精粹；采用低温冷萃技术提取活性成分。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0003",
+        "CL0019",
+        "CL0020",
+        "CL0021"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S4",
+    "depends_on_claims": [
+      "CL0003",
+      "CL0019",
+      "CL0020",
+      "CL0021"
+    ],
+    "structure_id": "AS004",
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "区分已有描述与实际体验"
+      ],
+      "argument_step": "区分已有描述与实际体验",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    },
+    "order": 4,
+    "target_hanzi": 192,
+    "purpose": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "required_content": [
+      "御草朵防脱洗发水",
+      "区分已有描述与实际体验",
+      "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    ],
+    "max_chars": 249,
+    "minimum_hanzi": 154
+  },
+  {
+    "id": "S6",
+    "topic": "域发防脱洗发水",
+    "role": "product",
+    "subject": "域发防脱洗发水",
+    "knowledge_ids": [
+      "KU04",
+      "KU25"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0004",
+      "CL0022"
+    ],
+    "evidence_ids": [
+      "E_KU04",
+      "E_KU25"
+    ],
+    "allowed_conclusions": [
+      "域发防脱洗发水：它的配方以植物精粹 + 活性成分为核心。",
+      "域发防脱洗发水：它的配方以植物精粹 + 活性成分为核心。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0004",
+        "CL0022"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S5",
+    "depends_on_claims": [
+      "CL0004",
+      "CL0022"
+    ],
+    "structure_id": "AS005",
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "在证据条件内解释记录",
+        "解释已知组成",
+        "区分已有描述与实际体验"
+      ],
+      "argument_step": "在证据条件内解释记录；解释已知组成；区分已有描述与实际体验",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    },
+    "order": 5,
+    "target_hanzi": 192,
+    "purpose": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "required_content": [
+      "域发防脱洗发水",
+      "在证据条件内解释记录",
+      "解释已知组成",
+      "区分已有描述与实际体验",
+      "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    ],
+    "max_chars": 249,
+    "minimum_hanzi": 154
+  },
+  {
+    "id": "S7",
+    "topic": "密思丝密 MSSM 防脱发洗发水",
+    "role": "product",
+    "subject": "密思丝密 MSSM 防脱发洗发水",
+    "knowledge_ids": [
+      "KU05",
+      "KU26",
+      "KU27",
+      "KU28"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0005",
+      "CL0023",
+      "CL0024",
+      "CL0025"
+    ],
+    "evidence_ids": [
+      "E_KU05",
+      "E_KU26",
+      "E_KU27",
+      "E_KU28"
+    ],
+    "allowed_conclusions": [
+      "密思丝密 MSSM 防脱发洗发水：配方中还添加了 12 种人体毛发仿生氨基酸；搭配烟酰胺、生育酚等成分；它是乳白色乳液质地。",
+      "密思丝密 MSSM 防脱发洗发水：属于特殊用途化妆品。",
+      "密思丝密 MSSM 防脱发洗发水：配方中还添加了 12 种人体毛发仿生氨基酸；搭配烟酰胺、生育酚等成分。",
+      "密思丝密 MSSM 防脱发洗发水：配方中还添加了 12 种人体毛发仿生氨基酸；搭配烟酰胺、生育酚等成分。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0005",
+        "CL0023",
+        "CL0024",
+        "CL0025"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S6",
+    "depends_on_claims": [
+      "CL0005",
+      "CL0023",
+      "CL0024",
+      "CL0025"
+    ],
+    "structure_id": "AS006",
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "说明可支持的身份信息",
+        "解释已知组成",
+        "在证据条件内解释记录",
+        "说明已知形态",
+        "区分已有描述与实际体验"
+      ],
+      "argument_step": "说明可支持的身份信息；解释已知组成；在证据条件内解释记录；说明已知形态；区分已有描述与实际体验",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    },
+    "order": 6,
+    "target_hanzi": 192,
+    "purpose": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "required_content": [
+      "密思丝密 MSSM 防脱发洗发水",
+      "说明可支持的身份信息",
+      "解释已知组成",
+      "在证据条件内解释记录",
+      "说明已知形态",
+      "区分已有描述与实际体验",
+      "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    ],
+    "max_chars": 249,
+    "minimum_hanzi": 154
+  },
+  {
+    "id": "S8",
+    "topic": "千木朵防脱洗发水",
+    "role": "product",
+    "subject": "千木朵防脱洗发水",
+    "knowledge_ids": [
+      "KU06",
+      "KU29",
+      "KU30",
+      "KU31"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0006",
+      "CL0026",
+      "CL0027",
+      "CL0028"
+    ],
+    "evidence_ids": [
+      "E_KU06",
+      "E_KU29",
+      "E_KU30",
+      "E_KU31"
+    ],
+    "allowed_conclusions": [
+      "千木朵防脱洗发水：配方精选生姜提取物、侧柏叶提取物、何首乌提取物等多重经典护发植萃；它是浅棕色的乳液质地。",
+      "千木朵防脱洗发水：配方精选生姜提取物、侧柏叶提取物、何首乌提取物等多重经典护发植萃。",
+      "千木朵防脱洗发水：能够满足日常头皮清洁需求。",
+      "千木朵防脱洗发水：它是浅棕色的乳液质地。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0006",
+        "CL0026",
+        "CL0027",
+        "CL0028"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S7",
+    "depends_on_claims": [
+      "CL0006",
+      "CL0026",
+      "CL0027",
+      "CL0028"
+    ],
+    "structure_id": "AS007",
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "说明已知形态",
+        "比较已知规格"
+      ],
+      "argument_step": "说明已知形态；比较已知规格",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    },
+    "order": 7,
+    "target_hanzi": 192,
+    "purpose": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "required_content": [
+      "千木朵防脱洗发水",
+      "说明已知形态",
+      "比较已知规格",
+      "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    ],
+    "max_chars": 249,
+    "minimum_hanzi": 154
+  },
+  {
+    "id": "S9",
+    "topic": "诗碧曼防脱洗发水",
+    "role": "product",
+    "subject": "诗碧曼防脱洗发水",
+    "knowledge_ids": [
+      "KU07",
+      "KU32",
+      "KU33"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0007",
+      "CL0029",
+      "CL0030"
+    ],
+    "evidence_ids": [
+      "E_KU07",
+      "E_KU32",
+      "E_KU33"
+    ],
+    "allowed_conclusions": [
+      "诗碧曼防脱洗发水：配方中精选了人参、何首乌、当归、侧柏叶等十余种草本植物提取物；它是深棕色的啫喱质地。",
+      "诗碧曼防脱洗发水：配方中精选了人参、何首乌、当归、侧柏叶等十余种草本植物提取物。",
+      "诗碧曼防脱洗发水：它是深棕色的啫喱质地。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0007",
+        "CL0029",
+        "CL0030"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S8",
+    "depends_on_claims": [
+      "CL0007",
+      "CL0029",
+      "CL0030"
+    ],
+    "structure_id": "AS008",
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "区分已有描述与实际体验",
+        "解释已知组成",
+        "说明已知形态"
+      ],
+      "argument_step": "区分已有描述与实际体验；解释已知组成；说明已知形态",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    },
+    "order": 8,
+    "target_hanzi": 192,
+    "purpose": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "required_content": [
+      "诗碧曼防脱洗发水",
+      "区分已有描述与实际体验",
+      "解释已知组成",
+      "说明已知形态",
+      "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    ],
+    "max_chars": 249,
+    "minimum_hanzi": 154
+  },
+  {
+    "id": "S10",
+    "topic": "植木说防脱洗发乳",
+    "role": "product",
+    "subject": "植木说防脱洗发乳",
+    "knowledge_ids": [
+      "KU08",
+      "KU34",
+      "KU35",
+      "KU36"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0008",
+      "CL0031",
+      "CL0032",
+      "CL0033"
+    ],
+    "evidence_ids": [
+      "E_KU08",
+      "E_KU34",
+      "E_KU35",
+      "E_KU36"
+    ],
+    "allowed_conclusions": [
+      "植木说防脱洗发乳：配方中添加了山茶籽、侧柏叶、姜根等多重植物精粹；弱酸性配方贴合头皮 pH 值；无硅油配方；它是奶白色的乳液质地。",
+      "植木说防脱洗发乳：配方中添加了山茶籽、侧柏叶、姜根等多重植物精粹。",
+      "植木说防脱洗发乳：弱酸性配方贴合头皮 pH 值；无硅油配方。",
+      "植木说防脱洗发乳：它是奶白色的乳液质地。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0008",
+        "CL0031",
+        "CL0032",
+        "CL0033"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S9",
+    "depends_on_claims": [
+      "CL0008",
+      "CL0031",
+      "CL0032",
+      "CL0033"
+    ],
+    "structure_id": "AS009",
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "说明已知形态",
+        "区分已有描述与实际体验"
+      ],
+      "argument_step": "说明已知形态；区分已有描述与实际体验",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    },
+    "order": 9,
+    "target_hanzi": 192,
+    "purpose": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "required_content": [
+      "植木说防脱洗发乳",
+      "说明已知形态",
+      "区分已有描述与实际体验",
+      "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    ],
+    "max_chars": 249,
+    "minimum_hanzi": 154
+  },
+  {
+    "id": "S11",
+    "topic": "Bodyaid 防脱生姜洗发水",
+    "role": "product",
+    "subject": "Bodyaid 防脱生姜洗发水",
+    "knowledge_ids": [
+      "KU09",
+      "KU37",
+      "KU38",
+      "KU39"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0009",
+      "CL0034",
+      "CL0035",
+      "CL0036"
+    ],
+    "evidence_ids": [
+      "E_KU09",
+      "E_KU37",
+      "E_KU38",
+      "E_KU39"
+    ],
+    "allowed_conclusions": [
+      "Bodyaid 防脱生姜洗发水：配方中添加了高活性生姜根提取物；还添加了控油成分；它是淡黄色的乳液质地。",
+      "Bodyaid 防脱生姜洗发水：配方中添加了高活性生姜根提取物；还添加了控油成分。",
+      "Bodyaid 防脱生姜洗发水：配方中添加了高活性生姜根提取物；还添加了控油成分。",
+      "Bodyaid 防脱生姜洗发水：它是淡黄色的乳液质地。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0009",
+        "CL0034",
+        "CL0035",
+        "CL0036"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S10",
+    "depends_on_claims": [
+      "CL0009",
+      "CL0034",
+      "CL0035",
+      "CL0036"
+    ],
+    "structure_id": "AS010",
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "说明已知形态"
+      ],
+      "argument_step": "说明已知形态",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    },
+    "order": 10,
+    "target_hanzi": 192,
+    "purpose": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "required_content": [
+      "Bodyaid 防脱生姜洗发水",
+      "说明已知形态",
+      "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    ],
+    "max_chars": 249,
+    "minimum_hanzi": 154
+  },
+  {
+    "id": "S12",
+    "topic": "云康防脱洗发水",
+    "role": "product",
+    "subject": "云康防脱洗发水",
+    "knowledge_ids": [
+      "KU10",
+      "KU40",
+      "KU41",
+      "KU42"
+    ],
+    "question": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "claim_ids": [
+      "CL0010",
+      "CL0037",
+      "CL0038",
+      "CL0039"
+    ],
+    "evidence_ids": [
+      "E_KU10",
+      "E_KU40",
+      "E_KU41",
+      "E_KU42"
+    ],
+    "allowed_conclusions": [
+      "云康防脱洗发水：配方中添加了侧柏叶、何首乌、当归等草本植萃成分；同时搭配泛醇成分；它是透明啫喱质地。",
+      "云康防脱洗发水：配方中添加了侧柏叶、何首乌、当归等草本植萃成分；同时搭配泛醇成分。",
+      "云康防脱洗发水：配方中添加了侧柏叶、何首乌、当归等草本植萃成分；同时搭配泛醇成分。",
+      "云康防脱洗发水：配方质地轻盈。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0010",
+        "CL0037",
+        "CL0038",
+        "CL0039"
+      ],
+      "operation": "describe",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S11",
+    "depends_on_claims": [
+      "CL0010",
+      "CL0037",
+      "CL0038",
+      "CL0039"
+    ],
+    "structure_id": "AS011",
+    "structure_task": {
+      "role": "subject",
+      "purpose": "逐项解释当前对象",
+      "required_content": [
+        "比较已知规格",
+        "解释已知组成",
+        "说明已知形态"
+      ],
+      "argument_step": "比较已知规格；解释已知组成；说明已知形态",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    },
+    "order": 11,
+    "target_hanzi": 192,
+    "purpose": "逐项解释当前对象；该产品有哪些已记录属性？",
+    "required_content": [
+      "云康防脱洗发水",
+      "比较已知规格",
+      "解释已知组成",
+      "说明已知形态",
+      "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    ],
+    "max_chars": 249,
+    "minimum_hanzi": 154
+  },
+  {
+    "id": "S13",
+    "topic": "同口径对比与条件式取舍",
+    "role": "conclusion",
+    "subject": null,
+    "knowledge_ids": [
+      "KU11",
+      "KU12"
+    ],
+    "question": "回扣全文问题并收束论证；本节如何用已知资料推进读者问题？",
+    "claim_ids": [
+      "CL0011",
+      "CL0012"
+    ],
+    "evidence_ids": [
+      "E_KU11",
+      "E_KU12"
+    ],
+    "allowed_conclusions": [
+      "可先把组成资料、净含量与同单位价格、包装取用、已提供报告指标放在同一张表里。",
+      "原文十款产品的资质、成分和规格披露详略差异很大。"
+    ],
+    "forbidden_conclusions": [
+      "不从成分存在推出效果或适用人群",
+      "不从部分成分摘录评价完整配方长短",
+      "不由未知价格推出性价比",
+      "不由编辑顺序推出客观性能排名",
+      "不把供应商或媒体自述写成独立验证"
+    ],
+    "reasoning": {
+      "premises": [
+        "CL0011",
+        "CL0012"
+      ],
+      "operation": "scoped_explanation",
+      "conclusion_scope": "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    },
+    "reads_previous_section": "S12",
+    "depends_on_claims": [
+      "CL0011",
+      "CL0012"
+    ],
+    "structure_id": "AS012",
+    "structure_task": {
+      "role": "summary",
+      "purpose": "回扣全文问题并收束论证",
+      "required_content": [
+        "回到读者的选择问题",
+        "说明可支持的身份信息",
+        "解释已知组成"
+      ],
+      "argument_step": "回到读者的选择问题；说明可支持的身份信息；解释已知组成",
+      "transition": "承接上一部分，再推进本节；只使用当前声明，缺失的属性直接省略"
+    },
+    "order": 12,
+    "target_hanzi": 192,
+    "purpose": "回扣全文问题并收束论证；本节如何用已知资料推进读者问题？",
+    "required_content": [
+      "同口径对比与条件式取舍",
+      "回到读者的选择问题",
+      "说明可支持的身份信息",
+      "解释已知组成",
+      "只解释本节已分配事实及明确的一般选择意见，不产生产品排序或新属性"
+    ],
+    "max_chars": 249,
+    "minimum_hanzi": 154
+  },
+  {
+    "id": "END",
+    "topic": "回答开头的问题并收束全文",
+    "role": "closing",
+    "claim_ids": [],
+    "target_hanzi": 180,
+    "max_chars": 233,
+    "minimum_hanzi": 144
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "image_file": "/home/user/redroid-doubao/backups/hpe14-20261006/redroid13-hpe14-image.tar",
+  "image_bytes": 983211520,
+  "image_sha256": "f082793d9f3a6433fba74166aa6c0f4f000965d019f89d5cac1d50121e1adf1b",
+  "image_id": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f",
+  "queue_snapshot_time": 1791334892.4273205,
+  "includes_android_login_volume": false,
+  "note": "Live SQLite backup includes WAL safely; full Android volume is separate and preserved."
+}

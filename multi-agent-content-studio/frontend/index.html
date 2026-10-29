@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Peit — Multi-Agent Content Studio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236366f1'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M11.5 24V8H17a5 5 0 0 1 0 10H11.5' fill='none' stroke='white' stroke-width='2.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<style>
+  /* ============================================================
+     Design system (shared language with the Peit / RAG project)
+     ============================================================ */
+  :root{
+    --bg:#0a0a0c; --bg-2:#0e0f12; --panel:#141519; --panel-2:#1a1c22;
+    --border:rgba(255,255,255,.09); --border-soft:rgba(255,255,255,.05);
+    --text:#f3f4f6; --muted:#9aa1ad; --faint:#656b78;
+    --accent:#6366f1; --accent-2:#818cf8; --accent-soft:rgba(99,102,241,.13);
+    --grad:linear-gradient(140deg,#6366f1,#8b5cf6);
+    --good:#34d399; --good-soft:rgba(52,211,153,.13); --danger:#f87171; --danger-soft:rgba(248,113,113,.14);
+    --warn:#fbbf24;
+    --radius:14px; --radius-sm:10px; --radius-lg:20px;
+    --shadow:0 24px 60px rgba(0,0,0,.55); --shadow-sm:0 1px 2px rgba(0,0,0,.3);
+    --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+    --sans:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  :root[data-theme="light"]{
+    color-scheme:light;
+    --bg:#fbfbfc; --bg-2:#f5f6f8; --panel:#ffffff; --panel-2:#f6f7f9;
+    --border:rgba(17,20,28,.11); --border-soft:rgba(17,20,28,.06);
+    --text:#16181d; --muted:#5a616e; --faint:#969ba6;
+    --accent-soft:rgba(99,102,241,.10);
+    --good-soft:rgba(16,163,110,.12); --danger-soft:rgba(220,60,60,.10);
+    --shadow:0 24px 60px rgba(30,35,60,.15); --shadow-sm:0 1px 2px rgba(30,35,60,.06);
+  }
+  :root[data-theme="dark"]{ color-scheme:dark; }
+  *{box-sizing:border-box}
+  html,body{margin:0; padding:0}
+  [hidden]{display:none !important}
+  body{
+    font-family:var(--sans); background:var(--bg); color:var(--text);
+    line-height:1.6; -webkit-font-smoothing:antialiased; min-height:100vh;
+  }
+  a{color:inherit; text-decoration:none}
+  .mono-label{font-family:var(--mono); font-size:10.5px; text-transform:uppercase; letter-spacing:.14em; color:var(--muted); font-weight:600}
+
+  /* ---------- animated network background (Vanta.js) ---------- */
+  #bg-net{position:fixed; inset:0; z-index:0; pointer-events:none; opacity:0; transition:opacity 1.2s ease}
+  #bg-net.on{opacity:1}
+  #bg-net canvas{display:block}
+
+  /* ---------- aurora background ---------- */
+  .aurora{position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none}
+  .aurora .blob{position:absolute; border-radius:50%; filter:blur(90px); opacity:.5; will-change:transform}
+  .aurora .b1{width:44vw; height:44vw; top:-14%; left:-8%; background:radial-gradient(circle at 30% 30%,#6366f1,transparent 62%); animation:drift1 17s ease-in-out infinite}
+  .aurora .b2{width:40vw; height:40vw; bottom:-16%; right:-6%; background:radial-gradient(circle at 60% 40%,#8b5cf6,transparent 62%); animation:drift2 21s ease-in-out infinite}
+  .aurora .b3{width:32vw; height:32vw; top:34%; left:52%; background:radial-gradient(circle at 50% 50%,#6366f1,transparent 62%); opacity:.35; animation:drift3 24s ease-in-out infinite}
+  :root[data-theme="light"] .aurora .blob{opacity:.22}
+  @keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(8vw,6vh) scale(1.12)}}
+  @keyframes drift2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-7vw,-5vh) scale(1.16)}}
+  @keyframes drift3{0%,100%{transform:translate(-50%,0) scale(1)}50%{transform:translate(-44%,-7vh) scale(1.1)}}
+
+  .wrap{position:relative; z-index:1; max-width:1180px; margin:0 auto; padding:26px 22px 90px}
+
+  /* ---------- header ---------- */
+  header{display:flex; align-items:center; gap:14px; margin-bottom:22px}
+  .logo{display:inline-flex; align-items:center; gap:11px; font-weight:800; font-size:19px; letter-spacing:-.02em}
+  .logo-mark{width:34px; height:34px; flex:none; animation:markGlow 4.5s ease-in-out infinite}
+  @keyframes markGlow{0%,100%{filter:drop-shadow(0 4px 12px rgba(99,102,241,.3))}50%{filter:drop-shadow(0 5px 20px rgba(99,102,241,.6))}}
+  .logo-text b{font-weight:800}
+  .logo-text .grad-text{background:linear-gradient(135deg,var(--accent),var(--accent-2),var(--accent)); background-size:200% auto; -webkit-background-clip:text; background-clip:text; color:transparent; animation:sheen 5s linear infinite}
+  @keyframes sheen{to{background-position:200% center}}
+  @media (prefers-reduced-motion:reduce){ .logo-mark,.logo-text .grad-text{animation:none} }
+  .spacer{flex:1}
+  .icon-btn{width:38px; height:38px; display:grid; place-items:center; border-radius:var(--radius-sm); border:1px solid var(--border); background:color-mix(in srgb,var(--panel) 55%,transparent); color:var(--muted); cursor:pointer; transition:border-color .15s,color .15s,background .15s; backdrop-filter:blur(6px)}
+  .icon-btn:hover{border-color:var(--accent); color:var(--text); background:var(--accent-soft)}
+  .icon-btn svg{width:18px; height:18px}
+  .ghost-link{display:inline-flex; align-items:center; justify-content:center; gap:7px; min-width:112px; color:var(--muted); font-size:13.5px; font-weight:500; padding:8px 12px; border-radius:var(--radius-sm); border:1px solid var(--border); background:color-mix(in srgb,var(--panel) 55%,transparent); transition:border-color .15s,color .15s; backdrop-filter:blur(6px)}
+  .ghost-link:hover{border-color:var(--accent); color:var(--text)}
+  .ghost-link svg{width:15px; height:15px}
+  .theme-icon-moon{display:none}
+  :root[data-theme="light"] .theme-icon-sun{display:none}
+  :root[data-theme="light"] .theme-icon-moon{display:block}
+  .lang-btn{width:52px; min-width:52px; padding:0; font-family:var(--mono); font-size:12px; font-weight:700; letter-spacing:.03em}
+  /* interactive 3D hero (THREE.js) — floats to the right of the intro copy */
+  #hero-canvas{position:absolute; top:50%; right:-30px; transform:translateY(-50%); width:360px; height:360px; display:block; pointer-events:none; opacity:.85; z-index:0}
+  :root[data-theme="light"] #hero-canvas{opacity:.6}
+  @media (max-width:900px){ #hero-canvas{width:290px; height:290px; right:-70px; opacity:.4} }
+  @media (max-width:480px){ #hero-canvas{display:none} }
+
+  /* ---------- how it works ---------- */
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:0 0 22px; animation:fadeUp 1s cubic-bezier(.22,1,.36,1)}
+  .step{display:flex; gap:11px; min-height:118px; padding:13px 14px; background:color-mix(in srgb,var(--panel) 65%,transparent); border:1px solid var(--border-soft); border-radius:var(--radius-sm); transition:border-color .2s, transform .2s}
+  .step:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--border)); transform:translateY(-2px)}
+  .step .n{font-family:var(--mono); font-size:11px; font-weight:700; color:var(--accent-2); letter-spacing:.06em; margin-top:3px; flex:none}
+  .step b{display:block; font-size:13.5px; margin-bottom:2px}
+  .step p{margin:0; font-size:12px; color:var(--faint); line-height:1.5}
+
+  /* ---------- footer ---------- */
+  footer{margin-top:36px; padding-top:18px; border-top:1px solid var(--border-soft); display:flex; align-items:center; gap:8px; flex-wrap:wrap; color:var(--faint); font-size:12.5px}
+  footer a{color:var(--muted); border-bottom:1px solid var(--border); transition:color .15s}
+  footer a:hover{color:var(--accent)}
+  footer .spacer{flex:1}
+
+  /* ---------- intro (fixed height so language switches never reflow) ---------- */
+  .intro{position:relative; margin:6px 0 22px; min-height:250px; display:flex; flex-direction:column; justify-content:center; animation:fadeUp .8s cubic-bezier(.22,1,.36,1)}
+  @keyframes fadeUp{from{opacity:0; transform:translateY(18px)}to{opacity:1; transform:none}}
+  .intro h1{position:relative; z-index:1; max-width:800px; font-size:clamp(28px,4.5vw,44px); line-height:1.08; letter-spacing:-.03em; font-weight:800; margin:0 0 10px}
+  .intro p{position:relative; z-index:1; font-size:clamp(15px,1.8vw,17px); color:var(--muted); max-width:620px; margin:0}
+  /* keep a fixed height on mobile too (tallest = Georgian) so language toggles never reflow */
+  @media (max-width:480px){ .intro{min-height:260px; margin:2px 0 18px} }
+
+  /* ---------- panel + controls ---------- */
+  .panel{background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow-sm)}
+  .controls{padding:18px}
+  .controls .row{display:grid; grid-template-columns:1fr 165px 145px auto; gap:12px; align-items:end}
+  .field label{display:block; margin:0 0 6px 2px}
+  input,select,textarea{width:100%; background:var(--bg-2); color:var(--text); border:1px solid var(--border); border-radius:var(--radius-sm); padding:11px 13px; font:inherit; font-size:14.5px; outline:none; transition:border-color .15s,box-shadow .15s,background .15s}
+  input:hover,select:hover,textarea:hover{border-color:color-mix(in srgb,var(--accent) 35%,var(--border))}
+  input:focus,select:focus,textarea:focus{border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft); background:var(--panel)}
+  input::placeholder,textarea::placeholder{color:var(--faint)}
+  select{appearance:none; -webkit-appearance:none; padding-right:34px; cursor:pointer; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239aa1ad' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 12px center}
+  .controls .row2{display:grid; grid-template-columns:1fr 190px; gap:12px; margin-top:12px}
+  @media (max-width:720px){ .controls .row2{grid-template-columns:1fr} }
+  button{cursor:pointer; font:inherit; font-weight:600; border:1px solid transparent; border-radius:var(--radius-sm); transition:transform .12s,filter .15s,background .15s,border-color .15s}
+  button:active{transform:translateY(1px) scale(.99)}
+  .btn-primary{display:inline-flex; align-items:center; justify-content:center; gap:9px; min-width:240px; padding:11px 20px; color:#fff; white-space:nowrap;
+    background:linear-gradient(180deg,#6d70f4 0%,#5a5df0 100%); border-color:rgba(255,255,255,.14);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.22), 0 8px 22px -10px rgba(99,102,241,.75)}
+  .btn-primary:hover{background:linear-gradient(180deg,#7a7df6 0%,#6366f1 100%); transform:translateY(-1px); box-shadow:inset 0 1px 0 rgba(255,255,255,.25), 0 12px 26px -10px rgba(99,102,241,.85)}
+  .btn-primary:disabled{opacity:.8; cursor:progress; transform:none}
+  .btn-primary svg{width:16px; height:16px}
+  .btn-primary .btn-spin{display:none; width:15px; height:15px; border-radius:50%; border:2px solid rgba(255,255,255,.35); border-top-color:#fff; animation:spin .7s linear infinite}
+  .btn-primary.loading .btn-ic{display:none}
+  .btn-primary.loading .btn-spin{display:inline-block}
+
+  /* ---------- pipeline ---------- */
+  .pipeline{display:flex; align-items:stretch; margin:24px 0 20px; overflow-x:auto; padding:2px; position:relative}
+  /* a glowing pulse of "data" flows through the pipeline when idle (hidden behind
+     the cards, so it reads as a signal hopping between agents through the connectors) */
+  .pipeline::after{content:""; position:absolute; z-index:0; top:50%; left:0; width:7px; height:7px; margin-top:-3.5px; border-radius:50%; background:var(--accent); box-shadow:0 0 12px 3px color-mix(in srgb,var(--accent) 60%,transparent); opacity:0; pointer-events:none; animation:travel 4.2s cubic-bezier(.45,.05,.55,.95) infinite}
+  .pipeline.running::after{animation:none; opacity:0}
+  @keyframes travel{0%{left:1%; opacity:0} 6%{opacity:1} 94%{opacity:1} 100%{left:99%; opacity:0}}
+  @media (prefers-reduced-motion:reduce){ .pipeline::after,.aurora .blob{animation:none} }
+  .node{flex:1 1 0; min-width:148px; min-height:168px; background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:14px; position:relative; z-index:1; transition:border-color .35s,box-shadow .35s,background .35s,transform .3s; animation:nodeIn .5s cubic-bezier(.22,1,.36,1) backwards; animation-delay:var(--in,0s)}
+  @keyframes nodeIn{from{opacity:0; transform:translateY(12px)}to{opacity:1; transform:none}}
+  .node .top{display:flex; align-items:center; justify-content:space-between; margin-bottom:10px}
+  .node .idx{font-family:var(--mono); font-size:11px; color:var(--faint); letter-spacing:.06em}
+  .node .ico{width:34px; height:34px; border-radius:10px; display:grid; place-items:center; border:1px solid var(--border); color:var(--muted); background:var(--panel-2); transition:color .35s,border-color .35s,background .35s; margin-bottom:9px}
+  .node .ico svg{width:18px; height:18px}
+  /* reserve room for up to 2 lines each so the node height is identical in EN & KA */
+  .node .nm{font-weight:650; font-size:14px; min-height:19px; line-height:1.25}
+  .node .role{font-size:11.5px; color:var(--faint); margin-top:3px; min-height:32px; line-height:1.35}
+  .node .st{margin-top:9px; display:flex; align-items:center; gap:7px; min-height:16px; font-size:11.5px; color:var(--faint)}
+  .node .check{opacity:0; color:var(--good); transform:scale(.5); transition:opacity .3s,transform .3s}
+  .node .check svg{width:15px; height:15px; display:block}
+  .connector{flex:0 0 22px; align-self:center; height:2px; background:var(--border); position:relative}
+  .connector::after{content:""; position:absolute; inset:0; width:0; background:var(--accent); transition:width .5s ease}
+  .connector.filled::after{width:100%}
+  .node.active{border-color:var(--accent); box-shadow:0 0 0 1px var(--accent),0 16px 40px -18px var(--accent); transform:translateY(-2px)}
+  .node.active .ico{color:#fff; background:var(--accent); border-color:var(--accent)}
+  .node.active .st{color:var(--accent)}
+  .node.active .idx{color:var(--accent)}
+  .node.active::after{content:""; position:absolute; inset:-1px; border-radius:var(--radius); border:1px solid var(--accent); opacity:.6; animation:halo 1.5s ease-out infinite}
+  @keyframes halo{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.03);opacity:0}}
+  .node.done{border-color:color-mix(in srgb,var(--accent) 40%,var(--border))}
+  .node.done .ico{color:var(--accent); border-color:color-mix(in srgb,var(--accent) 45%,var(--border))}
+  .node.done .st{color:var(--muted)}
+  .node.done .check{opacity:1; transform:scale(1)}
+
+  /* ---------- layout ---------- */
+  .grid{display:grid; grid-template-columns:1.6fr 1fr; gap:18px; align-items:start}
+  /* rail: flex gap collapses for hidden cards, so the Activity log top-aligns with
+     the Workspace whenever the Reviewer/Sources cards aren't shown */
+  .grid > div:last-child{display:flex; flex-direction:column; gap:18px}
+  .card{background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden}
+  .card > h2{margin:0; padding:14px 16px; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:9px;
+    background:linear-gradient(180deg, color-mix(in srgb,var(--accent) 6%,transparent), transparent)}
+  .card > h2 .mono-label{color:var(--text); font-size:11px}
+  .card > h2 svg{width:15px; height:15px; color:var(--accent)}
+  .card .body{padding:16px}
+  .live-dot{width:7px; height:7px; border-radius:50%; background:var(--faint); flex:none}
+  .live-dot.on{background:var(--accent); animation:pulse 1.3s ease-in-out infinite}
+  @keyframes pulse{50%{opacity:.4}}
+  .stagechip{display:inline-flex; align-items:center; gap:7px; margin-left:auto; font-size:11.5px; color:var(--muted); background:var(--panel-2); border:1px solid var(--border-soft); padding:3px 9px; border-radius:999px}
+  .spinner{width:13px; height:13px; border-radius:50%; border:2px solid color-mix(in srgb,var(--accent) 28%,transparent); border-top-color:var(--accent); animation:spin .7s linear infinite; flex:none}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* live stream + document */
+  #liveWrap{display:none}
+  .streaming{font-family:var(--mono); font-size:12.5px; color:var(--muted); white-space:pre-wrap; word-break:break-word; max-height:240px; overflow:auto; background:var(--bg-2); border:1px solid var(--border-soft); border-radius:var(--radius-sm); padding:13px}
+  .streaming .cursor{display:inline-block; width:7px; height:14px; background:var(--accent); vertical-align:-2px; animation:blink 1s steps(2) infinite; border-radius:1px}
+  @keyframes blink{50%{opacity:0}}
+  .doc{font-size:15px; line-height:1.72}
+  .doc.empty{color:var(--faint); font-size:14px}
+  .doc h1{font-size:24px; letter-spacing:-.02em; margin:.1em 0 .5em; line-height:1.2}
+  .doc h2{font-size:18px; margin:1.4em 0 .5em}
+  .doc h3{font-size:15px; margin:1.2em 0 .4em; color:var(--muted)}
+  .doc p{margin:.7em 0}
+  .doc ul,.doc ol{margin:.6em 0; padding-left:1.3em}
+  .doc li{margin:.28em 0}
+  .doc a{color:var(--accent); border-bottom:1px solid var(--accent-soft)}
+  .doc code{font-family:var(--mono); font-size:.88em; background:var(--bg-2); border:1px solid var(--border-soft); padding:1px 6px; border-radius:6px}
+  .doc hr{border:none; border-top:1px solid var(--border); margin:1.4em 0}
+  .doc strong{color:var(--text); font-weight:700}
+
+  /* review gauge */
+  #reviewCard{display:none}
+  .gauge{display:flex; align-items:center; gap:16px}
+  .ring{width:88px; height:88px; flex:none}
+  .ring circle{fill:none; stroke-width:8; stroke-linecap:round}
+  .ring .bg{stroke:var(--border)}
+  .ring .fg{stroke:var(--accent); stroke-dasharray:239; stroke-dashoffset:239; transform:rotate(-90deg); transform-origin:50% 50%; transition:stroke-dashoffset 1s cubic-bezier(.22,1,.36,1),stroke .4s}
+  .ring .fg.pass{stroke:var(--good)}
+  .ring .num{fill:var(--text); font-size:26px; font-weight:700; font-family:var(--sans)}
+  .ring .den{fill:var(--faint); font-size:11px; font-weight:500; font-family:var(--mono)}
+  .verdict b{color:var(--text); display:block; font-size:14px; margin-bottom:2px}
+  .verdict span{font-size:12.5px; color:var(--muted)}
+  .strengths{margin:12px 0 0; padding:0; list-style:none}
+  .strengths li{font-size:12.5px; color:var(--muted); padding:3px 0 3px 22px; position:relative}
+  .strengths li::before{content:""; position:absolute; left:2px; top:9px; width:9px; height:9px; border-left:2px solid var(--good); border-bottom:2px solid var(--good); transform:rotate(-45deg)}
+  .issue{display:flex; gap:9px; padding:9px 0; border-top:1px solid var(--border-soft); font-size:13px}
+  .issue:first-child{border-top:none}
+  .sev{flex:none; height:fit-content; margin-top:1px; font-family:var(--mono); font-size:9.5px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; padding:2px 7px; border-radius:5px}
+  .sev.high{background:var(--danger-soft); color:var(--danger)}
+  .sev.medium{background:rgba(251,191,36,.15); color:var(--warn)}
+  .sev.low{background:var(--accent-soft); color:var(--accent-2)}
+  .issue .fix{color:var(--faint); font-size:12px; margin-top:2px}
+
+  /* sources */
+  #sourcesCard{display:none}
+  .src{display:flex; gap:10px; align-items:flex-start; padding:9px 11px; border:1px solid var(--border-soft); border-radius:var(--radius-sm); margin-bottom:8px; background:var(--panel-2); transition:border-color .15s,transform .15s}
+  .src:hover{border-color:var(--accent); transform:translateX(2px)}
+  .src .snum{display:grid; place-items:center; width:18px; height:18px; flex:none; color:#fff; background:var(--accent); border-radius:5px; font-family:var(--mono); font-weight:700; font-size:10.5px}
+  .src > span:last-child{display:flex; flex-direction:column; min-width:0}
+  .src .stitle{display:block; color:var(--text); font-weight:600; font-size:13px}
+  .src .shost{display:block; color:var(--faint); font-size:11px; font-family:var(--mono); margin-top:2px; word-break:break-all}
+
+  /* activity log */
+  .log{max-height:230px; overflow:auto}
+  .log .l{display:flex; gap:9px; padding:6px 0; border-top:1px dashed var(--border-soft); animation:slidein .3s ease}
+  .log .l:first-child{border-top:none}
+  @keyframes slidein{from{opacity:0; transform:translateX(-6px)}to{opacity:1; transform:none}}
+  .log .tag{flex:none; height:fit-content; margin-top:1px; font-family:var(--mono); font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; padding:2px 6px; border-radius:5px; border:1px solid var(--border-soft); color:var(--muted)}
+  .log .msg{color:var(--muted); font-size:12.5px}
+  .log .msg .q{color:var(--accent-2)}
+  .log .msg b{color:var(--text)}
+
+  /* approval gate */
+  #approval{display:none; margin-top:18px; position:sticky; bottom:14px; z-index:5}
+  .approval-inner{background:var(--panel); border:1px solid var(--accent); border-radius:var(--radius); padding:16px; box-shadow:0 24px 60px -18px rgba(99,102,241,.5),0 0 0 1px var(--accent-soft); animation:rise .35s cubic-bezier(.22,1,.36,1)}
+  @keyframes rise{from{opacity:0; transform:translateY(14px) scale(.98)}to{opacity:1; transform:none}}
+  .approval-inner h3{margin:0 0 3px; font-size:15px; display:flex; align-items:center; gap:8px}
+  .approval-inner h3 svg{width:16px; height:16px; color:var(--accent)}
+  .approval-inner p{margin:0 0 13px; color:var(--muted); font-size:13px}
+  .approval-actions{display:flex; gap:10px; flex-wrap:wrap}
+  .btn-good{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:11px 18px; color:#04150e; font-weight:650;
+    background:linear-gradient(180deg,#43dba4 0%,#2fc98f 100%); border-color:rgba(255,255,255,.16);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.3), 0 8px 20px -10px rgba(52,211,153,.7)}
+  .btn-good:hover{filter:brightness(1.05); transform:translateY(-1px)}
+  .btn-good svg{width:16px; height:16px}
+  .btn-ghost{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:11px 16px; color:var(--text); background:var(--panel-2); border:1px solid var(--border); box-shadow:var(--shadow-sm)}
+  .btn-ghost:hover{border-color:var(--danger); color:var(--danger); transform:translateY(-1px)}
+  .btn-ghost svg{width:15px; height:15px}
+  /* fixed widths (fit the longer Georgian labels) so nothing shifts on language toggle */
+  #approveBtn{min-width:282px} #rejectBtn{min-width:242px} #sendReject{min-width:222px} #cancelReject{min-width:132px}
+  #rejectBox{display:none; margin-top:12px}
+  #rejectBox textarea{min-height:66px; resize:vertical}
+  #rejectBox .rr{display:flex; gap:10px; margin-top:10px}
+  .btn-send{display:inline-flex; align-items:center; justify-content:center; gap:7px; padding:9px 16px; color:#fff; font-weight:600;
+    background:linear-gradient(180deg,#6d70f4 0%,#5a5df0 100%); border-color:rgba(255,255,255,.14);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.22)}
+  .btn-send:hover{filter:brightness(1.07); transform:translateY(-1px)}
+  .btn-send svg{width:15px; height:15px}
+
+  /* published + banner + error */
+  .published{border-color:var(--good); box-shadow:0 0 0 1px var(--good-soft)}
+  .published > h2 svg{color:var(--good)}
+  .banner{display:none; align-items:center; gap:9px; background:var(--good-soft); border:1px solid color-mix(in srgb,var(--good) 40%,var(--border)); color:var(--good); padding:11px 15px; border-radius:var(--radius-sm); margin-bottom:16px; font-size:13.5px; font-weight:600; animation:rise .35s ease}
+  .banner svg{width:16px; height:16px; flex:none}
+  .err{display:none; align-items:flex-start; gap:9px; background:var(--danger-soft); border:1px solid color-mix(in srgb,var(--danger) 40%,var(--border)); color:var(--danger); padding:12px 15px; border-radius:var(--radius-sm); margin-top:16px; font-size:13.5px}
+  .err svg{width:16px; height:16px; flex:none; margin-top:2px}
+  .err a{color:var(--danger); text-decoration:underline}
+  .empty-hint{color:var(--muted); font-size:13px; padding:6px 2px; text-align:center}
+  /* shared empty state — Workspace + Activity log use the same block so the two
+     cards line up and read as a matched pair */
+  .empty-state{display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; min-height:190px; gap:14px; padding:24px; color:var(--muted)}
+  .log .empty-state{min-height:0; height:190px}
+  .empty-state .es-ic{width:46px; height:46px; border-radius:14px; display:grid; place-items:center;
+    border:1px solid var(--border); background:var(--panel-2); color:var(--accent)}
+  .empty-state .es-ic svg{width:22px; height:22px}
+  .empty-state p{margin:0; font-size:13px; max-width:240px; line-height:1.55}
+
+  @media (max-width:900px){
+    .grid{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:720px){
+    .controls .row{grid-template-columns:1fr 1fr; gap:10px}
+    .controls .row .field.topic{grid-column:1 / -1}
+    .controls .row .btn-primary{grid-column:1 / -1; width:100%}
+  }
+  @media (max-width:480px){
+    .wrap{padding:20px 15px 70px}
+    .intro h1{font-size:clamp(24px,8vw,34px)}
+    header{gap:10px}
+    .ghost-link span{display:none}
+    .steps{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- SVG icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="mark-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <symbol id="mark" viewBox="0 0 32 32">
+    <rect width="32" height="32" rx="9" fill="url(#mark-grad)"/>
+    <path d="M11.5 24 V8 H17 a5 5 0 0 1 0 10 H11.5" fill="none" stroke="#fff"
+          stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+    <symbol id="ic-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
+    <symbol id="ic-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></symbol>
+    <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="16" rx="2"/><path d="M9 4V3h6v1"/><path d="M9.5 12l2 2 3.5-3.5"/></symbol>
+    <symbol id="ic-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.12 15.88"/><path d="M14.47 14.48L20 20"/><path d="M8.12 8.12L12 12"/></symbol>
+    <symbol id="ic-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></symbol>
+    <symbol id="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></symbol>
+    <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="ic-check2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></symbol>
+    <symbol id="ic-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M20.5 9A9 9 0 0 0 5.6 5.6L1 10"/><path d="M1 20v-6h6"/><path d="M3.5 15A9 9 0 0 0 18.4 18.4L23 14"/></symbol>
+    <symbol id="ic-hand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 0 1 4 0v6a8 8 0 0 1-8 8h-2a8 8 0 0 1-7-4l-2.5-4a2 2 0 0 1 3.4-2L10 14"/></symbol>
+    <symbol id="ic-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 20 4.8a4.8 4.8 0 0 0-.1-3.6s-1.1-.3-3.6 1.4a12.4 12.4 0 0 0-6.6 0C7.2.9 6.1 1.2 6.1 1.2A4.8 4.8 0 0 0 6 4.8a5.2 5.2 0 0 0-1.4 3.6c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></symbol>
+    <symbol id="ic-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+    <symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+    <symbol id="ic-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+</svg>
+
+<!-- animated network background (Vanta.js) — the CSS aurora below is the graceful fallback -->
+<div id="bg-net" aria-hidden="true"></div>
+<div class="aurora"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+
+<div class="wrap">
+  <header>
+    <div class="logo">
+      <svg class="logo-mark"><use href="#mark"/></svg>
+      <span class="logo-text"><b class="grad-text">Peit</b></span>
+    </div>
+    <span class="spacer"></span>
+    <a class="ghost-link" id="repoLink" href="https://github.com/tornikepe/multi-agent-content-studio" target="_blank" rel="noopener">
+      <svg><use href="#ic-github"/></svg><span data-i18n="source">Source</span>
+    </a>
+    <button class="icon-btn lang-btn" id="langBtn" title="Language / ენა" aria-label="Language"><span id="langLabel">ქარ</span></button>
+    <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">
+      <svg class="theme-icon-sun"><use href="#ic-sun"/></svg>
+      <svg class="theme-icon-moon"><use href="#ic-moon"/></svg>
+    </button>
+  </header>
+
+  <div class="intro">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <h1 data-i18n="h1">From a topic to a publish-ready post — agent by agent.</h1>
+    <p data-i18n="sub">A pipeline of specialized AI agents researches, writes, reviews, and revises your post. You approve the final draft before it publishes.</p>
+  </div>
+
+  <!-- how it works -->
+  <div class="steps">
+    <div class="step"><span class="n">01</span><div><b data-i18n="s1t">Enter a topic</b><p data-i18n="s1b">Type what the post should be about — you pick the tone, length, and language.</p></div></div>
+    <div class="step"><span class="n">02</span><div><b data-i18n="s2t">Agents get to work</b><p data-i18n="s2b">Five specialized AI agents research, draft, score, and revise it — streaming live.</p></div></div>
+    <div class="step"><span class="n">03</span><div><b data-i18n="s3t">You approve</b><p data-i18n="s3b">Review the draft at the human gate: publish it, or send it back with notes.</p></div></div>
+    <div class="step"><span class="n">04</span><div><b data-i18n="s4t">Publish-ready</b><p data-i18n="s4b">Get a polished post with a meta description and tags, ready to ship.</p></div></div>
+  </div>
+
+  <!-- controls -->
+  <div class="panel controls">
+    <div class="row">
+      <div class="field topic">
+        <label class="mono-label" data-i18n="lTopic">Topic</label>
+        <input id="topic" data-i18n-ph="phTopic" placeholder="How RAG systems reduce LLM hallucinations" maxlength="200" />
+      </div>
+      <div class="field">
+        <label class="mono-label" data-i18n="lTone">Tone</label>
+        <select id="tone">
+          <option value="informative" data-i18n="tInformative">Informative</option>
+          <option value="conversational" data-i18n="tConversational">Conversational</option>
+          <option value="professional" data-i18n="tProfessional">Professional</option>
+          <option value="witty" data-i18n="tWitty">Witty</option>
+          <option value="technical" data-i18n="tTechnical">Technical</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="mono-label" data-i18n="lLength">Length</label>
+        <select id="length">
+          <option value="short" data-i18n="lenShort">Short</option>
+          <option value="medium" selected data-i18n="lenMedium">Medium</option>
+          <option value="long" data-i18n="lenLong">Long</option>
+        </select>
+      </div>
+      <button class="btn-primary" id="runBtn"><span data-i18n="run">Run pipeline</span> <svg class="btn-ic"><use href="#ic-arrow"/></svg><span class="btn-spin"></span></button>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label class="mono-label" data-i18n="lAngle">Angle / audience — optional</label>
+        <input id="angle" data-i18n-ph="phAngle" placeholder="for engineering managers evaluating build-vs-buy" maxlength="200" />
+      </div>
+      <div class="field">
+        <label class="mono-label" data-i18n="lContentLang">Content language</label>
+        <select id="clang">
+          <option value="en">English</option>
+          <option value="ka">ქართული</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- pipeline -->
+  <div class="pipeline" id="pipeline"></div>
+
+  <!-- workspace -->
+  <div class="grid">
+    <div>
+      <div class="banner" id="banner"><svg><use href="#ic-check2"/></svg> <span data-i18n="banner">Published — your post is ready below.</span></div>
+
+      <div class="card" id="docCard">
+        <h2><span class="live-dot" id="docDot"></span> <span class="mono-label" id="docTitle" style="letter-spacing:.12em">Workspace</span>
+          <span class="stagechip" id="stageChip" hidden><span class="spinner"></span><span id="stageName"></span></span>
+        </h2>
+        <div class="body">
+          <div id="liveWrap"><div class="streaming" id="stream"></div></div>
+          <div class="doc" id="doc"><div class="empty-state"><span class="es-ic"><svg><use href="#ic-pen"/></svg></span><p data-i18n="docPlaceholder">The generated draft will appear here. Enter a topic and run the pipeline.</p></div></div>
+        </div>
+      </div>
+
+      <!-- human-in-the-loop gate -->
+      <div id="approval">
+        <div class="approval-inner">
+          <h3><svg><use href="#ic-hand"/></svg> <span data-i18n="gateTitle">Human review — your call</span></h3>
+          <p data-i18n="gateBody">The agents converged on the draft above. Approve to publish, or send it back with notes.</p>
+          <div class="approval-actions">
+            <button class="btn-good" id="approveBtn"><svg><use href="#ic-check2"/></svg> <span data-i18n="approve">Approve &amp; publish</span></button>
+            <button class="btn-ghost" id="rejectBtn"><svg><use href="#ic-refresh"/></svg> <span data-i18n="requestChanges">Request changes</span></button>
+          </div>
+          <div id="rejectBox">
+            <textarea id="feedback" data-i18n-ph="phFeedback" placeholder="What should the editor change? e.g. 'Add a concrete example in section 2 and cut the intro in half.'"></textarea>
+            <div class="rr">
+              <button class="btn-send" id="sendReject"><svg><use href="#ic-refresh"/></svg> <span data-i18n="sendEditor">Send to editor</span></button>
+              <button class="btn-ghost" id="cancelReject"><svg><use href="#ic-x"/></svg> <span data-i18n="cancel">Cancel</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="err" id="err"></div>
+    </div>
+
+    <!-- right rail -->
+    <div>
+      <div class="card" id="reviewCard">
+        <h2><svg><use href="#ic-check"/></svg> <span class="mono-label" style="letter-spacing:.12em" data-i18n="cReview">Reviewer verdict</span></h2>
+        <div class="body">
+          <div class="gauge">
+            <svg class="ring" viewBox="0 0 88 88">
+              <circle class="bg" cx="44" cy="44" r="38"/>
+              <circle class="fg" id="ringFg" cx="44" cy="44" r="38"/>
+              <text class="num" x="44" y="42" text-anchor="middle" id="scoreTxt">–</text>
+              <text class="den" x="44" y="59" text-anchor="middle">/ 10</text>
+            </svg>
+            <div class="verdict"><b id="verdict" data-i18n="awaitingReview">Awaiting review…</b><span id="revNote"></span></div>
+          </div>
+          <ul class="strengths" id="strengths"></ul>
+          <div id="issues" style="margin-top:8px"></div>
+        </div>
+      </div>
+
+      <div class="card" id="sourcesCard">
+        <h2><svg><use href="#ic-search"/></svg> <span class="mono-label" style="letter-spacing:.12em" data-i18n="cSources">Sources</span></h2>
+        <div class="body" id="sources"></div>
+      </div>
+
+      <div class="card">
+        <h2><span class="live-dot" id="logDot"></span> <span class="mono-label" style="letter-spacing:.12em" data-i18n="cLog">Activity log</span></h2>
+        <div class="body"><div class="log" id="log"><div class="empty-state"><span class="es-ic"><svg><use href="#ic-activity"/></svg></span><p data-i18n="logEmpty">Events stream here in real time.</p></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span data-i18n="footNote">Open-source portfolio project — multi-agent orchestration with a human in the loop.</span>
+    <span class="spacer"></span>
+    <a href="https://github.com/tornikepe/multi-agent-content-studio" target="_blank" rel="noopener">GitHub</a>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+<script>
+// ---------- theme ----------
+const root = document.documentElement;
+(function initTheme(){
+  const saved = localStorage.getItem("macs-theme");
+  if(saved) root.setAttribute("data-theme", saved);
+})();
+document.getElementById("themeBtn").onclick = ()=>{
+  const next = root.getAttribute("data-theme")==="light" ? "dark" : "light";
+  root.setAttribute("data-theme", next);
+  localStorage.setItem("macs-theme", next);
+  if(bgNet) bgNet.setOptions({ backgroundColor: next==="light" ? 0xfbfbfc : 0x0a0a0c });
+};
+
+// ---------- i18n (English / Georgian) ----------
+const STR = {
+  en:{
+    source:"Source", eyebrow:"Five agents · human-in-the-loop · live streaming",
+    h1:"From a topic to a publish-ready post — agent by agent.",
+    sub:"A pipeline of specialized AI agents researches, writes, reviews, and revises your post. You approve the final draft before it publishes.",
+    lTopic:"Topic", phTopic:"How RAG systems reduce LLM hallucinations",
+    lTone:"Tone", tInformative:"Informative", tConversational:"Conversational", tProfessional:"Professional", tWitty:"Witty", tTechnical:"Technical",
+    lLength:"Length", lenShort:"Short", lenMedium:"Medium", lenLong:"Long", run:"Run pipeline", running:"Running…",
+    lAngle:"Angle / audience — optional", phAngle:"for engineering managers evaluating build-vs-buy",
+    lContentLang:"Content language",
+    banner:"Published — your post is ready below.",
+    docPlaceholder:"The generated draft will appear here. Enter a topic and run the pipeline.",
+    gateTitle:"Human review — your call",
+    gateBody:"The agents converged on the draft above. Approve to publish, or send it back with notes.",
+    approve:"Approve & publish", requestChanges:"Request changes",
+    phFeedback:"What should the editor change? e.g. 'Add a concrete example in section 2 and cut the intro in half.'",
+    sendEditor:"Send to editor", cancel:"Cancel",
+    cReview:"Reviewer verdict", awaitingReview:"Awaiting review…", cSources:"Sources", cLog:"Activity log",
+    logEmpty:"Events stream here in real time.",
+    ws_workspace:"Workspace", ws_researchNotes:"Research notes", ws_draft:"Draft", ws_published:"Published post",
+    st_idle:"idle", st_working:"working…", st_done:"done", st_stopped:"stopped",
+    rev_first:"first pass", rev_after:"after revision {n}",
+    ag_researcher_name:"Researcher", ag_researcher_role:"gathers sources",
+    ag_writer_name:"Writer", ag_writer_role:"drafts the post",
+    ag_reviewer_name:"Reviewer", ag_reviewer_role:"scores & critiques",
+    ag_editor_name:"Editor", ag_editor_role:"applies fixes",
+    ag_publisher_name:"Publisher", ag_publisher_role:"final polish",
+    m_started:"Pipeline started · ", m_searching:"Searching: ", m_sources:"Collected {n} source(s)",
+    m_working:"{a} is working", m_revision:"Revision {n} — critique sent to the editor",
+    m_scored:"Scored {s}/10 — {v}", m_gate:"Waiting for your decision",
+    m_approved:"Approved — sending to publisher", m_reject:"Changes requested — back to the editor",
+    m_complete:"Pipeline complete", noIssues:"No blocking issues.",
+    provLive:"Live", provOffline:"Offline demo",
+    offlineHint:"Add a free key for real generation — see .env.example",
+    s1t:"Enter a topic", s1b:"Type what the post should be about — you pick the tone, length, and language.",
+    s2t:"Agents get to work", s2b:"Five specialized AI agents research, draft, score, and revise it — streaming live.",
+    s3t:"You approve", s3b:"Review the draft at the human gate: publish it, or send it back with notes.",
+    s4t:"Publish-ready", s4b:"Get a polished post with a meta description and tags, ready to ship.",
+    footNote:"Open-source portfolio project — multi-agent orchestration with a human in the loop.",
+  },
+  ka:{
+    source:"წყარო", eyebrow:"ხუთი აგენტი · human-in-the-loop · ცოცხალი streaming",
+    h1:"თემიდან გამოსაქვეყნებელ პოსტამდე — აგენტ-აგენტად.",
+    sub:"სპეციალიზებული AI აგენტების კონვეიერი იკვლევს, წერს, აფასებს და ასწორებს შენს პოსტს. საბოლოო დრაფტს შენ ამტკიცებ გამოქვეყნებამდე.",
+    lTopic:"თემა", phTopic:"როგორ ამცირებს RAG სისტემები LLM-ის ჰალუცინაციებს",
+    lTone:"ტონი", tInformative:"ინფორმაციული", tConversational:"სასაუბრო", tProfessional:"პროფესიული", tWitty:"მახვილგონივრული", tTechnical:"ტექნიკური",
+    lLength:"სიგრძე", lenShort:"მოკლე", lenMedium:"საშუალო", lenLong:"გრძელი", run:"კონვეიერის გაშვება", running:"მუშაობს…",
+    lAngle:"კუთხე / აუდიტორია — არასავალდებულო", phAngle:"მაგ. build-vs-buy-ს შემფასებელი ინჟინერ-მენეჯერებისთვის",
+    lContentLang:"კონტენტის ენა",
+    banner:"გამოქვეყნდა — შენი პოსტი მზადაა ქვემოთ.",
+    docPlaceholder:"დაგენერირებული დრაფტი აქ გამოჩნდება. შეიყვანე თემა და გაუშვი კონვეიერი.",
+    gateTitle:"ადამიანის განხილვა — შენი გადაწყვეტილება",
+    gateBody:"აგენტებმა დაასრულეს ზემოთ მოცემულ დრაფტზე. დაამტკიცე გამოსაქვეყნებლად ან დააბრუნე შენიშვნებით.",
+    approve:"დამტკიცება და გამოქვეყნება", requestChanges:"ცვლილებების მოთხოვნა",
+    phFeedback:"რა უნდა შეცვალოს ედიტორმა? მაგ. „მე-2 სექციაში დაამატე კონკრეტული მაგალითი და შესავალი განახევრე.“",
+    sendEditor:"ედიტორთან გაგზავნა", cancel:"გაუქმება",
+    cReview:"შემფასებლის ვერდიქტი", awaitingReview:"შეფასების მოლოდინში…", cSources:"წყაროები", cLog:"აქტივობის ლოგი",
+    logEmpty:"მოვლენები აქ გამოჩნდება რეალურ დროში.",
+    ws_workspace:"სამუშაო სივრცე", ws_researchNotes:"კვლევის ჩანაწერები", ws_draft:"დრაფტი", ws_published:"გამოქვეყნებული პოსტი",
+    st_idle:"მოცდაში", st_working:"მუშაობს…", st_done:"დასრულდა", st_stopped:"შეჩერდა",
+    rev_first:"პირველი გავლა", rev_after:"რევიზია {n}-ის შემდეგ",
+    ag_researcher_name:"მკვლევარი", ag_researcher_role:"აგროვებს წყაროებს",
+    ag_writer_name:"მწერალი", ag_writer_role:"წერს პოსტს",
+    ag_reviewer_name:"შემფასებელი", ag_reviewer_role:"აფასებს და აკრიტიკებს",
+    ag_editor_name:"რედაქტორი", ag_editor_role:"ასწორებს",
+    ag_publisher_name:"გამომქვეყნებელი", ag_publisher_role:"საბოლოო გაპრიალება",
+    m_started:"კონვეიერი დაიწყო · ", m_searching:"ძებნა: ", m_sources:"შეგროვდა {n} წყარო",
+    m_working:"{a} მუშაობს", m_revision:"რევიზია {n} — კრიტიკა გაეგზავნა ედიტორს",
+    m_scored:"შეფასდა {s}/10 — {v}", m_gate:"შენი გადაწყვეტილების მოლოდინში",
+    m_approved:"დამტკიცდა — ეგზავნება გამომქვეყნებელს", m_reject:"მოთხოვნილია ცვლილებები — ბრუნდება ედიტორთან",
+    m_complete:"კონვეიერი დასრულდა", noIssues:"არ არის ბლოკირების საკითხები.",
+    provLive:"აქტიური", provOffline:"Offline დემო",
+    offlineHint:"დაამატე უფასო გასაღები რეალური გენერაციისთვის — იხ. .env.example",
+    s1t:"შეიყვანე თემა", s1b:"დაწერე რაზეც გინდა პოსტი — ტონს, სიგრძესა და ენას შენ ირჩევ.",
+    s2t:"აგენტები მუშაობენ", s2b:"ხუთი სპეციალიზებული AI აგენტი იკვლევს, წერს, აფასებს და ასწორებს — ცოცხლად.",
+    s3t:"შენ ამტკიცებ", s3b:"განიხილე დრაფტი: გამოაქვეყნე ან დააბრუნე შენიშვნებით.",
+    s4t:"მზა პოსტი", s4b:"მიიღე გაპრიალებული პოსტი meta აღწერითა და თეგებით.",
+    footNote:"ღია კოდის პორტფოლიო პროექტი — მრავალაგენტიანი ორკესტრაცია ადამიანის კონტროლით.",
+  },
+};
+let lang = localStorage.getItem("macs-lang")==="ka" ? "ka" : "en";
+function t(key, vars){
+  let s = (STR[lang] && STR[lang][key]) || STR.en[key] || key;
+  if(vars) for(const k in vars) s = s.replace("{"+k+"}", vars[k]);
+  return s;
+}
+function applyStatic(){
+  root.setAttribute("lang", lang);
+  document.querySelectorAll("[data-i18n]").forEach(el=>{ el.textContent = t(el.getAttribute("data-i18n")); });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el=>{ el.setAttribute("placeholder", t(el.getAttribute("data-i18n-ph"))); });
+  document.getElementById("langLabel").textContent = lang==="en" ? "ქარ" : "EN";
+}
+document.getElementById("langBtn").onclick = ()=>{
+  lang = lang==="en" ? "ka" : "en";
+  localStorage.setItem("macs-lang", lang);
+  document.getElementById("clang").value = lang;  // default content language follows UI
+  applyStatic();
+  relabelPipeline();
+};
+
+// ---------- agent metadata ----------
+const AGENTS = [
+  {id:"researcher", name:"Researcher", role:"gathers sources",   icon:"ic-search"},
+  {id:"writer",     name:"Writer",     role:"drafts the post",   icon:"ic-pen"},
+  {id:"reviewer",   name:"Reviewer",   role:"scores & critiques",icon:"ic-check"},
+  {id:"editor",     name:"Editor",     role:"applies fixes",     icon:"ic-scissors"},
+  {id:"publisher",  name:"Publisher",  role:"final polish",      icon:"ic-send"},
+];
+const A = Object.fromEntries(AGENTS.map(a=>[a.id,a]));
+
+// ---------- build pipeline ----------
+const pipeEl = document.getElementById("pipeline");
+AGENTS.forEach((a,i)=>{
+  const n = document.createElement("div");
+  n.className = "node"; n.id = "node-"+a.id;
+  n.style.setProperty("--in", (i*0.09)+"s");   // staggered entrance
+  n.innerHTML = `
+    <div class="top"><span class="idx">0${i+1}</span>
+      <span class="check"><svg><use href="#ic-check2"/></svg></span></div>
+    <div class="ico"><svg><use href="#${a.icon}"/></svg></div>
+    <div class="nm">${t("ag_"+a.id+"_name")}</div><div class="role">${t("ag_"+a.id+"_role")}</div>
+    <div class="st" id="st-${a.id}">${t("st_idle")}</div>`;
+  pipeEl.appendChild(n);
+  if(i<AGENTS.length-1){
+    const c=document.createElement("div"); c.className="connector"; c.id="conn-"+i; pipeEl.appendChild(c);
+  }
+});
+const agentName = id => t("ag_"+id+"_name");
+let docTitleKey = "ws_workspace";
+function setDocTitle(key){ docTitleKey = key; document.getElementById("docTitle").textContent = t(key); }
+function relabelPipeline(){
+  AGENTS.forEach(a=>{
+    const n = document.getElementById("node-"+a.id); if(!n) return;
+    n.querySelector(".nm").textContent = t("ag_"+a.id+"_name");
+    n.querySelector(".role").textContent = t("ag_"+a.id+"_role");
+    const st = document.getElementById("st-"+a.id);
+    st.textContent = n.classList.contains("active") ? t("st_working")
+                    : n.classList.contains("done") ? t("st_done") : t("st_idle");
+  });
+  setDocTitle(docTitleKey);
+}
+
+// ---------- tiny markdown renderer (self-contained, no CDN) ----------
+function esc(s){return s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+function inline(s){
+  return esc(s)
+    .replace(/`([^`]+)`/g,(_,c)=>`<code>${c}</code>`)
+    .replace(/\*\*([^*]+)\*\*/g,"<strong>$1</strong>")
+    .replace(/\*([^*]+)\*/g,"<em>$1</em>")
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+}
+function md(src){
+  const lines=(src||"").replace(/\r/g,"").split("\n"); let html=""; let list=null;
+  const closeList=()=>{ if(list){html+=`</${list}>`; list=null;} };
+  for(let raw of lines){
+    const line=raw.trimEnd();
+    if(!line.trim()){ closeList(); continue; }
+    let m;
+    if((m=line.match(/^(#{1,3})\s+(.*)/))){ closeList(); const n=m[1].length; html+=`<h${n}>${inline(m[2])}</h${n}>`; continue; }
+    if(/^(-{3,}|\*{3,})$/.test(line.trim())){ closeList(); html+="<hr>"; continue; }
+    if((m=line.match(/^\s*[-*]\s+(.*)/))){ if(list!=="ul"){closeList(); list="ul"; html+="<ul>";} html+=`<li>${inline(m[1])}</li>`; continue; }
+    if((m=line.match(/^\s*\d+\.\s+(.*)/))){ if(list!=="ol"){closeList(); list="ol"; html+="<ol>";} html+=`<li>${inline(m[1])}</li>`; continue; }
+    closeList(); html+=`<p>${inline(line)}</p>`;
+  }
+  closeList(); return html;
+}
+
+// ---------- element refs ----------
+const $ = id => document.getElementById(id);
+const runBtn=$("runBtn"), doc=$("doc"), stream=$("stream"), liveWrap=$("liveWrap"),
+      logEl=$("log"), stageChip=$("stageChip"), stageName=$("stageName"),
+      docDot=$("docDot"), logDot=$("logDot"), banner=$("banner"), errEl=$("err"),
+      approval=$("approval"), docTitle=$("docTitle");
+
+let curOptions={}, curDraft="", streamBuf="", activeAgent=null, firstLog=true;
+
+runBtn.onclick = start;
+$("topic").addEventListener("keydown", e=>{ if(e.key==="Enter") start(); });
+
+function collectOptions(){
+  return {topic:$("topic").value.trim(), tone:$("tone").value, length:$("length").value,
+          angle:$("angle").value.trim()||null, language:$("clang").value};
+}
+
+// EventSource can't POST, so we stream the fetch() response body and parse SSE frames.
+async function streamPost(url, body, onEvent){
+  const res=await fetch(url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
+  if(!res.ok){ throw new Error("request failed ("+res.status+")"); }
+  const reader=res.body.getReader(); const dec=new TextDecoder(); let buf="";
+  while(true){
+    const {value,done}=await reader.read(); if(done) break;
+    buf+=dec.decode(value,{stream:true});
+    let i;
+    while((i=buf.indexOf("\n\n"))>=0){
+      const frame=buf.slice(0,i); buf=buf.slice(i+2);
+      const line=frame.split("\n").find(l=>l.startsWith("data: "));
+      if(line){ try{ onEvent(JSON.parse(line.slice(6))); }catch(err){ console.error(err); } }
+    }
+  }
+}
+
+async function start(){
+  const o=collectOptions();
+  if(o.topic.length<3){ $("topic").focus(); return; }
+  resetUI();
+  curOptions=o;
+  log("start", `${t("m_started")}<span class="q">${escapeHtml(o.topic)}</span>`);
+  runPhase("/api/generate", o);
+}
+
+async function runPhase(url, body){
+  runBtn.disabled=true; runBtn.classList.add("loading");   // label stays put — only the icon becomes a spinner
+  logDot.classList.add("on"); docDot.classList.add("on");
+  pipeEl.classList.add("running");   // pause the idle flow-pulse while working
+  try{ await streamPost(url, body, handle); }
+  catch(e){ showError(e.message); }
+  finally{ finish(); }
+}
+
+// ---------- event handling ----------
+function handle(e){
+  switch(e.type){
+    case "stage_start": onStageStart(e.agent, e.label); break;
+    case "search": log("search", `${t("m_searching")}<span class="q">"${escapeHtml(e.query)}"</span>`, "researcher"); break;
+    case "sources": renderSources(e.sources); log("sources", t("m_sources",{n:e.sources.length}), "researcher"); break;
+    case "token": onToken(e.agent, e.text); break;
+    case "stage_output": onStageOutput(e.agent, e.content); break;
+    case "review": renderReview(e); break;
+    case "revision_start": log("revise", t("m_revision",{n:e.cycle}), "editor"); break;
+    case "awaiting_approval": onAwaitApproval(e.draft); break;
+    case "log": log(e.level||"info", escapeHtml(e.message)); break;
+    case "done": onDone(e); break;
+    case "error": onError(e.message); break;
+  }
+}
+
+function onError(msg){
+  if(activeAgent){ $("node-"+activeAgent).classList.remove("active"); $("st-"+activeAgent).textContent=t("st_stopped"); activeAgent=null; }
+  liveWrap.style.display="none"; doc.style.display=""; stageChip.hidden=true;
+  showError(msg); finish();
+}
+
+function onStageStart(agent, label){
+  if(activeAgent && activeAgent!==agent) markDone(activeAgent);
+  activeAgent=agent;
+  const node=$("node-"+agent);
+  node.classList.remove("done"); node.classList.add("active");
+  $("st-"+agent).textContent = t("st_working");
+  const idx=AGENTS.findIndex(a=>a.id===agent);
+  for(let i=0;i<idx;i++) $("conn-"+i)?.classList.add("filled");
+  streamBuf=""; stream.innerHTML=""; liveWrap.style.display="none";
+  stageChip.hidden=false; stageName.textContent=agentName(agent);
+  setDocTitle(agent==="researcher" ? "ws_researchNotes" : "ws_draft");
+  log("stage", t("m_working",{a:`<b>${agentName(agent)}</b>`}), agent);
+}
+
+function onToken(agent, text){
+  if(agent!==activeAgent) return;
+  // Reveal the live console lazily — only agents that actually stream tokens.
+  if(liveWrap.style.display==="none"){ liveWrap.style.display="block"; doc.style.display="none"; }
+  streamBuf+=text;
+  stream.innerHTML = escapeHtml(streamBuf) + '<span class="cursor"></span>';
+  stream.scrollTop = stream.scrollHeight;
+}
+
+function onStageOutput(agent, content){
+  markDone(agent);
+  liveWrap.style.display="none"; doc.style.display=""; stageChip.hidden=true;
+  doc.classList.remove("empty");
+  doc.innerHTML = md(content);
+  $("st-"+agent).textContent = t("st_done");
+}
+
+function markDone(agent){
+  const node=$("node-"+agent);
+  if(node){ node.classList.remove("active"); node.classList.add("done"); $("st-"+agent).textContent=t("st_done"); }
+}
+
+function renderReview(e){
+  $("reviewCard").style.display="block";
+  const s=e.score;
+  $("scoreTxt").textContent=s;
+  const fg=$("ringFg");
+  fg.style.strokeDashoffset = 239 - (239*s/10);
+  fg.classList.toggle("pass", s>=8);
+  $("verdict").textContent = e.verdict || "—";
+  $("revNote").textContent = e.revision>0 ? t("rev_after",{n:e.revision}) : t("rev_first");
+  const str=$("strengths"); str.innerHTML=(e.strengths||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join("");
+  const iss=$("issues"); iss.innerHTML=(e.issues||[]).map(x=>
+    `<div class="issue"><span class="sev ${x.severity}">${x.severity}</span><div><div>${escapeHtml(x.issue)}</div><div class="fix">${escapeHtml(x.fix)}</div></div></div>`).join("")
+    || `<div class="empty-hint" style="padding:4px 0">${t("noIssues")}</div>`;
+  log("review", t("m_scored",{s:`<b>${s}</b>`, v:escapeHtml((e.verdict||"").slice(0,58))}), "reviewer");
+}
+
+function renderSources(sources){
+  $("sourcesCard").style.display="block";
+  $("sources").innerHTML = sources.map((s,i)=>{
+    let host=""; try{ host=new URL(s.url).hostname.replace(/^www\./,""); }catch(_){}
+    return `<a class="src" href="${s.url}" target="_blank" rel="noopener"><span class="snum">${i+1}</span><span><span class="stitle">${escapeHtml(s.title||host)}</span><span class="shost">${escapeHtml(host)}</span></span></a>`;
+  }).join("");
+}
+
+// ---------- approval gate (human-in-the-loop) ----------
+function onAwaitApproval(draft){
+  curDraft=draft;
+  if(activeAgent){ markDone(activeAgent); activeAgent=null; }
+  liveWrap.style.display="none"; doc.style.display=""; stageChip.hidden=true;
+  approval.style.display="block";
+  approval.scrollIntoView({behavior:"smooth", block:"center"});
+  log("gate", t("m_gate"), "reviewer");
+}
+$("approveBtn").onclick = ()=>{
+  approval.style.display="none";
+  log("approve", t("m_approved"), "publisher");
+  runPhase("/api/publish", {...curOptions, draft:curDraft});
+};
+$("rejectBtn").onclick = ()=>{ $("rejectBox").style.display="block"; $("feedback").focus(); };
+$("cancelReject").onclick = ()=>{ $("rejectBox").style.display="none"; };
+$("sendReject").onclick = ()=>{
+  const fb=$("feedback").value.trim();
+  approval.style.display="none"; $("rejectBox").style.display="none"; $("feedback").value="";
+  log("reject", t("m_reject"), "editor");
+  runPhase("/api/revise", {...curOptions, draft:curDraft, feedback:fb||null});
+};
+
+// ---------- done ----------
+function onDone(e){
+  markDone("publisher");
+  doc.classList.remove("empty"); doc.innerHTML = md(e.final);
+  $("docCard").classList.add("published");
+  setDocTitle("ws_published"); docDot.classList.remove("on");
+  banner.style.display="flex";
+  banner.scrollIntoView({behavior:"smooth", block:"start"});
+  for(let i=0;i<AGENTS.length-1;i++) $("conn-"+i).classList.add("filled");
+  log("done", t("m_complete"), "publisher");
+}
+function finish(){
+  logDot.classList.remove("on"); docDot.classList.remove("on");
+  pipeEl.classList.remove("running");
+  runBtn.disabled=false; runBtn.classList.remove("loading");
+}
+
+// ---------- helpers ----------
+function log(tag, msgHtml, agent){
+  if(firstLog){ logEl.innerHTML=""; firstLog=false; }
+  const color = agent ? "var(--accent-2)" : "var(--faint)";
+  const row=document.createElement("div"); row.className="l";
+  row.innerHTML=`<span class="tag" style="color:${color}">${tag}</span><span class="msg">${msgHtml}</span>`;
+  logEl.prepend(row);
+}
+function escapeHtml(s){ return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function showError(msg){
+  errEl.style.display="flex";
+  const html = escapeHtml(msg).replace(/console\.anthropic\.com/g,
+    '<a href="https://console.anthropic.com/settings/billing" target="_blank" rel="noopener">console.anthropic.com</a>');
+  errEl.innerHTML = '<svg><use href="#ic-alert"/></svg><span>'+html+'</span>';
+}
+
+function emptyState(icon, key){
+  return `<div class="empty-state"><span class="es-ic"><svg><use href="#${icon}"/></svg></span><p data-i18n="${key}">${t(key)}</p></div>`;
+}
+function resetUI(){
+  curDraft=""; activeAgent=null; streamBuf=""; firstLog=true;
+  doc.classList.remove("empty"); doc.innerHTML=emptyState("ic-pen","docPlaceholder"); doc.style.display="";
+  liveWrap.style.display="none"; stream.innerHTML=""; stageChip.hidden=true;
+  approval.style.display="none"; $("rejectBox").style.display="none";
+  banner.style.display="none"; errEl.style.display="none";
+  $("docCard").classList.remove("published"); setDocTitle("ws_workspace"); $("feedback").value="";
+  $("reviewCard").style.display="none"; $("sourcesCard").style.display="none";
+  $("scoreTxt").textContent="–"; $("ringFg").style.strokeDashoffset=239; $("ringFg").classList.remove("pass");
+  logEl.innerHTML=emptyState("ic-activity","logEmpty");
+  AGENTS.forEach(a=>{ const n=$("node-"+a.id); n.classList.remove("active","done"); $("st-"+a.id).textContent=t("st_idle"); });
+  for(let i=0;i<AGENTS.length-1;i++) $("conn-"+i).classList.remove("filled");
+}
+
+// ---------- interactive 3D hero (THREE.js) ----------
+// A glossy icosphere that "breathes" and follows the pointer — same hero as the
+// RAG project. Gracefully skipped if WebGL/THREE is unavailable or motion is reduced.
+let hero3DStarted = false;
+function initHero3D(){
+  if(hero3DStarted) return;
+  const canvas = document.getElementById("hero-canvas");
+  if(!canvas || typeof THREE === "undefined") return;
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  hero3DStarted = true;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+  camera.position.z = 8.5;
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias:true, alpha:true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+
+  const geo = new THREE.IcosahedronGeometry(1.7, 6);
+  const base = Float32Array.from(geo.attributes.position.array);
+  const orb = new THREE.Mesh(
+    geo,
+    new THREE.MeshStandardMaterial({
+      color: 0x6366f1, metalness: 0.45, roughness: 0.28,
+      emissive: 0x140f3a, emissiveIntensity: 0.55,
+    })
+  );
+  scene.add(orb);
+
+  scene.add(new THREE.AmbientLight(0x24304f, 0.7));
+  [
+    [0x6366f1, 2.6, [-4, 3, 4]],
+    [0xa78bfa, 2.3, [4, -3, 3]],
+    [0x8b5cf6, 1.3, [0, 4, -4]],
+    [0xffffff, 0.8, [0, 0, 6]],
+  ].forEach(([c, i, p]) => { const l = new THREE.PointLight(c, i, 24); l.position.set(...p); scene.add(l); });
+
+  let mx = 0, my = 0, tx = 0, ty = 0;
+  window.addEventListener("pointermove", (e) => {
+    tx = e.clientX / window.innerWidth - 0.5;
+    ty = e.clientY / window.innerHeight - 0.5;
+  });
+
+  const resize = () => {
+    const w = canvas.clientWidth || 360, h = canvas.clientHeight || 360;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  };
+  new ResizeObserver(resize).observe(canvas);
+  resize();
+
+  const pos = geo.attributes.position;
+  const clock = new THREE.Clock();
+  (function frame(){
+    requestAnimationFrame(frame);   // browsers pause RAF in hidden tabs on their own
+    const t = clock.getElapsedTime();
+    for(let i = 0; i < pos.count; i++){
+      const ix = i * 3;
+      const bx = base[ix], by = base[ix + 1], bz = base[ix + 2];
+      const n = (Math.sin(bx * 2.1 + t) + Math.sin(by * 2.5 + t * 1.15) + Math.sin(bz * 1.9 + t * 0.85)) / 3;
+      const s = 1 + 0.14 * n;
+      pos.setXYZ(i, bx * s, by * s, bz * s);
+    }
+    pos.needsUpdate = true;
+    geo.computeVertexNormals();
+    mx += (tx - mx) * 0.05;
+    my += (ty - my) * 0.05;
+    orb.rotation.y = t * 0.12 + mx * 0.8;
+    orb.rotation.x = my * 0.5;
+    renderer.render(scene, camera);
+  })();
+}
+
+// ---------- animated network background (Vanta.js NET) ----------
+// A drifting, mouse-reactive web of connected nodes — an "agent network".
+// If the library or WebGL is unavailable, the CSS aurora stays as the fallback.
+let bgNet = null;
+function initBgNet(){
+  const el = document.getElementById("bg-net");
+  if(!el || typeof VANTA === "undefined" || typeof THREE === "undefined") return;
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const light = root.getAttribute("data-theme") === "light";
+  bgNet = VANTA.NET({
+    el,
+    mouseControls: true, touchControls: true, gyroControls: false,
+    minHeight: 200, minWidth: 200, scale: 1, scaleMobile: 1,
+    color: 0x6366f1,
+    backgroundColor: light ? 0xfbfbfc : 0x0a0a0c,
+    points: 9, maxDistance: 21, spacing: 17,
+  });
+  el.classList.add("on");
+  document.querySelector(".aurora").style.display = "none";  // NET replaces the CSS fallback
+  // If we initialized while the tab was hidden/zero-sized, re-measure once it becomes visible.
+  const fixSize = ()=>{ try{ if(bgNet && bgNet.resize) bgNet.resize(); }catch(_e){} };
+  window.addEventListener("resize", fixSize);
+  document.addEventListener("visibilitychange", ()=>{ if(!document.hidden) fixSize(); });
+}
+
+// ---------- init ----------
+$("clang").value = lang;   // content language defaults to the UI language
+applyStatic();
+try{ initBgNet(); }catch(_e){ /* library/WebGL unavailable → aurora stays */ }
+try{ initHero3D(); }catch(_e){ /* WebGL unavailable → aurora only */ }
+</script>
+</body>
+</html>

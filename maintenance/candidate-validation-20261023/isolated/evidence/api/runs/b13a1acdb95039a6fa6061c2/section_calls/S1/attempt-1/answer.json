@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S1\",\"heading\":\"导语：榜单能帮你做什么，不能帮你做什么\",\"paragraphs\":[{\"text\":\"看一份防脱洗发水榜单，最容易被忽略的是它提供信息的边界。排行里的洗感描述，多半来自编辑整理与资料转述，不是可追溯的实测结论；它能帮我们快速了解有哪些产品被讨论、各自被记录了什么配方特点，却不能替我们判断哪一款用在自己头上更合适。\",\"statement_type\":\"general_advice\",\"claim_ids\":[\"CL0007\"]},{\"text\":\"那么这份榜单能帮你做什么？它能帮你缩小候选范围，让你在挑选时先有一份对照名单，知道每款产品被记录下来的清洁方向和配方特点分别是什么。它不能帮你做的事同样明确：不会告诉你哪款效果最好，也不会替你判断适合哪种发质。\",\"statement_type\":\"general_advice\",\"claim_ids\":[]},{\"text\":\"真正有参考价值的尺子，是你自己的记录。结合自身发质，观察四周左右的掉发情况并做简单记录，再与榜单里的配方信息对照，判断才有落点。成分存在不等于效果，资料转述也不等于你的亲身体验，这一点始终要分清。\",\"statement_type\":\"general_advice\",\"claim_ids\":[\"CL0007\"]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4178,
+    "completion_tokens": 268,
+    "total_tokens": 4446,
+    "prompt_tokens_details": {
+      "cached_tokens": 3968
+    },
+    "prompt_cache_hit_tokens": 3968,
+    "prompt_cache_miss_tokens": 210
+  },
+  "request_id": "eb920a4b-fdf9-4ace-bde7-be3e54a75084",
+  "model": "deepseek-flash"
+}

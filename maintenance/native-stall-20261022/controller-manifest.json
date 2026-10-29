@@ -1,0 +1,10 @@
+{
+  "daily_tasks.py": {
+    "before": "5f245c348df77636a534f4ce69f7425cc2a1ecc274a702f61b59ac8af8f33255",
+    "sha256": "b0184775c235450e0a97e9c7a22b96ffea41f7a6d4946f8683dd75f362005947"
+  },
+  "panel.html": {
+    "before": "8acb6d0490d64673a1231fb4bccf493d0dca8a3080c75601682a50b0230e3802",
+    "sha256": "8acb6d0490d64673a1231fb4bccf493d0dca8a3080c75601682a50b0230e3802"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S11\",\"heading\":\"薇姿防脱洗发水\",\"paragraphs\":[{\"text\":\"薇姿防脱洗发水的已记录成分信息不多，可查到的描述是：配方中的调理成分帮助维持头皮微生态平衡。这是一句成分层面的转述，能说明它把调理类成分作为一种配方思路，但不能据此推出使用后的实际效果，也不能据此判断适合哪些人。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0006\",\"CL0022\"]},{\"text\":\"挑选时常见的误区之一，是只看价格不看资质。放到薇姿这款上同样适用：先把资质与成分信息核实清楚，再谈值不值得选。看测评也别只认结论，至少要确认有没有资质依据、成分拆解和覆盖真实周期的反馈。\",\"statement_type\":\"product_fact\",\"claim_ids\":[\"CL0023\",\"CL0024\"]},{\"text\":\"普通选择建议是：若你考虑薇姿防脱洗发水，可把它的调理成分说明与其他候选放在同一组核查项下对照，成分摘录不全的部分不自行补全，也不因某一成分存在就认定效果。\",\"statement_type\":\"general_advice\",\"claim_ids\":[]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 5121,
+    "completion_tokens": 250,
+    "total_tokens": 5371,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 5121
+  },
+  "request_id": "ab3179f8-5fd0-4191-aa7f-65e60c242956",
+  "model": "deepseek-flash"
+}

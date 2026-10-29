@@ -1,0 +1,12 @@
+{
+  "at": 1792061805.9321146,
+  "preview_removed": "monitor-dashboard-creation-preview",
+  "preview_had_no_mounts": true,
+  "build_cache_prune_summary": [
+    "Total reclaimed space: 0B"
+  ],
+  "disk_free_before": 410493816832,
+  "disk_free_after": 410493935616,
+  "disk_free_change": 118784,
+  "retained": "All images/rollback tags, Android volumes, DB, job journals, outboxes, receipts, failed evidence, logins, APKs and Word outputs"
+}

@@ -1,0 +1,14 @@
+{
+  "lightweight_seconds": {
+    "lan": 0.037,
+    "public": 4.478
+  },
+  "public_large": {
+    "bytes": 3005230,
+    "seconds": 211.932,
+    "ok": true
+  },
+  "duplicate_safe": true,
+  "original_download_sha_match": true,
+  "temporary_data_removed": true
+}

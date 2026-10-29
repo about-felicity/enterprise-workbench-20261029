@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-17T17:44:43.547734+08:00",
+  "first_primary_send": "2026-10-17T09:59:05.109446+08:00",
+  "first_second_send": "2026-10-17T13:47:45.332831+08:00",
+  "primary_send_intents_before_second": 15,
+  "primary_send_intents_after_second": 9,
+  "exit77_times": {
+    "deepseek": [
+      "2026-10-17T14:46:13.898405+08:00",
+      "2026-10-17T17:10:37.524469+08:00"
+    ],
+    "deepseek2": [
+      "2026-10-17T17:16:54.105723+08:00"
+    ]
+  },
+  "causal_verdict": "Temporal association present; cannot establish causation without platform reason or a valid controlled comparison.",
+  "configuration_changed": false
+}

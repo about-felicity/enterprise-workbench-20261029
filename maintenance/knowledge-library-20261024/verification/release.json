@@ -1,0 +1,64 @@
+{
+  "original_image": "sha256:3f49153de9d2b03e5db3fcacdbf6e622172aa8ac92073a826ac6173acafb93da",
+  "baseline": {
+    "panel.html": "5977e18bd91f25a6d66c762bd30a8a3a494f16bdad54eb64c0bf3c84817d019a",
+    "studio.py": "2c1900930f8514a9c02348c5dff30d1a5777ef839cbc9fe66fc798d1104344b4",
+    "runtime.py": "b1014b5c9cdb953c2ed638738bbfd5a00796bd0bad75e3cf5146cee4062678b3",
+    "service.py": "0fb02fde74b68d9d78ced4328e98b135b4bbb20f182b08aa14f66ac89d889ba7",
+    "knowledge_library.py": null,
+    "library.js": null,
+    "wizard.js": "2f7fe16c25319902a2063b6ff2deef7cf7185d479c65114bc3ab3401b465c385",
+    "test_knowledge_library.py": null
+  },
+  "status": "published",
+  "workers_before": {
+    "geo-content-worker": "MainPID=43934\nActiveEnterTimestampMonotonic=4568776524404",
+    "geo-creation-studio": "MainPID=43933\nActiveEnterTimestampMonotonic=4568776521247"
+  },
+  "workers_after": {
+    "geo-content-worker": "MainPID=43934\nActiveEnterTimestampMonotonic=4568776524404",
+    "geo-creation-studio": "MainPID=43933\nActiveEnterTimestampMonotonic=4568776521247"
+  },
+  "files": [
+    {
+      "server": "/opt/monitor/geo-content/creation/panel.html",
+      "sha256": "3bba11c583a12bc8dc02df9aece3ed48df978a338e12e58e727f6eb88fdda8f4"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/studio.py",
+      "sha256": "56d391c8bca65a9a4dc66c489cd7a0ef65b1b172d38f551bc3fa84260bc63e88"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/runtime.py",
+      "sha256": "55efc64acc5c73aeaf8aaa8a478a0c66c5c826c7238e6ecd766f56f35a82495a"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/service.py",
+      "sha256": "54d5c13c35548b06692cc600abc74d79a6a4634dc89aa33cc94553787fa7a037"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/knowledge_library.py",
+      "sha256": "9b2de7f5f2b4aa09c8fc0ef34d2b3f310ef131e02ad28fd7db35306ada212390"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/library.js",
+      "sha256": "26d81b99804f23aab23df8e1f42717bd831cd36b7194412a8d88230cb382a709"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/wizard.js",
+      "sha256": "ab8d9e0e7a94be54ce23dba04c1c430062189f33ec512588a11fd377cda213b1"
+    },
+    {
+      "server": "/opt/monitor/geo-content/creation/test_knowledge_library.py",
+      "sha256": "60f63e64c4474fd20e1a19238873127e707f1091e1a68f0300adbf82d47c86a9"
+    },
+    {
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/api/geo-creation/[...path]/route.ts",
+      "sha256": "4dc363fa1d2d7334a3984bd03edd89726fa294fa5dc51eb4d2d0107c62626490"
+    },
+    {
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/tests/creation-gateway.test.mjs",
+      "sha256": "b203edafafc278fe5e1facdc18afd9160b3bb37375186dd8c100b56c3d174935"
+    }
+  ]
+}

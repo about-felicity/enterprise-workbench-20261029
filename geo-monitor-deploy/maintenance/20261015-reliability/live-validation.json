@@ -1,0 +1,303 @@
+{
+  "at": 1792115090.5902386,
+  "upgrade_at": 1792064646.9073553,
+  "capture_test": {
+    "test_id": "question-only-soak12h-rowidfix-1792072084",
+    "started_at": 1792072084.674704,
+    "deadline": 1792115284.674704,
+    "duration_seconds": 43200,
+    "root": "/opt/monitor/geo-capture/soak/question-only-soak12h-rowidfix-1792072084",
+    "service": "geo-question-only-soak12h-rowidfix-1792072084.service",
+    "deadline_timer": "geo-question-only-soak12h-rowidfix-1792072084-deadline.timer"
+  },
+  "models": {
+    "doubao1": {
+      "batch": "geo-panel-doubao1-20261015-181820-3d82b024",
+      "state": "needs_attention",
+      "service_state": "failed",
+      "captured": 760,
+      "processed": 760,
+      "unique_processed": 760,
+      "duplicates": 0,
+      "unavailable": 0,
+      "needs_review": 1,
+      "pending_delivery": 0,
+      "progress": {
+        "phase": "generating",
+        "ordinal": 761,
+        "changed_at": 1792108827.8198333,
+        "deadline_at": 1792109723.7705364,
+        "reason": ""
+      },
+      "diagnostics": [],
+      "new_captured_after_upgrade": 678,
+      "new_processed_after_upgrade": 678,
+      "verified_unique_receipts": 760,
+      "body_and_all_source_PG_fidelity": true,
+      "non_question_prompt_rows": 0,
+      "operational_blocked": true,
+      "current_window_counts": {
+        "captured": 571,
+        "processed": 572,
+        "unique_processed": 572,
+        "duplicates": 0,
+        "verified_unique_receipts": 572
+      },
+      "fidelity_scope": "Completed captures and receipts only; unresolved original requests are excluded from success counts",
+      "send_clicks": 767,
+      "window_send_clicks": 685,
+      "min_send_interval": 57.53057265281677,
+      "batch_min_send_interval": 57.53057265281677,
+      "duplicate_native_requests": 0,
+      "failed_attempts": 6,
+      "failed_attempts_table_present": true,
+      "first_start": 1792064661.5504267,
+      "last_start": 1792108823.770573,
+      "duplicate_send_clicks": 6
+    },
+    "doubao2": {
+      "batch": "geo-panel-doubao2-20261015-181821-6fa7c803",
+      "state": "needs_attention",
+      "service_state": "failed",
+      "captured": 310,
+      "processed": 310,
+      "unique_processed": 310,
+      "duplicates": 0,
+      "unavailable": 0,
+      "needs_review": 1,
+      "pending_delivery": 0,
+      "progress": {
+        "phase": "generating",
+        "ordinal": 311,
+        "changed_at": 1792078578.8043494,
+        "deadline_at": 1792079475.172502,
+        "reason": ""
+      },
+      "diagnostics": [],
+      "new_captured_after_upgrade": 230,
+      "new_processed_after_upgrade": 230,
+      "verified_unique_receipts": 310,
+      "body_and_all_source_PG_fidelity": true,
+      "non_question_prompt_rows": 0,
+      "operational_blocked": true,
+      "current_window_counts": {
+        "captured": 110,
+        "processed": 110,
+        "unique_processed": 110,
+        "duplicates": 0,
+        "verified_unique_receipts": 110
+      },
+      "fidelity_scope": "Completed captures and receipts only; unresolved original requests are excluded from success counts",
+      "send_clicks": 311,
+      "window_send_clicks": 231,
+      "min_send_interval": 53.08204531669617,
+      "batch_min_send_interval": 53.08204531669617,
+      "duplicate_native_requests": 0,
+      "failed_attempts": 0,
+      "failed_attempts_table_present": true,
+      "first_start": 1792064663.3541608,
+      "last_start": 1792078575.1725197,
+      "duplicate_send_clicks": 0
+    },
+    "yuanbao": {
+      "batch": "geo-panel-yuanbao-20261015-181821-d56b0d20",
+      "state": "needs_attention",
+      "service_state": "failed",
+      "captured": 320,
+      "processed": 320,
+      "unique_processed": 320,
+      "duplicates": 0,
+      "unavailable": 1,
+      "needs_review": 1,
+      "pending_delivery": 0,
+      "progress": {
+        "phase": "awaiting_ack",
+        "ordinal": 322,
+        "changed_at": 1792077280.6353667,
+        "deadline_at": 1792078180.4617946,
+        "reason": ""
+      },
+      "diagnostics": [],
+      "new_captured_after_upgrade": 222,
+      "new_processed_after_upgrade": 222,
+      "verified_unique_receipts": 320,
+      "body_and_all_source_PG_fidelity": true,
+      "non_question_prompt_rows": 0,
+      "operational_blocked": true,
+      "current_window_counts": {
+        "captured": 102,
+        "processed": 102,
+        "unique_processed": 102,
+        "duplicates": 0,
+        "verified_unique_receipts": 102
+      },
+      "fidelity_scope": "Completed captures and receipts only; unresolved original requests are excluded from success counts",
+      "send_clicks": 322,
+      "window_send_clicks": 224,
+      "min_send_interval": 49.81675434112549,
+      "batch_min_send_interval": 49.79456281661987,
+      "duplicate_native_requests": 0,
+      "failed_attempts": 0,
+      "failed_attempts_table_present": true,
+      "first_start": 1792064654.164888,
+      "last_start": 1792077280.4618108,
+      "duplicate_send_clicks": 0,
+      "nontext_audit": {
+        "observations": 1,
+        "processed": 1,
+        "database_fidelity": true,
+        "scope": "Raw audit events; excluded from full-text counts and product statistics"
+      }
+    },
+    "wenxin_card": {
+      "batch": "geo-panel-wenxin-card-20261015-181822-d5a69c59",
+      "state": "running",
+      "service_state": "active",
+      "captured": 325,
+      "processed": 325,
+      "unique_processed": 325,
+      "duplicates": 0,
+      "unavailable": 0,
+      "needs_review": 0,
+      "pending_delivery": 0,
+      "progress": {
+        "phase": "collecting",
+        "ordinal": 10,
+        "changed_at": 1792115059.1730251,
+        "pending_delivery": 0
+      },
+      "diagnostics": [],
+      "new_captured_after_upgrade": 295,
+      "new_processed_after_upgrade": 295,
+      "verified_unique_receipts": 325,
+      "body_and_all_source_PG_fidelity": true,
+      "non_question_prompt_rows": 0,
+      "operational_blocked": false,
+      "current_window_counts": {
+        "captured": 251,
+        "processed": 251,
+        "unique_processed": 251,
+        "duplicates": 0,
+        "verified_unique_receipts": 251
+      },
+      "fidelity_scope": "Completed captures and receipts only; unresolved original requests are excluded from success counts",
+      "starts": 325,
+      "window_starts": 295,
+      "min_send_interval": 148.36339783668518,
+      "batch_min_send_interval": 78.85885810852051,
+      "first_start": 1792064647.7655246,
+      "last_start": 1792115059.1704953,
+      "duplicate_conversations": null,
+      "queue_states": {
+        "completed": 325,
+        "pending": 95
+      },
+      "interval_evidence": "capture journal start after rate-slot acquisition; native uses durable click intent"
+    },
+    "baidu_ai": {
+      "batch": "geo-panel-baidu-ai-20261015-181822-d44632b8",
+      "state": "running",
+      "service_state": "active",
+      "captured": 298,
+      "processed": 298,
+      "unique_processed": 64,
+      "duplicates": 234,
+      "unavailable": 36,
+      "needs_review": 0,
+      "pending_delivery": 0,
+      "progress": {
+        "phase": "rate_wait",
+        "ordinal": 16,
+        "changed_at": 1792115078.0496821,
+        "next_at": 1792115136.895952,
+        "pending_delivery": 0
+      },
+      "diagnostics": [],
+      "new_captured_after_upgrade": 259,
+      "new_processed_after_upgrade": 259,
+      "verified_unique_receipts": 64,
+      "body_and_all_source_PG_fidelity": true,
+      "non_question_prompt_rows": 0,
+      "operational_blocked": false,
+      "current_window_counts": {
+        "captured": 221,
+        "processed": 221,
+        "unique_processed": 38,
+        "duplicates": 183,
+        "verified_unique_receipts": 38
+      },
+      "fidelity_scope": "Completed captures and receipts only; unresolved original requests are excluded from success counts",
+      "starts": 334,
+      "window_starts": 294,
+      "min_send_interval": 140.27313351631165,
+      "batch_min_send_interval": 58.87065505981445,
+      "first_start": 1792064728.338632,
+      "last_start": 1792114980.7841356,
+      "duplicate_conversations": null,
+      "queue_states": {
+        "completed": 334,
+        "pending": 86
+      },
+      "interval_evidence": "capture journal start after rate-slot acquisition; native uses durable click intent"
+    }
+  },
+  "failures": [
+    {
+      "model": "deepseek",
+      "kind": "AssertionError"
+    }
+  ],
+  "operational_blockers": [
+    {
+      "model": "doubao1",
+      "state": "needs_attention",
+      "needs_review": 1
+    },
+    {
+      "model": "doubao2",
+      "state": "needs_attention",
+      "needs_review": 1
+    },
+    {
+      "model": "yuanbao",
+      "state": "needs_attention",
+      "needs_review": 1
+    }
+  ],
+  "core_and_android_containers_unchanged": true,
+  "creation": {
+    "test": {
+      "test_id": "creation-soak6h-rosterfix-1792062355",
+      "started_at": 1792062355.8455582,
+      "deadline": 1792083955.8455582,
+      "duration_seconds": 21600,
+      "jobs": [
+        "creation-1792060761-3c2baae0"
+      ],
+      "root": "/opt/monitor/geo-capture/soak/creation-soak6h-rosterfix-1792062355",
+      "service": "geo-creation-soak6h-rosterfix-1792062355.service",
+      "deadline_timer": "geo-creation-soak6h-rosterfix-1792062355-deadline.timer"
+    },
+    "approved_total": 10,
+    "unknown_api_calls": 0,
+    "Word_review_material_hash_GEO_provenance_verified": true,
+    "day_complete": true,
+    "platform_extra_questions": 0
+  },
+  "recorder": {
+    "status": "running",
+    "elapsed_seconds": 43009.380358457565,
+    "anomalies": [
+      "deepseek:unexpected_state:waiting_login",
+      "yuanbao:unexpected_state:needs_attention",
+      "doubao2:unexpected_state:needs_attention",
+      "doubao1:duplicate_request_or_conversation",
+      "doubao1:unexpected_state:needs_attention",
+      "deepseek:unexpected_state:needs_attention",
+      "deepseek:batch_changed_by_operator"
+    ],
+    "error_kind": null
+  },
+  "all_models_have_new_processed_after_upgrade": false,
+  "all_channels_currently_collecting": false
+}

@@ -1,0 +1,237 @@
+{
+  "at": 1792659314.830463,
+  "real_saved_response_local_replay_only": true,
+  "new_api_calls": 0,
+  "samples": [
+    {
+      "sample": "original ranking01 response",
+      "result": "rejected_as_incomplete",
+      "reason": "Missing complete article body",
+      "sections": 0
+    },
+    {
+      "sample": "original ranking01 response",
+      "result": "rejected_as_incomplete",
+      "reason": "Missing document title",
+      "sections": 0
+    },
+    {
+      "sample": "original review02 final text",
+      "deterministic_issues": [
+        {
+          "kind": "contradiction",
+          "paragraph_ids": [
+            "P002"
+          ],
+          "reason": "明确产品总数与实际11款清单不一致",
+          "repair": "核对包含自有产品的最终名单，修正全文对应总数；子集和容量数字不改",
+          "certainty": "confirmed",
+          "severity": "major"
+        },
+        {
+          "kind": "contradiction",
+          "paragraph_ids": [
+            "P006"
+          ],
+          "reason": "明确产品总数与实际11款清单不一致",
+          "repair": "核对包含自有产品的最终名单，修正全文对应总数；子集和容量数字不改",
+          "certainty": "confirmed",
+          "severity": "major"
+        }
+      ],
+      "semantic_candidates": [
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P002"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        },
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P005"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        },
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P008"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        },
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P012"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        },
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P014"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        },
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P020"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        },
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P024"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        },
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P032"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        }
+      ],
+      "semantic_arbitration": "not_run_budget_insufficient",
+      "no_truth_certificate_issued": true
+    },
+    {
+      "sample": "original review02 final text",
+      "deterministic_issues": [
+        {
+          "kind": "contradiction",
+          "paragraph_ids": [
+            "P002"
+          ],
+          "reason": "明确产品总数与实际11款清单不一致",
+          "repair": "核对包含自有产品的最终名单，修正全文对应总数；子集和容量数字不改",
+          "certainty": "confirmed",
+          "severity": "major"
+        },
+        {
+          "kind": "contradiction",
+          "paragraph_ids": [
+            "P006"
+          ],
+          "reason": "明确产品总数与实际11款清单不一致",
+          "repair": "核对包含自有产品的最终名单，修正全文对应总数；子集和容量数字不改",
+          "certainty": "confirmed",
+          "severity": "major"
+        }
+      ],
+      "semantic_candidates": [
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P002"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        },
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P005"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        },
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P008"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        },
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P012"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        },
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P014"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        },
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P020"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        },
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P024"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        },
+        {
+          "kind": "unsupported_inference",
+          "paragraph_ids": [
+            "P032"
+          ],
+          "certainty": "needs_check",
+          "severity": "major",
+          "reason": "段落将材料/外观记录与成品表现相连接，需独立核对是否存在支持因果或相符判断的材料",
+          "repair": "核查原始材料；仅保留其支持的属性或用途，不由组成与外观推出表现"
+        }
+      ],
+      "semantic_arbitration": "not_run_budget_insufficient",
+      "no_truth_certificate_issued": true
+    }
+  ]
+}

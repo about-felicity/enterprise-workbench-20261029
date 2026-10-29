@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "start_utc_epoch": 1791339622.753273,
+  "start_monotonic": 3096247.697591169,
+  "boot_id": "311dc8ee-6cf9-47fb-8479-bb08a40a6d19",
+  "duration": 3600.0,
+  "interval": 180.0,
+  "batch": "hpe14-soak-1791339622",
+  "enqueued": 20,
+  "planned": 20,
+  "last_check_utc_epoch": 1791343227.9080412,
+  "observed_seconds": 3605.1547518181615,
+  "tasks": {
+    "completed": 20
+  },
+  "last_monotonic": 3099852.852342987
+}

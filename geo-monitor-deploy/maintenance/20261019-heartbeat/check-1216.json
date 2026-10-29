@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-10-19T12:17:20+08:00",
+  "deepseek_browser": {
+    "auth": "ready",
+    "captured": 4,
+    "processed": 4,
+    "cursor": 4,
+    "phase": "rate_wait",
+    "next_send": "2026-10-19T12:27:44+08:00",
+    "receipt_pairs_equal": 4,
+    "services": "active"
+  },
+  "doubao_today": {
+    "doubao1": [
+      105,
+      105
+    ],
+    "doubao2": [
+      48,
+      105
+    ]
+  },
+  "baidu_today": {
+    "processed": 79,
+    "target": 105,
+    "pending_delivery": 0,
+    "recovery_status": "ready",
+    "previously_stuck_task": {
+      "id": "5fd2ddf1508bea09debb8cd88d1a7f495b60597d85a79eb5dad346b66aec86f3",
+      "question": "推荐一款爽肤水",
+      "state": "completed",
+      "availability": "body_only",
+      "body_length": 534,
+      "body_complete": true,
+      "source_count": 0,
+      "source_complete": false,
+      "finished_epoch": 1792382416.216387
+    }
+  },
+  "wenxin_today": "waiting_for_baidu",
+  "yuanbao": "historical October18 batch complete; not reported as newly completed today task",
+  "mutation": "none; no tasks restarted/resubmitted/settings changed",
+  "notification": "Baidu blocked task recovered as body_only, source gap explicit; other normal progress quiet"
+}

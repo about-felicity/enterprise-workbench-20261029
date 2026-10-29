@@ -1,0 +1,16 @@
+{
+  "content": "{\"id\":\"S1\",\"heading\":\"导语：榜单能帮你做什么，不能帮你做什么\",\"paragraphs\":[{\"text\":\"面对“哪个牌子的防脱洗发水好”这样的问题，一份热门榜单最直接的用处是把选择范围收窄：它告诉你市面上有哪些被反复提到的防脱洗发水，让你不必从零开始翻找。但榜单也有清晰的能力边界。排行里的洗感描述，本质上只是编辑整理与资料转述，不能当作实测结论。也就是说，读到“洗完清爽”“泡沫细腻”这类表述时，你得到的是一条经过转述的体验描述，而不是在统一条件下测出来的结果。\",\"statement_type\":\"general_advice\",\"claim_ids\":[\"CL0007\"]},{\"text\":\"既然如此，判断一款防脱洗发水是否适合自己，就不能只看榜单里的描述。更可靠的做法是把它当起点：先结合自己的发质——偏油、偏干还是敏感——再在连续使用四周左右的时间里记录掉发情况，用前后变化来判断这款产品对你是否合适。下面按名单逐个展开，每一节只写可核实的部分：被记录的配方特点、清洁方向和使用定位，缺资料的地方直接留白。\",\"statement_type\":\"general_advice\",\"claim_ids\":[\"CL0007\"]}]}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4173,
+    "completion_tokens": 264,
+    "total_tokens": 4437,
+    "prompt_tokens_details": {
+      "cached_tokens": 3200
+    },
+    "prompt_cache_hit_tokens": 3200,
+    "prompt_cache_miss_tokens": 973
+  },
+  "request_id": "ba048962-8dca-47ce-aeb0-8016d67ac30b",
+  "model": "deepseek-flash"
+}

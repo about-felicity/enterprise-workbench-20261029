@@ -1,0 +1,86 @@
+{
+  "at": 1792073416.4245303,
+  "test_id": "question-only-soak12h-rowidfix-1792072084",
+  "batch": "geo-panel-deepseek-20261015-181821-879aca5d",
+  "profiles": {
+    "geo": {
+      "status": "login_required",
+      "observations": [
+        {
+          "state": {
+            "ok": false,
+            "status": "login_required",
+            "message": "检测到 DeepSeek 登录入口，请重新登录"
+          },
+          "page": {
+            "hostname": "chat.deepseek.com",
+            "pathname": "/sign_in",
+            "readyState": "interactive",
+            "login_controls": [
+              "Log in"
+            ],
+            "has_password_input": false
+          }
+        },
+        {
+          "state": {
+            "ok": false,
+            "status": "login_required",
+            "message": "检测到 DeepSeek 登录入口，请重新登录"
+          },
+          "page": {
+            "hostname": "chat.deepseek.com",
+            "pathname": "/sign_in",
+            "readyState": "complete",
+            "login_controls": [
+              "Log in"
+            ],
+            "has_password_input": false
+          }
+        }
+      ]
+    },
+    "original_content": {
+      "status": "login_required",
+      "observations": [
+        {
+          "state": {
+            "ok": false,
+            "status": "login_required",
+            "message": "检测到 DeepSeek 登录入口，请重新登录"
+          },
+          "page": {
+            "hostname": "chat.deepseek.com",
+            "pathname": "/sign_in",
+            "readyState": "interactive",
+            "login_controls": [
+              "Log in"
+            ],
+            "has_password_input": false
+          }
+        },
+        {
+          "state": {
+            "ok": false,
+            "status": "login_required",
+            "message": "检测到 DeepSeek 登录入口，请重新登录"
+          },
+          "page": {
+            "hostname": "chat.deepseek.com",
+            "pathname": "/sign_in",
+            "readyState": "complete",
+            "login_controls": [
+              "Log in"
+            ],
+            "has_password_input": false
+          }
+        }
+      ]
+    }
+  },
+  "model_submissions": 0,
+  "queue_states": {
+    "completed": 21,
+    "pending": 399
+  }
+}

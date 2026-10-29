@@ -1,0 +1,28 @@
+[Unit]
+Description=Doubao headless Android worker with validated Houdini14 runtime
+After=docker.service network-online.target
+Requires=docker.service
+PartOf=docker.service
+Wants=network-online.target
+StartLimitIntervalSec=1800
+StartLimitBurst=3
+
+[Service]
+Type=notify
+NotifyAccess=main
+User=root
+WorkingDirectory=/home/user/redroid-doubao
+ExecStartPre=/home/user/redroid-doubao/worker-venv/bin/python /home/user/redroid-doubao/runtime_preflight.py
+ExecStart=/home/user/redroid-doubao/worker-venv/bin/python -u /home/user/redroid-doubao/unattended_worker.py --state-dir /home/user/redroid-doubao/hpe14-acceptance --container doubao-hpe14-13-test --serial 127.0.0.1:5557 run
+Restart=on-failure
+RestartSec=20
+RestartPreventExitStatus=2
+WatchdogSec=120
+TimeoutStartSec=180
+TimeoutStopSec=20
+UMask=0077
+CPUQuota=100%
+MemoryMax=512M
+
+[Install]
+WantedBy=multi-user.target docker.service

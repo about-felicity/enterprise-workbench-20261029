@@ -1,0 +1,11 @@
+{
+  "at": 1792137695.1040323,
+  "login_ui_ms": 5.5,
+  "state_ms": 10.7,
+  "frame_ms": 43.6,
+  "frame_status": 200,
+  "flow_status": "waiting_login",
+  "production_html_fast": true,
+  "manual_login_service_restarted": false,
+  "collectors_restarted": false
+}

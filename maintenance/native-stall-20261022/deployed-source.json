@@ -1,0 +1,34 @@
+{
+  "at": 1792644122.8570123,
+  "backup": "/opt/monitor/geo-capture/maintenance/20261022-native-stall/source-before-1792644122814198726",
+  "files": {
+    "/opt/monitor/geo-capture/runtime_reliability.py": "3630e2144424f0fa045571a35dca63041a9d0fa240ca42807743681983889b41",
+    "/opt/monitor/geo-capture/native_memory_policy.json": "85b6d06f2d9d1ad7e35e981abe733bc8c165afe13bc094ccf5723afdfbd15202",
+    "/home/user/redroid-doubao/geo-batch-code/runtime_reliability.py": "3630e2144424f0fa045571a35dca63041a9d0fa240ca42807743681983889b41",
+    "/home/user/redroid-yuanbao/runtime_reliability.py": "3630e2144424f0fa045571a35dca63041a9d0fa240ca42807743681983889b41",
+    "/home/user/redroid-doubao/geo-batch-code/question_only_worker.py": "05c424c0724b497762406a25f803900714f9aca26e1a325d194209422191e4d0",
+    "/home/user/redroid-doubao/geo-batch-code/question_only_adapters.py": "3344637622aa6639b636ff7b424fa1d5426607987d6629db9abb7e02cf7802ad",
+    "/home/user/redroid-doubao/geo-batch-code/question_only_core.py": "c8b962978c4ed953fb29ef198275347374d8da21c57f9bde44d7c78083ea6e5a",
+    "/home/user/redroid-doubao/geo-batch-code/draft_submission_recovery.py": "897c9e2c0d6c799a036cef2f5be9cd40a0be27741a710674145eb438da48a868",
+    "/home/user/redroid-doubao/geo-batch-code/native_readback_guard.py": "f284e6c6a3fdc7116c5b4ca9cb0832de4371db67d45e1be9d5c09d32e2da0231",
+    "/home/user/redroid-doubao/geo-batch-code/native_memory_guard.py": "bb29b582e6e1bf380bb620ef575a74457db96e53f60eed46b5ce864480056f1e",
+    "/home/user/redroid-yuanbao/native_core.py": "096263fae25fbb8175c19dedd124181e5ad9220e5e99e49842f2b73b68716e10",
+    "/home/user/redroid-yuanbao/native_client.py": "05bb0bc9911ca17940f8207d0b09bd9e28c18355c8887303248f31d29ad937a5",
+    "/home/user/redroid-yuanbao/native_storage.py": "0cb6fee7862920c3e8ebb4889eaebf40d0ff597db70dbe254415c3315b9eb1bd",
+    "/home/user/redroid-yuanbao/history_refresh.py": "103103912a82dd564a10fc5743344ef1e54b11a109a626fa9b19f0b05fae3a03",
+    "/home/user/redroid-yuanbao/tests/test_native_core.py": "e702de10b6586dc925590773e13f1328d8e04f61b65cde5281b22792f88aafbc",
+    "/home/user/redroid-yuanbao/tests/test_native_client_recovery.py": "545591e12c7b108bfd0e799bdcaf484c2c55cca7f14db3538465be8dbccb0e7d",
+    "/home/user/redroid-yuanbao/tests/test_history_refresh.py": "911191403e3b1dda11627c149f36ba6da8320a9e34238d641fa5e75f1fdd2af2",
+    "/home/user/redroid-doubao/geo-batch-code/tests/test_draft_submission_recovery.py": "55f8153ea9aa4c67e3b28eedad8c0794ca39e494da880d68061ec373ab0a07ce",
+    "/home/user/redroid-doubao/geo-batch-code/tests/test_native_readback_guard.py": "74b120021f568b0658b27fc53dad8ee9b2da7a37eb4cb6f2d9513c417fced45d",
+    "/home/user/redroid-doubao/geo-batch-code/tests/test_native_memory_guard.py": "3ccb4715cc03c021659262b63e5af220b815aa50fdf53f7298ea68f73e7956f6",
+    "/home/user/redroid-doubao/geo-batch-code/tests/test_native_zero_sources.py": "7527af9d61b43097a846b416d22e99fab4e59ef9cda5e6c071d3bef6275b6d6c"
+  },
+  "tests": {
+    "doubao": 38,
+    "yuanbao": 38
+  },
+  "queue_modified": false,
+  "login_modified": false,
+  "new_question_during_deployment": false
+}

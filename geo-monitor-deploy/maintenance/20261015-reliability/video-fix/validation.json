@@ -1,0 +1,52 @@
+{
+  "at": 1792067066.872785,
+  "test": {
+    "test_id": "question-only-soak12h-videofix-1792066775",
+    "started_at": 1792066775.5268965,
+    "deadline": 1792109975.5268965,
+    "duration_seconds": 43200,
+    "root": "/opt/monitor/geo-capture/soak/question-only-soak12h-videofix-1792066775",
+    "service": "geo-question-only-soak12h-videofix-1792066775.service",
+    "deadline_timer": "geo-question-only-soak12h-videofix-1792066775-deadline.timer"
+  },
+  "yuanbao": {
+    "batch": "geo-panel-yuanbao-20261015-181821-d56b0d20",
+    "state": "running",
+    "service_state": "active",
+    "captured": 126,
+    "processed": 126,
+    "unavailable": 1,
+    "nontext_observations": 1,
+    "nontext_processed": 1,
+    "nontext_pending": 0,
+    "needs_review": 0
+  },
+  "reconciled_original_task": {
+    "state": "completed_nontext",
+    "clicks": 1,
+    "replacement_groups": 2,
+    "native_video_items": 7,
+    "text_body_invented": false,
+    "raw_audit": {
+      "observations": 1,
+      "processed": 1,
+      "database_fidelity": true,
+      "scope": "Raw audit events; excluded from full-text counts and product statistics"
+    }
+  },
+  "new_complete_text_after_fix": 7,
+  "verified_full_text_receipts": 126,
+  "normal_source_and_body_database_fidelity": true,
+  "intervals": {
+    "send_clicks": 128,
+    "window_send_clicks": 8,
+    "min_send_interval": 49.94669485092163,
+    "batch_min_send_interval": 49.79456281661987,
+    "duplicate_native_requests": 0,
+    "failed_attempts": 0,
+    "failed_attempts_table_present": true,
+    "first_start": 1792066674.9349055,
+    "last_start": 1792067042.209854,
+    "duplicate_send_clicks": 0
+  }
+}

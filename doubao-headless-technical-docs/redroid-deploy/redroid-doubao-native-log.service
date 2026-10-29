@@ -1,0 +1,20 @@
+[Unit]
+Description=Collect native faults from the Doubao Android container
+After=docker.service redroid-doubao-hpe14-worker.service
+Requires=docker.service
+PartOf=docker.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/docker exec doubao-hpe14-13-test logcat -b all -v threadtime *:F ActivityManager:E houdini:E linker:E
+Restart=always
+RestartSec=10
+UMask=0077
+StandardOutput=append:/home/user/redroid-doubao/hpe14-acceptance/native-runtime.log
+StandardError=journal
+MemoryMax=64M
+CPUQuota=20%
+
+[Install]
+WantedBy=multi-user.target docker.service

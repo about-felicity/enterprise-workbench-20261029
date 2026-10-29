@@ -1,0 +1,10 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const source=fs.readFileSync(process.argv[2],'utf8');
+const start=source.indexOf('function jpegParser('),end=source.indexOf('async function paintLatest',start);
+const c=vm.createContext({Uint8Array,Error});vm.runInContext(source.slice(start,end),c);
+const out=[];c.deliver=b=>out.push(Array.from(b));vm.runInContext('globalThis.parse=jpegParser(deliver)',c);
+const body=Buffer.from([45,45,1,255,216,1,2,255,217,13,10,45,45,255,216,9,255,217]);
+for(const byte of body)c.parse(Uint8Array.of(byte));assert.deepEqual(out,[[255,216,1,2,255,217],[255,216,9,255,217]]);
+out.length=0;c.parse(Uint8Array.from(body));assert.equal(out.length,2);
+assert(source.includes('bitmap.close()'));assert(source.includes('latestJpeg=bytes'));
+console.log(JSON.stringify({passed:true,checks:4,split_marker_frames:2,coalesced_chunk_frames:2,latest_frame_only:true}));

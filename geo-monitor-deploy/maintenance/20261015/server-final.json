@@ -1,0 +1,334 @@
+{
+  "at_beijing": "2026-10-15T13:36:21+08:00",
+  "containers": [
+    {
+      "name": "monitor-dashboard",
+      "id": "88bd1605eda2c8a28080d54be665e9de5ee713812f90424e2c535624a4c502ce",
+      "image_id": "sha256:fbcd971fba691857de1b3a7c25002e6bffe8e03c27ab438a6c12e33ba420224f",
+      "state": "running",
+      "started_at": "2026-10-15T03:55:02.063333187Z",
+      "health": null,
+      "mounts": []
+    },
+    {
+      "name": "musing_hoover",
+      "id": "24ae034415a3c5c269e0e8ce103b1afb3d50cbc822a8371ba2b0c82d1a4f3386",
+      "image_id": "sha256:35ccdf1be3767f25c8f49e24afaf30aa0132225b293c0478570456a2787e520e",
+      "state": "exited",
+      "started_at": "2026-10-15T03:21:32.728876948Z",
+      "health": null,
+      "mounts": []
+    },
+    {
+      "name": "doubao-hpe14-account2",
+      "id": "d2d481c549a9aeab5c84e35459554ca2556de69877ff927f07bec367718eb69a",
+      "image_id": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f",
+      "state": "running",
+      "started_at": "2026-10-13T04:00:31.567054906Z",
+      "health": null,
+      "mounts": [
+        {
+          "type": "volume",
+          "source": "/var/lib/docker/volumes/doubao-hpe14-account2-data/_data",
+          "destination": "/data"
+        }
+      ]
+    },
+    {
+      "name": "doubao-hpe14-13-test",
+      "id": "12e3350f6c1655ef4a668be1f235e75c2820e06be966b2c4a689aa3eb84de72a",
+      "image_id": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f",
+      "state": "running",
+      "started_at": "2026-10-06T11:22:43.134118275Z",
+      "health": null,
+      "mounts": [
+        {
+          "type": "volume",
+          "source": "/var/lib/docker/volumes/doubao-hpe14-android13-data/_data",
+          "destination": "/data"
+        }
+      ]
+    },
+    {
+      "name": "doubao-hpe14-test",
+      "id": "852ae922dd8d6aa927fd3d76899d8b816519c01af780278eddc9fd8355ef8c1f",
+      "image_id": "sha256:a2fdd01db3b1d6cb98336e02b6846e8c345688dc7407b072ad7bb78405329fdd",
+      "state": "exited",
+      "started_at": "2026-10-06T10:35:02.214563517Z",
+      "health": null,
+      "mounts": [
+        {
+          "type": "volume",
+          "source": "/var/lib/docker/volumes/doubao-hpe14-android15-data/_data",
+          "destination": "/data"
+        }
+      ]
+    },
+    {
+      "name": "doubao-redroid-redroid-1",
+      "id": "1526198d75e2c37a37a14533e0f36d04306e5f0a43c70fd7da6f2485b8f12d9d",
+      "image_id": "sha256:6c2597228d0884626ebd9e3905d5334d8e2e9d6554db4c639851eabd04a65d83",
+      "state": "exited",
+      "started_at": "2026-10-06T10:34:57.608624574Z",
+      "health": null,
+      "mounts": [
+        {
+          "type": "volume",
+          "source": "/var/lib/docker/volumes/doubao-redroid_android15-data/_data",
+          "destination": "/data"
+        }
+      ]
+    },
+    {
+      "name": "monitor-product-worker",
+      "id": "d02827c7ee79d7fb309236322d5cb80b7dc2bf9f34ba686c226a7e546fdefb90",
+      "image_id": "sha256:40f36e04105fceb34695a5878c179e3d92b095de7890885289ab0c7482430eee",
+      "state": "running",
+      "started_at": "2026-10-06T01:50:44.448616109Z",
+      "health": "healthy",
+      "mounts": [
+        {
+          "type": "bind",
+          "source": "/opt/monitor",
+          "destination": "/app"
+        }
+      ]
+    },
+    {
+      "name": "monitor-dashboard-api",
+      "id": "db748b4d66096ca553989f67d9f0ec39b8c66edcb709480735c1c31bf39fdb84",
+      "image_id": "sha256:40f36e04105fceb34695a5878c179e3d92b095de7890885289ab0c7482430eee",
+      "state": "running",
+      "started_at": "2026-10-12T08:40:01.711661132Z",
+      "health": "healthy",
+      "mounts": [
+        {
+          "type": "bind",
+          "source": "/opt/monitor",
+          "destination": "/app"
+        }
+      ]
+    },
+    {
+      "name": "monitor-doubao-receiver",
+      "id": "49a44812dc37f4416c3324f1c75481a947d13a447984d38da96e0ad9cf8d382d",
+      "image_id": "sha256:40f36e04105fceb34695a5878c179e3d92b095de7890885289ab0c7482430eee",
+      "state": "running",
+      "started_at": "2026-09-17T01:36:19.47297663Z",
+      "health": "healthy",
+      "mounts": [
+        {
+          "type": "bind",
+          "source": "/opt/monitor",
+          "destination": "/app"
+        }
+      ]
+    },
+    {
+      "name": "monitor-result-receiver",
+      "id": "c47f89d43fe3c41971a003ba13e7ebff1a16b5ac67a1ed1d420d3ee4d6c7968f",
+      "image_id": "sha256:40f36e04105fceb34695a5878c179e3d92b095de7890885289ab0c7482430eee",
+      "state": "running",
+      "started_at": "2026-09-21T05:26:29.9984192Z",
+      "health": "healthy",
+      "mounts": [
+        {
+          "type": "bind",
+          "source": "/opt/monitor",
+          "destination": "/app"
+        }
+      ]
+    },
+    {
+      "name": "monitor-content-worker",
+      "id": "5d02f9c6912eb5b4e77da37c82301da4c51e78d14c07bddc4d5baf13c824e5a9",
+      "image_id": "sha256:e60b849cbc9a3acda6856fee9a85579628c8ec76a623d5017d75ec63310e4215",
+      "state": "running",
+      "started_at": "2026-09-14T01:53:22.563778025Z",
+      "health": "healthy",
+      "mounts": [
+        {
+          "type": "bind",
+          "source": "/opt/monitor",
+          "destination": "/app"
+        }
+      ]
+    },
+    {
+      "name": "monitor-postgres",
+      "id": "044d2082faa54e625c3266327965f0d288d40c31b1b64eb1ba6db93ff331740f",
+      "image_id": "sha256:051f7b7b3abdd564d5d1bd1e8c4b9c1b6e77087d1dd22020ede611c096a272e0",
+      "state": "running",
+      "started_at": "2026-09-07T08:05:26.787567304Z",
+      "health": "healthy",
+      "mounts": [
+        {
+          "type": "volume",
+          "source": "/var/lib/docker/volumes/local-server_monitor-postgres-data/_data",
+          "destination": "/var/lib/postgresql/data"
+        }
+      ]
+    },
+    {
+      "name": "monitor-redis",
+      "id": "980c10b36d942051d47b8d68b792fb2987950262e41ca39b151565f2dc69d43f",
+      "image_id": "sha256:71da9275c5f3fcb97d0fa0c8c5b36cc995327265420f17a04bfd544f458059f7",
+      "state": "running",
+      "started_at": "2026-09-07T08:05:26.782716935Z",
+      "health": null,
+      "mounts": [
+        {
+          "type": "volume",
+          "source": "/var/lib/docker/volumes/local-server_monitor-redis-data/_data",
+          "destination": "/data"
+        }
+      ]
+    }
+  ],
+  "services": {
+    "geo-monitor-status.service": {
+      "MainPID": "19902",
+      "NRestarts": "0",
+      "ExecMainStartTimestampMonotonic": "3786708562621",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "geo-capture-wenxin-card.service": {
+      "MainPID": "57993",
+      "NRestarts": "0",
+      "ExecMainStartTimestampMonotonic": "3789683983078",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "geo-editorial-scheduler.service": {
+      "MainPID": "51308",
+      "NRestarts": "0",
+      "ExecMainStartTimestampMonotonic": "3376011070245",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "geo-editorial-api-worker.service": {
+      "MainPID": "30017",
+      "NRestarts": "19",
+      "ExecMainStartTimestampMonotonic": "3690219911249",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "geo-editorial-coordinator.service": {
+      "MainPID": "18675",
+      "NRestarts": "5",
+      "ExecMainStartTimestampMonotonic": "3691447169304",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "geo-editorial-session-watch.service": {
+      "MainPID": "39264",
+      "NRestarts": "0",
+      "ExecMainStartTimestampMonotonic": "3271105704221",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "geo-editorial-acceptance-current.service": {
+      "MainPID": "0",
+      "NRestarts": "0",
+      "ExecMainStartTimestampMonotonic": "0",
+      "ActiveState": "inactive",
+      "SubState": "dead"
+    },
+    "monitor-vps2-tunnel.service": {
+      "MainPID": "41398",
+      "NRestarts": "4662",
+      "ExecMainStartTimestampMonotonic": "3770119660207",
+      "ActiveState": "active",
+      "SubState": "running"
+    },
+    "redroid-doubao-native-log.service": {
+      "MainPID": "11651",
+      "NRestarts": "0",
+      "ExecMainStartTimestampMonotonic": "3042399339240",
+      "ActiveState": "active",
+      "SubState": "running"
+    }
+  },
+  "collectors": [
+    {
+      "name": "豆包 1",
+      "service": "geo-native@geo-panel-doubao1-20261015-102126-041120bd.service",
+      "service_state": "inactive",
+      "status": "stopped",
+      "batch": "geo-panel-doubao1-20261015-102126-041120bd",
+      "planned": 420,
+      "captured": 116,
+      "processed": 116,
+      "unique_processed": 116,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792038105.3846984
+    },
+    {
+      "name": "豆包 2",
+      "service": "geo-native@geo-panel-doubao2-20261015-102128-d6e56b0a.service",
+      "service_state": "inactive",
+      "status": "stopped",
+      "batch": "geo-panel-doubao2-20261015-102128-d6e56b0a",
+      "planned": 420,
+      "captured": 119,
+      "processed": 119,
+      "unique_processed": 119,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792038100.352838
+    },
+    {
+      "name": "DeepSeek",
+      "service": "geo-capture-deepseek.service",
+      "service_state": "failed",
+      "status": "waiting_login",
+      "batch": "geo-deepseek-21x3-20261015",
+      "planned": 63,
+      "captured": 0,
+      "processed": 0,
+      "unique_processed": 0,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792026816.408962
+    },
+    {
+      "name": "文心卡片",
+      "service": "geo-capture-wenxin-card.service",
+      "service_state": "active",
+      "status": "running",
+      "batch": "geo-wenxin_card-21x6-20261015",
+      "planned": 126,
+      "captured": 125,
+      "processed": 125,
+      "unique_processed": 125,
+      "duplicates": 0,
+      "unavailable": 0,
+      "delivery_errors": 0,
+      "updated_at": 1792042580.9272735
+    },
+    {
+      "name": "百度卡片",
+      "service": "geo-capture-baidu-ai.service",
+      "service_state": "failed",
+      "status": "needs_attention",
+      "batch": "geo-baidu_ai-21x5-20261015",
+      "planned": 105,
+      "captured": 84,
+      "processed": 84,
+      "unique_processed": 28,
+      "duplicates": 56,
+      "unavailable": 6,
+      "delivery_errors": 0,
+      "updated_at": 1792037826.2105784
+    }
+  ],
+  "disk_free_bytes": 412943196160,
+  "docker_space": "TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE\nImages          19        9         15.35GB   7.935GB (51%)\nContainers      13        10        384.3MB   249.9kB (0%)\nLocal Volumes   7         6         18.6GB    1.895GB (10%)\nBuild Cache     10        0         123.1MB   0B",
+  "images": "sha256:fbcd971fba691857de1b3a7c25002e6bffe8e03c27ab438a6c12e33ba420224f monitor-dashboard:local\nsha256:fbcd971fba691857de1b3a7c25002e6bffe8e03c27ab438a6c12e33ba420224f monitor-dashboard:vps-prefix-20261015\nsha256:5982f91773c7264030856c86d087eb6bea205ea79aaa2ada56785f2674e62663 monitor-dashboard:before-vps-prefix-1792036453\nsha256:5982f91773c7264030856c86d087eb6bea205ea79aaa2ada56785f2674e62663 monitor-dashboard:capture-20261015\nsha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f doubao/redroid:13-hpe14-com1.3\nsha256:a2fdd01db3b1d6cb98336e02b6846e8c345688dc7407b072ad7bb78405329fdd doubao/redroid:15-hpe14-com1.3\nsha256:700274838152d523a9716f752450f450c72141010310f080cf1cd93780608bff monitor-dashboard:before-capture-1792034762\nsha256:e60b849cbc9a3acda6856fee9a85579628c8ec76a623d5017d75ec63310e4215 monitor-content-worker:local\nsha256:40f36e04105fceb34695a5878c179e3d92b095de7890885289ab0c7482430eee monitor-backend:local\nsha256:09f7da3bc104798d0afb40bc08d23ab2da20a76130cec1f2ef170848f5d85217 python:3.12-slim\nsha256:83f487e0a63425e5b4d146fb5e5be574bcbe1b7b843d3ebafdd95eaf7767a7e5 node:22-bookworm-slim\nsha256:71da9275c5f3fcb97d0fa0c8c5b36cc995327265420f17a04bfd544f458059f7 redis:7-bookworm\nsha256:051f7b7b3abdd564d5d1bd1e8c4b9c1b6e77087d1dd22020ede611c096a272e0 postgres:17-bookworm\nsha256:6c2597228d0884626ebd9e3905d5334d8e2e9d6554db4c639851eabd04a65d83 erstt/redroid:15.0.0_ndk_AVD\nsha256:141df5c0be4bb6933ec8f260239d17f45fd48fcac025ee9fa6cce2a66dc58c92 erstt/redroid:13.0.0_houdini_ChromeOS\nsha256:26884891bc012a9e26e803b187a1f01c4d4ef3ddfef68afbbb3a508683b5dfa0 erstt/redroid:13.0.0_ndk_ChromeOS\nsha256:b85cee7e9e203404facb5d121edc5f46f7aea85250f39fbc40d9a3a07e0cf27a erstt/redroid:13.0.0_ndk_ChromeOS\nsha256:b85cee7e9e203404facb5d121edc5f46f7aea85250f39fbc40d9a3a07e0cf27a erstt/redroid:13.0.0_ndk_ChromeOS",
+  "volumes": "doubao-hpe14-account2-data\ndoubao-hpe14-android13-data\ndoubao-hpe14-android15-data\ndoubao-redroid_android15-data\ndoubao-redroid_android-data\nlocal-server_monitor-postgres-data\nlocal-server_monitor-redis-data"
+}

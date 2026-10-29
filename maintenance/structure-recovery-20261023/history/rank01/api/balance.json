@@ -1,0 +1,10 @@
+{
+  "is_available": true,
+  "balance_infos": [
+    {
+      "currency": "CNY",
+      "total_balance": "14.15"
+    }
+  ],
+  "checked_epoch": 1792728534.716772
+}

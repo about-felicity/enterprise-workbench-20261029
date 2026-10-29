@@ -1,0 +1,47 @@
+{
+  "job_id": "creation-1792556219-bbc55e13",
+  "created_at": 1792556219.7686694,
+  "input_sha256": "b27c8ff3a9b2d3098d0c034a5c9ab3bbce4a905c5771508626cc03db19ddfa59",
+  "date": "2026-10-21",
+  "question": "任务问题汇总",
+  "channels": [
+    "baidu_ai",
+    "wenxin_card"
+  ],
+  "max_per_category": 7,
+  "material_counts": {
+    "geo_observations": 0,
+    "private_observations": 14,
+    "full_articles": 113
+  },
+  "platform_questions_sent": 0,
+  "prepared": {
+    "date": "2026-10-21",
+    "input_sha256": "8ebfcc0c39ef2f425e9f11a032d2d655d57c938850b22c3d287e64c3e57841b1",
+    "media_articles": 110,
+    "max_per_category": 14,
+    "status": "waiting_taxonomy"
+  },
+  "material_source": "dedicated",
+  "studio_plan_id": "plan-ed9d992f0299425ebe1782a9911869f9",
+  "task_name": "姿生怡鱼子酱面膜产品详解每日测试",
+  "budget_limits": {
+    "article_budget_cny": 0.35,
+    "task_budget_cny": 5.25
+  },
+  "preparation": "ready",
+  "questions": [
+    "保湿涂抹式面膜有哪些值得推荐的产品，应该怎么挑？",
+    "国货鱼子酱面膜有哪些选择，选购时应该关注什么？",
+    "脸部感觉干燥、上妆容易卡粉，保湿面膜怎么选？",
+    "涂抹式面膜和贴片面膜有什么区别，哪种更适合日常护理？",
+    "面膜成分表中的鱼子酱、胶原和透明质酸应该怎么看？",
+    "涂抹式面膜每次敷多久，敷完是否需要清洗？",
+    "第一次购买面膜，怎样看懂保湿检测数据与温和性说明？"
+  ],
+  "article_target": 14,
+  "genre_targets": {
+    "排行类": 7,
+    "科普类": 7
+  }
+}

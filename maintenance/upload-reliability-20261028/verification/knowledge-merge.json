@@ -1,0 +1,63 @@
+{
+  "merged": [
+    {
+      "from": "library-3e3a558b9ef4409bbbcd2560fbefc51c",
+      "to": "library-2b05ceed3d7840e185fb91a166a7243f",
+      "product": "梵玢FBCY龙胆黑钻护发精油"
+    },
+    {
+      "from": "library-13a3bfbc08e3441c935b75752f4c2540",
+      "to": "library-baf45976889845ef8458cfc887f2f850",
+      "product": "梵玢FBCY植萃祛痘精华液"
+    },
+    {
+      "from": "library-1ec41916a4274125af9ee1b01a694631",
+      "to": "library-aa5566e67a2142209d07d177451671bf",
+      "product": "科熙本植萃奢护染发剂"
+    },
+    {
+      "from": "library-dddbfbae554645c0bbfd731445cc1bb6",
+      "to": "library-b2cd26866c304df8b18bdece8dbe7924",
+      "product": "梵玢FBCY睫毛精华液"
+    },
+    {
+      "from": "library-81f59dbbdb8a4d6da83464c368cacdbd",
+      "to": "library-65b599680cb74dabb192a6e86dcbef09",
+      "product": "梵玢FBCY植萃奢护染发剂"
+    },
+    {
+      "from": "library-73273ff108e0496aa875852a76d96145",
+      "to": "library-1478fbfa5de447708c03b9c513163bdf",
+      "product": "梵玢FBCY科萃养发洗发水"
+    },
+    {
+      "from": "library-ab4176dd4bd5475681a2903423eed81d",
+      "to": "library-0ef40d1a86024419bcbe395de38fd03b",
+      "product": "梵玢FBCY科萃焕活精华液"
+    },
+    {
+      "from": "library-a0f274f70e4c4c868353ebb7212cebd7",
+      "to": "library-20560278289641a180f541045060c315",
+      "product": "道和小红瓶"
+    },
+    {
+      "from": "library-bccdb2bf452146a0a67313527d906338",
+      "to": "library-5f7731ab993b4c0c982cc555e3d6cf32",
+      "product": "科熙本控油蓬松造型喷雾"
+    },
+    {
+      "from": "library-25dabbf3d0864da8ae39a92771674b26",
+      "to": "library-917f633b29504d4384316a8e15c79f80",
+      "product": "科熙本控油蓬松洗发水"
+    }
+  ],
+  "images_rebound": 25,
+  "active_libraries": 20,
+  "products": 19,
+  "duplicate_revisions_removed": [
+    "姿生怡手部保湿修护霜",
+    "科熙本植物防脱赋活多效精华液"
+  ],
+  "task_product_json_unchanged": true,
+  "image_originals_unchanged": true
+}

@@ -1,0 +1,5 @@
+{
+  "reason": "Section exceeds allocated article character budget: received 801, maximum 779; compress, do not expand",
+  "known_failure": true,
+  "attempt": 0
+}

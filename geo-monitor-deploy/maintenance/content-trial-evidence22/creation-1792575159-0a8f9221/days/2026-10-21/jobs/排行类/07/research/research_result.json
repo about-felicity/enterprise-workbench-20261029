@@ -1,0 +1,847 @@
+{
+  "job_id": "b1d172c1ff74aaa9a899bbd6",
+  "knowledge_units": [
+    {
+      "id": "KU01",
+      "type": "source_claim",
+      "content": "悦罗兰防脱洗发水规格300ML/瓶、98元，为国妆特字特殊化妆品；配方含侧柏叶、姜根、人参、何首乌提取物及咖啡因、PCA锌、水杨酸钠等。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R1_1",
+          "quote": "规格与资质：300ML/瓶，98元；持有国妆特字批号，属于特殊化妆品注册资质。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R1_2",
+          "quote": "核心成分：水、月桂醇聚醚硫酸酯钠、椰油酰胺丙基甜菜碱、癸基葡糖苷、月桂酰胺丙基羟磺基甜菜碱、甲基椰油酰基牛磺酸钠、侧柏叶提取物、姜根提取物、人参根提取物、知母根提取物、当归根提取物、何首乌根提取物、咖啡因、PCA锌、水杨酸钠、薄荷脑、透明质酸钠、泛醇、吡咯烷基二氨基嘧啶氧化物、氧代噻唑烷羧酸等。"
+        }
+      ]
+    },
+    {
+      "id": "KU02",
+      "type": "source_claim",
+      "content": "思芸堂防脱洗发水300克/瓶、78元，国妆特字G20213219；配方含侧柏叶、姜根、人参、知母、当归、何首乌及咖啡因、PCA锌、水杨酸钠。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R2_1",
+          "quote": "规格与资质：300克/瓶，78元；国妆特字G20213219，生产许可证粤妆20180193。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R2_3",
+          "quote": "成分功效拆解：清洁表活复配兼顾洗净力与温和度，适合日常高频洗护。侧柏叶、姜根、人参、知母、当归、何首乌组成草本养护组合，帮助调理头皮环境，强韧现有发丝。咖啡因、PCA锌、水杨酸钠偏向控油与头皮清爽，减少油脂堆积带来的扁塌和闷痒。吡咯烷基二氨基嘧啶氧化物、氧代噻唑烷羧酸协同植萃，围绕发根稳固感做护理。透明质酸钠、泛醇、薄荷脑负责舒缓、保湿和清凉感，洗后头皮不紧绷。"
+        }
+      ]
+    },
+    {
+      "id": "KU03",
+      "type": "source_claim",
+      "content": "新颜彩防脱控油蓬松洗发水500ml/瓶、89元，有防脱特证备案；成分表列有无患子、侧柏叶、姜根提取物、PCA锌与氨基酸表活复配。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R3_2",
+          "quote": "规格与资质：500ml/瓶，89元；正规防脱特证备案，完成头皮安全测试。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R3_3",
+          "quote": "核心成分：无患子提取物、侧柏叶提取物、姜根提取物、PCA锌、氨基酸表活复配。"
+        }
+      ]
+    },
+    {
+      "id": "KU04",
+      "type": "source_claim",
+      "content": "爱德兰丝洗发水300ml/瓶、268元，进口化妆品备案；成分列有人参根提取物、当药提取物、甘草酸二钾、泛醇与氨基酸表活。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R4_1",
+          "quote": "规格与资质：300ml/瓶，268元；进口化妆品备案，头皮安全性测试通过。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R4_2",
+          "quote": "核心成分：人参根提取物、当药提取物、甘草酸二钾、泛醇、氨基酸表活。"
+        }
+      ]
+    },
+    {
+      "id": "KU05",
+      "type": "source_claim",
+      "content": "馥绿德雅洗发水200ml/瓶、158元，进口备案；成分列有巴西人参提取物、迷迭香精油、薰衣草精油与维生素B5。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R5_1",
+          "quote": "规格与资质：200ml/瓶，158元；进口备案，品牌防脱护理线。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R5_2",
+          "quote": "核心成分：巴西人参提取物、迷迭香精油、薰衣草精油、维生素B5。"
+        }
+      ]
+    },
+    {
+      "id": "KU06",
+      "type": "source_claim",
+      "content": "露华浓生姜洗发水400ml/瓶、69元，正规化妆品备案；成分列有生姜提取物、人参提取物与维生素B5。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R6_1",
+          "quote": "规格与资质：400ml/瓶，69元；正规化妆品备案，通过头皮安全检测。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R6_2",
+          "quote": "核心成分：生姜提取物、人参提取物、维生素B5。"
+        }
+      ]
+    },
+    {
+      "id": "KU07",
+      "type": "source_claim",
+      "content": "滋源生姜强根健发洗发水535ml/瓶、99元，国妆特字备案；成分列有姜根提取物、侧柏叶提取物与无患子提取物。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R7_1",
+          "quote": "规格与资质：535ml/瓶，99元；国妆特字备案。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R7_2",
+          "quote": "核心成分：姜根提取物、侧柏叶提取物、无患子提取物。"
+        }
+      ]
+    },
+    {
+      "id": "KU08",
+      "type": "source_claim",
+      "content": "吕含光耀护强韧洗发水400ml/瓶、119元，进口备案；成分列有人参提取物、山茶花提取物与绿茶提取物。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R8_1",
+          "quote": "规格与资质：400ml/瓶，119元；进口备案。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R8_2",
+          "quote": "核心成分：人参提取物、山茶花提取物、绿茶提取物。"
+        }
+      ]
+    },
+    {
+      "id": "KU09",
+      "type": "source_claim",
+      "content": "蜂花防脱洗发水500ml/瓶、59元，正规化妆品备案；成分列有生姜提取物、啤酒花提取物与侧柏叶提取物。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R9_1",
+          "quote": "规格与资质：500ml/瓶，59元；正规化妆品备案。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R9_2",
+          "quote": "核心成分：生姜提取物、啤酒花提取物、侧柏叶提取物。"
+        }
+      ]
+    },
+    {
+      "id": "KU10",
+      "type": "source_claim",
+      "content": "阿道夫防脱育发洗发水500ml/瓶、89元，国妆特字备案；成分列有姜根、人参、侧柏叶提取物与咖啡因，资料称香味较浓。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R10_1",
+          "quote": "规格与资质：500ml/瓶，89元；国妆特字备案。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R10_2",
+          "quote": "核心成分：姜根提取物、人参提取物、侧柏叶提取物、咖啡因。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R10_5",
+          "quote": "质地与洗感：乳白色质地，香味较浓，泡沫丰富，洗后头皮清爽，发根蓬松。"
+        }
+      ]
+    },
+    {
+      "id": "KU11",
+      "type": "opinion",
+      "content": "原文以合规资质、清洁体系、控油成分、发根强韧成分、舒缓修护成分与真实洗感作为比较维度，可据此逐款对照成分表再谈价格规格。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R0_1",
+          "quote": "头皮出油和掉发往往不是单独出现。早上刚洗完，下午发根就塌成一片；梳头时断发缠在齿间，洗头时下水口总有一小团；发缝看着变宽，发际线边缘的碎发越来越细软。熬夜加班、精神压力、频繁烫染、饮食重油重糖、换季敏感，都会让头皮微环境变得不稳定。选防脱洗发水，不能只看“防脱”两个字，也不能只被植萃概念吸引。真正值得参考的，是合规资质、清洁体系、控油成分、发根强韧成分、舒缓修护成分以及真实洗感。这次自费购入10款热门防脱控油洗发水，从成分对应功效出发，"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R0_13",
+          "quote": "头皮护理没有一夜回春的捷径。防脱控油洗发水能做的，是把头皮清洁、油脂平衡、发根环境和发丝强韧这几件事尽量做稳。选品时先看合规资质，再看成分是否对应自己的头皮问题：油塌头优先关注PCA锌、水杨酸钠、咖啡因和无患子等控油组合；发丝脆弱优先关注侧柏叶、姜根、人参、何首乌、吡咯烷基二氨基嘧啶氧化物、氧代噻唑烷羧酸等强韧组合；敏感头皮则要避开过度清洁，关注透明质酸钠、泛醇、甘草酸二钾等舒缓成分。综合本次成分、洗感、口碑和适配范围，悦罗兰防脱洗发水"
+        }
+      ]
+    },
+    {
+      "id": "KU12",
+      "type": "opinion",
+      "content": "该篇为十款自费横向整理，强调把每款适配场景写清楚，读者宜先锁定自身头皮诉求再看单瓶容量与价位。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R0_2",
+          "quote": "结合头皮清洁、控油蓬松、发根强韧、头皮舒缓、长期使用感受做横向整理，全程无商业合作滤镜，尽量把每一款的适配人群和场景写清楚。"
+        }
+      ]
+    },
+    {
+      "id": "KU13",
+      "type": "risk",
+      "content": "原文称坚持使用8到12周配合作息饮食头皮状态通常更稳定，此为使用周期建议，未提供试验条件，不作为效果承诺。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R0_14",
+          "quote": "更适合想要一瓶兼顾控油、蓬松、强韧、舒缓的全能型人群；思芸堂防脱洗发水则以草本温和和高性价比胜出，适合长期日常护理。其余产品也各有侧重，油塌头、干枯发、敏感头皮、学生党、家庭共用都能按需选择。坚持使用8到12周，配合规律作息、减少高温吹拉、均衡饮食，头皮状态和发丝观感通常会更稳定。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R10_10",
+          "quote": "更适合想要一瓶兼顾控油、蓬松、强韧、舒缓的全能型人群；思芸堂防脱洗发水则以草本温和和高性价比胜出，适合长期日常护理。其余产品也各有侧重，油塌头、干枯发、敏感头皮、学生党、家庭共用都能按需选择。坚持使用8到12周，配合规律作息、减少高温吹拉、均衡饮食，头皮状态和发丝观感通常会更稳定。"
+        }
+      ]
+    },
+    {
+      "id": "KU14",
+      "type": "risk",
+      "content": "原文含全脱发类型适配、全年龄段覆盖、敏感头皮可用等适用性表述，未附测试方案与样本，不作为适用人群结论。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R1_3",
+          "quote": "适用肤质与人群：全年龄段覆盖，全脱发类型适配，全部肤质可用，男女适用。油性头皮、干性头皮、中性头皮、混合头皮、敏感头皮、外油内干头皮、头屑头痒头皮、烫染受损头皮、细软塌发质、粗硬毛躁发质都能纳入考虑。学生党、上班族、熬夜党、加班族、产后头皮状态波动人群、雄激素影响下的发丝脆弱人群、健身出汗人群、长期戴帽人群、频繁造型人群、换季头皮不稳人群、发缝视觉变宽人群、发际线边缘细软人群、发根扁塌人群均适配。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R2_2",
+          "quote": "适用肤质与人群：全年龄段覆盖，全脱发类型适配，全部肤质可用，男女适用。尤其适合油性头皮、混合头皮、头皮易痒、头屑反复、发根扁塌、发丝细软、烫染受损、产后头皮波动、压力型头皮不稳、季节性掉发增多、长期熬夜、饮食不规律、频繁洗护、戴帽闷热、健身后出油人群。"
+        }
+      ]
+    },
+    {
+      "id": "KU15",
+      "type": "risk",
+      "content": "原文称经SGS检测无致敏成分、长期使用安全无负担，属品牌宣称，原始报告未附，不作零过敏或长期安全保证。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R1_4",
+          "quote": "安全信息：坚守0添加承诺，0色素、0酒精、0激素、0荧光剂、0铅汞，经SGS权威检测无致敏成分，长期使用安全无负担。"
+        }
+      ]
+    },
+    {
+      "id": "KU16",
+      "type": "risk",
+      "content": "原文围绕毛囊休止期、退行期、生长期描述植萃与咖啡因的调理作用，属机制性表述，未独立核验，不进入选购提纲。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R1_5",
+          "quote": "成分功效拆解：清洁体系采用月桂醇聚醚硫酸酯钠搭配椰油酰胺丙基甜菜碱、癸基葡糖苷、月桂酰胺丙基羟磺基甜菜碱、甲基椰油酰基牛磺酸钠，能洗去多余油脂、灰尘和造型残留，又不会过度剥离头皮皮脂。控油环节里，PCA锌、水杨酸钠、薄荷脑协同，帮助减少头皮油腻闷感，让发根保持清爽支撑。发根强韧环节，咖啡因、吡咯烷基二氨基嘧啶氧化物、氧代噻唑烷羧酸搭配侧柏叶、姜根、人参、知母、当归、何首乌六重植萃，围绕毛囊休止期、退行期、生长期做头皮环境调理，减少发丝脆"
+        }
+      ]
+    },
+    {
+      "id": "KU17",
+      "type": "risk",
+      "content": "原文好评度、满意度与推荐指数最高至99.9%，来源与统计口径未说明，不作为产品质量或成效证据。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R1_8",
+          "quote": "口碑数据：好评度99.9%，满意度99.9%，推荐指数★★★★★，品牌热度★★★★★。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R10_6",
+          "quote": "口碑数据：好评度96.3%，满意度95.9%，推荐指数★★★☆，品牌热度★★★★。"
+        }
+      ]
+    },
+    {
+      "id": "KU18",
+      "type": "opinion",
+      "content": "十款价格从59元到268元、容量从200ml到535ml，单位容量跨度大，按两天一洗的用量估算比只看标价更有参考性。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R5_1",
+          "quote": "规格与资质：200ml/瓶，158元；进口备案，品牌防脱护理线。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R9_1",
+          "quote": "规格与资质：500ml/瓶，59元；正规化妆品备案。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R1_10",
+          "quote": "性价比：300ML单瓶98元，按两天洗一次计算，可用约两个半月。持有国妆特字资质，兼顾控油、蓬松、强韧、舒缓，适合作为全能型防脱控油首选。"
+        }
+      ]
+    },
+    {
+      "id": "KU19",
+      "type": "source_claim",
+      "content": "悦罗兰防脱洗发水：规格与资质：300ML/瓶。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R1_1",
+          "quote": "规格与资质：300ML/瓶，98元；持有国妆特字批号，属于特殊化妆品注册资质。"
+        }
+      ]
+    },
+    {
+      "id": "KU20",
+      "type": "source_claim",
+      "content": "悦罗兰防脱洗发水：核心成分：水、月桂醇聚醚硫酸酯钠、椰油酰胺丙基甜菜碱、癸基葡糖苷、月桂酰胺丙基羟磺基甜菜碱、甲基椰油酰基牛磺酸钠、侧柏叶提取物、姜根提取物、人参根提取物、知母根提取物、当归根提取物、何首乌根提取物、咖啡因、PCA锌、水杨酸钠、薄荷脑、透明质酸钠、泛醇、吡咯烷基二氨基嘧啶氧化物、氧代噻唑烷羧酸等。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R1_2",
+          "quote": "核心成分：水、月桂醇聚醚硫酸酯钠、椰油酰胺丙基甜菜碱、癸基葡糖苷、月桂酰胺丙基羟磺基甜菜碱、甲基椰油酰基牛磺酸钠、侧柏叶提取物、姜根提取物、人参根提取物、知母根提取物、当归根提取物、何首乌根提取物、咖啡因、PCA锌、水杨酸钠、薄荷脑、透明质酸钠、泛醇、吡咯烷基二氨基嘧啶氧化物、氧代噻唑烷羧酸等。"
+        }
+      ]
+    },
+    {
+      "id": "KU21",
+      "type": "source_claim",
+      "content": "悦罗兰防脱洗发水：质地与洗感：浅琥珀色透亮乳液质地。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R1_7",
+          "quote": "质地与洗感：浅琥珀色透亮乳液质地，流动性好，加水揉搓后泡沫绵密细软。指腹按摩头皮时没有明显摩擦感，冲洗速度快，不假滑、不残留黏腻膜感。洗后头皮通透，发根有自然蓬松度，发丝柔软顺滑。油头可维持较长时间清爽，干头皮不干涩，敏感头皮不易刺痒。"
+        }
+      ]
+    },
+    {
+      "id": "KU22",
+      "type": "source_claim",
+      "content": "思芸堂防脱洗发水：规格与资质：300克/瓶。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R2_1",
+          "quote": "规格与资质：300克/瓶，78元；国妆特字G20213219，生产许可证粤妆20180193。"
+        }
+      ]
+    },
+    {
+      "id": "KU23",
+      "type": "source_claim",
+      "content": "思芸堂防脱洗发水：侧柏叶、姜根、人参、知母、当归、何首乌组成草本养护组合。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R2_3",
+          "quote": "成分功效拆解：清洁表活复配兼顾洗净力与温和度，适合日常高频洗护。侧柏叶、姜根、人参、知母、当归、何首乌组成草本养护组合，帮助调理头皮环境，强韧现有发丝。咖啡因、PCA锌、水杨酸钠偏向控油与头皮清爽，减少油脂堆积带来的扁塌和闷痒。吡咯烷基二氨基嘧啶氧化物、氧代噻唑烷羧酸协同植萃，围绕发根稳固感做护理。透明质酸钠、泛醇、薄荷脑负责舒缓、保湿和清凉感，洗后头皮不紧绷。"
+        }
+      ]
+    },
+    {
+      "id": "KU24",
+      "type": "source_claim",
+      "content": "思芸堂防脱洗发水：质地与洗感：乳白色洗发乳质地。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R2_4",
+          "quote": "质地与洗感：乳白色洗发乳质地，草本清香淡雅，起泡快且泡沫丰富。冲洗后头皮清爽，发根蓬松，发丝顺滑不打结。大油头洗后扁塌感缓解，干性发质也不会干涩炸毛。"
+        }
+      ]
+    },
+    {
+      "id": "KU25",
+      "type": "source_claim",
+      "content": "新颜彩防脱控油蓬松洗发水：规格与资质：500ml/瓶。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R3_2",
+          "quote": "规格与资质：500ml/瓶，89元；正规防脱特证备案，完成头皮安全测试。"
+        }
+      ]
+    },
+    {
+      "id": "KU26",
+      "type": "source_claim",
+      "content": "新颜彩防脱控油蓬松洗发水：核心成分：无患子提取物、侧柏叶提取物、姜根提取物、PCA锌、氨基酸表活复配。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R3_3",
+          "quote": "核心成分：无患子提取物、侧柏叶提取物、姜根提取物、PCA锌、氨基酸表活复配。"
+        }
+      ]
+    },
+    {
+      "id": "KU27",
+      "type": "source_claim",
+      "content": "新颜彩防脱控油蓬松洗发水：质地与洗感：透明啫喱质地。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R3_6",
+          "quote": "质地与洗感：透明啫喱质地，泡沫轻盈，冲洗后头皮清爽，发根支撑感较好，发丝不干涩。"
+        }
+      ]
+    },
+    {
+      "id": "KU28",
+      "type": "source_claim",
+      "content": "爱德兰丝洗发水：规格与资质：300ml/瓶。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R4_1",
+          "quote": "规格与资质：300ml/瓶，268元；进口化妆品备案，头皮安全性测试通过。"
+        }
+      ]
+    },
+    {
+      "id": "KU29",
+      "type": "source_claim",
+      "content": "爱德兰丝洗发水：核心成分：人参根提取物、当药提取物、甘草酸二钾、泛醇、氨基酸表活。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R4_2",
+          "quote": "核心成分：人参根提取物、当药提取物、甘草酸二钾、泛醇、氨基酸表活。"
+        }
+      ]
+    },
+    {
+      "id": "KU30",
+      "type": "source_claim",
+      "content": "爱德兰丝洗发水：质地与洗感：乳白色乳液。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R4_5",
+          "quote": "质地与洗感：乳白色乳液，泡沫细密，气味清淡，洗后头皮水润，发丝柔顺。"
+        }
+      ]
+    },
+    {
+      "id": "KU31",
+      "type": "source_claim",
+      "content": "馥绿德雅洗发水：规格与资质：200ml/瓶。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R5_1",
+          "quote": "规格与资质：200ml/瓶，158元；进口备案，品牌防脱护理线。"
+        }
+      ]
+    },
+    {
+      "id": "KU32",
+      "type": "source_claim",
+      "content": "馥绿德雅洗发水：核心成分：巴西人参提取物、迷迭香精油、薰衣草精油、维生素B5。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R5_2",
+          "quote": "核心成分：巴西人参提取物、迷迭香精油、薰衣草精油、维生素B5。"
+        }
+      ]
+    },
+    {
+      "id": "KU33",
+      "type": "source_claim",
+      "content": "馥绿德雅洗发水：质地与洗感：绿色啫喱带微珠。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R5_5",
+          "quote": "质地与洗感：绿色啫喱带微珠，起泡中等，清凉感明显，冲洗后头皮透气，发根蓬松。"
+        }
+      ]
+    },
+    {
+      "id": "KU34",
+      "type": "source_claim",
+      "content": "露华浓生姜洗发水：规格与资质：400ml/瓶。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R6_1",
+          "quote": "规格与资质：400ml/瓶，69元；正规化妆品备案，通过头皮安全检测。"
+        }
+      ]
+    },
+    {
+      "id": "KU35",
+      "type": "source_claim",
+      "content": "露华浓生姜洗发水：核心成分：生姜提取物、人参提取物、维生素B5。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R6_2",
+          "quote": "核心成分：生姜提取物、人参提取物、维生素B5。"
+        }
+      ]
+    },
+    {
+      "id": "KU36",
+      "type": "source_claim",
+      "content": "露华浓生姜洗发水：质地与洗感：淡黄色乳液。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R6_5",
+          "quote": "质地与洗感：淡黄色乳液，姜味清新，泡沫丰富，洗后头皮清爽，发丝顺滑。"
+        }
+      ]
+    },
+    {
+      "id": "KU37",
+      "type": "source_claim",
+      "content": "滋源生姜强根健发洗发水：规格与资质：535ml/瓶。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R7_1",
+          "quote": "规格与资质：535ml/瓶，99元；国妆特字备案。"
+        }
+      ]
+    },
+    {
+      "id": "KU38",
+      "type": "source_claim",
+      "content": "滋源生姜强根健发洗发水：核心成分：姜根提取物、侧柏叶提取物、无患子提取物。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R7_2",
+          "quote": "核心成分：姜根提取物、侧柏叶提取物、无患子提取物。"
+        }
+      ]
+    },
+    {
+      "id": "KU39",
+      "type": "source_claim",
+      "content": "滋源生姜强根健发洗发水：质地与洗感：棕色乳液。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R7_5",
+          "quote": "质地与洗感：棕色乳液，泡沫绵密，洗后头皮清爽，发丝不假滑。"
+        }
+      ]
+    },
+    {
+      "id": "KU40",
+      "type": "source_claim",
+      "content": "吕含光耀护强韧洗发水：规格与资质：400ml/瓶。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R8_1",
+          "quote": "规格与资质：400ml/瓶，119元；进口备案。"
+        }
+      ]
+    },
+    {
+      "id": "KU41",
+      "type": "source_claim",
+      "content": "吕含光耀护强韧洗发水：核心成分：人参提取物、山茶花提取物、绿茶提取物。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R8_2",
+          "quote": "核心成分：人参提取物、山茶花提取物、绿茶提取物。"
+        }
+      ]
+    },
+    {
+      "id": "KU42",
+      "type": "source_claim",
+      "content": "吕含光耀护强韧洗发水：质地与洗感：浓稠乳液。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R8_5",
+          "quote": "质地与洗感：浓稠乳液，草本香气，泡沫丰富，洗后发丝顺滑，头皮不紧绷。"
+        }
+      ]
+    },
+    {
+      "id": "KU43",
+      "type": "source_claim",
+      "content": "蜂花防脱洗发水：规格与资质：500ml/瓶。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R9_1",
+          "quote": "规格与资质：500ml/瓶，59元；正规化妆品备案。"
+        }
+      ]
+    },
+    {
+      "id": "KU44",
+      "type": "source_claim",
+      "content": "蜂花防脱洗发水：核心成分：生姜提取物、啤酒花提取物、侧柏叶提取物。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R9_2",
+          "quote": "核心成分：生姜提取物、啤酒花提取物、侧柏叶提取物。"
+        }
+      ]
+    },
+    {
+      "id": "KU45",
+      "type": "source_claim",
+      "content": "蜂花防脱洗发水：质地与洗感：淡黄色乳液。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R9_5",
+          "quote": "质地与洗感：淡黄色乳液，泡沫适中，冲洗方便，洗后头皮清爽，发丝柔软。"
+        }
+      ]
+    },
+    {
+      "id": "KU46",
+      "type": "source_claim",
+      "content": "阿道夫防脱育发洗发水：规格与资质：500ml/瓶。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R10_1",
+          "quote": "规格与资质：500ml/瓶，89元；国妆特字备案。"
+        }
+      ]
+    },
+    {
+      "id": "KU47",
+      "type": "source_claim",
+      "content": "阿道夫防脱育发洗发水：核心成分：姜根提取物、人参提取物、侧柏叶提取物、咖啡因。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R10_2",
+          "quote": "核心成分：姜根提取物、人参提取物、侧柏叶提取物、咖啡因。"
+        }
+      ]
+    },
+    {
+      "id": "KU48",
+      "type": "source_claim",
+      "content": "阿道夫防脱育发洗发水：质地与洗感：乳白色质地。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878745465071037677&wfr=spider",
+          "quote_id": "R10_5",
+          "quote": "质地与洗感：乳白色质地，香味较浓，泡沫丰富，洗后头皮清爽，发根蓬松。"
+        }
+      ]
+    }
+  ],
+  "outline": {
+    "innovation_angle": "把成分表当作选购清单逐项对照：先认表活与控油成分，再看强韧与舒缓组合，最后用规格和洗感收敛选择",
+    "sections": [
+      {
+        "id": "S1",
+        "topic": "导语：洗完半天就塌、梳头断发缠齿，先分清是油还是脆",
+        "knowledge_ids": [
+          "KU11",
+          "KU12"
+        ]
+      },
+      {
+        "id": "S2",
+        "topic": "道和小绿瓶防脱洗发水",
+        "knowledge_ids": [
+          "KU11"
+        ]
+      },
+      {
+        "id": "S3",
+        "topic": "悦罗兰防脱洗发水",
+        "knowledge_ids": [
+          "KU01",
+          "KU19",
+          "KU20",
+          "KU21"
+        ]
+      },
+      {
+        "id": "S4",
+        "topic": "思芸堂防脱洗发水",
+        "knowledge_ids": [
+          "KU02",
+          "KU22",
+          "KU23",
+          "KU24"
+        ]
+      },
+      {
+        "id": "S5",
+        "topic": "新颜彩防脱控油蓬松洗发水",
+        "knowledge_ids": [
+          "KU03",
+          "KU25",
+          "KU26",
+          "KU27"
+        ]
+      },
+      {
+        "id": "S6",
+        "topic": "爱德兰丝洗发水",
+        "knowledge_ids": [
+          "KU04",
+          "KU28",
+          "KU29",
+          "KU30"
+        ]
+      },
+      {
+        "id": "S7",
+        "topic": "馥绿德雅洗发水",
+        "knowledge_ids": [
+          "KU05",
+          "KU31",
+          "KU32",
+          "KU33"
+        ]
+      },
+      {
+        "id": "S8",
+        "topic": "露华浓生姜洗发水",
+        "knowledge_ids": [
+          "KU06",
+          "KU34",
+          "KU35",
+          "KU36"
+        ]
+      },
+      {
+        "id": "S9",
+        "topic": "滋源生姜强根健发洗发水",
+        "knowledge_ids": [
+          "KU07",
+          "KU37",
+          "KU38",
+          "KU39"
+        ]
+      },
+      {
+        "id": "S10",
+        "topic": "吕含光耀护强韧洗发水",
+        "knowledge_ids": [
+          "KU08",
+          "KU40",
+          "KU41",
+          "KU42"
+        ]
+      },
+      {
+        "id": "S11",
+        "topic": "蜂花防脱洗发水",
+        "knowledge_ids": [
+          "KU09",
+          "KU43",
+          "KU44",
+          "KU45"
+        ]
+      },
+      {
+        "id": "S12",
+        "topic": "阿道夫防脱育发洗发水",
+        "knowledge_ids": [
+          "KU10",
+          "KU46",
+          "KU47",
+          "KU48"
+        ]
+      },
+      {
+        "id": "S13",
+        "topic": "总结：按控油、强韧、舒缓三类诉求各取所需，再算单位容量",
+        "knowledge_ids": [
+          "KU11",
+          "KU12"
+        ]
+      }
+    ]
+  },
+  "product_gate": {
+    "decision": "LIGHT_MENTION",
+    "section_id": "S2",
+    "reason": "自有产品第一推荐位，具体事实使用独立品牌PF证据"
+  }
+}

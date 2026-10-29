@@ -1,0 +1,16 @@
+ M CURRENT_PROJECT_HANDOFF.md
+ M PROJECT_STATUS.md
+ M SOURCE_CONTROL.md
+ M maintenance/package_current.py
+ M source-snapshot/local-manifest.json
+ M source-snapshot/local/geo-source-card-collectors/geo_source_cards/cli.py
+ M source-snapshot/production-manifest.json
+ M source-snapshot/server/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/cli.py
+?? maintenance/b1-b2-candidate-20261023/
+?? maintenance/candidate-validation-20261023/
+?? maintenance/real-acceptance-20261022/
+?? maintenance/wenxin-start-20261023/
+?? source-snapshot/local/geo-source-card-collectors/geo_source_cards/search_profiles.py
+?? source-snapshot/local/geo-source-card-collectors/tests/test_search_profiles.py
+?? source-snapshot/server/opt/monitor/geo-capture/maintenance/
+?? source-snapshot/server/opt/monitor/geo-capture/venv/lib/python3.10/site-packages/geo_source_cards/search_profiles.py

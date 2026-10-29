@@ -1,0 +1,35 @@
+{
+  "checked_at": 1792046855.3613107,
+  "installation": {
+    "container": "yuanbao-hpe14-android13",
+    "volume": "yuanbao-hpe14-android13-data",
+    "image": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f",
+    "serial": "127.0.0.1:5559",
+    "package": "com.tencent.hunyuan.app.chat",
+    "activity": "com.tencent.hunyuan.app.chat/.biz.login.v2.HYLoginMainActivity",
+    "versions": [
+      "versionCode=66517035 minSdk=23 targetSdk=36",
+      "versionName=2.88.0"
+    ],
+    "installed_at": 1792045984.424122,
+    "login": "awaiting_webview_recovery_verification",
+    "capture_enabled": false,
+    "locale": "zh-CN"
+  },
+  "apk": {
+    "url": "https://cdn-hybrid-prod.hunyuan.tencent.com/Android/business/yuanbao-release-prod-signed-5040.apk",
+    "resolved_url": "https://cdn-hybrid-prod.hunyuan.tencent.com/Android/business/yuanbao-release-prod-signed-5040.apk",
+    "downloaded_at": 1792045960.1152968,
+    "last_modified": "Mon, 12 Oct 2026 02:16:54 GMT",
+    "sha256": "b2d6f674358bbc27b10e800bafd49ba4fc596291142148d7d09494097348c7dd",
+    "size": 136902337,
+    "official_source": "yuanbao.tencent.com official JS default mobile channel 5040"
+  },
+  "login_status": "waiting_for_user_normal_login_after_reversible_webview_change",
+  "capture_enabled": false,
+  "native_storage_tests": 3,
+  "native_storage_tests_linux": "passed",
+  "native_capture_fidelity": "not_yet_validated",
+  "running_container_count": 11,
+  "original_ten_containers_running": true
+}

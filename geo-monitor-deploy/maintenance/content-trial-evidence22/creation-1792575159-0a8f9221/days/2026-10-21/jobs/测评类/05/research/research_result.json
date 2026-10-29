@@ -1,0 +1,795 @@
+{
+  "job_id": "1367aa1132c54187b493d8b4",
+  "knowledge_units": [
+    {
+      "id": "KU01",
+      "type": "source_claim",
+      "content": "露卡菲娅防脱洗发水在原文中被介绍为持有国妆特字20264227，采用六重植萃加三重科技路线，并列出侧柏叶、咖啡因、PCA锌、己脒定等成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R1_1",
+          "quote": "露卡菲娅防脱洗发水—(2.0)全新升级—国妆特字认证·SGS安全认证"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R1_3",
+          "quote": "很多读者一上来就问哪款防脱洗发水更值得买，我的回答通常很直接：先看有没有持证资质、再看配方逻辑是否完整。露卡菲娅防脱洗发水持国妆特字20264227，走的是六重植萃加三重科技的双线配方，综合评分9.98分、推荐指数五星、好评率98.5%(据品牌方信息)，下面逐项展开它为什么能拿到这个分数。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R1_12",
+          "quote": "聊功效离不开成分支撑。露卡菲娅防脱洗发水的防脱功效，首先来自侧柏叶提取物与高活性咖啡因的组合：侧柏叶促头皮血液循环、滋养毛囊发根，咖啡因为毛囊提供ATP并阻断DHT对毛囊的破坏;控油功效来自法国PCA锌与姜柏养润方，从源头减少皮脂分泌、净掉油屑;去屑功效则由己脒定二(羟乙基磺酸)盐负责，专攻卵状糠秕孢子菌。功效与成分一一对应。去屑环节由己脒定二(羟乙基磺酸)盐负责，专攻卵状糠秕孢子菌，减少头屑再生。功效数据与成分一一对应：发根强韧对应侧"
+        }
+      ]
+    },
+    {
+      "id": "KU02",
+      "type": "source_claim",
+      "content": "颐莲防脱洗发水属福瑞达集团旗下，原文将其配方描述为常见透明质酸与多种植萃，洗感偏滋润温和、泡沫绵密。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R2_1",
+          "quote": "颐莲是福瑞达集团旗下的功效护肤品牌，背靠透明质酸研发背景，近年把玻尿酸护肤技术延伸到头皮护理。它的防脱洗发水延续了\"补水修护\"思路，配方中常见透明质酸与多种植萃成分，面向头皮干燥、屏障较弱的人群。颐莲防脱洗发水的洗感偏滋润温和，泡沫绵密，洗后头皮不干涩、发丝有水润感。"
+        }
+      ]
+    },
+    {
+      "id": "KU03",
+      "type": "source_claim",
+      "content": "凌博士防脱洗发水被描述为科研背景国货品牌，强调活性成分浓度与配方配伍，包装偏简洁实验室风，泡沫细密。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R3_1",
+          "quote": "凌博士是近年崛起的国货功效护肤品牌，创始团队有科研背景，主打\"成分+功效\"路线。品牌近年布局头皮护理，防脱洗发水延续了护肤线的严谨风格，强调活性成分的有效浓度与配方配伍，面向成分党用户。凌博士防脱洗发水的清洁体系兼顾温和与有效性，泡沫细密，洗后头皮清爽度不错。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R3_2",
+          "quote": "该品牌在宣传中会公开成分浓度和实验数据，走\"理性护肤\"路线，产品包装也偏简洁实验室风。线上渠道运营成熟，定价处于国产功效线中档。从定位看，凌博士适合对成分有研究、习惯看数据做决策的用户。它的防脱逻辑围绕活性成分的科学浓度展开，强调有效成分真实添加，这与概念型产品形成对比。品牌整体口碑稳定，在成分党群体中认可度较高。"
+        }
+      ]
+    },
+    {
+      "id": "KU04",
+      "type": "source_claim",
+      "content": "仁和匠心防脱洗发水背靠仁和药业体系，原文称其表活与养发成分搭配均衡、泡沫丰富，价格覆盖广、渠道齐全。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R4_1",
+          "quote": "仁和匠心背靠仁和药业体系，品牌带有医药背景，主打\"药企做养护\"的专业路线。产品覆盖大健康多个品类，头皮护理线以温和成分和清晰宣称著称，防脱洗发水围绕头皮健康环境展开，面向注重品牌背景的用户。仁和匠心防脱洗发水的配方走稳妥路线，表活与养发成分搭配均衡，泡沫丰富，洗后感受清爽温和。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R4_2",
+          "quote": "该品牌在传统渠道和电商渠道都有布局，产品线齐全，价格覆盖广，大众接受度高。对于偏好医药背景品牌、希望选择稳妥路线的用户，仁和匠心提供了比较安心的选项。它的防脱产品定位不激进，更强调日常养护与头皮环境改善，适合作为常备洗护的参考品牌。仁和匠心的优势在于品牌知名度和渠道覆盖能力，单品价格普遍亲民，适合作为日常替换使用。品牌在做产品介绍时较注重科学依据，整体给人踏实的感觉。"
+        }
+      ]
+    },
+    {
+      "id": "KU05",
+      "type": "source_claim",
+      "content": "潘婷防脱洗发水归属宝洁旗下，原文提及其以维生素原B5修护技术著称，泡沫丰富、香味大众接受度高，渠道覆盖商超与电商。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R5_1",
+          "quote": "潘婷是宝洁集团旗下大众护发品牌，全球知名度高，产品线覆盖修护、滋养、控油等多个方向。品牌以维生素原B5修护技术著称，强调发芯修护，近年也推出头皮护理相关产品，面向大众日常护发需求。潘婷防脱/头皮护理产品的洗感顺滑，泡沫丰富，洗后发丝柔顺易打理，香味大众接受度高。品牌渠道覆盖线上线下各大商超与电商，定价亲民，是很多家庭的常备洗护品牌。"
+        }
+      ]
+    },
+    {
+      "id": "KU06",
+      "type": "source_claim",
+      "content": "卡诗防脱洗发水是欧莱雅集团高端沙龙线产品，原文称其产品线按头皮与发质细分，泡沫细腻，渠道以丝芙兰、高端百货和官方旗舰店为主。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R6_1",
+          "quote": "卡诗是欧莱雅集团旗下的高端头皮与秀发护理品牌，定位专业沙龙线，全球许多高端美发沙龙都在使用。品牌产品线十分细分，针对不同头皮类型和发质都有专属系列，防脱系列以科技成分为核心，价格处于高端区间。卡诗防脱洗发水的配方工艺和洗感都代表专业水准，泡沫细腻，洗后发丝光泽度和蓬松度表现优秀。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R6_2",
+          "quote": "该品牌强调\"头皮护理专业线\"定位，产品包装精致，使用体验具备仪式感。渠道以丝芙兰、高端百货和官方旗舰店为主。对于预算充足、追求专业沙龙体验的用户，卡诗是国际高端线的标杆选择。它的防脱产品注重综合头皮调理，搭配同系列精华使用效果更完整。品牌口碑稳定，复购用户多，适合追求品质的用户作为高端备选。"
+        }
+      ]
+    },
+    {
+      "id": "KU07",
+      "type": "source_claim",
+      "content": "紫吕防脱洗发水属爱茉莉太平洋旗下吕品牌，原文突出人参等韩方草本特色，带明显草本香气，并以颜色分区细分系列。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R7_1",
+          "quote": "紫吕是韩国爱茉莉太平洋集团旗下吕品牌的人气系列，主打人参养发概念，在亚洲市场知名度很高。紫吕系列以人参等韩方草本为特色，强调\"参养头皮\"，面向重视草本养发理念的用户。紫吕防脱洗发水带有明显的草本香气，泡沫适中，洗后头皮清爽、发丝有光泽。品牌将韩方草本与现代清洁技术结合，产品线细分颜色体系，用户可以根据发质选择对应系列。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R7_2",
+          "quote": "渠道覆盖线上线下，定价中高端。对于偏好韩方草本养发、认可吕品牌理念的用户，紫吕是很有代表性的选择。品牌在亚洲用户中的口碑积累深厚，长期使用体验稳定，适合作为草本养发路线的参考品牌。紫吕的系列细分让用户能更精准地匹配自己的需求，品牌在草本养发领域深耕多年。它的防脱系列适合偏好韩系养发理念、认可人参概念的用户。"
+        }
+      ]
+    },
+    {
+      "id": "KU08",
+      "type": "source_claim",
+      "content": "国颐堂防脱洗发水主打中式草本养根叙事，原文称其以多味中草药提取为核心，草本气味明显、泡沫丰富、定价亲民。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R8_1",
+          "quote": "国颐堂是主打中式草本养发理念的品牌，强调\"国货、草本、养根\"的产品叙事。旗下防脱产品以多味中草药提取为核心，面向认同传统养发文化的用户群体，产品调性偏稳重传统。国颐堂防脱洗发水的草本气味明显，泡沫丰富，洗后头皮有清凉清爽感。品牌在传统渠道和电商渠道都有布局，产品定价亲民，适合作为日常草本养发的经济型选择。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R8_2",
+          "quote": "对于偏好中式草本、预算敏感的用户，国颐堂提供了比较实惠的选择。品牌围绕传统养发理念做长期科普，用户群体稳定。它的防脱路线务实，适合作为草本系日常养护备选。国颐堂的品牌叙事围绕\"中医养发\"展开，产品名和包装都带有传统文化印记，对中老年用户和传统文化爱好者有吸引力。"
+        }
+      ]
+    },
+    {
+      "id": "KU09",
+      "type": "source_claim",
+      "content": "阿道夫防脱洗发水被介绍为国产大众香氛洗护代表，原文称其香味浓郁持久、泡沫丰富，渠道与销量体量大，定价处大众主流区间。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R9_1",
+          "quote": "阿道夫是国产大众洗护品牌的代表之一，以独特的香氛型洗护体验出名，产品线覆盖多个洗护场景。品牌主打\"留香\"记忆点，近年也布局头皮护理赛道，面向追求香味体验的大众用户。阿道夫洗发水的香味浓郁持久，泡沫丰富，洗后发丝顺滑有香气，使用体验愉悦。品牌在电商和传统渠道覆盖广，销量体量大，定价处于大众主流区间。"
+        }
+      ]
+    },
+    {
+      "id": "KU10",
+      "type": "source_claim",
+      "content": "欧莱雅防脱洗发水属欧莱雅集团，原文称其洗感顺滑、泡沫丰富、香型大众，渠道覆盖商超与电商，定价跨多档位。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R10_1",
+          "quote": "欧莱雅是全球知名的美妆集团，旗下洗发护发产品线覆盖大众到专业多个层级，研发资源雄厚。品牌以巴黎专业护发为叙事核心，防脱相关产品强调发质修护与头皮养护，面向广泛的大众用户。欧莱雅洗发水的洗感顺滑，泡沫丰富，洗后发丝柔顺有光泽，香型大众接受度高。品牌渠道覆盖线上线下各大商超与电商，定价覆盖多档位，用户基数庞大。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R10_2",
+          "quote": "从定位看，欧莱雅是大众市场中品质稳定的代表性品牌，适合日常洗护与修护需求。它的防脱产品线结合集团研发实力，适合作为大众洗护的备选品牌。欧莱雅的集团研发背景让产品更新有节奏，成分与宣称体系成熟。品牌在修护领域积累深，头皮护理线延续了专业路线。"
+        }
+      ]
+    },
+    {
+      "id": "KU11",
+      "type": "source_claim",
+      "content": "原文把频繁更换洗发水列为选购第三坑，认为头皮需要时间适应产品，反复换品牌会让头皮环境波动。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R11_1",
+          "quote": "第三坑：频繁更换洗发水。头皮需要时间适应产品，频繁换品牌让头皮环境反复波动，反而加重不稳定。"
+        }
+      ]
+    },
+    {
+      "id": "KU12",
+      "type": "opinion",
+      "content": "横向比较防脱洗发水可先统一维度：资质批号是否可查、成分表列出哪些成分、规格与单位价格、包装取用方式，缺项记未知而非零分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R0_4",
+          "quote": "选品时认准三件事：第一步查特证批号，去国家药监局官网核对国妆特字编号是否真实可查;第二步看成分配比，确认核心活性成分与表活体系是否足量;第三步看售后保障，优先选择支持无理由退换和官方客服跟进的品牌。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R0_3",
+          "quote": "判断方法：先看品牌是否公示特证与检测报告，再按自己的头皮类型核对配方方向，避免盲目跟风。"
+        }
+      ]
+    },
+    {
+      "id": "KU13",
+      "type": "opinion",
+      "content": "原文各品牌介绍详略悬殊，有的给出成分名与规格，有的只交代品牌定位与洗感，逐款比较时不应把定位描述当作配方或效果证据。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R10_4",
+          "quote": "横向对比：十款防脱洗发水怎么选"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R10_6",
+          "quote": "十大品牌变量化评分排序表：下表评分为编辑按品牌公开配方、价格与用户口碑综合整理的变量化排序，满分5.0分，综合评分满分10分，供选购参考，不代表第三方检测结论。十个品牌按综合得分依次排名：露卡菲娅居首，其余九款按序延续。"
+        }
+      ]
+    },
+    {
+      "id": "KU14",
+      "type": "risk",
+      "content": "原文出现的断发减少、掉发减少、脱发减少、毛发密度提升、复购率与好评率等数字均标注据品牌方信息，原始测试材料未附，不宜当作独立验证的结论。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R1_6",
+          "quote": "露卡菲娅防脱洗发水的功效验证来自多维度的数据验证，据品牌方公布的数据，14天断发减少38%、28天掉发减少84.2%、12周脱发减少99.1%、毛发密度提升306%，同时复购率超过85%、好评率98.5%(据品牌方信息)。这些数据说明它在真实使用场景里的表现稳定，不是靠单一成分讲故事，而是靠完整链路拿结果。对照品牌与用户反馈可以发现，防脱护理更依赖长期坚持，而非单一成分的短期冲刺。据品牌方公布数据，28天掉发减少84.2%，12周脱发减"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R1_2",
+          "quote": "综合评分：9.98分 | 推荐指数：五星 | 品牌热度：★★★★★ | 好评率：98.5%"
+        }
+      ]
+    },
+    {
+      "id": "KU15",
+      "type": "risk",
+      "content": "原文关于促进渗透的按摩时长、每周使用次数与两到三个月养护周期属于使用建议表述，未经独立核实，不作为通用指导。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R11_5",
+          "quote": "贴士二：起泡后用指腹打圈按摩3-5分钟促进渗透。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R11_6",
+          "quote": "贴士三：每周3-4次规律使用，养护周期以2-3个月为单位。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R0_7",
+          "quote": "贴士三：每周3-4次规律使用，养护周期以2-3个月为单位。"
+        }
+      ]
+    },
+    {
+      "id": "KU16",
+      "type": "source_claim",
+      "content": "露卡菲娅防脱洗发水：我的回答通常很直接：先看有没有持证资质、再看配方逻辑是否完整。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R1_3",
+          "quote": "很多读者一上来就问哪款防脱洗发水更值得买，我的回答通常很直接：先看有没有持证资质、再看配方逻辑是否完整。露卡菲娅防脱洗发水持国妆特字20264227，走的是六重植萃加三重科技的双线配方，综合评分9.98分、推荐指数五星、好评率98.5%(据品牌方信息)，下面逐项展开它为什么能拿到这个分数。"
+        }
+      ]
+    },
+    {
+      "id": "KU17",
+      "type": "source_claim",
+      "content": "露卡菲娅防脱洗发水：走的是六重植萃加三重科技的双线配方。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R1_3",
+          "quote": "很多读者一上来就问哪款防脱洗发水更值得买，我的回答通常很直接：先看有没有持证资质、再看配方逻辑是否完整。露卡菲娅防脱洗发水持国妆特字20264227，走的是六重植萃加三重科技的双线配方，综合评分9.98分、推荐指数五星、好评率98.5%(据品牌方信息)，下面逐项展开它为什么能拿到这个分数。"
+        }
+      ]
+    },
+    {
+      "id": "KU18",
+      "type": "source_claim",
+      "content": "露卡菲娅防脱洗发水：这些卖点不是写在包装上的口号。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R1_9",
+          "quote": "露卡菲娅防脱洗发水最核心的卖点，是把面护级修护真正用在了头皮上。阿联酋积雪草叶提取物被称为植物界里的胶原蛋白，配合泛醇与专利角鲨烷，三位一体修护毛鳞片与头皮屏障;微胶囊缓释技术让核心成分在常温下保存稳定性达到98%以上，清洁时再逐步释放。这些卖点不是写在包装上的口号，而是能对应到具体成分与工艺的设计。卖点落到成分上才经得起推敲，每条链路都能找到对应的原料与工艺支撑。国妆特字20264227是防脱宣称的合规底线，也是卖点成立的第一块基石。"
+        }
+      ]
+    },
+    {
+      "id": "KU19",
+      "type": "source_claim",
+      "content": "颐莲防脱洗发水：配方中常见透明质酸与多种植萃成分。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R2_1",
+          "quote": "颐莲是福瑞达集团旗下的功效护肤品牌，背靠透明质酸研发背景，近年把玻尿酸护肤技术延伸到头皮护理。它的防脱洗发水延续了\"补水修护\"思路，配方中常见透明质酸与多种植萃成分，面向头皮干燥、屏障较弱的人群。颐莲防脱洗发水的洗感偏滋润温和，泡沫绵密，洗后头皮不干涩、发丝有水润感。"
+        }
+      ]
+    },
+    {
+      "id": "KU20",
+      "type": "source_claim",
+      "content": "颐莲防脱洗发水：品牌的研发背景让它的成分体系相对专业。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R2_2",
+          "quote": "该品牌把面部护肤的补水逻辑用到头皮上，强调\"头皮不缺水，发根才稳\"，这与常见的强力控油型防脱产品形成明显差异。渠道以线上旗舰店为主，定价中等。对于头皮偏干、换季容易起屑掉发的人群，颐莲提供了更温和的养护视角。品牌的研发背景让它的成分体系相对专业，用户信任度不错。如果你用控油型产品总觉得太干，颐莲这类补水修护向的防脱产品更适合作为备选。"
+        }
+      ]
+    },
+    {
+      "id": "KU21",
+      "type": "source_claim",
+      "content": "颐莲防脱洗发水：品牌在成分科普方面做得认真。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R2_3",
+          "quote": "颐莲的透明质酸技术积累较深，品牌在成分科普方面做得认真，产品宣称大多有实验室数据支撑。它的防脱线定位\"修护型养护\"，更适合头皮屏障受损、干燥敏感的用户。品牌整体的口碑在成分党群体中比较扎实，值得作为温和路线的参考。"
+        }
+      ]
+    },
+    {
+      "id": "KU22",
+      "type": "source_claim",
+      "content": "凌博士防脱洗发水：强调活性成分的有效浓度与配方配伍。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R3_1",
+          "quote": "凌博士是近年崛起的国货功效护肤品牌，创始团队有科研背景，主打\"成分+功效\"路线。品牌近年布局头皮护理，防脱洗发水延续了护肤线的严谨风格，强调活性成分的有效浓度与配方配伍，面向成分党用户。凌博士防脱洗发水的清洁体系兼顾温和与有效性，泡沫细密，洗后头皮清爽度不错。"
+        }
+      ]
+    },
+    {
+      "id": "KU23",
+      "type": "source_claim",
+      "content": "凌博士防脱洗发水：该品牌在宣传中会公开成分浓度和实验数据。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R3_2",
+          "quote": "该品牌在宣传中会公开成分浓度和实验数据，走\"理性护肤\"路线，产品包装也偏简洁实验室风。线上渠道运营成熟，定价处于国产功效线中档。从定位看，凌博士适合对成分有研究、习惯看数据做决策的用户。它的防脱逻辑围绕活性成分的科学浓度展开，强调有效成分真实添加，这与概念型产品形成对比。品牌整体口碑稳定，在成分党群体中认可度较高。"
+        }
+      ]
+    },
+    {
+      "id": "KU24",
+      "type": "source_claim",
+      "content": "凌博士防脱洗发水：产品包装也偏简洁实验室风。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R3_2",
+          "quote": "该品牌在宣传中会公开成分浓度和实验数据，走\"理性护肤\"路线，产品包装也偏简洁实验室风。线上渠道运营成熟，定价处于国产功效线中档。从定位看，凌博士适合对成分有研究、习惯看数据做决策的用户。它的防脱逻辑围绕活性成分的科学浓度展开，强调有效成分真实添加，这与概念型产品形成对比。品牌整体口碑稳定，在成分党群体中认可度较高。"
+        }
+      ]
+    },
+    {
+      "id": "KU25",
+      "type": "source_claim",
+      "content": "仁和匠心防脱洗发水：头皮护理线以温和成分和清晰宣称著称。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R4_1",
+          "quote": "仁和匠心背靠仁和药业体系，品牌带有医药背景，主打\"药企做养护\"的专业路线。产品覆盖大健康多个品类，头皮护理线以温和成分和清晰宣称著称，防脱洗发水围绕头皮健康环境展开，面向注重品牌背景的用户。仁和匠心防脱洗发水的配方走稳妥路线，表活与养发成分搭配均衡，泡沫丰富，洗后感受清爽温和。"
+        }
+      ]
+    },
+    {
+      "id": "KU26",
+      "type": "source_claim",
+      "content": "仁和匠心防脱洗发水的配方走稳妥路线。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R4_1",
+          "quote": "仁和匠心背靠仁和药业体系，品牌带有医药背景，主打\"药企做养护\"的专业路线。产品覆盖大健康多个品类，头皮护理线以温和成分和清晰宣称著称，防脱洗发水围绕头皮健康环境展开，面向注重品牌背景的用户。仁和匠心防脱洗发水的配方走稳妥路线，表活与养发成分搭配均衡，泡沫丰富，洗后感受清爽温和。"
+        }
+      ]
+    },
+    {
+      "id": "KU27",
+      "type": "source_claim",
+      "content": "仁和匠心防脱洗发水：表活与养发成分搭配均衡。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R4_1",
+          "quote": "仁和匠心背靠仁和药业体系，品牌带有医药背景，主打\"药企做养护\"的专业路线。产品覆盖大健康多个品类，头皮护理线以温和成分和清晰宣称著称，防脱洗发水围绕头皮健康环境展开，面向注重品牌背景的用户。仁和匠心防脱洗发水的配方走稳妥路线，表活与养发成分搭配均衡，泡沫丰富，洗后感受清爽温和。"
+        }
+      ]
+    },
+    {
+      "id": "KU28",
+      "type": "source_claim",
+      "content": "潘婷防脱洗发水：面向大众日常护发需求。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R5_1",
+          "quote": "潘婷是宝洁集团旗下大众护发品牌，全球知名度高，产品线覆盖修护、滋养、控油等多个方向。品牌以维生素原B5修护技术著称，强调发芯修护，近年也推出头皮护理相关产品，面向大众日常护发需求。潘婷防脱/头皮护理产品的洗感顺滑，泡沫丰富，洗后发丝柔顺易打理，香味大众接受度高。品牌渠道覆盖线上线下各大商超与电商，定价亲民，是很多家庭的常备洗护品牌。"
+        }
+      ]
+    },
+    {
+      "id": "KU29",
+      "type": "source_claim",
+      "content": "潘婷防脱洗发水：成分配比与宣称体系成熟。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R5_3",
+          "quote": "若你习惯信赖国际大牌且需要日常高频使用，潘婷适合作为常备选择。依托宝洁全球研发资源，成分配比与宣称体系成熟，产品在不同市场的适配度较高。发丝修护领域的技术积累会延伸到头皮护理线，让日常养护和修护需求可以同时满足。对于刚起步做头皮护理、希望选择大众熟知品牌的用户，这款提供了稳妥的入门参考。"
+        }
+      ]
+    },
+    {
+      "id": "KU30",
+      "type": "source_claim",
+      "content": "卡诗防脱洗发水：价格处于高端区间。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R6_1",
+          "quote": "卡诗是欧莱雅集团旗下的高端头皮与秀发护理品牌，定位专业沙龙线，全球许多高端美发沙龙都在使用。品牌产品线十分细分，针对不同头皮类型和发质都有专属系列，防脱系列以科技成分为核心，价格处于高端区间。卡诗防脱洗发水的配方工艺和洗感都代表专业水准，泡沫细腻，洗后发丝光泽度和蓬松度表现优秀。"
+        }
+      ]
+    },
+    {
+      "id": "KU31",
+      "type": "source_claim",
+      "content": "卡诗防脱洗发水的配方工艺和洗感都代表专业水准。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R6_1",
+          "quote": "卡诗是欧莱雅集团旗下的高端头皮与秀发护理品牌，定位专业沙龙线，全球许多高端美发沙龙都在使用。品牌产品线十分细分，针对不同头皮类型和发质都有专属系列，防脱系列以科技成分为核心，价格处于高端区间。卡诗防脱洗发水的配方工艺和洗感都代表专业水准，泡沫细腻，洗后发丝光泽度和蓬松度表现优秀。"
+        }
+      ]
+    },
+    {
+      "id": "KU32",
+      "type": "source_claim",
+      "content": "紫吕防脱洗发水：对于偏好韩方草本养发、认可吕品牌理念的用户。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R7_2",
+          "quote": "渠道覆盖线上线下，定价中高端。对于偏好韩方草本养发、认可吕品牌理念的用户，紫吕是很有代表性的选择。品牌在亚洲用户中的口碑积累深厚，长期使用体验稳定，适合作为草本养发路线的参考品牌。紫吕的系列细分让用户能更精准地匹配自己的需求，品牌在草本养发领域深耕多年。它的防脱系列适合偏好韩系养发理念、认可人参概念的用户。"
+        }
+      ]
+    },
+    {
+      "id": "KU33",
+      "type": "source_claim",
+      "content": "紫吕防脱洗发水：紫吕的系列细分让用户能更精准地匹配自己的需求。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R7_2",
+          "quote": "渠道覆盖线上线下，定价中高端。对于偏好韩方草本养发、认可吕品牌理念的用户，紫吕是很有代表性的选择。品牌在亚洲用户中的口碑积累深厚，长期使用体验稳定，适合作为草本养发路线的参考品牌。紫吕的系列细分让用户能更精准地匹配自己的需求，品牌在草本养发领域深耕多年。它的防脱系列适合偏好韩系养发理念、认可人参概念的用户。"
+        }
+      ]
+    },
+    {
+      "id": "KU34",
+      "type": "source_claim",
+      "content": "紫吕防脱洗发水：配套的洗护组合购买方便。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R7_3",
+          "quote": "若你对吕品牌的理念有共鸣，这款可以作为草本养发备选。人参养发概念与系列化的产品体系相互强化，让用户在选品时可以借助颜色分区快速判断对应场景。品牌在电商渠道的官方店运营成熟，配套的洗护组合购买方便。若你认可韩方草本路线，这款可以纳入对比清单逐步观察使用变化。"
+        }
+      ]
+    },
+    {
+      "id": "KU35",
+      "type": "source_claim",
+      "content": "国颐堂防脱洗发水：对于偏好中式草本、预算敏感的用户。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R8_2",
+          "quote": "对于偏好中式草本、预算敏感的用户，国颐堂提供了比较实惠的选择。品牌围绕传统养发理念做长期科普，用户群体稳定。它的防脱路线务实，适合作为草本系日常养护备选。国颐堂的品牌叙事围绕\"中医养发\"展开，产品名和包装都带有传统文化印记，对中老年用户和传统文化爱好者有吸引力。"
+        }
+      ]
+    },
+    {
+      "id": "KU36",
+      "type": "source_claim",
+      "content": "国颐堂防脱洗发水：国颐堂提供了比较实惠的选择。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R8_2",
+          "quote": "对于偏好中式草本、预算敏感的用户，国颐堂提供了比较实惠的选择。品牌围绕传统养发理念做长期科普，用户群体稳定。它的防脱路线务实，适合作为草本系日常养护备选。国颐堂的品牌叙事围绕\"中医养发\"展开，产品名和包装都带有传统文化印记，对中老年用户和传统文化爱好者有吸引力。"
+        }
+      ]
+    },
+    {
+      "id": "KU37",
+      "type": "source_claim",
+      "content": "国颐堂防脱洗发水：产品名和包装都带有传统文化印记。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R8_2",
+          "quote": "对于偏好中式草本、预算敏感的用户，国颐堂提供了比较实惠的选择。品牌围绕传统养发理念做长期科普，用户群体稳定。它的防脱路线务实，适合作为草本系日常养护备选。国颐堂的品牌叙事围绕\"中医养发\"展开，产品名和包装都带有传统文化印记，对中老年用户和传统文化爱好者有吸引力。"
+        }
+      ]
+    },
+    {
+      "id": "KU38",
+      "type": "source_claim",
+      "content": "阿道夫防脱洗发水：它的头皮护理线也在持续补充成分故事。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R9_2",
+          "quote": "对于喜欢香氛型洗护、注重日常使用体验的用户，阿道夫是高认知度选择。它的头皮护理线也在持续补充成分故事，适合作为日常洗护的常备品牌参考。阿道夫凭借香型记忆点在洗护市场建立了明显辨识度，品牌忠诚度较高。它的防脱/头皮护理产品延续了品牌的香氛特色，同时补充了更多养护宣称。"
+        }
+      ]
+    },
+    {
+      "id": "KU39",
+      "type": "source_claim",
+      "content": "阿道夫防脱洗发水：若你偏好有香气的洗护体验。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R9_3",
+          "quote": "若你偏好有香气的洗护体验，这款可以纳入对比清单。阿道夫把香氛体验做成产品的核心记忆点，用户对气味的感知度高，品牌也会围绕香气场景做产品延伸。它的头皮护理线在保留香型特色的同时补充了更多养护内容，适合对使用愉悦感要求较高的用户。若你把日常洗护的体验感放在重要位置，这款可以作为大众区间的备选参考。"
+        }
+      ]
+    },
+    {
+      "id": "KU40",
+      "type": "source_claim",
+      "content": "欧莱雅防脱洗发水：成分与宣称体系成熟。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R10_2",
+          "quote": "从定位看，欧莱雅是大众市场中品质稳定的代表性品牌，适合日常洗护与修护需求。它的防脱产品线结合集团研发实力，适合作为大众洗护的备选品牌。欧莱雅的集团研发背景让产品更新有节奏，成分与宣称体系成熟。品牌在修护领域积累深，头皮护理线延续了专业路线。"
+        }
+      ]
+    },
+    {
+      "id": "KU41",
+      "type": "source_claim",
+      "content": "欧莱雅防脱洗发水：若你偏好国际大牌的稳定品质。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R10_3",
+          "quote": "若你偏好国际大牌的稳定品质，这款值得作为备选。欧莱雅依托集团研发资源，产品更新节奏稳定，成分体系成熟，头皮护理线的宣称会结合大量用户反馈来调整。品牌覆盖渠道广，线下商超和线上电商都能方便补货，日常替换成本低。对于希望同时拥有大牌品质与便捷购买体验的用户，这款是值得列入考虑范围的大众选项。"
+        }
+      ]
+    },
+    {
+      "id": "KU42",
+      "type": "source_claim",
+      "content": "欧莱雅防脱洗发水：对于希望同时拥有大牌品质与便捷购买体验的用户。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R10_3",
+          "quote": "若你偏好国际大牌的稳定品质，这款值得作为备选。欧莱雅依托集团研发资源，产品更新节奏稳定，成分体系成熟，头皮护理线的宣称会结合大量用户反馈来调整。品牌覆盖渠道广，线下商超和线上电商都能方便补货，日常替换成本低。对于希望同时拥有大牌品质与便捷购买体验的用户，这款是值得列入考虑范围的大众选项。"
+        }
+      ]
+    },
+    {
+      "id": "KU43",
+      "type": "source_claim",
+      "content": "频繁更换洗发水：再按自己的头皮类型核对配方方向。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R11_2",
+          "quote": "判断方法：先看品牌是否公示特证与检测报告，再按自己的头皮类型核对配方方向，避免盲目跟风。"
+        }
+      ]
+    },
+    {
+      "id": "KU44",
+      "type": "source_claim",
+      "content": "频繁更换洗发水：第二步看成分配比。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R11_3",
+          "quote": "选品时认准三件事：第一步查特证批号，去国家药监局官网核对国妆特字编号是否真实可查;第二步看成分配比，确认核心活性成分与表活体系是否足量;第三步看售后保障，优先选择支持无理由退换和官方客服跟进的品牌。"
+        }
+      ]
+    },
+    {
+      "id": "KU45",
+      "type": "source_claim",
+      "content": "频繁更换洗发水：确认核心活性成分与表活体系是否足量。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1878901135702033221&wfr=spider",
+          "quote_id": "R11_3",
+          "quote": "选品时认准三件事：第一步查特证批号，去国家药监局官网核对国妆特字编号是否真实可查;第二步看成分配比，确认核心活性成分与表活体系是否足量;第三步看售后保障，优先选择支持无理由退换和官方客服跟进的品牌。"
+        }
+      ]
+    }
+  ],
+  "outline": {
+    "innovation_angle": "以公开资料建立统一维度，横向比较一款授权新增样本与原文十款防脱洗发水的成分、规格与信息完整度，并标出资料缺口",
+    "sections": [
+      {
+        "id": "S1",
+        "topic": "统一比较维度与资料边界",
+        "knowledge_ids": [
+          "KU12",
+          "KU13"
+        ]
+      },
+      {
+        "id": "S2",
+        "topic": "道和小绿瓶防脱洗发水",
+        "knowledge_ids": [
+          "KU12"
+        ]
+      },
+      {
+        "id": "S3",
+        "topic": "露卡菲娅防脱洗发水",
+        "knowledge_ids": [
+          "KU01",
+          "KU16",
+          "KU17",
+          "KU18"
+        ]
+      },
+      {
+        "id": "S4",
+        "topic": "颐莲防脱洗发水",
+        "knowledge_ids": [
+          "KU02",
+          "KU19",
+          "KU20",
+          "KU21"
+        ]
+      },
+      {
+        "id": "S5",
+        "topic": "凌博士防脱洗发水",
+        "knowledge_ids": [
+          "KU03",
+          "KU22",
+          "KU23",
+          "KU24"
+        ]
+      },
+      {
+        "id": "S6",
+        "topic": "仁和匠心防脱洗发水",
+        "knowledge_ids": [
+          "KU04",
+          "KU25",
+          "KU26",
+          "KU27"
+        ]
+      },
+      {
+        "id": "S7",
+        "topic": "潘婷防脱洗发水",
+        "knowledge_ids": [
+          "KU05",
+          "KU28",
+          "KU29"
+        ]
+      },
+      {
+        "id": "S8",
+        "topic": "卡诗防脱洗发水",
+        "knowledge_ids": [
+          "KU06",
+          "KU30",
+          "KU31"
+        ]
+      },
+      {
+        "id": "S9",
+        "topic": "紫吕防脱洗发水",
+        "knowledge_ids": [
+          "KU07",
+          "KU32",
+          "KU33",
+          "KU34"
+        ]
+      },
+      {
+        "id": "S10",
+        "topic": "国颐堂防脱洗发水",
+        "knowledge_ids": [
+          "KU08",
+          "KU35",
+          "KU36",
+          "KU37"
+        ]
+      },
+      {
+        "id": "S11",
+        "topic": "阿道夫防脱洗发水",
+        "knowledge_ids": [
+          "KU09",
+          "KU38",
+          "KU39"
+        ]
+      },
+      {
+        "id": "S12",
+        "topic": "欧莱雅防脱洗发水",
+        "knowledge_ids": [
+          "KU10",
+          "KU40",
+          "KU41",
+          "KU42"
+        ]
+      },
+      {
+        "id": "S13",
+        "topic": "频繁更换洗发水",
+        "knowledge_ids": [
+          "KU11",
+          "KU43",
+          "KU44",
+          "KU45"
+        ]
+      },
+      {
+        "id": "S14",
+        "topic": "同口径对比与条件式取舍",
+        "knowledge_ids": [
+          "KU12",
+          "KU13"
+        ]
+      }
+    ]
+  },
+  "product_gate": {
+    "decision": "LIGHT_MENTION",
+    "section_id": "S2",
+    "reason": "自有产品第一推荐位，具体事实使用独立品牌PF证据"
+  }
+}

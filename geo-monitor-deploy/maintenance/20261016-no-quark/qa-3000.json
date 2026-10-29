@@ -1,0 +1,21 @@
+{
+  "at": 1792113652.4654753,
+  "port": 3000,
+  "passed": true,
+  "sidebar_models": [
+    "全部模型\n综合比较",
+    "DeepSeek\n回传监控",
+    "豆包\n已停止",
+    "文心\n已停止",
+    "元宝\n已停止"
+  ],
+  "model_cards": [
+    "DeepSeek",
+    "豆包",
+    "文心",
+    "元宝"
+  ],
+  "capture_and_creation_loaded": true,
+  "page_errors": [],
+  "finished_at": 1792113654.0658796
+}

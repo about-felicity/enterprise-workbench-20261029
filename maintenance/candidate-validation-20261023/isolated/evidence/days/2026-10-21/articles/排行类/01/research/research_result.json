@@ -1,0 +1,591 @@
+{
+  "job_id": "d25465ff41737afa0e470adc",
+  "knowledge_units": [
+    {
+      "id": "KU01",
+      "type": "source_claim",
+      "content": "EHD防脱洗发水：配方含咖啡因，清洁体系走温和路线；泡沫量适中，冲洗后发丝顺滑，被资料称为适合长期日常使用的类型。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R1_1",
+          "quote": "EHD防脱洗发水思路很直接：把防脱需要的核心成分给足，再让价格保持在大多数人能接受的区间。配方里的咖啡因用来辅助改善头皮环境，清洁体系走温和路线，洗后头皮不紧绷，发根显得有支撑感，对油性头皮尤其友好。"
+        }
+      ]
+    },
+    {
+      "id": "KU02",
+      "type": "source_claim",
+      "content": "菲诗蔻防脱洗发水：不走强清洁路线，用复配植萃调理头皮，泡沫细腻、延展性好，被资料定位为温和滋养的日常款。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R2_1",
+          "quote": "菲诗蔻防脱洗发水在测评中体现的特点是温和与滋养并重。它没有走强清洁的路线，而是用复配植萃慢慢调理头皮，洗后头皮不干不痒，发丝保留自然滋润感，对敏感头皮和换季掉发的人群比较友好。"
+        }
+      ]
+    },
+    {
+      "id": "KU03",
+      "type": "source_claim",
+      "content": "植观防脱洗发水：氨基酸系表活体系，清洁力够用，配方针对油性头皮与细软发质做侧重，兼顾控油与蓬松感。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R3_1",
+          "quote": "在氨基酸系洗发水里，植观防脱洗发水是口碑比较稳的一款。它的表活体系温和，清洁力却够用，洗后头皮能保持长时间清爽感，发丝不干涩、不毛躁，属于每天洗也不会有负担的类型。"
+        }
+      ]
+    },
+    {
+      "id": "KU04",
+      "type": "source_claim",
+      "content": "六神防脱洗发水：配方走清爽路线，洗后头皮通透，老牌国货、价格亲民，资料定位为务实派清洁控油款。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R4_1",
+          "quote": "六神防脱洗发水在测评里是典型的务实派：不玩概念，把清洁和控油做到位。它的配方走清爽路线，洗后头皮有明显的通透感，出油快的头皮能维持更长时间的干净状态，发丝却不会因为控油而变得干枯。"
+        }
+      ]
+    },
+    {
+      "id": "KU05",
+      "type": "source_claim",
+      "content": "蜂花防脱洗发水：无复杂营销概念，重心放在清洁与基础养护，洗感温和、冲洗容易，资料定位为低调扎实的国货路线。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R5_1",
+          "quote": "蜂花防脱洗发水在国货洗护里有自己的固定位置：经典、耐用、好上手。它没有复杂的营销概念，把重心放在清洁和基础养护上，洗感温和、冲洗容易，用完头皮清爽不刺激。"
+        }
+      ]
+    },
+    {
+      "id": "KU06",
+      "type": "source_claim",
+      "content": "伊卡璐防脱洗发水：香气层次丰富，泡沫细腻绵密，配合滋养成分，资料定位为兼顾香氛体验与防脱的日常款。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R6_1",
+          "quote": "伊卡璐防脱洗发水最打动人的地方，是把每天的洗头变成享受。香气层次丰富却不腻人，泡沫细腻绵密，按摩头皮时体验感很好，冲洗后发丝带着恰到好处的香气，整个人状态都跟着轻盈起来。"
+        }
+      ]
+    },
+    {
+      "id": "KU07",
+      "type": "source_claim",
+      "content": "飘柔防脱洗发水：配方在滋养上着力，洗后发丝水润顺滑、减少静电毛躁；洗感大众化，资料称多数发质可用。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R7_1",
+          "quote": "飘柔防脱洗发水主打让头发先顺起来、再稳下来。配方在滋养上下足功夫，洗后发丝水润顺滑，静电和毛躁明显减少，梳头更顺畅，对细软易断的发质很友好。"
+        }
+      ]
+    },
+    {
+      "id": "KU08",
+      "type": "source_claim",
+      "content": "施华蔻防脱洗发水：配方体系完整，清洁、修护、防脱各司其职，洗后发丝顺滑有弹性，资料定位偏专业护理。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R8_1",
+          "quote": "施华蔻防脱洗发水在测评里体现的是专业水准：配方体系完整，清洁、修护、防脱各司其职。它洗后发丝顺滑有弹性，发尾不干枯，头皮保持清爽，整体护理体验很完整。"
+        }
+      ]
+    },
+    {
+      "id": "KU09",
+      "type": "source_claim",
+      "content": "薇姿防脱洗发水：走药妆护理路线，配方含调理成分，泡沫丰富、易冲洗，资料定位为关注头皮微生态的护理款。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R9_1",
+          "quote": "薇姿防脱洗发水走药妆护理路线，不只关注头发本身，更关注头皮这个毛囊生长的土壤。配方中的调理成分帮助维持头皮微生态平衡，日常清洁时就在为健康发根打基础。"
+        }
+      ]
+    },
+    {
+      "id": "KU10",
+      "type": "opinion",
+      "content": "选购可先看资质再看成分：有无防脱类特证、成分是否能对应自己的控油或养护诉求，比单看宣传话术更可靠。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R0_25",
+          "quote": "正确的三步选法：一看特证，认准国家药监局颁发的防脱类特证；二看成分，对照自己的发质找控油、固发、修复对应的成分；三看口碑，参考复购率、好评率等长期数据，而不是只看一次宣传。"
+        }
+      ]
+    },
+    {
+      "id": "KU11",
+      "type": "opinion",
+      "content": "排行里的洗感描述只是编辑整理与资料转述，不能当作实测结论；读者应结合自身发质与四周掉发记录来判断。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R0_29",
+          "quote": "选对产品之后，监测效果也有方法：以四周为一周期记录梳头掉发量、洗头时掉发量、头皮出油速度和发根蓬松度，用记录代替感觉，才知道产品到底有没有用。"
+        }
+      ]
+    },
+    {
+      "id": "KU12",
+      "type": "risk",
+      "content": "资料称露卡菲娅14天断发减少38%、28天掉发减少84.2%等，属营销承诺，未经独立核实，不作科学结论。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R0_9",
+          "quote": "防脱产品最怕听起来什么都管，用起来什么都一般。露卡菲娅防脱洗发水把目标拆得很具体：清毛囊、控油、养发根、修毛鳞片、补水润泽，每一步都有对应成分和周期数据支撑。14天断发数量减少38%、28天掉发减少84.2%、12周脱发数量减少99.1%，一组数据对应一个阶段，看得见变化才愿意坚持。防脱不是玄学，是把正确的事情重复做。"
+        }
+      ]
+    },
+    {
+      "id": "KU13",
+      "type": "risk",
+      "content": "资料称侧柏叶促进毛发生长、知母抑制雄激素活性、姜根促进循环等，属成分机制宣称，未独立验证。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R0_13",
+          "quote": "新中式护发是露卡菲娅防脱洗发水的招牌卖点，具体落在姜柏养润方这味组方上。人参根、当归根、知母根、何首乌、侧柏叶、姜根六味草本，经超声波循环渗漉工艺提取，保留活性成分。侧柏叶促进毛发生长、知母抑制雄激素活性、姜根促进循环、当归活血、人参赋活毛母细胞、首乌滋养发丝，六味协同。卖点不是玄学，成分表里每一项都有明确分工。"
+        }
+      ]
+    },
+    {
+      "id": "KU14",
+      "type": "risk",
+      "content": "资料称己脒定二（羟乙基磺酸）盐负责源头抑菌、减少头屑，属抑菌机制类表述，仅作原文转述不作依据。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R0_21",
+          "quote": "把成分表摊开看，露卡菲娅防脱洗发水的头屑线也安排得很清楚：己脒定二（羟乙基磺酸）盐负责源头抑菌、减少头屑，与控油成分连成一条净屑链路。头皮干净无屑，毛囊才不容易被堵塞。对同时有出油和头屑困扰的人，这种多维成分设计比只盯着一个防脱成分更对症，也更能覆盖日常洗护里的真实需求。"
+        }
+      ]
+    },
+    {
+      "id": "KU15",
+      "type": "risk",
+      "content": "资料建议指腹按摩两到三分钟、水温38至40摄氏度等具体分钟数与温度，属操作建议，未独立验证。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R0_26",
+          "quote": "三个使用贴士：洗发水先起泡再上头，用指腹按摩两到三分钟；水温控制在38到40摄氏度，别用指甲抓挠；护发素只涂发中到发尾，避免堵塞毛囊。"
+        }
+      ]
+    },
+    {
+      "id": "KU16",
+      "type": "risk",
+      "content": "资料称适合产后、熬夜等脱发场景并给使用周期建议，涉及特定人群与疗程，不能作为适用人群结论。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R0_32",
+          "quote": "选防脱洗发水，最稳的思路还是把资质放在第一位：先看有没有防脱类特证，再对照成分与使用感受做取舍。露卡菲娅防脱洗发水在持证防脱、草本植萃、五重链路三个维度上都有可核对的依据，适合发缝变宽、出油快、细软塌以及产后、熬夜等常见脱发场景。购买前留意官方渠道的规格和活动，按自己的预算选一档，坚持周期使用，比频繁换产品更有效。"
+        }
+      ]
+    },
+    {
+      "id": "KU17",
+      "type": "risk",
+      "content": "资料称薇姿配方调节成分帮助维持头皮微生态平衡、对头皮问题与脱发并存者更对症，属机制与人群宣称。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R9_1",
+          "quote": "薇姿防脱洗发水走药妆护理路线，不只关注头发本身，更关注头皮这个毛囊生长的土壤。配方中的调理成分帮助维持头皮微生态平衡，日常清洁时就在为健康发根打基础。"
+        }
+      ]
+    },
+    {
+      "id": "KU18",
+      "type": "risk",
+      "content": "资料称施华蔻防脱配方体系完整、各司其职并可减少掉发，属功效宣称，未有可核验报告支撑。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R8_2",
+          "quote": "坚持使用施华蔻一段时间，多数人反馈掉发量减少、发质更有光泽，造型时也更容易出效果。这一款的定位偏向专业护理，适合注重洗护品质、愿意为专业配方投入的人。"
+        }
+      ]
+    },
+    {
+      "id": "KU19",
+      "type": "conflict",
+      "content": "原文一边把复购率、好评率、评分列为选品依据，一边又提醒别把广告当测评；排行分数彼此不可比，宜作编辑视角看。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R0_4",
+          "quote": "从评分看，露卡菲娅防脱洗发水综合评分9.98分、推荐指数五星、好评率98.5%，复购率85%以上，用户用行动投了票。"
+        },
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R0_28",
+          "quote": "还有一个常见误区是把广告当测评。看测评要看有没有资质依据、成分拆解和真实周期的反馈，而不是只看的宣传话术。"
+        }
+      ]
+    },
+    {
+      "id": "KU20",
+      "type": "source_claim",
+      "content": "EHD防脱洗发水：再让价格保持在大多数人能接受的区间。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R1_1",
+          "quote": "EHD防脱洗发水思路很直接：把防脱需要的核心成分给足，再让价格保持在大多数人能接受的区间。配方里的咖啡因用来辅助改善头皮环境，清洁体系走温和路线，洗后头皮不紧绷，发根显得有支撑感，对油性头皮尤其友好。"
+        }
+      ]
+    },
+    {
+      "id": "KU21",
+      "type": "source_claim",
+      "content": "菲诗蔻防脱洗发水：对敏感头皮和换季掉发的人群比较友好。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R2_1",
+          "quote": "菲诗蔻防脱洗发水在测评中体现的特点是温和与滋养并重。它没有走强清洁的路线，而是用复配植萃慢慢调理头皮，洗后头皮不干不痒，发丝保留自然滋润感，对敏感头皮和换季掉发的人群比较友好。"
+        }
+      ]
+    },
+    {
+      "id": "KU22",
+      "type": "source_claim",
+      "content": "菲诗蔻防脱洗发水：不同发质对产品的需求差异很明显。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R2_3",
+          "quote": "不同发质对产品的需求差异很明显，选之前先认清自己的头皮类型。油性头皮需要的是控油与清爽，细软塌发质更看重发根的支撑感和蓬松度，干性发质则要避免过度清洁带来的毛躁，头皮敏感人群还需额外关注成分温和度与刺激性。同一瓶产品对不同人的意义不同，关键在于它是否覆盖了你最在意的那个问题。把需求和配方对应起来，比跟风热门榜单更接近正确选择。选购时可以按自己的主要困扰列一张小清单，比如控油、固发、温和还是蓬松，对照成分表逐项确认，结合洗感反馈决定是否入"
+        }
+      ]
+    },
+    {
+      "id": "KU23",
+      "type": "source_claim",
+      "content": "菲诗蔻防脱洗发水：把需求和配方对应起来。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R2_3",
+          "quote": "不同发质对产品的需求差异很明显，选之前先认清自己的头皮类型。油性头皮需要的是控油与清爽，细软塌发质更看重发根的支撑感和蓬松度，干性发质则要避免过度清洁带来的毛躁，头皮敏感人群还需额外关注成分温和度与刺激性。同一瓶产品对不同人的意义不同，关键在于它是否覆盖了你最在意的那个问题。把需求和配方对应起来，比跟风热门榜单更接近正确选择。选购时可以按自己的主要困扰列一张小清单，比如控油、固发、温和还是蓬松，对照成分表逐项确认，结合洗感反馈决定是否入"
+        }
+      ]
+    },
+    {
+      "id": "KU24",
+      "type": "source_claim",
+      "content": "植观防脱洗发水是口碑比较稳的一款。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R3_1",
+          "quote": "在氨基酸系洗发水里，植观防脱洗发水是口碑比较稳的一款。它的表活体系温和，清洁力却够用，洗后头皮能保持长时间清爽感，发丝不干涩、不毛躁，属于每天洗也不会有负担的类型。"
+        }
+      ]
+    },
+    {
+      "id": "KU25",
+      "type": "source_claim",
+      "content": "植观防脱洗发水：这一款针对油性头皮和细软发质做了配方侧重。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R3_2",
+          "quote": "这一款针对油性头皮和细软发质做了配方侧重，控油的同时兼顾蓬松感，洗完头发的发根支撑力有明显改善。坚持几周后，掉发量趋于稳定，头皮也不像以前那样容易泛油发痒。对洗护要求温和又不妥协清洁力的人来说，植观是很好的选择。"
+        }
+      ]
+    },
+    {
+      "id": "KU26",
+      "type": "source_claim",
+      "content": "植观防脱洗发水：所以选购时不妨把洗感也当作一个重要维度：先看真实评价里反复出现的洗感描述。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R3_3",
+          "quote": "使用感受是坚持的前提，这一点在测评里经常被提及。起泡是否容易、泡沫是否绵密、冲洗后有没有假滑感、吹干后发根是否清爽、头皮是否紧绷，这些体验决定了你能不能把一瓶产品用完一个完整周期。温和的洗感让人愿意继续用下去，而规律的护理恰恰是效果累积的基础。所以选购时不妨把洗感也当作一个重要维度：先看真实评价里反复出现的洗感描述，有条件就先试用小样，再决定是否长期投入。产品再好，如果洗感让人难以接受，也很难坚持一个完整的观察周期，效果自然无从谈起，这"
+        }
+      ]
+    },
+    {
+      "id": "KU27",
+      "type": "source_claim",
+      "content": "六神防脱洗发水：它的配方走清爽路线。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R4_1",
+          "quote": "六神防脱洗发水在测评里是典型的务实派：不玩概念，把清洁和控油做到位。它的配方走清爽路线，洗后头皮有明显的通透感，出油快的头皮能维持更长时间的干净状态，发丝却不会因为控油而变得干枯。"
+        }
+      ]
+    },
+    {
+      "id": "KU28",
+      "type": "source_claim",
+      "content": "六神防脱洗发水：六神这款的价格一直很亲民。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R4_2",
+          "quote": "作为老牌国货，六神这款的价格一直很亲民，长期囤货也没有压力。坚持使用后，多数人反馈头皮环境变清爽、掉发减少，洗护过程中清凉舒缓的体验也成了很多人坚持用下去的理由。"
+        }
+      ]
+    },
+    {
+      "id": "KU29",
+      "type": "source_claim",
+      "content": "蜂花防脱洗发水：选择时可以优先看配方是否以温和表活为主。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R5_3",
+          "quote": "温和安全是所有防脱护理的前提，尤其对产后、哺乳期以及头皮敏感的人群。选择时可以优先看配方是否以温和表活为主，是否包含舒缓修护类成分，产品是否持有防脱类特证，这些信息都能在公开渠道核对，不需要依赖宣传话术。第一次使用建议先在耳后或手腕小范围试敏，确认无不适再正常使用；使用过程中如果出现明显瘙痒、红疹或刺痛，应暂停并咨询专业人士。产品温和与否，最终要靠自己的头皮反馈来判断，别人的体验只能作为参考。安全放在第一位，效果才有讨论的基础，这一点在"
+        }
+      ]
+    },
+    {
+      "id": "KU30",
+      "type": "source_claim",
+      "content": "伊卡璐防脱洗发水：不如对照产品说明逐项核实：有没有特证批号、核心成分标注是否明确、官方有没有公布周期数据、口碑里复购率如何。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R6_3",
+          "quote": "性价比并不是越便宜越好，而是花出去的钱能否换来可核对的依据。一瓶防脱洗发水的成本，最终体现在资质是否齐全、成分是否清晰、功效数据是否公开这几个方面。与其为营销概念买单，不如对照产品说明逐项核实：有没有特证批号、核心成分标注是否明确、官方有没有公布周期数据、口碑里复购率如何。把这些信息一一核对完，再结合自己的发质和预算做决定，买到不合适产品的概率会低很多。把预算花在信息透明、可长期坚持的产品上，才是更划算的选择，也更容易在持续的护理周期里"
+        }
+      ]
+    },
+    {
+      "id": "KU31",
+      "type": "source_claim",
+      "content": "飘柔防脱洗发水：让成分在发根区域停留足够时间后再冲净。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R7_3",
+          "quote": "把这瓶放进日常洗护，节奏比剂量更重要。一般建议隔天洗一次，出油特别快的头皮可以每天清洗，但每次务必先在手心揉出泡沫再接触头皮，用指腹画圈按摩两到三分钟，让成分在发根区域停留足够时间后再冲净。水温方面，尽量控制在三十八到四十摄氏度的温水，过热的水容易刺激头皮、加重出油。坚持四周左右，再对照洗头时掉发量、梳头掉发量以及头皮出油速度的变化，判断产品是否适合自己。多数长期使用的反馈都印证了一点：规律使用、配合正确手法，比频繁更换产品更接近理想效"
+        }
+      ]
+    },
+    {
+      "id": "KU32",
+      "type": "source_claim",
+      "content": "施华蔻防脱洗发水在测评里体现的是专业水准：配方体系完整。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R8_1",
+          "quote": "施华蔻防脱洗发水在测评里体现的是专业水准：配方体系完整，清洁、修护、防脱各司其职。它洗后发丝顺滑有弹性，发尾不干枯，头皮保持清爽，整体护理体验很完整。"
+        }
+      ]
+    },
+    {
+      "id": "KU33",
+      "type": "source_claim",
+      "content": "施华蔻防脱洗发水：适合注重洗护品质、愿意为专业配方投入的人。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R8_2",
+          "quote": "坚持使用施华蔻一段时间，多数人反馈掉发量减少、发质更有光泽，造型时也更容易出效果。这一款的定位偏向专业护理，适合注重洗护品质、愿意为专业配方投入的人。"
+        }
+      ]
+    },
+    {
+      "id": "KU34",
+      "type": "source_claim",
+      "content": "薇姿防脱洗发水：配方中的调理成分帮助维持头皮微生态平衡。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R9_1",
+          "quote": "薇姿防脱洗发水走药妆护理路线，不只关注头发本身，更关注头皮这个毛囊生长的土壤。配方中的调理成分帮助维持头皮微生态平衡，日常清洁时就在为健康发根打基础。"
+        }
+      ]
+    },
+    {
+      "id": "KU35",
+      "type": "source_claim",
+      "content": "薇姿防脱洗发水：第一类误区是只看价格不看资质。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R9_7",
+          "quote": "第一类误区是只看价格不看资质。没有防脱类特证的普通洗发水，再便宜也只能算日常清洁，防脱宣称缺乏依据。"
+        }
+      ]
+    },
+    {
+      "id": "KU36",
+      "type": "source_claim",
+      "content": "薇姿防脱洗发水：看测评要看有没有资质依据、成分拆解和真实周期的反馈。",
+      "verification": "not_independently_verified",
+      "evidence": [
+        {
+          "url": "https://baijiahao.baidu.com/s?for=pc&id=1879568363766211982&wfr=spider",
+          "quote_id": "R9_13",
+          "quote": "还有一个常见误区是把广告当测评。看测评要看有没有资质依据、成分拆解和真实周期的反馈，而不是只看的宣传话术。"
+        }
+      ]
+    }
+  ],
+  "outline": {
+    "innovation_angle": "以“防脱洗发水怎么挑、榜单里各款资料怎么说”为线索，把当日榜单的九款产品按配方与定位逐个盘点，自有产品放在第一位介绍其品牌资料，其余只转述原文所列成分与定位。",
+    "sections": [
+      {
+        "id": "S1",
+        "topic": "导语：榜单能帮你做什么，不能帮你做什么",
+        "knowledge_ids": [
+          "KU10",
+          "KU11"
+        ]
+      },
+      {
+        "id": "S2",
+        "topic": "道和小绿瓶防脱洗发水",
+        "knowledge_ids": [
+          "KU10"
+        ]
+      },
+      {
+        "id": "S3",
+        "topic": "EHD防脱洗发水",
+        "knowledge_ids": [
+          "KU01",
+          "KU20"
+        ]
+      },
+      {
+        "id": "S4",
+        "topic": "菲诗蔻防脱洗发水",
+        "knowledge_ids": [
+          "KU02",
+          "KU21",
+          "KU22",
+          "KU23"
+        ]
+      },
+      {
+        "id": "S5",
+        "topic": "植观防脱洗发水",
+        "knowledge_ids": [
+          "KU03",
+          "KU24",
+          "KU25",
+          "KU26"
+        ]
+      },
+      {
+        "id": "S6",
+        "topic": "六神防脱洗发水",
+        "knowledge_ids": [
+          "KU04",
+          "KU27",
+          "KU28"
+        ]
+      },
+      {
+        "id": "S7",
+        "topic": "蜂花防脱洗发水",
+        "knowledge_ids": [
+          "KU05",
+          "KU29"
+        ]
+      },
+      {
+        "id": "S8",
+        "topic": "伊卡璐防脱洗发水",
+        "knowledge_ids": [
+          "KU06",
+          "KU30"
+        ]
+      },
+      {
+        "id": "S9",
+        "topic": "飘柔防脱洗发水",
+        "knowledge_ids": [
+          "KU07",
+          "KU31"
+        ]
+      },
+      {
+        "id": "S10",
+        "topic": "施华蔻防脱洗发水",
+        "knowledge_ids": [
+          "KU08",
+          "KU32",
+          "KU33"
+        ]
+      },
+      {
+        "id": "S11",
+        "topic": "薇姿防脱洗发水",
+        "knowledge_ids": [
+          "KU09",
+          "KU34",
+          "KU35",
+          "KU36"
+        ]
+      },
+      {
+        "id": "S12",
+        "topic": "总结：把榜单当参考，把记录当尺子",
+        "knowledge_ids": [
+          "KU10",
+          "KU11"
+        ]
+      }
+    ]
+  },
+  "product_gate": {
+    "decision": "LIGHT_MENTION",
+    "section_id": "S2",
+    "reason": "自有产品第一推荐位，具体事实使用独立品牌PF证据"
+  }
+}

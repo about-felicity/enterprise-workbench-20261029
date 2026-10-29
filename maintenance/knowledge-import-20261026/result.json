@@ -1,0 +1,58 @@
+[
+  {
+    "name": "梵玢FBCY植萃祛痘精华液",
+    "status": "created",
+    "product_id": "product-8aef16cc9c3d4e68a94b81911b14a47c",
+    "sha256": "9e399e75d9234f60b44326e6a88d0f5583a5cb7880c279fc279d42dd6cceba01",
+    "facts": 81
+  },
+  {
+    "name": "科熙本控油蓬松洗发水",
+    "status": "created",
+    "product_id": "product-9ab355a28b4a4a06bd8ba9deea2e00b6",
+    "sha256": "8760abac2d54894534e195138f0c1c6322e1db465efe80086f2a32c6cec74a5e",
+    "facts": 22
+  },
+  {
+    "name": "科熙本控油蓬松造型喷雾",
+    "status": "created",
+    "product_id": "product-6f2e88db39204069b4215344b861a9fd",
+    "sha256": "8ca6cab88c4199e79323330b9f5f20d6438716f0a125875567168b3ebaf92cac",
+    "facts": 46
+  },
+  {
+    "name": "梵玢FBCY科萃焕活精华液",
+    "status": "created",
+    "product_id": "product-5da7a61b033d488ca272049e865ea184",
+    "sha256": "d037b2bcb19d3dac47cc546a43ab181fd48fdc6b7926398596f204e4e62e4bc1",
+    "facts": 88
+  },
+  {
+    "name": "梵玢FBCY科萃养发洗发水",
+    "status": "created",
+    "product_id": "product-ba56f6d7bacd4384801733b0045d99b4",
+    "sha256": "52878b7bf4df5cfd0ff637fdf1f172c5880f244f0bd1e8e11c6132c410d87bd3",
+    "facts": 68
+  },
+  {
+    "name": "道和小红瓶",
+    "status": "created",
+    "product_id": "product-66d919c046dd4a2cad49b4969a94dd4a",
+    "sha256": "52acd91072065cf4bd9b35b866d35fe2b51e2de52cc2b85957781558efc0ac31",
+    "facts": 98
+  },
+  {
+    "name": "科熙本植物防脱赋活多效精华液",
+    "status": "updated",
+    "product_id": "product-1bed01fe0cd540da8e578f4ac0ca8f78",
+    "sha256": "a936bc7e474edb3bf3141763276eea4f0a2da39d7580fe32eee8244af45264cb",
+    "facts": 63
+  },
+  {
+    "name": "梵玢FBCY睫毛精华液",
+    "status": "created",
+    "product_id": "product-ccf47d2a6afe4e3e8fa2d805938195aa",
+    "sha256": "aed4d116cba9505ea92a9dc6fe6851eef11ba0812121ff32a66cb3e7653fbba7",
+    "facts": 99
+  }
+]

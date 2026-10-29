@@ -1,0 +1,49 @@
+{
+  "id": "c787449f1bab119f1caa4baf",
+  "stage": "writer",
+  "location": "days/2026-10-21/articles/测评类/02/writer",
+  "inputs": {
+    "writing_prompt.md": "70d456fa3fe867a5ad76dc6ef379765aa2490f6e7ee8d1b83fff6971f5e21edf",
+    "writing_job.json": "f6ba3a1074c2b054baadcc3872ccf8282c67bcb3815207a2901209d5bb004193",
+    "knowledge.json": "0ea4522952f4a8ebb090f75eb3bf83176e6685e09662106886a711a1f5de292f",
+    "product.json": "4c7ecaec7c55fdb06708dc09dd2684362e34b4e0de1e478c073b5d470056afab",
+    "writing_task.txt": "6b43807599d7d357a5533836e2fa996846222a0de0db901c2569bb50deea25ed",
+    "category.json": "eed39aeab8fcd8830de29fdf75187b0afa902008beddbe8d2119b711e8316cd9",
+    "batch_rules.md": "f3de0e2f5f3ff2dc78bf57068e48b1f7ecdb7d3834f56af2ab79a955da688e2b",
+    "draft.md": "14fe677454c4de9333ebb7b59499f9ce98da9921c5518f5f616b22ed9156ba94",
+    "claim_map.json": "8762a9cecbc44b14bbddd6c42c9668c6aee3e9fb0256a4ca61036e0e7be8f244",
+    "knowledge_to_sections.json": "36a0800c68f07f679f0634bbabd467aee343eeeea99d59faa478ecf1e07881cb",
+    "revision_note.txt": "2f6a01bd4cc4eed6e0e160f459c18868eb1e166cb8434df7bbae7b42008da87a"
+  },
+  "outputs": [
+    "draft.md",
+    "article.docx",
+    "claim_map.json",
+    "knowledge_to_sections.json",
+    "writer_done.json"
+  ],
+  "meta": {
+    "date": "2026-10-21",
+    "category": "测评类",
+    "number": 2,
+    "revision": 1,
+    "consumer_rewrite": true,
+    "paragraph_repair": false,
+    "known_response_replay": false,
+    "acceptance_version": "three-agent-20261022-v1",
+    "replaces": "1f075c298a21627d0d8b2941",
+    "auto_repair_round": 1,
+    "auto_repair_strategy": "consumer_voice,length",
+    "compiled_repair_round": 1
+  },
+  "state": "revision_requested",
+  "created_at": "2026-10-22T17:46:24.991856+08:00",
+  "client": "e80b6d80455851a92c808620",
+  "claimed_at": "2026-10-22T17:50:30.762162+08:00",
+  "execution": {
+    "run_id": "d5a3294bcf0da69f7e82ea87",
+    "generation": 1
+  },
+  "error": "API generation rejected: section_generation_exhausted",
+  "replaced_by": "20c55c0f192f20bf04c94c10"
+}

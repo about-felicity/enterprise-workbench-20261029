@@ -1,0 +1,32 @@
+{
+  "id": "S7",
+  "heading": "蜂花防脱洗发水",
+  "paragraphs": [
+    {
+      "text": "蜂花的记录呈现朴素路线：没有复杂营销概念，重心放在清洁与基础养护，洗感温和、冲洗容易，资料把它定位为低调扎实的国货方向。",
+      "statement_type": "product_fact",
+      "claim_ids": [
+        "CL0004"
+      ],
+      "evidence_ids": [
+        "KU05"
+      ]
+    },
+    {
+      "text": "选择时，记录给出的一般意见与前面一致：可优先看配方是否以温和表活为主。这是配方构成层面的参考，不意味着成分存在就能推出效果或适合哪类人。",
+      "statement_type": "product_fact",
+      "claim_ids": [
+        "CL0017"
+      ],
+      "evidence_ids": [
+        "KU29"
+      ]
+    },
+    {
+      "text": "把它放进候选名单，仍对照同一把尺子：表活是否温和、成分标识是否清楚、洗后冲洗是否顺滑。资料未提供更细成分清单和数值，是否合拍需用自己的连续记录判断。",
+      "statement_type": "general_advice",
+      "claim_ids": [],
+      "evidence_ids": []
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "at": "2026-10-17T17:34:16.205141+08:00",
+  "containers": {
+    "deepseek-hpe14-android13": {
+      "image_id": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f",
+      "privileged": true,
+      "persistent_data": true,
+      "started_at": "2026-10-17T01:37:36.0326689Z",
+      "restart_count": 0,
+      "oom_killed": false,
+      "properties": {
+        "ro.product.model": "redroid13_x86_64",
+        "ro.build.type": "userdebug",
+        "ro.build.tags": "test-keys",
+        "ro.debuggable": "1",
+        "ro.secure": "1",
+        "ro.product.cpu.abi": "x86_64",
+        "ro.dalvik.vm.native.bridge": "libhoudini.so",
+        "ro.build.version.release": "13"
+      },
+      "account_rows": 1,
+      "rows_with_token": 1,
+      "native_user_turns": {
+        "all_local": 23,
+        "today": 23,
+        "first_today": "2026-10-17T09:59:05.584000+08:00",
+        "last_today": "2026-10-17T16:54:12.933000+08:00",
+        "repeated_prompt_groups_all_history": 2
+      }
+    },
+    "deepseek-hpe14-account2": {
+      "image_id": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f",
+      "privileged": true,
+      "persistent_data": true,
+      "started_at": "2026-10-17T05:38:34.865467372Z",
+      "restart_count": 0,
+      "oom_killed": false,
+      "properties": {
+        "ro.product.model": "redroid13_x86_64",
+        "ro.build.type": "userdebug",
+        "ro.build.tags": "test-keys",
+        "ro.debuggable": "1",
+        "ro.secure": "1",
+        "ro.product.cpu.abi": "x86_64",
+        "ro.dalvik.vm.native.bridge": "libhoudini.so",
+        "ro.build.version.release": "13"
+      },
+      "account_rows": 1,
+      "rows_with_token": 1,
+      "native_user_turns": {
+        "all_local": 14,
+        "today": 14,
+        "first_today": "2026-10-17T13:47:46.392000+08:00",
+        "last_today": "2026-10-17T17:07:15.276000+08:00",
+        "repeated_prompt_groups_all_history": 0
+      }
+    },
+    "deepseek-manual-test": {
+      "image_id": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f",
+      "privileged": true,
+      "persistent_data": true,
+      "started_at": "2026-10-17T08:54:03.997965676Z",
+      "restart_count": 0,
+      "oom_killed": false,
+      "properties": {
+        "ro.product.model": "redroid13_x86_64",
+        "ro.build.type": "userdebug",
+        "ro.build.tags": "test-keys",
+        "ro.debuggable": "1",
+        "ro.secure": "1",
+        "ro.product.cpu.abi": "x86_64",
+        "ro.dalvik.vm.native.bridge": "libhoudini.so",
+        "ro.build.version.release": "13"
+      },
+      "account_rows": 1,
+      "rows_with_token": 1,
+      "native_user_turns": {
+        "all_local": 0,
+        "today": 0,
+        "first_today": null,
+        "last_today": null,
+        "repeated_prompt_groups_all_history": 0
+      }
+    },
+    "doubao-hpe14-13-test": {
+      "image_id": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f",
+      "privileged": true,
+      "persistent_data": true,
+      "started_at": "2026-10-15T06:01:17.197943187Z",
+      "restart_count": 0,
+      "oom_killed": false,
+      "properties": {
+        "ro.product.model": "redroid13_x86_64",
+        "ro.build.type": "userdebug",
+        "ro.build.tags": "test-keys",
+        "ro.debuggable": "1",
+        "ro.secure": "1",
+        "ro.product.cpu.abi": "x86_64",
+        "ro.dalvik.vm.native.bridge": "libhoudini.so",
+        "ro.build.version.release": "13"
+      }
+    },
+    "doubao-hpe14-account2": {
+      "image_id": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f",
+      "privileged": true,
+      "persistent_data": true,
+      "started_at": "2026-10-15T06:04:38.99143872Z",
+      "restart_count": 0,
+      "oom_killed": false,
+      "properties": {
+        "ro.product.model": "redroid13_x86_64",
+        "ro.build.type": "userdebug",
+        "ro.build.tags": "test-keys",
+        "ro.debuggable": "1",
+        "ro.secure": "1",
+        "ro.product.cpu.abi": "x86_64",
+        "ro.dalvik.vm.native.bridge": "libhoudini.so",
+        "ro.build.version.release": "13"
+      }
+    },
+    "yuanbao-hpe14-android13": {
+      "image_id": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f",
+      "privileged": true,
+      "persistent_data": true,
+      "started_at": "2026-10-15T06:35:03.318897147Z",
+      "restart_count": 0,
+      "oom_killed": false,
+      "properties": {
+        "ro.product.model": "redroid13_x86_64",
+        "ro.build.type": "userdebug",
+        "ro.build.tags": "test-keys",
+        "ro.debuggable": "1",
+        "ro.secure": "1",
+        "ro.product.cpu.abi": "x86_64",
+        "ro.dalvik.vm.native.bridge": "libhoudini.so",
+        "ro.build.version.release": "13"
+      }
+    }
+  },
+  "queues": [
+    {
+      "model": "deepseek",
+      "batch": "geo-panel-deepseek-app-20261017-094524",
+      "states": {
+        "completed": 23,
+        "pending": 39,
+        "prepared": 1
+      },
+      "send_click_intents": 24,
+      "unique_clicked_tasks": 24,
+      "tasks_with_multiple_intents": 0,
+      "first_send": "2026-10-17T09:59:05.109446+08:00",
+      "last_send": "2026-10-17T17:10:32.160315+08:00",
+      "min_gap_seconds": 667.17,
+      "max_gap_seconds": 4787.21,
+      "median_gap_seconds": 934.78,
+      "gaps_below_600": 0,
+      "gaps_below_660": 0,
+      "uncertain_events": 0,
+      "retry_events": {},
+      "config": {
+        "rounds": 3,
+        "interval": 600,
+        "prompt_mode": "question_only"
+      },
+      "question_count": 21
+    },
+    {
+      "model": "deepseek2",
+      "batch": "geo-panel-deepseek2-20261017-134730-bf1a1e9e",
+      "states": {
+        "completed": 14,
+        "pending": 49
+      },
+      "send_click_intents": 14,
+      "unique_clicked_tasks": 14,
+      "tasks_with_multiple_intents": 0,
+      "first_send": "2026-10-17T13:47:45.332831+08:00",
+      "last_send": "2026-10-17T17:07:14.358103+08:00",
+      "min_gap_seconds": 714.88,
+      "max_gap_seconds": 1134.77,
+      "median_gap_seconds": 978.84,
+      "gaps_below_600": 0,
+      "gaps_below_660": 0,
+      "uncertain_events": 1,
+      "retry_events": {},
+      "config": {
+        "rounds": 3,
+        "interval": 600,
+        "prompt_mode": "question_only"
+      },
+      "question_count": 21
+    }
+  ],
+  "private_sources_scanned": 18,
+  "account_overlap": {
+    "deepseek-hpe14-android13 / deepseek-manual-test": false,
+    "deepseek-hpe14-account2 / deepseek-hpe14-android13": false,
+    "deepseek-hpe14-account2 / deepseek-manual-test": false
+  },
+  "manual_flows": {
+    "deepseek": {
+      "created_at": "2026-10-17T17:26:27.858896+08:00",
+      "status": "risk_blocked",
+      "message": "检测到账号禁言，已登录但当前无法正常提问；不能判定登录成功；App提示限制至 2026-10-20 09:09，到期后仍需实际复核",
+      "collector_send_intents_since_flow_open": 0
+    },
+    "deepseek2": {
+      "created_at": null,
+      "status": null,
+      "message": null,
+      "collector_send_intents_since_flow_open": 0
+    },
+    "deepseek_test": {
+      "created_at": "2026-10-17T17:15:35.190127+08:00",
+      "status": "waiting_login",
+      "message": "scrcpy投屏已连接，请手动登录；电脑可点击输入，手机可触摸并使用下方输入框",
+      "collector_send_intents_since_flow_open": 0
+    }
+  },
+  "android_id_distinct_count": 6,
+  "image_distinct_count": 1,
+  "combined_two_account_gaps": {
+    "send_intents": 38,
+    "min_seconds": 63.91,
+    "different_account_pairs_under_600": 11
+  }
+}

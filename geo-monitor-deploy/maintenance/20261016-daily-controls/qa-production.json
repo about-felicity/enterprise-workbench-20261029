@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "port": 3000,
+  "scenarios": [
+    "保存按钮携带当天日期和立即应用指令；每天目标同步更新",
+    "手动暂停、暂停时保存保持暂停、手动继续均使用当天任务接口",
+    "历史日期完整配置可查看，历史任务不可误暂停或修改",
+    "未来日期可独立保存计划，不修改今天的任务配置",
+    "模型切换保留未保存草稿",
+    "正式接口逐模型当天配置/进度和明日计划可读，1600/1280/390px无溢出"
+  ],
+  "page_errors": [],
+  "live_daily": {
+    "doubao1": {
+      "target": 210,
+      "completed": 449,
+      "remaining": 0,
+      "status": "complete"
+    },
+    "doubao2": {
+      "target": 210,
+      "completed": 0,
+      "remaining": 210,
+      "status": "not_started"
+    },
+    "deepseek": {
+      "target": 63,
+      "completed": 13,
+      "remaining": 50,
+      "status": "running"
+    },
+    "wenxin_card": {
+      "target": 168,
+      "completed": 212,
+      "remaining": 0,
+      "status": "complete"
+    },
+    "baidu_ai": {
+      "target": 105,
+      "completed": 193,
+      "remaining": 0,
+      "status": "complete"
+    },
+    "yuanbao": {
+      "target": 168,
+      "completed": 105,
+      "remaining": 63,
+      "status": "not_started"
+    }
+  }
+}

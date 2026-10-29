@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/Dashboard.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/Dashboard.tsx",
+      "sha256": "f73970a588386e80d599700a34528b81b73c80efb4068afa7d1fef78fc97a4b8"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceBoard.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceBoard.tsx",
+      "sha256": "510f62b4d9b629890aac1a662dcb62f0f1bf9c4644567830b5dd08c16b0a2192"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/globals.css",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/globals.css",
+      "sha256": "89d0aac80ff9586f5a91d8020dd85d3255da005d0ab0983ba8537f00eff3530b"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/WorkbenchLogo.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/WorkbenchLogo.tsx",
+      "sha256": "085e4c65e460275135505bd035ddc4268c1758a6e1845a0d8a5f4921e26a1723"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "index": 1,
+  "question": "请联网检索：中国国家博物馆的官方地址和开放时间是什么？请简洁回答，并提供官方信源链接。",
+  "time": "2026-10-06T17:53:09.500315+08:00",
+  "transport": "ADB",
+  "app": "com.larus.nova",
+  "headless": true,
+  "status": "error",
+  "error": "Required Android control is absent"
+}

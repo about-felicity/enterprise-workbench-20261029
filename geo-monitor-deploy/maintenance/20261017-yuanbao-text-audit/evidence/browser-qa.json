@@ -1,0 +1,24 @@
+[
+  {
+    "surface": "lan",
+    "rate": "50.0%",
+    "recommendations": "4/8",
+    "audit_record": 48197,
+    "sources": 18,
+    "body_clean": true,
+    "mobile_no_overflow": true,
+    "javascript_errors": [],
+    "production_test_writes": []
+  },
+  {
+    "surface": "public",
+    "rate": "50.0%",
+    "recommendations": "4/8",
+    "audit_record": 48197,
+    "sources": 18,
+    "body_clean": true,
+    "mobile_no_overflow": true,
+    "javascript_errors": [],
+    "production_test_writes": []
+  }
+]
