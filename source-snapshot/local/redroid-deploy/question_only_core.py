@@ -94,7 +94,7 @@ class Queue(LegacyQueue):
         row=self.db.execute('select * from tasks where task_id=?',(task_id,)).fetchone()
         if not row or row['state'] not in {'prepared','needs_attention'}:
             raise DataError('Non-text observation requires the original unresolved task')
-        if (result.get('status')!='nontext_complete' or result.get('native_answer_kind')!='video_only'
+        if (result.get('status')!='nontext_complete' or result.get('native_answer_kind') not in ('video_only','applet_only')
             or result.get('task_id')!=task_id or result.get('wire_question')!=row['question']
             or result.get('finished') is not True or result.get('native_request_confirmed') is not True
             or result.get('rich_media_capture_complete') is not True or not result.get('rich_cards')
@@ -106,7 +106,7 @@ class Queue(LegacyQueue):
         with self.db:
             self.db.execute("update tasks set state='completed_nontext',request_id=?,answer_id=?,result_json=?,error=null where task_id=?",
                 (result['request_id'],result['answer_id'],json.dumps(result,ensure_ascii=False),task_id))
-            self.event(task_id,'completed_nontext','native_video_only_answer; no model resend; excluded from text analysis')
+            self.event(task_id,'completed_nontext','native_'+result['native_answer_kind']+'_answer; no model resend; excluded from text analysis')
 
     def enqueue(self,batch,questions,require_sources=False):
         if not batch or not questions or not all(isinstance(q,str) and q and q==q.strip() for q in questions):
@@ -235,15 +235,29 @@ def lookup_bound(task,binding):
                 'continuation_server_index':users[1]['server_index'],'kind':'native_optional_permission_replay'}
             request=users[1]
         answers=[]
-        for answer in db.execute('select * from im_message where conversation_id=? and user_type=2 and local_index>? order by local_index',
-                                 (binding['conversation_id'],request['local_index'])):
+        replies=db.execute('select * from im_message where conversation_id=? and user_type=2 and local_index>? order by local_index',
+                           (binding['conversation_id'],request['local_index'])).fetchall()
+        for answer in replies:
             blocks=parse_blocks(answer['content'])
             if any('text_block' in b['content'] for b in blocks):answers.append((answer,blocks))
         if len(answers)>1:raise DataError('Multiple native answers; regeneration unsupported')
         columns=set(request.keys())
         confirmed=bool(request['message_id'] and request['server_index']>0) if {'message_id','server_index'}.issubset(columns) else False
         result={'status':'waiting','request_id':original_request['local_message_id'],'native_request_confirmed':confirmed}
-        if not answers:return result
+        if not answers:
+            if len(replies)==1 and continuation is None and confirmed and request['server_index']==1:
+                answer=replies[0]
+                blocks=parse_blocks(answer['content'])
+                if (answer['status']==21 and answer['server_index']==2 and answer['local_message_id']
+                        and len(blocks)==1 and blocks[0].get('block_type')==10017 and blocks[0].get('is_finish') is True
+                        and set(blocks[0]['content']) <= {'pc_event_block','applet_block'}
+                        and not blocks[0]['content'].get('pc_event_block') and blocks[0]['content'].get('applet_block')):
+                    result.update(status='nontext_complete',native_answer_kind='applet_only',
+                        task_id=task['task_id'],wire_question=task['question'],answer_id=answer['local_message_id'],
+                        conversation_id=binding['conversation_id'],finished=True,first_user_turn=True,prompt_protocol=PROTOCOL,
+                        rich_media_capture_complete=True,rich_cards=blocks,text_body_present=False,body_capture_complete=False,
+                        source_capture_complete=False,body_markdown='',sources=[],native_answer_status=21)
+            return result
         answer,blocks=answers[0]
         if not all(b.get('is_finish') is True for b in blocks):return result
         body=[];sources=[];citations=[];queries=[];tips=[]

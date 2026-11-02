@@ -16,6 +16,25 @@ def blocks(text,finished=True):
 
 
 class Tests(unittest.TestCase):
+    def test_finished_applet_only_answer_is_recorded_without_becoming_text_success(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'native.sqlite'
+            db=sqlite3.connect(path)
+            db.executescript('create table im_message(local_message_id text,conversation_id text,local_index int,user_type int,content text,fts_content text,message_id text,server_index int,status int)')
+            db.execute('insert into im_message values(?,?,?,?,?,?,?,?,?)',('old','old-conversation',1,1,blocks('旧问题'),'旧问题','old-server',1,21));db.commit()
+            before=baseline([path],'推荐一款护发精油')
+            db.execute('insert into im_message values(?,?,?,?,?,?,?,?,?)',('q','new-cid',1,1,blocks('推荐一款护发精油'),None,'q-server',1,21))
+            card=[{'block_type':10017,'is_finish':True,'content':{'pc_event_block':'','applet_block':{'app_id':'commerce'}}}]
+            db.execute('insert into im_message values(?,?,?,?,?,?,?,?,?)',('a','new-cid',2,2,json.dumps(card),None,'a-server',2,21));db.commit()
+            bound=correlate(before,'推荐一款护发精油')
+            result=lookup_bound({'task_id':'task','question':'推荐一款护发精油','wire_question':'推荐一款护发精油'},bound)
+            self.assertEqual(result['status'],'nontext_complete')
+            self.assertEqual(result['native_answer_kind'],'applet_only')
+            self.assertFalse(result['text_body_present'])
+            self.assertEqual(result['sources'],[])
+            self.assertEqual(result['answer_id'],'a')
+            db.close()
+
     def test_finished_native_safety_tip_is_preserved_and_unknown_schema_still_blocks(self):
         with tempfile.TemporaryDirectory() as tmp:
             path=Path(tmp)/'native.sqlite';db=self.fixture(path);before=baseline([path],'问题')
