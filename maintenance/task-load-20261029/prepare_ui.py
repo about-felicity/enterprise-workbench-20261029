@@ -1,0 +1,12 @@
+from pathlib import Path
+p=Path('maintenance/task-status-20261029/ui-test.cjs')
+s=p.read_text('utf8').replace("req.url==='/api/panel'","['/api/panel','/api/status'].includes(req.url)")
+s=s.replace("'maintenance/task-status-20261029/","'maintenance/task-load-20261029/")
+s=s.replace("if(req.url==='/api/uploads')return send", "if(req.url==='/api/uploads'){throw Error('Task view unexpectedly requested uploads')}if(false)return send")
+s=s.replace("if(req.url==='/api/catalog')return send", "if(req.url==='/api/catalog'){throw Error('Task view unexpectedly requested catalog')}if(false)return send")
+s=s.replace("let broken=false,hits=0;", "let broken=false,hits=0,allowDetails=false,uploadHits=0;")
+s=s.replace("if(req.url==='/api/uploads'){throw Error('Task view unexpectedly requested uploads')}if(false)return send", "if(req.url==='/api/uploads'&&!allowDetails)throw Error('Unexpected eager uploads');if(req.url==='/api/uploads'&&(++uploadHits))return send")
+s=s.replace("if(req.url==='/api/catalog'){throw Error('Task view unexpectedly requested catalog')}if(false)return send", "if(req.url==='/api/catalog'&&!allowDetails)throw Error('Unexpected eager catalog');if(req.url==='/api/catalog')return send")
+s=s.replace("studio:studio(),jobs:[]", "studio:req.url==='/api/status'?{...studio(),products:[{product_id:product.product_id,version:product.version,product:{name:product.product.name,brand:product.product.brand}}]}:studio(),jobs:[]")
+s=s.replace("assert.deepEqual(errors,[]);console.log", "allowDetails=true;await page.evaluate(()=>editCreationPlan('plan-'+String(0).padStart(32,'0')));assert.equal(await page.locator('#kbFacts').inputValue(),'事实');assert.equal(await page.locator('#planName').inputValue(),'任务0');assert.ok(uploadHits>0);await page.evaluate(()=>showView('tasks',false));await page.waitForTimeout(800);await page.evaluate(()=>editCreationPlan('plan-'+String(1).padStart(32,'0')));assert.equal(await page.locator('#kbFacts').inputValue(),'事实');assert.equal(await page.locator('#planName').inputValue(),'任务1');assert.deepEqual(errors,[]);console.log")
+Path('maintenance/task-load-20261029/ui-test.cjs').write_text(s,encoding='utf8')

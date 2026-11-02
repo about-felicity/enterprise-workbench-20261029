@@ -36,13 +36,13 @@ def verify(container):
     package = android('dumpsys', 'package', 'com.larus.nova')
     if not re.search(r'\bversionCode=15020040\b', package):
         raise RuntimeError('Doubao APK changed; compatibility must be revalidated')
-    if container in ('doubao-hpe14-13-test','doubao-hpe14-account2'):
+    if container in ('doubao-hpe14-13-test','doubao-hpe14-account2','doubao-hpe14-account3','doubao-hpe14-account4'):
         from pathlib import PurePosixPath
         apk = android('pm','path','com.larus.nova').splitlines()[0].removeprefix('package:')
         library = str(PurePosixPath(apk).parent/'lib/arm64/libkeva.so')
         if android('sha256sum',library).split()[0] != ACCOUNT2_KEVA_SHA:
             raise RuntimeError('Keva openat workaround missing or changed; stop before sending')
-    if container in ('doubao-hpe14-13-test','doubao-hpe14-account2'):
+    if container in ('doubao-hpe14-13-test','doubao-hpe14-account2','doubao-hpe14-account3','doubao-hpe14-account4'):
         try:pid=android('pidof','com.larus.nova')
         except subprocess.CalledProcessError:pid=''
         if pid.isdigit():

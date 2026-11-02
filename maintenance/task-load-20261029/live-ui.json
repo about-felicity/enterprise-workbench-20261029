@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "task_first_render_seconds": [
+    1.07,
+    2.135,
+    1.406
+  ],
+  "cards": 17,
+  "automatic_refresh": true,
+  "lazy_editor_facts_length": 411,
+  "articles": 725,
+  "knowledge": 20,
+  "errors": []
+}

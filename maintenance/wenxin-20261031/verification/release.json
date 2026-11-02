@@ -1,0 +1,37 @@
+{
+  "status": "fixed_and_live_probe_verified",
+  "tests": 18,
+  "before_completed": 83,
+  "completed_rows_preserved": true,
+  "batch": "geo-panel-baidu-ai-20261031-090001-88a32968",
+  "source": "geo-monitor-deploy/capture_bridge.py",
+  "server": "/opt/monitor/geo-capture/capture_bridge.py",
+  "sha256": "7e5effbe406c146a01ea5792b5180a9035ec8f3dccbc43fd753f8970107e753e",
+  "completed_now": 86,
+  "capture_status": "running",
+  "processed_now": 80,
+  "capture_errors": [],
+  "files": [
+    {
+      "source": "geo-monitor-deploy/capture_bridge.py",
+      "server": "/opt/monitor/geo-capture/capture_bridge.py",
+      "sha256": "7e5effbe406c146a01ea5792b5180a9035ec8f3dccbc43fd753f8970107e753e"
+    }
+  ],
+  "wenxin_probe": {
+    "at": 1793435262.054921,
+    "status": "ready",
+    "body_length": 530,
+    "sources": 35,
+    "error": null
+  },
+  "pending_now": 19,
+  "wenxin_daily": {
+    "day": "2026-10-31",
+    "model": "wenxin_card",
+    "status": "waiting_for_baidu",
+    "desired": "running",
+    "batch": null
+  },
+  "original_card_order_preserved": true
+}

@@ -1,0 +1,46 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/server-source/doubao_dashboard_server.py",
+      "archive": "backend/doubao_dashboard_server.py",
+      "server": "/opt/monitor/doubao_dashboard_server.py",
+      "before": "1eddddb5744f0e353431c4e6909501d4ea4ef5db8b1ddc53c98580354cb2c22d",
+      "sha256": "2038687e3b72723c8ebd4892301ee478f58ed3b981dbf85c486b2489d5802817"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/employee_assessment.py",
+      "archive": "backend/monitor_core/employee_assessment.py",
+      "server": "/opt/monitor/monitor_core/employee_assessment.py",
+      "before": null,
+      "sha256": "500bf3724cd25bc488f99666596871657a034535f44867a3d1086f12d98e1208"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/performance_data_202610.json",
+      "archive": "backend/monitor_core/performance_data_202610.json",
+      "server": "/opt/monitor/monitor_core/performance_data_202610.json",
+      "before": null,
+      "sha256": "5fb76bfcf7af16b4c4d9e91cf00de3ba2fcb74b4f39a2679015a58677cc0a27e"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/Dashboard.tsx",
+      "archive": "app/Dashboard.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/Dashboard.tsx",
+      "before": "10def5bee8ca60ba328d22a9563a325e5cfa199c8d93e8050a6c7845111c3488",
+      "sha256": "0ad85097b441c92065c31f3a547215b9c42384ae8ed8783276f258ab5ad64237"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceCenter.tsx",
+      "archive": "app/PerformanceCenter.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceCenter.tsx",
+      "before": null,
+      "sha256": "312b4ecd276aa4fc4392c58edacdf8e20c663c114766f3da85111cbd478eeba7"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/globals.css",
+      "archive": "app/globals.css",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/globals.css",
+      "before": "fd3df399ce831914b461677f7bfab60d8e88f58709d799a3b01551c38b0afb99",
+      "sha256": "eccb31db80ea056496ad9042ce3b593481b3b2eaa1287f02e889d519c2bdfba3"
+    }
+  ]
+}

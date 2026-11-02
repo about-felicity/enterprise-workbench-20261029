@@ -1,0 +1,186 @@
+{"month": "2026-10", "query_s": 4.1189138339832425, "matrix_s": 23.877607989124954, "assessment_s": 0.1244540847837925, "runs": 26904, "run_json_bytes": 148415553}
+{"month": "2026-11", "query_s": 0.30008676555007696, "matrix_s": 0.5303599359467626, "assessment_s": 0.004274806007742882, "runs": 955, "run_json_bytes": 5833927}
+EDITOR 0.0045349569991230965
+
+
+        location = /geo_monitor/_performance_auth {
+            internal;
+            proxy_pass http://127.0.0.1:18766/auth/performance;
+            proxy_pass_request_body off;
+            proxy_set_header Content-Length "";
+            proxy_set_header Cookie $http_cookie;
+            proxy_set_header X-Real-IP $remote_addr;
+        }
+        location ^~ /geo_monitor/api/performance-entry/ {
+            auth_request /geo_monitor/_performance_auth;
+            auth_request_set $geo_performance_identity $upstream_http_x_geo_performance_identity;
+            proxy_set_header X-Geo-Performance-Identity $geo_performance_identity;
+            proxy_set_header Cookie $http_cookie;
+            proxy_set_header Host $host;
+            proxy_set_header X-Forwarded-Proto https;
+            proxy_pass http://127.0.0.1:18765/api/performance-entry/;
+            proxy_http_version 1.1;
+            proxy_cache off;
+            proxy_no_cache 1;
+            proxy_cache_bypass 1;
+            client_max_body_size 256k;
+            proxy_connect_timeout 3s;
+            proxy_read_timeout 30s;
+        }
+        location = /geo_monitor/_auth {
+            internal;
+            client_max_body_size 8m;
+            proxy_pass http://127.0.0.1:18766/auth;
+            proxy_pass_request_body off;
+            proxy_set_header Content-Length "";
+        location ^~ /geo_monitor/api/performance-entry/ {
+            auth_request /geo_monitor/_performance_auth;
+            auth_request_set $geo_performance_identity $upstream_http_x_geo_performance_identity;
+            proxy_set_header X-Geo-Performance-Identity $geo_performance_identity;
+            proxy_set_header Cookie $http_cookie;
+            proxy_set_header Host $host;
+            proxy_set_header X-Forwarded-Proto https;
+            proxy_pass http://127.0.0.1:18765/api/performance-entry/;
+            proxy_http_version 1.1;
+            proxy_cache off;
+            proxy_no_cache 1;
+            proxy_cache_bypass 1;
+            client_max_body_size 256k;
+            proxy_connect_timeout 3s;
+            proxy_read_timeout 30s;
+        }
+        location = /geo_monitor/_auth {
+            internal;
+            client_max_body_size 8m;
+            proxy_pass http://127.0.0.1:18766/auth;
+            proxy_pass_request_body off;
+            proxy_set_header Content-Length "";
+            proxy_set_header Cookie $http_cookie;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Original-URI $request_uri;
+        }
+
+        location = /geo_monitor/login {
+            proxy_pass http://127.0.0.1:18766/login$is_args$args;
+            proxy_set_header Host $host;
+        location ^~ /geo_monitor/api/geo-capture/ {
+            auth_request /geo_monitor/_auth;
+            access_log /var/log/nginx/geo_monitor_access.log main;
+            client_max_body_size 2m;
+            proxy_pass http://127.0.0.1:13000/api/geo-capture/;
+            proxy_http_version 1.1;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto https;
+            proxy_set_header X-Forwarded-Prefix /geo_monitor;
+            proxy_connect_timeout 5s;
+            proxy_read_timeout 60s;
+            proxy_send_timeout 60s;
+            proxy_next_upstream off;
+            proxy_cache off;
+            proxy_no_cache 1;
+            proxy_cache_bypass 1;
+            proxy_cookie_path /api/geo-capture /geo_monitor/api/geo-capture;
+            add_header Cache-Control "no-store" always;
+            add_header X-Geo-Control "live" always;
+        }
+        # END GEO_CAPTURE_CONTROL PREFIX
+
+        # BEGIN GEO_CREATION_CONTROL PREFIX
+        location ^~ /geo_monitor/api/geo-creation/ {
+            auth_request /geo_monitor/_auth;
+            access_log /var/log/nginx/geo_monitor_access.log main;
+            client_max_body_size 8m;
+            proxy_pass http://127.0.0.1:13000/api/geo-creation/;
+        location ^~ /geo_monitor/api/geo-creation/ {
+            auth_request /geo_monitor/_auth;
+            access_log /var/log/nginx/geo_monitor_access.log main;
+            client_max_body_size 8m;
+            proxy_pass http://127.0.0.1:13000/api/geo-creation/;
+            proxy_http_version 1.1;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto https;
+            proxy_set_header X-Forwarded-Prefix /geo_monitor;
+            proxy_connect_timeout 5s;
+            proxy_read_timeout 300s;
+            proxy_send_timeout 300s;
+            proxy_next_upstream off;
+            gzip on;
+            gzip_types application/json;
+            gzip_min_length 1024;
+            gzip_vary on;
+            proxy_cache off;
+            proxy_no_cache 1;
+            proxy_cache_bypass 1;
+            add_header Cache-Control "no-store" always;
+            add_header X-Geo-Creation "live" always;
+        }
+        # END GEO_CREATION_CONTROL PREFIX
+
+        location ^~ /geo_monitor/api/ {
+            auth_request /geo_monitor/_auth;
+            access_log /var/log/nginx/geo_monitor_access.log main;
+        location ^~ /geo_monitor/api/ {
+            auth_request /geo_monitor/_auth;
+            access_log /var/log/nginx/geo_monitor_access.log main;
+
+            proxy_pass http://127.0.0.1:18765/api/;
+            proxy_http_version 1.1;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto https;
+            proxy_connect_timeout 3s;
+            proxy_read_timeout 60s;
+            proxy_send_timeout 300s;
+            proxy_buffering on;
+
+            # Short cache prevents multiple open tabs from flooding the weak Wi-Fi tunnel.
+            # On tunnel loss, keep serving the last successful snapshot instead of a blank page.
+            proxy_cache geo_monitor_frontend;
+            proxy_cache_key $request_method$uri$is_args$args;
+            proxy_cache_valid 200 10s;
+            proxy_cache_lock on;
+            proxy_cache_lock_timeout 60s;
+            proxy_cache_background_update on;
+            proxy_cache_use_stale error timeout updating http_500 http_502 http_503 http_504;
+            proxy_ignore_headers Cache-Control Expires Set-Cookie Vary;
+            add_header X-Geo-Cache $upstream_cache_status always;
+        }
+
+        location ^~ /geo_monitor/assets/ {
+            auth_request /geo_monitor/_auth;
+        location ^~ /geo_monitor/ {
+            auth_request /geo_monitor/_auth;
+            error_page 401 = @geo_monitor_login;
+            access_log /var/log/nginx/geo_monitor_access.log main;
+
+            proxy_pass http://monitor_live_frontend/;
+            proxy_http_version 1.1;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto https;
+            proxy_set_header Accept-Encoding "";
+            proxy_connect_timeout 3s;
+            proxy_read_timeout 60s;
+            proxy_send_timeout 300s;
+            proxy_next_upstream error timeout invalid_header http_502 http_503 http_504;
+            proxy_next_upstream_tries 2;
+
+            proxy_cache off; # GEO HTML must track the live frontend release
+            proxy_cache_key "geo-creation-prefix-v3:$uri$is_args$args";
+            proxy_cache_valid 200 5m;
+            proxy_cache_lock on;
+            proxy_cache_lock_timeout 60s;
+            proxy_cache_background_update on;
+            proxy_cache_use_stale error timeout updating http_500 http_502 http_503 http_504;
+            proxy_ignore_headers Cache-Control Expires Set-Cookie;
+
+            sub_filter_once off;
+            sub_filter_types application/javascript text/javascript text/css;
+            sub_filter '/assets/' '/geo_monitor/assets/';
+

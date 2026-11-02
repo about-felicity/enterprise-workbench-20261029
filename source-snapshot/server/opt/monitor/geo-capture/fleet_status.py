@@ -121,7 +121,7 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self):
         from control_panel import Conflict
         try:
-            match=re.fullmatch(r'/api/control/(doubao1|doubao2|deepseek|deepseek2|wenxin_card|baidu_ai|yuanbao)/(settings|new|pause|resume|stop|login|login_sync|login_open)',self.path)
+            match=re.fullmatch(r'/api/control/(doubao[1-4]|deepseek|deepseek2|wenxin_card|baidu_ai|yuanbao)/(settings|new|pause|resume|stop|login|login_sync|login_open)',self.path)
             login_match=re.fullmatch(r'/api/login/(?:(deepseek|deepseek2|deepseek_test)/)?input',self.path)
             login_input=bool(login_match)
             test_open=self.path=='/api/login/deepseek_test/open'

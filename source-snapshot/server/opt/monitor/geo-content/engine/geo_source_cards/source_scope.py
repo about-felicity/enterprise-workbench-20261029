@@ -4,6 +4,7 @@ from collections import Counter
 
 # These are generic containers and conversational words, not product identities.
 GENERIC = ('精华液','精华乳','精华水','精粹水','护肤品','化妆品','产品','成分','配方','护理','日常','男士','女士','选购','选择','推荐','哪些','怎么','什么','可以','值得','应该','注意','信息','使用','适合','自己','比较','首次','第一次','购买','挑选','挑选','保持','清洁')
+TOPIC_ALIASES = (frozenset(('造型喷雾','定型喷雾','塑型喷雾','塑形喷雾','发型喷雾','蓬松喷雾')),)
 
 def anchors(questions, product):
     name = str(product.get('name','')).replace(str(product.get('brand','')),'')
@@ -26,5 +27,11 @@ def anchors(questions, product):
 def evaluate(source, terms):
     article=source.get('article',{});title=article.get('title') or source.get('title','');body=article.get('text','')
     if not terms:return {'status':'unscoped','anchors':[],'matched':[]}
-    matched=[s for s in terms if s in title or (s in body[:1000] and sum(s in p for p in body.splitlines() if p.strip())>=2)]
-    return {'status':'ready' if matched else 'off_topic','anchors':terms,'matched':matched}
+    matched=[];aliases={}
+    for term in terms:
+        variants=next((group for group in TOPIC_ALIASES if term in group),{term})
+        found=[s for s in sorted(variants) if s in title or (s in body[:1000] and sum(s in p for p in body.splitlines() if p.strip())>=2)]
+        if found:
+            matched.append(term)
+            if term not in found:aliases[term]=found
+    return {'status':'ready' if matched else 'off_topic','anchors':terms,'matched':matched,**({'matched_aliases':aliases} if aliases else {})}

@@ -1,0 +1,124 @@
+{
+  "文心": {
+    "association": {
+      "n": 5320,
+      "spearman": 0.10261685447462136,
+      "permutation_p": 0.001,
+      "approx_bootstrap_ci": [
+        0.07378811558626608,
+        0.12654297606215073
+      ]
+    },
+    "adjusted": {
+      "n": 4176,
+      "groups": 117,
+      "within_domain_question_log_correlation": 0.08872082237549403,
+      "permutation_p": 0.002
+    },
+    "bins": [
+      {
+        "bin": "不足1000",
+        "n": 366,
+        "mean_rate": 0.1209119908096401,
+        "later_citations": 3533,
+        "later_opportunities": 28597
+      },
+      {
+        "bin": "1000–1999",
+        "n": 1111,
+        "mean_rate": 0.08634391152317505,
+        "later_citations": 4770,
+        "later_opportunities": 68316
+      },
+      {
+        "bin": "2000–2999",
+        "n": 985,
+        "mean_rate": 0.11278773782285911,
+        "later_citations": 7107,
+        "later_opportunities": 69934
+      },
+      {
+        "bin": "3000–4999",
+        "n": 2002,
+        "mean_rate": 0.13190730439609757,
+        "later_citations": 16060,
+        "later_opportunities": 139580
+      },
+      {
+        "bin": "5000–7999",
+        "n": 779,
+        "mean_rate": 0.1596361201504365,
+        "later_citations": 8052,
+        "later_opportunities": 54612
+      },
+      {
+        "bin": "8000及以上",
+        "n": 77,
+        "mean_rate": 0.17246581744355927,
+        "later_citations": 1028,
+        "later_opportunities": 6098
+      }
+    ]
+  },
+  "百度": {
+    "association": {
+      "n": 614,
+      "spearman": 0.3079346625568595,
+      "permutation_p": 0.001,
+      "approx_bootstrap_ci": [
+        0.24786909697309825,
+        0.3683410655076391
+      ]
+    },
+    "adjusted": {
+      "n": 347,
+      "groups": 21,
+      "within_domain_question_log_correlation": -0.024374504925723503,
+      "permutation_p": 0.684
+    },
+    "bins": [
+      {
+        "bin": "不足1000",
+        "n": 63,
+        "mean_rate": 0.006060606060606061,
+        "later_citations": 15,
+        "later_opportunities": 2407
+      },
+      {
+        "bin": "1000–1999",
+        "n": 31,
+        "mean_rate": 0.11113391984359726,
+        "later_citations": 44,
+        "later_opportunities": 745
+      },
+      {
+        "bin": "2000–2999",
+        "n": 124,
+        "mean_rate": 0.14092500860242305,
+        "later_citations": 550,
+        "later_opportunities": 5015
+      },
+      {
+        "bin": "3000–4999",
+        "n": 296,
+        "mean_rate": 0.17664028703111112,
+        "later_citations": 1749,
+        "later_opportunities": 12081
+      },
+      {
+        "bin": "5000–7999",
+        "n": 84,
+        "mean_rate": 0.24642119421233608,
+        "later_citations": 725,
+        "later_opportunities": 3413
+      },
+      {
+        "bin": "8000及以上",
+        "n": 16,
+        "mean_rate": 0.2079031713900135,
+        "later_citations": 148,
+        "later_opportunities": 836
+      }
+    ]
+  }
+}

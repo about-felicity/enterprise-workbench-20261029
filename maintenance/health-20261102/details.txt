@@ -1,0 +1,29 @@
+MATERIAL creation-1793488244-59b40320 {"workflow": "rewrite-v2", "job_id": "creation-1793488244-59b40320", "created_at": 1793488244.3856006, "input_sha256": "9eff1b543c86a4b3bca14552aeaf10ec38cd378e7b58998afa113bcc0a612591", "date": "2026-11-01", "question": "推荐一款敏感头皮可以用的造型喷雾", "channels": ["baidu_ai", "wenxin_card"], "max_per_category": 5, "material_counts": {"private_observations": 2, "full_articles": 0}, "platform_questions_sent": 0, "prepared": {"status": "waiting_material_preparation"}, "material_source": "dedicated", "studio_plan_id": "plan-4c988f3863344f52aff3aa2b1f96beb2", "task_name": "科熙本造型喷雾", "budget_limits": {"article_budget_cny": 0.35, "task_budget_cny": 2.0}, "preparation": "insufficient", "material_shortfall": "已排除50条自有产品信源；已排除69条跑题来源；可用完整正文0篇，至少需要1篇（45条来源不在当前允许的媒体范围内）；需补充有效来源", "supplement_attempt": 12}
+ISSUE creation-1793573228-f5e64267 推荐一款水杨酸祛痘精华 {"id": "b557cfdc13d77b9e53dcf6f0", "stage": "writer", "location": "days/2026-11-02/jobs/排行类/03/writer", "inputs": {"rewrite_context.json": "b5e8d0a3b13d6a4d8f19a9ade2b747beb7f3adf82d84684b60ff19d00b4b25fb", "writing_job.json": "a6a2ac96437c180ef50047f054b7867a5ef260bf800696f1fc166db003997c9b", "writing_prompt.md": "ac1bddccbcbb829efdfef46b9975e1c1191e82a7a2d6f34624f6e2c6a7fc3949", "knowledge.json": "acca57279164e4e73e31b3f6c1e2e87ac52be26713fc68aae1c75c75df86aca1", "product.json": "124a75c10ea25f709ab54df8c047bdb621597d1ebafbb7d911f17aeb7fceab6a", "category.json": "c368354d2c27aaadfc10a4f3e021aafb717de116f41801ce21167940fe31c9b5"}, "outputs": ["draft.md", "article.docx", "claim_map.json", "knowledge_to_sections.json", "writer_done.json", "rewrite_material.json"], "meta": {"date": "2026-11-02", "category": "排行类", "number": 3, "workflow": "rewrite-v2"}, "state": "needs_attention", "created_at": "2026-11-02T06:48:19.573993+08:00", "client": "253e32315c447fce22da93fb", "claimed_at": "2026-11-02T06:48:20.558087+08:00", "execution": {"run_id": "f35db76158e1fd6d726b8b32", "generation": 1}, "error": "API generation rejected: rewrite_v2_invalid_output; Writer must return a complete Markdown article"} {"ticket": "29d997bb53b4c904244fad5f", "run_id": "28c2615483794bbff1699022", "state": "SUBMITTED", "stage": "writer", "started_epoch": 1793573347.5474102, "execution": {"run_id": "28c2615483794bbff1699022", "generation": 1}}
+STATE /opt/monitor/geo-content/runtime/runs/creation-1793573228-f5e64267/api/runs/f35db76158e1fd6d726b8b32/call/api_state.json {
+  "payload_sha256": "d1539200bdd3ed094057c8920d41308e73e303e31dc39237343d6f07e99b5848",
+  "model": "deepseek-flash",
+  "reservation": "e6c9aead9a759f702384e1a228519955f8a7eb2cc71048adce342f6e46d791ca",
+  "state": "RESPONDED",
+  "finished_epoch": 1793573312.543617,
+  "usage": {
+    "prompt_tokens": 5401,
+    "completion_tokens": 1868,
+    "total_tokens": 7269,
+    "prompt_tokens_details": {
+      "cached_tokens": 4992
+    },
+    "prompt_cache_hit_tokens": 4992,
+    "prompt_cache_miss_tokens": 409
+  }
+}
+FILES ['writing_job.json', 'rewrite_context.json', 'product.json', 'category.json', 'knowledge.json', 'writing_prompt.md', 'call/answer.json', 'call/response.json', 'call/prompt_format.json', 'call/api_state.json', 'call/output_budget_plan.json', 'call/request.json']
+ISSUE creation-1793568844-d46c31d1 防脱洗发水推荐 {"id": "a3fb1a1a2e0fe544017b911c", "stage": "research", "location": "days/2026-11-02/jobs/排行类/01/research", "inputs": {"research_input.json": "b543b70c37456ded2c37198bd35308f72418efae3926e3a64040ea80e08dd09e", "research_task.txt": "81735dcfcfeaf4af7fca44f7d4c7c0773f6fd0be94d2fbaa4df50100e2dd0727"}, "outputs": ["research_result.json"], "meta": {"date": "2026-11-02", "category": "排行类", "number": 1, "workflow": "rewrite-v2"}, "state": "claimed", "created_at": "2026-11-02T05:34:52.274999+08:00", "client": "5262e5822f95161dfccdae40", "claimed_at": "2026-11-02T05:34:53.552313+08:00", "execution": {"run_id": "44277cff8f1c52419a362f45", "generation": 1}} {"ticket": "a3fb1a1a2e0fe544017b911c", "run_id": "44277cff8f1c52419a362f45", "state": "REQUESTING", "stage": "research", "started_epoch": 1793568893.5507374, "execution": {"run_id": "44277cff8f1c52419a362f45", "generation": 1}}
+STATE /opt/monitor/geo-content/runtime/runs/creation-1793568844-d46c31d1/api/runs/44277cff8f1c52419a362f45/skeleton-call/api_state.json {
+  "payload_sha256": "480cb73698b38a30e6f0e8a7d0c5d94ccf0e11f905393784084aeff5567836de",
+  "model": "deepseek-flash",
+  "reservation": "92a2d8bec15d6f87ff25ec3183a6f45d2e05c8bf38e1e9cd1ff985dd1a4e0f0a",
+  "state": "HTTP_REJECTED",
+  "http_status": 502
+}
+FILES ['research_task.txt', 'research_input.json', 'skeleton-call/api_state.json', 'skeleton-call/request.json']

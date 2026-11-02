@@ -1,0 +1,312 @@
+TIME 2026-11-02T13:26:46.202375+08:00
+MEM MemTotal:       16094384 kB
+MemFree:         2597952 kB
+MemAvailable:    5667340 kB
+Buffers:          243828 kB
+Cached:          4076904 kB
+SwapCached:       154908 kB
+Active:          4376368 kB
+Inactive:        7255352 kB
+Active(anon):    3329392 kB
+Inactive(anon):  4578120 kB
+Active(file):    1046976 kB
+Inactive(file):  2677232 kB
+Unevictable:       68380 kB
+Mlocked:           57840 kB
+SwapTotal:       4194300 kB
+SwapFree:           2880 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              4108 kB
+Writeback:             0 kB
+AnonPages:       7325704 kB
+Mapped:          1445908 kB
+Shmem:            577672 kB
+KReclaimable:     489628 kB
+Slab:            1011044 kB
+SReclaimable:     489628 kB
+SUnreclaim:       521416 kB
+KernelStack:      103552 kB
+PageTables:       231728 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    12241492 kB
+Committed_AS:   117472172 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      180724 kB
+VmallocChunk:          0 kB
+Percpu:            69792 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:     8192 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+Unaccepted:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      445696 kB
+DirectMap2M:     9758720 kB
+DirectMap1G:     6291456 kB
+
+CPU 12
+CONTAINER {"name": "/monitor-dashboard", "image": "monitor-dashboard:performance-confirmation-20261102", "running": true, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {"memory.current": "100929536", "memory.peak": "101572608", "memory.swap.current": "32108544", "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0", "memory.stat": "anon 61419520\nfile 33996800\nkernel 4055040\nkernel_stack 573440\npagetables 2682880\nsec_pagetables 0\npercpu 1176\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 27664384\nfile_dirty 0\nfile_writeback 0\nswapcached 1458176\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 54816768\nactive_anon 8060928\ninactive_file 33796096\nactive_file 200704\nunevictable 0\nslab_reclaimable 97872\nslab_unreclaimable 649616\nslab 747488\nworkingset_refault_anon 2170\nworkingset_refault_file 13620\nworkingset_activate_anon 81\nworkingset_activate_file 222\nworkingset_restore_anon 81\nworkingset_restore_file 222\nworkingset_nodereclaim 0\npgscan 56486\npgsteal 33966\npgscan_kswapd 56484\npgscan_direct 2\npgscan_khugepaged 0\npgsteal_kswapd 33964\npgsteal_direct 2\npgsteal_khugepaged 0\npgfault 53944\npgmajfault 3842\npgrefill 14921\npgactivate 4021\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+CONTAINER {"name": "/monitor-dashboard-performance-preview", "image": "monitor-dashboard:performance-confirmation-20261102", "running": true, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "no", "MaximumRetryCount": 0}, "resource_options": [], "memory": {"memory.current": "5529600", "memory.peak": "150818816", "memory.swap.current": "66600960", "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0", "memory.stat": "anon 778240\nfile 675840\nkernel 3883008\nkernel_stack 573440\npagetables 2473984\nsec_pagetables 0\npercpu 1176\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 675840\nfile_dirty 0\nfile_writeback 0\nswapcached 192512\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 782336\nactive_anon 188416\ninactive_file 319488\nactive_file 356352\nunevictable 0\nslab_reclaimable 148832\nslab_unreclaimable 635360\nslab 784192\nworkingset_refault_anon 3\nworkingset_refault_file 14642\nworkingset_activate_anon 0\nworkingset_activate_file 1210\nworkingset_restore_anon 0\nworkingset_restore_file 1210\nworkingset_nodereclaim 156\npgscan 85246\npgsteal 52998\npgscan_kswapd 84926\npgscan_direct 256\npgscan_khugepaged 64\npgsteal_kswapd 52681\npgsteal_direct 253\npgsteal_khugepaged 64\npgfault 29574\npgmajfault 1172\npgrefill 15327\npgactivate 2276\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+CONTAINER {"name": "/monitor-dashboard-before-confirmation-20261102", "image": "monitor-dashboard:performance-view-toggle-20261031", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/monitor-dashboard-performance-preview-before-confirmation-20261102", "image": "monitor-dashboard:performance-view-toggle-20261031", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "no", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/monitor-dashboard-before-view-toggle-20261031", "image": "monitor-dashboard:performance-chart-20261031", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/monitor-dashboard-performance-preview-before-view-toggle-20261031", "image": "monitor-dashboard:performance-chart-20261031", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "no", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/monitor-dashboard-before-chart-20261031", "image": "monitor-dashboard:performance-weights-20261031", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/monitor-dashboard-performance-preview-before-chart-20261031", "image": "monitor-dashboard:performance-weights-20261031", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "no", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/monitor-dashboard-before-weights-20261031", "image": "monitor-dashboard:performance-mention-fix-20261031", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/monitor-dashboard-performance-preview-before-weights-20261031", "image": "monitor-dashboard:performance-mention-fix-20261031", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "no", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/monitor-dashboard-before-mention-fix-20261031", "image": "monitor-dashboard:performance-entry-20261031", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/monitor-dashboard-performance-preview-before-mention-fix-20261031", "image": "monitor-dashboard:performance-entry-20261031", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "no", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/monitor-dashboard-before-entry-20261031", "image": "monitor-dashboard:performance-clean-20261031", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/monitor-dashboard-performance-preview-before-entry-20261031", "image": "monitor-dashboard:performance-clean-20261031", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "no", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/monitor-dashboard-before-copy-clean-20261031", "image": "monitor-dashboard:performance-20261031", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/monitor-dashboard-performance-preview-before-copy-clean-20261031", "image": "monitor-dashboard:performance-20261031", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "no", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/monitor-dashboard-before-performance-20261031", "image": "monitor-dashboard:responsive-20261026", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/monitor-assets", "image": "monitor-assets:responsive-20261026", "running": true, "memory_limit": 536870912, "swap_limit": 1073741824, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {"memory.current": "3055616", "memory.peak": "154509312", "memory.swap.current": "65298432", "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0", "memory.stat": "anon 1568768\nfile 675840\nkernel 806912\nkernel_stack 32768\npagetables 266240\nsec_pagetables 0\npercpu 4984\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 675840\nfile_dirty 0\nfile_writeback 0\nswapcached 4096\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 1286144\nactive_anon 286720\ninactive_file 45056\nactive_file 630784\nunevictable 0\nslab_reclaimable 201592\nslab_unreclaimable 274304\nslab 475896\nworkingset_refault_anon 13431\nworkingset_refault_file 18384\nworkingset_activate_anon 528\nworkingset_activate_file 1594\nworkingset_restore_anon 526\nworkingset_restore_file 1455\nworkingset_nodereclaim 579\npgscan 234513\npgsteal 94399\npgscan_kswapd 227255\npgscan_direct 7194\npgscan_khugepaged 64\npgsteal_kswapd 90016\npgsteal_direct 4319\npgsteal_khugepaged 64\npgfault 151398\npgmajfault 37616\npgrefill 153967\npgactivate 17411\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+CONTAINER {"name": "/deepseek-manual-test", "image": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f", "running": true, "memory_limit": 2147483648, "swap_limit": 3221225472, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": ["ro.enable.native.bridge.exec64=1", "ro.dalvik.vm.native.bridge=libhoudini.so", "androidboot.redroid_gpu_mode=guest", "androidboot.redroid_width=720", "androidboot.redroid_height=1280", "androidboot.redroid_dpi=320", "androidboot.redroid_net_ndns=2", "androidboot.redroid_net_dns1=223.5.5.5", "androidboot.redroid_net_dns2=119.29.29.29"], "memory": {"memory.current": "229568512", "memory.peak": "1733033984", "memory.swap.current": "339550208", "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0", "memory.stat": "anon 143273984\nfile 13266944\nkernel 71692288\nkernel_stack 11304960\npagetables 25624576\nsec_pagetables 0\npercpu 35112\nsock 8192\nvmalloc 5033984\nshmem 3645440\nzswap 0\nzswapped 0\nfile_mapped 12193792\nfile_dirty 0\nfile_writeback 0\nswapcached 11591680\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 51232768\nactive_anon 95965184\ninactive_file 6668288\nactive_file 2953216\nunevictable 1048576\nslab_reclaimable 3090392\nslab_unreclaimable 26094920\nslab 29185312\nworkingset_refault_anon 476157\nworkingset_refault_file 409812\nworkingset_activate_anon 103435\nworkingset_activate_file 24435\nworkingset_restore_anon 103432\nworkingset_restore_file 16066\nworkingset_nodereclaim 0\npgscan 6652656\npgsteal 2908619\npgscan_kswapd 6459125\npgscan_direct 193531\npgscan_khugepaged 0\npgsteal_kswapd 2806392\npgsteal_direct 102227\npgsteal_khugepaged 0\npgfault 65853815\npgmajfault 583583\npgrefill 4327976\npgactivate 491809\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+CONTAINER {"name": "/deepseek-hpe14-account2", "image": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f", "running": true, "memory_limit": 2147483648, "swap_limit": 3221225472, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": ["ro.enable.native.bridge.exec64=1", "ro.dalvik.vm.native.bridge=libhoudini.so", "androidboot.redroid_gpu_mode=guest", "androidboot.redroid_width=720", "androidboot.redroid_height=1280", "androidboot.redroid_dpi=320", "androidboot.redroid_net_ndns=2", "androidboot.redroid_net_dns1=223.5.5.5", "androidboot.redroid_net_dns2=119.29.29.29"], "memory": {"memory.current": "239165440", "memory.peak": "2036727808", "memory.swap.current": "371335168", "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0", "memory.stat": "anon 154804224\nfile 7532544\nkernel 74641408\nkernel_stack 11452416\npagetables 26791936\nsec_pagetables 0\npercpu 35336\nsock 8192\nvmalloc 5033984\nshmem 4464640\nzswap 0\nzswapped 0\nfile_mapped 6606848\nfile_dirty 4096\nfile_writeback 0\nswapcached 15171584\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 102707200\nactive_anon 57577472\ninactive_file 2269184\nactive_file 798720\nunevictable 1060864\nslab_reclaimable 3851416\nslab_unreclaimable 26959664\nslab 30811080\nworkingset_refault_anon 619581\nworkingset_refault_file 267160\nworkingset_activate_anon 118290\nworkingset_activate_file 32807\nworkingset_restore_anon 118257\nworkingset_restore_file 22024\nworkingset_nodereclaim 0\npgscan 7387086\npgsteal 3385727\npgscan_kswapd 7151645\npgscan_direct 235441\npgscan_khugepaged 0\npgsteal_kswapd 3242375\npgsteal_direct 143352\npgsteal_khugepaged 0\npgfault 124900948\npgmajfault 753345\npgrefill 4438828\npgactivate 516972\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+CONTAINER {"name": "/deepseek-hpe14-android13", "image": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f", "running": true, "memory_limit": 2147483648, "swap_limit": 3221225472, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": ["ro.enable.native.bridge.exec64=1", "ro.dalvik.vm.native.bridge=libhoudini.so", "androidboot.redroid_gpu_mode=guest", "androidboot.redroid_width=720", "androidboot.redroid_height=1280", "androidboot.redroid_dpi=320", "androidboot.redroid_net_ndns=2", "androidboot.redroid_net_dns1=223.5.5.5", "androidboot.redroid_net_dns2=119.29.29.29"], "memory": {"memory.current": "232017920", "memory.peak": "2090061824", "memory.swap.current": "378179584", "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0", "memory.stat": "anon 140087296\nfile 13774848\nkernel 75952128\nkernel_stack 11354112\npagetables 25661440\nsec_pagetables 0\npercpu 35112\nsock 8192\nvmalloc 5033984\nshmem 4136960\nzswap 0\nzswapped 0\nfile_mapped 11595776\nfile_dirty 8192\nfile_writeback 0\nswapcached 12136448\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 89190400\nactive_anon 56176640\ninactive_file 3969024\nactive_file 2940928\nunevictable 3780608\nslab_reclaimable 7259208\nslab_unreclaimable 26099592\nslab 33358800\nworkingset_refault_anon 606410\nworkingset_refault_file 906753\nworkingset_activate_anon 118430\nworkingset_activate_file 210125\nworkingset_restore_anon 118300\nworkingset_restore_file 146829\nworkingset_nodereclaim 217\npgscan 7984512\npgsteal 3982035\npgscan_kswapd 7766333\npgscan_direct 218179\npgscan_khugepaged 0\npgsteal_kswapd 3854955\npgsteal_direct 127080\npgsteal_khugepaged 0\npgfault 137252766\npgmajfault 746000\npgrefill 5278936\npgactivate 514498\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+CONTAINER {"name": "/yuanbao-hpe14-android13", "image": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f", "running": true, "memory_limit": 4294967296, "swap_limit": 6442450944, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": ["ro.enable.native.bridge.exec64=1", "ro.dalvik.vm.native.bridge=libhoudini.so", "androidboot.redroid_gpu_mode=guest", "androidboot.redroid_width=720", "androidboot.redroid_height=1280", "androidboot.redroid_dpi=320", "androidboot.redroid_net_ndns=2", "androidboot.redroid_net_dns1=223.5.5.5", "androidboot.redroid_net_dns2=119.29.29.29"], "memory": {"memory.current": "1367273472", "memory.peak": "3893104640", "memory.swap.current": "591908864", "memory.events": "low 0\nhigh 0\nmax 47802\noom 7\noom_kill 4\noom_group_kill 0", "memory.stat": "anon 763478016\nfile 485400576\nkernel 110825472\nkernel_stack 17793024\npagetables 36937728\nsec_pagetables 0\npercpu 36960\nsock 16384\nvmalloc 5042176\nshmem 362008576\nzswap 0\nzswapped 0\nfile_mapped 421883904\nfile_dirty 28672\nfile_writeback 0\nswapcached 33103872\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 886439936\nactive_anon 245538816\ninactive_file 48427008\nactive_file 74899456\nunevictable 1126400\nslab_reclaimable 13910568\nslab_unreclaimable 36521016\nslab 50431584\nworkingset_refault_anon 1392129\nworkingset_refault_file 33465377\nworkingset_activate_anon 237211\nworkingset_activate_file 4754338\nworkingset_restore_anon 236782\nworkingset_restore_file 2733577\nworkingset_nodereclaim 10938\npgscan 72661470\npgsteal 46776698\npgscan_kswapd 68638278\npgscan_direct 4023064\npgscan_khugepaged 128\npgsteal_kswapd 43980391\npgsteal_direct 2796253\npgsteal_khugepaged 54\npgfault 1278115170\npgmajfault 2338922\npgrefill 50707564\npgactivate 5388051\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+CONTAINER {"name": "/musing_hoover", "image": "sha256:35ccdf1be3767f25c8f49e24afaf30aa0132225b293c0478570456a2787e520e", "running": false, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "no", "MaximumRetryCount": 0}, "resource_options": [], "memory": {}}
+CONTAINER {"name": "/doubao-hpe14-account2", "image": "doubao/redroid:13-hpe14-com1.3", "running": true, "memory_limit": 4294967296, "swap_limit": 7516192768, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": ["ro.enable.native.bridge.exec64=1", "ro.dalvik.vm.native.bridge=libhoudini.so", "androidboot.redroid_gpu_mode=guest", "androidboot.redroid_width=720", "androidboot.redroid_height=1280", "androidboot.redroid_dpi=320", "androidboot.redroid_net_ndns=2", "androidboot.redroid_net_dns1=223.5.5.5", "androidboot.redroid_net_dns2=119.29.29.29"], "memory": {"memory.current": "1432629248", "memory.peak": "3342884864", "memory.swap.current": "709046272", "memory.events": "low 0\nhigh 0\nmax 273\noom 0\noom_kill 0\noom_group_kill 0", "memory.stat": "anon 1100718080\nfile 202608640\nkernel 115060736\nkernel_stack 19021824\npagetables 38559744\nsec_pagetables 0\npercpu 36232\nsock 16384\nvmalloc 5033984\nshmem 29249536\nzswap 0\nzswapped 0\nfile_mapped 169259008\nfile_dirty 24576\nfile_writeback 0\nswapcached 39276544\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 619532288\nactive_anon 516919296\ninactive_file 56078336\nactive_file 116621312\nunevictable 8400896\nslab_reclaimable 13347824\nslab_unreclaimable 38493728\nslab 51841552\nworkingset_refault_anon 1830473\nworkingset_refault_file 33749621\nworkingset_activate_anon 273140\nworkingset_activate_file 4225184\nworkingset_restore_anon 271818\nworkingset_restore_file 3695526\nworkingset_nodereclaim 23626\npgscan 77237093\npgsteal 51768570\npgscan_kswapd 76670590\npgscan_direct 566503\npgscan_khugepaged 0\npgsteal_kswapd 51380289\npgsteal_direct 388281\npgsteal_khugepaged 0\npgfault 944764609\npgmajfault 3233410\npgrefill 61176293\npgactivate 2826758\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+CONTAINER {"name": "/doubao-hpe14-13-test", "image": "doubao/redroid:13-hpe14-com1.3", "running": true, "memory_limit": 3221225472, "swap_limit": 6442450944, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": ["ro.enable.native.bridge.exec64=1", "ro.dalvik.vm.native.bridge=libhoudini.so", "androidboot.redroid_gpu_mode=guest", "androidboot.redroid_width=720", "androidboot.redroid_height=1280", "androidboot.redroid_dpi=320", "androidboot.redroid_net_ndns=2", "androidboot.redroid_net_dns1=223.5.5.5", "androidboot.redroid_net_dns2=119.29.29.29"], "memory": {"memory.current": "1307750400", "memory.peak": "3223367680", "memory.swap.current": "541106176", "memory.events": "low 0\nhigh 0\nmax 11054\noom 0\noom_kill 0\noom_group_kill 0", "memory.stat": "anon 940736512\nfile 237125632\nkernel 112267264\nkernel_stack 18464768\npagetables 35893248\nsec_pagetables 0\npercpu 36232\nsock 16384\nvmalloc 5033984\nshmem 26603520\nzswap 0\nzswapped 0\nfile_mapped 191524864\nfile_dirty 135168\nfile_writeback 0\nswapcached 36773888\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 844034048\nactive_anon 133156864\ninactive_file 93528064\nactive_file 113819648\nunevictable 10928128\nslab_reclaimable 15465408\nslab_unreclaimable 36806064\nslab 52271472\nworkingset_refault_anon 1590824\nworkingset_refault_file 35108950\nworkingset_activate_anon 287104\nworkingset_activate_file 4799588\nworkingset_restore_anon 285961\nworkingset_restore_file 4231874\nworkingset_nodereclaim 25781\npgscan 78943518\npgsteal 54032827\npgscan_kswapd 77568888\npgscan_direct 1374630\npgscan_khugepaged 0\npgsteal_kswapd 52903309\npgsteal_direct 1129518\npgsteal_khugepaged 0\npgfault 964792128\npgmajfault 3174092\npgrefill 63996836\npgactivate 2596360\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+CONTAINER {"name": "/doubao-hpe14-test", "image": "doubao/redroid:15-hpe14-com1.3", "running": false, "memory_limit": 3221225472, "swap_limit": 6442450944, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "no", "MaximumRetryCount": 0}, "resource_options": ["ro.enable.native.bridge.exec64=1", "ro.dalvik.vm.native.bridge=libhoudini.so", "androidboot.redroid_gpu_mode=guest", "androidboot.redroid_width=720", "androidboot.redroid_height=1280", "androidboot.redroid_dpi=320", "androidboot.redroid_net_ndns=2", "androidboot.redroid_net_dns1=223.5.5.5", "androidboot.redroid_net_dns2=119.29.29.29"], "memory": {}}
+CONTAINER {"name": "/doubao-redroid-redroid-1", "image": "erstt/redroid:15.0.0_ndk_AVD", "running": false, "memory_limit": 3221225472, "swap_limit": 6442450944, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": ["ro.enable.native.bridge.exec64=1", "ro.dalvik.vm.native.bridge=libndk_translation.so", "androidboot.redroid_gpu_mode=guest", "androidboot.redroid_width=720", "androidboot.redroid_height=1280", "androidboot.redroid_dpi=320", "androidboot.redroid_net_ndns=2", "androidboot.redroid_net_dns1=223.5.5.5", "androidboot.redroid_net_dns2=119.29.29.29"], "memory": {}}
+CONTAINER {"name": "/monitor-product-worker", "image": "monitor-backend:local", "running": true, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {"memory.current": "884813824", "memory.peak": "1188081664", "memory.swap.current": "288718848", "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0", "memory.stat": "anon 879325184\nfile 2072576\nkernel 3223552\nkernel_stack 81920\npagetables 2486272\nsec_pagetables 0\npercpu 728\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 1196032\nfile_dirty 0\nfile_writeback 0\nswapcached 192512\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 798838784\nactive_anon 80678912\ninactive_file 1712128\nactive_file 360448\nunevictable 0\nslab_reclaimable 258600\nslab_unreclaimable 374744\nslab 633344\nworkingset_refault_anon 303130\nworkingset_refault_file 117812\nworkingset_activate_anon 274573\nworkingset_activate_file 54017\nworkingset_restore_anon 274572\nworkingset_restore_file 49201\nworkingset_nodereclaim 0\npgscan 8626689\npgsteal 843060\npgscan_kswapd 8482410\npgscan_direct 144279\npgscan_khugepaged 0\npgsteal_kswapd 828314\npgsteal_direct 14746\npgsteal_khugepaged 0\npgfault 58317811\npgmajfault 163048\npgrefill 37112077\npgactivate 415537\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+CONTAINER {"name": "/monitor-dashboard-api", "image": "monitor-backend:local", "running": true, "memory_limit": 8589934592, "swap_limit": 9663676416, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {"memory.current": "1780826112", "memory.peak": "4728377344", "memory.swap.current": "18173952", "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0", "memory.stat": "anon 1621651456\nfile 32186368\nkernel 126849024\nkernel_stack 770048\npagetables 4648960\nsec_pagetables 0\npercpu 728\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 2875392\nfile_dirty 0\nfile_writeback 0\nswapcached 139264\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 367099904\nactive_anon 1254690816\ninactive_file 27496448\nactive_file 4689920\nunevictable 0\nslab_reclaimable 120608720\nslab_unreclaimable 790720\nslab 121399440\nworkingset_refault_anon 16765\nworkingset_refault_file 28212\nworkingset_activate_anon 49\nworkingset_activate_file 7945\nworkingset_restore_anon 49\nworkingset_restore_file 5317\nworkingset_nodereclaim 0\npgscan 824690\npgsteal 509945\npgscan_kswapd 824690\npgscan_direct 0\npgscan_khugepaged 0\npgsteal_kswapd 509945\npgsteal_direct 0\npgsteal_khugepaged 0\npgfault 57586672\npgmajfault 7255\npgrefill 296119\npgactivate 4795\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+CONTAINER {"name": "/monitor-doubao-receiver", "image": "monitor-backend:local", "running": true, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {"memory.current": "98136064", "memory.peak": "191315968", "memory.swap.current": "40935424", "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0", "memory.stat": "anon 94654464\nfile 1273856\nkernel 1396736\nkernel_stack 98304\npagetables 503808\nsec_pagetables 0\npercpu 728\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 364544\nfile_dirty 0\nfile_writeback 0\nswapcached 811008\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 75239424\nactive_anon 20226048\ninactive_file 978944\nactive_file 294912\nunevictable 0\nslab_reclaimable 317776\nslab_unreclaimable 450784\nslab 768560\nworkingset_refault_anon 345908\nworkingset_refault_file 3536126\nworkingset_activate_anon 44868\nworkingset_activate_file 1631641\nworkingset_restore_anon 44865\nworkingset_restore_file 42268\nworkingset_nodereclaim 16\npgscan 6135594\npgsteal 4597074\npgscan_kswapd 6012472\npgscan_direct 123122\npgscan_khugepaged 0\npgsteal_kswapd 4522135\npgsteal_direct 74939\npgsteal_khugepaged 0\npgfault 188959133\npgmajfault 319090\npgrefill 5327527\npgactivate 136418\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+CONTAINER {"name": "/monitor-result-receiver", "image": "monitor-backend:local", "running": true, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {"memory.current": "31297536", "memory.peak": "58699776", "memory.swap.current": "35090432", "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0", "memory.stat": "anon 25178112\nfile 2699264\nkernel 2752512\nkernel_stack 180224\npagetables 405504\nsec_pagetables 0\npercpu 728\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 1359872\nfile_dirty 8192\nfile_writeback 0\nswapcached 667648\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 12808192\nactive_anon 13037568\ninactive_file 278528\nactive_file 2420736\nunevictable 0\nslab_reclaimable 1681680\nslab_unreclaimable 459712\nslab 2141392\nworkingset_refault_anon 58272\nworkingset_refault_file 121785\nworkingset_activate_anon 5431\nworkingset_activate_file 48612\nworkingset_restore_anon 5431\nworkingset_restore_file 42869\nworkingset_nodereclaim 4158\npgscan 987021\npgsteal 559375\npgscan_kswapd 932909\npgscan_direct 54112\npgscan_khugepaged 0\npgsteal_kswapd 531364\npgsteal_direct 28011\npgsteal_khugepaged 0\npgfault 64521673\npgmajfault 110913\npgrefill 1974875\npgactivate 68481\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+CONTAINER {"name": "/monitor-content-worker", "image": "monitor-content-worker:local", "running": true, "memory_limit": 3221225472, "swap_limit": 6442450944, "cpu_quota": 0, "cpuset": "", "shm": 536870912, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {"memory.current": "1339056128", "memory.peak": "3221250048", "memory.swap.current": "371326976", "memory.events": "low 0\nhigh 0\nmax 1566\noom 0\noom_kill 0\noom_group_kill 0", "memory.stat": "anon 716636160\nfile 594329600\nkernel 27561984\nkernel_stack 98304\npagetables 2514944\nsec_pagetables 0\npercpu 952\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 6770688\nfile_dirty 98304\nfile_writeback 0\nswapcached 528384\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 351838208\nactive_anon 365326336\ninactive_file 585973760\nactive_file 8355840\nunevictable 0\nslab_reclaimable 24596976\nslab_unreclaimable 313648\nslab 24910624\nworkingset_refault_anon 1349304\nworkingset_refault_file 43225646\nworkingset_activate_anon 253515\nworkingset_activate_file 17010648\nworkingset_restore_anon 253515\nworkingset_restore_file 15773240\nworkingset_nodereclaim 0\npgscan 332203115\npgsteal 311617152\npgscan_kswapd 330784467\npgscan_direct 1418520\npgscan_khugepaged 128\npgsteal_kswapd 310354860\npgsteal_direct 1262282\npgsteal_khugepaged 10\npgfault 1836459733\npgmajfault 4893716\npgrefill 183965498\npgactivate 1617493\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+CONTAINER {"name": "/monitor-postgres", "image": "postgres:17-bookworm", "running": true, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {"memory.current": "1046810624", "memory.peak": "4912607232", "memory.swap.current": "20164608", "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0", "memory.stat": "anon 52682752\nfile 975306752\nkernel 17653760\nkernel_stack 311296\npagetables 7634944\nsec_pagetables 0\npercpu 5488\nsock 0\nvmalloc 24576\nshmem 142422016\nzswap 0\nzswapped 0\nfile_mapped 203493376\nfile_dirty 0\nfile_writeback 0\nswapcached 1560576\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 155709440\nactive_anon 40443904\ninactive_file 754954240\nactive_file 77930496\nunevictable 0\nslab_reclaimable 7175728\nslab_unreclaimable 2323744\nslab 9499472\nworkingset_refault_anon 620531\nworkingset_refault_file 526384861\nworkingset_activate_anon 243138\nworkingset_activate_file 204858939\nworkingset_restore_anon 243137\nworkingset_restore_file 51945159\nworkingset_nodereclaim 645137\npgscan 572918566\npgsteal 567065076\npgscan_kswapd 571528183\npgscan_direct 1390063\npgscan_khugepaged 320\npgsteal_kswapd 565704695\npgsteal_direct 1360125\npgsteal_khugepaged 256\npgfault 23533322403\npgmajfault 799327\npgrefill 313607995\npgactivate 1064387\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+CONTAINER {"name": "/monitor-redis", "image": "redis:7-bookworm", "running": true, "memory_limit": 0, "swap_limit": 0, "cpu_quota": 0, "cpuset": "", "shm": 67108864, "restart": {"Name": "unless-stopped", "MaximumRetryCount": 0}, "resource_options": [], "memory": {"memory.current": "4943872", "memory.peak": "59297792", "memory.swap.current": "2215936", "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0", "memory.stat": "anon 1687552\nfile 2568192\nkernel 557056\nkernel_stack 114688\npagetables 172032\nsec_pagetables 0\npercpu 728\nsock 0\nvmalloc 12288\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 1433600\nfile_dirty 4096\nfile_writeback 0\nswapcached 131072\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 585728\nactive_anon 1232896\ninactive_file 577536\nactive_file 1990656\nunevictable 0\nslab_reclaimable 71064\nslab_unreclaimable 171896\nslab 242960\nworkingset_refault_anon 3914\nworkingset_refault_file 193583\nworkingset_activate_anon 845\nworkingset_activate_file 31162\nworkingset_restore_anon 845\nworkingset_restore_file 30409\nworkingset_nodereclaim 0\npgscan 355775\npgsteal 220569\npgscan_kswapd 355775\npgscan_direct 0\npgscan_khugepaged 0\npgsteal_kswapd 220569\npgsteal_direct 0\npgsteal_khugepaged 0\npgfault 3505303\npgmajfault 12952\npgrefill 370468\npgactivate 14071\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0"}}
+SYSCTL vm.swappiness = 60
+vm.vfs_cache_pressure = 100
+vm.overcommit_memory = 1
+
+SERVICES   containerd.service                                             loaded active running containerd container runtime
+  cron.service                                                   loaded active running Regular background program processing daemon
+  dbus.service                                                   loaded active running D-Bus System Message Bus
+  docker.service                                                 loaded active running Docker Application Container Engine
+  fwupd.service                                                  loaded active running Firmware update daemon
+  geo-content-api.service                                        loaded active running GEO creation-only service
+  geo-content-worker.service                                     loaded active running GEO creation-only worker
+  geo-creation-materials.service                                 loaded active running Creation-only private materials, idle GEO account windows
+  geo-creation-studio.service                                    loaded active running Creation studio daily product tasks and workflow orchestration
+  geo-daily-control.service                                      loaded active running GEO daily task controls and safe continuation
+  geo-deepseek-public-ingest.service                             loaded active running Scoped DeepSeek public upload gateway
+  geo-deepseek-upload-tunnel.service                             loaded active running DeepSeek upload reverse tunnel
+  geo-editorial-api-worker.service                               loaded active running Media editorial project geo-editorial-api-worker
+  geo-editorial-coordinator.service                              loaded active running Media editorial project geo-editorial-coordinator
+  geo-editorial-scheduler.service                                loaded active running Media editorial project geo-editorial-scheduler
+  geo-editorial-session-watch.service                            loaded active running Media editorial project geo-editorial-session-watch
+  geo-monitor-status.service                                     loaded active running GEO unified capture status
+  geo-web@geo-panel-wenxin-card-20261102-112727-b264bf7e.service loaded active running GEO web capture batch geo-panel-wenxin-card-20261102-112727-b264bf7e
+  geo-yuanbao-wechat-qr-compat.service                           loaded active running Yuanbao WeChat QR and system WebView compatibility
+  getty@tty1.service                                             loaded active running Getty on tty1
+  irqbalance.service                                             loaded active running irqbalance daemon
+  ModemManager.service                                           loaded active running Modem Manager
+  monitor-live-display.service                                   loaded active running /usr/local/bin/monitor-live
+  monitor-vps2-tunnel.service                                    loaded active running Live monitor reverse tunnel to VPS2
+  multipathd.service                                             loaded active running Device-Mapper Multipath Device Controller
+  networkd-dispatcher.service                                    loaded active running Dispatcher daemon for systemd-networkd
+  NetworkManager.service                                         loaded active running Network Manager
+  packagekit.service                                             loaded active running PackageKit Daemon
+  polkit.service                                                 loaded active running Authorization Manager
+  redroid-doubao-native-log.service                              loaded active running Collect native faults from the Doubao Android container
+  rsyslog.service                                                loaded active running System Logging Service
+  snapd.service                                                  loaded active running Snap Daemon
+  ssh.service                                                    loaded active running OpenBSD Secure Shell server
+  systemd-journald.service                                       loaded active running Journal Service
+  systemd-logind.service                                         loaded active running User Login Management
+  systemd-networkd.service                                       loaded active running Network Configuration
+  systemd-resolved.service                                       loaded active running Network Name Resolution
+  systemd-timesyncd.service                                      loaded active running Network Time Synchronization
+  systemd-udevd.service                                          loaded active running Rule-based Manager for Device Events and Files
+  thermald.service                                               loaded active running Thermal Daemon Service
+  udisks2.service                                                loaded active running Disk Manager
+  unattended-upgrades.service                                    loaded active running Unattended Upgrades Shutdown
+  upower.service                                                 loaded active running Daemon for power management
+  user@1000.service                                              loaded active running User Manager for UID 1000
+  wpa_supplicant.service                                         loaded active running WPA supplicant
+
+PS   PID  PPID COMMAND           RSS %CPU
+61550 61433 python          1589988 15.6
+53971 44918 com.larus.nova  1028004 50.2
+48006 21345 unyuan.app.chat 909388 12.9
+14643 33116 com.larus.nova  878768 38.2
+50088 50065 python          863996 5.0
+30297 30284 python          710496 6.3
+63934 63886 chrome          239548 3.8
+  552 24335 postgres        192984 0.1
+63383 24335 postgres        162800 0.0
+ 4641 24335 postgres        152420 0.0
+29278 24335 postgres        148044 0.6
+49176 24335 postgres        147668 0.4
+47468 24335 postgres        147176 0.2
+64026 63949 chrome          146240 1.3
+53063 24335 postgres        142564 0.0
+10933 24335 postgres        141916 0.0
+24401 24335 postgres        136760 0.0
+24402 24335 postgres        136532 0.0
+63886 63885 MainThread      135132 1.8
+65284 24335 postgres        133792 154
+24405 24335 postgres        131432 0.0
+21870 21345 ndroid.systemui 122736 0.1
+44998 44918 system_server   120212 0.1
+33782 33116 ndroid.systemui 116476 0.0
+33352 33116 system_server   115988 0.1
+21464 21345 system_server   116076 0.1
+63971 63934 chrome          114624 0.3
+46358 24335 postgres        105808 0.0
+64036 63949 chrome          103432 0.8
+39539 38642 ndroid.systemui 102688 0.0
+24843 24821 python          97164  0.1
+45583 44918 ndroid.systemui 97948  0.0
+62158 61186 ndroid.systemui 96952  0.0
+3299487   1 dockerd         92540  0.9
+ 6329 44918 putmethod.latin 90932  0.0
+37716 37702 node            89196  0.0
+61366 61186 system_server   87220  0.0
+41535 41387 system_server   87156  0.0
+38806 38642 system_server   86228  0.0
+42359 41387 ndroid.systemui 84800  0.0
+54953 24335 postgres        83696  0.0
+ 9440 21345 putmethod.latin 81372  0.1
+11672 33116 putmethod.latin 79328  0.0
+54773 44918 larus.nova:push 78300  0.2
+34117 24335 postgres        75992  0.0
+63949 63934 chrome          75512  0.1
+63948 63934 chrome          75140  0.1
+ 8843 21345 droid.launcher3 74316  0.0
+64033 63949 chrome          75080  0.0
+48179 21345 :xg_vip_service 73440  0.1
+63970 63948 chrome          72460  1.1
+ 8830 33116 droid.launcher3 68456  0.0
+  814     1 containerd      65636  0.8
+54380     1 systemd-journal 63740  0.0
+54158 21345 ssioncontroller 63168  0.0
+63885 63884 python          61064  1.2
+ 8753 44918 droid.launcher3 58024  0.0
+50449 33116 viders.calendar 58364  0.0
+63981 63949 chrome          53304  0.1
+59816 44918 viders.calendar 51232  0.0
+12799 61186 viders.calendar 49328  0.0
+62431 61186 rkstack.process 47948  0.0
+54161 22171 ocessService0:0 44620  0.0
+39823 38642 rkstack.process 45316  0.0
+34120 24335 postgres        45464  0.0
+ 7940 41387 putmethod.latin 43216  0.0
+42523 41387 rkstack.process 44556  0.0
+31536     1 python          44044  1.1
+ 9868 41387 id.ext.services 40340  0.0
+53632 33116 id.ext.services 39924  0.0
+13367 44918 id.ext.services 39820  0.0
+22014 21345 rkstack.process 40576  0.0
+33947 33116 rkstack.process 40204  0.0
+33954 33116 m.android.phone 34720  0.0
+45735 44918 rkstack.process 34688  0.0
+22089 21345 m.android.phone 33168  0.0
+56655 21345 id.ext.services 32540  0.0
+20627 61186 hub.uiautomator 30808  0.0
+31537     1 python          30348  7.6
+44012 41387 droid.launcher3 28408  0.0
+45796 44918 m.android.phone 29384  0.0
+20626 38642 hub.uiautomator 27872  0.0
+  462     1 multipathd      28820  0.0
+ 9903 61186 id.ext.services 27368  0.0
+53828 53804 python          27892  0.1
+65254 13347 docker          28060  0.0
+44020 61186 droid.launcher3 25676  0.0
+21265 20889 surfaceflinger  26648  0.2
+47143     1 python          27136  0.8
+18465 34115 ocessService0:0 25716  0.0
+11848 61186 android.smspush 25112  0.0
+11904 41387 android.smspush 24572  0.0
+ 9885 38642 id.ext.services 23636  0.0
+44821 44431 surfaceflinger  24316  0.2
+56696 21345 android.smspush 22884  0.0
+34506 33116 rs.media.module 23628  0.0
+45935 38642 droid.launcher3 22156  0.0
+11821 38642 android.smspush 22952  0.0
+53648 33116 android.smspush 22336  0.0
+42588 41387 m.android.phone 21652  0.0
+13384 44918 android.smspush 21880  0.0
+33055 32652 surfaceflinger  21072  0.4
+46311 44918 rs.media.module 20012  0.0
+22561 21345 rs.media.module 20388  0.0
+45778 44918 com.android.se  19432  0.0
+35202     1 python          19856  0.3
+39889 38642 m.android.phone 18980  0.0
+62499 61186 m.android.phone 18712  0.0
+33951 33116 com.android.se  17512  0.0
+22022 21345 com.android.se  16988  0.0
+43260 41387 rs.media.module 15336  0.0
+42577 41387 com.android.se  13936  0.0
+12548     1 snapd           14364  0.0
+58006     1 NetworkManager  14668  0.0
+40460 38642 rs.media.module 12616  0.0
+31538     1 creation-runner 14232  2.6
+63195 61186 rs.media.module 12284  0.0
+62481 61186 com.android.se  11448  0.0
+33116 32652 main            13416  0.0
+39876 38642 com.android.se  11616  0.0
+13347     1 python          12584  0.2
+65455 65448 python3         12248  0.0
+21345 20889 main            11744  0.0
+31565 31537 python          11984  0.3
+44918 44431 main            11732  0.0
+24313     1 containerd-shim 12156  0.5
+58518 45860 ocessService0:0 11080  0.0
+65319 56058 sshd            10888  0.0
+61186 60628 main             9968  0.0
+41387 40852 main             9800  0.0
+31568 31537 python           9940  0.3
+38642 38168 main             9588  0.0
+31560 31537 python          10044  0.3
+35204     1 python          10000  0.0
+11583     1 python           9436  0.0
+31550 31537 python          10080  0.2
+31546 31537 python           9824  0.2
+31559 31537 python           9964  0.3
+31551 31537 python           9704  0.3
+31552 31537 python           9820  0.3
+31570 31537 python           9860  0.3
+31547 31537 python           9724  0.3
+31554 31537 python           9848  0.2
+61102 60628 surfaceflinger   8956  0.0
+31558 31537 python           9560  0.3
+31557 31537 python           9488  0.3
+38546 38168 surfaceflinger   8956  0.0
+    1     0 systemd          9716  0.4
+31553 31537 python           9448  0.3
+20866     1 containerd-shim  9568  0.2
+41292 40852 surfaceflinger   9080  0.0
+39230     1 ssh              8612  0.0
+31562 31537 python           9368  0.2
+31548 31537 python           9232  0.1
+31549 31537 python           9128  0.1
+33161 32652 binder:184_4     8120  0.0
+44929 44431 binder:191_4     7920  0.0
+15714     1 ssh              8400  0.0
+65278 24313 psql             8252  4.0
+37608     1 containerd-shim  7632  0.0
+65428 65319 sshd             8064  0.0
+32824 32652 binder:44_2      7100  0.0
+21354 20889 binder:181_4     7604  0.0
+ 5947     1 fwupd            7364  0.0
+65303     1 python           7520  0.0
+61433     1 containe
+STATE_FILES /opt/monitor/runtime ['remote_product_ai_rate_state.json', 'remote_product_ai_rate_state.before_repair.json', 'dashboard_view_cache.json', 'geo_collection_status.json', 'remote_product_ai_rate_state.before-wenxin-20260902.json', 'lan_result_receiver.json', 'lan_result_pairing.json']
+STATE_FILES /home/user/redroid-doubao ['dual-pause-fix-acceptance-20261014.json', 'redroid-doubao-native-log.service', 'last_send-doubao-hpe14-13-test.json', 'redroid-geo-products.account1-new.service', 'redroid-geo-products-account2.new.service', 'redroid-geo-products-account2.service', 'redroid-geo-products-account2.new3.service', 'redroid-doubao-soak24h.service', 'hpe14-questions.json', 'pause-fix-redroid-geo-products.service', 'pause-fix-redroid-geo-products-account2.service', 'redroid-doubao-hpe14-worker.service', 'account2-recovery-acceptance-20261014.json', 'hpe14-soak-questions.json', 'last_send-doubao-hpe14-account2.json']
+STATE_FILES /home/user/redroid-yuanbao ['installation.json', 'last_send.json', 'readiness-report.json', 'container_resources.json', 'last_send-yuanbao-hpe14-android13.json', 'apk-download.json', 'capture_release.json']

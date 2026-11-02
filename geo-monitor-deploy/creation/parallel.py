@@ -17,6 +17,8 @@ def eligible(root,now=None):
     retry=read(root/'known_preflight_retry.json')
     if retry.get('state')=='waiting' and retry.get('next_at',0)>now:return False
     if state(root).get('paused') and not (retry.get('state')=='waiting' and retry.get('budget_pause')):return False
+    from .pricing_window import resume_at
+    if resume_at(now) is not None:return False
     return not (job.get('preparation')=='pending' and read(root/'preparation_retry.json').get('next_at',0)>now)
 
 class Scheduler:

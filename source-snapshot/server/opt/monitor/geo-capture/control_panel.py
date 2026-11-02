@@ -21,6 +21,8 @@ MODELS = {
     'yuanbao': {'name':'元宝','kind':'native','rounds':5,'interval':45,'minimum':30,'login':True},
     'deepseek2': {'name':'DeepSeek 2','kind':'native','backend':'android','rounds':3,'interval':600,'minimum':600,'maximum_interval':900,'interval_policy':'随机10–15分钟；关闭深度思考，仅开启智能搜索','login':True},
 }
+for _lane in (3,4):
+    MODELS[f'doubao{_lane}']={**MODELS['doubao2'],'name':f'豆包 {_lane}'}
 for _meta in MODELS.values():
     _meta['maximum_rounds']=200 if _meta['kind']=='native' else 20
 MODELS['deepseek']['maximum_rounds']=20

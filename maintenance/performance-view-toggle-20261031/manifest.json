@@ -1,0 +1,18 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceCenter.tsx",
+      "archive": "app/PerformanceCenter.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceCenter.tsx",
+      "before": "3ea0a471cedf20b0532bff263ec76ab189509e0597ffc590aa483c47ca437796",
+      "sha256": "79e1681ae2c1c00bae4dfa4fd586cc501ac180aec5bc57fba6b0086e680ac6aa"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/globals.css",
+      "archive": "app/globals.css",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/globals.css",
+      "before": "c65a06eb3ee58c41f1a6a39a71d4405d099f0ae114a317cf13be8b5eac6b38ff",
+      "sha256": "562cae386f3509a626da7258b1282b5f63a89ab0d7cc40c45a4ccc0f482cd541"
+    }
+  ]
+}

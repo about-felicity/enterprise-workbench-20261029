@@ -1,0 +1,40 @@
+{
+  "status": "live",
+  "public_url": "https://1any.top/geo_monitor/#performance",
+  "historical_results_preserved": true,
+  "tests": 11,
+  "files": [
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceCenter.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceCenter.tsx",
+      "sha256": "3469061e12a37bce7e0fe02ae5c8d16ba88e1e184acda6f230c8c72a30c579da"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceConfirmation.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceConfirmation.tsx",
+      "sha256": "f4c28a221fb50c3320acbccba338622e279f03d43506dde58bb7f4491cc034a5"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/globals.css",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/globals.css",
+      "sha256": "392db0a0fa8dd27832a631092e41ccf0366f6f2534736a1a60a1c3934dbc5da7"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/doubao_dashboard_server.py",
+      "server": "/opt/monitor/doubao_dashboard_server.py",
+      "sha256": "f9abed9bc8a74cd661193a243dbc2fa15852830da844d6acb9f71304dd177b35"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/performance_identity.py",
+      "server": "/opt/monitor/monitor_core/performance_identity.py",
+      "sha256": "970a33de24a5af2bcd182177e08679ab7ad6ddab986dc7e77fe73df31537f2a8"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/performance_confirmation.py",
+      "server": "/opt/monitor/monitor_core/performance_confirmation.py",
+      "sha256": "26a240c03d156dec06ce2a1d0b99cf828b186d894af1be22468ec04a58383653"
+    }
+  ],
+  "public_frontend_current": true,
+  "deployed_hashes_verified": true
+}

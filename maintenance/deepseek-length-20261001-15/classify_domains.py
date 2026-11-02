@@ -1,0 +1,31 @@
+import collections,json,ipaddress
+from pathlib import Path
+from urllib.parse import urlsplit
+D=Path('maintenance/deepseek-length-20261001-15');data=json.loads((D/'dataset.json').read_text('utf8'))
+mainland='zhihu.com taobao.com smzdm.com qq.com sohu.com sina.com.cn sina.cn baidu.com cnki.net 39.net toutiao.com jd.com maigoo.com eastmoney.com douban.com weibo.com 163.com jiemian.com 120ask.com cqn.com.cn cnpharm.com 168report.com 51tomi.com cnqjw.com sq1996.com sgpjbg.com cnpp100.com chinapp.com familydoctor.cn patsnap.com zhihuiya.com yaozh.com pinduoduo.com people.com.cn china.com.cn gmwh.cn gmw.cn cqvip.com ugoshop.com cqmmgo.com 10jqka.com.cn thepaper.cn bjnews.com.cn ngabbbs.com ngabbs.com bilibili.com shobserver.com syiptv.com miaoshou.com jianke.com youzan.com cnr.cn pconline.com.cn pinguan.com pingwest.com dzwww.com oeeee.com ce.cn nntv.cn cnenergynews.cn'.split()
+foreign='biteki.com vogue.com sweetcare.com hwahae.com cosmopolitan.com my-best.com incibeauty.com lyko.com ewg.org harpersbazaar.com patents.google.com storage.googleapis.com dealmoon.com sephora.com revolve.com cosme.net cosmeticworld.ca jddonline.com instyle.com nytimes.com lovelyskin.com shopmyexchange.com goodhousekeeping.com ovid.com bloomingdales.com wiley.com medrxiv.org springer.com kao.com dermapproved.com cnn.com evidensdebeaute.com topsante.com weee.com fashion-press.net uol.com.br accessdata.fda.gov mayoclinic.org sciencedirect.com zenodo.org nature.com thecut.com ro.co allure.com digikala.com gminsights.com tandfonline.com foreo.com lemon8-app.com lazada.sg jcasonline.com doaj.org newbeauty.com janeyoomd.com acs.org consumerreports.org revolve.com foligain.com boticinal.com iherb.com marieclairearabia.com droppeal.com dermates t.com womenshealthmag.com adorebeauty.com realsimple.com sundayriley.com everydayhealth.com buffcitysoap.com makemymask.co dermtodoor.com marieclaire.com apollohospitals.com caretobeauty.com ebay.com swaghairshop.com alergicliving.com allercigliving.com muckrack.com corp.shiseido.com anua.com millebeaute.com vonmaur.com veroniquecloutier.com rosecrown.net woot.com whowhatwear.com mistinecosmetics.com atlassian.com searchingc.com cfdam-health.com marketpublishers.com jcadonline.com jcad.mydigitalpublication.com fda.gov aveda.com thann.info lookfantastic.com maelove.com womanandhome.com buyma.com henkel.com lush.com newyorkmagazine.org thedermdigest.com marketresearch.com yakup.com dailypharm.com spacenk.com today.com redken.com k2derm.com optilaboratories.com caudalie.com popbee.com clevelandclinic.org haba.com clio makeup.com continentalhospitals.com dermavidya.com uptodate.com top1health.com voguescandinavia.com epiforecasts.io jaad.org strawberrynet.com nymag.com ocu.org nuhealthwellness.co threecosmetics.com byoma.com miin-cosmetics.com dailymail.com bellcosme.com cosrx.com theinkeylist.com panpuri.com sheknows.com walmart.com cirs-group.com biccamera.com refinery29.com lolavie.com fragrancenet.com skinsafeproducts.com drwolffgroup.com rakuten.net globelife.com pacifiko.com ichgcp.net fmhr.net elimparcial.com jiji.com parents.com klairs.com mdpi.com lofficielph.com thann.info honeycosmetics.com dermtest.com jessicahk.com cosmeticworld.ca'.split()
+# Country-specific foreign domains are separated from HK/Macao/Taiwan.
+foreign_tlds={'jp','uk','de','fr','au','ru','vn','at','be','nl','pt','es','it','br','th','sg','ca','eu','ua','pl','se','no','fi','hu','tr','pe','my','kz','in','kr','mx','ae','ch','id','nz','kw','dk','cz','ec','ie','za','il','ro'}
+hkmt=['hktvmall.com','beauty321.com','stheadline.com','hk01.com','styletc.com','yesstyle.com','goxip.com','pinkoi.com','japaholic.com','poponote.com','popdaily.com.tw','etmall.com.tw','beauty321.com','gomaji.com','jinyanstore.com','more-news.tw','himalayataiwan.com','strawberrynet.com','popbee.com','stnn.cc','poplady-mag.com','breezeonline.com','yohohongkong.com','lohas time.com.tw']
+mainland += 'cosmopolitancn.com ccfdie.org yzwb.net'.split()
+foreign += 'dermatest.com hypebae.com dosfarma.com ilmagazinedelparrucchiere.com mujerhoy.com wwdjapan.com elle.com koreadepart.com yahoo.com faz.net popbela.com danawa.com aljamila.com nih.gov usnews.com wellwhisk.com leclerc globo.com aufeminin.com ulta.com mi-mollet.com amazon.com derm atest.com vogueadria.com tci-thaijo.org gqthailand.com ellearabia.com ellethailand.com allergicliving.com ebsco.com henkel-dam.com coppel.com europepmc.org chosunbiz.com headandshouldersarabia.com tribunnews.com futura-sciences.com vivi.tv femaledaily.com cliomakeup.com ozon.com nate.com quechoisir.org stanford.edu parapharmacielafayette.com doi.org wcd2023singapore-abs.org ryutsuu.biz'.split()
+hkmt += 'hket.com voguehk.com mingpao.com sundaymore.com ztylez.com hkej.com eshop-lungfung.com threecosmeticshk.com'.split()
+def belongs(h,roots):return next((r for r in roots if h==r or h.endswith('.'+r)),None)
+def classify(h):
+ if not h or '.' not in h or 'xn--' in h:return 'invalid','畸形或不完整域名'
+ try:ipaddress.ip_address(h);return 'unknown','IP地址，未核实出版归属'
+ except ValueError:pass
+ if h.endswith(('.hk','.tw','.mo')) or belongs(h,hkmt) or h.startswith(('hk.','tw.')):return 'hk_macao_taiwan','港澳台区域站点，单列不并入大陆主表'
+ if h.endswith('.cn'):
+  if belongs(h,['dealmoon.cn','lookfantastic.cn','msdmanuals.cn']):return 'foreign','海外平台中文站，保守剔除'
+  return 'mainland','中国大陆区域域名，排除已知海外服务后按区域站点归类'
+ if belongs(h,mainland):return 'mainland','已识别的大陆出版/内容平台'
+ if belongs(h,foreign) or h.rsplit('.',1)[-1] in foreign_tlds:return 'foreign','已识别海外平台或国家区域站点'
+ return 'unknown','通用域名归属未核实，保守单列'
+counts=collections.Counter(urlsplit(a['canonical_url']).netloc for a in data['articles'])
+labels={h:{'region':classify(h)[0],'reason':classify(h)[1],'unique_urls':n} for h,n in counts.items()}
+(D/'domain_classification.json').write_text(json.dumps(labels,ensure_ascii=False,indent=2),encoding='utf8')
+print('COUNTS',dict(collections.Counter(x['region'] for x in labels.values())))
+print('URL_COUNTS',dict(collections.Counter({k:sum(v['unique_urls'] for v in labels.values() if v['region']==k) for k in {v['region'] for v in labels.values()}})))
+for h,v in sorted(labels.items(),key=lambda x:x[1]['unique_urls'],reverse=True):
+ if v['region']=='unknown':print(h,v['unique_urls'])

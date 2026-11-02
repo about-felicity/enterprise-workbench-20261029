@@ -1,0 +1,68 @@
+COUNTS {'completed': 6, 'pending': 161, 'prepared': 1}
+TASK {'ordinal': 6, 'state': 'completed', 'capture_retries': 1, 'request_id': '1bddbaf07e7a9070466bf6592f529ffa', 'error': None}
+TASK {'ordinal': 7, 'state': 'prepared', 'capture_retries': 0, 'request_id': None, 'error': None}
+TASK {'ordinal': 8, 'state': 'pending', 'capture_retries': 0, 'request_id': None, 'error': None}
+TASK {'ordinal': 9, 'state': 'pending', 'capture_retries': 0, 'request_id': None, 'error': None}
+PRESERVED 5
+HEALTH {
+  "batch": "geo-panel-yuanbao-20261102-090004-bb1beb6a",
+  "planned": 168,
+  "prompt_mode": "question_only",
+  "model": "yuanbao",
+  "captured": 6,
+  "geo_processed": 6,
+  "delivery_errors": [],
+  "nontext_observations": 0,
+  "nontext_processed": 0,
+  "nontext_pending": 0,
+  "unavailable": 0,
+  "time": 1793582871.163861,
+  "heartbeat_expires_at": 1793583021.1638613,
+  "bridge_pid": 28446,
+  "tasks": {
+    "completed": 6,
+    "pending": 161,
+    "prepared": 1
+  },
+  "status": "running",
+  "memory": {
+    "app_alive": true,
+    "pid": 27220,
+    "java_alloc_kib": 46725,
+    "java_size_kib": 145029,
+    "java_limit_kib": 524288,
+    "java_fraction": 0.08912086486816406,
+    "native_alloc_kib": 241490,
+    "app_pss_kib": 987591,
+    "container_bytes": 1588781056,
+    "container_working_bytes": 1490362368,
+    "container_limit_bytes": 4294967296,
+    "container_fraction": 0.3470020294189453,
+    "app_pss_fraction": 0.2354600429534912,
+    "sampled_at": 1793582827.6810637,
+    "last_exit": {
+      "pid": 27476,
+      "reason": "user_requested"
+    },
+    "pending": "",
+    "high_samples": 0
+  },
+  "progress": {
+    "phase": "awaiting_ack",
+    "task_id": "f3a6c4d4-5458-54ba-b9f2-bd436b9f4eec",
+    "ordinal": 7,
+    "changed_at": 1793582871.1638582,
+    "reason": "",
+    "deadline_at": 1793583768.5146704
+  }
+}
+HASH 3783e203d96bc43dbce8f2ca5ac6bb2257a9bb07bc4fa2198d569de5ca490101
+{"event": "captured", "ordinal": 4, "body_length": 1984, "sources": 18}
+{"event": "captured", "ordinal": 5, "body_length": 2265, "sources": 38}
+Stopping GEO native Doubao capture batch geo-panel-yuanbao-20261102-090004-bb1beb6a...
+geo-native@geo-panel-yuanbao-20261102-090004-bb1beb6a.service: Deactivated successfully.
+Stopped GEO native Doubao capture batch geo-panel-yuanbao-20261102-090004-bb1beb6a.
+geo-native@geo-panel-yuanbao-20261102-090004-bb1beb6a.service: Consumed 15.073s CPU time.
+Started GEO native Doubao capture batch geo-panel-yuanbao-20261102-090004-bb1beb6a.
+{"event": "captured", "ordinal": 6, "body_length": 1488, "sources": 41}
+

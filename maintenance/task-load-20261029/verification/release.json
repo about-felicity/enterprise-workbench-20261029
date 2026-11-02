@@ -1,0 +1,30 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/creation/runtime.py",
+      "server": "/opt/monitor/geo-content/creation/runtime.py",
+      "sha256": "9c4d62b9236db5e1589406db28305cad125a3534b9b39a523b0d6c1706eb6466"
+    },
+    {
+      "source": "geo-monitor-deploy/creation/service.py",
+      "server": "/opt/monitor/geo-content/creation/service.py",
+      "sha256": "ba2dd5b3055a89ef847f574e78c017737e9f47d7db44fcc10eca6bf75fbb8582"
+    },
+    {
+      "source": "geo-monitor-deploy/creation/panel.html",
+      "server": "/opt/monitor/geo-content/creation/panel.html",
+      "sha256": "a37f1eca78e646566a13adc837f9a5c6f29f6b862fdc4e196c5871168cd32fe6"
+    }
+  ],
+  "workers_unchanged": true,
+  "performance": {
+    "full": {
+      "seconds": 4.491,
+      "bytes": 3906202
+    },
+    "tasks": {
+      "seconds": 0.593,
+      "bytes": 116372
+    }
+  }
+}

@@ -2122,6 +2122,30 @@ def _schedule_owned_product_board_refresh(
     ).start()
 
 
+_PERFORMANCE_GEO_CACHE = {}
+_PERFORMANCE_GEO_LOCK = threading.Lock()
+
+
+def _employee_assessment_payload(params):
+    """Dedicated source-free query; independent from the heavy overview."""
+    from datetime import date
+    from zoneinfo import ZoneInfo
+    from monitor_core.employee_assessment import build_assessment, load_config
+    month = str((params.get("month") or ["2026-10"])[0])
+    as_of = str((params.get("as_of") or [""])[0])
+    load_config(month)  # Validate before passing dates to the database.
+    today = datetime.now(ZoneInfo("Asia/Shanghai")).date()
+    start = datetime.strptime(month + "-01", "%Y-%m-%d").date()
+    following = (start.replace(day=28) + timedelta(days=4)).replace(day=1)
+    cutoff = date.fromisoformat(as_of) if as_of else min(today, following - timedelta(days=1))
+    if cutoff < start or cutoff >= following or cutoff > today:
+        raise ValueError("请选择考核月内、不晚于今天的截止日期")
+    from monitor_core.performance_geo_cache import load_rows
+    rows = load_rows(start.isoformat(), min(today, following-timedelta(days=1)).isoformat(),
+                     ENTERPRISE_MONITOR_QUESTIONS)
+    return build_assessment(rows, month=month, as_of=cutoff.isoformat(), today=today)
+
+
 def _with_fresh_owned_product_board(result, summary_month=""):
     """Overlay the live owned-product matrix on a possibly stale full snapshot.
 
@@ -8319,11 +8343,44 @@ class DashboardHandler(BaseHTTPRequestHandler):
         self.send_bytes(b"", "text/plain; charset=utf-8", 204)
 
     def do_POST(self):
+        path = self.path.split("?", 1)[0]
         origin = self.headers.get("Origin", "")
-        if origin and not self.is_allowed_dashboard_origin(origin):
+        if path not in {"/api/performance-entry/save", "/api/performance-entry/confirmation"} and origin and not self.is_allowed_dashboard_origin(origin):
             self.send_json({"ok": False, "error": "forbidden origin"}, 403)
             return
-        path = self.path.split("?", 1)[0]
+        if path == "/api/performance-entry/confirmation":
+            from monitor_core import performance_identity, performance_confirmation
+            try:
+                actor = performance_identity.authorize_session_write(self.headers)
+                length = int(self.headers.get("Content-Length", "0"))
+                if not 0 < length <= 4096 or self.headers.get("Content-Type", "").split(";")[0] != "application/json":
+                    raise ValueError("需要不超过4KB的JSON数据")
+                payload = json.loads(self.rfile.read(length).decode("utf8"))
+                if not isinstance(payload, dict):raise ValueError("请求格式不正确")
+                self.send_json(performance_confirmation.act(payload, actor, performance_identity.session_hash(self.headers),
+                    lambda month: _employee_assessment_payload({"month": [month]})))
+            except PermissionError as exc:self.send_json({"ok": False, "error": str(exc)}, 403)
+            except (ValueError, UnicodeError) as exc:self.send_json({"ok": False, "error": str(exc)}, 400)
+            except Exception:self.send_json({"ok": False, "error": "确认操作暂时失败，请重试"}, 503)
+            return
+        if path == "/api/performance-entry/save":
+            from monitor_core import performance_identity, performance_store
+            try:
+                actor = performance_identity.authorize_write(self.headers)
+                length = int(self.headers.get("Content-Length", "0"))
+                if not 0 < length <= 262144 or self.headers.get("Content-Type", "").split(";")[0] != "application/json":
+                    raise ValueError("需要不超过256KB的JSON数据")
+                payload = json.loads(self.rfile.read(length).decode("utf8"))
+                self.send_json(performance_store.save(payload, actor))
+            except PermissionError as exc:
+                self.send_json({"ok": False, "error": str(exc)}, 403)
+            except performance_store.ConflictError as exc:
+                self.send_json({"ok": False, "error": str(exc)}, 409)
+            except (ValueError, UnicodeError) as exc:
+                self.send_json({"ok": False, "error": str(exc)}, 400)
+            except Exception:
+                self.send_json({"ok": False, "error": "保存失败，请保留已填写数据后重试"}, 503)
+            return
         if path == "/api/v1/captures":
             self.proxy_doubao_receiver()
             return
@@ -8485,6 +8542,50 @@ class DashboardHandler(BaseHTTPRequestHandler):
                 )
             except Exception as exc:
                 self.send_json({"ok": False, "error": str(exc)}, 500)
+            return
+        if self.path.split("?", 1)[0] == "/api/performance-entry/confirmation":
+            from monitor_core import performance_identity, performance_confirmation
+            try:
+                actor = performance_identity.identity(self.headers)
+                params = parse_qs(urlparse(self.path).query)
+                result = performance_confirmation.status((params.get("month") or [""])[0], actor)
+                self.send_json({**result, "csrf": performance_identity.csrf(self.headers)})
+            except PermissionError as exc:self.send_json({"ok": False, "error": str(exc)}, 401)
+            except ValueError as exc:self.send_json({"ok": False, "error": str(exc)}, 400)
+            return
+        if self.path.split("?", 1)[0] in {"/api/performance-entry/access", "/api/performance-entry/data"}:
+            from monitor_core import performance_identity, performance_store
+            try:
+                actor = performance_identity.identity(self.headers)
+                if self.path.split("?", 1)[0].endswith("/access"):
+                    self.send_json({"user": actor, "can_edit": actor == "superadmin",
+                                    **({"csrf": performance_identity.csrf(self.headers)} if actor == "superadmin" else {})})
+                elif actor != "superadmin":
+                    self.send_json({"ok": False, "error": "仅superadmin可以录入绩效数据"}, 403)
+                else:
+                    params = parse_qs(urlparse(self.path).query)
+                    self.send_json(performance_store.editor_data((params.get("month") or ["2026-10"])[0], (params.get("date") or [""])[0]))
+            except PermissionError as exc:
+                self.send_json({"ok": False, "error": str(exc)}, 401)
+            except ValueError as exc:
+                self.send_json({"ok": False, "error": str(exc)}, 400)
+            return
+        if self.path.split("?", 1)[0] == "/api/performance":
+            try:
+                from monitor_core.performance_store import revision
+                params = parse_qs(urlparse(self.path).query)
+                self.send_cached_json(
+                    "employee-assessment-v4:" + str(revision()) + ":" + urlencode({
+                        "month": (params.get("month") or ["2026-10"])[0],
+                        "as_of": (params.get("as_of") or [""])[0],
+                    }),
+                    lambda: _employee_assessment_payload(params),
+                    ttl=30.0, stale_ttl=900.0,
+                )
+            except ValueError as exc:
+                self.send_json({"ok": False, "error": str(exc)}, 400)
+            except Exception:
+                self.send_json({"ok": False, "error": "绩效数据读取失败，请稍后重试"}, 503)
             return
         if self.path.startswith("/api/analytics"):
             try:

@@ -1,0 +1,7 @@
+monitor-product-worker
+monitor-dashboard-api
+LIVE_24_REQUESTS {"errors": 0, "median_seconds": 0.093465446960181, "max_seconds": 0.16015542577952147, "concurrency": 12}
+DEPLOY_VERIFIED
+monitor-dashboard-api 592.4MiB / 8GiB
+monitor-product-worker 227.9MiB / 15.35GiB
+

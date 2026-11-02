@@ -1,0 +1,11 @@
+LAN 2026-10 0 0.128 736198 MISS
+LAN 2026-10 1 0.002 736198 HIT
+LAN 2026-11 0 0.002 57196 HIT
+LAN 2026-11 1 0.001 57196 HIT
+PUBLIC {"path": "/", "ttfb": 0.623, "total": 0.625, "bytes": 10142, "encoding": null, "cache": null}
+PUBLIC {"path": "/api/performance?month=2026-10", "ttfb": 0.19, "total": 0.192, "bytes": 56198, "encoding": "gzip", "cache": "HIT"}
+PUBLIC {"path": "/api/performance?month=2026-11", "ttfb": 0.182, "total": 0.183, "bytes": 5183, "encoding": "gzip", "cache": "HIT"}
+PUBLIC {"path": "/api/performance-entry/access", "ttfb": 0.863, "total": 0.864, "bytes": 116, "encoding": null, "cache": null}
+PUBLIC {"path": "/api/performance-entry/data?month=2026-10&date=2026-10-30", "ttfb": 0.838, "total": 0.84, "bytes": 827, "encoding": "gzip", "cache": null}
+PUBLIC {"path": "/api/performance-entry/confirmation?month=2026-11", "ttfb": 1.216, "total": 1.218, "bytes": 775, "encoding": null, "cache": null}
+

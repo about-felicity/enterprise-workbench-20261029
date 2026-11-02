@@ -43,7 +43,7 @@ class MemoryGuard:
         self.policy=dict(DEFAULT);self.metrics=self.state.get('metrics',{});self.enabled=False
     def config(self):
         p={**DEFAULT,**(json.loads(self.policy_path.read_text()) if self.policy_path.exists() else {})}
-        if not isinstance(p['models'],list) or any(v not in ('doubao1','doubao2','yuanbao') for v in p['models']):raise ValueError('Invalid memory policy models')
+        if not isinstance(p['models'],list) or any(v not in ('doubao1','doubao2','doubao3','doubao4','yuanbao') for v in p['models']):raise ValueError('Invalid memory policy models')
         for k in ('java_fraction','container_fraction','app_pss_fraction'):
             if not .5<=p[k]<=.98:raise ValueError('Invalid memory policy ratio')
         if not 30<=p['sample_seconds']<=600 or not 2<=p['consecutive_samples']<=5 or not 300<=p['cooldown_seconds']<=7200 or not 1<=p['max_restarts']<=6 or not 1<=p['history_days']<=90 or not p['cooldown_seconds']<=p['restart_window_seconds']<=86400:raise ValueError('Invalid memory sampling/restart policy')

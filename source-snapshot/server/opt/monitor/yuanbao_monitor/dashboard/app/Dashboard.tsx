@@ -4,7 +4,8 @@ import WorkbenchLogo from "./WorkbenchLogo";
 
 import { Fragment, type CSSProperties, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { getIcon } from "./ModelIcon";
-import { PerformanceBoard, type EmployeePerformance } from "./PerformanceBoard";
+import type { EmployeePerformance } from "./PerformanceBoard";
+import { PerformanceCenter } from "./PerformanceCenter";
 import { CaptureControl } from "./CaptureControl";
 import { CreationControl } from "./CreationControl";
 import { dashboardBasePath } from "./dashboardPaths";
@@ -272,7 +273,7 @@ type RemoteActivity = {
   queue: { queued: number; processed: number; errors: number };
   events: RemoteEvent[];
 };
-type View = "overview" | "compare" | "sources" | "brands" | "runs" | "control" | "creation";
+type View = "overview" | "compare" | "sources" | "brands" | "runs" | "control" | "creation" | "performance";
 type QuestionMode = "interleaved" | "sequential";
 
 const emptyAnalytics: Analytics = {
@@ -291,6 +292,7 @@ const views: { id: View; label: string; hint: string; symbol: string }[] = [
   { id: "compare", label: "问题对比", hint: "同一问题横向比较", symbol: "⇄" },
   { id: "sources", label: "信源洞察", hint: "每日链接 Top 25 与关键词", symbol: "◎" },
   { id: "brands", label: "品牌与产品", hint: "提及率、排名与自有信源", symbol: "◇" },
+  { id: "performance", label: "绩效考核", hint: "员工卡片与每日计算明细", symbol: "▥" },
   { id: "runs", label: "回答审计", hint: "逐轮查看原始证据", symbol: "≡" },
   { id: "control", label: "采集控制", hint: "问题、账号与任务", symbol: "▶" },
   { id: "creation", label: "内容创作中心", hint: "专用素材与成稿下载", symbol: "✎" },
@@ -1046,11 +1048,13 @@ export function Dashboard() {
   const sourceEntryDate = useRef("");
 
   const selectView = (nextView: View) => {
-    if (nextView === "creation") {
+    if (nextView === "performance") {
+      window.history.replaceState(null, "", "#performance");
+    } else if (nextView === "creation") {
       window.history.replaceState(null, "", "#creation");
     } else if (nextView === "control") {
       if (!window.location.hash.startsWith("#capture")) window.history.replaceState(null, "", "#capture/doubao1");
-    } else if (window.location.hash.startsWith("#capture") || window.location.hash === "#creation") {
+    } else if (window.location.hash.startsWith("#capture") || window.location.hash === "#creation" || window.location.hash === "#performance") {
       window.history.replaceState(null, "", window.location.pathname + window.location.search);
     }
     if (nextView === "sources" && view !== "sources") {
@@ -1066,6 +1070,7 @@ export function Dashboard() {
     const restoreCapture = () => {
       if (window.location.hash.startsWith("#capture")) setView("control");
       if (window.location.hash === "#creation") setView("creation");
+      if (window.location.hash === "#performance") setView("performance");
     };
     restoreCapture();
     window.addEventListener("hashchange", restoreCapture);
@@ -1129,7 +1134,7 @@ export function Dashboard() {
 
   const loadAnalytics = useCallback(async (force = false, silent = false) => {
     if (!filtersReady) return;
-    if (view === "control" || view === "creation") {
+    if (view === "control" || view === "creation" || view === "performance") {
       setLoading(false);
       return;
     }
@@ -1525,7 +1530,7 @@ export function Dashboard() {
             </span>
           </span>
         </div>
-        {view !== "control" && view !== "creation" && <div className="scope">
+        {view !== "control" && view !== "creation" && view !== "performance" && <div className="scope">
           <span>模型范围</span>
           <button
             className={!model ? "active" : ""}
@@ -1608,14 +1613,14 @@ export function Dashboard() {
                 : views.find((item) => item.id === view)?.label}
             </h1>
           </div>
-          {view !== "control" && view !== "creation" && (
+          {view !== "control" && view !== "creation" && view !== "performance" && (
             <button onClick={() => loadAnalytics(true)} disabled={loading}>
               {loading ? "读取中" : "刷新数据"}
             </button>
           )}
         </header>
-        {view !== "control" && view !== "creation" && analytics.cache_status?.state !== "current" && analytics.generated_at && <p className="message" role="status">{analytics.cache_status?.message || "统计快照时间："} {analytics.generated_at}。刷新完成前请勿按此判断最新结果。</p>}
-        {view !== "control" && view !== "creation" && (
+        {view !== "control" && view !== "creation" && view !== "performance" && analytics.cache_status?.state !== "current" && analytics.generated_at && <p className="message" role="status">{analytics.cache_status?.message || "统计快照时间："} {analytics.generated_at}。刷新完成前请勿按此判断最新结果。</p>}
+        {view !== "control" && view !== "creation" && view !== "performance" && (
           <div className="filterbar">
             <label>
               问题
@@ -1667,14 +1672,14 @@ export function Dashboard() {
 
           </div>
         )}
-        {view !== "control" && view !== "creation" && loading && (
+        {view !== "control" && view !== "creation" && view !== "performance" && loading && (
           <div className="filter-loading" role="status">
             正在切换数据口径，请稍候…
           </div>
         )}
 
         <div className="content">
-          {view !== "control" && view !== "creation" && (
+          {view !== "control" && view !== "creation" && view !== "performance" && (
             <section className="kpis">
               <article>
                 <span>有效回答</span>
@@ -1707,11 +1712,6 @@ export function Dashboard() {
 
           {view === "overview" && (
             <>
-              {!model && !question && <PerformanceBoard payload={analytics.employee_performance}
-                months={analytics.owned_product_summary_months?.length
-                  ? analytics.owned_product_summary_months
-                  : Array.from(new Set(analytics.dates.map((day) => day.slice(0, 7))))}
-                onMonthChange={setSummaryMonth} />}
               <DailyOwnedProductBoard
                 rows={analytics.owned_product_daily || []}
                 summary={analytics.owned_product_summary || []}
@@ -2116,6 +2116,7 @@ export function Dashboard() {
             </section>
           )}
 
+          {view === "performance" && <PerformanceCenter apiBase={apiBase()} />}
           {view === "creation" && <CreationControl />}
           {view === "control" && (
             <>

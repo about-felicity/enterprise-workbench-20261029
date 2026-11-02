@@ -1,0 +1,14 @@
+{
+  "files": [
+    {
+      "sha256": "cacad898d42b190953eae27b080602800f47ab65e9979d6294c1ee2b57dcb782",
+      "source": "geo-source-card-collectors/geo_source_cards/rewrite_v2/full_writer.py",
+      "server": "/opt/monitor/geo-content/engine/geo_source_cards/rewrite_v2/full_writer.py"
+    },
+    {
+      "source": "redroid-deploy/question_only_worker.py",
+      "server": "/home/user/redroid-doubao/geo-batch-code/question_only_worker.py",
+      "sha256": "3783e203d96bc43dbce8f2ca5ac6bb2257a9bb07bc4fa2198d569de5ca490101"
+    }
+  ]
+}

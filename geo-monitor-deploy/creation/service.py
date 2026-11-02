@@ -11,12 +11,14 @@ import time
 import logging
 from urllib.parse import parse_qs,urlsplit
 from . import runtime,source_adapter
+from .status_cache import StatusCache
 
 sessions={};lock=threading.Lock()
+task_status_cache=StatusCache()
 class Handler(BaseHTTPRequestHandler):
     def log_message(self,*args):pass
     def send(self,value,status=200,content_type='application/json; charset=utf-8',cookie=None,extra=None):
-        body=value if isinstance(value,bytes) else json.dumps(value,ensure_ascii=False).encode()
+        body=value if isinstance(value,bytes) else json.dumps(value,ensure_ascii=False,separators=(',',':')).encode()
         self.send_response(status);self.send_header('Content-Type',content_type)
         self.send_header('Cache-Control','no-store');self.send_header('X-Content-Type-Options','nosniff')
         if cookie:self.send_header('Set-Cookie','geo_creation='+cookie+'; HttpOnly; SameSite=Strict; Path=/; Max-Age=21600')
@@ -44,7 +46,9 @@ class Handler(BaseHTTPRequestHandler):
                 from .knowledge_library import upload_snapshot
                 token,session=self.session(True)
                 return self.send({'ok':True,'studio':upload_snapshot(),'csrf':session['csrf'],'at':time.time()},cookie=token)
-            if path=='/api/status':return self.send(runtime.status())
+            if path=='/api/status':
+                token,session=self.session(True)
+                return self.send({**task_status_cache.get(lambda:runtime.status(task_list=True)),'csrf':session['csrf']},cookie=token)
             if path=='/api/catalog':
                 from . import materials
                 try:geo=source_adapter.catalog()
@@ -81,7 +85,11 @@ class Handler(BaseHTTPRequestHandler):
             payload=json.loads(self.rfile.read(length))
             if not isinstance(payload,dict):raise ValueError('请求须为对象')
             action=urlsplit(self.path).path.removeprefix('/api/control/')
-            result=runtime.action(action,payload,self.headers.get('X-Action-Id',''))
+            try:
+                result=runtime.action(action,payload,self.headers.get('X-Action-Id',''))
+            finally:
+                # Even a failed action may have saved part of its durable state.
+                task_status_cache.invalidate()
             if action in {'product_image_upload','kb_upload'}:
                 logging.warning('upload_completed action=%s bytes=%s elapsed=%.3f reused=%s',action,length,time.monotonic()-started,result.get('reused',False))
             self.send({'ok':True,'result':result})

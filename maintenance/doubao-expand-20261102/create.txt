@@ -1,0 +1,10 @@
+CREATING doubao-hpe14-account3
+exec /bin/getprop: no such file or directory
+Traceback (most recent call last):
+  File "<string>", line 23, in <module>
+  File "<string>", line 4, in run
+  File "/usr/lib/python3.10/subprocess.py", line 421, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '('docker', 'exec', 'doubao-hpe14-account3', 'getprop', 'sys.boot_completed')' returned non-zero exit status 255.

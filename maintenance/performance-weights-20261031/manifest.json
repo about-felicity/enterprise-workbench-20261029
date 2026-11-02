@@ -1,0 +1,32 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/server-source/doubao_dashboard_server.py",
+      "archive": "backend/doubao_dashboard_server.py",
+      "server": "/opt/monitor/doubao_dashboard_server.py",
+      "before": "25632f494d4914373c1ebeec8d9f4c36af074d977e8ec9baea4b5a22130414b5",
+      "sha256": "d503b627311c40c31f1490a31d7aa44238974bdda09c3384b91737cafb8d22b2"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/employee_assessment.py",
+      "archive": "backend/monitor_core/employee_assessment.py",
+      "server": "/opt/monitor/monitor_core/employee_assessment.py",
+      "before": "a431ed6c8cbd0fc51e9ce000db739d2ff04724fe57932266bc28ea8ff44633eb",
+      "sha256": "e350217b1b2f2220ae2b973daccd9c782a2bd87b489afc0927ce389a31a7c752"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/performance_data_202610.json",
+      "archive": "backend/monitor_core/performance_data_202610.json",
+      "server": "/opt/monitor/monitor_core/performance_data_202610.json",
+      "before": "5fb76bfcf7af16b4c4d9e91cf00de3ba2fcb74b4f39a2679015a58677cc0a27e",
+      "sha256": "012370a72304f58cfde8a24f33116b565094fb54276c100759f2420439337e21"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceCenter.tsx",
+      "archive": "app/PerformanceCenter.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceCenter.tsx",
+      "before": "f02eedd2352e7208b478f88dbcf1a3ff452bf12931630f09a7ac16732fa6714c",
+      "sha256": "822156d61da229ef90fdb90226a8e5771490e5de19b7b08cac259db296204240"
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "seconds": 24.94,
+  "people": [
+    {
+      "name": "佳佳",
+      "current_score": 38.5,
+      "previous_module_score": 38.5,
+      "previous_weights": {
+        "deepseek": 30,
+        "doubao": 30,
+        "wenxin": 30,
+        "yuanbao": 10
+      },
+      "current_weights": {
+        "deepseek": 30,
+        "doubao": 30,
+        "wenxin": 30,
+        "yuanbao": 10
+      },
+      "previous_products": 5,
+      "current_products": 4
+    },
+    {
+      "name": "杨涛",
+      "current_score": 43.2,
+      "previous_module_score": 43.2,
+      "previous_weights": {
+        "deepseek": 30,
+        "doubao": 30,
+        "wenxin": 30,
+        "yuanbao": 10
+      },
+      "current_weights": {
+        "deepseek": 30,
+        "doubao": 30,
+        "wenxin": 30,
+        "yuanbao": 10
+      },
+      "previous_products": 3,
+      "current_products": 3
+    },
+    {
+      "name": "小美",
+      "current_score": 15.0,
+      "previous_module_score": 26.9,
+      "previous_weights": {
+        "deepseek": 10,
+        "doubao": 40,
+        "wenxin": 40,
+        "yuanbao": 10
+      },
+      "current_weights": {
+        "deepseek": 30,
+        "doubao": 30,
+        "wenxin": 30,
+        "yuanbao": 10
+      },
+      "previous_products": 4,
+      "current_products": 3
+    },
+    {
+      "name": "鑫悦",
+      "current_score": 105.6,
+      "previous_module_score": 105.6,
+      "previous_weights": {
+        "deepseek": 30,
+        "doubao": 30,
+        "wenxin": 30,
+        "yuanbao": 10
+      },
+      "current_weights": {
+        "deepseek": 30,
+        "doubao": 30,
+        "wenxin": 30,
+        "yuanbao": 10
+      },
+      "previous_products": 3,
+      "current_products": 2
+    },
+    {
+      "name": "谭露",
+      "current_score": 29.4,
+      "previous_module_score": 30.2,
+      "previous_weights": {
+        "deepseek": 10,
+        "doubao": 40,
+        "wenxin": 40,
+        "yuanbao": 10
+      },
+      "current_weights": {
+        "deepseek": 30,
+        "doubao": 30,
+        "wenxin": 30,
+        "yuanbao": 10
+      },
+      "previous_products": 3,
+      "current_products": 3
+    }
+  ],
+  "actual_rate_differences": [
+    {
+      "product": "科熙本二硫化硒洗发水",
+      "model": "deepseek",
+      "current_rate": 1.85167,
+      "board_rate": 1.85
+    },
+    {
+      "product": "科熙本二硫化硒洗发水",
+      "model": "yuanbao",
+      "current_rate": 4.375,
+      "board_rate": 4.38
+    },
+    {
+      "product": "姿生怡卸妆油",
+      "model": "yuanbao",
+      "current_rate": 5.47607,
+      "board_rate": 5.48
+    },
+    {
+      "product": "梵玢护发精油",
+      "model": "deepseek",
+      "current_rate": 1.11111,
+      "board_rate": 1.11
+    },
+    {
+      "product": "梵玢护发精油",
+      "model": "wenxin",
+      "current_rate": 11.68722,
+      "board_rate": 11.69
+    },
+    {
+      "product": "科熙本鱼子酱修护柔顺护发素",
+      "model": "wenxin",
+      "current_rate": 2.16774,
+      "board_rate": 2.17
+    },
+    {
+      "product": "姿生怡手部保湿霜",
+      "model": "wenxin",
+      "current_rate": 0.41667,
+      "board_rate": 0.415
+    },
+    {
+      "product": "科熙本控油蓬松洗发水",
+      "model": "wenxin",
+      "current_rate": 0.61233,
+      "board_rate": 0.61
+    },
+    {
+      "product": "科熙本控油蓬松洗发水",
+      "model": "yuanbao",
+      "current_rate": 17.76786,
+      "board_rate": 17.77
+    },
+    {
+      "product": "梵玢染发剂（含黑茶色）",
+      "model": "deepseek",
+      "current_rate": 13.72529,
+      "board_rate": 13.73
+    },
+    {
+      "product": "梵玢染发剂（含黑茶色）",
+      "model": "yuanbao",
+      "current_rate": 1.96429,
+      "board_rate": 1.96
+    },
+    {
+      "product": "科熙本染发剂",
+      "model": "deepseek",
+      "current_rate": 4.41176,
+      "board_rate": 4.41
+    },
+    {
+      "product": "科熙本染发剂",
+      "model": "yuanbao",
+      "current_rate": 5.38679,
+      "board_rate": 5.39
+    },
+    {
+      "product": "梵玢沐浴油",
+      "model": "deepseek",
+      "current_rate": 39.35111,
+      "board_rate": 39.35
+    },
+    {
+      "product": "梵玢沐浴油",
+      "model": "wenxin",
+      "current_rate": 25.141,
+      "board_rate": 25.14
+    },
+    {
+      "product": "姿生怡阿尔卑斯冰川焕肤精粹水",
+      "model": "wenxin",
+      "current_rate": 6.06057,
+      "board_rate": 6.065
+    },
+    {
+      "product": "姿生怡阿尔卑斯冰川焕肤精粹水",
+      "model": "yuanbao",
+      "current_rate": 0.74393,
+      "board_rate": 0.74
+    },
+    {
+      "product": "梵玢眉毛精华液",
+      "model": "deepseek",
+      "current_rate": 47.68556,
+      "board_rate": 47.69
+    },
+    {
+      "product": "梵玢眉毛精华液",
+      "model": "wenxin",
+      "current_rate": 92.23203,
+      "board_rate": 92.235
+    },
+    {
+      "product": "姿生怡眼霜",
+      "model": "wenxin",
+      "current_rate": 0.24167,
+      "board_rate": 0.24
+    },
+    {
+      "product": "姿生怡眼霜",
+      "model": "yuanbao",
+      "current_rate": 0.44643,
+      "board_rate": 0.45
+    },
+    {
+      "product": "梵玢睫毛精华液",
+      "model": "doubao",
+      "current_rate": 41.365,
+      "board_rate": 41.37
+    },
+    {
+      "product": "梵玢睫毛精华液",
+      "model": "wenxin",
+      "current_rate": 99.796,
+      "board_rate": 99.795
+    },
+    {
+      "product": "梵玢睫毛精华液",
+      "model": "yuanbao",
+      "current_rate": 74.61286,
+      "board_rate": 74.61
+    },
+    {
+      "product": "梵玢祛痘精华",
+      "model": "deepseek",
+      "current_rate": 1.38889,
+      "board_rate": 1.39
+    },
+    {
+      "product": "梵玢祛痘精华",
+      "model": "yuanbao",
+      "current_rate": 17.35286,
+      "board_rate": 17.35
+    },
+    {
+      "product": "焕颜计小白罐",
+      "model": "deepseek",
+      "current_rate": 1.85167,
+      "board_rate": 1.85
+    },
+    {
+      "product": "焕颜计小白罐",
+      "model": "doubao",
+      "current_rate": 2.34333,
+      "board_rate": 2.34
+    },
+    {
+      "product": "焕颜计小白罐",
+      "model": "wenxin",
+      "current_rate": 60.68357,
+      "board_rate": 60.685
+    },
+    {
+      "product": "焕颜计小白罐",
+      "model": "yuanbao",
+      "current_rate": 18.27393,
+      "board_rate": 18.27
+    },
+    {
+      "product": "科熙本控油蓬松造型喷雾",
+      "model": "deepseek",
+      "current_rate": 13.23529,
+      "board_rate": 13.24
+    },
+    {
+      "product": "科熙本控油蓬松造型喷雾",
+      "model": "wenxin",
+      "current_rate": 83.04851,
+      "board_rate": 83.05000000000001
+    },
+    {
+      "product": "科熙本控油蓬松造型喷雾",
+      "model": "yuanbao",
+      "current_rate": 35.80893,
+      "board_rate": 35.81
+    },
+    {
+      "product": "梵玢洗发水",
+      "model": "yuanbao",
+      "current_rate": 2.67857,
+      "board_rate": 2.68
+    },
+    {
+      "product": "道和小绿瓶",
+      "model": "deepseek",
+      "current_rate": 3.43118,
+      "board_rate": 3.43
+    },
+    {
+      "product": "道和小绿瓶",
+      "model": "doubao",
+      "current_rate": 0.41667,
+      "board_rate": 0.42
+    },
+    {
+      "product": "道和小绿瓶",
+      "model": "yuanbao",
+      "current_rate": 8.19321,
+      "board_rate": 8.19
+    },
+    {
+      "product": "梵玢焕活精华液",
+      "model": "deepseek",
+      "current_rate": 12.74471,
+      "board_rate": 12.75
+    },
+    {
+      "product": "梵玢焕活精华液",
+      "model": "wenxin",
+      "current_rate": 4.83814,
+      "board_rate": 4.835
+    },
+    {
+      "product": "道和小红瓶",
+      "model": "deepseek",
+      "current_rate": 23.52882,
+      "board_rate": 23.53
+    },
+    {
+      "product": "道和小红瓶",
+      "model": "doubao",
+      "current_rate": 0.25633,
+      "board_rate": 0.26
+    },
+    {
+      "product": "道和小红瓶",
+      "model": "wenxin",
+      "current_rate": 46.76105,
+      "board_rate": 46.760000000000005
+    },
+    {
+      "product": "道和小红瓶",
+      "model": "yuanbao",
+      "current_rate": 11.67357,
+      "board_rate": 11.67
+    }
+  ]
+}

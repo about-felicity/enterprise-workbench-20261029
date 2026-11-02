@@ -1,0 +1,252 @@
+TIME 2026-11-02T13:20:29.177907+08:00
+MEMORY                total        used        free      shared  buff/cache   available
+Mem:     16480649216  8930529280  3165597696   591372288  4384522240  5766643712
+Swap:     4294963200  4294787072      176128
+ 
+UPTIME  05:20:29 up 61 days, 23:04,  1 user,  load average: 4.19, 3.06, 3.07
+ 
+VMSTAT procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 0  0 4194128 3091404 221200 4060560    2    5    93   596    0    0  6  2 92  0  0
+ 1  0 4194128 3095040 221348 4061596    0    0    60  1420 9391 27037 13  4 83  0  0
+ 2  0 4194128 3045568 221588 4075316    0    0   576  2808 13358 49375 22  6 72  0  0
+ 
+PROCESSES   PID COMMAND           RSS %MEM %CPU
+61550 python          1591808  9.8 15.5
+53971 com.larus.nova  1038312  6.4 50.2
+14643 com.larus.nova  923620  5.7 38.2
+48006 unyuan.app.chat 897596  5.5 13.5
+50088 python          863976  5.3 5.0
+30297 python          712924  4.4 6.3
+22865 chrome          251588  1.5 2.4
+22972 chrome          198952  1.2 1.5
+63383 postgres        169832  1.0 0.0
+ 4641 postgres        152188  0.9 0.1
+47468 postgres        150936  0.9 0.3
+29278 postgres        147844  0.9 0.6
+53063 postgres        142564  0.8 0.0
+10933 postgres        141916  0.8 0.0
+22960 chrome          142396  0.8 0.5
+22832 MainThread      141836  0.8 1.1
+24401 postgres        136696  0.8 0.0
+24402 postgres        136464  0.8 0.0
+24405 postgres        131432  0.8 0.0
+21870 ndroid.systemui 120800  0.7 0.1
+22904 chrome          121136  0.7 0.4
+44998 system_server   120096  0.7 0.1
+21464 system_server   116312  0.7 0.1
+33352 system_server   115568  0.7 0.1
+33782 ndroid.systemui 114056  0.7 0.0
+39539 ndroid.systemui 100748  0.6 0.0
+24843 python          97224  0.6  0.1
+45583 ndroid.systemui 95996  0.5  0.0
+22902 chrome          97160  0.6  1.1
+62158 ndroid.systemui 95052  0.5  0.0
+ 6329 putmethod.latin 91200  0.5  0.0
+41535 system_server   87108  0.5  0.0
+61366 system_server   86948  0.5  0.0
+38806 system_server   86252  0.5  0.0
+37716 node            86108  0.5  0.0
+42359 ndroid.systemui 82876  0.5  0.0
+ 9440 putmethod.latin 81792  0.5  0.1
+3299487 dockerd       81028  0.5  0.9
+11672 putmethod.latin 79540  0.4  0.0
+29261 postgres        80500  0.5  0.0
+54773 larus.nova:push 79980  0.4  0.2
+22881 chrome          75452  0.4  0.0
+ 8843 droid.launcher3 74908  0.4  0.0
+22882 chrome          75196  0.4  0.0
+48179 :xg_vip_service 73900  0.4  0.1
+22970 chrome          73872  0.4  0.0
+ 8830 droid.launcher3 68672  0.4  0.0
+54158 ssioncontroller 64312  0.3  0.0
+46358 postgres        63604  0.3  0.0
+54953 postgres        62636  0.3  0.0
+54380 systemd-journal 61276  0.3  0.0
+22631 python          61144  0.3  0.4
+50449 viders.calendar 59312  0.3  0.0
+ 8753 droid.launcher3 58100  0.3  0.0
+22907 chrome          54500  0.3  0.0
+59816 viders.calendar 51908  0.3  0.0
+12799 viders.calendar 50060  0.3  0.0
+62431 rkstack.process 46876  0.2  0.0
+54161 ocessService0:0 45184  0.2  0.0
+49176 postgres        45872  0.2  0.0
+ 7940 putmethod.latin 43452  0.2  0.0
+  814 containerd      44724  0.2  0.8
+39823 rkstack.process 44472  0.2  0.0
+31536 python          44124  0.2  1.0
+ 9868 id.ext.services 40372  0.2  0.0
+53632 id.ext.services 40040  0.2  0.0
+13367 id.ext.services 39940  0.2  0.0
+42523 rkstack.process 40124  0.2  0.0
+33947 rkstack.process 39980  0.2  0.0
+22014 rkstack.process 40216  0.2  0.0
+33954 m.android.phone 34832  0.2  0.0
+45735 rkstack.process 34276  0.2  0.0
+28844 python          33316  0.2  3.4
+22089 m.android.phone 33348  0.2  0.0
+56655 id.ext.services 32612  0.2  0.0
+20627 hub.uiautomator 30824  0.1  0.0
+31537 python          31328  0.1  7.6
+44012 droid.launcher3 28476  0.1  0.0
+45796 m.android.phone 29476  0.1  0.0
+20626 hub.uiautomator 27920  0.1  0.0
+  462 multipathd      28820  0.1  0.0
+ 9903 id.ext.services 27416  0.1  0.0
+53828 python          27876  0.1  0.1
+29213 docker          28092  0.1  0.0
+44020 droid.launcher3 25680  0.1  0.0
+47143 python          27084  0.1  0.7
+21265 surfaceflinger  26656  0.1  0.2
+18465 ocessService0:0 25808  0.1  0.0
+11848 android.smspush 25160  0.1  0.0
+11904 android.smspush 24604  0.1  0.0
+ 9885 id.ext.services 23684  0.1  0.0
+44821 surfaceflinger  24300  0.1  0.2
+56696 android.smspush 22908  0.1  0.0
+34506 rs.media.module 23652  0.1  0.0
+11821 android.smspush 22996  0.1  0.0
+45935 droid.launcher3 22160  0.1  0.0
+53648 android.smspush 22360  0.1  0.0
+42588 m.android.phone 21724  0.1  0.0
+13384 android.smspush 21904  0.1  0.0
+33055 surfaceflinger  21060  0.1  0.4
+46311 rs.media.module 20036  0.1  0.0
+22561 rs.media.module 20412  0.1  0.0
+45778 com.android.se  19456  0.1  0.0
+35202 python          19856  0.1  0.3
+39889 m.android.phone 19064  0.1  0.0
+62499 m.android.phone 18776  0.1  0.0
+33951 com.android.se  17536  0.1  0.0
+22022 com.android.se  17012  0.1  0.0
+43260 rs.media.module 15360  0.0  0.0
+  552 postgres        16536  0.1  0.0
+42577 com.android.se  13960  0.0  0.0
+58006 NetworkManager  14980  0.0  0.0
+12548 snapd           14076  0.0  0.0
+40460 rs.media.module 12616  0.0  0.0
+31538 creation-runner 13984  0.0  2.6
+63195 rs.media.module 12284  0.0  0.0
+62481 com.android.se  11448  0.0  0.0
+33116 main            13460  0.0  0.0
+39876 com.android.se  11616  0.0  0.0
+29067 python3         12524  0.0  0.5
+13347 python          12552  0.0  0.2
+21345 main            11788  0.0  0.0
+44918 main            11776  0.0  0.0
+31565 python          11984  0.0  0.3
+58518 ocessService0:0 11100  0.0  0.0
+24313 containerd-shim 11464  0.0  0.5
+28991 sshd            10928  0.0  0.3
+41387 main             9816  0.0  0.0
+61186 main            10000  0.0  0.0
+38642 main             9588  0.0  0.0
+35204 python           9996  0.0  0.0
+11583 python           9384  0.0  0.0
+31560 python          10044  0.0  0.3
+31546 python           9832  0.0  0.2
+31559 python           9964  0.0  0.3
+31550 python          10084  0.0  0.2
+31558 python           9564  0.0  0.3
+61102 surfaceflinger   8960  0.0  0.0
+31568 python           9952  0.0  0.3
+31570 python           9860  0.0  0.3
+31551 python           9704  0.0  0.3
+31554 python           9848  0.0  0.2
+31552 python           9820  0.0  0.3
+38546 surfaceflinger   8872  0.0  0.0
+    1 systemd          9740  0.0  0.4
+31553 python           9452  0.0  0.3
+31547 python           9724  0.0  0.3
+31557 python           9488  0.0  0.3
+41292 surfaceflinger   9068  0.0  0.0
+31548 python           9316  0.0  0.1
+31562 python           9368  0.0  0.2
+20866 containerd-shim  9448  0.0  0.2
+15714 ssh              8996  0.0  0.0
+31549 python           9136  0.0  0.1
+33161 binder:184_4     8104  0.0  0.0
+44929 binder:191_4     7972  0.0  0.0
+29237 psql             8296  
+CONTAINERS monitor-dashboard 93.23MiB / 15.35GiB 0.59% 0.00%
+monitor-dashboard-performance-preview 4.875MiB / 15.35GiB 0.03% 0.00%
+monitor-assets 2.66MiB / 512MiB 0.52% 0.12%
+deepseek-manual-test 206.4MiB / 2GiB 10.08% 0.03%
+deepseek-hpe14-account2 222.2MiB / 2GiB 10.85% 0.05%
+deepseek-hpe14-android13 212.8MiB / 2GiB 10.39% 0.04%
+yuanbao-hpe14-android13 1.205GiB / 4GiB 30.13% 2.40%
+doubao-hpe14-account2 1.28GiB / 4GiB 31.99% 40.98%
+doubao-hpe14-13-test 1.154GiB / 3GiB 38.46% 32.71%
+monitor-product-worker 842.6MiB / 15.35GiB 5.36% 0.00%
+monitor-dashboard-api 1.64GiB / 8GiB 20.50% 0.01%
+monitor-doubao-receiver 92.73MiB / 15.35GiB 0.59% 0.01%
+monitor-result-receiver 27.82MiB / 15.35GiB 0.18% 0.10%
+monitor-content-worker 910.8MiB / 3GiB 29.65% 75.93%
+monitor-postgres 613.2MiB / 15.35GiB 3.90% 102.32%
+monitor-redis 3.738MiB / 15.35GiB 0.02% 0.36%
+ 
+PROC MemTotal:       16094384 kB
+MemFree:         2871388 kB
+MemAvailable:    5540700 kB
+Buffers:          223128 kB
+Cached:          3718060 kB
+SwapCached:       154572 kB
+Active:          5434752 kB
+Inactive:        5985460 kB
+Active(anon):    3975560 kB
+Inactive(anon):  4121368 kB
+Active(file):    1459192 kB
+Inactive(file):  1864092 kB
+Unevictable:       68380 kB
+Mlocked:           57840 kB
+SwapTotal:       4194300 kB
+SwapFree:           4800 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:             92520 kB
+Writeback:             0 kB
+AnonPages:       7493424 kB
+Mapped:          1460972 kB
+Shmem:            598800 kB
+KReclaimable:     491328 kB
+Slab:            1012944 kB
+SReclaimable:     491328 kB
+SUnreclaim:       521616 kB
+KernelStack:      103900 kB
+PageTables:       231908 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    12241492 kB
+Committed_AS:   117667664 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      181156 kB
+VmallocChunk:          0 kB
+Percpu:            69792 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:     8192 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+Unaccepted:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      445696 kB
+DirectMap2M:     9758720 kB
+DirectMap1G:     6291456 kB
+
+HISTORY_DIR /var/log/sysstat absent
+HISTORY_DIR /var/log/sa absent
+HISTORY_DIR /var/lib/prometheus absent
+HISTORY_DIR /opt/monitor/observations absent
+HISTORY_DIR /opt/monitor/geo-content/observations [('20261021-22', 4096), ('install-backup-20261021', 4096)]
+MONITOR_TOOLS {"sar": null, "atop": null, "prometheus": null, "nvidia-smi": null}
+OOM_LAST7D -- No entries --
+

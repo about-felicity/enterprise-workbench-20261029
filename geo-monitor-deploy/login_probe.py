@@ -13,7 +13,7 @@ def native(model):
         result=subprocess.run(['/home/user/redroid-doubao/worker-venv/bin/python','-B','/home/user/redroid-yuanbao/login_probe.py'],capture_output=True,text=True,timeout=45,check=True)
         return json.loads(result.stdout.strip().splitlines()[-1])
     container,serial={'doubao1':('doubao-hpe14-13-test','127.0.0.1:5557'),
-                      'doubao2':('doubao-hpe14-account2','127.0.0.1:5558')}[model]
+                      'doubao2':('doubao-hpe14-account2','127.0.0.1:5558'), 'doubao3':('doubao-hpe14-account3','127.0.0.1:5563'), 'doubao4':('doubao-hpe14-account4','127.0.0.1:5564')}[model]
     sys.path.insert(0,'/home/user/redroid-doubao')
     from active_database_accounts import current_uid
     uid=current_uid(container)
@@ -60,7 +60,7 @@ def browser(runtime,sync):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
-    parser.add_argument('--model',choices=['doubao1','doubao2','deepseek','yuanbao'],required=True)
+    parser.add_argument('--model',choices=['doubao1','doubao2','doubao3','doubao4','deepseek','yuanbao'],required=True)
     parser.add_argument('--runtime',type=Path,required=True)
     parser.add_argument('--sync-source',action='store_true')
     args=parser.parse_args()

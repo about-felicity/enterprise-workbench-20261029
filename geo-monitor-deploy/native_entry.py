@@ -19,7 +19,7 @@ if config['model']=='deepseek2':
 if config['model']=='deepseek':
     python='/home/user/redroid-doubao/worker-venv/bin/python'
     os.execv(python,[python,'-u','/home/user/redroid-deepseek/code/worker.py','--config',str(args.config)])
-if config.get('prompt_mode')=='question_only' and config['model'] in {'doubao1','doubao2','yuanbao'}:
+if config.get('prompt_mode')=='question_only' and config['model'] in {'doubao1','doubao2','doubao3','doubao4','yuanbao'}:
     python='/home/user/redroid-doubao/worker-venv/bin/python'
     os.execv(python,[python,'-u','/home/user/redroid-doubao/geo-batch-code/question_only_worker.py','--config',str(args.config)])
 if config['model']=='yuanbao':

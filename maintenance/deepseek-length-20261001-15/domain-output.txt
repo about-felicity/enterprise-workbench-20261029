@@ -1,0 +1,35 @@
+COUNTS {'mainland': 188, 'unknown': 33, 'foreign': 461, 'hk_macao_taiwan': 99, 'invalid': 4}
+URL_COUNTS {'hk_macao_taiwan': 493, 'mainland': 1604, 'unknown': 38, 'foreign': 1316, 'invalid': 4}
+zgw.com 3
+120.24.241.190 2
+13.230.61.1 2
+czgd.tv 2
+frostchina.com 1
+uniopen.com 1
+wap.gdskin.com 1
+ccia-cleaning.org 1
+mktindex.com 1
+hoyu-cn.com 1
+202.62.215.17 1
+snm0516.aisee.tv 1
+gdcers.com 1
+sz863.com 1
+szsac.com 1
+51ifind.com 1
+cttlab.com 1
+guangzhou315.com 1
+wwyqianqian.github.io 1
+jp.reach24h.com 1
+gdskin.com 1
+youhui.bacaoo.com 1
+54.65.45.73 1
+ec2-18-163-36-20.ap-east-1.compute.amazonaws.com 1
+caffcimedia.com 1
+ypzdw.com 1
+zxb.jn-yuanxin.com 1
+asinsight.com 1
+nodeloc.com 1
+linux.do 1
+zhuceabc.com 1
+xg.zhi 1
+uumama.com 1

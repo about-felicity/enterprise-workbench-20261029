@@ -35,6 +35,35 @@ def recover_structural_json(content):
     if len(valid)!=1:raise ValueError('Not an unambiguous known single-delimiter error')
     return next(iter(valid.values()))
 
+def recover_transport_json(content):
+    """Project only observed framing errors, then apply the original schema."""
+    if not isinstance(content,str):raise ValueError('Missing JSON content')
+    stripped=content.lstrip()
+    try:
+        result,end=json.JSONDecoder().raw_decode(stripped)
+    except json.JSONDecodeError:
+        result=None
+    else:
+        tail=stripped[end:]
+        closing=r'\s*</｜｜DSML｜｜\s*parameter>\s*</｜｜DSML｜｜\s*invoke>\s*</｜｜DSML｜｜\s*calls>\s*'
+        if (isinstance(result,dict) and set(result)=={'draft_markdown'}
+            and isinstance(result['draft_markdown'],str) and result['draft_markdown'].strip()
+            and re.fullmatch(closing,tail)):
+            return result,'redundant-dsml-closing-tags'
+    # One stray quote after article_structure's closing array. Do not repair
+    # arbitrary text or guess missing semantic fields.
+    candidates=[]
+    from geo_source_cards.rewrite_v2.structure_parser import validate
+    for match in re.finditer(r'\]"(?=\s*,\s*"writing_rhythm"\s*:)',content):
+        fixed=content[:match.start()+1]+content[match.end():]
+        try:
+            candidate=json.loads(fixed)
+            validate(candidate)
+        except (ValueError,TypeError,KeyError):continue
+        candidates.append(candidate)
+    if len(candidates)==1:return candidates[0],'redundant-quote-after-structure-array'
+    raise ValueError('Not a known unambiguous response framing error')
+
 class CreationClient(DeepSeekClient):
     def __init__(self,key_file,*,session=None,budget=None):
         import os
@@ -76,7 +105,9 @@ class CreationClient(DeepSeekClient):
                 result=recover_format_metadata(answer.get('content'));reason='redundant-json-mode-marker'
             except (ValueError,TypeError):
                 try:result,reason=recover_structural_json(answer.get('content'))
-                except (ValueError,TypeError):raise error from None
+                except (ValueError,TypeError):
+                    try:result,reason=recover_transport_json(answer.get('content'))
+                    except (ValueError,TypeError):raise error from None
             projection={'reason':reason,'raw_answer_preserved':True,'raw_content_sha256':hashlib.sha256(answer['content'].encode()).hexdigest(),'new_paid_requests':0,'downstream_validation_required':True}
             atomic_json(folder/'json_response_projection.json',projection)
             atomic_json(folder/'response.json',result)

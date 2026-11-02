@@ -1,0 +1,1733 @@
+{
+  "as_of": "2026-11-02T11:11:53.240461+08:00",
+  "groups": {
+    "day": {
+      "2026-10-28": {
+        "calls": 386,
+        "prompt": 2112101,
+        "output": 593114,
+        "hit": 472572,
+        "reasoning": 0,
+        "charged": 6.200802360000001,
+        "reserved": 0.083734,
+        "unsettled": 1
+      },
+      "2026-10-29": {
+        "calls": 413,
+        "prompt": 2284062,
+        "output": 639921,
+        "hit": 721276,
+        "reasoning": 0,
+        "charged": 5.241789319999999,
+        "reserved": 0.357884,
+        "unsettled": 4
+      },
+      "2026-10-30": {
+        "calls": 329,
+        "prompt": 1976033,
+        "output": 574525,
+        "hit": 797696,
+        "reasoning": 0,
+        "charged": 4.33816776,
+        "reserved": 0.478548,
+        "unsettled": 3
+      },
+      "2026-10-31": {
+        "calls": 344,
+        "prompt": 2033386,
+        "output": 577783,
+        "hit": 1079933,
+        "reasoning": 0,
+        "charged": 3.28618366,
+        "reserved": 0.30986800000000003,
+        "unsettled": 2
+      },
+      "2026-11-01": {
+        "calls": 357,
+        "prompt": 2059320,
+        "output": 603731,
+        "hit": 1098240,
+        "reasoning": 0,
+        "charged": 3.3979688,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02": {
+        "calls": 275,
+        "prompt": 1592976,
+        "output": 460035,
+        "hit": 820091,
+        "reasoning": 0,
+        "charged": 3.12155378,
+        "reserved": 0.07985,
+        "unsettled": 1
+      }
+    },
+    "hour": {
+      "2026-10-28 05": {
+        "calls": 54,
+        "prompt": 300524,
+        "output": 97954,
+        "hit": 132476,
+        "reasoning": 0,
+        "charged": 0.56251352,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 06": {
+        "calls": 61,
+        "prompt": 348567,
+        "output": 107428,
+        "hit": 46336,
+        "reasoning": 0,
+        "charged": 0.7328697200000003,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 07": {
+        "calls": 47,
+        "prompt": 134190,
+        "output": 43838,
+        "hit": 19328,
+        "reasoning": 0,
+        "charged": 0.29060055999999995,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 09": {
+        "calls": 40,
+        "prompt": 210617,
+        "output": 66734,
+        "hit": 41600,
+        "reasoning": 0,
+        "charged": 0.8735700000000002,
+        "reserved": 0.083734,
+        "unsettled": 1
+      },
+      "2026-10-28 10": {
+        "calls": 9,
+        "prompt": 47537,
+        "output": 11658,
+        "hit": 21376,
+        "reasoning": 0,
+        "charged": 0.14644104000000002,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 11": {
+        "calls": 50,
+        "prompt": 294994,
+        "output": 78337,
+        "hit": 41600,
+        "reasoning": 0,
+        "charged": 1.135148,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 12": {
+        "calls": 22,
+        "prompt": 154456,
+        "output": 35192,
+        "hit": 39936,
+        "reasoning": 0,
+        "charged": 0.25608672,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 14": {
+        "calls": 4,
+        "prompt": 20542,
+        "output": 6283,
+        "hit": 6656,
+        "reasoning": 0,
+        "charged": 0.07830224,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 15": {
+        "calls": 49,
+        "prompt": 305720,
+        "output": 73854,
+        "hit": 25728,
+        "reasoning": 0,
+        "charged": 1.1518451199999997,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 16": {
+        "calls": 14,
+        "prompt": 120456,
+        "output": 26350,
+        "hit": 54528,
+        "reasoning": 0,
+        "charged": 0.34483712,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 17": {
+        "calls": 36,
+        "prompt": 174498,
+        "output": 45486,
+        "hit": 43008,
+        "reasoning": 0,
+        "charged": 0.6285883199999998,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 05": {
+        "calls": 90,
+        "prompt": 511603,
+        "output": 144985,
+        "hit": 155644,
+        "reasoning": 0,
+        "charged": 0.93901188,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 06": {
+        "calls": 109,
+        "prompt": 640162,
+        "output": 195131,
+        "hit": 228992,
+        "reasoning": 0,
+        "charged": 1.1962738400000004,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 07": {
+        "calls": 21,
+        "prompt": 87649,
+        "output": 24902,
+        "hit": 18048,
+        "reasoning": 0,
+        "charged": 0.16956995999999996,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 08": {
+        "calls": 29,
+        "prompt": 181797,
+        "output": 45332,
+        "hit": 64128,
+        "reasoning": 0,
+        "charged": 0.3002795599999999,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 09": {
+        "calls": 17,
+        "prompt": 93202,
+        "output": 26935,
+        "hit": 24192,
+        "reasoning": 0,
+        "charged": 0.35446768,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 10": {
+        "calls": 13,
+        "prompt": 68938,
+        "output": 17903,
+        "hit": 24064,
+        "reasoning": 0,
+        "charged": 0.23393456,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 11": {
+        "calls": 11,
+        "prompt": 71849,
+        "output": 16703,
+        "hit": 15872,
+        "reasoning": 0,
+        "charged": 0.24621287999999997,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 13": {
+        "calls": 46,
+        "prompt": 199442,
+        "output": 64947,
+        "hit": 33024,
+        "reasoning": 0,
+        "charged": 0.42686648000000005,
+        "reserved": 0.357884,
+        "unsettled": 4
+      },
+      "2026-10-29 14": {
+        "calls": 3,
+        "prompt": 13001,
+        "output": 2408,
+        "hit": 1792,
+        "reasoning": 0,
+        "charged": 0.04175368,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 15": {
+        "calls": 13,
+        "prompt": 101207,
+        "output": 19531,
+        "hit": 38528,
+        "reasoning": 0,
+        "charged": 0.28314712000000003,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 16": {
+        "calls": 34,
+        "prompt": 190032,
+        "output": 41641,
+        "hit": 87424,
+        "reasoning": 0,
+        "charged": 0.54184096,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 17": {
+        "calls": 27,
+        "prompt": 125180,
+        "output": 39503,
+        "hit": 29568,
+        "reasoning": 0,
+        "charged": 0.5084307200000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 05": {
+        "calls": 40,
+        "prompt": 259345,
+        "output": 66754,
+        "hit": 72832,
+        "reasoning": 0,
+        "charged": 0.4549856400000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 06": {
+        "calls": 66,
+        "prompt": 322959,
+        "output": 100093,
+        "hit": 89728,
+        "reasoning": 0,
+        "charged": 0.63539756,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 07": {
+        "calls": 54,
+        "prompt": 344466,
+        "output": 103726,
+        "hit": 101888,
+        "reasoning": 0,
+        "charged": 0.65951976,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 08": {
+        "calls": 31,
+        "prompt": 174927,
+        "output": 49716,
+        "hit": 66432,
+        "reasoning": 0,
+        "charged": 0.30868763999999993,
+        "reserved": 0.16736800000000002,
+        "unsettled": 1
+      },
+      "2026-10-30 09": {
+        "calls": 3,
+        "prompt": 23819,
+        "output": 7265,
+        "hit": 22784,
+        "reasoning": 0,
+        "charged": 0.06110136,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 10": {
+        "calls": 29,
+        "prompt": 200078,
+        "output": 55930,
+        "hit": 100224,
+        "reasoning": 0,
+        "charged": 0.65115696,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 11": {
+        "calls": 22,
+        "prompt": 129862,
+        "output": 43417,
+        "hit": 87040,
+        "reasoning": 0,
+        "charged": 0.4364616,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 13": {
+        "calls": 55,
+        "prompt": 293271,
+        "output": 99811,
+        "hit": 106624,
+        "reasoning": 0,
+        "charged": 0.5880234800000002,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 15": {
+        "calls": 7,
+        "prompt": 64684,
+        "output": 11292,
+        "hit": 46208,
+        "reasoning": 0,
+        "charged": 0.12913632,
+        "reserved": 0.223442,
+        "unsettled": 1
+      },
+      "2026-10-30 16": {
+        "calls": 22,
+        "prompt": 162622,
+        "output": 36521,
+        "hit": 103936,
+        "reasoning": 0,
+        "charged": 0.4136974400000001,
+        "reserved": 0.08773800000000001,
+        "unsettled": 1
+      },
+      "2026-10-31 05": {
+        "calls": 81,
+        "prompt": 476573,
+        "output": 144292,
+        "hit": 222208,
+        "reasoning": 0,
+        "charged": 0.83597716,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 06": {
+        "calls": 39,
+        "prompt": 187636,
+        "output": 54632,
+        "hit": 86656,
+        "reasoning": 0,
+        "charged": 0.32124112,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 08": {
+        "calls": 17,
+        "prompt": 118699,
+        "output": 27894,
+        "hit": 90240,
+        "reasoning": 0,
+        "charged": 0.1418398,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 09": {
+        "calls": 88,
+        "prompt": 516621,
+        "output": 150105,
+        "hit": 256381,
+        "reasoning": 0,
+        "charged": 0.8657876200000002,
+        "reserved": 0.163646,
+        "unsettled": 1
+      },
+      "2026-10-31 10": {
+        "calls": 8,
+        "prompt": 58236,
+        "output": 16089,
+        "hit": 42496,
+        "reasoning": 0,
+        "charged": 0.08094591999999999,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 11": {
+        "calls": 2,
+        "prompt": 6359,
+        "output": 1727,
+        "hit": 6016,
+        "reasoning": 0,
+        "charged": 0.00737132,
+        "reserved": 0.14622200000000002,
+        "unsettled": 1
+      },
+      "2026-10-31 13": {
+        "calls": 47,
+        "prompt": 270714,
+        "output": 91830,
+        "hit": 118784,
+        "reasoning": 0,
+        "charged": 0.5216256800000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 14": {
+        "calls": 36,
+        "prompt": 216053,
+        "output": 54442,
+        "hit": 126976,
+        "reasoning": 0,
+        "charged": 0.3093845200000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 15": {
+        "calls": 10,
+        "prompt": 93213,
+        "output": 15055,
+        "hit": 69760,
+        "reasoning": 0,
+        "charged": 0.08506820000000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 16": {
+        "calls": 16,
+        "prompt": 89282,
+        "output": 21717,
+        "hit": 60416,
+        "reasoning": 0,
+        "charged": 0.11694231999999999,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 05": {
+        "calls": 77,
+        "prompt": 446321,
+        "output": 128219,
+        "hit": 216576,
+        "reasoning": 0,
+        "charged": 0.74695252,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 06": {
+        "calls": 114,
+        "prompt": 642090,
+        "output": 198581,
+        "hit": 284544,
+        "reasoning": 0,
+        "charged": 1.1575608800000003,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 07": {
+        "calls": 13,
+        "prompt": 41364,
+        "output": 11838,
+        "hit": 12288,
+        "reasoning": 0,
+        "charged": 0.07667376,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 08": {
+        "calls": 19,
+        "prompt": 118738,
+        "output": 27992,
+        "hit": 80640,
+        "reasoning": 0,
+        "charged": 0.1516788,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 09": {
+        "calls": 27,
+        "prompt": 171223,
+        "output": 56161,
+        "hit": 105856,
+        "reasoning": 0,
+        "charged": 0.29212812,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 10": {
+        "calls": 20,
+        "prompt": 103968,
+        "output": 28789,
+        "hit": 54400,
+        "reasoning": 0,
+        "charged": 0.165812,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 11": {
+        "calls": 9,
+        "prompt": 52060,
+        "output": 13651,
+        "hit": 46464,
+        "reasoning": 0,
+        "charged": 0.06112928,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 13": {
+        "calls": 44,
+        "prompt": 223050,
+        "output": 80707,
+        "hit": 109824,
+        "reasoning": 0,
+        "charged": 0.4382504800000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 15": {
+        "calls": 12,
+        "prompt": 106188,
+        "output": 22583,
+        "hit": 68096,
+        "reasoning": 0,
+        "charged": 0.12978592,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 16": {
+        "calls": 22,
+        "prompt": 154318,
+        "output": 35210,
+        "hit": 119552,
+        "reasoning": 0,
+        "charged": 0.17799704,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 05": {
+        "calls": 78,
+        "prompt": 447799,
+        "output": 134865,
+        "hit": 191867,
+        "reasoning": 0,
+        "charged": 0.7992293400000001,
+        "reserved": 0.07985,
+        "unsettled": 1
+      },
+      "2026-11-02 06": {
+        "calls": 102,
+        "prompt": 623494,
+        "output": 185848,
+        "hit": 324864,
+        "reasoning": 0,
+        "charged": 1.0485192799999998,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 07": {
+        "calls": 17,
+        "prompt": 46530,
+        "output": 15300,
+        "hit": 19200,
+        "reasoning": 0,
+        "charged": 0.08891399999999999,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 08": {
+        "calls": 26,
+        "prompt": 157915,
+        "output": 37462,
+        "hit": 109312,
+        "reasoning": 0,
+        "charged": 0.20063724,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 09": {
+        "calls": 36,
+        "prompt": 208471,
+        "output": 56740,
+        "hit": 108544,
+        "reasoning": 0,
+        "charged": 0.6581157599999999,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 10": {
+        "calls": 7,
+        "prompt": 44519,
+        "output": 10786,
+        "hit": 34944,
+        "reasoning": 0,
+        "charged": 0.10683576,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 11": {
+        "calls": 9,
+        "prompt": 64248,
+        "output": 19034,
+        "hit": 31360,
+        "reasoning": 0,
+        "charged": 0.2193024,
+        "reserved": 0,
+        "unsettled": 0
+      }
+    },
+    "task": {
+      "2026-10-28 plan-53eaaebbc537459f81d55a3f8a43f969": {
+        "calls": 60,
+        "prompt": 340093,
+        "output": 113635,
+        "hit": 147836,
+        "reasoning": 0,
+        "charged": 0.7369939200000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 plan-47fbabcdee8c4807a4f895016f830dbc": {
+        "calls": 62,
+        "prompt": 357066,
+        "output": 111081,
+        "hit": 47872,
+        "reasoning": 0,
+        "charged": 0.7760811600000003,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 plan-4c988f3863344f52aff3aa2b1f96beb2": {
+        "calls": 47,
+        "prompt": 134190,
+        "output": 43838,
+        "hit": 19328,
+        "reasoning": 0,
+        "charged": 0.29060055999999995,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 plan-195abff2413a421dac589112f24c7596": {
+        "calls": 20,
+        "prompt": 104478,
+        "output": 28622,
+        "hit": 12160,
+        "reasoning": 0,
+        "charged": 0.41409839999999987,
+        "reserved": 0.083734,
+        "unsettled": 1
+      },
+      "2026-10-28 plan-8b2b4caaed3447618ad1eab83130e5f7": {
+        "calls": 38,
+        "prompt": 190527,
+        "output": 50351,
+        "hit": 58368,
+        "reasoning": 0,
+        "charged": 0.6694607199999998,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 plan-244a8a99cef14462b5aab4c2c1b084ff": {
+        "calls": 15,
+        "prompt": 62584,
+        "output": 20196,
+        "hit": 3840,
+        "reasoning": 0,
+        "charged": 0.2792096,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 plan-e4f9b27b09734255b6f5fe62c2e103ca": {
+        "calls": 9,
+        "prompt": 47537,
+        "output": 11658,
+        "hit": 21376,
+        "reasoning": 0,
+        "charged": 0.14644104000000002,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 plan-c9017fa6d4684997a3370eaf9fc5a553": {
+        "calls": 15,
+        "prompt": 79314,
+        "output": 20390,
+        "hit": 6528,
+        "reasoning": 0,
+        "charged": 0.3089531200000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 plan-6c8ef07753894b848847aca2005c99ee": {
+        "calls": 21,
+        "prompt": 131809,
+        "output": 36081,
+        "hit": 24320,
+        "reasoning": 0,
+        "charged": 0.5045987999999999,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 plan-3a112213d2014e9e84cb764aa63bd99b": {
+        "calls": 19,
+        "prompt": 106288,
+        "output": 27903,
+        "hit": 7936,
+        "reasoning": 0,
+        "charged": 0.42024543999999997,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 plan-503750b085f147ba80ee03a42bea75eb": {
+        "calls": 32,
+        "prompt": 193589,
+        "output": 49661,
+        "hit": 12160,
+        "reasoning": 0,
+        "charged": 0.7606323999999998,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 plan-f0d530e5eae24fb981e4b191dffeb0ed": {
+        "calls": 22,
+        "prompt": 154456,
+        "output": 35192,
+        "hit": 39936,
+        "reasoning": 0,
+        "charged": 0.25608672,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 plan-7ec5b8a566c34569b4da63f14eed2741": {
+        "calls": 12,
+        "prompt": 101381,
+        "output": 17889,
+        "hit": 16384,
+        "reasoning": 0,
+        "charged": 0.31376136000000004,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 plan-0d57811d9b2543eab75d181badec6d9e": {
+        "calls": 9,
+        "prompt": 41639,
+        "output": 13938,
+        "hit": 2304,
+        "reasoning": 0,
+        "charged": 0.19026616,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 plan-0dc30278586d414890cd004d86154aa1": {
+        "calls": 5,
+        "prompt": 67150,
+        "output": 12679,
+        "hit": 52224,
+        "reasoning": 0,
+        "charged": 0.13337296,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 plan-6c8ef07753894b848847aca2005c99ee": {
+        "calls": 20,
+        "prompt": 136794,
+        "output": 31380,
+        "hit": 50176,
+        "reasoning": 0,
+        "charged": 0.21314152000000003,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 plan-53eaaebbc537459f81d55a3f8a43f969": {
+        "calls": 70,
+        "prompt": 374809,
+        "output": 113605,
+        "hit": 105468,
+        "reasoning": 0,
+        "charged": 0.7258703600000003,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 plan-47fbabcdee8c4807a4f895016f830dbc": {
+        "calls": 64,
+        "prompt": 347104,
+        "output": 110941,
+        "hit": 138240,
+        "reasoning": 0,
+        "charged": 0.6553928,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 plan-3a112213d2014e9e84cb764aa63bd99b": {
+        "calls": 17,
+        "prompt": 105508,
+        "output": 28563,
+        "hit": 31104,
+        "reasoning": 0,
+        "charged": 0.18927808,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 plan-503750b085f147ba80ee03a42bea75eb": {
+        "calls": 35,
+        "prompt": 236325,
+        "output": 67206,
+        "hit": 70016,
+        "reasoning": 0,
+        "charged": 0.43653332,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 plan-4c988f3863344f52aff3aa2b1f96beb2": {
+        "calls": 32,
+        "prompt": 125765,
+        "output": 33317,
+        "hit": 13312,
+        "reasoning": 0,
+        "charged": 0.28962144,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 plan-f0d530e5eae24fb981e4b191dffeb0ed": {
+        "calls": 17,
+        "prompt": 119113,
+        "output": 30822,
+        "hit": 61056,
+        "reasoning": 0,
+        "charged": 0.18256612,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 plan-195abff2413a421dac589112f24c7596": {
+        "calls": 17,
+        "prompt": 93202,
+        "output": 26935,
+        "hit": 24192,
+        "reasoning": 0,
+        "charged": 0.35446768,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 plan-e4f9b27b09734255b6f5fe62c2e103ca": {
+        "calls": 10,
+        "prompt": 57732,
+        "output": 14827,
+        "hit": 23296,
+        "reasoning": 0,
+        "charged": 0.18841983999999998,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 plan-c9017fa6d4684997a3370eaf9fc5a553": {
+        "calls": 11,
+        "prompt": 71849,
+        "output": 16703,
+        "hit": 15872,
+        "reasoning": 0,
+        "charged": 0.24621287999999997,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 plan-3224f5a2caac465a988083ae15ab0865": {
+        "calls": 73,
+        "prompt": 324622,
+        "output": 104450,
+        "hit": 62592,
+        "reasoning": 0,
+        "charged": 0.9352972000000002,
+        "reserved": 0.357884,
+        "unsettled": 4
+      },
+      "2026-10-29 plan-7ec5b8a566c34569b4da63f14eed2741": {
+        "calls": 13,
+        "prompt": 101207,
+        "output": 19531,
+        "hit": 38528,
+        "reasoning": 0,
+        "charged": 0.28314712000000003,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 plan-0dc30278586d414890cd004d86154aa1": {
+        "calls": 11,
+        "prompt": 86147,
+        "output": 15969,
+        "hit": 53248,
+        "reasoning": 0,
+        "charged": 0.19567991999999998,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 plan-8b2b4caaed3447618ad1eab83130e5f7": {
+        "calls": 23,
+        "prompt": 103885,
+        "output": 25672,
+        "hit": 34176,
+        "reasoning": 0,
+        "charged": 0.34616104,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 plan-6c8ef07753894b848847aca2005c99ee": {
+        "calls": 31,
+        "prompt": 214784,
+        "output": 52038,
+        "hit": 64896,
+        "reasoning": 0,
+        "charged": 0.35933792,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 plan-53eaaebbc537459f81d55a3f8a43f969": {
+        "calls": 62,
+        "prompt": 315707,
+        "output": 100766,
+        "hit": 83712,
+        "reasoning": 0,
+        "charged": 0.63673324,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 plan-47fbabcdee8c4807a4f895016f830dbc": {
+        "calls": 49,
+        "prompt": 270056,
+        "output": 86469,
+        "hit": 105344,
+        "reasoning": 0,
+        "charged": 0.7372343200000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 plan-503750b085f147ba80ee03a42bea75eb": {
+        "calls": 27,
+        "prompt": 191180,
+        "output": 56364,
+        "hit": 59392,
+        "reasoning": 0,
+        "charged": 0.35843184000000006,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 plan-4c988f3863344f52aff3aa2b1f96beb2": {
+        "calls": 18,
+        "prompt": 82699,
+        "output": 26609,
+        "hit": 17280,
+        "reasoning": 0,
+        "charged": 0.18216543999999998,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 plan-3a112213d2014e9e84cb764aa63bd99b": {
+        "calls": 7,
+        "prompt": 52373,
+        "output": 16002,
+        "hit": 20736,
+        "reasoning": 0,
+        "charged": 0.09605971999999999,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 plan-f0d530e5eae24fb981e4b191dffeb0ed": {
+        "calls": 18,
+        "prompt": 118216,
+        "output": 31009,
+        "hit": 55168,
+        "reasoning": 0,
+        "charged": 0.21873803999999997,
+        "reserved": 0.16736800000000002,
+        "unsettled": 1
+      },
+      "2026-10-30 plan-195abff2413a421dac589112f24c7596": {
+        "calls": 19,
+        "prompt": 119744,
+        "output": 31442,
+        "hit": 67456,
+        "reasoning": 0,
+        "charged": 0.35881024,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 plan-e4f9b27b09734255b6f5fe62c2e103ca": {
+        "calls": 6,
+        "prompt": 46605,
+        "output": 12192,
+        "hit": 40320,
+        "reasoning": 0,
+        "charged": 0.11171880000000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 plan-c9017fa6d4684997a3370eaf9fc5a553": {
+        "calls": 8,
+        "prompt": 44092,
+        "output": 14010,
+        "hit": 26624,
+        "reasoning": 0,
+        "charged": 0.14808095999999998,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 plan-3224f5a2caac465a988083ae15ab0865": {
+        "calls": 55,
+        "prompt": 293271,
+        "output": 99811,
+        "hit": 106624,
+        "reasoning": 0,
+        "charged": 0.5880234800000002,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 plan-7ec5b8a566c34569b4da63f14eed2741": {
+        "calls": 8,
+        "prompt": 79985,
+        "output": 14733,
+        "hit": 61312,
+        "reasoning": 0,
+        "charged": 0.15766248,
+        "reserved": 0.223442,
+        "unsettled": 1
+      },
+      "2026-10-30 plan-0dc30278586d414890cd004d86154aa1": {
+        "calls": 11,
+        "prompt": 93811,
+        "output": 18165,
+        "hit": 58112,
+        "reasoning": 0,
+        "charged": 0.21904247999999998,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 plan-8b2b4caaed3447618ad1eab83130e5f7": {
+        "calls": 10,
+        "prompt": 53510,
+        "output": 14915,
+        "hit": 30720,
+        "reasoning": 0,
+        "charged": 0.16612879999999997,
+        "reserved": 0.08773800000000001,
+        "unsettled": 1
+      },
+      "2026-10-31 plan-6c8ef07753894b848847aca2005c99ee": {
+        "calls": 18,
+        "prompt": 137993,
+        "output": 35980,
+        "hit": 70784,
+        "reasoning": 0,
+        "charged": 0.21254467999999993,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 plan-53eaaebbc537459f81d55a3f8a43f969": {
+        "calls": 65,
+        "prompt": 349205,
+        "output": 111681,
+        "hit": 153728,
+        "reasoning": 0,
+        "charged": 0.6452755600000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 plan-47fbabcdee8c4807a4f895016f830dbc": {
+        "calls": 48,
+        "prompt": 224876,
+        "output": 72399,
+        "hit": 108928,
+        "reasoning": 0,
+        "charged": 0.40772256,
+        "reserved": 0.163646,
+        "unsettled": 1
+      },
+      "2026-10-31 plan-503750b085f147ba80ee03a42bea75eb": {
+        "calls": 18,
+        "prompt": 117110,
+        "output": 27828,
+        "hit": 46077,
+        "reasoning": 0,
+        "charged": 0.18326654,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 plan-f0d530e5eae24fb981e4b191dffeb0ed": {
+        "calls": 17,
+        "prompt": 118699,
+        "output": 27894,
+        "hit": 90240,
+        "reasoning": 0,
+        "charged": 0.1418398,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 plan-8b2b4caaed3447618ad1eab83130e5f7": {
+        "calls": 28,
+        "prompt": 157946,
+        "output": 38871,
+        "hit": 95232,
+        "reasoning": 0,
+        "charged": 0.22010264,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 plan-3a112213d2014e9e84cb764aa63bd99b": {
+        "calls": 10,
+        "prompt": 85849,
+        "output": 27076,
+        "hit": 51712,
+        "reasoning": 0,
+        "charged": 0.14347524,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 plan-4c988f3863344f52aff3aa2b1f96beb2": {
+        "calls": 32,
+        "prompt": 136816,
+        "output": 46133,
+        "hit": 45440,
+        "reasoning": 0,
+        "charged": 0.2768168,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 plan-195abff2413a421dac589112f24c7596": {
+        "calls": 18,
+        "prompt": 123062,
+        "output": 34391,
+        "hit": 88320,
+        "reasoning": 0,
+        "charged": 0.1740724,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 plan-e4f9b27b09734255b6f5fe62c2e103ca": {
+        "calls": 8,
+        "prompt": 58236,
+        "output": 16089,
+        "hit": 42496,
+        "reasoning": 0,
+        "charged": 0.08094591999999999,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 plan-c9017fa6d4684997a3370eaf9fc5a553": {
+        "calls": 11,
+        "prompt": 58802,
+        "output": 13793,
+        "hit": 37376,
+        "reasoning": 0,
+        "charged": 0.07734551999999999,
+        "reserved": 0.14622200000000002,
+        "unsettled": 1
+      },
+      "2026-10-31 plan-3224f5a2caac465a988083ae15ab0865": {
+        "calls": 47,
+        "prompt": 270714,
+        "output": 91830,
+        "hit": 118784,
+        "reasoning": 0,
+        "charged": 0.5216256800000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 plan-7ec5b8a566c34569b4da63f14eed2741": {
+        "calls": 14,
+        "prompt": 100865,
+        "output": 18763,
+        "hit": 61056,
+        "reasoning": 0,
+        "charged": 0.11608212,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 plan-0dc30278586d414890cd004d86154aa1": {
+        "calls": 10,
+        "prompt": 93213,
+        "output": 15055,
+        "hit": 69760,
+        "reasoning": 0,
+        "charged": 0.08506820000000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 plan-6c8ef07753894b848847aca2005c99ee": {
+        "calls": 26,
+        "prompt": 171274,
+        "output": 41608,
+        "hit": 62336,
+        "reasoning": 0,
+        "charged": 0.27661672000000004,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 plan-53eaaebbc537459f81d55a3f8a43f969": {
+        "calls": 51,
+        "prompt": 275047,
+        "output": 86611,
+        "hit": 154240,
+        "reasoning": 0,
+        "charged": 0.47033580000000014,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 plan-3a112213d2014e9e84cb764aa63bd99b": {
+        "calls": 14,
+        "prompt": 89309,
+        "output": 22783,
+        "hit": 46464,
+        "reasoning": 0,
+        "charged": 0.13490628,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 plan-503750b085f147ba80ee03a42bea75eb": {
+        "calls": 39,
+        "prompt": 233791,
+        "output": 69713,
+        "hit": 62976,
+        "reasoning": 0,
+        "charged": 0.45092652000000005,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 plan-47fbabcdee8c4807a4f895016f830dbc": {
+        "calls": 61,
+        "prompt": 318990,
+        "output": 106085,
+        "hit": 175104,
+        "reasoning": 0,
+        "charged": 0.5717280800000003,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 plan-4c988f3863344f52aff3aa2b1f96beb2": {
+        "calls": 26,
+        "prompt": 108109,
+        "output": 35173,
+        "hit": 55296,
+        "reasoning": 0,
+        "charged": 0.19461092,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 plan-f0d530e5eae24fb981e4b191dffeb0ed": {
+        "calls": 19,
+        "prompt": 118738,
+        "output": 27992,
+        "hit": 80640,
+        "reasoning": 0,
+        "charged": 0.1516788,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 plan-195abff2413a421dac589112f24c7596": {
+        "calls": 22,
+        "prompt": 142110,
+        "output": 42507,
+        "hit": 78208,
+        "reasoning": 0,
+        "charged": 0.23549416,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 plan-e4f9b27b09734255b6f5fe62c2e103ca": {
+        "calls": 12,
+        "prompt": 66336,
+        "output": 19108,
+        "hit": 39040,
+        "reasoning": 0,
+        "charged": 0.10450880000000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 plan-c9017fa6d4684997a3370eaf9fc5a553": {
+        "calls": 9,
+        "prompt": 52060,
+        "output": 13651,
+        "hit": 46464,
+        "reasoning": 0,
+        "charged": 0.06112928,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 plan-3224f5a2caac465a988083ae15ab0865": {
+        "calls": 44,
+        "prompt": 223050,
+        "output": 80707,
+        "hit": 109824,
+        "reasoning": 0,
+        "charged": 0.4382504800000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 plan-7ec5b8a566c34569b4da63f14eed2741": {
+        "calls": 12,
+        "prompt": 106188,
+        "output": 22583,
+        "hit": 68096,
+        "reasoning": 0,
+        "charged": 0.12978592,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 plan-0dc30278586d414890cd004d86154aa1": {
+        "calls": 5,
+        "prompt": 70024,
+        "output": 13226,
+        "hit": 68352,
+        "reasoning": 0,
+        "charged": 0.05594304,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 plan-8b2b4caaed3447618ad1eab83130e5f7": {
+        "calls": 17,
+        "prompt": 84294,
+        "output": 21984,
+        "hit": 51200,
+        "reasoning": 0,
+        "charged": 0.12205399999999998,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 plan-6c8ef07753894b848847aca2005c99ee": {
+        "calls": 22,
+        "prompt": 140207,
+        "output": 32810,
+        "hit": 59904,
+        "reasoning": 0,
+        "charged": 0.2886034,
+        "reserved": 0.07985,
+        "unsettled": 1
+      },
+      "2026-11-02 plan-53eaaebbc537459f81d55a3f8a43f969": {
+        "calls": 63,
+        "prompt": 355614,
+        "output": 113625,
+        "hit": 150779,
+        "reasoning": 0,
+        "charged": 0.6623505800000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 plan-47fbabcdee8c4807a4f895016f830dbc": {
+        "calls": 66,
+        "prompt": 365778,
+        "output": 111844,
+        "hit": 193280,
+        "reasoning": 0,
+        "charged": 0.6237395999999997,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 plan-3a112213d2014e9e84cb764aa63bd99b": {
+        "calls": 11,
+        "prompt": 69062,
+        "output": 17258,
+        "hit": 40960,
+        "reasoning": 0,
+        "charged": 0.0979532,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 plan-503750b085f147ba80ee03a42bea75eb": {
+        "calls": 25,
+        "prompt": 188654,
+        "output": 56746,
+        "hit": 90624,
+        "reasoning": 0,
+        "charged": 0.32682648,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 plan-4c988f3863344f52aff3aa2b1f96beb2": {
+        "calls": 39,
+        "prompt": 145114,
+        "output": 40335,
+        "hit": 52608,
+        "reasoning": 0,
+        "charged": 0.33990964,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 plan-f0d530e5eae24fb981e4b191dffeb0ed": {
+        "calls": 15,
+        "prompt": 108922,
+        "output": 25453,
+        "hit": 92928,
+        "reasoning": 0,
+        "charged": 0.11966456000000003,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 plan-195abff2413a421dac589112f24c7596": {
+        "calls": 18,
+        "prompt": 110858,
+        "output": 32144,
+        "hit": 72704,
+        "reasoning": 0,
+        "charged": 0.33636815999999997,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 plan-e4f9b27b09734255b6f5fe62c2e103ca": {
+        "calls": 7,
+        "prompt": 44519,
+        "output": 10786,
+        "hit": 34944,
+        "reasoning": 0,
+        "charged": 0.10683576,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 plan-c9017fa6d4684997a3370eaf9fc5a553": {
+        "calls": 9,
+        "prompt": 64248,
+        "output": 19034,
+        "hit": 31360,
+        "reasoning": 0,
+        "charged": 0.2193024,
+        "reserved": 0,
+        "unsettled": 0
+      }
+    },
+    "stage": {
+      "2026-10-28 writer": {
+        "calls": 191,
+        "prompt": 1457171,
+        "output": 444311,
+        "hit": 457468,
+        "reasoning": 0,
+        "charged": 4.20369316,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 research": {
+        "calls": 195,
+        "prompt": 654930,
+        "output": 148803,
+        "hit": 15104,
+        "reasoning": 0,
+        "charged": 1.9971092000000001,
+        "reserved": 0.083734,
+        "unsettled": 1
+      },
+      "2026-10-29 research": {
+        "calls": 221,
+        "prompt": 778609,
+        "output": 156623,
+        "hit": 13952,
+        "reasoning": 0,
+        "charged": 1.8067635200000005,
+        "reserved": 0.20989,
+        "unsettled": 3
+      },
+      "2026-10-29 writer": {
+        "calls": 192,
+        "prompt": 1505453,
+        "output": 483298,
+        "hit": 707324,
+        "reasoning": 0,
+        "charged": 3.435025799999999,
+        "reserved": 0.14799400000000001,
+        "unsettled": 1
+      },
+      "2026-10-30 writer": {
+        "calls": 184,
+        "prompt": 1433953,
+        "output": 462800,
+        "hit": 788480,
+        "reasoning": 0,
+        "charged": 3.189252160000001,
+        "reserved": 0.39081,
+        "unsettled": 2
+      },
+      "2026-10-30 research": {
+        "calls": 145,
+        "prompt": 542080,
+        "output": 111725,
+        "hit": 9216,
+        "reasoning": 0,
+        "charged": 1.1489156,
+        "reserved": 0.08773800000000001,
+        "unsettled": 1
+      },
+      "2026-10-31 research": {
+        "calls": 148,
+        "prompt": 529737,
+        "output": 110804,
+        "hit": 14592,
+        "reasoning": 0,
+        "charged": 0.9586528400000002,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 writer": {
+        "calls": 196,
+        "prompt": 1503649,
+        "output": 466979,
+        "hit": 1065341,
+        "reasoning": 0,
+        "charged": 2.3275308200000002,
+        "reserved": 0.30986800000000003,
+        "unsettled": 2
+      },
+      "2026-11-01 research": {
+        "calls": 156,
+        "prompt": 520991,
+        "output": 127375,
+        "hit": 10368,
+        "reasoning": 0,
+        "charged": 1.0203303600000002,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-01 writer": {
+        "calls": 201,
+        "prompt": 1538329,
+        "output": 476356,
+        "hit": 1087872,
+        "reasoning": 0,
+        "charged": 2.37763844,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 research": {
+        "calls": 117,
+        "prompt": 420200,
+        "output": 82101,
+        "hit": 14976,
+        "reasoning": 0,
+        "charged": 0.8669004800000002,
+        "reserved": 0.07985,
+        "unsettled": 1
+      },
+      "2026-11-02 writer": {
+        "calls": 158,
+        "prompt": 1172776,
+        "output": 377934,
+        "hit": 805115,
+        "reasoning": 0,
+        "charged": 2.2546533,
+        "reserved": 0,
+        "unsettled": 0
+      }
+    },
+    "state": {
+      "2026-10-28 settled": {
+        "calls": 385,
+        "prompt": 2112101,
+        "output": 593114,
+        "hit": 472572,
+        "reasoning": 0,
+        "charged": 6.200802360000001,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-28 reserved": {
+        "calls": 1,
+        "prompt": 0,
+        "output": 0,
+        "hit": 0,
+        "reasoning": 0,
+        "charged": 0,
+        "reserved": 0.083734,
+        "unsettled": 1
+      },
+      "2026-10-29 settled": {
+        "calls": 409,
+        "prompt": 2284062,
+        "output": 639921,
+        "hit": 721276,
+        "reasoning": 0,
+        "charged": 5.241789319999999,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-29 reserved": {
+        "calls": 4,
+        "prompt": 0,
+        "output": 0,
+        "hit": 0,
+        "reasoning": 0,
+        "charged": 0,
+        "reserved": 0.357884,
+        "unsettled": 4
+      },
+      "2026-10-30 settled": {
+        "calls": 326,
+        "prompt": 1976033,
+        "output": 574525,
+        "hit": 797696,
+        "reasoning": 0,
+        "charged": 4.33816776,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-30 reserved": {
+        "calls": 3,
+        "prompt": 0,
+        "output": 0,
+        "hit": 0,
+        "reasoning": 0,
+        "charged": 0,
+        "reserved": 0.478548,
+        "unsettled": 3
+      },
+      "2026-10-31 settled": {
+        "calls": 342,
+        "prompt": 2033386,
+        "output": 577783,
+        "hit": 1079933,
+        "reasoning": 0,
+        "charged": 3.28618366,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-10-31 reserved": {
+        "calls": 2,
+        "prompt": 0,
+        "output": 0,
+        "hit": 0,
+        "reasoning": 0,
+        "charged": 0,
+        "reserved": 0.30986800000000003,
+        "unsettled": 2
+      },
+      "2026-11-01 settled": {
+        "calls": 357,
+        "prompt": 2059320,
+        "output": 603731,
+        "hit": 1098240,
+        "reasoning": 0,
+        "charged": 3.3979688,
+        "reserved": 0,
+        "unsettled": 0
+      },
+      "2026-11-02 reserved": {
+        "calls": 1,
+        "prompt": 0,
+        "output": 0,
+        "hit": 0,
+        "reasoning": 0,
+        "charged": 0,
+        "reserved": 0.07985,
+        "unsettled": 1
+      },
+      "2026-11-02 settled": {
+        "calls": 274,
+        "prompt": 1592976,
+        "output": 460035,
+        "hit": 820091,
+        "reasoning": 0,
+        "charged": 3.12155378,
+        "reserved": 0,
+        "unsettled": 0
+      }
+    }
+  },
+  "names": {
+    "plan-53eaaebbc537459f81d55a3f8a43f969": "科熙本控油蓬松洗发水日常创作",
+    "plan-47fbabcdee8c4807a4f895016f830dbc": "梵玢祛痘精华",
+    "plan-4c988f3863344f52aff3aa2b1f96beb2": "科熙本造型喷雾",
+    "plan-195abff2413a421dac589112f24c7596": "科熙本防脱精华",
+    "plan-8b2b4caaed3447618ad1eab83130e5f7": "美白1",
+    "plan-244a8a99cef14462b5aab4c2c1b084ff": "染发剂文心卡片创作",
+    "plan-e4f9b27b09734255b6f5fe62c2e103ca": "睫毛增长液每天",
+    "plan-c9017fa6d4684997a3370eaf9fc5a553": "眉毛增长液每天",
+    "plan-6c8ef07753894b848847aca2005c99ee": "小绿瓶防脱",
+    "plan-3a112213d2014e9e84cb764aa63bd99b": "小红瓶防脱",
+    "plan-503750b085f147ba80ee03a42bea75eb": "梵玢防脱洗发水",
+    "plan-f0d530e5eae24fb981e4b191dffeb0ed": "梵玢防脱精华",
+    "plan-7ec5b8a566c34569b4da63f14eed2741": "眼霜",
+    "plan-0d57811d9b2543eab75d181badec6d9e": "盖白染发剂",
+    "plan-0dc30278586d414890cd004d86154aa1": "眼霜日常创造",
+    "plan-3224f5a2caac465a988083ae15ab0865": "盖白染发剂"
+  }
+}

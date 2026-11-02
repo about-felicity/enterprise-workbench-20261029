@@ -75,7 +75,8 @@ def records(day,question,channels,store_root=None):
  paths+=list((root/'supplements'/day).glob('*/round-*/days/'+day+'/*/results.jsonl'))
  rows=[];seen=set()
  for path in paths:
-  for line in path.read_text('utf-8-sig').splitlines():
+  # JSONL records end at LF; Unicode separators inside JSON strings are data.
+  for line in path.read_text('utf-8-sig').split('\n'):
    if not line.strip():continue
    row=json.loads(line)
    if row.get('question')!=question or row.get('model') not in channels or row.get('body_capture_complete') is False or row.get('availability') in {'supplement_unavailable','no_card'}:continue
@@ -147,18 +148,21 @@ def prepare(root,job):
  from geo_source_cards.daily_editorial import DEFAULT_MEDIA,prepare_day
  from geo_source_cards.pipeline_control import ensure_running
  input_path=root/'private_observations.jsonl';out=root/('private_source_analysis'+('-supplement-'+str(job['supplement_attempt']) if job.get('supplement_attempt') else ''))
- wrapped=MediaScopedFetcher(ScraplingArticleFetcher(),DEFAULT_MEDIA)
+ from .source_cache import SourceCache
+ from . import runtime
+ cache=SourceCache(root,ScraplingArticleFetcher(),content_db=runtime.CONTENT)
+ wrapped=MediaScopedFetcher(cache,DEFAULT_MEDIA)
  sources={s['url'] for row in read_lines(input_path) for s in row.get('sources',[])}
  class ObservedFetcher:
   def __init__(self):self.completed=0
   def __call__(self,url):
    atomic_json(root/'material_preparation.json',{'at':time.time(),'phase':'fetching_sources','processed':self.completed,'total':len(sources),'current_url':url})
    result=wrapped(url);self.completed+=1
-   atomic_json(root/'material_preparation.json',{'at':time.time(),'phase':'fetching_sources','processed':self.completed,'total':len(sources),'last_status':result.get('status')})
+   atomic_json(root/'material_preparation.json',{'at':time.time(),'phase':'fetching_sources','processed':self.completed,'total':len(sources),'last_status':result.get('status'),'cache_hits':cache.hits,'failure_kind':result.get('failure_kind')})
    return result
  fetch(input_path,root/'product.json',out,job['date'],fetcher=ObservedFetcher())
  ensure_running(root)
- rows=[json.loads(line) for line in (out/'articles.jsonl').read_text().splitlines() if line.strip()]
+ rows=[json.loads(line) for line in (out/'articles.jsonl').read_text().split('\n') if line.strip()]
  from .owned_sources import exclude_owned
  rows,owned=exclude_owned(rows,root)
  from geo_source_cards.source_scope import anchors,evaluate
@@ -192,6 +196,11 @@ def shortfall_message(rows,full,minimum=3):
  details=[]
  if outside:details.append(str(outside)+'条来源不在当前允许的媒体范围内')
  if incomplete:details.append(str(incomplete)+'条未取得合格完整正文')
+ from .source_cache import failure_kind
+ failed={s.get('url'):s.get('article',{}) for r in rows for s in r.get('sources',[]) if s.get('article',{}).get('status')=='failed'}
+ for kind,label in [('dns','链接域名解析暂时失败'),('verification','来源网站要求访问验证'),('not_found','原文链接已失效')]:
+  count=sum(failure_kind(a)==kind for a in failed.values())
+  if count:details.append(label+str(count)+'条')
  return '可用完整正文'+str(full)+'篇，至少需要'+str(minimum)+'篇'+('（'+'；'.join(details)+'）' if details else '')+'；需补充有效来源'
 
 def usable_source_rows(rows):
@@ -207,7 +216,7 @@ def usable_source_rows(rows):
   if sources:filtered.append({**row,'sources':sources});full+=len(sources)
  return filtered,full
 
-def read_lines(path):return [json.loads(line) for line in Path(path).read_text().splitlines() if line.strip()]
+def read_lines(path):return [json.loads(line) for line in Path(path).read_text().split('\n') if line.strip()]
 
 def main_busy():
  with sqlite3.connect((GEO/'panel/control.sqlite').as_uri()+'?mode=ro',uri=True) as db:services=[r[0] for r in db.execute('select service from jobs where batch in (select current_batch from settings)')]

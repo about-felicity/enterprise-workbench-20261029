@@ -1,0 +1,7 @@
+TUNING monitor-dashboard-api {'MONITOR_SOURCE_INTERSECTION_WORKERS': '1', 'MONITOR_RETAIN_GLOBAL_SNAPSHOT': '0', 'MONITOR_SOURCE_INTERSECTION_BACKGROUND_LIMIT': '1', 'MONITOR_ANALYTICS_MEMORY_CACHE_MAX': '2', 'MONITOR_SOURCE_INTERSECTION_MEMORY_CACHE_MAX': '1'}
+MOUNTS monitor-dashboard-api [{'source': '/opt/monitor', 'dest': '/app'}]
+TUNING monitor-content-worker {'MONITOR_SOURCE_INTERSECTION_BACKGROUND_LIMIT': '1', 'MONITOR_SOURCE_INTERSECTION_WORKERS': '1'}
+MOUNTS monitor-content-worker [{'source': '/opt/monitor', 'dest': '/app'}]
+TUNING monitor-product-worker {'MONITOR_SOURCE_INTERSECTION_WORKERS': '1', 'MONITOR_SOURCE_INTERSECTION_BACKGROUND_LIMIT': '1'}
+MOUNTS monitor-product-worker [{'source': '/opt/monitor', 'dest': '/app'}]
+PG_CONFIG 

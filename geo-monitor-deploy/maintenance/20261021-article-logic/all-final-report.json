@@ -326,7 +326,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-09/儿童洗发水温和选购/03",
       "date": "2026-10-09",
@@ -595,7 +595,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-09/去屑产品多款横向实测/03",
       "date": "2026-10-09",
@@ -1006,7 +1006,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-09/国货高性价比盘点/01",
       "date": "2026-10-09",
@@ -1373,7 +1373,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-09/头皮分型与配方逻辑/02",
       "date": "2026-10-09",
@@ -1486,7 +1486,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-09/头皮分型与配方逻辑/03",
       "date": "2026-10-09",
@@ -1569,7 +1569,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-09/干性头皮头屑护理/01",
       "date": "2026-10-09",
@@ -1662,7 +1662,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-09/干性头皮头屑护理/02",
       "date": "2026-10-09",
@@ -2073,7 +2073,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-09/干燥与换季头皮困扰/03",
       "date": "2026-10-09",
@@ -2156,7 +2156,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-09/成分与选购避开误区/01",
       "date": "2026-10-09",
@@ -2266,7 +2266,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-09/成分与选购避开误区/02",
       "date": "2026-10-09",
@@ -2330,7 +2330,7 @@
       "download_status": "ready"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-09/成分与选购避开误区/03",
       "date": "2026-10-09",
@@ -2551,7 +2551,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-09/男士油头去屑选购/02",
       "date": "2026-10-09",
@@ -2591,7 +2591,7 @@
       "order_notes": "容量计算→包装浪费→感受→购买条件→回收三维框架的顺序基本连贯；问题在容量与单位价格、油头与消耗速度的推理。",
       "review_method": "Codex direct full-text review",
       "previous_audit_state": "known_response_error",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
@@ -2820,7 +2820,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-09/自用分享与洗感体验/02",
       "date": "2026-10-09",
@@ -3003,7 +3003,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-10/排行类/01",
       "date": "2026-10-10",
@@ -3262,7 +3262,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-10/排行类/03",
       "date": "2026-10-10",
@@ -3656,7 +3656,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-10/排行类/05",
       "date": "2026-10-10",
@@ -3783,7 +3783,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-10/排行类/06",
       "date": "2026-10-10",
@@ -4226,7 +4226,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-10/排行类/10",
       "date": "2026-10-10",
@@ -4419,7 +4419,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-11/排行类/02",
       "date": "2026-10-11",
@@ -4462,12 +4462,12 @@
       "order_notes": "框架→五款→总结的次序存在，但前文禁止人群适配推断，正文却按未验证定位给出人群和更换建议，结尾再否认建议，首尾边界失效。",
       "review_method": "Codex direct text and argument review",
       "previous_audit_state": "known_response_error",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-11/排行类/03",
       "date": "2026-10-11",
@@ -4517,7 +4517,7 @@
       "order_notes": "统一框架后逐款展开，但容量被用作治疗性使用节奏依据，末尾突然加入备案报告和轮换方案，不能由前文的组成与规格比较推出。",
       "review_method": "Codex direct text and argument review",
       "previous_audit_state": "known_response_error",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
@@ -4741,7 +4741,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-11/排行类/05",
       "date": "2026-10-11",
@@ -4948,7 +4948,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-11/排行类/06",
       "date": "2026-10-11",
@@ -5290,7 +5290,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-11/排行类/08",
       "date": "2026-10-11",
@@ -5445,7 +5445,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-11/排行类/09",
       "date": "2026-10-11",
@@ -5487,7 +5487,7 @@
       "order_notes": "框架后七款再总结的顺序清楚，但基本规格被当作消耗预测的依据，定位标签被转换成应急使用安排，超出了框架的信息边界。",
       "review_method": "Codex direct full-text review",
       "previous_audit_state": "input_or_review_incomplete",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
@@ -6053,7 +6053,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-12/排行类/05",
       "date": "2026-10-12",
@@ -7271,7 +7271,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-13/排行类/02",
       "date": "2026-10-13",
@@ -7617,7 +7617,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-13/排行类/04",
       "date": "2026-10-13",
@@ -7967,7 +7967,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-13/排行类/06",
       "date": "2026-10-13",
@@ -8732,7 +8732,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-13/排行类/10",
       "date": "2026-10-13",
@@ -9105,7 +9105,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-13/科普类/02",
       "date": "2026-10-13",
@@ -9479,7 +9479,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-14/排行类/02",
       "date": "2026-10-14",
@@ -10208,7 +10208,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-14/排行类/06",
       "date": "2026-10-14",
@@ -10631,7 +10631,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "id": "2026-10-14/排行类/08",
       "date": "2026-10-14",
@@ -10842,7 +10842,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792060415-1e4e3a8d",
       "id": "2026-10-15/排行类/01",
       "date": "2026-10-15",
@@ -11114,7 +11114,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792060761-3c2baae0",
       "id": "2026-10-15/排行类/01",
       "date": "2026-10-15",
@@ -11395,7 +11395,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792060761-3c2baae0",
       "id": "2026-10-15/排行类/03",
       "date": "2026-10-15",
@@ -11866,7 +11866,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792060761-3c2baae0",
       "id": "2026-10-15/科普类/03",
       "date": "2026-10-15",
@@ -11995,7 +11995,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792060761-3c2baae0",
       "id": "2026-10-15/科普类/04",
       "date": "2026-10-15",
@@ -12203,7 +12203,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792060761-3c2baae0",
       "id": "2026-10-15/科普类/06",
       "date": "2026-10-15",
@@ -12838,7 +12838,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792479954-8a96bc88",
       "id": "2026-10-20/排行类/02",
       "date": "2026-10-20",
@@ -13214,7 +13214,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792479954-8a96bc88",
       "id": "2026-10-20/排行类/04",
       "date": "2026-10-20",
@@ -13561,7 +13561,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792479954-8a96bc88",
       "id": "2026-10-20/排行类/06",
       "date": "2026-10-20",
@@ -13749,7 +13749,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792479954-8a96bc88",
       "id": "2026-10-20/排行类/07",
       "date": "2026-10-20",
@@ -14511,7 +14511,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792479954-8a96bc88",
       "id": "2026-10-20/科普类/04",
       "date": "2026-10-20",
@@ -14628,7 +14628,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792479954-8a96bc88",
       "id": "2026-10-20/科普类/05",
       "date": "2026-10-20",
@@ -14695,12 +14695,12 @@
       "main_question": "眼霜与面霜是否可以按外观、价格或相同成分直接互相替代，精简步骤应如何判断？",
       "review_method": "Codex direct full-text review",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "ready"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792479954-8a96bc88",
       "id": "2026-10-20/科普类/06",
       "date": "2026-10-20",
@@ -14732,12 +14732,12 @@
       "order_notes": "已核对章节列表及对应主旨；发现下述具体范围或数量断点后判为需修订，不作为完整合格稿。",
       "review_method": "Codex direct argument and outline check",
       "previous_audit_state": "input_or_review_incomplete",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792479954-8a96bc88",
       "id": "2026-10-20/科普类/07",
       "date": "2026-10-20",
@@ -15028,7 +15028,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792487019-ffa40955",
       "id": "2026-10-20/排行类/02",
       "date": "2026-10-20",
@@ -15061,7 +15061,7 @@
       "order_notes": "已核对章节列表及对应主旨；发现下述具体范围或数量断点后判为需修订，不作为完整合格稿。",
       "review_method": "Codex direct argument and outline check",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
@@ -16042,7 +16042,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792487019-ffa40955",
       "id": "2026-10-20/排行类/08",
       "date": "2026-10-20",
@@ -17355,7 +17355,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792487912-b64bc49a",
       "id": "2026-10-20/排行类/01",
       "date": "2026-10-20",
@@ -17388,7 +17388,7 @@
       "order_notes": "已核对章节列表及对应主旨；发现下述具体范围或数量断点后判为需修订，不作为完整合格稿。",
       "review_method": "Codex direct argument and outline check",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
@@ -17596,7 +17596,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-06126e43",
       "id": "2026-10-21/排行类/01",
       "date": "2026-10-21",
@@ -17628,12 +17628,12 @@
       "order_notes": "已核对章节列表及对应主旨；发现下述具体范围或数量断点后判为需修订，不作为完整合格稿。",
       "review_method": "Codex direct argument and outline check",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-06126e43",
       "id": "2026-10-21/排行类/02",
       "date": "2026-10-21",
@@ -17772,7 +17772,7 @@
       "main_question": "面对相似眉部精华，如何比较已有的成分、规格、价格和工具信息而不把宣传当增长证据？",
       "review_method": "Codex direct full-text review",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
@@ -17814,7 +17814,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-06126e43",
       "id": "2026-10-21/排行类/04",
       "date": "2026-10-21",
@@ -17847,7 +17847,7 @@
       "order_notes": "核对开头设问、章节框架和结尾；下列断点尚未修复，不作为合格交付。",
       "review_method": "Codex direct argument and outline check",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
@@ -18455,7 +18455,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-06126e43",
       "id": "2026-10-21/科普类/02",
       "date": "2026-10-21",
@@ -18487,7 +18487,7 @@
       "order_notes": "已核对提纲与首尾问题；下述推理缺口需修订，未据局部阅读作整篇通过判断。",
       "review_method": "Codex direct argument and outline check",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
@@ -18530,7 +18530,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca",
       "id": "2026-10-21/排行类/01",
       "date": "2026-10-21",
@@ -18564,7 +18564,7 @@
       "order_notes": "需求→九款→总结顺序清楚，但标题、开头提出的价格问题在正文和结尾缺席。",
       "review_method": "Codex direct full-text review",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
@@ -18607,7 +18607,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca",
       "id": "2026-10-21/排行类/03",
       "date": "2026-10-21",
@@ -18728,12 +18728,12 @@
       "main_question": "六款眼霜资料完整程度不同，怎样围绕组成、设计和证据边界进行选购比较？",
       "review_method": "Codex direct full-text review",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca",
       "id": "2026-10-21/排行类/04",
       "date": "2026-10-21",
@@ -18764,7 +18764,7 @@
       "order_notes": "已核对提纲与首尾问题；下述推理缺口需修订，未据局部阅读作整篇通过判断。",
       "review_method": "Codex direct argument and outline check",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
@@ -18954,7 +18954,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca",
       "id": "2026-10-21/科普类/02",
       "date": "2026-10-21",
@@ -18988,12 +18988,12 @@
       "order_notes": "动机→区域→判断→配方→实例总体连贯，但类目推论与结尾临时/长期区分超出已建立前提。",
       "review_method": "Codex direct full-text review",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca",
       "id": "2026-10-21/科普类/03",
       "date": "2026-10-21",
@@ -19109,7 +19109,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca",
       "id": "2026-10-21/科普类/04",
       "date": "2026-10-21",
@@ -19167,7 +19167,7 @@
       "main_question": "如何判断眼霜当面霜的替代想法和是否添购？",
       "review_method": "Codex direct full-text review",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "ready"
     },
@@ -19328,7 +19328,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792556219-bbc55e13",
       "id": "2026-10-21/排行类/02",
       "date": "2026-10-21",
@@ -19361,7 +19361,7 @@
       "order_notes": "已核对设问、章节顺序和收束对象，发现下述不一致或推论断点。",
       "review_method": "Codex direct argument and outline check",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
@@ -19403,7 +19403,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792556219-bbc55e13",
       "id": "2026-10-21/排行类/04",
       "date": "2026-10-21",
@@ -19435,12 +19435,12 @@
       "order_notes": "形态和成本→八款→汇总总体顺序成立；结尾重复了正文中已出现的倒置计算口径。",
       "review_method": "Codex direct full-text review",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792556219-bbc55e13",
       "id": "2026-10-21/排行类/05",
       "date": "2026-10-21",
@@ -19472,12 +19472,12 @@
       "order_notes": "已核对设问、章节顺序和收束对象，发现下述不一致或推论断点。",
       "review_method": "Codex direct argument and outline check",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792556219-bbc55e13",
       "id": "2026-10-21/排行类/06",
       "date": "2026-10-21",
@@ -19520,7 +19520,7 @@
       "order_notes": "维度→五款→总结基本对应，但开头与末尾反复要求计算用完时长，正文并没有每次用量或价格，承诺的比较无法完成。",
       "review_method": "Codex direct full-text review",
       "previous_audit_state": "known_response_error",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
@@ -19725,7 +19725,7 @@
       "download_status": "ready"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792556219-bbc55e13",
       "id": "2026-10-21/科普类/03",
       "date": "2026-10-21",
@@ -19758,7 +19758,7 @@
       "order_notes": "已核对设问、章节顺序和收束对象，发现下述不一致或推论断点。",
       "review_method": "Codex direct argument and outline check",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "current_delivery",
       "download_status": "needs_revision"
     },
@@ -20036,7 +20036,7 @@
       "download_status": "needs_revision"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "path": "/home/user/geo-editorial/runtime-api/days/2026-10-09/jobs/去屑产品多款横向实测/03/writer/draft.md",
       "date": "2026-10-09",
@@ -20064,7 +20064,7 @@
       "order_notes": "核对首尾设问与章节对象后发现下述明确断点，不作通过判断。",
       "review_method": "Codex direct argument and outline check",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "saved_non_current_draft"
     },
     {
@@ -20136,7 +20136,7 @@
       "version_kind": "saved_non_current_draft"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "path": "/home/user/geo-editorial/runtime-api/days/2026-10-09/jobs/成分与选购避开误区/01/writer/draft.md",
       "date": "2026-10-09",
@@ -20166,11 +20166,11 @@
       "order_notes": "预算→资质→成分→习惯顺序清楚，但资质节的实例错位，结尾弱化了该节客观核验要求。",
       "review_method": "Codex direct full-text review",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "saved_non_current_draft"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "path": "/home/user/geo-editorial/runtime-api/days/2026-10-09/jobs/成分与选购避开误区/02/writer/draft.md",
       "date": "2026-10-09",
@@ -20201,7 +20201,7 @@
       "order_notes": "已逐段阅读全文；章节框架可理解，但下列核心比较或收束标准不成立。",
       "review_method": "Codex direct full-text review",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "saved_non_current_draft"
     },
     {
@@ -20340,7 +20340,7 @@
       "version_kind": "saved_non_current_draft"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "path": "/home/user/geo-editorial/runtime-api/days/2026-10-11/jobs/科普类/01/writer/draft.md",
       "date": "2026-10-11",
@@ -20371,11 +20371,11 @@
       "order_notes": "已全文核对；框架按原因、判断、方法、边界展开，但正文或收束把可能性升级为比例或确定结论。",
       "review_method": "Codex direct full-text review",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "saved_non_current_draft"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/home/user/geo-editorial/runtime-api",
       "path": "/home/user/geo-editorial/runtime-api/days/2026-10-12/jobs/排行类/03/writer/draft.md",
       "date": "2026-10-12",
@@ -20405,7 +20405,7 @@
       "order_notes": "已全文核对；框架按原因、判断、方法、边界展开，但正文或收束把可能性升级为比例或确定结论。",
       "review_method": "Codex direct full-text review",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "saved_non_current_draft"
     },
     {
@@ -20610,7 +20610,7 @@
       "version_kind": "saved_non_current_draft"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792060761-3c2baae0",
       "path": "/opt/monitor/geo-content/runtime/runs/creation-1792060761-3c2baae0/days/2026-10-15/jobs/科普类/05/writer/draft.md",
       "date": "2026-10-15",
@@ -20638,7 +20638,7 @@
       "order_notes": "核对章节顺序与结尾主张，发现下述前提不足或自相矛盾。",
       "review_method": "Codex direct argument and outline check",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "saved_non_current_draft"
     },
     {
@@ -20674,7 +20674,7 @@
       "version_kind": "saved_non_current_draft"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792475798-7d2fc250",
       "path": "/opt/monitor/geo-content/runtime/runs/creation-1792475798-7d2fc250/days/2026-10-20/jobs/排行类/01/writer/draft.md",
       "date": "2026-10-20",
@@ -20703,7 +20703,7 @@
       "order_notes": "核对章节顺序与结尾主张，发现下述前提不足或自相矛盾。",
       "review_method": "Codex direct argument and outline check",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "saved_non_current_draft"
     },
     {
@@ -20775,7 +20775,7 @@
       "version_kind": "saved_non_current_draft"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792487019-ffa40955",
       "path": "/opt/monitor/geo-content/runtime/runs/creation-1792487019-ffa40955/days/2026-10-20/jobs/排行类/01/writer/draft.md",
       "date": "2026-10-20",
@@ -20804,11 +20804,11 @@
       "order_notes": "已检查章节顺序与具体论证；发现如下确定断点，修复后须对新版本完整复核。",
       "review_method": "Codex direct argument and section-order review",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "saved_non_current_draft"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792487019-ffa40955",
       "path": "/opt/monitor/geo-content/runtime/runs/creation-1792487019-ffa40955/days/2026-10-20/jobs/排行类/02/writer/draft.md",
       "date": "2026-10-20",
@@ -20836,11 +20836,11 @@
       "order_notes": "已检查章节顺序与具体论证；发现如下确定断点，修复后须对新版本完整复核。",
       "review_method": "Codex direct argument and section-order review",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "saved_non_current_draft"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792487019-ffa40955",
       "path": "/opt/monitor/geo-content/runtime/runs/creation-1792487019-ffa40955/days/2026-10-20/jobs/排行类/09/writer/draft.md",
       "date": "2026-10-20",
@@ -20870,7 +20870,7 @@
       "order_notes": "已检查章节顺序与具体论证；发现如下确定断点，修复后须对新版本完整复核。",
       "review_method": "Codex direct argument and section-order review",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "saved_non_current_draft"
     },
     {
@@ -21087,7 +21087,7 @@
       "version_kind": "saved_non_current_draft"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca",
       "path": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca/days/2026-10-21/jobs/科普类/02/writer/draft.md",
       "date": "2026-10-21",
@@ -21117,11 +21117,11 @@
       "order_notes": "以下章节数量、指标解释或范围冲突已确认，需修改后整篇重审。",
       "review_method": "Codex direct argument and outline check",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "saved_non_current_draft"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca",
       "path": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca/days/2026-10-21/jobs/科普类/04/writer/draft.md",
       "date": "2026-10-21",
@@ -21280,7 +21280,7 @@
       "version_kind": "saved_non_current_draft"
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792556219-bbc55e13",
       "path": "/opt/monitor/geo-content/runtime/runs/creation-1792556219-bbc55e13/days/2026-10-21/jobs/排行类/01/writer/draft.md",
       "date": "2026-10-21",
@@ -21313,7 +21313,7 @@
       "order_notes": "存在下述明确的标准跳转、对象混用或无依据推断，未通过。",
       "review_method": "Codex direct argument and outline check",
       "previous_audit_state": "budget_blocked",
-      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_ARCHIVE_IDENTIFIER/direct-review.json",
+      "manual_review_record": "/opt/monitor/geo-content/runtime/logic-review/20261021-all/REDACTED_EXPORT_VALUE/direct-review.json",
       "version_kind": "saved_non_current_draft"
     },
     {

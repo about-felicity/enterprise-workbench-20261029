@@ -1,0 +1,38 @@
+doubao-hpe14-13-test uid_tail 5833 fts ("CREATE VIRTUAL TABLE fts_im_conversation USING fts4(tokenize = unicode61, content='im_conversation', conversation_id TEXT NOT NULL, name TEXT, bot_type INTEGER NOT NULL, is_local INTEGER, conversation_type INTEGER)",) triggers [('room_fts_content_sync_fts_im_conversation_BEFORE_UPDATE',), ('room_fts_content_sync_fts_im_conversation_BEFORE_DELETE',), ('room_fts_content_sync_fts_im_conversation_AFTER_UPDATE',), ('room_fts_content_sync_fts_im_conversation_AFTER_INSERT',)]
+doubao-hpe14-account2 uid_tail 6524 fts ("CREATE VIRTUAL TABLE fts_im_conversation USING fts4(tokenize = unicode61, content='im_conversation', conversation_id TEXT NOT NULL, name TEXT, bot_type INTEGER NOT NULL, is_local INTEGER, conversation_type INTEGER)",) triggers [('room_fts_content_sync_fts_im_conversation_BEFORE_UPDATE',), ('room_fts_content_sync_fts_im_conversation_BEFORE_DELETE',), ('room_fts_content_sync_fts_im_conversation_AFTER_UPDATE',), ('room_fts_content_sync_fts_im_conversation_AFTER_INSERT',)]
+doubao-hpe14-account3 uid_tail 8796 fts ("CREATE VIRTUAL TABLE fts_im_conversation USING fts4(tokenize = mmicu, content='im_conversation', conversation_id TEXT NOT NULL, name TEXT, bot_type INTEGER NOT NULL, is_local INTEGER, conversation_type INTEGER)",) triggers [('room_fts_content_sync_fts_im_conversation_BEFORE_UPDATE',), ('room_fts_content_sync_fts_im_conversation_BEFORE_DELETE',), ('room_fts_content_sync_fts_im_conversation_AFTER_UPDATE',), ('room_fts_content_sync_fts_im_conversation_AFTER_INSERT',)]
+doubao-hpe14-account4 uid_tail 1584 fts ("CREATE VIRTUAL TABLE fts_im_conversation USING fts4(tokenize = mmicu, content='im_conversation', conversation_id TEXT NOT NULL, name TEXT, bot_type INTEGER NOT NULL, is_local INTEGER, conversation_type INTEGER)",) triggers [('room_fts_content_sync_fts_im_conversation_BEFORE_UPDATE',), ('room_fts_content_sync_fts_im_conversation_BEFORE_DELETE',), ('room_fts_content_sync_fts_im_conversation_AFTER_UPDATE',), ('room_fts_content_sync_fts_im_conversation_AFTER_INSERT',)]
+ALL_UNIQUE True
+CAPTURE_ROOT /opt/monitor/geo-capture/browser_backend.py
+/opt/monitor/geo-capture/schedule_control.py
+/opt/monitor/geo-capture/test_capture_bridge.py
+/opt/monitor/geo-capture/deepseek_auth_monitor.py
+/opt/monitor/geo-capture/daily_dispatch.py
+/opt/monitor/geo-capture/test_control_panel.py
+/opt/monitor/geo-capture/test_native_soak.py
+/opt/monitor/geo-capture/capture_bridge.py
+/opt/monitor/geo-capture/all_channel_soak.py
+/opt/monitor/geo-capture/daily_tasks.py
+/opt/monitor/geo-capture/manual_login.py
+/opt/monitor/geo-capture/start_native_soak.py
+/opt/monitor/geo-capture/deepseek_login_ui.py
+/opt/monitor/geo-capture/backups/all_channel_soak.before-receipt-protocol.py
+/opt/monitor/geo-capture/backups/all_channel_soak.before-optional-table.py
+/opt/monitor/geo-capture/backups/all_channel_soak.before-continuity.py
+/opt/monitor/geo-capture/deepseek_test_auth.py
+/opt/monitor/geo-capture/login_probe.py
+/opt/monitor/geo-capture/soak_monitor.py
+/opt/monitor/geo-capture/wenxin_readiness_probe.py
+/opt/monitor/geo-capture/deepseek_android_login.py
+/opt/monitor/geo-capture/fleet_status.py
+/opt/monitor/geo-capture/public_ingest/gateway.py
+/opt/monitor/geo-capture/control_panel.py
+/opt/monitor/geo-capture/scrcpy_stream.py
+/opt/monitor/geo-capture/browser_task_bridge.py
+/opt/monitor/geo-capture/native_entry.py
+/opt/monitor/geo-capture/baidu_body_delivery.py
+/opt/monitor/geo-capture/runtime_reliability.py
+/opt/monitor/geo-capture/completion_guard.py
+/opt/monitor/geo-capture/wenxin_retry.py
+/opt/monitor/geo-capture/native_soak.py
+

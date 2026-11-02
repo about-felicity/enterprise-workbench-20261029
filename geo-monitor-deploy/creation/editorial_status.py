@@ -19,7 +19,10 @@ def execution_health(root,tickets,day):
         elif any(t.get('waiting_skeleton') for t in tickets):status='needs_attention'
         elif any(t.get('state')=='needs_attention' for t in tickets):status='completed_with_failures'
         else:status='idle'
-    return {'status':status,'state':status.upper(),'active_execution':bool(active and active.get('state') in {'REQUESTING','RESPONDED','AUTHORIZING'}),
+    from .recovery import http_failure
+    http=http_failure(root) if status=='request_unknown' else {}
+    recovery_view={k:http[k] for k in ('http_status','retry_available')} if http else {}
+    return {'http_recovery':recovery_view,'status':status,'state':status.upper(),'active_execution':bool(active and active.get('state') in {'REQUESTING','RESPONDED','AUTHORIZING'}),
         'historical_observation':historical,'historical_status_is_not_current':historical.get('status')!=status}
 
 

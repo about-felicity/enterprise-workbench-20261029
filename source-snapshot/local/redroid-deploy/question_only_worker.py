@@ -22,7 +22,7 @@ sys.path.insert(0,'/home/user/redroid-yuanbao')
 from native_core import NativeDataError
 from delivery import Delivery
 DEVICES={'doubao1':('doubao-hpe14-13-test','127.0.0.1:5557'),
-         'doubao2':('doubao-hpe14-account2','127.0.0.1:5558'),
+         'doubao2':('doubao-hpe14-account2','127.0.0.1:5558'), 'doubao3':('doubao-hpe14-account3','127.0.0.1:5563'), 'doubao4':('doubao-hpe14-account4','127.0.0.1:5564'),
          'yuanbao':('yuanbao-hpe14-android13','127.0.0.1:5559')}
 ADB='/home/user/redroid-doubao/linux-tools/platform-tools/adb' 
 
@@ -36,6 +36,16 @@ def stop_signal(*_):
 def wait_seconds(seconds):
     end=time.monotonic()+seconds
     while not STOP and time.monotonic()<end:time.sleep(min(1,max(0,end-time.monotonic())))
+
+
+def interrupted_original_expired(model, task, observed, now):
+    return (model == 'yuanbao' and task.get('state') == 'prepared'
+            and observed.get('reason') == 'native_answer_interrupted'
+            and observed.get('native_request_confirmed') is True
+            and bool(task.get('request_id'))
+            and observed.get('request_id') == task['request_id']
+            and isinstance(task.get('prepared_at'), (int, float))
+            and now - task['prepared_at'] > 900)
 
 
 def native_auth_required(android,model):
@@ -192,7 +202,7 @@ def run_locked(config,root,capture_limit):
                     if STOP:return 0
                     wait_seconds(wait)
                     continue
-                if config['model'] in ('doubao1','doubao2'):
+                if config['model'] in ('doubao1','doubao2','doubao3','doubao4'):
                     from draft_submission_recovery import recover as recover_draft
                     from history_refresh import pause_blocks_readback
                     marker=json.loads((root/'maintenance_pause.json').read_text()) if paused else {}
@@ -236,6 +246,14 @@ def run_locked(config,root,capture_limit):
                     observed={**observed,'status':'pending','phase':'awaiting_complete_snapshot','reason':'required_sources_pending'}
                 stable=fence.ready(task['task_id'],observed)
                 if task['state']=='prepared' and time.time()-(task.get('prepared_at') or time.time())>900 and not stable:
+                    if interrupted_original_expired(config['model'],task,observed,time.time()):
+                        with queue.db:
+                            queue.db.execute("update tasks set state='needs_attention',error=? where task_id=?",
+                                ('原始回答已中断，历史读取未恢复；保留原请求等待核对',task['task_id']))
+                            queue.event(task['task_id'],'original_interrupted_stopped','Confirmed native interruption after bounded history readback; no resend')
+                        terminal='needs_attention'
+                        phase('original_interrupted_stopped',task,reason='native_answer_interrupted')
+                        return 75
                     health['status']='running_recovery'
                     phase('awaiting_original_result',task,next_at=time.time()+30,reason='original_request_stalled',deadline_at=task['prepared_at']+900)
                     if STOP:return 0

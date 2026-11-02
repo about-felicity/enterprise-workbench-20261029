@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 from control_panel import DEEPSEEK_CHANNELS,MODELS,BUSY,Conflict,atomic,read,validate
 
 ZONE=ZoneInfo('Asia/Shanghai')
-DEVICES={'doubao-hpe14-13-test':'doubao1','doubao-hpe14-account2':'doubao2',
+DEVICES={'doubao-hpe14-13-test':'doubao1','doubao-hpe14-account2':'doubao2','doubao-hpe14-account3':'doubao3','doubao-hpe14-account4':'doubao4',
          'geo-headless-deepseek':'deepseek','deepseek-hpe14-android13':'deepseek','deepseek-hpe14-account2':'deepseek2','deepseek-browser-extension':'deepseek2','geo-headless-wenxin_card':'wenxin_card',
          'geo-headless-baidu_ai':'baidu_ai','yuanbao-hpe14-android13':'yuanbao'}
 _cache={};_lock=threading.RLock()
@@ -57,7 +57,7 @@ def database_counts(day):
 
 def belongs_to_daily_plan(model,batch,day,base=Path('/opt/monitor/geo-capture')):
     """A late Doubao receipt cannot satisfy a different day's task target."""
-    if model not in {'doubao1','doubao2'}:return True
+    if model not in {'doubao1','doubao2','doubao3','doubao4'}:return True
     # Exact server-generated identities only; never interpret input as a path.
     import re
     if not re.fullmatch(r'[A-Za-z0-9_-]{1,180}',batch):return False
@@ -65,7 +65,7 @@ def belongs_to_daily_plan(model,batch,day,base=Path('/opt/monitor/geo-capture'))
     assigned=config.get('daily_date')
     if assigned:return assigned==day
     # Preserve older server jobs created before daily_date was added.
-    match=re.fullmatch(r'geo-panel-doubao[12]-(\d{4})(\d{2})(\d{2})-.*',batch)
+    match=re.fullmatch(r'geo-panel-doubao[1-4]-(\d{4})(\d{2})(\d{2})-.*',batch)
     return bool(match and '-'.join(match.groups())==day)
 
 class DailyTasks:
@@ -141,7 +141,7 @@ class DailyTasks:
     def reconcile(self):
         """One operator process runs this; HTTP handlers only persist intents."""
         day=today();counts=self.counts(day)
-        order=['doubao1','doubao2','baidu_ai','wenxin_card','yuanbao','deepseek','deepseek2']
+        order=['doubao1','doubao2','doubao3','doubao4','baidu_ai','wenxin_card','yuanbao','deepseek','deepseek2']
         for model in order:
             try:self._one(model,day,counts)
             except Exception as exc:

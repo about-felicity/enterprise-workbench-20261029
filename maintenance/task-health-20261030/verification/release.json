@@ -1,0 +1,16 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/creation/source_cache.py",
+      "server": "/opt/monitor/geo-content/creation/source_cache.py",
+      "sha256": "6061f0af0f7f9049f5ba4ae6171dd69f0e8f0a538d893f58065015a8de17e70b"
+    },
+    {
+      "source": "geo-monitor-deploy/creation/materials.py",
+      "server": "/opt/monitor/geo-content/creation/materials.py",
+      "sha256": "1d261c17d6f7abd58f5e852ada2e4c00b628fd930cd1a0039d146dd33d42ba65"
+    }
+  ],
+  "tests_passed": 36,
+  "no_service_restart": true
+}

@@ -50,7 +50,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct full-text review",
     "state": "needs_revision_manual",
     "order_notes": "容量计算→包装浪费→感受→购买条件→回收三维框架的顺序基本连贯；问题在容量与单位价格、油头与消耗速度的推理。",
@@ -173,7 +173,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct text and argument review",
     "state": "needs_revision_manual",
     "order_notes": "框架→五款→总结的次序存在，但前文禁止人群适配推断，正文却按未验证定位给出人群和更换建议，结尾再否认建议，首尾边界失效。",
@@ -201,7 +201,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct text and argument review",
     "state": "needs_revision_manual",
     "order_notes": "统一框架后逐款展开，但容量被用作治疗性使用节奏依据，末尾突然加入备案报告和轮换方案，不能由前文的组成与规格比较推出。",
@@ -236,7 +236,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct full-text review",
     "state": "needs_revision_manual",
     "order_notes": "框架后七款再总结的顺序清楚，但基本规格被当作消耗预测的依据，定位标签被转换成应急使用安排，超出了框架的信息边界。",
@@ -355,7 +355,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct full-text review",
     "state": "needs_revision_manual",
     "order_notes": "维度→五款→总结基本对应，但开头与末尾反复要求计算用完时长，正文并没有每次用量或价格，承诺的比较无法完成。",
@@ -383,7 +383,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and outline check",
     "state": "needs_revision_manual",
     "order_notes": "已核对章节列表及对应主旨；发现下述具体范围或数量断点后判为需修订，不作为完整合格稿。",
@@ -400,7 +400,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and outline check",
     "state": "needs_revision_manual",
     "order_notes": "已核对章节列表及对应主旨；发现下述具体范围或数量断点后判为需修订，不作为完整合格稿。",
@@ -418,7 +418,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and outline check",
     "state": "needs_revision_manual",
     "order_notes": "已核对章节列表及对应主旨；发现下述具体范围或数量断点后判为需修订，不作为完整合格稿。",
@@ -436,7 +436,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and outline check",
     "state": "needs_revision_manual",
     "order_notes": "已核对章节列表及对应主旨；发现下述具体范围或数量断点后判为需修订，不作为完整合格稿。",
@@ -453,7 +453,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and outline check",
     "state": "needs_revision_manual",
     "order_notes": "核对开头设问、章节框架和结尾；下列断点尚未修复，不作为合格交付。",
@@ -505,7 +505,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and outline check",
     "state": "needs_revision_manual",
     "order_notes": "已核对提纲与首尾问题；下述推理缺口需修订，未据局部阅读作整篇通过判断。",
@@ -522,7 +522,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and outline check",
     "state": "needs_revision_manual",
     "order_notes": "已核对提纲与首尾问题；下述推理缺口需修订，未据局部阅读作整篇通过判断。",
@@ -624,7 +624,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and outline check",
     "state": "needs_revision_manual",
     "order_notes": "已核对设问、章节顺序和收束对象，发现下述不一致或推论断点。",
@@ -659,7 +659,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and outline check",
     "state": "needs_revision_manual",
     "order_notes": "已核对设问、章节顺序和收束对象，发现下述不一致或推论断点。",
@@ -694,7 +694,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and outline check",
     "state": "needs_revision_manual",
     "order_notes": "已核对设问、章节顺序和收束对象，发现下述不一致或推论断点。",
@@ -748,7 +748,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and outline check",
     "state": "needs_revision_manual",
     "order_notes": "核对首尾设问与章节对象后发现下述明确断点，不作通过判断。",
@@ -833,7 +833,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and outline check",
     "state": "needs_revision_manual",
     "order_notes": "核对章节顺序与结尾主张，发现下述前提不足或自相矛盾。",
@@ -865,7 +865,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and outline check",
     "state": "needs_revision_manual",
     "order_notes": "核对章节顺序与结尾主张，发现下述前提不足或自相矛盾。",
@@ -936,7 +936,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and outline check",
     "state": "needs_revision_manual",
     "order_notes": "以下章节数量、指标解释或范围冲突已确认，需修改后整篇重审。",
@@ -971,7 +971,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and outline check",
     "state": "needs_revision_manual",
     "order_notes": "存在下述明确的标准跳转、对象混用或无依据推断，未通过。",
@@ -1150,7 +1150,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct full-text review",
     "state": "needs_revision_manual",
     "order_notes": "需求→九款→总结顺序清楚，但标题、开头提出的价格问题在正文和结尾缺席。",
@@ -1204,7 +1204,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct full-text review",
     "state": "needs_revision_manual",
     "order_notes": "动机→区域→判断→配方→实例总体连贯，但类目推论与结尾临时/长期区分超出已建立前提。",
@@ -1281,7 +1281,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct full-text review",
     "state": "needs_revision_manual",
     "order_notes": "形态和成本→八款→汇总总体顺序成立；结尾重复了正文中已出现的倒置计算口径。",
@@ -1298,7 +1298,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct full-text review",
     "state": "needs_revision_manual",
     "order_notes": "预算→资质→成分→习惯顺序清楚，但资质节的实例错位，结尾弱化了该节客观核验要求。",
@@ -1316,7 +1316,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct full-text review",
     "state": "needs_revision_manual",
     "order_notes": "已逐段阅读全文；章节框架可理解，但下列核心比较或收束标准不成立。",
@@ -1370,7 +1370,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct full-text review",
     "state": "needs_revision_manual",
     "order_notes": "已全文核对；框架按原因、判断、方法、边界展开，但正文或收束把可能性升级为比例或确定结论。",
@@ -1389,7 +1389,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct full-text review",
     "state": "needs_revision_manual",
     "order_notes": "已全文核对；框架按原因、判断、方法、边界展开，但正文或收束把可能性升级为比例或确定结论。",
@@ -1461,7 +1461,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and section-order review",
     "state": "needs_revision_manual",
     "order_notes": "已检查章节顺序与具体论证；发现如下确定断点，修复后须对新版本完整复核。",
@@ -1478,7 +1478,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and section-order review",
     "state": "needs_revision_manual",
     "order_notes": "已检查章节顺序与具体论证；发现如下确定断点，修复后须对新版本完整复核。",
@@ -1494,7 +1494,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "reviewer": "Codex direct argument and section-order review",
     "state": "needs_revision_manual",
     "order_notes": "已检查章节顺序与具体论证；发现如下确定断点，修复后须对新版本完整复核。",

@@ -34,8 +34,10 @@ def execute(root,job,retry):
             atomic_json(root/'geo_worker.json',{'at':time.time(),'phase':'known_preflight_backoff','code':error.code,
                 'next_at':read(root/'known_preflight_retry.json').get('next_at')})
             return
-        pause(root,'api_unknown' if error.uncertain else error.code,
-              'API发送结果未知，保留现场等待核对' if error.uncertain else 'API阶段受保护暂停：'+error.code)
+        failure=recovery.http_failure(root) if error.uncertain else {}
+        message=('API连接异常（HTTP '+ '/'.join(map(str,failure['http_status']))+'），已有成稿已保留；请核对后补做未完成阶段' if failure else
+                 'API发送结果未知，保留现场等待核对' if error.uncertain else 'API阶段受保护暂停：'+error.code)
+        pause(root,'api_http_unavailable' if failure else 'api_unknown' if error.uncertain else error.code,message)
         atomic_json(root/'geo_worker.json',{'at':time.time(),'error':error.code,'uncertain':error.uncertain})
     except ValueError as error:
         from .materials import InsufficientMaterials

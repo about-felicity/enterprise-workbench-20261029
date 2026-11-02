@@ -11,14 +11,28 @@ def serialize_writer_data(data, directory):
     """Lossless compact input with stable product prefix; pin sent-request format."""
     marker = directory / 'prompt_format.json'
     if marker.exists():
-        if read(marker).get('protocol') != 'product-prefix-compact-v1':
+        protocol = read(marker).get('protocol')
+        if protocol not in ('product-prefix-compact-v1', 'source-prefix-canonical-v2'):
             raise ValueError('Unknown writer prompt format')
     elif (directory / 'api_state.json').exists() or (directory / 'request.json').exists() or (directory / 'response.json').exists():
         # Historical requests must retain their exact payload hash on recovery.
         return json.dumps(data, ensure_ascii=False)
     else:
-        atomic_json(marker, {'protocol': 'product-prefix-compact-v1'})
+        protocol = 'source-prefix-canonical-v2'
+        atomic_json(marker, {'protocol': protocol})
     ordered = {'material': data['material'], **{k: v for k, v in data.items() if k != 'material'}}
+    if protocol == 'source-prefix-canonical-v2':
+        def canonical(value):
+            if isinstance(value, dict):
+                priority = ('raw_product', 'raw_source_text', 'brand', 'name')
+                keys = [k for k in priority if k in value]
+                keys += sorted(k for k in value if k not in priority)
+                return {k: canonical(value[k]) for k in keys}
+            if isinstance(value, list):
+                return [canonical(item) for item in value]
+            return value
+        ordered = {'material': canonical(data['material']),
+                   **{k: canonical(data[k]) for k in sorted(data) if k != 'material'}}
     return json.dumps(ordered, ensure_ascii=False, separators=(',', ':'))
 
 
@@ -40,8 +54,10 @@ def output_limit(client, prompt, directory, meta, system_prompt=None):
 
 
 def normalize_answer(answer):
-    if isinstance(answer, dict) and set(answer) == {'draft_markdown', '_note'} and isinstance(answer['_note'], str):
-        return {'draft_markdown': answer['draft_markdown']}
+    if isinstance(answer, dict):
+        for note in ('_note', 'draft_markdown_note'):
+            if set(answer) == {'draft_markdown', note} and isinstance(answer[note], str):
+                return {'draft_markdown': answer['draft_markdown']}
     return answer
 
 

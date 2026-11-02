@@ -75,7 +75,7 @@ class AnalysisKnowledge:
 def build_knowledge(rows: Iterable[dict[str, Any]]) -> AnalysisKnowledge:
     """Build reusable knowledge from already model-verified database rows."""
     exact: dict[tuple[str, str], list[dict[str, Any]]] = {}
-    observations: dict[str, dict[str, list[dict[str, Any]]]] = defaultdict(lambda: defaultdict(list))
+    observations = defaultdict(lambda: defaultdict(Counter))
     for row in rows:
         question = clean_text(row.get("question"))
         answer = clean_text(row.get("answer"))
@@ -86,20 +86,17 @@ def build_knowledge(rows: Iterable[dict[str, Any]]) -> AnalysisKnowledge:
         for item in products:
             key = product_key(item)
             if key:
-                observations[compact(question)][key].append(item)
+                observations[compact(question)][key][(clean_text(item.get("product_name")), clean_text(item.get("brand_name")))] += 1
 
     catalog: dict[str, list[dict[str, Any]]] = {}
     for question, groups in observations.items():
         values = []
         for key, items in groups.items():
             # The most frequently verified spelling/brand becomes canonical.
-            signatures = Counter(
-                (clean_text(item.get("product_name")), clean_text(item.get("brand_name")))
-                for item in items
-            )
+            signatures = items
             (name, brand), frequency = signatures.most_common(1)[0]
             values.append({"product_name": name, "brand_name": brand, "key": key,
-                           "frequency": len(items) + frequency / 1000})
+                           "frequency": sum(items.values()) + frequency / 1000})
         catalog[question] = sorted(values, key=lambda item: (-len(item["key"]), -item["frequency"]))
     return AnalysisKnowledge(exact=exact, catalog=catalog)
 

@@ -1,0 +1,3927 @@
+{
+  "zhuanlan.zhihu.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 548
+  },
+  "sq1996.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 9
+  },
+  "ly-rm.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 28
+  },
+  "jianghu.taobao.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 147
+  },
+  "zhihu.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 129
+  },
+  "frostchina.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "m.dayi.org.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 7
+  },
+  "code.nhsa.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 5
+  },
+  "baike.baidu.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 46
+  },
+  "cnn.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "ellegirl.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "lyko.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 13
+  },
+  "rockfotoemma.elle.se": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "nonno.hpplus.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 6
+  },
+  "galaxus.nl": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 4
+  },
+  "m.dealmoon.co.uk": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 5
+  },
+  "faz.net": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 8
+  },
+  "elle.be": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "m.dealmoon.de": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "femina.se": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "elle.vn": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 9
+  },
+  "eastweek.stheadline.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "smartseniors.consumer.org.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 2
+  },
+  "topick.hket.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 16
+  },
+  "wwdjapan.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 11
+  },
+  "news.mingpao.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "vogue.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 24
+  },
+  "consumer.org.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 15
+  },
+  "galaxus.de": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 10
+  },
+  "sundaymore.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "brigitte.de": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "post.smzdm.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 74
+  },
+  "biteki.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 58
+  },
+  "amazon.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 38
+  },
+  "beauty321.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 50
+  },
+  "maxima.pt": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 4
+  },
+  "oggi.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "dhc.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "c2cc.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 3
+  },
+  "ccs.pinguan.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "thebk.co.kr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "sgpjbg.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 4
+  },
+  "netvoices.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "stheadline.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 13
+  },
+  "inredweb.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "actu.fr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "my-best.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 16
+  },
+  "wmn.de": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 10
+  },
+  "cnqjw.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 6
+  },
+  "radioformula.com.mx": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "pc.hgdaily.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 10
+  },
+  "snjrmtzx.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 9
+  },
+  "shopping.yahoo.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 9
+  },
+  "cdn.amazon.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 8
+  },
+  "sephora.co.uk": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 20
+  },
+  "hwahae.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 19
+  },
+  "shopping.yahoo.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 17
+  },
+  "stylist.co.uk": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 4
+  },
+  "maquia.hpplus.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 16
+  },
+  "lovelyskin.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 5
+  },
+  "harpersbazaar.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 10
+  },
+  "hk.loccitane.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 4
+  },
+  "incibeauty.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 14
+  },
+  "watsons.com.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 6
+  },
+  "amazon.de": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 5
+  },
+  "hktvmall.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 58
+  },
+  "sweetcare.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 22
+  },
+  "jcasonline.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "e.leclerc": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "elle.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 11
+  },
+  "ztylez.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "elleman.vn": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "hk.cosme.net": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 44
+  },
+  "i-voce.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 22
+  },
+  "global.hk01.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 3
+  },
+  "shen.39.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "shiseido.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 22
+  },
+  "baila.hpplus.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "cosmart.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 20
+  },
+  "uniopen.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "be-story.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 8
+  },
+  "m.etmall.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 6
+  },
+  "daiichisankyo-hc.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 4
+  },
+  "dealmoon.com.au": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 14
+  },
+  "photo.femmeactuelle.fr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "gingerweb.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "evidensdebeaute.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "ellethailand.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "vogue.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "marieclaire.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 6
+  },
+  "voguehk.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 2
+  },
+  "elle.pl": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "hypebae.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "revistamarieclaire.globo.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "vogue.fr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "10jqka.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "aufeminin.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "168report.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 9
+  },
+  "sgpjbg.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 2
+  },
+  "k.sina.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 5
+  },
+  "patentimages.storage.googleapis.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 31
+  },
+  "onlinelibrary.wiley.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 4
+  },
+  "cosmopolitan.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 17
+  },
+  "wap.gdskin.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "prod.danawa.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 6
+  },
+  "mannings.com.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 6
+  },
+  "ccia-cleaning.org": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "doaj.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "theboom.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 43
+  },
+  "health.dzwww.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "instyle.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 6
+  },
+  "marieclaire.fr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "yesstyle.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 5
+  },
+  "raxy.rakuten.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "depaco.daimaru-matsuzakaya.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "caifuhao.eastmoney.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 3
+  },
+  "nlab.itmedia.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 5
+  },
+  "hk.ulifestyle.com.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 6
+  },
+  "m.shihuo.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 8
+  },
+  "douban.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 4
+  },
+  "pmall.gpoint.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 21
+  },
+  "world.taobao.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 35
+  },
+  "styletc.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 3
+  },
+  "hk01.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 6
+  },
+  "newbeauty.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "allergicliving.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "ewg.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 13
+  },
+  "topsante.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "ubeauty.com.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 22
+  },
+  "janeyoomd.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "pubs.acs.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "freundin.de": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "openurl.ebsco.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "lee.hpplus.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 8
+  },
+  "mainichikirei.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "prtimes.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 7
+  },
+  "coloria.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "dealmoon.de": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "cjyun.10yan.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 20
+  },
+  "cosme.net.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 20
+  },
+  "m.hgdaily.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 4
+  },
+  "weee.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "smzdm.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 17
+  },
+  "vichy.no": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "wapbaike.baidu.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "jddonline.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 6
+  },
+  "m.familydoctor.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "lottemart.vn": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "spxww.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 11
+  },
+  "mktindex.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "beaut.taobao.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 33
+  },
+  "kaori.air-marketing.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "babassu.nl": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 4
+  },
+  "nuneczka.pl": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "tyleraromatherapy.co.uk": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "m.toutiao.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 8
+  },
+  "news.qq.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 19
+  },
+  "hoyu-cn.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "ulta.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "magacol.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 9
+  },
+  "marieclaire.it": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "eclat.hpplus.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "cdn.amazon.it": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "roomie.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 5
+  },
+  "sosiliz.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 2
+  },
+  "vogue.co.th": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 4
+  },
+  "tw.my-best.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 2
+  },
+  "taobao.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 20
+  },
+  "watsons.co.th": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "publisher.henkel-dam.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "mi-mollet.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "202.62.215.17": {
+    "region": "unknown",
+    "reason": "IP地址，未核实出版归属",
+    "unique_urls": 1
+  },
+  "consumerreports.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "m.jiemian.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 6
+  },
+  "coppel.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "muckrack.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "vigilanses.anses.fr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "kicks.no": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "anses.fr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "sailfish21-ws.revolve.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "vidal.fr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "galaxus.fr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "ginza-beauty-labo.myami-clinic.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "corp.shiseido.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "medargo.ru": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "m.c2cc.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 2
+  },
+  "marieclaire.hu": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "life.hu": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "bioderma.com.vn": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "th.my-best.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "cosmopolitan.fr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "anua.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "millebeaute.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "120.24.241.190": {
+    "region": "unknown",
+    "reason": "IP地址，未核实出版归属",
+    "unique_urls": 2
+  },
+  "cs.cnpharm.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "twojstyl.pl": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "independent.co.uk": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "galaxus.be": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 5
+  },
+  "amazon.es": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 6
+  },
+  "revolve.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "elfcosmetics.com.au": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "vonmaur.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "kicks.fi": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "adorebeauty.com.au": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "amazon.it": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 5
+  },
+  "veroniquecloutier.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "m.cosme.net.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 26
+  },
+  "marieclaire.co.uk": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "skypost.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "bella.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 6
+  },
+  "cn.koreadepart.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 10
+  },
+  "etmall.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 13
+  },
+  "google.co.in": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "cosmopolitan.de": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "mujerhoy.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 14
+  },
+  "zahratalkhaleej.ae": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "ypjgj.qinghai.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 2
+  },
+  "foligain.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "cloud.kepuchina.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 10
+  },
+  "finance.sina.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 3
+  },
+  "fr.iherb.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "ypk.39.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 3
+  },
+  "tuna21-ws.revolve.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 7
+  },
+  "sephora.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 7
+  },
+  "instyle.mx": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "notino.at": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "aljamila.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 4
+  },
+  "cosmopolitancn.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 3
+  },
+  "hx.39.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "sabon.com.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "pinkoi.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 2
+  },
+  "rosecrown.net": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "hk.pinkoi.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "thairath.co.th": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "longlin.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "robbreport.com.sg": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "kakan.elle.se": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "snm0516.aisee.tv": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "chinapp.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "sinomed.ac.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 2
+  },
+  "dh.gov.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "us.amazon.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "dailymed.nlm.nih.gov": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 4
+  },
+  "woot.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "amazon.co.uk": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 5
+  },
+  "health.usnews.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "glamour.es": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "synapse.zhihuiya.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "boticinal.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "nupharm.com.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 3
+  },
+  "hk.iherb.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 2
+  },
+  "cosmopolitan.com.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "nytimes.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 6
+  },
+  "whowhatwear.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "clindoeil.ca": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "shuuemura.ca": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "sweetweb.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "m.buro247.ru": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "hollyshop.ru": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 7
+  },
+  "esquireindia.co.in": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "marieclairearabia.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "webuomo.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "co.51tomi.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 11
+  },
+  "esquire.com.tr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "m.weibo.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 7
+  },
+  "toutiao.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 6
+  },
+  "shopmyexchange.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 5
+  },
+  "13.230.61.1": {
+    "region": "unknown",
+    "reason": "IP地址，未核实出版归属",
+    "unique_urls": 2
+  },
+  "mistinecosmetics.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "fashion-press.net": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "top.dhc.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "uol.com.br": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "best.pconline.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 9
+  },
+  "xg.zhihu.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "lemon8-app.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 7
+  },
+  "cosme.net": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 7
+  },
+  "tonymoly.com.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 9
+  },
+  "harpersbazaar.de": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "api.beautygarage.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "mentholatum.com.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 8
+  },
+  "mentholatum.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "at.iherb.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "iherb.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "health.cnr.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 5
+  },
+  "api.media.atlassian.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "health.rednet.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "sgyy.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "m.snjrmtzx.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "searchingc.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "ncwb.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "drmax.pl": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "vn.world.taobao.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "dailyview.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 2
+  },
+  "more-news.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "meeco.mistore.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "gcs.gov.mo": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 3
+  },
+  "m.sgpjbg.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "m.sohu.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 4
+  },
+  "smartmag.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 4
+  },
+  "himalayataiwan.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "mall.iopenmall.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 10
+  },
+  "tw.loccitane.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 2
+  },
+  "bk.cnpharm.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 3
+  },
+  "nl.iherb.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "vki.at": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "cqn.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 2
+  },
+  "nmg315.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "gdcers.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "next.co.uk": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "newworld.co.nz": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "hn315.net.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 3
+  },
+  "sz863.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "hzpwjc.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "tid.gov.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "www": {
+    "region": "invalid",
+    "reason": "畸形或不完整域名",
+    "unique_urls": 1
+  },
+  "legco.gov.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "szsac.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "snjxww.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "notino.fr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "elle.de": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "nmpa.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 17
+  },
+  "opaj.napstic.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 2
+  },
+  "pubchem.ncbi.nlm.nih.gov": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "xgnews.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 2
+  },
+  "patents.google.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 8
+  },
+  "mx.iherb.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "cittabella.my": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "ae.iherb.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "spirit.com.kw": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "embryolisse.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "jp.iherb.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "mg.iherb.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "hollandandbarrett.be": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "dosfarma.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "cosas.pe": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "elle.dk": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "ishampoo.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 5
+  },
+  "sirok.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "so.m.jd.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 6
+  },
+  "51ifind.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "primor.eu": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 5
+  },
+  "vogue.co.uk": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "lady.mail.ru": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "zgw.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 3
+  },
+  "hgdaily.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 2
+  },
+  "sohu.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 11
+  },
+  "elle.com.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 3
+  },
+  "cttlab.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "guangzhou315.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "jxpub.nntv.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "popdaily.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 5
+  },
+  "k.sina.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 3
+  },
+  "zh.zalora.com.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 2
+  },
+  "163.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 4
+  },
+  "greenvines.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "rakuten.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "zghzpkx.cbpt.cnki.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 3
+  },
+  "staging.europepmc.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "basic.10jqka.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "harpersbazaar.com.ec": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "pmc.ncbi.nlm.nih.gov": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "scholar.cnki.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "jcadonline.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "jcad.mydigitalpublication.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "goodhousekeeping.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 5
+  },
+  "fda.gov": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "accessdata.fda.gov": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "cnpharm.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "aveda.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "ofcosmetics.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "sxxynews.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 2
+  },
+  "sg.world.taobao.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "droppeal.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "thann.info": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "takashimaya.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "wwyqianqian.github.io": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "lookfantastic.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "chifure.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "galaxus.ch": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "beautygarage.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "m.maigoo.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 3
+  },
+  "m.cnpp100.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 5
+  },
+  "cnpp100.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "jcasonline": {
+    "region": "invalid",
+    "reason": "畸形或不完整域名",
+    "unique_urls": 1
+  },
+  "ovid.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 5
+  },
+  "dermatest.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "womenshealthmag.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "vogueadria.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "m-cjyun.10yan.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 6
+  },
+  "bozhou.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "babymall.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 3
+  },
+  "maelove.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "prod.chosunbiz.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "veryweb.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "adorebeauty.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "womanandhome.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "wellwhisk.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "osusume.mynavi.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "zh-cn.buyma.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "amazon.com.au": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "popbela.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 8
+  },
+  "galaxus.at": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 5
+  },
+  "henkel.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "yakup.co.kr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "zhxz.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "mqikan.cqvip.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "prisradar.no": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "www-origin.poponote.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 2
+  },
+  "japaholic.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 2
+  },
+  "weare.lush.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "glamour.hu": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "newyorkmagazine.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "dealmoon.co.uk": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "maigoo.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 5
+  },
+  "hktvmerchantevoucher.hktvmall.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 4
+  },
+  "ua.iherb.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "gc.39.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "wgk.39.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "wk.39.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "headandshouldersarabia.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "thedermdigest.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "gk.39.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "marketresearch.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "m.120ask.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "mayoclinic.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "hant.120ask.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 5
+  },
+  "skm.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "marie-claire.es": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "gomaji.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "watsons.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 4
+  },
+  "ask.39.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "realsimple.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "orbis.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 2
+  },
+  "m.39.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "xa.39.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "m.idpaper.co.kr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "m.xgnews.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 5
+  },
+  "eva.ua": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "so09.tci-thaijo.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "bloomingdales.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 5
+  },
+  "online.atoll.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "app.revolve.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "kci.go.kr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "blog.jinyanstore.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "sciencedirect.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "medrxiv.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 4
+  },
+  "haba-lab.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "yakup.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "dailypharm.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "kpanews.co.kr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "cosmerepo.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "mpa.gd.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 3
+  },
+  "hangzhou.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "zenodo.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "nature.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "link.springer.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 4
+  },
+  "buro247.ru": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "esteelauder.it": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "yzwb.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "chinareports.org.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "jp.reach24h.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "std.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "lofficielph.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "fancl.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "spacenk.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "elle.com.au": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "thecut.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "today.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "melaleuca.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "redken.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "my.cosme.net": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "atorrege.com.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "sfilate.it": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "jogja.tribunnews.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "ozon.kz": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "tw.reach24h.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 3
+  },
+  "ro.co": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "k2derm.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "optilaboratories.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "health.amazon.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "perfecthair.ch": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "databoks.katadata.co.id": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "3g.oeeee.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "gqthailand.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "fr.caudalie.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "gdskin.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "socie.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "poponote.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "goxip.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 3
+  },
+  "ogreen.sg": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "futura-sciences.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "dealmoon.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 8
+  },
+  "m.smzdm.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 8
+  },
+  "dealmoon.cn": {
+    "region": "foreign",
+    "reason": "海外平台中文站，保守剔除",
+    "unique_urls": 7
+  },
+  "popbee.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "biohope.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "naris.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "kao.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 4
+  },
+  "newbeautygroup.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "elle.com.sg": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "vogue.in": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "allure.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "xcx.ugoshop.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "bibamagazine.fr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "estetologia.pl": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "consultqd.clevelandclinic.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "0515yc.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "elle.se": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "id.my-best.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "fashion.ce.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "elle.com.kz": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "vivi.tv": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "thevoicemag.ru": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "harpersbazaar.kz": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "finance.china.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "pe.iherb.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "jessicahk.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "mensnonno.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "xlxj.cbpt.cnki.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "henkel.it": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "consumer.bz.it": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "editorial.femaledaily.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "wei.39.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "sundayriley.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "marianne.cz": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "shopch.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "lp.pinduoduo.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "haba.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "elmundo.es": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "wap.cnki.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "digikala.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "ooe.arbeiterkammer.at": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "au.iherb.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "dameapoteket.no": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "notino.cz": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "blog.cliomakeup.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "amazon.co.za": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "am.ozon.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "openir.whu.edu.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "cfdam-health.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "continentalhospitals.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "rozprawy-doktorskie.bip.uj.edu.pl": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "everydayhealth.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "mpa.xinjiang.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 3
+  },
+  "nxyjj.nx.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "glowonline.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "czgd.tv": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 2
+  },
+  "detail.youzan.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 3
+  },
+  "pub.kg.dermavidya.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "uptodate.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "buffcitysoap.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "wowbrowcosmetics.se": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "m.wandougongzhu.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "news.yahoo.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "watsons.vn": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "familydoctor.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 3
+  },
+  "chemistwarehouse.com.au": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "m.bohe.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "my.top1health.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "kaspi.kz": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "zgxy.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "vogue.it": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "ccfdie.org": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "voguescandinavia.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "preprints.epiforecasts.io": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "piyao.kepuchina.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "pingwest.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "tjh.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "utravel.com.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "pumch.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "pkuph.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "gminsights.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "marketpublishers.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "dermapproved.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 4
+  },
+  "special.39.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "zalora.com.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "shanghai.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "act.chinatt315.org.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "dep.com.vn": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "jaad.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "tandfonline.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "news.nate.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "m.cqn.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 4
+  },
+  "media.aromakankyo.or.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "wwwv.tsgh.ndmctsgh.edu.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "web.ntpu.edu.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "didier-lab.nl": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "quechoisir.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "modelomall.co.kr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "matas.dk": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "foreo.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "youhui.bacaoo.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "weibo.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 3
+  },
+  "newpharma.be": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "sweetcare.pt": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "douglas.be": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "shop.supervalu.ie": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "eureka.patsnap.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 4
+  },
+  "54.65.45.73": {
+    "region": "unknown",
+    "reason": "IP地址，未核实出版归属",
+    "unique_urls": 1
+  },
+  "aws.feds.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "dime.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "med.stanford.edu": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "m.gmw.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 2
+  },
+  "pubmed.ncbi.nlm.nih.gov": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "angfa-store.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "cn.pinkoi.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "hk.melaleuca.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "strawberrynet.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "m.familydoctor.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 2
+  },
+  "sephora.ch": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "dhc.net.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "notino.es": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "makemymask.co": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "parapharmacielafayette.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "nymag.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "ocu.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "nuhealthwellness.co": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "dermtodoor.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "sdqixia.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "nmpa.gov.xn--cn),,()-y36cbaicb7608ctc5fba86hm3kt7k5mej0cdacb316busa4qb759ceade179phae719pxjegaff790t6do7rko7a85ap2mx0jc6f2t2aopbs1bq7c274b1qrugyemgva92vp3ed34ega6511iha5705bia040uqbj073exvd598ehonm11b9d2s38b1a6449evvdja1020kbyqayp5d": {
+    "region": "invalid",
+    "reason": "畸形或不完整域名",
+    "unique_urls": 1
+  },
+  "scjgj.zhuzhou.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "scjgj.luan.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "threecosmetics.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "go.cqmmgo.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "poplady-mag.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "marieclaire.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "ec2-18-163-36-20.ap-east-1.compute.amazonaws.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "lookfantastic.cn": {
+    "region": "foreign",
+    "reason": "海外平台中文站，保守剔除",
+    "unique_urls": 1
+  },
+  "onlineshop.treeoflife.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "stage.breezeonline.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "grandsun.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "db.yaozh.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "item.jd.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "byoma.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "amazon.com.mx": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "pclady.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "page.sm.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 4
+  },
+  "cosmeticworld.ca": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 7
+  },
+  "m.mama.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "feds.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "miin-cosmetics.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "msdmanuals.cn": {
+    "region": "foreign",
+    "reason": "海外平台中文站，保守剔除",
+    "unique_urls": 1
+  },
+  "apollohospitals.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "dayi.org.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 2
+  },
+  "amazon.com.br": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "dailymail.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "lazada.sg": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "ngabbs.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "caffcimedia.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "mentholatum.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "s.dayi.org.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "ypzdw.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "zxb.jn-yuanxin.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "bellcosme.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "otonasalone.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "chemistwarehouse.ae": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "cosrx.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "theinkeylist.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "beautycrew.com.au": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "skinstitut.co.nz": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "apress.arimino.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "doi": {
+    "region": "invalid",
+    "reason": "畸形或不完整域名",
+    "unique_urls": 1
+  },
+  "doi.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "byby.39.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "kosecosmeport.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "femina.fr": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "locari.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "amazon.ca": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "labelle.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "panpuri.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "fda.gov.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "next.terrywhitechemmart.com.au": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "amazon.in": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 3
+  },
+  "springermedizin.de": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "alpropharmacy.com.my": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "threecosmeticshk.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "ellearabia.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "dealmoon.ca": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "yszyapp.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "sheknows.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "femina.in": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "walmart.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "caretobeauty.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "rakuten.ne.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "morgans.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "hairsalon-iwasaki.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "cooponline.vn": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "gov.mo": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "m.dealmoon.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "vitabrid.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "vogue.sg": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "notino.pl": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "itrial.hk": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "cdn.feds.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "nifdc.org.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "amr.changsha.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "amr.guiyang.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "zhg.cirs-group.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "cirs-group.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "notino.nl": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "central.co.th": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "maison.kose.co.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "biccamera.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "es.iherb.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "lv-1.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 3
+  },
+  "elcomercio.es": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "jbk.39.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 3
+  },
+  "altroconsumo.it": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "michill.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "zlwlx.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "refinery29.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "lolavie.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "marisol.hpplus.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "fragrancenet.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "obagi.vn": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "suckhoedoisong.vn": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "skinsafeproducts.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "asinsight.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "cnenergynews.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "drwolffgroup.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "spur.hpplus.jp": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "nodeloc.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "linux.do": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "recommend.marketplace.rakuten.net": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "ebay.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "wiki.m.smzdm.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "news.10jqka.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "ilmagazinedelparrucchiere.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "hairstylist.globelife.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "pacifiko.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "m.163.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "korea.people.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "wcd2023singapore-abs.org": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "ichgcp.net": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "oekotest.de": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "laroche-posay.co.uk": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "fmhr.net": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "elimparcial.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "m.bjnews.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "m.thepaper.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "scjgj.taiyuan.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "swzycy.ynsmes.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "jiji.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "ryutsuu.biz": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "data.goodstats.id": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "view.inews.qq.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 2
+  },
+  "mu.iherb.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "laneige.com.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "hk.innisfree.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "eshop-lungfung.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "christinacosmetics.pl": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "parents.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "kosmetista.ru": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "yohohongkong.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "farmaventas.es": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "maonan.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "zhuceabc.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "xg.zhi": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "mdpi.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "bilibili.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "vogue.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "lj.hkej.com": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "klairs.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "meetspa.lohastime.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "anan.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "amazon.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "jianke.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "directchemistoutlet.com.au": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "swaghairshop.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 2
+  },
+  "bbs.syiptv.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "harpersbazaar.my": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "ypjg.ln.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "finance.sina.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "yjj.beijing.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "scjgj.gz.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 1
+  },
+  "news.miaoshou.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "xy.39.net": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "nextcosmetics.dk": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "ro.iherb.com": {
+    "region": "foreign",
+    "reason": "已识别海外平台或国家区域站点",
+    "unique_urls": 1
+  },
+  "walkerland.com.tw": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "wiki.smzdm.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  },
+  "stnn.cc": {
+    "region": "hk_macao_taiwan",
+    "reason": "港澳台区域站点，单列不并入大陆主表",
+    "unique_urls": 1
+  },
+  "uumama.com": {
+    "region": "unknown",
+    "reason": "通用域名归属未核实，保守单列",
+    "unique_urls": 1
+  },
+  "mpa.xizang.gov.cn": {
+    "region": "mainland",
+    "reason": "中国大陆区域域名，排除已知海外服务后按区域站点归类",
+    "unique_urls": 2
+  },
+  "shobserver.com": {
+    "region": "mainland",
+    "reason": "已识别的大陆出版/内容平台",
+    "unique_urls": 1
+  }
+}

@@ -31,10 +31,18 @@ def digest(value):
 def db():
     BASE.mkdir(parents=True,exist_ok=True)
     conn=sqlite3.connect(BASE/'operations.sqlite',timeout=30)
-    conn.execute('pragma journal_mode=WAL')
-    conn.execute('pragma synchronous=FULL')
-    conn.execute('create table if not exists operations(id text primary key,payload_hash text,result text)')
-    return conn
+    try:
+        # Concurrent first uploads must not race while changing journal mode.
+        # This only serializes connection setup, not image processing/uploads.
+        with process_lock(BASE/'operations-init.lock',blocking=True):
+            if conn.execute('pragma journal_mode').fetchone()[0].lower()!='wal':
+                conn.execute('pragma journal_mode=WAL')
+            conn.execute('pragma synchronous=FULL')
+            conn.execute('create table if not exists operations(id text primary key,payload_hash text,result text)')
+        return conn
+    except Exception:
+        conn.close()
+        raise
 
 def job_root(identity):
     if not re.fullmatch(r'creation-[0-9]+-[a-f0-9]{8}',identity):raise ValueError('任务编号不正确')
@@ -104,12 +112,13 @@ class SharedBudget(Budget):
 
 def balance():return CreationClient(KEY).balance()
 
-def resume(root,*,check_balance=True):
+def resume(root,*,check_balance=True,allow_http_recovery=False):
     from . import recovery
     assert_job_controllable(root)
     if check_balance:
         checked=balance()
         if not checked['is_available']:raise ValueError('DeepSeek API余额不可用')
+    replacement=recovery.recover_http_failure(root) if allow_http_recovery else None
     with process_lock(root/'control.lock',blocking=True):
         old=pipeline_control.state(root)
         # Do not replay a request with unknown delivery, even after operator resume.
@@ -120,7 +129,7 @@ def resume(root,*,check_balance=True):
         atomic_json(root/'control.json',{'paused':False,'revision':old.get('revision',0)+1,
             'resumed_epoch':time.time()})
         recovery.succeeded(root)
-    return {'resumed':True}
+    return {'resumed':True,**({'replacement_ticket':replacement} if replacement else {})}
 
 def create(payload):
     day=payload.get('date','');question=payload.get('question','')
@@ -259,7 +268,7 @@ def action(name,payload,operation_id):
             elif name in {'pause','resume'}:
                 root=job_root(payload.get('job_id',''))
                 assert_job_controllable(root)
-                result=pipeline_control.pause(root,'operator','用户请求排空暂停；已发送API保留收尾') if name=='pause' else resume(root)
+                result=pipeline_control.pause(root,'operator','用户请求排空暂停；已发送API保留收尾') if name=='pause' else resume(root,allow_http_recovery=True)
             else:raise ValueError('操作不存在')
             conn.execute('insert into operations values(?,?,?)',(operation_id,signature,json.dumps(result,ensure_ascii=False)))
             return result
@@ -278,7 +287,7 @@ def product_label(root,day):
     name=str(product.get('name') or '').strip();brand=str(product.get('brand') or '').strip()
     return {'id':digest({'name':name,'brand':brand}) if name else 'unknown','name':name or '未标注产品','brand':brand}
 
-def articles(root):
+def articles(root, *, summary=False):
     result=[]
     revoked={read(p).get('word_sha256') for p in (root/'revocations').glob('*.json')}
     for path in sorted((root/'approved').glob('*/*/*/receipt.json')):
@@ -293,6 +302,9 @@ def articles(root):
             if Path(name).name!=name or file.is_symlink() or not file.is_file() or hashlib.sha256(file.read_bytes()).hexdigest()!=expected:
                 valid=False;break
         if not valid:continue
+        if summary:
+            result.append({'id':folder.relative_to(root/'approved').as_posix()})
+            continue
         # Only original approved receipt directories are downloadable.
         from .article_export import info
         metadata=info(root,folder)
@@ -324,7 +336,7 @@ def articles(root):
             'markdown':draft.is_file(),'word':word.is_file(),'receipt':receipt,'task_name':metadata['task_name'],'category':metadata['category'],'primary_reference':metadata['primary_reference']})
     return result
 
-def status():
+def status(*, task_list=False):
     jobs=[]
     for path in sorted((BASE/'runs').glob('*/job.json'),reverse=True):
         root=path.parent;job=read(path);tickets=[read(p) for p in (root/'queue').glob('*/ticket.json')]
@@ -335,13 +347,19 @@ def status():
         from .editorial_status import blocks,execution_health
         health=execution_health(root,tickets,day)
         jobs.append({**job,'quality_blocks':blocks(root,tickets),'product':product_label(root,job['date']),'control':pipeline_control.state(root),'health':health,
-            'worker':read(root/'geo_worker.json'),'queue':counts,'articles':articles(root),
+            'worker':read(root/'geo_worker.json'),'queue':counts,'articles':articles(root,summary=True) if task_list else articles(root),
             'day':day})
-    legacy=articles(SHARED)
+    legacy=[] if task_list else articles(SHARED)
     from . import materials
     from . import studio
-    return {'ok':True,'at':time.time(),'jobs':jobs,'settings':pipeline_control.settings(SHARED),
-            'legacy_articles':legacy,'materials':materials.status(),'studio':studio.snapshot(jobs),
+    studio_state=studio.snapshot(jobs)
+    if task_list:
+        # Task cards and editors only need the archived product name in each plan.
+        studio_state['plans']=[{**p,'product':{k:p['product'].get(k,'') for k in ('name','brand')}} for p in studio_state['plans']]
+        studio_state['products']=[{'product_id':p['product_id'],'version':p.get('version'),'product':{k:p['product'].get(k,'') for k in ('name','brand')}} for p in studio_state['products']]
+        studio_state['pending_import']=None
+    return {'ok':True,'at':time.time(),'jobs':[] if task_list else jobs,'settings':pipeline_control.settings(SHARED),
+            'legacy_articles':legacy,'materials':materials.status(),'studio':studio_state,
             'legacy_approved_articles':len(list((SHARED/'approved').glob('*/*/*/receipt.json'))),
             'source':'专用素材独立保存；可选择只读GEO已有素材','worker':read(BASE/'worker_health.json')}
 

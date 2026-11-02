@@ -13,4 +13,10 @@ class Formats(unittest.TestCase):
   x={'draft_markdown':'# title\n\nbody','_note':'internal'}
   self.assertEqual(normalize_answer(x),{'draft_markdown':x['draft_markdown']});self.assertIn('_note',x)
   for value in [dict(x,unexpected=True),dict(x,_note={})]:self.assertEqual(normalize_answer(value),value)
+ def test_writer_draft_note(self):
+  x={'draft_markdown':'# title\n\nbody','draft_markdown_note':'internal'}
+  self.assertEqual(normalize_answer(x),{'draft_markdown':x['draft_markdown']})
+  self.assertIn('draft_markdown_note',x)
+  for value in [dict(x,unexpected=True),dict(x,draft_markdown_note={}),dict(x,_note='extra')]:
+   self.assertEqual(normalize_answer(value),value)
 if __name__=='__main__':unittest.main()

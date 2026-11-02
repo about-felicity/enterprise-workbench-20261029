@@ -1,0 +1,1018 @@
+{
+  "window": {
+    "window_start": "2026-10-01",
+    "window_end": "2026-10-15",
+    "as_of": "2026-10-30T14:31:54.895046+08:00",
+    "bad_json_lines": 0,
+    "duplicate_answer_records_retained": 0
+  },
+  "captures": 753,
+  "complete_captures": 716,
+  "questions": 21,
+  "days": [
+    "2026-10-01",
+    "2026-10-02",
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11",
+    "2026-10-12",
+    "2026-10-13",
+    "2026-10-14",
+    "2026-10-15"
+  ],
+  "region_url_counts": {
+    "mainland": 1604,
+    "unknown": 38,
+    "foreign": 1316,
+    "hk_macao_taiwan": 493,
+    "invalid": 4
+  },
+  "raw_status_counts": {
+    "ok": 2250,
+    "error": 207,
+    "missing": 397,
+    "blocked": 420,
+    "empty": 105,
+    "unsupported": 76
+  },
+  "nonforeign_content_kinds": {
+    "文章候选": 1564,
+    "问答正文": 119,
+    "专利/目录": 11,
+    "百科/搜索": 47,
+    "商品/电商": 356
+  },
+  "primary": {
+    "unique_links": 1683,
+    "valid_articles": 1107,
+    "coverage": 0.6577540106951871,
+    "total_link_recommendations": 5555,
+    "valid_recommendations": 3878,
+    "median": 2423.0,
+    "mean": 3028.26738934056,
+    "p25": 1162.0,
+    "p75": 3605.5,
+    "p90": 5767.599999999999,
+    "bins": [
+      {
+        "bin": "不足1000",
+        "unique_articles": 215,
+        "article_share": 0.1942186088527552,
+        "recommendations": 567,
+        "recommendation_share": 0.14620938628158844,
+        "mean_recommendations": 2.6372093023255814,
+        "repeat_share": 0.4,
+        "mean_questions": 1.0046511627906978
+      },
+      {
+        "bin": "1000–1999",
+        "unique_articles": 277,
+        "article_share": 0.25022583559168926,
+        "recommendations": 930,
+        "recommendation_share": 0.23981433728726148,
+        "mean_recommendations": 3.357400722021661,
+        "repeat_share": 0.48375451263537905,
+        "mean_questions": 1.0072202166064983
+      },
+      {
+        "bin": "2000–2999",
+        "unique_articles": 273,
+        "article_share": 0.24661246612466126,
+        "recommendations": 985,
+        "recommendation_share": 0.2539969056214544,
+        "mean_recommendations": 3.608058608058608,
+        "repeat_share": 0.5384615384615384,
+        "mean_questions": 1.0036630036630036
+      },
+      {
+        "bin": "3000–4999",
+        "unique_articles": 191,
+        "article_share": 0.17253839205058719,
+        "recommendations": 616,
+        "recommendation_share": 0.1588447653429603,
+        "mean_recommendations": 3.225130890052356,
+        "repeat_share": 0.42408376963350786,
+        "mean_questions": 1.0052356020942408
+      },
+      {
+        "bin": "5000–7999",
+        "unique_articles": 98,
+        "article_share": 0.08852755194218609,
+        "recommendations": 499,
+        "recommendation_share": 0.12867457452294997,
+        "mean_recommendations": 5.091836734693878,
+        "repeat_share": 0.6428571428571429,
+        "mean_questions": 1.1326530612244898
+      },
+      {
+        "bin": "8000及以上",
+        "unique_articles": 53,
+        "article_share": 0.04787714543812105,
+        "recommendations": 281,
+        "recommendation_share": 0.07246003094378546,
+        "mean_recommendations": 5.30188679245283,
+        "repeat_share": 0.6037735849056604,
+        "mean_questions": 1.0188679245283019
+      }
+    ],
+    "association": {
+      "n": 1107,
+      "spearman": 0.10933051766207776,
+      "permutation_p": 0.001,
+      "approx_bootstrap_ci": [
+        0.04512132353404961,
+        0.16443280998014606
+      ]
+    },
+    "adjusted": {
+      "n": 632,
+      "groups": 49,
+      "within_domain_question_log_correlation": 0.052663030220373185,
+      "permutation_p": 0.222
+    },
+    "domains": [
+      {
+        "domain": "zhuanlan.zhihu.com",
+        "articles": 442,
+        "median": 2550.0,
+        "recommendations": 1848
+      },
+      {
+        "domain": "zhihu.com",
+        "articles": 98,
+        "median": 1085.5,
+        "recommendations": 272
+      },
+      {
+        "domain": "beauty321.com",
+        "articles": 50,
+        "median": 6037.5,
+        "recommendations": 438
+      },
+      {
+        "domain": "theboom.com.cn",
+        "articles": 43,
+        "median": 2757.0,
+        "recommendations": 96
+      },
+      {
+        "domain": "post.smzdm.com",
+        "articles": 26,
+        "median": 832.0,
+        "recommendations": 44
+      },
+      {
+        "domain": "cjyun.10yan.com.cn",
+        "articles": 20,
+        "median": 2132.0,
+        "recommendations": 47
+      },
+      {
+        "domain": "ubeauty.com.hk",
+        "articles": 20,
+        "median": 2813.5,
+        "recommendations": 144
+      },
+      {
+        "domain": "consumer.org.hk",
+        "articles": 15,
+        "median": 1433.0,
+        "recommendations": 42
+      },
+      {
+        "domain": "stheadline.com",
+        "articles": 13,
+        "median": 3128.0,
+        "recommendations": 34
+      },
+      {
+        "domain": "spxww.com.cn",
+        "articles": 10,
+        "median": 2594.0,
+        "recommendations": 21
+      }
+    ]
+  },
+  "including_encyclopedia": {
+    "unique_links": 2097,
+    "valid_articles": 1305,
+    "coverage": 0.6223175965665236,
+    "total_link_recommendations": 6348,
+    "valid_recommendations": 4217,
+    "median": 2492.0,
+    "mean": 3435.8521072796934,
+    "p25": 1206.0,
+    "p75": 3735.0,
+    "p90": 5929.2000000000035,
+    "bins": [
+      {
+        "bin": "不足1000",
+        "unique_articles": 246,
+        "article_share": 0.18850574712643678,
+        "recommendations": 604,
+        "recommendation_share": 0.14322978420678206,
+        "mean_recommendations": 2.4552845528455283,
+        "repeat_share": 0.3699186991869919,
+        "mean_questions": 1.0040650406504066
+      },
+      {
+        "bin": "1000–1999",
+        "unique_articles": 311,
+        "article_share": 0.23831417624521073,
+        "recommendations": 1016,
+        "recommendation_share": 0.2409295707849182,
+        "mean_recommendations": 3.266881028938907,
+        "repeat_share": 0.4694533762057878,
+        "mean_questions": 1.0064308681672025
+      },
+      {
+        "bin": "2000–2999",
+        "unique_articles": 315,
+        "article_share": 0.2413793103448276,
+        "recommendations": 1048,
+        "recommendation_share": 0.24851790372302585,
+        "mean_recommendations": 3.326984126984127,
+        "repeat_share": 0.5047619047619047,
+        "mean_questions": 1.0031746031746032
+      },
+      {
+        "bin": "3000–4999",
+        "unique_articles": 241,
+        "article_share": 0.1846743295019157,
+        "recommendations": 710,
+        "recommendation_share": 0.1683661370642637,
+        "mean_recommendations": 2.9460580912863072,
+        "repeat_share": 0.4107883817427386,
+        "mean_questions": 1.004149377593361
+      },
+      {
+        "bin": "5000–7999",
+        "unique_articles": 117,
+        "article_share": 0.0896551724137931,
+        "recommendations": 529,
+        "recommendation_share": 0.12544462888309224,
+        "mean_recommendations": 4.521367521367521,
+        "repeat_share": 0.5982905982905983,
+        "mean_questions": 1.1111111111111112
+      },
+      {
+        "bin": "8000及以上",
+        "unique_articles": 75,
+        "article_share": 0.05747126436781609,
+        "recommendations": 310,
+        "recommendation_share": 0.07351197533791795,
+        "mean_recommendations": 4.133333333333334,
+        "repeat_share": 0.48,
+        "mean_questions": 1.0133333333333334
+      }
+    ],
+    "association": {
+      "n": 1305,
+      "spearman": 0.08346804763333579,
+      "permutation_p": 0.004,
+      "approx_bootstrap_ci": [
+        0.034220908447896,
+        0.13253085595598202
+      ]
+    },
+    "adjusted": {
+      "n": 696,
+      "groups": 58,
+      "within_domain_question_log_correlation": 0.03785116026895087,
+      "permutation_p": 0.404
+    },
+    "domains": [
+      {
+        "domain": "zhuanlan.zhihu.com",
+        "articles": 442,
+        "median": 2550.0,
+        "recommendations": 1848
+      },
+      {
+        "domain": "zhihu.com",
+        "articles": 98,
+        "median": 1085.5,
+        "recommendations": 272
+      },
+      {
+        "domain": "hktvmall.com",
+        "articles": 58,
+        "median": 3930.5,
+        "recommendations": 120
+      },
+      {
+        "domain": "beauty321.com",
+        "articles": 50,
+        "median": 6037.5,
+        "recommendations": 438
+      },
+      {
+        "domain": "baike.baidu.com",
+        "articles": 45,
+        "median": 2447.0,
+        "recommendations": 61
+      },
+      {
+        "domain": "theboom.com.cn",
+        "articles": 43,
+        "median": 2757.0,
+        "recommendations": 96
+      },
+      {
+        "domain": "post.smzdm.com",
+        "articles": 26,
+        "median": 832.0,
+        "recommendations": 44
+      },
+      {
+        "domain": "ubeauty.com.hk",
+        "articles": 22,
+        "median": 2685.5,
+        "recommendations": 148
+      },
+      {
+        "domain": "cjyun.10yan.com.cn",
+        "articles": 20,
+        "median": 2132.0,
+        "recommendations": 47
+      },
+      {
+        "domain": "smzdm.com",
+        "articles": 17,
+        "median": 1097.0,
+        "recommendations": 24
+      }
+    ]
+  },
+  "mainland": {
+    "unique_links": 1406,
+    "valid_articles": 941,
+    "coverage": 0.6692745376955903,
+    "total_link_recommendations": 4072,
+    "valid_recommendations": 2886,
+    "median": 2230.0,
+    "mean": 2611.2263549415516,
+    "p25": 1115.0,
+    "p75": 3122.0,
+    "p90": 4950.0,
+    "bins": [
+      {
+        "bin": "不足1000",
+        "unique_articles": 197,
+        "article_share": 0.20935175345377258,
+        "recommendations": 497,
+        "recommendation_share": 0.1722106722106722,
+        "mean_recommendations": 2.5228426395939088,
+        "repeat_share": 0.38578680203045684,
+        "mean_questions": 1.0050761421319796
+      },
+      {
+        "bin": "1000–1999",
+        "unique_articles": 244,
+        "article_share": 0.2592986184909671,
+        "recommendations": 767,
+        "recommendation_share": 0.26576576576576577,
+        "mean_recommendations": 3.1434426229508197,
+        "repeat_share": 0.46311475409836067,
+        "mean_questions": 1.0081967213114753
+      },
+      {
+        "bin": "2000–2999",
+        "unique_articles": 259,
+        "article_share": 0.27523910733262485,
+        "recommendations": 945,
+        "recommendation_share": 0.32744282744282743,
+        "mean_recommendations": 3.6486486486486487,
+        "repeat_share": 0.5366795366795367,
+        "mean_questions": 1.0038610038610039
+      },
+      {
+        "bin": "3000–4999",
+        "unique_articles": 154,
+        "article_share": 0.1636556854410202,
+        "recommendations": 434,
+        "recommendation_share": 0.15038115038115038,
+        "mean_recommendations": 2.8181818181818183,
+        "repeat_share": 0.38961038961038963,
+        "mean_questions": 1.0064935064935066
+      },
+      {
+        "bin": "5000–7999",
+        "unique_articles": 61,
+        "article_share": 0.06482465462274177,
+        "recommendations": 192,
+        "recommendation_share": 0.06652806652806653,
+        "mean_recommendations": 3.1475409836065573,
+        "repeat_share": 0.6229508196721312,
+        "mean_questions": 1.2131147540983607
+      },
+      {
+        "bin": "8000及以上",
+        "unique_articles": 26,
+        "article_share": 0.02763018065887354,
+        "recommendations": 51,
+        "recommendation_share": 0.017671517671517672,
+        "mean_recommendations": 1.9615384615384615,
+        "repeat_share": 0.34615384615384615,
+        "mean_questions": 1.0384615384615385
+      }
+    ],
+    "association": {
+      "n": 941,
+      "spearman": 0.04583851348115523,
+      "permutation_p": 0.156,
+      "approx_bootstrap_ci": [
+        -0.01490104760831939,
+        0.11275312138653572
+      ]
+    },
+    "adjusted": {
+      "n": 596,
+      "groups": 43,
+      "within_domain_question_log_correlation": 0.04014170822489072,
+      "permutation_p": 0.36
+    },
+    "domains": [
+      {
+        "domain": "zhuanlan.zhihu.com",
+        "articles": 442,
+        "median": 2550.0,
+        "recommendations": 1848
+      },
+      {
+        "domain": "zhihu.com",
+        "articles": 98,
+        "median": 1085.5,
+        "recommendations": 272
+      },
+      {
+        "domain": "theboom.com.cn",
+        "articles": 43,
+        "median": 2757.0,
+        "recommendations": 96
+      },
+      {
+        "domain": "post.smzdm.com",
+        "articles": 26,
+        "median": 832.0,
+        "recommendations": 44
+      },
+      {
+        "domain": "cjyun.10yan.com.cn",
+        "articles": 20,
+        "median": 2132.0,
+        "recommendations": 47
+      },
+      {
+        "domain": "spxww.com.cn",
+        "articles": 10,
+        "median": 2594.0,
+        "recommendations": 21
+      },
+      {
+        "domain": "pc.hgdaily.com.cn",
+        "articles": 10,
+        "median": 1718.5,
+        "recommendations": 22
+      },
+      {
+        "domain": "cloud.kepuchina.cn",
+        "articles": 10,
+        "median": 1617.0,
+        "recommendations": 20
+      },
+      {
+        "domain": "best.pconline.com.cn",
+        "articles": 9,
+        "median": 3363.0,
+        "recommendations": 11
+      },
+      {
+        "domain": "m.shihuo.cn",
+        "articles": 8,
+        "median": 1078.5,
+        "recommendations": 15
+      }
+    ]
+  },
+  "hk_macao_taiwan": {
+    "unique_links": 277,
+    "valid_articles": 166,
+    "coverage": 0.5992779783393501,
+    "total_link_recommendations": 1483,
+    "valid_recommendations": 992,
+    "median": 3697.0,
+    "mean": 5392.3373493975905,
+    "p25": 1843.0,
+    "p75": 6118.0,
+    "p90": 11704.5,
+    "bins": [
+      {
+        "bin": "不足1000",
+        "unique_articles": 18,
+        "article_share": 0.10843373493975904,
+        "recommendations": 70,
+        "recommendation_share": 0.07056451612903226,
+        "mean_recommendations": 3.888888888888889,
+        "repeat_share": 0.5555555555555556,
+        "mean_questions": 1
+      },
+      {
+        "bin": "1000–1999",
+        "unique_articles": 33,
+        "article_share": 0.19879518072289157,
+        "recommendations": 163,
+        "recommendation_share": 0.16431451612903225,
+        "mean_recommendations": 4.9393939393939394,
+        "repeat_share": 0.6363636363636364,
+        "mean_questions": 1
+      },
+      {
+        "bin": "2000–2999",
+        "unique_articles": 14,
+        "article_share": 0.08433734939759036,
+        "recommendations": 40,
+        "recommendation_share": 0.04032258064516129,
+        "mean_recommendations": 2.857142857142857,
+        "repeat_share": 0.5714285714285714,
+        "mean_questions": 1
+      },
+      {
+        "bin": "3000–4999",
+        "unique_articles": 37,
+        "article_share": 0.22289156626506024,
+        "recommendations": 182,
+        "recommendation_share": 0.18346774193548387,
+        "mean_recommendations": 4.918918918918919,
+        "repeat_share": 0.5675675675675675,
+        "mean_questions": 1
+      },
+      {
+        "bin": "5000–7999",
+        "unique_articles": 37,
+        "article_share": 0.22289156626506024,
+        "recommendations": 307,
+        "recommendation_share": 0.3094758064516129,
+        "mean_recommendations": 8.297297297297296,
+        "repeat_share": 0.6756756756756757,
+        "mean_questions": 1
+      },
+      {
+        "bin": "8000及以上",
+        "unique_articles": 27,
+        "article_share": 0.16265060240963855,
+        "recommendations": 230,
+        "recommendation_share": 0.2318548387096774,
+        "mean_recommendations": 8.518518518518519,
+        "repeat_share": 0.8518518518518519,
+        "mean_questions": 1
+      }
+    ],
+    "association": {
+      "n": 166,
+      "spearman": 0.25280546356147043,
+      "permutation_p": 0.004,
+      "approx_bootstrap_ci": [
+        0.12231407280141235,
+        0.38412159414361907
+      ]
+    },
+    "adjusted": {
+      "n": 36,
+      "groups": 6,
+      "within_domain_question_log_correlation": 0.2695084239470139,
+      "permutation_p": 0.182
+    },
+    "domains": [
+      {
+        "domain": "beauty321.com",
+        "articles": 50,
+        "median": 6037.5,
+        "recommendations": 438
+      },
+      {
+        "domain": "ubeauty.com.hk",
+        "articles": 20,
+        "median": 2813.5,
+        "recommendations": 144
+      },
+      {
+        "domain": "consumer.org.hk",
+        "articles": 15,
+        "median": 1433.0,
+        "recommendations": 42
+      },
+      {
+        "domain": "stheadline.com",
+        "articles": 13,
+        "median": 3128.0,
+        "recommendations": 34
+      },
+      {
+        "domain": "tonymoly.com.hk",
+        "articles": 8,
+        "median": 825.5,
+        "recommendations": 49
+      },
+      {
+        "domain": "marieclaire.com.tw",
+        "articles": 6,
+        "median": 17067.0,
+        "recommendations": 80
+      },
+      {
+        "domain": "roomie.tw",
+        "articles": 5,
+        "median": 4902.0,
+        "recommendations": 26
+      },
+      {
+        "domain": "popdaily.com.tw",
+        "articles": 5,
+        "median": 4809.0,
+        "recommendations": 6
+      },
+      {
+        "domain": "bella.tw",
+        "articles": 4,
+        "median": 4449.0,
+        "recommendations": 10
+      },
+      {
+        "domain": "gcs.gov.mo",
+        "articles": 3,
+        "median": 1188.0,
+        "recommendations": 3
+      }
+    ]
+  },
+  "strict_articles": {
+    "unique_links": 1564,
+    "valid_articles": 1018,
+    "coverage": 0.6508951406649617,
+    "total_link_recommendations": 5203,
+    "valid_recommendations": 3628,
+    "median": 2513.0,
+    "mean": 3162.1110019646367,
+    "p25": 1278.0,
+    "p75": 3769.75,
+    "p90": 5858.8,
+    "bins": [
+      {
+        "bin": "不足1000",
+        "unique_articles": 180,
+        "article_share": 0.17681728880157171,
+        "recommendations": 466,
+        "recommendation_share": 0.12844542447629548,
+        "mean_recommendations": 2.588888888888889,
+        "repeat_share": 0.3888888888888889,
+        "mean_questions": 1.0055555555555555
+      },
+      {
+        "bin": "1000–1999",
+        "unique_articles": 249,
+        "article_share": 0.24459724950884087,
+        "recommendations": 855,
+        "recommendation_share": 0.23566703417861082,
+        "mean_recommendations": 3.433734939759036,
+        "repeat_share": 0.4738955823293173,
+        "mean_questions": 1.0040160642570282
+      },
+      {
+        "bin": "2000–2999",
+        "unique_articles": 250,
+        "article_share": 0.2455795677799607,
+        "recommendations": 917,
+        "recommendation_share": 0.2527563395810364,
+        "mean_recommendations": 3.668,
+        "repeat_share": 0.54,
+        "mean_questions": 1.004
+      },
+      {
+        "bin": "3000–4999",
+        "unique_articles": 190,
+        "article_share": 0.18664047151277013,
+        "recommendations": 613,
+        "recommendation_share": 0.16896361631753032,
+        "mean_recommendations": 3.2263157894736842,
+        "repeat_share": 0.42105263157894735,
+        "mean_questions": 1.0052631578947369
+      },
+      {
+        "bin": "5000–7999",
+        "unique_articles": 96,
+        "article_share": 0.09430255402750491,
+        "recommendations": 496,
+        "recommendation_share": 0.13671444321940462,
+        "mean_recommendations": 5.166666666666667,
+        "repeat_share": 0.6458333333333334,
+        "mean_questions": 1.1354166666666667
+      },
+      {
+        "bin": "8000及以上",
+        "unique_articles": 53,
+        "article_share": 0.05206286836935167,
+        "recommendations": 281,
+        "recommendation_share": 0.07745314222712238,
+        "mean_recommendations": 5.30188679245283,
+        "repeat_share": 0.6037735849056604,
+        "mean_questions": 1.0188679245283019
+      }
+    ],
+    "association": {
+      "n": 1018,
+      "spearman": 0.11802457127706885,
+      "permutation_p": 0.001,
+      "approx_bootstrap_ci": [
+        0.06239133979958348,
+        0.17573528382688908
+      ]
+    },
+    "adjusted": {
+      "n": 558,
+      "groups": 40,
+      "within_domain_question_log_correlation": 0.04268429874903372,
+      "permutation_p": 0.354
+    },
+    "domains": [
+      {
+        "domain": "zhuanlan.zhihu.com",
+        "articles": 442,
+        "median": 2550.0,
+        "recommendations": 1848
+      },
+      {
+        "domain": "beauty321.com",
+        "articles": 50,
+        "median": 6037.5,
+        "recommendations": 438
+      },
+      {
+        "domain": "theboom.com.cn",
+        "articles": 43,
+        "median": 2757.0,
+        "recommendations": 96
+      },
+      {
+        "domain": "post.smzdm.com",
+        "articles": 26,
+        "median": 832.0,
+        "recommendations": 44
+      },
+      {
+        "domain": "cjyun.10yan.com.cn",
+        "articles": 20,
+        "median": 2132.0,
+        "recommendations": 47
+      },
+      {
+        "domain": "ubeauty.com.hk",
+        "articles": 20,
+        "median": 2813.5,
+        "recommendations": 144
+      },
+      {
+        "domain": "consumer.org.hk",
+        "articles": 15,
+        "median": 1433.0,
+        "recommendations": 42
+      },
+      {
+        "domain": "stheadline.com",
+        "articles": 13,
+        "median": 3128.0,
+        "recommendations": 34
+      },
+      {
+        "domain": "spxww.com.cn",
+        "articles": 10,
+        "median": 2594.0,
+        "recommendations": 21
+      },
+      {
+        "domain": "pc.hgdaily.com.cn",
+        "articles": 10,
+        "median": 1718.5,
+        "recommendations": 22
+      }
+    ]
+  },
+  "strict_mainland_articles": {
+    "unique_links": 1287,
+    "valid_articles": 852,
+    "coverage": 0.662004662004662,
+    "total_link_recommendations": 3720,
+    "valid_recommendations": 2636,
+    "median": 2396.0,
+    "mean": 2727.5833333333335,
+    "p25": 1220.25,
+    "p75": 3313.25,
+    "p90": 4997.799999999999,
+    "bins": [
+      {
+        "bin": "不足1000",
+        "unique_articles": 162,
+        "article_share": 0.19014084507042253,
+        "recommendations": 396,
+        "recommendation_share": 0.15022761760242792,
+        "mean_recommendations": 2.4444444444444446,
+        "repeat_share": 0.37037037037037035,
+        "mean_questions": 1.0061728395061729
+      },
+      {
+        "bin": "1000–1999",
+        "unique_articles": 216,
+        "article_share": 0.2535211267605634,
+        "recommendations": 692,
+        "recommendation_share": 0.26251896813353565,
+        "mean_recommendations": 3.2037037037037037,
+        "repeat_share": 0.44907407407407407,
+        "mean_questions": 1.0046296296296295
+      },
+      {
+        "bin": "2000–2999",
+        "unique_articles": 236,
+        "article_share": 0.27699530516431925,
+        "recommendations": 877,
+        "recommendation_share": 0.332701062215478,
+        "mean_recommendations": 3.7161016949152543,
+        "repeat_share": 0.538135593220339,
+        "mean_questions": 1.0042372881355932
+      },
+      {
+        "bin": "3000–4999",
+        "unique_articles": 153,
+        "article_share": 0.1795774647887324,
+        "recommendations": 431,
+        "recommendation_share": 0.16350531107739,
+        "mean_recommendations": 2.816993464052288,
+        "repeat_share": 0.38562091503267976,
+        "mean_questions": 1.0065359477124183
+      },
+      {
+        "bin": "5000–7999",
+        "unique_articles": 59,
+        "article_share": 0.06924882629107981,
+        "recommendations": 189,
+        "recommendation_share": 0.07169954476479515,
+        "mean_recommendations": 3.2033898305084745,
+        "repeat_share": 0.6271186440677966,
+        "mean_questions": 1.2203389830508475
+      },
+      {
+        "bin": "8000及以上",
+        "unique_articles": 26,
+        "article_share": 0.03051643192488263,
+        "recommendations": 51,
+        "recommendation_share": 0.019347496206373292,
+        "mean_recommendations": 1.9615384615384615,
+        "repeat_share": 0.34615384615384615,
+        "mean_questions": 1.0384615384615385
+      }
+    ],
+    "association": {
+      "n": 852,
+      "spearman": 0.05277542159785524,
+      "permutation_p": 0.115,
+      "approx_bootstrap_ci": [
+        -0.018312473458913063,
+        0.10814291764257
+      ]
+    },
+    "adjusted": {
+      "n": 522,
+      "groups": 34,
+      "within_domain_question_log_correlation": 0.028311963708457597,
+      "permutation_p": 0.552
+    },
+    "domains": [
+      {
+        "domain": "zhuanlan.zhihu.com",
+        "articles": 442,
+        "median": 2550.0,
+        "recommendations": 1848
+      },
+      {
+        "domain": "theboom.com.cn",
+        "articles": 43,
+        "median": 2757.0,
+        "recommendations": 96
+      },
+      {
+        "domain": "post.smzdm.com",
+        "articles": 26,
+        "median": 832.0,
+        "recommendations": 44
+      },
+      {
+        "domain": "cjyun.10yan.com.cn",
+        "articles": 20,
+        "median": 2132.0,
+        "recommendations": 47
+      },
+      {
+        "domain": "spxww.com.cn",
+        "articles": 10,
+        "median": 2594.0,
+        "recommendations": 21
+      },
+      {
+        "domain": "pc.hgdaily.com.cn",
+        "articles": 10,
+        "median": 1718.5,
+        "recommendations": 22
+      },
+      {
+        "domain": "cloud.kepuchina.cn",
+        "articles": 10,
+        "median": 1617.0,
+        "recommendations": 20
+      },
+      {
+        "domain": "zhihu.com",
+        "articles": 9,
+        "median": 756.0,
+        "recommendations": 22
+      },
+      {
+        "domain": "best.pconline.com.cn",
+        "articles": 9,
+        "median": 3363.0,
+        "recommendations": 11
+      },
+      {
+        "domain": "m.shihuo.cn",
+        "articles": 8,
+        "median": 1078.5,
+        "recommendations": 15
+      }
+    ]
+  },
+  "sensitivity_high_quality": {
+    "n": 838,
+    "spearman": 0.10932486658658717,
+    "permutation_p": 0.001,
+    "approx_bootstrap_ci": [
+      0.04019394374321153,
+      0.17714939716035452
+    ]
+  },
+  "sensitivity_content_dedup": {
+    "n": 1074,
+    "spearman": 0.11691511509749888,
+    "permutation_p": 0.001,
+    "approx_bootstrap_ci": [
+      0.058923662871445584,
+      0.17378297512078203
+    ]
+  },
+  "region_quality_counts": {
+    "unknown": {
+      "all_urls": 38,
+      "cache_ok": 27,
+      "valid": 21
+    },
+    "foreign": {
+      "all_urls": 1316,
+      "cache_ok": 801,
+      "valid": 763
+    },
+    "hk_macao_taiwan": {
+      "all_urls": 493,
+      "cache_ok": 270,
+      "valid": 265
+    },
+    "invalid": {
+      "all_urls": 4,
+      "cache_ok": 0,
+      "valid": 0
+    },
+    "mainland": {
+      "all_urls": 1604,
+      "cache_ok": 1152,
+      "valid": 1040
+    }
+  },
+  "reappearance": {
+    "association": {
+      "n": 1071,
+      "spearman": 0.09098587532440769,
+      "permutation_p": 0.004,
+      "approx_bootstrap_ci": [
+        0.031020053643478228,
+        0.14830463569841437
+      ]
+    },
+    "adjusted": {
+      "n": 606,
+      "groups": 47,
+      "within_domain_question_log_correlation": 0.013960312769274945,
+      "permutation_p": 0.726
+    }
+  }
+}

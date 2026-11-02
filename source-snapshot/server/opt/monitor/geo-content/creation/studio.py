@@ -199,7 +199,7 @@ def day_control(payload,pause):
  materials.control('pause' if pause else 'resume',store_root=capture_root(p['plan_id']),day=day)
  for jid in task['jobs'].values():
   if pause:runtime.pipeline_control.pause(runtime.job_root(jid),'operator','用户暂停每日创作任务；当前已发送请求安全收尾')
-  elif runtime.read(runtime.job_root(jid)/'days'/day/'day.json').get('status') not in TERMINAL_JOBS:runtime.resume(runtime.job_root(jid))
+  elif runtime.read(runtime.job_root(jid)/'days'/day/'day.json').get('status') not in TERMINAL_JOBS:runtime.resume(runtime.job_root(jid),allow_http_recovery=True)
  with process_lock(day_path(p['plan_id'],day).with_suffix('.lock'),blocking=True):
   latest=runtime.read(day_path(p['plan_id'],day));latest['jobs'].update(task['jobs']);latest['paused']=pause
   if not pause:latest.pop('error',None)
@@ -247,12 +247,18 @@ def snapshot(jobs):
    capture_status=runtime.read(root/'health.json').get('status','')
    state='waiting_for_geo' if capture_status.startswith('waiting_for_geo') else 'waiting_capture_capacity' if capture_status=='waiting_capture_capacity' else 'capture_retrying' if capture_status=='retrying' else 'collecting'
   elif not p['enabled'] and p.get('legacy_capture') and runtime.read(root/'settings.json').get('enabled'):state='capture_only'
+  from .pricing_window import resume_at
+  low_at=resume_at(time.time())
+  active_ids={v.get('job_id') for v in runtime.read(runtime.BASE/'worker_health.json').get('active_jobs',[])}
+  if state=='creating' and low_at and not job_ids.intersection(active_ids):
+   state='waiting_offpeak'
   stages={}
   for j in js:
    for key,n in j.get('queue',{}).items():
     if j.get('day',{}).get('status')=='complete' and not key.endswith(':accepted'):continue
     stages[key]=stages.get(key,0)+n
   reason=t.get('error') or '；'.join(j['question']+'：'+str(j.get('control',{}).get('message') or j.get('control',{}).get('reason') or '执行需要处理') for j in js if j.get('control',{}).get('paused') and j.get('day',{}).get('status')!='complete')
+  if state=='waiting_offpeak':reason='低峰优先：北京时间 '+datetime.fromtimestamp(low_at,ZONE).strftime('%H:%M')+' 自动继续分析和写作'
   if state=='scheduled':
    predecessor=predecessor_wait(root,p,t['date'],now)
    if predecessor:state='waiting_previous_capture';reason=predecessor
@@ -277,6 +283,8 @@ def snapshot(jobs):
   if t.get('daily_task_id') and not t.get('paused'):
    from . import supplement
    extra=supplement.state(t)
+   if extra.get('status')=='needs_materials' and state in {'insufficient_materials','complete_with_failures'}:
+    reason='；'.join(filter(None,[reason,extra.get('message')]))
    if state=='complete' and extra.get('status')=='complete':reason=''
    if state!='needs_attention' and supplement.eligible(t,supplement.policy()) and extra.get('status') in {'capturing','waiting','checking_materials','waiting_verification'}:
     supplement_view={k:extra.get(k) for k in ['status','question','attempt','next_at']}
@@ -291,6 +299,11 @@ def snapshot(jobs):
 
   result.append({'daily_task_id':daily_id(p['plan_id'],t['date']),'name':p.get('name',p['product']['name']+'创作任务'),'frequency':p.get('frequency','daily'),'task_type':p.get('task_type','collect_write'),'enabled':p['enabled'],'article_budget_cny':p.get('article_budget_cny'),'task_budget_cny':p.get('task_budget_cny'),'article_target':p.get('article_target',0),'plan_id':p['plan_id'],'date':t['date'],'product':{'name':p['product']['name'],'id':runtime.digest({'name':p['product']['name'],'brand':p['product'].get('brand','')})},'status':state,'capture_time':p['capture_time'],'writing_time':p['writing_time'],'questions':len(p['questions']),'target_per_model':target,'progress':progress,'writing_jobs':len(js),'writing_complete':complete,'articles':sum(len(j['articles']) for j in js),'stages':stages,'error':reason,'jobs':t.get('jobs',{}),'skipped_questions':t.get('skipped_questions',{})})
   result[-1]['supplement']=supplement_view
+  api_failures=[{'question':j['question'],**j['health']['http_recovery']} for j in js if j.get('control',{}).get('paused') and j.get('health',{}).get('http_recovery')]
+  if api_failures:
+   codes=sorted({code for f in api_failures for code in f['http_status']})
+   result[-1]['api_recovery']={'count':len(api_failures),'http_status':codes,'retry_available':all(f['retry_available'] for f in api_failures)}
+   result[-1]['error']=str(len(api_failures))+'个问题的API连接异常（HTTP '+ '/'.join(map(str,codes))+'）；已有成稿已保留。'+('可核对并补做未完成阶段，原费用预留与预算限制保留。' if result[-1]['api_recovery']['retry_available'] else '补做仍未成功，已停止继续重试，请检查API连接。')
  kbs=products();used={p.get('word_source',{}).get('import_id') for p in kbs}
  pending=[runtime.read(p) for p in (ROOT/'imports').glob('upload-*/extraction.json') if p.parent.name not in used]
  latest=max(pending,key=lambda p:p.get('at',0)) if pending else None

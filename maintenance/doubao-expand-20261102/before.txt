@@ -1,0 +1,92 @@
+               total        used        free      shared  buff/cache   available
+Mem:           15717        8194        2717         519        4804        5864
+Swap:           4095        4086           9
+
+EXISTING {"name": "doubao-hpe14-13-test", "image": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f", "cmd": ["ro.enable.native.bridge.exec64=1", "ro.dalvik.vm.native.bridge=libhoudini.so", "androidboot.use_memfd=1", "androidboot.redroid_gpu_mode=guest", "androidboot.redroid_width=720", "androidboot.redroid_height=1280", "androidboot.redroid_dpi=320", "androidboot.redroid_net_ndns=2", "androidboot.redroid_net_dns1=223.5.5.5", "androidboot.redroid_net_dns2=119.29.29.29"], "memory": 3221225472, "nano_cpus": 2000000000, "ports": {"5555/tcp": [{"HostIp": "127.0.0.1", "HostPort": "5557"}]}, "mounts": [{"Type": "volume", "Name": "doubao-hpe14-android13-data", "Source": "/var/lib/docker/volumes/doubao-hpe14-android13-data/_data", "Destination": "/data", "Driver": "local", "Mode": "z", "RW": true, "Propagation": ""}]}
+VERSION     versionCode=15020040 minSdk=21 targetSdk=35
+    versionName=15.2.0
+256m
+512m
+frida-server
+u2
+u2.jar
+
+EXISTING {"name": "doubao-hpe14-account2", "image": "sha256:18244ad4ab1c36047438bb9c524d8f8d6f848ee8d7537a98483a26c5dda7601f", "cmd": ["ro.enable.native.bridge.exec64=1", "ro.dalvik.vm.native.bridge=libhoudini.so", "androidboot.use_memfd=1", "androidboot.redroid_gpu_mode=guest", "androidboot.redroid_width=720", "androidboot.redroid_height=1280", "androidboot.redroid_dpi=320", "androidboot.redroid_net_ndns=2", "androidboot.redroid_net_dns1=223.5.5.5", "androidboot.redroid_net_dns2=119.29.29.29"], "memory": 4294967296, "nano_cpus": 2000000000, "ports": {"5555/tcp": [{"HostIp": "127.0.0.1", "HostPort": "5558"}]}, "mounts": [{"Type": "volume", "Name": "doubao-hpe14-account2-data", "Source": "/var/lib/docker/volumes/doubao-hpe14-account2-data/_data", "Destination": "/data", "Driver": "local", "Mode": "z", "RW": true, "Propagation": ""}]}
+VERSION     versionCode=15020040 minSdk=21 targetSdk=35
+    versionName=15.2.0
+256m
+512m
+account2-current.png
+dalvik-cache
+doubao.apk
+frida-helper-c9975639d4174320828a3b58e4e4fbfa.dex
+frida-helper-dc00b26266b642a0b56192a78a26a306.dex
+frida-server
+frida-server.log
+keva-openat-test
+path-probe
+u2
+u2.jar
+
+CONTAINERS monitor-dashboard Up 4 hours 
+monitor-dashboard-performance-preview Up 4 hours 
+monitor-dashboard-before-confirmation-20261102 Exited (1) 4 hours ago 
+monitor-dashboard-performance-preview-before-confirmation-20261102 Exited (1) 4 hours ago 
+monitor-dashboard-before-view-toggle-20261031 Exited (1) 45 hours ago 
+monitor-dashboard-performance-preview-before-view-toggle-20261031 Exited (1) 45 hours ago 
+monitor-dashboard-before-chart-20261031 Exited (1) 45 hours ago 
+monitor-dashboard-performance-preview-before-chart-20261031 Exited (1) 45 hours ago 
+monitor-dashboard-before-weights-20261031 Exited (1) 46 hours ago 
+monitor-dashboard-performance-preview-before-weights-20261031 Exited (1) 46 hours ago 
+monitor-dashboard-before-mention-fix-20261031 Exited (1) 46 hours ago 
+monitor-dashboard-performance-preview-before-mention-fix-20261031 Exited (1) 46 hours ago 
+monitor-dashboard-before-entry-20261031 Exited (1) 46 hours ago 
+monitor-dashboard-performance-preview-before-entry-20261031 Exited (1) 46 hours ago 
+monitor-dashboard-before-copy-clean-20261031 Exited (1) 46 hours ago 
+monitor-dashboard-performance-preview-before-copy-clean-20261031 Exited (1) 46 hours ago 
+monitor-dashboard-before-performance-20261031 Exited (1) 47 hours ago 
+monitor-assets Up 6 days 127.0.0.1:8001->8001/tcp
+deepseek-manual-test Up 2 weeks 127.0.0.1:5562->5555/tcp
+deepseek-hpe14-account2 Up 2 weeks 127.0.0.1:5561->5555/tcp
+deepseek-hpe14-android13 Up 2 weeks 127.0.0.1:5560->5555/tcp
+yuanbao-hpe14-android13 Up 2 weeks 127.0.0.1:5559->5555/tcp
+musing_hoover Exited (1) 2 weeks ago 
+doubao-hpe14-account2 Up 2 weeks 127.0.0.1:5558->5555/tcp
+doubao-hpe14-13-test Up 2 weeks 127.0.0.1:5557->5555/tcp
+doubao-hpe14-test Exited (137) 3 weeks ago 
+doubao-redroid-redroid-1 Exited (137) 3 weeks ago 
+monitor-product-worker Up 25 minutes (healthy) 
+monitor-dashboard-api Up 25 minutes (healthy) 
+monitor-doubao-receiver Up 2 weeks (healthy) 
+monitor-result-receiver Up 2 weeks (healthy) 
+monitor-content-worker Up 2 weeks (healthy) 
+monitor-postgres Up 2 weeks (healthy) 
+monitor-redis Up 2 weeks 
+
+LISTEN State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+LISTEN 0      4096       127.0.0.1:8001       0.0.0.0:*          
+LISTEN 0      511          0.0.0.0:3003       0.0.0.0:*          
+LISTEN 0      511          0.0.0.0:3000       0.0.0.0:*          
+LISTEN 0      128        127.0.0.1:5037       0.0.0.0:*          
+LISTEN 0      4096       127.0.0.1:38559      0.0.0.0:*          
+LISTEN 0      128          0.0.0.0:22         0.0.0.0:*          
+LISTEN 0      5            0.0.0.0:8803       0.0.0.0:*          
+LISTEN 0      5            0.0.0.0:8791       0.0.0.0:*          
+LISTEN 0      5            0.0.0.0:8790       0.0.0.0:*          
+LISTEN 0      1024         0.0.0.0:8765       0.0.0.0:*          
+LISTEN 0      4096       127.0.0.1:5557       0.0.0.0:*          
+LISTEN 0      4096       127.0.0.1:5558       0.0.0.0:*          
+LISTEN 0      4096       127.0.0.1:5559       0.0.0.0:*          
+LISTEN 0      4096       127.0.0.1:5560       0.0.0.0:*          
+LISTEN 0      4096       127.0.0.1:5561       0.0.0.0:*          
+LISTEN 0      4096       127.0.0.1:5562       0.0.0.0:*          
+LISTEN 0      128        127.0.0.1:27044      0.0.0.0:*          
+LISTEN 0      511          0.0.0.0:6379       0.0.0.0:*          
+LISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*          
+LISTEN 0      5          127.0.0.1:8804       0.0.0.0:*          
+LISTEN 0      5          127.0.0.1:8811       0.0.0.0:*          
+LISTEN 0      200          0.0.0.0:5432       0.0.0.0:*          
+LISTEN 0      128             [::]:22            [::]:*          
+LISTEN 0      511             [::]:6379          [::]:*          
+LISTEN 0      200             [::]:5432          [::]:*          
+

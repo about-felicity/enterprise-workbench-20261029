@@ -1,0 +1,10 @@
+{"files":[
+{"source":"geo-monitor-deploy/creation/materials.py","server":"/opt/monitor/geo-content/creation/materials.py","sha256":"90e72b9ed22ec21a0ea682ca928037fceaa874c0f432029992090a170e86ba1b"},
+{"source":"geo-monitor-deploy/creation/studio.py","server":"/opt/monitor/geo-content/creation/studio.py","sha256":"cef5b8b463f9dc08372c607bc1864cfc2cd61d1235ad879032ea92878836bcc4"},
+{"source":"geo-monitor-deploy/creation/supplement.py","server":"/opt/monitor/geo-content/creation/supplement.py","sha256":"ff1b34401fca3dfdd2a91bec353f98bcf167dccabb1d564fdf67a0c0c505a124"},
+{"source":"geo-monitor-deploy/creation/client.py","server":"/opt/monitor/geo-content/creation/client.py","sha256":"8ae491b6fd0bbe108d9bc5533435975e53f3f5537cfdca0ae2c118be78a817af"},
+{"source":"geo-monitor-deploy/creation/runtime.py","server":"/opt/monitor/geo-content/creation/runtime.py","sha256":"980d06f80fc0ebe0f1c9e983f19e8952319ad268fb81d6174b06ba653f5f8411"},
+{"source":"geo-monitor-deploy/creation/source_cache.py","server":"/opt/monitor/geo-content/creation/source_cache.py","sha256":"50fa0997e464433059f0e436f44a68caca6b520cc310f158eea192c7252e7ae9"},
+{"source":"geo-source-card-collectors/geo_source_cards/source_analysis.py","server":"/opt/monitor/geo-content/engine/geo_source_cards/source_analysis.py","sha256":"fc590a0136c50a0c135ce73ee48bed8bcce3e48104f922ee9b997dd129bf4225"},
+{"source":"geo-source-card-collectors/geo_source_cards/source_scope.py","server":"/opt/monitor/geo-content/engine/geo_source_cards/source_scope.py","sha256":"5f214f24f7af37c5f77edef1d629f8d522634b35bf55681566dd95c27d656354"}
+],"tests_passed":52,"checked_at":"2026-10-31T14:50:02+08:00","articles":162,"completed_tasks":10,"remaining_material_gap":"推荐一款敏感头皮可以用的造型喷雾"}

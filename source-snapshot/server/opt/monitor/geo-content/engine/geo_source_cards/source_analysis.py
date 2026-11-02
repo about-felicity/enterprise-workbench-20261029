@@ -219,7 +219,8 @@ def load_records(path):
     rows = (
         json.loads(text)
         if text.lstrip().startswith("[")
-        else [json.loads(line) for line in text.splitlines() if line.strip()]
+        # U+0085/U+2028/U+2029 may occur inside valid JSON strings.
+        else [json.loads(line) for line in text.split('\n') if line.strip()]
     )
     if not isinstance(rows, list) or any(not isinstance(row, dict) for row in rows):
         raise ValueError("Input must be a JSON array or JSONL objects")

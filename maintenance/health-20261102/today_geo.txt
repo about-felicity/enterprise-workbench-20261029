@@ -1,0 +1,57 @@
+TIME 2026-11-02T09:20:46.718797+08:00
+DAILY {"model": "doubao1", "day": "2026-11-02", "status": "running", "desired": "running", "batch": "geo-panel-doubao1-20261102-090003-ab14fc23", "error": null}
+DAILY {"model": "doubao2", "day": "2026-11-02", "status": "running", "desired": "running", "batch": "geo-panel-doubao2-20261102-090003-de8b4bef", "error": null}
+DAILY {"model": "baidu_ai", "day": "2026-11-02", "status": "running", "desired": "running", "batch": "geo-panel-baidu-ai-20261102-090004-2d28c5d2", "error": null}
+DAILY {"model": "wenxin_card", "day": "2026-11-02", "status": "waiting_for_baidu", "desired": "running", "batch": null, "error": null}
+DAILY {"model": "yuanbao", "day": "2026-11-02", "status": "recovering", "desired": "running", "batch": "geo-panel-yuanbao-20261102-090004-bb1beb6a", "error": null}
+JOB {"model": "doubao1", "batch": "geo-panel-doubao1-20261102-090003-ab14fc23", "service": "geo-native@geo-panel-doubao1-20261102-090003-ab14fc23.service", "health_path": "/home/user/redroid-doubao/batches/geo-panel-doubao1-20261102-090003-ab14fc23/bridge_health.json", "health": {"batch": "geo-panel-doubao1-20261102-090003-ab14fc23", "planned": 105, "prompt_mode": "question_only", "model": "doubao1", "captured": 14, "geo_processed": 14, "delivery_errors": [], "unavailable": 0, "time": 1793582437.8403292, "heartbeat_expires_at": 1793582587.8403296, "bridge_pid": 48664, "tasks": {"completed": 14, "pending": 91}, "status": "running", "memory": {}, "progress": {"phase": "preparing", "task_id": "52efc63e-9d81-5d4a-9558-53455922a408", "ordinal": 15, "changed_at": 1793582437.8403265}}, "age_seconds": 8.9}
+UNIT geo-native@geo-panel-doubao1-20261102-090003-ab14fc23.service ActiveState=active
+SubState=running
+LOG geo-panel-doubao1-20261102-090003-ab14fc23 {"event": "preparation_failed", "ordinal": 5, "error": "DataError", "detail": "Empty question-only landing not stable before deadline"}
+{"event": "captured", "ordinal": 5, "body_length": 444, "sources": 9}
+{"event": "preparation_failed", "ordinal": 6, "error": "DataError", "detail": "Empty question-only landing not stable before deadline"}
+{"event": "captured", "ordinal": 6, "body_length": 595, "sources": 10}
+{"event": "captured", "ordinal": 7, "body_length": 439, "sources": 11}
+{"event": "captured", "ordinal": 8, "body_length": 433, "sources": 12}
+{"event": "captured", "ordinal": 9, "body_length": 413, "sources": 10}
+{"event": "captured", "ordinal": 10, "body_length": 533, "sources": 12}
+{"event": "captured", "ordinal": 11, "body_length": 457, "sources": 10}
+{"event": "captured", "ordinal": 12, "body_length": 449, "sources": 12}
+{"event": "captured", "ordinal": 13, "body_length": 436, "sources": 12}
+{"event": "captured", "ordinal": 14, "body_length": 415, "sources": 11}
+
+JOB {"model": "doubao2", "batch": "geo-panel-doubao2-20261102-090003-de8b4bef", "service": "geo-native@geo-panel-doubao2-20261102-090003-de8b4bef.service", "health_path": "/home/user/redroid-doubao/batches/geo-panel-doubao2-20261102-090003-de8b4bef/bridge_health.json", "health": {"batch": "geo-panel-doubao2-20261102-090003-de8b4bef", "planned": 105, "prompt_mode": "question_only", "model": "doubao2", "captured": 14, "geo_processed": 14, "delivery_errors": [], "unavailable": 0, "time": 1793582438.4506328, "heartbeat_expires_at": 1793582588.450633, "bridge_pid": 48783, "tasks": {"completed": 14, "pending": 91}, "status": "running", "memory": {"app_alive": true, "pid": 52483, "java_alloc_kib": 133584, "java_size_kib": 231888, "java_limit_kib": 524288, "java_fraction": 0.254791259765625, "native_alloc_kib": 370842, "app_pss_kib": 1060549, "container_bytes": 1690710016, "container_working_bytes": 1623719936, "container_limit_bytes": 4294967296, "container_fraction": 0.3780517578125, "app_pss_fraction": 0.252854585647583, "sampled_at": 1793582397.8479223, "last_exit": {"pid": 50086, "reason": "user_requested"}, "pending": "", "high_samples": 0}, "progress": {"phase": "preparing", "task_id": "4330e9be-50c6-5e27-993e-1ca0f68267ec", "ordinal": 15, "changed_at": 1793582438.4506307}}, "age_seconds": 8.3}
+UNIT geo-native@geo-panel-doubao2-20261102-090003-de8b4bef.service ActiveState=active
+SubState=running
+LOG geo-panel-doubao2-20261102-090003-de8b4bef {"event": "captured", "ordinal": 3, "body_length": 607, "sources": 11}
+{"event": "captured", "ordinal": 4, "body_length": 637, "sources": 7}
+{"event": "captured", "ordinal": 5, "body_length": 404, "sources": 9}
+{"event": "captured", "ordinal": 6, "body_length": 577, "sources": 10}
+{"event": "captured", "ordinal": 7, "body_length": 513, "sources": 11}
+{"event": "captured", "ordinal": 8, "body_length": 414, "sources": 12}
+{"event": "captured", "ordinal": 9, "body_length": 647, "sources": 10}
+{"event": "captured", "ordinal": 10, "body_length": 638, "sources": 12}
+{"event": "captured", "ordinal": 11, "body_length": 507, "sources": 10}
+{"event": "captured", "ordinal": 12, "body_length": 556, "sources": 12}
+{"event": "captured", "ordinal": 13, "body_length": 453, "sources": 10}
+{"event": "captured", "ordinal": 14, "body_length": 521, "sources": 11}
+
+JOB {"model": "baidu_ai", "batch": "geo-panel-baidu-ai-20261102-090004-2d28c5d2", "service": "geo-web@geo-panel-baidu-ai-20261102-090004-2d28c5d2.service", "health_path": "/opt/monitor/geo-capture/batches/geo-panel-baidu-ai-20261102-090004-2d28c5d2/bridge_health.json", "health": {"time": 1793582445.3459966, "heartbeat_expires_at": 1793582490.3459966, "bridge_pid": 48962, "model": "baidu_ai", "batch": "geo-panel-baidu-ai-20261102-090004-2d28c5d2", "planned": 105, "tasks": {"completed": 13, "pending": 92}, "status": "running", "worker_exit": 0, "worker_pid": 59447, "captured": 10, "unique": 10, "processed": 10, "duplicates": 0, "unavailable": 3, "body_only_observations": 3, "errors": [], "unique_processed": 10, "body_only_delivery": {"observations": 3, "processed": 3, "pending_delivery": 0, "errors": [], "unique_processed": 3}, "progress": {"phase": "rate_wait", "pending_delivery": 0, "changed_at": 1793582436.9646652, "ordinal": 17, "next_at": 1793582487.4448972}}, "age_seconds": 1.4}
+UNIT geo-web@geo-panel-baidu-ai-20261102-090004-2d28c5d2.service ActiveState=active
+SubState=running
+LOG geo-panel-baidu-ai-20261102-090004-2d28c5d2 Started GEO web capture batch geo-panel-baidu-ai-20261102-090004-2d28c5d2.
+
+JOB {"model": "yuanbao", "batch": "geo-panel-yuanbao-20261102-090004-bb1beb6a", "service": "geo-native@geo-panel-yuanbao-20261102-090004-bb1beb6a.service", "health_path": "/home/user/redroid-yuanbao/batches/geo-panel-yuanbao-20261102-090004-bb1beb6a/bridge_health.json", "health": {"batch": "geo-panel-yuanbao-20261102-090004-bb1beb6a", "planned": 168, "prompt_mode": "question_only", "model": "yuanbao", "captured": 5, "geo_processed": 5, "delivery_errors": [], "nontext_observations": 0, "nontext_processed": 0, "nontext_pending": 0, "unavailable": 0, "time": 1793582427.6578734, "heartbeat_expires_at": 1793582577.6578736, "bridge_pid": 49183, "tasks": {"completed": 5, "pending": 162, "prepared": 1}, "status": "running_recovery", "memory": {"app_alive": true, "pid": 27220, "java_alloc_kib": 46097, "java_size_kib": 144401, "java_limit_kib": 524288, "java_fraction": 0.08792304992675781, "native_alloc_kib": 230468, "app_pss_kib": 850807, "container_bytes": 1484001280, "container_working_bytes": 1414377472, "container_limit_bytes": 4294967296, "container_fraction": 0.32931041717529297, "app_pss_fraction": 0.20284819602966309, "sampled_at": 1793582381.7469711, "last_exit": {"pid": 27476, "reason": "user_requested"}, "pending": "", "high_samples": 0}, "progress": {"phase": "awaiting_original_result", "task_id": "3050e5fd-fddf-5aaa-b7ee-e925f5b66bdf", "ordinal": 6, "changed_at": 1793582397.051024, "next_at": 1793582457.6578693, "reason": "original_request_stalled", "deadline_at": 1793582396.6657734}}, "age_seconds": 19.1}
+UNIT geo-native@geo-panel-yuanbao-20261102-090004-bb1beb6a.service ActiveState=active
+SubState=running
+LOG geo-panel-yuanbao-20261102-090004-bb1beb6a Started GEO native Doubao capture batch geo-panel-yuanbao-20261102-090004-bb1beb6a.
+{"event": "captured", "ordinal": 1, "body_length": 1441, "sources": 46}
+{"event": "captured", "ordinal": 2, "body_length": 1778, "sources": 20}
+{"event": "captured", "ordinal": 3, "body_length": 1407, "sources": 43}
+{"event": "captured", "ordinal": 4, "body_length": 1984, "sources": 18}
+{"event": "captured", "ordinal": 5, "body_length": 2265, "sources": 38}
+
+INGEST 2026-11-02|doubao|success|28|2026-11-02 09:20:23.015943+08
+2026-11-02|wenxin|success|13|2026-11-02 09:20:27+08
+2026-11-02|yuanbao|success|5|2026-11-02 09:04:40.436097+08
+ 

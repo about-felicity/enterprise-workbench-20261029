@@ -168,6 +168,7 @@ def _person_result(
     rules: Iterable[dict[str, Any]],
     rows_by_key: dict[tuple[str, str], dict[str, Any]],
     model_order: Iterable[str] = MODEL_ORDER,
+    *, round_scores: bool = True,
 ) -> dict[str, Any]:
     assigned = list(rules)
     grouped_rules: dict[str, list[dict[str, Any]]] = {}
@@ -217,10 +218,11 @@ def _person_result(
                 "product": rule["product"], "question": rule["question"],
                 "performance_group": group,
                 "group_products": [candidate["product"] for candidate in candidates],
-                "actual_rate": round(actual, 1), "target_rate": target,
-                "attainment": round(attainment, 1),
+                "actual_rate": round(actual, 1) if round_scores else actual, "target_rate": target,
+                "attainment": round(attainment, 1) if round_scores else attainment,
             })
-        score = round(sum(item["attainment"] for item in items) / len(items), 1) if items else None
+        score = sum(item["attainment"] for item in items) / len(items) if items else None
+        if score is not None and round_scores:score = round(score, 1)
         if score is not None:
             weighted_score += score * weight
             applied_weight += weight
@@ -230,7 +232,8 @@ def _person_result(
             "target_items": len(model_groups),
             "items": items,
         })
-    overall = round(weighted_score / applied_weight, 1) if applied_weight else None
+    overall = weighted_score / applied_weight if applied_weight else None
+    if overall is not None and round_scores:overall = round(overall, 1)
     return {
         "name": name, "role": role, "score": overall,
         "status": "no_data" if overall is None else "met" if overall >= 100 else "below",

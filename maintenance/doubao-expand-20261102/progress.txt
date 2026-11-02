@@ -1,0 +1,89 @@
+FLEET [{"name": "豆包 1", "service": "geo-native@geo-panel-doubao1-20261102-090003-ab14fc23.service", "planned": 105, "health": "/home/user/redroid-doubao/batches/geo-panel-doubao1-20261102-090003-ab14fc23/bridge_health.json"}, {"name": "豆包 2", "service": "geo-native@geo-panel-doubao2-20261102-090003-de8b4bef.service", "planned": 105, "health": "/home/user/redroid-doubao/batches/geo-panel-doubao2-20261102-090003-de8b4bef/bridge_health.json"}, {"name": "DeepSeek", "service": "geo-native@geo-panel-deepseek-app-20261017-094524.service", "planned": 63, "health": "/home/user/redroid-deepseek/batches/geo-panel-deepseek-app-20261017-094524/bridge_health.json"}, {"name": "文心卡片", "service": "geo-web@geo-panel-wenxin-card-20261102-112727-b264bf7e.service", "planned": 168, "health": "/opt/monitor/geo-capture/batches/geo-panel-wenxin-card-20261102-112727-b264bf7e/bridge_health.json"}, {"name": "百度卡片", "service": "geo-web@geo-panel-baidu-ai-20261102-090004-2d28c5d2.service", "planned": 105, "health": "/opt/monitor/geo-capture/batches/geo-panel-baidu-ai-20261102-090004-2d28c5d2/bridge_health.json"}, {"name": "元宝", "service": "geo-native@geo-panel-yuanbao-20261102-090004-bb1beb6a.service", "health": "/home/user/redroid-yuanbao/batches/geo-panel-yuanbao-20261102-090004-bb1beb6a/bridge_health.json", "planned": 168}, {"name": "DeepSeek 2", "service": "geo-native@geo-panel-deepseek2-20261019-103338-38eaf48a.service", "health": "/home/user/redroid-deepseek-account2/batches/geo-panel-deepseek2-20261019-103338-38eaf48a/bridge_health.json", "planned": 63}]
+PLAN {
+  "enabled": true,
+  "time": "09:00",
+  "timezone": "Asia/Shanghai",
+  "start_date": "2026-10-17",
+  "models": [
+    "doubao1",
+    "doubao2",
+    "baidu_ai",
+    "wenxin_card",
+    "yuanbao"
+  ],
+  "normal_completion": true,
+  "card_order": "baidu_complete_then_wenxin",
+  "question_count": 21,
+  "rounds": {
+    "doubao1": 10,
+    "doubao2": 10,
+    "wenxin_card": 8,
+    "baidu_ai": 5,
+    "yuanbao": 8,
+    "deepseek": 3,
+    "deepseek2": 3
+  },
+  "daily_control_enabled": true,
+  "schedule_revision": 2,
+  "schedule_action": "75d3363faac44a87b04cead555f06b90",
+  "schedule_hash": "bfa09c34efcd6ac4c7ca010f24407ecc29d2567dbb4e2ea33b6f4a0169b312b1",
+  "desktop_collectors": [
+    "deepseek2"
+  ]
+}
+HEALTH 3 {
+  "batch": "geo-expand-doubao3-20261102-smoke",
+  "planned": 1,
+  "prompt_mode": "question_only",
+  "model": "doubao3",
+  "captured": 0,
+  "geo_processed": 0,
+  "delivery_errors": [],
+  "unavailable": 0,
+  "time": 1793599786.6702814,
+  "heartbeat_expires_at": 1793599936.6702814,
+  "bridge_pid": 25868,
+  "tasks": {
+    "pending": 1
+  },
+  "status": "running_recovery",
+  "memory": {},
+  "progress": {
+    "phase": "preparation_backoff",
+    "task_id": "fcf3b0c8-ec87-5a6d-996e-51f47241c2e1",
+    "ordinal": 1,
+    "changed_at": 1793599786.6702795,
+    "next_at": 1793599816.6702766
+  }
+}
+LOG 3 Nov 02 06:09:31 ubuntu systemd[1]: Started /home/user/redroid-doubao/worker-venv/bin/python -u /home/user/redroid-doubao/expansion-20261102/question_only_worker.py --config /home/user/redroid-doubao/expansion-20261102/smoke3.json.
+Nov 02 06:09:46 ubuntu python[25868]: {"event": "preparation_failed", "ordinal": 1, "error": "DataError", "detail": "Empty question-only landing not stable before deadline"}
+
+HEALTH 4 {
+  "batch": "geo-expand-doubao4-20261102-smoke",
+  "planned": 1,
+  "prompt_mode": "question_only",
+  "model": "doubao4",
+  "captured": 0,
+  "geo_processed": 0,
+  "delivery_errors": [],
+  "unavailable": 0,
+  "time": 1793599787.028073,
+  "heartbeat_expires_at": 1793599937.0280733,
+  "bridge_pid": 26082,
+  "tasks": {
+    "pending": 1
+  },
+  "status": "running_recovery",
+  "memory": {},
+  "progress": {
+    "phase": "preparation_backoff",
+    "task_id": "bd614cb1-423e-5ad5-9c5f-33422ef78fc5",
+    "ordinal": 1,
+    "changed_at": 1793599787.028071,
+    "next_at": 1793599817.0280678
+  }
+}
+LOG 4 Nov 02 06:09:32 ubuntu systemd[1]: Started /home/user/redroid-doubao/worker-venv/bin/python -u /home/user/redroid-doubao/expansion-20261102/question_only_worker.py --config /home/user/redroid-doubao/expansion-20261102/smoke4.json.
+Nov 02 06:09:46 ubuntu python[26082]: {"event": "preparation_failed", "ordinal": 1, "error": "DataError", "detail": "Empty question-only landing not stable before deadline"}
+

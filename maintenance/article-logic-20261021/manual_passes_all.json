@@ -1,6 +1,6 @@
 [
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "main_question": "眼霜与面霜是否可以按外观、价格或相同成分直接互相替代，精简步骤应如何判断？",
     "answer": "先核对具体用途和购买需求，再独立比较成本、组成与包装；说明不清楚时询问，不凭类别或价格推断跨部位效果。",
     "section_roles": {
@@ -55,7 +55,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "main_question": "面对相似眉部精华，如何比较已有的成分、规格、价格和工具信息而不把宣传当增长证据？",
     "answer": "先分清比较维度，再逐款保持各自资料和缺项，按个人组成、质地和工具偏好选择；推荐位及来源定位不等于功效或优劣排名。",
     "section_roles": {
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "main_question": "六款眼霜资料完整程度不同，怎样围绕组成、设计和证据边界进行选购比较？",
     "answer": "先看资料实际公开的组成、规格和配置，再识别浓度标注与概念描述的差异，缺少证据不补全效果；按需求与信息偏好筛选。",
     "section_roles": {
@@ -195,7 +195,7 @@
     ]
   },
   {
-    "key": "REDACTED_ARCHIVE_IDENTIFIER",
+    "key": "REDACTED_EXPORT_VALUE",
     "main_question": "如何判断眼霜当面霜的替代想法和是否添购？",
     "answer": "先明确用途和购买目的，再核对具体说明、组成和包装，价格或相同成分不能独立证明替代成立。",
     "section_roles": {

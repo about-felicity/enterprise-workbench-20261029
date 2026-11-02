@@ -1,0 +1,25 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/server-source/doubao_dashboard_server.py",
+      "archive": "doubao_dashboard_server.py",
+      "server": "/opt/monitor/doubao_dashboard_server.py",
+      "before": "f9abed9bc8a74cd661193a243dbc2fa15852830da844d6acb9f71304dd177b35",
+      "sha256": "0d3d44daed8a3da20a9ea349190f56b4732850afa0865f964eb63e39b57537df"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/database.py",
+      "archive": "monitor_core/database.py",
+      "server": "/opt/monitor/monitor_core/database.py",
+      "before": "e019625ef79cf2b36ae51ade645c5b48730881a79737286b17952da394720795",
+      "sha256": "5043d3beb55e0cdc7515dc46c0e54dca00858a0796dc54cceffbe282b2946d09"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/performance_geo_cache.py",
+      "archive": "monitor_core/performance_geo_cache.py",
+      "server": "/opt/monitor/monitor_core/performance_geo_cache.py",
+      "before": null,
+      "sha256": "c6a813e10366ab2c33dfcaa51f269bc4fefc0546e9696a6d5ef9a1f75cf69901"
+    }
+  ]
+}

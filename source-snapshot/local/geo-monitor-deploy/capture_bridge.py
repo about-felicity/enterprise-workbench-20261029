@@ -26,6 +26,32 @@ MODEL = {"deepseek": "deepseek", "deepseek2": "deepseek", "wenxin_card": "wenxin
 STOP = False
 
 
+def web_worker_timeout(config, started, now, completed_at=None):
+    """Bound one read-only web capture; durable results are never replayed."""
+    if config.get("model") not in {"wenxin_card", "baidu_ai"} or started is None:
+        return ""
+    if completed_at is not None and now - completed_at >= 120:
+        return "cleanup_timeout"
+    if now - started >= max(360, int(config.get("interval", 60)) + 240):
+        return "capture_timeout"
+    return ""
+
+
+def terminate_worker(child):
+    try:
+        os.killpg(child.pid, signal.SIGTERM)
+    except ProcessLookupError:
+        pass
+    try:
+        child.wait(timeout=10)
+    except subprocess.TimeoutExpired:
+        try:
+            os.killpg(child.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+        child.wait(timeout=5)
+
+
 def stop_signal(*_):
     global STOP
     STOP = True
@@ -213,6 +239,7 @@ def run(config_path, base, receiver_root):
     root = base / "batches" / config["batch"]
     root.mkdir(parents=True, exist_ok=True)
     runtime, child, last_exit = root / "collector", None, None
+    child_started, child_completed_at, child_completed_count = None, None, 0
     delivery = Delivery(root, config, receiver_root)
     expected = len(config["questions"]) * config["rounds"]
     atomic_json(root / "manifest.json", config)
@@ -259,6 +286,36 @@ def run(config_path, base, receiver_root):
                 counts = {}
                 for row in rows:
                     counts[row["state"]] = counts.get(row["state"], 0) + 1
+                watchdog = load(root / "worker_watchdog.json")
+                if (config["model"] in {"wenxin_card", "baidu_ai"} and child is None
+                        and int(watchdog.get("streak", 0)) >= 3
+                        and watchdog.get("completed") == counts.get("completed", 0)):
+                    health = {"time": time.time(), "model": config["model"], "batch": config["batch"],
+                              "status": "needs_attention", "tasks": counts, "watchdog": watchdog}
+                    code = 75
+                    return code
+                if child is not None and child.poll() is None:
+                    now = time.monotonic()
+                    if counts.get("completed", 0) > child_completed_count and child_completed_at is None:
+                        child_completed_at = now
+                    timeout_kind = web_worker_timeout(config, child_started, now, child_completed_at)
+                    if timeout_kind:
+                        previous = load(root / "worker_watchdog.json")
+                        unchanged = previous.get("completed") == counts.get("completed", 0)
+                        streak = int(previous.get("streak", 0)) + 1 if unchanged else 1
+                        evidence = {"at": time.time(), "kind": timeout_kind, "worker_pid": child.pid,
+                                    "completed": counts.get("completed", 0), "streak": streak,
+                                    "journal_preserved": True}
+                        atomic_json(root / "worker_watchdog.json", evidence)
+                        print(json.dumps({"event": "web_worker_timeout", **evidence}), flush=True)
+                        terminate_worker(child)
+                        # Re-read the journal after exit before deciding any retry.
+                        if streak >= 3:
+                            health = {"time": time.time(), "model": config["model"], "batch": config["batch"],
+                                      "status": "needs_attention", "tasks": counts, "watchdog": evidence}
+                            code = 75
+                            return code
+                        continue
                 summary = delivery.sync(rows)
                 blocked = any(e['kind'] in {'ValueError','KeyError','TypeError'} for e in summary['errors'])
                 auth_stop=(last_exit==77 or load(runtime/'search_recovery.json').get('blocked'))
@@ -282,6 +339,8 @@ def run(config_path, base, receiver_root):
                 drain_readback=bool(load(root/'pause.json').get('allow_original_readback') and counts.get('needs_attention'))
                 if not terminal and not blocked and not backlog and child is None and not completed and time.time()>=retry.get('next_at',0) and (not (root / "pause.json").exists() or drain_readback):
                     child = subprocess.Popen(command, env=env, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
+                    child_started, child_completed_at = time.monotonic(), None
+                    child_completed_count = counts.get("completed", 0)
                 if (root / "pause.json").exists() and child is None and not blocked and summary["processed"] + summary["unavailable"] == counts.get("completed", 0):
                     status = "paused"
                 health = {"time": time.time(), "heartbeat_expires_at": time.time() + 45, "bridge_pid": os.getpid(),

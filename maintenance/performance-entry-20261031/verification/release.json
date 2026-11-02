@@ -1,0 +1,57 @@
+{
+  "status": "live",
+  "public_url": "https://1any.top/geo_monitor/#performance",
+  "historical_results_preserved": true,
+  "tests": 12,
+  "files": [
+    {
+      "source": "geo-monitor-deploy/server-source/doubao_dashboard_server.py",
+      "server": "/opt/monitor/doubao_dashboard_server.py",
+      "sha256": "2c411643c548faeb59ba1f048cfd66e8468d9c1ce8cefddf6a275357a62d03ff"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/employee_assessment.py",
+      "server": "/opt/monitor/monitor_core/employee_assessment.py",
+      "sha256": "6499c44db1e5190b5ecb81d5093ae854ce427a9466b58e5fe662d2fb8feb4e62"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/performance_store.py",
+      "server": "/opt/monitor/monitor_core/performance_store.py",
+      "sha256": "149361b75e4641284ea0fbf701abfdf76e8722a535f37d897ddabba96ded3fc2"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/performance_identity.py",
+      "server": "/opt/monitor/monitor_core/performance_identity.py",
+      "sha256": "ce79a8bb643da0980deaf7d739724b6eb0f4a8de587e2f6fd3c3d1bf5bfe0bee"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceCenter.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceCenter.tsx",
+      "sha256": "30c7c239db7ec1c89fae22c548bd09ae7793a2dcfe69bf47550e8b855481d242"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/globals.css",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/globals.css",
+      "sha256": "445522a5aade38278ca61ab1b54c03b24d6863768e89d0551568a55dd66107ac"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceEntry.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceEntry.tsx",
+      "sha256": "8cf8935e7b99a69c51bbe9ceea04df7cf3e0eff57e2ff76fb06c8fabeadc3493"
+    }
+  ],
+  "public_verification": {
+    "anonymous_denied": true,
+    "reader_write_denied": true,
+    "admin_access": true,
+    "csrf_and_origin_enforced": true,
+    "admin_save_noop": true,
+    "historical_data_unchanged": true,
+    "rows": 15,
+    "people": 5,
+    "identity_cache_isolation": true
+  },
+  "public_frontend_current": true,
+  "deployed_hashes_verified": true,
+  "forged_lan_identity_denied": true
+}

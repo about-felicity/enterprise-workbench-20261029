@@ -5,6 +5,9 @@ from . import runtime,materials
 from geo_source_cards.runtime import atomic_json,atomic_write,process_lock
 
 def policy():return runtime.read(runtime.BASE/'supplement_policy.json')
+def attempt_limit(cfg):
+ value=cfg.get('max_attempts_per_task',12)
+ return value if type(value) is int and 1<=value<=100 else 12
 def eligible(task,cfg):
  return cfg.get('enabled') and (task['date']>=cfg.get('start_date','9999') or task['daily_task_id'] in cfg.get('include_days',[])) and not task.get('paused') and not task.get('deleted') and not task.get('error') and task['plan'].get('enabled') and task['plan'].get('task_type')!='capture_only'
 def state_path(task):
@@ -56,7 +59,8 @@ def tick(now=None):
  if not cfg.get('enabled'):return
  now=time.time() if now is None else now
  tasks=[runtime.read(p) for p in (studio.ROOT/'days').glob('*/*.json')]
- tasks.sort(key=lambda t:(t['daily_task_id'] not in cfg.get('include_days',[]),t['date']))
+ # Today gets capacity before historical days when a capture slot is released.
+ tasks.sort(key=lambda t:t['date'],reverse=True)
  running=sum(state(t).get('status')=='capturing' for t in tasks)
  for task in tasks:
   p=task['plan'];s=state(task)
@@ -82,6 +86,9 @@ def tick(now=None):
    continue
   if s.get('status')=='checking_materials':
    s={**s,'status':'waiting','message':'本轮仍缺少合格素材，等待轮换补采其他未完成问题'};save(task,s)
+  if s.get('attempt',0)>=attempt_limit(cfg):
+   if s.get('status')!='needs_materials':save(task,{**s,'status':'needs_materials','message':'已达到'+str(attempt_limit(cfg))+'轮补采上限，仍缺少合格原文；请补充有效来源后处理'})
+   continue
   if s.get('status')=='waiting_verification' or s.get('next_at',0)>now or running>=2:continue
   order=p['questions'];last=s.get('question');start=(order.index(last)+1)%len(order) if last in order else 0
   question=next(q for q in order[start:]+order[:start] if q in questions);channels=[m for m in p['channels'] if m in {'baidu_ai','wenxin_card'}]

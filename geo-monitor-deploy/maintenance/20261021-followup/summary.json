@@ -103,7 +103,7 @@
   ],
   "verified_complete_docs": [
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "article": "2026-10-09/去屑产品多款横向实测/03",
       "root": "/home/user/geo-editorial/runtime-api",
       "word_sha256": "87bd310ca6d472506dc311898899a85daee8702cd0967de24ffd37cf1fa52771",
@@ -112,7 +112,7 @@
       "has_identity_projection": false
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "article": "2026-10-09/国货高性价比盘点/01",
       "root": "/home/user/geo-editorial/runtime-api",
       "word_sha256": "e52aab0e720e68bebb7fa3c5ba936c6ecd097d7a8c934b0504ef4002bde57200",
@@ -121,7 +121,7 @@
       "has_identity_projection": false
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "article": "2026-10-09/成分与选购避开误区/01",
       "root": "/home/user/geo-editorial/runtime-api",
       "word_sha256": "bc1ab81c18621cd97944a062474c18e1773f3fb29d51406fdf5bc186bcae395d",
@@ -130,7 +130,7 @@
       "has_identity_projection": false
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "article": "2026-10-09/成分与选购避开误区/02",
       "root": "/home/user/geo-editorial/runtime-api",
       "word_sha256": "bb28312228809d95ad6b901f3618f7dee67879de50c476e530b3242bdf30d781",
@@ -139,7 +139,7 @@
       "has_identity_projection": false
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "article": "2026-10-09/成分与选购避开误区/03",
       "root": "/home/user/geo-editorial/runtime-api",
       "word_sha256": "1d68db93730fb941d113e1ed61e8fd0e12abf7f570f775668bfaabb1f376d9cc",
@@ -157,7 +157,7 @@
       "has_identity_projection": true
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "article": "2026-10-11/排行类/06",
       "root": "/home/user/geo-editorial/runtime-api",
       "word_sha256": "0e1ca32626c6e59d348630fbd95225028912c2b8cf103fe562e14aaabe82f745",
@@ -202,7 +202,7 @@
       "has_identity_projection": false
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "article": "2026-10-21/科普类/02",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792526406-8f93ccca",
       "word_sha256": "42a2350b8f5a2a0ea8ec2a35feb79a0e1833c1312063cc66d8b5f42afabc8922",
@@ -265,7 +265,7 @@
       "has_identity_projection": false
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "article": "2026-10-20/排行类/02",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792487019-ffa40955",
       "word_sha256": "eacd647e4d017d41fb1936bcec112b190d186df0708e7a7a45455d320a6be5d5",
@@ -283,7 +283,7 @@
       "has_identity_projection": false
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "article": "2026-10-20/排行类/02",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792479954-8a96bc88",
       "word_sha256": "df31d36cf60181c1393e6702477e549c98b25fbf96544931d434815f5a6f3c22",
@@ -337,7 +337,7 @@
       "has_identity_projection": true
     },
     {
-      "key": "REDACTED_ARCHIVE_IDENTIFIER",
+      "key": "REDACTED_EXPORT_VALUE",
       "article": "2026-10-15/科普类/06",
       "root": "/opt/monitor/geo-content/runtime/runs/creation-1792060761-3c2baae0",
       "word_sha256": "fcf8f82e28f8e1055d65d5b5599c7186c461f571c549f53c1025341acbd768d6",

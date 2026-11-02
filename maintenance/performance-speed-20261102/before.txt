@@ -1,0 +1,11 @@
+LAN 2026-10 0 0.128 736198 STALE
+LAN 2026-10 1 0.192 736198 STALE
+LAN 2026-11 0 0.069 57240 STALE
+LAN 2026-11 1 0.14 57240 STALE
+PUBLIC {"path": "/", "ttfb": 0.956, "total": 0.957, "bytes": 10142, "encoding": null, "cache": null}
+PUBLIC {"path": "/api/performance?month=2026-10", "ttfb": 0.225, "total": 0.226, "bytes": 56368, "encoding": "gzip", "cache": "HIT"}
+PUBLIC {"path": "/api/performance?month=2026-11", "ttfb": 2.257, "total": 2.258, "bytes": 5233, "encoding": "gzip", "cache": "HIT"}
+PUBLIC {"path": "/api/performance-entry/access", "ttfb": 1.026, "total": 1.027, "bytes": 116, "encoding": null, "cache": null}
+PUBLIC {"path": "/api/performance-entry/data?month=2026-10&date=2026-10-30", "ttfb": 5.313, "total": 5.314, "bytes": 815, "encoding": "gzip", "cache": null}
+PUBLIC {"path": "/api/performance-entry/confirmation?month=2026-11", "ttfb": 1.079, "total": 1.081, "bytes": 775, "encoding": null, "cache": null}
+

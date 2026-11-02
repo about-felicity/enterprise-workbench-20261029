@@ -1,0 +1,25 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceCenter.tsx",
+      "archive": "app/PerformanceCenter.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceCenter.tsx",
+      "before": "822156d61da229ef90fdb90226a8e5771490e5de19b7b08cac259db296204240",
+      "sha256": "3ea0a471cedf20b0532bff263ec76ab189509e0597ffc590aa483c47ca437796"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceTrend.tsx",
+      "archive": "app/PerformanceTrend.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceTrend.tsx",
+      "before": null,
+      "sha256": "92582305bb57c64889714cf03094db98af8001e0fb241a08bbc3ef1ee88a4bce"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/globals.css",
+      "archive": "app/globals.css",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/globals.css",
+      "before": "445522a5aade38278ca61ab1b54c03b24d6863768e89d0551568a55dd66107ac",
+      "sha256": "c65a06eb3ee58c41f1a6a39a71d4405d099f0ae114a317cf13be8b5eac6b38ff"
+    }
+  ]
+}

@@ -16,7 +16,7 @@ sessions={};lock=threading.Lock()
 class Handler(BaseHTTPRequestHandler):
     def log_message(self,*args):pass
     def send(self,value,status=200,content_type='application/json; charset=utf-8',cookie=None,extra=None):
-        body=value if isinstance(value,bytes) else json.dumps(value,ensure_ascii=False).encode()
+        body=value if isinstance(value,bytes) else json.dumps(value,ensure_ascii=False,separators=(',',':')).encode()
         self.send_response(status);self.send_header('Content-Type',content_type)
         self.send_header('Cache-Control','no-store');self.send_header('X-Content-Type-Options','nosniff')
         if cookie:self.send_header('Set-Cookie','geo_creation='+cookie+'; HttpOnly; SameSite=Strict; Path=/; Max-Age=21600')
@@ -44,7 +44,9 @@ class Handler(BaseHTTPRequestHandler):
                 from .knowledge_library import upload_snapshot
                 token,session=self.session(True)
                 return self.send({'ok':True,'studio':upload_snapshot(),'csrf':session['csrf'],'at':time.time()},cookie=token)
-            if path=='/api/status':return self.send(runtime.status())
+            if path=='/api/status':
+                token,session=self.session(True)
+                return self.send({**runtime.status(task_list=True),'csrf':session['csrf']},cookie=token)
             if path=='/api/catalog':
                 from . import materials
                 try:geo=source_adapter.catalog()

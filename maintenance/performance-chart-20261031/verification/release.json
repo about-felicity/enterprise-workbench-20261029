@@ -1,0 +1,25 @@
+{
+  "status": "live",
+  "public_url": "https://1any.top/geo_monitor/#performance",
+  "chart_render_checks": true,
+  "backend_unchanged": true,
+  "files": [
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceCenter.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceCenter.tsx",
+      "sha256": "3ea0a471cedf20b0532bff263ec76ab189509e0597ffc590aa483c47ca437796"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceTrend.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceTrend.tsx",
+      "sha256": "92582305bb57c64889714cf03094db98af8001e0fb241a08bbc3ef1ee88a4bce"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/globals.css",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/globals.css",
+      "sha256": "c65a06eb3ee58c41f1a6a39a71d4405d099f0ae114a317cf13be8b5eac6b38ff"
+    }
+  ],
+  "public_frontend_current": true,
+  "deployed_hashes_verified": true
+}

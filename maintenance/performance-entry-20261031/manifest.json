@@ -1,0 +1,53 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/server-source/doubao_dashboard_server.py",
+      "archive": "backend/doubao_dashboard_server.py",
+      "server": "/opt/monitor/doubao_dashboard_server.py",
+      "before": "2038687e3b72723c8ebd4892301ee478f58ed3b981dbf85c486b2489d5802817",
+      "sha256": "2c411643c548faeb59ba1f048cfd66e8468d9c1ce8cefddf6a275357a62d03ff"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/employee_assessment.py",
+      "archive": "backend/monitor_core/employee_assessment.py",
+      "server": "/opt/monitor/monitor_core/employee_assessment.py",
+      "before": "500bf3724cd25bc488f99666596871657a034535f44867a3d1086f12d98e1208",
+      "sha256": "6499c44db1e5190b5ecb81d5093ae854ce427a9466b58e5fe662d2fb8feb4e62"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/performance_store.py",
+      "archive": "backend/monitor_core/performance_store.py",
+      "server": "/opt/monitor/monitor_core/performance_store.py",
+      "before": null,
+      "sha256": "149361b75e4641284ea0fbf701abfdf76e8722a535f37d897ddabba96ded3fc2"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/performance_identity.py",
+      "archive": "backend/monitor_core/performance_identity.py",
+      "server": "/opt/monitor/monitor_core/performance_identity.py",
+      "before": null,
+      "sha256": "ce79a8bb643da0980deaf7d739724b6eb0f4a8de587e2f6fd3c3d1bf5bfe0bee"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceCenter.tsx",
+      "archive": "app/PerformanceCenter.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceCenter.tsx",
+      "before": "96615a44c2611ef830323a4ab985da1a20904921a5ffebfeb1d0858937797f61",
+      "sha256": "30c7c239db7ec1c89fae22c548bd09ae7793a2dcfe69bf47550e8b855481d242"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/globals.css",
+      "archive": "app/globals.css",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/globals.css",
+      "before": "eccb31db80ea056496ad9042ce3b593481b3b2eaa1287f02e889d519c2bdfba3",
+      "sha256": "445522a5aade38278ca61ab1b54c03b24d6863768e89d0551568a55dd66107ac"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceEntry.tsx",
+      "archive": "app/PerformanceEntry.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceEntry.tsx",
+      "before": null,
+      "sha256": "8cf8935e7b99a69c51bbe9ceea04df7cf3e0eff57e2ff76fb06c8fabeadc3493"
+    }
+  ]
+}

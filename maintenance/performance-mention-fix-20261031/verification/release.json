@@ -1,0 +1,54 @@
+{
+  "status": "live",
+  "public_url": "https://1any.top/geo_monitor/#performance",
+  "tests": 15,
+  "files": [
+    {
+      "source": "geo-monitor-deploy/server-source/doubao_dashboard_server.py",
+      "server": "/opt/monitor/doubao_dashboard_server.py",
+      "sha256": "25632f494d4914373c1ebeec8d9f4c36af074d977e8ec9baea4b5a22130414b5"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/employee_assessment.py",
+      "server": "/opt/monitor/monitor_core/employee_assessment.py",
+      "sha256": "a431ed6c8cbd0fc51e9ce000db739d2ff04724fe57932266bc28ea8ff44633eb"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/performance_store.py",
+      "server": "/opt/monitor/monitor_core/performance_store.py",
+      "sha256": "9038b331a48511c53ea7903fee9e745c179be66ecdc9bee7761582bf9781e5f7"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/performance.py",
+      "server": "/opt/monitor/monitor_core/performance.py",
+      "sha256": "f14e7a8dfd6931c69eaff9813d92381a4372202d18986e381c102b58468bc059"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceCenter.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceCenter.tsx",
+      "sha256": "f02eedd2352e7208b478f88dbcf1a3ff452bf12931630f09a7ac16732fa6714c"
+    }
+  ],
+  "public_verification": {
+    "anonymous_denied": true,
+    "reader_write_denied": true,
+    "admin_access": true,
+    "csrf_and_origin_enforced": true,
+    "admin_save_noop": true,
+    "historical_data_unchanged": true,
+    "rows": 15,
+    "people": 5,
+    "identity_cache_isolation": true
+  },
+  "public_frontend_current": true,
+  "deployed_hashes_verified": true,
+  "forged_lan_identity_denied": true,
+  "mention_scores": {
+    "佳佳": 38.5307,
+    "杨涛": 43.2243,
+    "小美": 15.017,
+    "鑫悦": 105.6045,
+    "谭露": 29.356
+  },
+  "historical_manual_data_preserved": true
+}

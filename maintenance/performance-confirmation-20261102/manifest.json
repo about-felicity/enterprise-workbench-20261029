@@ -1,0 +1,46 @@
+{
+  "files": [
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceCenter.tsx",
+      "archive": "app/PerformanceCenter.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceCenter.tsx",
+      "before": "79e1681ae2c1c00bae4dfa4fd586cc501ac180aec5bc57fba6b0086e680ac6aa",
+      "sha256": "3469061e12a37bce7e0fe02ae5c8d16ba88e1e184acda6f230c8c72a30c579da"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/PerformanceConfirmation.tsx",
+      "archive": "app/PerformanceConfirmation.tsx",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/PerformanceConfirmation.tsx",
+      "before": null,
+      "sha256": "f4c28a221fb50c3320acbccba338622e279f03d43506dde58bb7f4491cc034a5"
+    },
+    {
+      "source": "geo-monitor-deploy/dashboard-integration/app/globals.css",
+      "archive": "app/globals.css",
+      "server": "/opt/monitor/yuanbao_monitor/dashboard/app/globals.css",
+      "before": "562cae386f3509a626da7258b1282b5f63a89ab0d7cc40c45a4ccc0f482cd541",
+      "sha256": "392db0a0fa8dd27832a631092e41ccf0366f6f2534736a1a60a1c3934dbc5da7"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/doubao_dashboard_server.py",
+      "archive": "backend/doubao_dashboard_server.py",
+      "server": "/opt/monitor/doubao_dashboard_server.py",
+      "before": "d503b627311c40c31f1490a31d7aa44238974bdda09c3384b91737cafb8d22b2",
+      "sha256": "f9abed9bc8a74cd661193a243dbc2fa15852830da844d6acb9f71304dd177b35"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/performance_identity.py",
+      "archive": "backend/monitor_core/performance_identity.py",
+      "server": "/opt/monitor/monitor_core/performance_identity.py",
+      "before": "ce79a8bb643da0980deaf7d739724b6eb0f4a8de587e2f6fd3c3d1bf5bfe0bee",
+      "sha256": "970a33de24a5af2bcd182177e08679ab7ad6ddab986dc7e77fe73df31537f2a8"
+    },
+    {
+      "source": "geo-monitor-deploy/server-source/monitor_core/performance_confirmation.py",
+      "archive": "backend/monitor_core/performance_confirmation.py",
+      "server": "/opt/monitor/monitor_core/performance_confirmation.py",
+      "before": null,
+      "sha256": "26a240c03d156dec06ce2a1d0b99cf828b186d894af1be22468ec04a58383653"
+    }
+  ]
+}

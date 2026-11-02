@@ -706,7 +706,7 @@ def load_runs_by_model(*, day: str = "", day_from: str = "", day_to: str = "",
 def load_owned_product_runs(*, day: str = "", day_from: str = "", day_to: str = "",
                             latest_days: int = 7,
                             question: str = "", model: str = "",
-                            exclude_questions: Iterable[str] = ()) -> dict[str, list[dict[str, Any]]]:
+                            exclude_questions: Iterable[str] = (), compact: bool = False) -> dict[str, list[dict[str, Any]]]:
     """Load only fields needed by the real-time owned-product board.
 
     The all-date analytics snapshot includes hundreds of thousands of source
@@ -757,9 +757,17 @@ def load_owned_product_runs(*, day: str = "", day_from: str = "", day_to: str = 
             clauses.append("r.day=ANY(%s::date[])")
             params.append(selected_days)
             where = " WHERE " + " AND ".join(clauses)
+        payload = "r.payload"
+        if compact:
+            # Preserve absent keys (not JSON null): analytics uses default True
+            # for legacy brand_analysis_ready. Bodies remain authoritative.
+            payload = "(" + " || ".join(
+                "CASE WHEN r.payload ? '%s' THEN jsonb_build_object('%s',r.payload->'%s') ELSE '{}'::jsonb END" % (key,key,key) for key in
+                ('brand_analysis_ready','product_review_status','body_capture_complete','capture_mode','daily_surface_target')
+            ) + ") AS payload"
         for row in conn.execute(
             "SELECT r.model_id,r.run_id,r.question,r.answer,r.status,r.day,r.finished_at,"
-            "r.serial,r.payload FROM monitor_runs r" + where
+            "r.serial," + payload + " FROM monitor_runs r" + where
             + " ORDER BY r.model_id,r.sequence_no", params,
         ):
             run = dict(row["payload"] or {})
@@ -781,6 +789,15 @@ def load_owned_product_runs(*, day: str = "", day_from: str = "", day_to: str = 
             if run is not None:
                 run["products"].append(dict(row["payload"] or {}))
     return dict(output)
+
+
+def owned_product_day_versions(day_from: str, day_to: str):
+    """Day-scoped ingestion/review revisions, including destructive rebuild epochs."""
+    ensure_schema()
+    with connection() as conn:
+        return {row['scope_key'][4:]: [row['version'],str(row['updated_at'])] for row in conn.execute(
+            "SELECT scope_key,version,updated_at FROM analytics_versions WHERE scope_key >= %s AND scope_key <= %s ORDER BY scope_key",
+            ('day:'+day_from,'day:'+day_to))}
 
 
 def analytics_filter_options(*, model: str = "", question: str = "",
@@ -1713,22 +1730,22 @@ def pending_product_runs(limit: int = 20, max_retries: int = 3,
                 for row in rows]
 
 
-def verified_product_runs() -> list[dict[str, Any]]:
+def verified_product_runs() -> Iterable[dict[str, Any]]:
     """Return only directly paid-and-validated examples safe for exact reuse."""
     ensure_schema()
     with connection() as conn:
-        rows = conn.execute(
+        with conn.cursor(name="verified_knowledge_stream") as cursor:
+            cursor.itersize = 256
+            cursor.execute(
             "SELECT r.question,r.answer,COALESCE((SELECT jsonb_agg(p.payload ORDER BY p.product_index) "
             "FROM monitor_products p WHERE p.model_id=r.model_id AND p.run_id=r.run_id),'[]'::jsonb) AS products "
             "FROM monitor_runs r WHERE COALESCE(r.payload->>'product_review_status','')='ai_verified' "
             "AND COALESCE(r.payload->>'product_extraction_method','') "
             "IN ('anthropic','llm_batch_audited','llm_batch_grounded')"
-        ).fetchall()
-    return [
-        {"question": row["question"], "answer": row["answer"],
-         "products": list(row["products"] or [])}
-        for row in rows
-    ]
+            )
+            for row in cursor:
+                yield {"question": row["question"], "answer": row["answer"],
+                       "products": list(row["products"] or [])}
 
 
 def mark_product_provider_unavailable(provider: str, error: str) -> dict[str, Any]:
