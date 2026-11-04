@@ -11,6 +11,19 @@ from unattended_core import Queue as LegacyQueue, DataError, parse_blocks, unpac
 
 PROTOCOL='question-only-v1'
 
+def optional_auth_widget(block):
+    """Recognize the finished native account-link UI, never a citation or prose."""
+    content=block.get('content',{})
+    if (block.get('block_type')!=10017 or block.get('is_finish') is not True
+            or set(content)-{'pc_event_block'}!={'applet_block'}
+            or content.get('pc_event_block') not in (None,'')):return False
+    try:
+        data=json.loads(content['applet_block']['render_data'])
+    except (KeyError,TypeError,ValueError):return False
+    return (isinstance(data,dict) and data.get('applet_id')=='db_app_4PM0PUQ'
+            and data.get('widget_id')=='aweme-auth-widget' and data.get('version_tag')=='v1'
+            and isinstance(data.get('widget_data'),str))
+
 def native_tip(block):
     tip=block.get('content',{}).get('tips_block')
     if (block.get('block_type')!=10053 or not isinstance(tip,dict)
@@ -18,6 +31,18 @@ def native_tip(block):
         or not isinstance(tip['text'],str) or not tip['text'].strip()):
         raise DataError('Unsupported native tips block; completeness unproven')
     return tip
+
+
+def native_code_text(block):
+    code=block.get('content',{}).get('code_block')
+    allowed={'code','extend_fields','icon_url','icon_url_dark','std_out_list','summary','text','type'}
+    if (block.get('block_type')!=10008 or not isinstance(code,dict) or set(code)-allowed
+        or type(code.get('type')) is not int or code['type']!=1
+        or code.get('std_out_list')!=[] or code.get('extend_fields')!={}
+        or code.get('text')!='' or not isinstance(code.get('code'),str) or not code['code'].strip()
+        or not isinstance(code.get('summary'),str)):
+        raise DataError('Unsupported native code block; completeness unproven')
+    return '\n\n'.join(part for part in (code['code'],code['summary']) if part)
 
 
 def source_absence_verified(result):
@@ -33,14 +58,18 @@ def source_absence_verified(result):
     for block in blocks:
         content=block.get('content',{})
         if block.get('is_finish') is not True or 'search_query_result_block' in content:return False
-        if not set(content).issubset({'pc_event_block','text_block','tips_block'}) or content.get('pc_event_block'):return False
+        if not set(content).issubset({'pc_event_block','text_block','tips_block','code_block'}) or content.get('pc_event_block'):return False
         if 'tips_block' in content:
             try:native_tip(block)
+            except DataError:return False
+        if 'code_block' in content:
+            try:native_code_text(block)
             except DataError:return False
         for meta in block.get('meta_info',[]):
             if unpack_meta(meta.get('info','')).get('url'):return False
     parts=[]
     for b in blocks:
+        if 'code_block' in b['content']:parts.append(native_code_text(b))
         if 'tips_block' in b['content']:parts.append(native_tip(b)['text'])
         if 'text_block' in b['content']:parts.append(b['content']['text_block']['text'])
     text='\n\n'.join(parts)
@@ -125,6 +154,10 @@ class Queue(LegacyQueue):
 
     def schedule_transient_retry(self,task_id,result,base_delay=90,limit=2):
         row=self.db.execute('select * from tasks where task_id=?',(task_id,)).fetchone()
+        if self.db.execute("select 1 from sqlite_master where type='table' and name='operator_retry_limits'").fetchone():
+            cap=self.db.execute('select max_capture_retries from operator_retry_limits where task_id=?',(task_id,)).fetchone()
+            if cap and row and row['capture_retries']>=cap[0]:
+                raise DataError('Authorized extra attempt exhausted; original and retry preserved; no automatic resend')
         if not row or row['state'] not in ('prepared','needs_attention') or not is_transient_error(result):
             raise DataError('Only a proven completed transient answer may be retried')
         if result.get('task_id')!=task_id or result.get('wire_question')!=row['question'] or (limit is not None and row['capture_retries']>=limit):
@@ -260,11 +293,15 @@ def lookup_bound(task,binding):
             return result
         answer,blocks=answers[0]
         if not all(b.get('is_finish') is True for b in blocks):return result
-        body=[];sources=[];citations=[];queries=[];tips=[]
+        body=[];sources=[];citations=[];queries=[];tips=[];auxiliary=[]
         for block in blocks:
             content=block['content']
-            if content.get('pc_event_block') not in (None,'') or not set(content).issubset({'pc_event_block','text_block','search_query_result_block','tips_block'}):
+            if optional_auth_widget(block):
+                auxiliary.append(block)
+                continue
+            if content.get('pc_event_block') not in (None,'') or not set(content).issubset({'pc_event_block','text_block','search_query_result_block','tips_block','code_block'}):
                 raise DataError('Unknown answer block; completeness unproven: '+','.join(sorted(content)))
+            if 'code_block' in content:body.append(native_code_text(block))
             if 'tips_block' in content:
                 tip=native_tip(block)
                 # This is visible App-owned answer text, not a source, error,
@@ -292,6 +329,7 @@ def lookup_bound(task,binding):
         if continuation:result['permission_continuation']=continuation
         result['native_answer_status']=answer['status'] if 'status' in answer.keys() else None
         if tips:result['native_tips']=tips
+        if auxiliary:result['native_auxiliary_widgets']=auxiliary
         if not sources and not citations and not queries and not any('search_query_result_block' in b['content'] for b in blocks):
             result['source_availability']='not_provided'
         return result

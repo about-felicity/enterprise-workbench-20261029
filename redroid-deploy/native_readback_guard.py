@@ -10,7 +10,8 @@ class AppReadbackGuard:
         self.activity=self.package+('/.biz.login.v2.HYLoginMainActivity' if model=='yuanbao' else '/com.larus.home.impl.alias.AliasActivity1')
 
     def check(self,device,task,observed,event,*,paused=False,stopping=False):
-        if task.get('state')!='prepared' or observed.get('status') in ('complete','nontext_complete'):return None
+        if task.get('state') not in ('prepared','needs_attention') or observed.get('status') in ('complete','nontext_complete'):return None
+        if task.get('state')=='needs_attention' and not task.get('request_id'):return None
         now=self.clock()
         if now<self.state.get('next_probe',0):return None
         result=device.shell(['pidof',self.package])

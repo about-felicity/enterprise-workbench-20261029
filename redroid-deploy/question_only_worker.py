@@ -88,6 +88,7 @@ def run(config,capture_limit=0):
 
 
 def run_locked(config,root,capture_limit):
+    log_fields={'channel_id':config['model'],'channel_name':os.environ.get('GEO_CHANNEL_NAME',config['model']),'batch':config['batch']}
     queue=Queue(root/'tasks.sqlite');os.chmod(queue.path,0o600)
     queue.enqueue(config['batch'],config['questions']*config['rounds'],True)
     reader=yuanbao_reader(root) if config['model']=='yuanbao' else DoubaoReader(root,config['container'])
@@ -128,11 +129,19 @@ def run_locked(config,root,capture_limit):
             task=queue.next_task()
             if summary.get('needs_attention'):
                 row=queue.db.execute("select * from tasks where state='needs_attention' order by rowid limit 1").fetchone()
-                task=dict(row)
+                attention=dict(row)
+                deferred_path=root/'deferred_originals.json'
+                deferred=json.loads(deferred_path.read_text()) if deferred_path.exists() else {}
+                # An explicitly quarantined, bound original must not block unsent
+                # independent tasks. Keep its identity and return to readback later.
+                defer=(task and task['state'] in ('pending','prepared') and attention.get('request_id')
+                       and deferred.get(attention['task_id'])==attention['request_id']
+                       and reader.paths(attention)[1].is_file())
+                if not defer:task=attention
                 # Retry preparation only with durable proof that no send click occurred.
                 boundary=queue.attempt_boundary(task['task_id'])
                 clicked=queue.db.execute("select 1 from events where task_id=? and event='send_click_intent_committed' and id>?",(task['task_id'],boundary)).fetchone()
-                if not clicked and (task['attempts']>0 or queue.may_finish_unsent(task['task_id'])):
+                if not defer and not clicked and (task['attempts']>0 or queue.may_finish_unsent(task['task_id'])):
                     with queue.db:
                         queue.db.execute("update tasks set state='pending',error=null where task_id=?",(task['task_id'],))
                         queue.event(task['task_id'],'automatic_unsent_preparation_recovery')
@@ -245,7 +254,11 @@ def run_locked(config,root,capture_limit):
                         and not is_transient_error(observed) and not source_absence_verified(observed)):
                     observed={**observed,'status':'pending','phase':'awaiting_complete_snapshot','reason':'required_sources_pending'}
                 stable=fence.ready(task['task_id'],observed)
-                if task['state']=='prepared' and time.time()-(task.get('prepared_at') or time.time())>900 and not stable:
+                unsent=task['state']=='prepared' and observed['status']=='absent' and queue.may_finish_unsent(task['task_id'])
+                if unsent:
+                    recovery_path=root/(task['task_id']+'-attempt-'+str(task.get('capture_retries',0))+'.draft-submit-recovery.json')
+                    unsent=not task.get('request_id') and not (recovery_path.exists() and json.loads(recovery_path.read_text()).get('attempted'))
+                if task['state']=='prepared' and not unsent and time.time()-(task.get('prepared_at') or time.time())>900 and not stable:
                     if interrupted_original_expired(config['model'],task,observed,time.time()):
                         with queue.db:
                             queue.db.execute("update tasks set state='needs_attention',error=? where task_id=?",
@@ -259,7 +272,6 @@ def run_locked(config,root,capture_limit):
                     if STOP:return 0
                     wait_seconds(30)
                     continue
-                unsent=task['state']=='prepared' and observed['status']=='absent' and queue.may_finish_unsent(task['task_id'])
                 if task['state']=='pending' or unsent:
                     if task.get('not_before',0)>time.time():wait_seconds(min(3,task['not_before']-time.time()));continue
                     if observed['status']!='absent':raise NativeDataError('Unsent task already has a native result; inspect before sending')
@@ -287,8 +299,8 @@ def run_locked(config,root,capture_limit):
                             reader.before_new_chat(task)
                             android.ready()
                     except Exception as error:
-                        print(json.dumps({'event':'preparation_failed','ordinal':task['ordinal'],
-                            'error':type(error).__name__,'detail':str(error)[:240] if isinstance(error,(DataError,NativeDataError)) else ''}),flush=True)
+                        print(json.dumps({**log_fields,'event':'preparation_failed','ordinal':task['ordinal'],
+                            'error':type(error).__name__,'detail':str(error)[:240] if isinstance(error,(DataError,NativeDataError)) else ''},ensure_ascii=False),flush=True)
                         reason=type(error).__name__+(': '+str(error)[:240] if isinstance(error,(DataError,NativeDataError)) else '')
                         queue.retry_preparation(task['task_id'],reason,limit=None)
                         if native_auth_required(android,config['model']):
@@ -305,7 +317,7 @@ def run_locked(config,root,capture_limit):
                         phase('sending_once',task)
                         with deadline(30):android.send(task['wire_question'],commit_click)
                     except Exception as error:
-                        with queue.db:queue.event(task['task_id'],'send_uncertain',type(error).__name__)
+                        with queue.db:queue.event(task['task_id'],'send_uncertain',type(error).__name__+(': '+str(error)[:240] if isinstance(error,(DataError,NativeDataError)) else ''))
                         if queue.may_finish_unsent(task['task_id']):
                             queue.retry_preparation(task['task_id'],type(error).__name__,limit=None)
                     else:
@@ -320,7 +332,7 @@ def run_locked(config,root,capture_limit):
                     if observed['status']=='nontext_complete':queue.complete_nontext(task['task_id'],observed)
                     else:queue.complete(task['task_id'],observed,allow_readback=task['state']=='needs_attention')
                     if android:android.evidence(root,task['task_id'])
-                    print(json.dumps({'event':'nontext_observed' if observed['status']=='nontext_complete' else 'captured','ordinal':task['ordinal'],'body_length':len(observed['body_markdown']),'sources':len(observed['sources'])}),flush=True)
+                    print(json.dumps({**log_fields,'event':'nontext_observed' if observed['status']=='nontext_complete' else 'captured','ordinal':task['ordinal'],'body_length':len(observed['body_markdown']),'sources':len(observed['sources'])},ensure_ascii=False),flush=True)
                     continue
                 if observed.get('request_id'):queue.attach_request(task['task_id'],observed['request_id'])
                 phase(observed.get('phase') or ('generating' if observed.get('native_request_confirmed') else 'awaiting_ack'),task,

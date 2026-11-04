@@ -1,14 +1,17 @@
 """Daily task plans and safe continuation across immutable collector batches."""
 from collections import Counter
+from contextlib import closing
 from datetime import datetime,timedelta
 import hashlib
 import json
+import sqlite3
 from pathlib import Path
 import subprocess
 import threading
 import time
 from zoneinfo import ZoneInfo
 
+from capture_channels import log_channel
 from control_panel import DEEPSEEK_CHANNELS,MODELS,BUSY,Conflict,atomic,read,validate
 
 ZONE=ZoneInfo('Asia/Shanghai')
@@ -18,6 +21,20 @@ DEVICES={'doubao-hpe14-13-test':'doubao1','doubao-hpe14-account2':'doubao2','dou
 _cache={};_lock=threading.RLock()
 
 def today():return datetime.now(ZONE).date().isoformat()
+
+def deferred_originals_allow_progress(root):
+    """Only operator-selected, bound originals may yield to independent work."""
+    root=Path(root);marker=root/'deferred_originals.json'
+    if not marker.is_file():return False
+    try:
+        deferred=json.loads(marker.read_text())
+        with closing(sqlite3.connect((root/'tasks.sqlite').as_uri()+'?mode=ro',uri=True)) as db:
+            rows=db.execute("select task_id,request_id,capture_retries from tasks where state='needs_attention'").fetchall()
+            pending=db.execute("select count(*) from tasks where state in ('pending','prepared')").fetchone()[0]
+        return bool(rows and pending and all(request and deferred.get(tid)==request
+            and (root/(tid+'-attempt-'+str(attempt)+'.binding.json')).is_file()
+            for tid,request,attempt in rows))
+    except (OSError,ValueError,sqlite3.Error):return False
 
 def valid_day(day):
     if not isinstance(day,str) or len(day)!=10:raise ValueError('请选择有效日期')
@@ -43,7 +60,7 @@ def database_counts(day):
         sql="""select coalesce(json_agg(t),'[]') from (
           select e.source_device,coalesce(nullif(e.record->>'prompt',''),e.record->'capture_result'->>'question',e.record->>'question') question,coalesce(e.record->>'batch_id','') batch,count(*) n
           from monitor_ingest_events e join monitor_runs r on r.model_id=e.model_id and r.run_id=e.run_id
-          where r.day='%s' and r.status='success' and coalesce(r.payload->>'body_capture_complete','true')='true'
+          where e.run_id<>'' and r.day='%s' and r.status='success' and coalesce(r.payload->>'body_capture_complete','true')='true'
           and e.source_device in (%s) group by 1,2,3)t"""%(day,','.join("'"+s+"'" for s in DEVICES))
         rows=json.loads(subprocess.check_output(['docker','exec','monitor-postgres','psql','-U','monitor_app','-d','monitor','-Atc',sql],text=True,timeout=12))
         result={model:{} for model in MODELS}
@@ -71,6 +88,7 @@ def belongs_to_daily_plan(model,batch,day,base=Path('/opt/monitor/geo-capture'))
 class DailyTasks:
     def __init__(self,control,counts=None):
         self.control=control
+        self.last_logged={}
         self.counts=counts or getattr(control,'daily_counts',None) or (database_counts if control.base==Path('/opt/monitor/geo-capture') else lambda day:{})
 
     def row(self,db,model,day):
@@ -154,6 +172,20 @@ class DailyTasks:
                     db.execute("update daily_tasks set error=null,updated=? where model=? and day=? and error like '后台正在重试：%'",(time.time(),model,day))
         with self.control.connect() as db:
             rows=[dict(r) for r in db.execute('select model,status,batch,error,updated from daily_tasks where day=?',(day,))]
+        plan=read(self.control.base/'daily_plan.json')
+        by_model={r['model']:r for r in rows}
+        for model in MODELS:
+            row=by_model.get(model,{})
+            desktop=model in plan.get('desktop_collectors',[])
+            state=row.get('status') or ('external' if desktop else 'not_scheduled')
+            received=sum(counts.get(model,{}).values())
+            signature=(day,state,row.get('batch'),row.get('error'),received)
+            if self.last_logged.get(model)!=signature:
+                from browser_backend import enabled as browser_enabled
+                backend='desktop_extension' if desktop else 'browser_extension' if browser_enabled(model,self.control.base) else None
+                log_channel(model,'daily_status',row.get('batch'),backend=backend,day=day,
+                            status=state,received=received,error=row.get('error'))
+                self.last_logged[model]=signature
         if rows:atomic(self.control.base/'daily'/day/'status.json',{'at':time.time(),'day':day,'models':rows})
 
     def login_ready(self,db,model,job,revision):
@@ -238,8 +270,13 @@ class DailyTasks:
                     # Continue this original request through the existing strict
                     # readback path. New work remains blocked until it is known.
                     c._ensure_known(job,allow_readback=True)
-                    atomic(c.marker(job),{'requested_at':time.time(),'source':'daily_tasks','action':'apply',
-                                          'allow_original_readback':True,'day':day})
+                    if deferred_originals_allow_progress(c.batch_root(job)):
+                        marker=read(c.marker(job))
+                        if marker.get('source')=='daily_tasks' and marker.get('allow_original_readback') is True:
+                            c.marker(job).unlink(missing_ok=True)
+                    else:
+                        atomic(c.marker(job),{'requested_at':time.time(),'source':'daily_tasks','action':'apply',
+                                              'allow_original_readback':True,'day':day})
                     c.system.start(job['service'])
                     db.execute('update daily_tasks set status=? where model=? and day=?',('recovering',model,day));return
             same_revision=json.loads(job['config']).get('daily_revision')==row['revision']

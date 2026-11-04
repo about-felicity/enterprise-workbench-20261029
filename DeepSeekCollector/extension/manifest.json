@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "DeepSeek 多设备采集与公网回传",
+  "version": "0.5.0",
+  "description": "手动提问后，点击插件读取并回传当前 DeepSeek 会话的最新问答与信源。",
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "tabs",
+    "scripting",
+    "downloads",
+    "clipboardWrite",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8767/*",
+    "https://chat.deepseek.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "DeepSeek 会话回传",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.deepseek.com/*"
+      ],
+      "js": [
+        "injected.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://chat.deepseek.com/*"
+      ],
+      "js": [
+        "core.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

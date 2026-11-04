@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>DeepSeek 会话回传</title>
+  <link rel="stylesheet" href="ui.css">
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <h1>DeepSeek 会话回传</h1>
+    <p class="subtle">在 DeepSeek 手动提问，等回答完成后，点击下方按钮回传当前会话最新一组问答和信源。</p>
+    <button id="capture" type="button" class="primary">回传当前会话</button>
+    <p id="status" role="status" aria-live="polite"></p>
+    <details>
+      <summary>本机采集记录</summary>
+      <div id="history" class="subtle"></div>
+    </details>
+  </main>
+</body>
+</html>

@@ -16,6 +16,58 @@ def blocks(text,finished=True):
 
 
 class Tests(unittest.TestCase):
+    def test_authorized_single_retry_cannot_trigger_unbounded_transient_retry(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            q=Queue(Path(tmp)/'tasks.sqlite');q.enqueue('one-retry',['问题'])
+            task=q.db.execute('select task_id from tasks').fetchone()[0]
+            with q.db:
+                q.db.execute('create table operator_retry_limits(task_id text primary key,max_capture_retries int)')
+                q.db.execute('insert into operator_retry_limits values(?,1)',(task,))
+                q.db.execute("update tasks set state='prepared',capture_retries=1")
+            with self.assertRaisesRegex(DataError,'Authorized extra attempt exhausted'):
+                q.schedule_transient_retry(task,{},limit=None)
+            self.assertEqual(q.db.execute('select capture_retries,state from tasks').fetchone()[0],1)
+            q.db.close()
+
+    def test_optional_auth_widget_keeps_body_sources_and_raw_card(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'native.sqlite';db=self.fixture(path);before=baseline([path],'问题')
+            db.execute('insert into im_message values(?,?,?,?,?,?,?,?)',('q','new-cid',1,1,blocks('问题'),None,'q-server',1));db.commit()
+            bound=correlate(before,'问题');task={'task_id':'task','question':'问题','wire_question':'问题'}
+            data={'applet_id':'db_app_4PM0PUQ','widget_id':'aweme-auth-widget','version_tag':'v1','widget_data':'account-link UI'}
+            card={'block_type':10017,'is_finish':True,'content':{'applet_block':{'render_data':json.dumps(data)}}}
+            content=[{'is_finish':True,'content':{'text_block':{'text':'完整正文'},'search_query_result_block':{'queries':['查询'],'results':[{'text_card':{'index':1,'title':'参考资料','url':'https://example.com','doc_id':'doc'}}]}}},card]
+            db.execute('insert into im_message values(?,?,?,?,?,?,?,?)',('a','new-cid',2,2,json.dumps(content),None,'a-server',2));db.commit()
+            result=lookup_bound(task,bound)
+            self.assertEqual(result['body_markdown'],'完整正文');self.assertEqual(len(result['sources']),1)
+            self.assertEqual(result['native_auxiliary_widgets'],[card]);self.assertEqual(result['raw_answer_blocks'],content)
+            card['content']['pc_event_block']=''
+            db.execute('update im_message set content=? where local_message_id=?',(json.dumps(content),'a'));db.commit()
+            self.assertEqual(lookup_bound(task,bound)['body_markdown'],'完整正文')
+            data['widget_id']='unknown-widget';card['content']['applet_block']['render_data']=json.dumps(data)
+            db.execute('update im_message set content=? where local_message_id=?',(json.dumps(content),'a'));db.commit()
+            with self.assertRaises(DataError):lookup_bound(task,bound)
+            db.close()
+
+    def test_native_code_block_keeps_original_content_and_rejects_unknown_output(self):
+        from question_only_core import native_code_text,source_absence_verified
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'native.sqlite';db=self.fixture(path);db.execute('alter table im_message add column status int');db.commit()
+            before=baseline([path],'问题')
+            db.execute('insert into im_message values(?,?,?,?,?,?,?,?,?)',('q','new-cid',1,1,blocks('问题'),None,'q-server',1,11));db.commit()
+            bound=correlate(before,'问题')
+            code={'block_type':10008,'is_finish':True,'content':{'code_block':{'code':'```python\n# 本轮无需运行代码\n```','extend_fields':{},'std_out_list':[],'summary':'已完成代码运行','text':'','type':1}}}
+            content=[code,{'is_finish':True,'content':{'text_block':{'text':'完整正文'}}}]
+            db.execute('insert into im_message values(?,?,?,?,?,?,?,?,?)',('a','new-cid',2,2,json.dumps(content),None,'a-server',2,21));db.commit()
+            result=lookup_bound({'task_id':'task','question':'问题','wire_question':'问题'},bound)
+            self.assertEqual(result['body_markdown'],native_code_text(code)+'\n\n完整正文')
+            self.assertEqual(result['raw_answer_blocks'],content)
+            self.assertTrue(source_absence_verified(result))
+            code['content']['code_block']['std_out_list']=[{'unknown':'output'}]
+            db.execute('update im_message set content=? where local_message_id=?',(json.dumps(content),'a'));db.commit()
+            with self.assertRaises(DataError):lookup_bound({'task_id':'task','question':'问题','wire_question':'问题'},bound)
+            db.close()
+
     def test_finished_applet_only_answer_is_recorded_without_becoming_text_success(self):
         with tempfile.TemporaryDirectory() as tmp:
             path=Path(tmp)/'native.sqlite'
