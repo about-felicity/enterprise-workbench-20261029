@@ -97,7 +97,9 @@ def progress(day,store_root=None):
   if dbpath.exists():
    with sqlite3.connect(dbpath.as_uri()+'?mode=ro',uri=True) as db:
     counts=dict(db.execute('select state,count(*) from captures group by state'))
-    missing=[{'question':q,'reason':'未出现AI卡片' if 'card is still missing' in (e or '') else '缺少来源链接' if 'source links are missing' in (e or '') else '多次读取后仍不完整'} for q,e in db.execute("select question,error from captures where state='failed_deferred'")]
+    columns={row[1] for row in db.execute('pragma table_info(captures)')}
+    if {'question','error'}<=columns:
+     missing=[{'question':q,'reason':'未出现AI卡片' if 'card is still missing' in (e or '') else '缺少来源链接' if 'source links are missing' in (e or '') else '多次读取后仍不完整'} for q,e in db.execute("select question,error from captures where state='failed_deferred'")]
   recovery=read(dbpath.parent/'search_recovery.json') if any(s!='completed' and n for s,n in counts.items()) else {}
   recovery={k:recovery[k] for k in ('status','kind','streak','cooldown_until','blocked') if k in recovery}
   result.append({'id':model,'name':label,'completed':counts.get('completed',0),'failed':counts.get('failed_deferred',0),'settled':counts.get('completed',0)+counts.get('failed_deferred',0),'missing':missing,'counts':counts,'recovery':recovery,'blocked':read(root/'days'/day/('blocked-'+model+'.json')),'error':read(root/'days'/day/('error-'+model+'.json'))})
@@ -144,13 +146,14 @@ class InsufficientMaterials(ValueError):
 def prepare(root,job):
  """Fetch referenced public articles into a private job cache, no GEO writes."""
  from geo_source_cards.editorial_pipeline import prepare as fetch
- from geo_source_cards.article_fetch import MediaScopedFetcher,ScraplingArticleFetcher
+ from geo_source_cards.article_fetch import MediaScopedFetcher
  from geo_source_cards.daily_editorial import DEFAULT_MEDIA,prepare_day
  from geo_source_cards.pipeline_control import ensure_running
  input_path=root/'private_observations.jsonl';out=root/('private_source_analysis'+('-supplement-'+str(job['supplement_attempt']) if job.get('supplement_attempt') else ''))
  from .source_cache import SourceCache
+ from .article_reader import fetch_article
  from . import runtime
- cache=SourceCache(root,ScraplingArticleFetcher(),content_db=runtime.CONTENT)
+ cache=SourceCache(root,fetch_article,content_db=runtime.CONTENT)
  wrapped=MediaScopedFetcher(cache,DEFAULT_MEDIA)
  sources={s['url'] for row in read_lines(input_path) for s in row.get('sources',[])}
  class ObservedFetcher:

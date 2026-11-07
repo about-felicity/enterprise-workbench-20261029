@@ -74,6 +74,19 @@ def checked(value, text, *, approved=False):
     return value
 
 
+def serialize_review_data(data, directory):
+    """Remove JSON whitespace only; preserve sent request hashes on recovery."""
+    marker = directory / 'review_prompt_format.json'
+    if marker.exists():
+        if read(marker).get('protocol') != 'compact-json-v1':
+            raise ValueError('Unknown skeleton review prompt format')
+    elif any((directory / name).exists() for name in ('api_state.json', 'request.json', 'response.json')):
+        return json.dumps(data, ensure_ascii=False)
+    else:
+        atomic_json(marker, {'protocol': 'compact-json-v1'})
+    return json.dumps(data, ensure_ascii=False, separators=(',', ':'))
+
+
 def review_automatically(client, value, cache, directory, meta, authorization):
     """Explicit delegated review, independently checked and cached by source hash."""
     if not isinstance(authorization, str) or not authorization.strip():
@@ -91,8 +104,8 @@ def review_automatically(client, value, cache, directory, meta, authorization):
 字段严格为article_type、tone、article_structure、writing_rhythm、special_style_elements、forbidden_pattern。
 article_type仅popular_science或ranking，article_structure非空字符串数组，后两项字符串数组可空。
 '''
-        skeleton = validate(request(client, prompt + json.dumps({'reference': current['source_text'],
-            'proposed_skeleton': current['skeleton']}, ensure_ascii=False), directory,
+        skeleton = validate(request(client, prompt + serialize_review_data({'reference': current['source_text'],
+            'proposed_skeleton': current['skeleton']}, directory), directory,
             stage='research', meta=meta, temperature=0.2, maximum=5000))
         atomic_json(path.parent / 'history' / value['cache_key'] / (current['sha256'] + '.json'), current)
         current['skeleton'] = skeleton

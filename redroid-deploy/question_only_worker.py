@@ -18,13 +18,14 @@ from question_only_delivery import DoubaoDelivery
 from runtime_reliability import CompletionFence
 from native_readback_guard import AppReadbackGuard
 from native_memory_guard import MemoryGuard
+from uncertain_send_quarantine import valid as uncertain_quarantine_valid, quarantine as quarantine_uncertain_send
 sys.path.insert(0,'/home/user/redroid-yuanbao')
 from native_core import NativeDataError
 from delivery import Delivery
 DEVICES={'doubao1':('doubao-hpe14-13-test','127.0.0.1:5557'),
          'doubao2':('doubao-hpe14-account2','127.0.0.1:5558'), 'doubao3':('doubao-hpe14-account3','127.0.0.1:5563'), 'doubao4':('doubao-hpe14-account4','127.0.0.1:5564'),
          'yuanbao':('yuanbao-hpe14-android13','127.0.0.1:5559')}
-ADB='/home/user/redroid-doubao/linux-tools/platform-tools/adb' 
+ADB='/home/user/redroid-doubao/linux-tools/platform-tools/adb'
 
 STOP=False
 
@@ -46,6 +47,23 @@ def interrupted_original_expired(model, task, observed, now):
             and observed.get('request_id') == task['request_id']
             and isinstance(task.get('prepared_at'), (int, float))
             and now - task['prepared_at'] > 900)
+
+
+def defer_bound_original(root, reader, task):
+    request_id=task.get('request_id')
+    if not request_id:
+        return False
+    try:
+        binding=json.loads(reader.paths(task)[1].read_text())
+    except (OSError, ValueError):
+        return False
+    if not isinstance(binding,dict) or binding.get('request_id')!=request_id:
+        return False
+    path=root/'deferred_originals.json'
+    deferred=json.loads(path.read_text()) if path.exists() else {}
+    deferred[task['task_id']]=request_id
+    atomic_json(path,deferred)
+    return True
 
 
 def native_auth_required(android,model):
@@ -101,6 +119,7 @@ def run_locked(config,root,capture_limit):
     def recovery_event(task_id,name,detail):
         with queue.db:queue.event(task_id,name,detail)
     read_failures=0
+    attention_started={}
     progress={'phase':'starting','changed_at':time.time()}
     def phase(name,task=None,**details):
         nonlocal progress
@@ -128,15 +147,18 @@ def run_locked(config,root,capture_limit):
             paused=(root/'maintenance_pause.json').exists()
             task=queue.next_task()
             if summary.get('needs_attention'):
-                row=queue.db.execute("select * from tasks where state='needs_attention' order by rowid limit 1").fetchone()
-                attention=dict(row)
+                attention_rows=[dict(row) for row in queue.db.execute(
+                    "select * from tasks where state='needs_attention' order by rowid")]
                 deferred_path=root/'deferred_originals.json'
                 deferred=json.loads(deferred_path.read_text()) if deferred_path.exists() else {}
                 # An explicitly quarantined, bound original must not block unsent
                 # independent tasks. Keep its identity and return to readback later.
-                defer=(task and task['state'] in ('pending','prepared') and attention.get('request_id')
-                       and deferred.get(attention['task_id'])==attention['request_id']
-                       and reader.paths(attention)[1].is_file())
+                attention=next((row for row in attention_rows if not (
+                    (row.get('request_id') and deferred.get(row['task_id'])==row['request_id']
+                    and reader.paths(row)[1].is_file()) or uncertain_quarantine_valid(root,queue,row))),None)
+                defer=task and task['state'] in ('pending','prepared') and attention is None
+                attention=attention or next((row for row in attention_rows
+                    if time.time()-attention_started.get(row['task_id'],time.time())<120),attention_rows[0])
                 if not defer:task=attention
                 # Retry preparation only with durable proof that no send click occurred.
                 boundary=queue.attempt_boundary(task['task_id'])
@@ -163,9 +185,28 @@ def run_locked(config,root,capture_limit):
                 wait_seconds(5);continue
             if not task:
                 terminal='complete_with_unavailable' if summary.get('completed_nontext') else 'complete';return 0
+            if (task['state']=='needs_attention' and (
+                    (task.get('request_id') and deferred.get(task['task_id'])==task['request_id']
+                    and reader.paths(task)[1].is_file()) or uncertain_quarantine_valid(root,queue,task))
+                    and not summary.get('pending') and not summary.get('prepared')):
+                started=attention_started.setdefault(task['task_id'],time.time())
+                if time.time()-started>=120:
+                    terminal='needs_attention'
+                    health['next_readback_at']=time.time()+300
+                    phase('original_readback_cooldown',task,next_at=health['next_readback_at'],
+                          reason='bound_original_still_incomplete')
+                    return 0
             if (paused or STOP) and task['state']=='pending':
                 terminal='maintenance_paused' if paused else 'stopped';return 0
             try:
+                # A broken UI transport must not prevent read-only inspection
+                # and quarantine of an old, unconfirmed send attempt.
+                if (task['state']=='prepared' and not task.get('request_id')
+                        and time.time()-(task.get('prepared_at') or time.time())>900):
+                    with deadline(30):
+                        original=reader.lookup(task)
+                    if quarantine_uncertain_send(root,queue,task,original,time.time()):
+                        continue
                 if memory_guard:
                     maintenance=memory_guard.maintain(task,summary,metrics,recovery_event,paused=paused,stopping=STOP)
                     if maintenance:
@@ -210,6 +251,8 @@ def run_locked(config,root,capture_limit):
                     phase('read_backoff',task,next_at=time.time()+wait,attempt=read_failures)
                     if STOP:return 0
                     wait_seconds(wait)
+                    continue
+                if quarantine_uncertain_send(root,queue,task,observed,time.time()):
                     continue
                 if config['model'] in ('doubao1','doubao2','doubao3','doubao4'):
                     from draft_submission_recovery import recover as recover_draft
@@ -259,6 +302,16 @@ def run_locked(config,root,capture_limit):
                     recovery_path=root/(task['task_id']+'-attempt-'+str(task.get('capture_retries',0))+'.draft-submit-recovery.json')
                     unsent=not task.get('request_id') and not (recovery_path.exists() and json.loads(recovery_path.read_text()).get('attempted'))
                 if task['state']=='prepared' and not unsent and time.time()-(task.get('prepared_at') or time.time())>900 and not stable:
+                    if quarantine_uncertain_send(root,queue,task,observed,time.time()):
+                        continue
+                    if (config['model'] in ('doubao1','doubao2','doubao3','doubao4')
+                            and observed.get('native_request_confirmed')
+                            and defer_bound_original(root,reader,task)):
+                        with queue.db:
+                            queue.db.execute("update tasks set state='needs_attention',error=? where task_id=?",
+                                ('原始回答超过读取期限；已保留请求并继续后续题目',task['task_id']))
+                            queue.event(task['task_id'],'automatic_deferred_original_readback')
+                        continue
                     if interrupted_original_expired(config['model'],task,observed,time.time()):
                         with queue.db:
                             queue.db.execute("update tasks set state='needs_attention',error=? where task_id=?",
@@ -346,9 +399,21 @@ def run_locked(config,root,capture_limit):
                     recent=queue.db.execute("select detail from events where task_id=? and event='native_validation_backoff' order by id desc limit 3",(task['task_id'],)).fetchall()
                     repeated=len(recent)==3 and all(r[0]==detail for r in recent)
                     if repeated:
+                        deferred=(config['model'] in ('doubao1','doubao2','doubao3','doubao4')
+                                  and task['state']=='prepared'
+                                  and str(error)=='Message blocks must be a non-empty list'
+                                  and defer_bound_original(root,reader,task))
                         queue.db.execute("update tasks set state='needs_attention',error=? where task_id=?",(detail,task['task_id']))
-                        queue.event(task['task_id'],'native_validation_stopped',detail)
+                        queue.event(task['task_id'],'automatic_deferred_original_readback' if deferred else 'native_validation_stopped',detail)
                 if repeated:
+                    if deferred:continue
+                    if uncertain_quarantine_valid(root,queue,task):
+                        wait_seconds(5)
+                        continue
+                    if (task.get('request_id') and (root/'deferred_originals.json').exists()
+                            and json.loads((root/'deferred_originals.json').read_text()).get(task['task_id'])==task['request_id']):
+                        wait_seconds(5)
+                        continue
                     terminal='needs_attention'
                     phase('native_validation_stopped',task,reason=str(error)[:240])
                     return 0

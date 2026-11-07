@@ -235,7 +235,12 @@ def action(name,payload,operation_id):
             if old:
                 if old[0]!=signature:raise ValueError('重复操作编号对应不同内容')
                 return json.loads(old[1])
-            if name=='new':result=create(payload)
+            if name=='new':
+                if payload.get('studio_plan_id'):
+                    from . import studio
+                    if studio.plan(payload['studio_plan_id'],include_deleted=True).get('schedule_paused'):
+                        raise ValueError('每日计划已暂停')
+                result=create(payload)
             elif name=='balance':result=balance()
             elif name in {'skeleton_inspect','skeleton_approve'}:
                 from geo_source_cards.rewrite_v2.common import cache_root
@@ -287,10 +292,11 @@ def product_label(root,day):
     name=str(product.get('name') or '').strip();brand=str(product.get('brand') or '').strip()
     return {'id':digest({'name':name,'brand':brand}) if name else 'unknown','name':name or '未标注产品','brand':brand}
 
-def articles(root, *, summary=False):
+def articles(root, *, summary=False, article_id=None, listing=False, date_filter=None):
     result=[]
     revoked={read(p).get('word_sha256') for p in (root/'revocations').glob('*.json')}
-    for path in sorted((root/'approved').glob('*/*/*/receipt.json')):
+    paths=[root/'approved'/article_id/'receipt.json'] if article_id else sorted((root/'approved').glob((date_filter or '*')+'/*/*/receipt.json'))
+    for path in paths:
         receipt=read(path);folder=path.parent
         draft=folder/'draft.md';word=folder/'article.docx'
         if receipt.get('status')!='accepted_for_user_review' or receipt.get('word_sha256') in revoked:continue
@@ -307,7 +313,7 @@ def articles(root, *, summary=False):
             continue
         # Only original approved receipt directories are downloadable.
         from .article_export import info
-        metadata=info(root,folder)
+        metadata=info(root,folder,lookup_source=not listing)
         from geo_source_cards.consumer_voice import issues as voice_issues
         direct=receipt.get('delivery_mode')=='direct'
         quality_issues=[] if direct or receipt.get('workflow')=='rewrite-v2' else voice_issues(draft.read_text('utf8'))
@@ -335,6 +341,17 @@ def articles(root, *, summary=False):
             'review_disputes':receipt.get('review_disputes',[]),
             'markdown':draft.is_file(),'word':word.is_file(),'receipt':receipt,'task_name':metadata['task_name'],'category':metadata['category'],'primary_reference':metadata['primary_reference']})
     return result
+
+def output_status():
+    """Only the fields needed by the article library; no task queues or knowledge bodies."""
+    def compact(root):
+        keys={'id','date','product','title','quality_status','markdown','word','task_name','category','primary_reference'}
+        return [{**{k:v for k,v in a.items() if k in keys},'receipt':{'delivery_mode':a['receipt'].get('delivery_mode')}} for a in articles(root,listing=True)]
+    jobs=[]
+    for path in sorted((BASE/'runs').glob('*/job.json'),reverse=True):
+        job=read(path);rows=compact(path.parent)
+        if rows:jobs.append({'job_id':job['job_id'],'date':job['date'],'material_source':job.get('material_source'),'articles':rows})
+    return {'ok':True,'at':time.time(),'jobs':jobs,'legacy_articles':compact(SHARED)}
 
 def status(*, task_list=False):
     jobs=[]
@@ -373,7 +390,7 @@ def download(identity,article_id,kind,filters=None):
         if source not in {'all','new','legacy-original'} or not isinstance(search,str) or len(search)>200:raise ValueError('筛选条件不正确')
         plan=filters.get('plan','')
         if plan and not re.fullmatch(r'plan-[a-f0-9]{32}',plan):raise ValueError('任务筛选不正确')
-        if kind=='package' and (root is None or article_id not in {a['id'] for a in articles(root)}):raise ValueError('请选择有效成稿')
+        if kind=='package' and (root is None or not re.fullmatch(r'[^/\\.][^/\\]*/[^/\\.][^/\\]*/[^/\\.][^/\\]*',article_id) or article_id not in {a['id'] for a in articles(root,article_id=article_id)}):raise ValueError('请选择有效成稿')
         suffix='-'+digest({'filters':filters,'article':article_id if kind=='package' else ''})[:24]
         path=BASE/'exports'/(identity+suffix+'.zip');path.parent.mkdir(parents=True,exist_ok=True)
         temporary=path.with_name(path.name+'.'+uuid.uuid4().hex+'.tmp')
@@ -384,7 +401,7 @@ def download(identity,article_id,kind,filters=None):
             for current in roots:
                 if source=='new' and current==SHARED or source=='legacy-original' and current!=SHARED:continue
                 if plan and read(current/'job.json').get('studio_plan_id')!=plan:continue
-                for item in articles(current):
+                for item in articles(current,article_id=article_id if kind=='package' else None,date_filter=date):
                     if item.get('quality_status')=='needs_revision':continue
                     if kind=='package' and item['id']!=article_id:continue
                     if date and item['date']!=date or product and item['product']['id']!=product or search.strip().lower() not in item['title'].lower():continue
@@ -398,16 +415,20 @@ def download(identity,article_id,kind,filters=None):
             if not json.loads(checked.read('导出清单.json')).get('count'):raise ValueError('当前筛选没有可下载的成稿，请调整筛选后重试')
         return path
     if root is None:raise ValueError('请选择成稿')
-    if kind not in {'markdown','word','info'}:raise ValueError('文件类型不正确')
+    if kind not in {'markdown','word','info','info-json'}:raise ValueError('文件类型不正确')
     if not re.fullmatch(r'[^/\\.][^/\\]*/[^/\\.][^/\\]*/[^/\\.][^/\\]*',article_id):raise ValueError('成稿编号不正确')
     folder=(root/'approved'/article_id).resolve()
     if root.resolve() not in folder.parents or not (folder/'receipt.json').is_file():raise ValueError('成稿不存在')
-    available={a['id']:a for a in articles(root)}
+    available={a['id']:a for a in articles(root,article_id=article_id,listing=True)}
     if article_id not in available:raise ValueError('成稿已撤回或文件校验未通过，不作为可下载成稿')
-    if kind!='info' and available[article_id].get('quality_status')=='needs_revision':raise ValueError('这篇旧稿未通过正文质量复核，已停止下载，修订通过后恢复')
-    if kind=='info':
+    if kind not in {'info','info-json'} and available[article_id].get('quality_status')=='needs_revision':raise ValueError('这篇旧稿未通过正文质量复核，已停止下载，修订通过后恢复')
+    if kind in {'info','info-json'}:
         from .article_export import info,describe,logs
         metadata=info(root,folder);path=BASE/'exports'/('info-'+digest([identity,article_id])[:24]+'.md')
+        if kind=='info-json':
+            path=path.with_suffix('.json')
+            atomic_json(path,{'metadata':metadata,'execution':logs(root,metadata)})
+            return path
         atomic_write(path,describe(metadata)+'\n## 执行日志\n\n```json\n'+json.dumps(logs(root,metadata),ensure_ascii=False,indent=2)+'\n```\n')
         return path
     path=folder/('draft.md' if kind=='markdown' else 'article.docx')

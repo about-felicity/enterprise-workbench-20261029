@@ -12,17 +12,19 @@ import threading
 import time
 import uuid
 
+from capture_channels import channel_name
+
 MODELS = {
-    'doubao1': {'name':'豆包 1','kind':'native','rounds':5,'interval':45,'minimum':30,'login':True},
-    'doubao2': {'name':'豆包 2','kind':'native','rounds':5,'interval':45,'minimum':30,'login':True},
-    'deepseek': {'name':'DeepSeek','kind':'native','backend':'android','rounds':3,'interval':600,'minimum':600,'maximum_interval':900,'interval_policy':'随机10–15分钟；关闭深度思考，仅开启智能搜索','login':True},
-    'wenxin_card': {'name':'文心卡片','kind':'web','rounds':6,'interval':60,'minimum':60,'login':False},
-    'baidu_ai': {'name':'百度卡片','kind':'web','rounds':5,'interval':60,'minimum':60,'login':False},
-    'yuanbao': {'name':'元宝','kind':'native','rounds':5,'interval':45,'minimum':30,'login':True},
-    'deepseek2': {'name':'DeepSeek 2','kind':'native','backend':'android','rounds':3,'interval':600,'minimum':600,'maximum_interval':900,'interval_policy':'随机10–15分钟；关闭深度思考，仅开启智能搜索','login':True},
+    'doubao1': {'name':channel_name('doubao1'),'kind':'native','rounds':5,'interval':45,'minimum':30,'login':True},
+    'doubao2': {'name':channel_name('doubao2'),'kind':'native','rounds':5,'interval':45,'minimum':30,'login':True},
+    'deepseek': {'name':channel_name('deepseek'),'kind':'native','backend':'android','rounds':3,'interval':600,'minimum':600,'maximum_interval':900,'interval_policy':'随机10–15分钟；关闭深度思考，仅开启智能搜索','login':True},
+    'wenxin_card': {'name':channel_name('wenxin_card'),'kind':'web','rounds':6,'interval':60,'minimum':60,'login':False},
+    'baidu_ai': {'name':channel_name('baidu_ai'),'kind':'web','rounds':5,'interval':60,'minimum':60,'login':False},
+    'yuanbao': {'name':channel_name('yuanbao'),'kind':'native','rounds':5,'interval':45,'minimum':30,'login':True},
+    'deepseek2': {'name':channel_name('deepseek2'),'kind':'native','backend':'android','rounds':3,'interval':600,'minimum':600,'maximum_interval':900,'interval_policy':'随机10–15分钟；关闭深度思考，仅开启智能搜索','login':True},
 }
 for _lane in (3,4):
-    MODELS[f'doubao{_lane}']={**MODELS['doubao2'],'name':f'豆包 {_lane}'}
+    MODELS[f'doubao{_lane}']={**MODELS['doubao2'],'name':channel_name(f'doubao{_lane}')}
 for _meta in MODELS.values():
     _meta['maximum_rounds']=200 if _meta['kind']=='native' else 20
 MODELS['deepseek']['maximum_rounds']=20
@@ -266,12 +268,14 @@ class Controller:
                 from browser_backend import enabled as browser_enabled
                 if browser_enabled(model,self.base):meta={**meta,'backend':'browser_extension'}
                 if model in read(self.base/'daily_plan.json').get('desktop_collectors',[]):
-                    meta={**meta,'name':'DeepSeek 本机插件','backend':'desktop_extension','login':False}
+                    meta={**meta,'backend':'desktop_extension','login':False}
                     current={**current,'state':'external','service_state':'inactive','captured':daily[model]['completed'],'processed':daily[model]['completed'],'heartbeat_age':None,'progress':{'phase':'external'},'needs_review':0}
                     daily[model]['status']='complete' if daily[model].get('remaining')==0 else 'external'
                     login={'status':'external','message':'请在本机Chrome中运行插件；服务器仅接收结果，不自动提问'}
                     manual={};readiness={'checks':[],'can_start':False,'can_resume':False}
-                result.append({'id':model,**meta,'settings':json.loads(settings['value']),'revision':settings['revision'],
+                name=channel_name(model,meta.get('backend'))
+                current={**current,'name':name}
+                result.append({'id':model,**meta,'name':name,'settings':json.loads(settings['value']),'revision':settings['revision'],
                                'manual_login':manual,'readiness':readiness,
                                'login_monitor':read(self.base/'auth-monitor'/(model+'.json')) if model in DEEPSEEK_CHANNELS else {},
                                'current':current,'login_status':login,'history':history,'events':events,'daily':daily[model]})

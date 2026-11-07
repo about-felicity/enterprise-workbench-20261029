@@ -1,0 +1,293 @@
+{
+  "version": 1,
+  "month": "2026-11",
+  "people": [
+    "杨涛",
+    "小美",
+    "鑫悦",
+    "刘豪",
+    "杨静涛"
+  ],
+  "component_weights": {
+    "traffic": 55,
+    "budget": 15,
+    "mention": 20,
+    "values": 10
+  },
+  "model_weights": {
+    "deepseek": 30,
+    "doubao": 30,
+    "wenxin": 30,
+    "yuanbao": 10
+  },
+  "person_model_weights": {},
+  "budget_floor": 80,
+  "budget_cap": 150,
+  "values_score": 100,
+  "values_authorization": "本月截图价值观100%",
+  "targets_confirmed": true,
+  "products": [
+    {
+      "product": "梵玢焕活精华液",
+      "owner": "小美",
+      "priority": "B",
+      "daily_traffic_target": 21,
+      "monthly_budget": 3000,
+      "question": "防脱精华液推荐",
+      "mention_targets": {
+        "deepseek": 13,
+        "doubao": 1.3,
+        "wenxin": 13,
+        "yuanbao": 6.5
+      },
+      "traffic": {},
+      "cumulative_expenses": {}
+    },
+    {
+      "product": "道和小红瓶",
+      "owner": "小美",
+      "priority": "A",
+      "daily_traffic_target": 24,
+      "monthly_budget": 3000,
+      "question": "防脱精华液推荐",
+      "mention_targets": {
+        "deepseek": 32.5,
+        "doubao": 1.3,
+        "wenxin": 58.5,
+        "yuanbao": 15.6
+      },
+      "traffic": {},
+      "cumulative_expenses": {}
+    },
+    {
+      "product": "梵玢祛痘精华",
+      "owner": "杨涛",
+      "priority": "C",
+      "daily_traffic_target": 7,
+      "monthly_budget": 3500,
+      "question": "祛痘精华液推荐",
+      "mention_targets": {
+        "deepseek": 6.5,
+        "doubao": 1.3,
+        "wenxin": 6.5,
+        "yuanbao": 26
+      },
+      "traffic": {},
+      "cumulative_expenses": {}
+    },
+    {
+      "product": "梵玢染发剂（含黑茶色）",
+      "owner": "杨涛",
+      "priority": "S",
+      "daily_traffic_target": 125,
+      "monthly_budget": 13000,
+      "question": "染发剂推荐",
+      "mention_targets": {
+        "deepseek": 19.5,
+        "doubao": 2.6,
+        "wenxin": 52,
+        "yuanbao": 3.9
+      },
+      "traffic": {},
+      "cumulative_expenses": {}
+    },
+    {
+      "product": "科熙本染发剂",
+      "owner": "杨涛",
+      "priority": "S",
+      "daily_traffic_target": 83,
+      "monthly_budget": 9000,
+      "question": "染发剂推荐",
+      "mention_targets": {
+        "deepseek": 10.4,
+        "doubao": 1.3,
+        "wenxin": 23.4,
+        "yuanbao": 9.1
+      },
+      "traffic": {},
+      "cumulative_expenses": {}
+    },
+    {
+      "product": "科熙本控油蓬松洗发水",
+      "owner": "小美",
+      "priority": "A",
+      "daily_traffic_target": 12,
+      "monthly_budget": 5000,
+      "question": "控油蓬松洗发水推荐",
+      "mention_targets": {
+        "deepseek": 2.6,
+        "doubao": 1.3,
+        "wenxin": 3.9,
+        "yuanbao": 13
+      },
+      "traffic": {},
+      "cumulative_expenses": {}
+    },
+    {
+      "product": "科熙本控油蓬松造型喷雾",
+      "owner": "刘豪",
+      "priority": "B",
+      "daily_traffic_target": 5,
+      "monthly_budget": 3000,
+      "question": "造型喷雾推荐",
+      "mention_targets": {
+        "deepseek": 16.9,
+        "doubao": 1.3,
+        "wenxin": 97.5,
+        "yuanbao": 39
+      },
+      "traffic": {},
+      "cumulative_expenses": {}
+    },
+    {
+      "product": "梵玢洗发水",
+      "owner": "小美",
+      "priority": "A",
+      "daily_traffic_target": 21,
+      "monthly_budget": 3500,
+      "question": "防脱洗发水推荐",
+      "mention_targets": {
+        "deepseek": 3.9,
+        "doubao": 1.3,
+        "wenxin": 6.5,
+        "yuanbao": 3.9
+      },
+      "traffic": {},
+      "cumulative_expenses": {}
+    },
+    {
+      "product": "道和小绿瓶",
+      "owner": "小美",
+      "priority": "A",
+      "daily_traffic_target": 29,
+      "monthly_budget": 3500,
+      "question": "防脱洗发水推荐",
+      "mention_targets": {
+        "deepseek": 6.5,
+        "doubao": 1.3,
+        "wenxin": 6.5,
+        "yuanbao": 13
+      },
+      "traffic": {},
+      "cumulative_expenses": {}
+    },
+    {
+      "product": "梵玢睫毛精华液",
+      "owner": "鑫悦",
+      "priority": "S",
+      "daily_traffic_target": 15,
+      "monthly_budget": 5000,
+      "question": "睫毛增长液推荐",
+      "mention_targets": {
+        "deepseek": 13,
+        "doubao": 52,
+        "wenxin": 117,
+        "yuanbao": 104
+      },
+      "traffic": {},
+      "cumulative_expenses": {}
+    },
+    {
+      "product": "姿生怡眼霜",
+      "owner": "刘豪",
+      "priority": "A",
+      "daily_traffic_target": 12,
+      "monthly_budget": 5000,
+      "question": "眼霜推荐",
+      "mention_targets": {
+        "deepseek": 2.6,
+        "doubao": 1.3,
+        "wenxin": 6.5,
+        "yuanbao": 3.9
+      },
+      "traffic": {},
+      "cumulative_expenses": {}
+    },
+    {
+      "product": "焕颜计小白罐",
+      "owner": "鑫悦",
+      "priority": "S",
+      "daily_traffic_target": 20,
+      "monthly_budget": 5000,
+      "question": "美白面霜推荐",
+      "mention_targets": {
+        "deepseek": 6.5,
+        "doubao": 5.2,
+        "wenxin": 78,
+        "yuanbao": 26
+      },
+      "traffic": {},
+      "cumulative_expenses": {}
+    },
+    {
+      "product": "梵玢眉毛精华液",
+      "owner": "鑫悦",
+      "priority": "S",
+      "daily_traffic_target": 10,
+      "monthly_budget": 5000,
+      "question": "眉毛增长液推荐",
+      "mention_targets": {
+        "deepseek": 65,
+        "doubao": 78,
+        "wenxin": 117,
+        "yuanbao": 65
+      },
+      "traffic": {},
+      "cumulative_expenses": {}
+    },
+    {
+      "product": "梵玢护发精油",
+      "owner": "杨静涛",
+      "priority": "B",
+      "daily_traffic_target": 8,
+      "monthly_budget": 2500,
+      "question": "护发精油推荐",
+      "mention_targets": {
+        "deepseek": 3,
+        "doubao": 1.3,
+        "wenxin": 15,
+        "yuanbao": 2
+      },
+      "traffic": {},
+      "cumulative_expenses": {}
+    },
+    {
+      "product": "科熙本植物防脱赋活多效精华液",
+      "owner": "小美",
+      "priority": "A",
+      "daily_traffic_target": 5,
+      "monthly_budget": 5000,
+      "question": "防脱精华液推荐",
+      "mention_targets": {
+        "deepseek": 1.3,
+        "doubao": 1.3,
+        "wenxin": 1.3,
+        "yuanbao": 1.3
+      },
+      "traffic": {},
+      "cumulative_expenses": {}
+    }
+  ],
+  "excluded_products": [
+    "姿生怡鱼子酱面膜",
+    "科熙本鱼子酱修护柔顺护发素",
+    "姿生怡洗面奶",
+    "科熙本二硫化硒洗发水",
+    "姿生怡身体乳",
+    "姿生怡手部保湿霜",
+    "茗媛萃防晒霜",
+    "姿生怡阿尔卑斯冰川焕肤精粹水",
+    "梵玢沐浴油",
+    "姿生怡卸妆油"
+  ],
+  "reconciliation": [
+    "杨涛逐产品流量目标7+125+83=215，截图员工合计为214；以产品明细215录入。"
+  ],
+  "source_notes": [
+    "护发精油负责人依员工汇总8及预算2500与唯一匹配产品对应为杨静涛；产品行原表仍为－。",
+    "依据用户提供的2026年11月新版三张截图及此前汇总考核规则截图录入。",
+    "黄色无负责人产品不纳入员工绩效；空白提及目标未补造。",
+    "11月目标表的产品目标按现有系统日流量目标口径录入。",
+    "10月费用节点、示例成绩及#REF!均未导入11月实绩。"
+  ]
+}

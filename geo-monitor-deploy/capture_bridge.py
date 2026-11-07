@@ -232,9 +232,11 @@ def read_rows(path, batch):
 
 def run(config_path, base, receiver_root):
     config = load(config_path)
+    from capture_channels import log_channel
+    log_channel(config["model"],"worker_start",config["batch"])
     if config['model']=='deepseek' and (base/'deepseek_backend.json').exists():
         # Preserve the web journal exactly; Android owns all new DeepSeek sends.
-        print(json.dumps({'event':'legacy_deepseek_web_disabled','backend':'android'}),flush=True)
+        log_channel(config['model'],'legacy_deepseek_web_disabled',config['batch'])
         return 0
     root = base / "batches" / config["batch"]
     root.mkdir(parents=True, exist_ok=True)
@@ -307,7 +309,7 @@ def run(config_path, base, receiver_root):
                                     "completed": counts.get("completed", 0), "streak": streak,
                                     "journal_preserved": True}
                         atomic_json(root / "worker_watchdog.json", evidence)
-                        print(json.dumps({"event": "web_worker_timeout", **evidence}), flush=True)
+                        log_channel(config["model"],"web_worker_timeout",config["batch"],**evidence)
                         terminate_worker(child)
                         # Re-read the journal after exit before deciding any retry.
                         if streak >= 3:

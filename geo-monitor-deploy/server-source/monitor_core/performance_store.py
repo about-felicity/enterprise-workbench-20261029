@@ -14,8 +14,10 @@ class ConflictError(ValueError):pass
 def database_path():
     return Path(os.environ.get('MONITOR_PERFORMANCE_DB',str(Path(__file__).resolve().parents[1]/'runtime/performance.sqlite')))
 
-def template():
-    return json.loads(Path(__file__).with_name('performance_data_202610.json').read_text('utf8'))
+def template(month=None):
+    name='performance_data_'+str(month).replace('-','')+'.json'
+    path=Path(__file__).with_name(name) if month and re.fullmatch(r'\d{4}-\d{2}',month) else None
+    return json.loads((path if path and path.is_file() else Path(__file__).with_name('performance_data_202610.json')).read_text('utf8'))
 
 def today():return datetime.now(ZoneInfo('Asia/Shanghai')).date()
 
@@ -58,7 +60,7 @@ def available_months():
     return sorted(months,reverse=True)
 
 def month_config(month):
-    valid_month(month);config=copy.deepcopy(template());config['month']=month
+    valid_month(month);config=copy.deepcopy(template(month));config['month']=month
     for p in config['products']:p['traffic']={};p['cumulative_expenses']={}
     by_name={p['product']:p for p in config['products']}
     with connection() as db:
@@ -73,7 +75,7 @@ def month_config(month):
         elif field=='traffic_target' and value is not None:p['daily_traffic_target']=value
         elif field=='budget_limit' and value is not None:p['monthly_budget']=value/100
     config['manual_data_revision']=current_revision
-    config['targets_confirmed']=all(any(r['product']==p and r['field']==f and r['value'] is not None for r in rows) for p in by_name for f in ['traffic_target','budget_limit'])
+    config['targets_confirmed']=(bool(config.get('targets_confirmed')) or all(any(r['product']==p and r['field']==f and r['value'] is not None for r in rows) for p in by_name for f in ['traffic_target','budget_limit']))
     return config
 
 def editor_data(month,day):
@@ -107,7 +109,7 @@ def save(payload,actor):
     if not re.fullmatch(r'[a-f0-9]{32}',str(operation)):raise ValueError('保存操作编号无效')
     changes=payload.get('changes')
     if not isinstance(changes,list) or not 1<=len(changes)<=60:raise ValueError('每次请保存1至60个数据单元格')
-    products={p['product'] for p in template()['products']};validated=[];seen=set()
+    products={p['product'] for p in template(month)['products']};validated=[];seen=set()
     for item in changes:
         if not isinstance(item,dict):raise ValueError('数据单元格格式无效')
         product=item.get('product');field=item.get('field');day=item.get('date');value=item.get('value');expected=item.get('expected_revision')

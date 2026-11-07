@@ -423,7 +423,7 @@ def _analytics_data_version(cache_key=None):
     return tuple(version)
 
 
-def _analytics_content_token():
+def _analytics_content_token(*, include_enrichment=True):
     version = [_ANALYTICS_CACHE_SCHEMA_VERSION, BRAND_MATCH_SCHEMA_VERSION,
                OWN_PRODUCT_SCHEMA_VERSION, OWNED_PRODUCT_COMPARISON_SCHEMA_VERSION,
                PERFORMANCE_SCHEMA_VERSION]
@@ -434,11 +434,12 @@ def _analytics_content_token():
     content_epoch_seconds = max(
         60, int(os.environ.get("MONITOR_ANALYTICS_CONTENT_EPOCH_SECONDS", "300") or 300)
     )
-    try:
-        stat = Path(CONTENT_INDEX_PATH).stat()
-        version.append(stat.st_mtime_ns // (content_epoch_seconds * 1_000_000_000))
-    except OSError:
-        version.append(0)
+    if include_enrichment:
+        try:
+            stat = Path(CONTENT_INDEX_PATH).stat()
+            version.append(stat.st_mtime_ns // (content_epoch_seconds * 1_000_000_000))
+        except OSError:
+            version.append(0)
     try:
         stat = Path(BRAND_SETTINGS_PATH).stat()
         version.extend((stat.st_mtime_ns, stat.st_size))
@@ -865,15 +866,23 @@ def _persist_unified_analytics(cache_key, result):
     try:
         path.parent.mkdir(parents=True, exist_ok=True)
         temporary = path.with_suffix(".tmp")
-        temporary.write_text(json.dumps(result, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        stored = {**result, "_snapshot_policy": _analytics_content_token(include_enrichment=False)}
+        temporary.write_text(json.dumps(stored, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         temporary.replace(path)
     except OSError:
         pass
 
 
-def _load_persisted_unified_analytics(cache_key):
+def _load_persisted_unified_analytics(cache_key, *, recent=False):
     try:
-        value = json.loads(_unified_analytics_cache_path(cache_key).read_text(encoding="utf-8"))
+        path = _unified_analytics_cache_path(cache_key)
+        if recent and not 0 <= time.time()-path.stat().st_mtime <= 600:
+            return None
+        value = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(value, dict):
+            policy = value.pop("_snapshot_policy", None)
+            if recent and policy != _analytics_content_token(include_enrichment=False):
+                return None
         return value if isinstance(value, dict) and isinstance(value.get("models"), list) else None
     except (OSError, ValueError, json.JSONDecodeError):
         return None
@@ -963,6 +972,15 @@ def _unified_analytics_without_coalescing(params):
                     _ANALYTICS_LAST_VALIDATED[cache_key] = time.monotonic()
                     _ANALYTICS_BUILDING.discard(cache_key)
                 return database_cached
+            if cache_key[1] and cache_key[3] in {"sources", "brands", "compare", "runs", "overview"}:
+                previous = monitor_database.recent_cached_analytics(cache_key, content_token)
+                if not previous:
+                    previous = _load_persisted_unified_analytics(cache_key, recent=True)
+                if previous and cache_key[1] in (previous.get("dates") or []):
+                    with _ANALYTICS_LOCK:
+                        _remember_analytics_cache_locked(cache_key, ((), previous))
+                    _schedule_analytics_validation(cache_key)
+                    return previous
         except Exception:
             pass
         version = _analytics_data_version(cache_key)
@@ -1103,7 +1121,7 @@ def _unified_analytics(params):
         try:
             with _ANALYTICS_LOCK:
                 entry = _ANALYTICS_CACHE.get(cache_key)
-            current = bool(entry and entry[0] == _analytics_data_version(cache_key))
+            current = bool(entry and entry[1] is result and entry[0] == _analytics_data_version(cache_key))
         except Exception:
             current = False
         return _analytics_result_state(result, current=current)
@@ -1958,7 +1976,7 @@ def _build_owned_product_board(cache_key, selected_models, question, live_day, m
     if live_board is None:
         runs_by_model = monitor_database.load_owned_product_runs(
             day=live_day, question=question, model=model,
-            exclude_questions=ENTERPRISE_MONITOR_QUESTIONS,
+            exclude_questions=ENTERPRISE_MONITOR_QUESTIONS, compact=True,
         )
         live_board = daily_owned_product_recommendations(
             runs_by_model, selected_models, question=question, date=live_day,
@@ -2039,7 +2057,7 @@ def _build_owned_product_summary(
         runs_by_model = monitor_database.load_owned_product_runs(
             day_from=month_start, day_to=month_end,
             question=question, model=model,
-            exclude_questions=ENTERPRISE_MONITOR_QUESTIONS,
+            exclude_questions=ENTERPRISE_MONITOR_QUESTIONS, compact=True,
         )
         daily_rows = daily_owned_product_recommendations(
             runs_by_model, selected_models, question=question, day_limit=3660,
@@ -2259,10 +2277,20 @@ def _with_fresh_owned_product_board(result, summary_month=""):
                     question, performance_start, "wenxin",
                     f"employee_performance_summary:{month}",
                 )
-                performance_model_rows["wenxin"] = _build_owned_product_summary(
-                    performance_key, ["wenxin"], question, "wenxin",
-                    month, performance_start, month_end,
-                )
+                with _OWNED_BOARD_LOCK:
+                    cached_performance = _OWNED_BOARD_CACHE.get(performance_key)
+                if cached_performance is None:
+                    performance_model_rows["wenxin"] = _build_owned_product_summary(
+                        performance_key, ["wenxin"], question, "wenxin",
+                        month, performance_start, month_end,
+                    )
+                else:
+                    performance_model_rows["wenxin"] = cached_performance[1]
+                    if cached_performance[0] != monitor_database.scope_version(performance_key):
+                        _schedule_owned_product_summary_refresh(
+                            performance_key, ["wenxin"], question, "wenxin",
+                            month, performance_start, month_end,
+                        )
             else:
                 performance_model_rows["wenxin"] = []
         return {
@@ -8345,8 +8373,29 @@ class DashboardHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         path = self.path.split("?", 1)[0]
         origin = self.headers.get("Origin", "")
-        if path not in {"/api/performance-entry/save", "/api/performance-entry/confirmation"} and origin and not self.is_allowed_dashboard_origin(origin):
+        if path not in {"/api/performance-entry/save", "/api/performance-entry/confirmation", "/api/performance-entry/monthly-keywords"} and origin and not self.is_allowed_dashboard_origin(origin):
             self.send_json({"ok": False, "error": "forbidden origin"}, 403)
+            return
+        if path == "/api/performance-entry/monthly-keywords":
+            from monitor_core import monthly_keywords, performance_identity
+            try:
+                if performance_identity.authorize_session_write(self.headers) not in monthly_keywords.EDITORS:
+                    raise PermissionError("仅管理员可以编辑月度二级词")
+                length = int(self.headers.get("Content-Length", "0"))
+                if not 0 < length <= 65536 or self.headers.get("Content-Type", "").split(";")[0] != "application/json":
+                    raise ValueError("需要不超过64KB的JSON数据")
+                payload = json.loads(self.rfile.read(length).decode("utf8"))
+                if not isinstance(payload, dict):
+                    raise ValueError("请求格式不正确")
+                self.send_json(monthly_keywords.save(payload))
+            except PermissionError as exc:
+                self.send_json({"ok": False, "error": str(exc)}, 403)
+            except monthly_keywords.Conflict as exc:
+                self.send_json({"ok": False, "error": str(exc)}, 409)
+            except (ValueError, UnicodeError) as exc:
+                self.send_json({"ok": False, "error": str(exc)}, 400)
+            except Exception:
+                self.send_json({"ok": False, "error": "暂时无法保存月度二级词"}, 503)
             return
         if path == "/api/performance-entry/confirmation":
             from monitor_core import performance_identity, performance_confirmation
@@ -8543,6 +8592,26 @@ class DashboardHandler(BaseHTTPRequestHandler):
             except Exception as exc:
                 self.send_json({"ok": False, "error": str(exc)}, 500)
             return
+        if self.path.split("?", 1)[0] == "/api/performance-entry/monthly-keywords":
+            from monitor_core import monthly_keywords, performance_identity
+            try:
+                actor = performance_identity.identity(self.headers)
+                params = parse_qs(urlparse(self.path).query)
+                month = (params.get("month") or [monthly_keywords.today_month()])[0]
+                result = monthly_keywords.board(
+                    (params.get("product") or [monthly_keywords.PRODUCTS[0]])[0],
+                    month, (params.get("model") or ["deepseek"])[0],
+                )
+                can_edit = actor in monthly_keywords.EDITORS and month >= monthly_keywords.today_month()
+                self.send_json({**result, "can_edit": can_edit,
+                                "csrf": performance_identity.csrf(self.headers) if can_edit else ""})
+            except PermissionError as exc:
+                self.send_json({"ok": False, "error": str(exc)}, 401)
+            except ValueError as exc:
+                self.send_json({"ok": False, "error": str(exc)}, 400)
+            except Exception:
+                self.send_json({"ok": False, "error": "暂时无法读取月度二级词"}, 503)
+            return
         if self.path.split("?", 1)[0] == "/api/performance-entry/confirmation":
             from monitor_core import performance_identity, performance_confirmation
             try:
@@ -8599,7 +8668,7 @@ class DashboardHandler(BaseHTTPRequestHandler):
                         (params.get("summary_month") or [""])[0],
                     ),
                     ttl=3.0,
-                    stale_ttl=30.0,
+                    stale_ttl=120.0,
                 )
             except Exception as exc:
                 self.send_json({"ok": False, "error": str(exc)}, 500)
@@ -8772,7 +8841,12 @@ def main():
             if current_day != warmed_day:
                 for view in ("overview", "brands", "compare", "sources", "runs"):
                     try:
-                        _unified_analytics({"date": [current_day], "view": [view]})
+                        params = {"date": [current_day], "view": [view]}
+                        key = "analytics:/api/analytics?" + urlencode({"date":current_day, "view":view})
+                        HTTP_JSON_CACHE.get_or_build(
+                            key, lambda p=params,v=view: _analytics_payload_for_client(_unified_analytics(p),False,v),
+                            ttl=3.0, stale_ttl=120.0,
+                        )
                     except Exception as exc:
                         print("Dashboard warmup failed:", view, exc)
                     time.sleep(2)

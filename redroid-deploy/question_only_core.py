@@ -58,7 +58,8 @@ def source_absence_verified(result):
     for block in blocks:
         content=block.get('content',{})
         if block.get('is_finish') is not True or 'search_query_result_block' in content:return False
-        if not set(content).issubset({'pc_event_block','text_block','tips_block','code_block'}) or content.get('pc_event_block'):return False
+        if not optional_auth_widget(block):
+            if not set(content).issubset({'pc_event_block','text_block','tips_block','code_block'}) or content.get('pc_event_block'):return False
         if 'tips_block' in content:
             try:native_tip(block)
             except DataError:return False

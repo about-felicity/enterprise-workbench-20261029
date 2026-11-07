@@ -9,6 +9,9 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--config', type=Path, required=True)
 args = parser.parse_args()
 config = json.loads(args.config.read_text())
+from capture_channels import channel_name,log_channel
+os.environ['GEO_CHANNEL_NAME']=channel_name(config['model'],config.get('backend'))
+log_channel(config['model'],'worker_start',config['batch'],backend=config.get('backend'))
 if config.get('backend')=='browser_extension':
     python='/opt/monitor/geo-capture/venv/bin/python'
     os.execv(python,[python,'-u','/opt/monitor/geo-capture/browser_task_bridge.py','--config',str(args.config)])

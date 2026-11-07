@@ -4,6 +4,22 @@ from question_only_core import Queue,source_absence_verified,PROTOCOL,DataError,
 from geo_batch_bridge import envelope
 
 class ZeroSources(unittest.TestCase):
+    def test_finished_account_widget_does_not_promise_web_sources(self):
+        result=self.result()
+        widget={'block_type':10017,'is_finish':True,'content':{'applet_block':{
+            'render_data':json.dumps({'applet_id':'db_app_4PM0PUQ',
+                                     'widget_id':'aweme-auth-widget','version_tag':'v1','widget_data':'{}'})}}}
+        result['raw_answer_blocks'].append(widget)
+        self.assertTrue(source_absence_verified(result))
+        widget['is_finish']=False
+        self.assertFalse(source_absence_verified(result))
+        widget['is_finish']=True
+        widget['meta_info']=[{'info':json.dumps({'url':'https://source.test'})}]
+        self.assertFalse(source_absence_verified(result))
+        widget.pop('meta_info')
+        widget['content']['applet_block']['render_data']=json.dumps({'applet_id':'unknown'})
+        self.assertFalse(source_absence_verified(result))
+
     def test_permission_replay_keeps_parent_and_continuation_identity_and_rejects_unproven_extra_turn(self):
         with tempfile.TemporaryDirectory() as temp:
             p=Path(temp)/'native.sqlite';db=sqlite3.connect(p)

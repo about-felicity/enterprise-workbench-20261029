@@ -33,6 +33,10 @@ def snapshot_fingerprint(person,month):
 
 PEOPLE=('佳佳','杨涛','小美','鑫悦','谭露')
 
+def people_for_month(month):
+    from .performance_store import month_config
+    return tuple(month_config(month)['people'])
+
 @contextmanager
 def database():
     from .performance_store import connection
@@ -74,7 +78,7 @@ def status(month,actor):
     window=confirmation_window(month)
     with database() as db:
         people=[]
-        for name in PEOPLE:
+        for name in people_for_month(month):
             configured=bool(db.execute('select 1 from confirmation_passwords where name=?',(name,)).fetchone())
             row=db.execute('select confirmed_at,snapshot,digest from performance_confirmations where name=? and month=?',(name,month)).fetchone()
             people.append({'name':name,'password_set':configured,'confirmed_at':row['confirmed_at'] if row else None,
@@ -83,7 +87,7 @@ def status(month,actor):
 
 def act(payload,actor,session,assessment):
     name=payload.get('name');action=payload.get('action');month=payload.get('month')
-    if name not in PEOPLE:raise ValueError('请选择考核员工')
+    if name not in people_for_month(month):raise ValueError('请选择考核员工')
     if action=='reset':
         if actor!='superadmin':raise PermissionError('仅superadmin可以重置确认密码')
         with database() as db:

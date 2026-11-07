@@ -37,13 +37,17 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 class RemoteSync:
     """Durable background uploader using the existing LAN monitor protocol."""
 
-    def __init__(self, data_dir: Path, event_writer: EventWriter) -> None:
+    def __init__(self, data_dir: Path, event_writer: EventWriter, *,
+                 capture_mode: str = "chrome_manual_extension",
+                 capture_label: str = "DeepSeek 本机Chrome插件") -> None:
         self.model = "deepseek"
         self.data_dir = data_dir
         self.root = data_dir / "remote_sync"
         self.outbox = self.root / "outbox"
         self.sent = self.root / "sent"
         self.event_writer = event_writer
+        self.capture_mode = capture_mode
+        self.capture_label = capture_label
         self.stop_event = threading.Event()
         self.wake_event = threading.Event()
         self.thread: threading.Thread | None = None
@@ -115,8 +119,8 @@ class RemoteSync:
         value = dict(record)
         value["collector_model"] = self.model
         if config.get("client_id"): value["collector_client_id"]=config["client_id"]
-        value["capture_mode"] = "chrome_manual_extension"
-        value["capture_label"] = "DeepSeek 本机Chrome插件"
+        value["capture_mode"] = self.capture_mode
+        value["capture_label"] = self.capture_label
         value["body_capture_complete"] = bool(str(value.get("reply") or value.get("web_body") or "").strip()) and value.get("status", "success") == "success"
         device = str(os.environ.get("DEEPSEEK_REMOTE_DEVICE") or socket.gethostname()).strip()
         request_id = self._request_id(value, device)
@@ -250,7 +254,7 @@ class RemoteSync:
             "details": {"receiver_urls": state["receiver_urls"], "pending": state["pending"],
                         "error": "" if state["enabled"] else "回传配置未找到或不完整"},
         })
-        if not state["enabled"]:
+        if not state["enabled"] and not self._config().get("client_id"):
             return
         self.thread = threading.Thread(target=self._watch, name="deepseek-remote-sync", daemon=True)
         self.thread.start()

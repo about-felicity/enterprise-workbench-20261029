@@ -1,5 +1,7 @@
 """Loopback-only creation API; same-origin gateway supplies public authentication."""
 import argparse
+import base64
+import gzip
 import hashlib
 import json
 from http.cookies import SimpleCookie
@@ -9,12 +11,56 @@ import secrets
 import threading
 import time
 import logging
-from urllib.parse import parse_qs,urlsplit
+from urllib.parse import parse_qs,urlsplit,quote
 from . import runtime,source_adapter
-from .status_cache import StatusCache
+from .status_cache import StatusCache,LibraryCache
 
 sessions={};lock=threading.Lock()
-task_status_cache=StatusCache()
+task_status_cache=LibraryCache(ttl=3,max_stale=7,wait_timeout=35)
+output_cache=LibraryCache(ttl=30,wait_timeout=40)
+panel_cache=StatusCache(ttl=10,wait_timeout=40)
+knowledge_cache=StatusCache(ttl=5)
+index_build_lock=threading.Lock()
+
+def build_tasks():
+    with index_build_lock:
+        return runtime.status(task_list=True)
+
+def build_outputs():
+    with index_build_lock:
+        return runtime.output_status()
+
+def prime_lists():
+    try:
+        task_status_cache.get(build_tasks)
+        output_cache.get(build_outputs)
+    except Exception:
+        logging.exception('Creation list warmup failed')
+
+class PackedView:
+    def __init__(self):
+        self.lock = threading.Lock()
+        self.snapshot = None
+
+    def response(self, snapshot, version):
+        with self.lock:
+            if snapshot is not self.snapshot:
+                raw = json.dumps({k:v for k,v in snapshot.items() if k!='at'},ensure_ascii=False,separators=(',',':')).encode()
+                self.version = hashlib.sha256(raw).hexdigest()
+                self.packed = base64.b64encode(gzip.compress(raw,compresslevel=3)).decode('ascii')
+                self.snapshot = snapshot
+            result = {'version':self.version, 'at':snapshot['at']}
+            if version != self.version:
+                result['packed'] = self.packed
+            return result
+
+packed_outputs = PackedView()
+packed_tasks = PackedView()
+
+def packed_knowledge():
+    from .knowledge_library import upload_snapshot
+    raw=json.dumps(upload_snapshot(),ensure_ascii=False,separators=(',',':')).encode()
+    return hashlib.sha256(raw).hexdigest(),base64.b64encode(gzip.compress(raw,compresslevel=3)).decode('ascii')
 class Handler(BaseHTTPRequestHandler):
     def log_message(self,*args):pass
     def send(self,value,status=200,content_type='application/json; charset=utf-8',cookie=None,extra=None):
@@ -38,17 +84,34 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         path=urlsplit(self.path).path
         try:
-            if path=='/':return self.send(Path(__file__).with_name('panel.html').read_bytes(),content_type='text/html; charset=utf-8')
+            if path=='/':
+                html=Path(__file__).with_name('panel.html').read_bytes()
+                token,session=self.session(True)
+                try:
+                    # The first page may show a timestamped recent result. Live polling
+                    # retains its short freshness limit, including after any mutation.
+                    with task_status_cache.condition:
+                        previous=task_status_cache.value
+                    if previous and 0 <= time.time()-previous['at'] < 3600:
+                        snapshot=previous
+                    else:
+                        snapshot=task_status_cache.get(build_tasks)
+                    payload=json.dumps({**snapshot,'csrf':session['csrf']},ensure_ascii=False,separators=(',',':')).encode()
+                    html=html.replace(b'__TASK_BOOTSTRAP__',base64.b64encode(gzip.compress(payload,compresslevel=1)),1)
+                except Exception:
+                    logging.exception('Task bootstrap unavailable')
+                    html=html.replace(b'__TASK_BOOTSTRAP__',b'',1)
+                return self.send(html,content_type='text/html; charset=utf-8',cookie=token)
             if path=='/api/panel':
                 token,session=self.session(True)
-                return self.send({**runtime.status(),'csrf':session['csrf']},cookie=token)
+                return self.send({**panel_cache.get(runtime.status),'csrf':session['csrf']},cookie=token)
             if path=='/api/uploads':
                 from .knowledge_library import upload_snapshot
                 token,session=self.session(True)
                 return self.send({'ok':True,'studio':upload_snapshot(),'csrf':session['csrf'],'at':time.time()},cookie=token)
             if path=='/api/status':
                 token,session=self.session(True)
-                return self.send({**task_status_cache.get(lambda:runtime.status(task_list=True)),'csrf':session['csrf']},cookie=token)
+                return self.send({**task_status_cache.get(build_tasks),'csrf':session['csrf']},cookie=token)
             if path=='/api/catalog':
                 from . import materials
                 try:geo=source_adapter.catalog()
@@ -63,8 +126,46 @@ class Handler(BaseHTTPRequestHandler):
             if path=='/api/download':
                 query=parse_qs(urlsplit(self.path).query)
                 get=lambda k:query.get(k,[''])[0]
+                if get('kind')=='scene-image':
+                    from .pexels_images import image_path
+                    return self.send(image_path(get('id')).read_bytes(),content_type='image/png')
+                if get('kind')=='pexels-search':
+                    from .pexels_images import search
+                    return self.send(search(get('query')))
+                if get('kind')=='knowledge-list':
+                    token,session=self.session(True)
+                    version,packed=knowledge_cache.get(packed_knowledge)
+                    result={'csrf':session['csrf'],'version':version}
+                    if get('version')!=version:result['packed']=packed
+                    return self.send(result,cookie=token)
+                if get('kind')=='knowledge':
+                    from . import studio
+                    from .knowledge_library import record
+                    owner=get('owner')
+                    if owner.startswith('library-'):
+                        versions=record(owner).get('uploads',[])
+                    else:
+                        versions=[studio.product(owner).get('word_source') or {}]
+                    uid=studio.identity(get('version'),'upload')
+                    source=next((v for v in versions if v.get('import_id')==uid),None)
+                    if not source:raise ValueError('该知识库没有此版本')
+                    file=studio.ROOT/'imports'/uid/'source.docx'
+                    if not file.is_file():raise ValueError('该版本原文件不存在')
+                    body=file.read_bytes()
+                    if hashlib.sha256(body).hexdigest()!=source.get('sha256'):raise ValueError('原文件校验失败')
+                    name=Path(source['filename'].replace('\\','/')).name
+                    return self.send(body,content_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document',extra={'Content-Disposition':"attachment; filename=\"knowledge.docx\"; filename*=UTF-8''"+quote(name,safe=''),'X-Content-SHA256':source['sha256']})
+                if get('kind') in {'library','task-list'}:
+                    token,session=self.session(True)
+                    if get('kind')=='task-list':
+                        snapshot=task_status_cache.get(build_tasks,max_stale=117)
+                        response=packed_tasks.response(snapshot,get('version'))
+                    else:
+                        snapshot=output_cache.get(build_outputs)
+                        response=packed_outputs.response(snapshot,get('version')) if get('packed')=='1' else snapshot
+                    return self.send({**response,'csrf':session['csrf']},cookie=token)
                 file=runtime.download(get('job'),get('article'),get('kind'),{k:get(k) for k in ('date','product','source','search','plan') if get(k)})
-                mime='application/zip' if file.suffix=='.zip' else 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' if file.suffix=='.docx' else 'text/markdown; charset=utf-8'
+                mime='application/json; charset=utf-8' if file.suffix=='.json' else 'application/zip' if file.suffix=='.zip' else 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' if file.suffix=='.docx' else 'text/markdown; charset=utf-8'
                 body=file.read_bytes()
                 # Hash and deliver the exact same snapshot even during concurrent exports.
                 return self.send(body,content_type=mime,extra={'Content-Disposition':'attachment; filename="creation-articles'+file.suffix+'"','X-Content-SHA256':hashlib.sha256(body).hexdigest(),'X-Download-Bytes':str(len(body))})
@@ -90,6 +191,9 @@ class Handler(BaseHTTPRequestHandler):
             finally:
                 # Even a failed action may have saved part of its durable state.
                 task_status_cache.invalidate()
+                output_cache.invalidate()
+                panel_cache.invalidate()
+                if action.startswith('kb_') or action=='product_image_upload':knowledge_cache.invalidate()
             if action in {'product_image_upload','kb_upload'}:
                 logging.warning('upload_completed action=%s bytes=%s elapsed=%.3f reused=%s',action,length,time.monotonic()-started,result.get('reused',False))
             self.send({'ok':True,'result':result})
@@ -103,4 +207,8 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__=='__main__':
     runtime.BASE.mkdir(parents=True,exist_ok=True)
-    ThreadingHTTPServer(('127.0.0.1',8804),Handler).serve_forever()
+    class CreationServer(ThreadingHTTPServer):
+        request_queue_size=64
+    server=CreationServer(('127.0.0.1',8804),Handler)
+    threading.Thread(target=prime_lists,daemon=True).start()
+    server.serve_forever()

@@ -5,7 +5,7 @@ from __future__ import annotations
 from typing import Any, Iterable
 
 
-PERFORMANCE_SCHEMA_VERSION = 10
+PERFORMANCE_SCHEMA_VERSION = 11
 MODEL_PERFORMANCE_START_DATES = {
     # The Baidu-card collector only became stable on this date.  Earlier
     # sparse card samples remain visible in analytics, but must not inflate
@@ -300,11 +300,18 @@ def daily_employee_performance(
     article_weights = OCTOBER_WEIGHTS if october else SEPTEMBER_WEIGHTS if september else ARTICLE_WEIGHTS
     model_order = OCTOBER_MODEL_ORDER if october else SEPTEMBER_MODEL_ORDER if september else MODEL_ORDER
     product_rules = OCTOBER_RULES if october else PRODUCT_RULES
+    november = selected_date[:7] == '2026-11'
+    if november:
+        from .performance_store import template
+        config = template('2026-11')
+        article_weights = {name:config.get('person_model_weights',{}).get(name,config['model_weights']) for name in config['people']}
+        model_order = tuple(config['model_weights'])
+        product_rules = tuple({'product':p['product'],'question':p['question'],'article_owner':p['owner'],'targets':p['mention_targets']} for p in config['products'])
     for name, weights in article_weights.items():
         rules = [rule for rule in product_rules if rule.get("article_owner") == name]
         people.append(_person_result(name, "文章负责人", weights, rules, rows_by_key,
                                      model_order))
-    for name in (() if october else VIDEO_OWNERS):
+    for name in (() if october or november else VIDEO_OWNERS):
         rules = [rule for rule in PRODUCT_RULES if rule.get("video_owner") == name]
         people.append(_person_result(name, "豆包视频负责人", {"doubao": 100}, rules, rows_by_key,
                                      ("doubao",) if september else MODEL_ORDER))

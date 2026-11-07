@@ -39,7 +39,8 @@ def snapshot(person,products,day,mention,config):
     raw_budget=planned/expense*100 if expense and planned is not None else None
     budget_score=max(config['budget_floor'],min(config['budget_cap'],raw_budget)) if raw_budget is not None else None
     scores={'traffic':traffic_score,'budget':budget_score,'mention':mention['score'],'values':config['values_score']}
-    contribution={k:round(v*WEIGHTS[k]/100,4) if v is not None else None for k,v in scores.items()}
+    weights=config.get('component_weights',WEIGHTS)
+    contribution={k:round(v*weights[k]/100,4) if v is not None else None for k,v in scores.items()}
     total=sum(contribution.values()) if all(v is not None for v in contribution.values()) else None
     traffic_day=observed[-1] if observed else None
     partial=bool(len(observed)!=len(days) or expense_day!=day or mention['observed_items']<mention['target_items'] or not config.get('targets_confirmed',True))
@@ -67,27 +68,28 @@ def build_assessment(daily_rows,*,month='2026-10',as_of=None,today=None):
     rows=[r for r in rows if r.get('product') in names]
     rules=[]
     for p in products:
-        question=next(rule['question'] for rule in OCTOBER_RULES if rule['product']==p['product'])
+        question=p.get('question') or next(rule['question'] for rule in OCTOBER_RULES if rule['product']==p['product'])
         rules.append({'product':p['product'],'question':question,'article_owner':p['owner'],'targets':p['mention_targets']})
-    history={name:[] for name in PEOPLE}
+    names=config.get('people',PEOPLE)
+    history={name:[] for name in names}
     for number in range(1,cutoff.day+1):
         day=f'{month}-{number:02d}'
         summarized=_mention_summary(r for r in rows if r['date']<=day)
         index={(r['question'],r['product']):r for r in summarized}
-        for name in PEOPLE:
+        for name in names:
             owned=[p for p in products if p['owner']==name]
             model_weights=config.get('person_model_weights',{}).get(name,config['model_weights'])
             mention=_person_result(name,'文章负责人',model_weights,[r for r in rules if r['article_owner']==name],index,config['model_weights'],round_scores=False)
             history[name].append(snapshot(name,owned,day,mention,config))
-    people=[{'name':name,'product_count':len([p for p in products if p['owner']==name]),'current':history[name][-1],'daily':list(reversed(history[name]))} for name in PEOPLE]
+    people=[{'name':name,'product_count':len([p for p in products if p['owner']==name]),'current':history[name][-1],'daily':list(reversed(history[name]))} for name in names]
     return {'version':1,'month':month,'as_of':cutoff.isoformat(),'max_as_of':min(today,last).isoformat(),'generated_at':datetime.now(ZoneInfo('Asia/Shanghai')).isoformat(),
        'available_months':available_months(),
        'targets_confirmed':config.get('targets_confirmed',True),'manual_data_revision':config.get('manual_data_revision',0),
-       'component_weights':WEIGHTS,'people':people,'product_count':len(products),'excluded_products':config['excluded_products'],
+       'component_weights':config.get('component_weights',WEIGHTS),'people':people,'product_count':len(products),'excluded_products':config['excluded_products'],
        'notes':config['source_notes']+['卡片与每日进展均为截至所选日的月度累计参考绩效，不是将累计费用拆成每日费用。',
           '流量按淘宝产品搜索数、多链接求和；流量分＝有效日期累计流量÷（日目标×有效天数）×100%。',
           '预算分＝（月预算×费用节点已过天数÷当月天数）÷节点累计花费×100%，限制80%～150%。',
-          '提及分＝各产品实际提及率÷目标提及率（单项最高200%）；小美、谭露按DeepSeek/豆包/文心/元宝10%/40%/40%/10%，其余三人按30%/30%/30%/10%加权。',
+          '提及分＝各产品实际提及率÷目标提及率（单项最高200%）；模型权重使用所选月份的员工配置。',
           '文心沿用现有看板口径：文心与百度卡片均有有效数据时各占50%，无文心有效数据时不计分。',
           '缺采集数据不记为0%，有有效回答且未提及才计0%；缺失模型沿用有效权重归一化。',
           '价值观按用户确认直接计100%；完整精度计算后才显示和划分绩效系数。'],

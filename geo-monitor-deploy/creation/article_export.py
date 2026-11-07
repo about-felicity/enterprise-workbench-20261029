@@ -32,7 +32,7 @@ def _source_index(path,signature):
     return index
 
 
-def info(root,folder):
+def info(root,folder, *, lookup_source=True):
     root,folder=Path(root),Path(folder)
     relative=folder.relative_to(root/'approved');day,category,number=relative.parts
     provenance=runtime.read(folder/'provenance.json');primary=provenance.get('primary_reference') or {}
@@ -44,7 +44,7 @@ def info(root,folder):
     if urlsplit(url).scheme not in {'http','https'}:url=''
     source_path=root/'days'/day/'sources.json'
     if not source_path.exists():source_path=root/'days'/day/'media_articles.json'
-    with _metadata_lock:source=_source_index(source_path,_signature(source_path)).get(url,{})
+    with _metadata_lock:source=_source_index(source_path,_signature(source_path)).get(url,{}) if lookup_source else {}
     article=source.get('article') or {}
     captured_meta=article.get('metadata') or {}
     title=re.sub(r'(?:icon_voice(?:_on)?)+$','',title).strip()
@@ -52,7 +52,7 @@ def info(root,folder):
     from geo_source_cards.daily_editorial import DEFAULT_MEDIA,media_identity
     job=runtime.read(root/'job.json');product=runtime.product_label(root,day)
     question=job.get('question','')
-    if job.get('questions'):
+    if lookup_source and job.get('questions'):
         related=[]
         observations=root/'private_observations.jsonl'
         if observations.exists():
@@ -119,11 +119,16 @@ def write_article(archive,root,item):
         if name=='draft.md' and illustrated['image']:
             body=file.read_text('utf8').replace('/api/geo-creation/product_image?id='+illustrated['image_id'],'product.png').encode('utf8')
         else:body=file.read_bytes()
+        if name=='draft.md' and illustrated.get('scene_meta'):
+            body=body.replace(('/api/geo-creation/download?kind=scene-image&id='+str(illustrated['scene_meta']['id'])).encode(),b'scene.png')
         archive.writestr(destination,body)
         exported_hashes[name]=hashlib.sha256(body).hexdigest()
     if illustrated['image']:
         archive.write(illustrated['image'],base+'/product.png')
-        archive.write(illustrated['word'].parent/'complete.json',base+'/审核与溯源/配图记录.json')
+        archive.write(illustrated.get('product_export_record',illustrated['word'].parent/'complete.json'),base+'/审核与溯源/配图记录.json')
+    if illustrated.get('scene_image'):
+        archive.write(illustrated['scene_image'],base+'/scene.png')
+        archive.writestr(base+'/审核与溯源/场景图片来源.json',json.dumps(illustrated['scene_meta'],ensure_ascii=False))
     archive.writestr(base+'/文章信息.md',describe(m))
     archive.writestr(base+'/文章信息.json',json.dumps(m,ensure_ascii=False,indent=2))
     archive.writestr(base+'/执行日志.json',json.dumps(logs(root,m),ensure_ascii=False,indent=2))

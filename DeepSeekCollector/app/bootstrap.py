@@ -15,13 +15,53 @@ def health():
         with op.open('http://127.0.0.1:8767/api/health',timeout=2) as r:return json.load(r)
     except Exception:return None
 
+def install_memu(package):
+    root=Path(os.environ['LOCALAPPDATA'])/'DeepSeekCollector'/'MEmu'
+    names=('app/memu_button.py','app/memu_capture.py','app/remote_sync.py',
+           'app/enrollment.py','config/public_upload.json')
+    for name in names:
+        target=root/name
+        target.parent.mkdir(parents=True,exist_ok=True)
+        with tempfile.NamedTemporaryFile(dir=target.parent,delete=False) as temp:
+            temporary=Path(temp.name)
+            temp.write((package/name).read_bytes())
+        try:
+            temporary.replace(target)
+        finally:
+            temporary.unlink(missing_ok=True)
+    entry=root/'app/memu_button.py'
+    pythonw=Path(sys.executable).with_name('pythonw.exe')
+    if not pythonw.is_file():
+        raise RuntimeError('当前 Python 安装缺少 pythonw.exe。')
+    env={**os.environ,'DS_MEMU_PYTHONW':str(pythonw),'DS_MEMU_ENTRY':str(entry)}
+    subprocess.run(['powershell.exe','-NoProfile','-NonInteractive','-Command',
+                    "$s=(New-Object -ComObject WScript.Shell).CreateShortcut("
+                    "(Join-Path ([Environment]::GetFolderPath('DesktopDirectory')) 'DeepSeek MEmu.lnk'));"
+                    "$s.TargetPath=$env:DS_MEMU_PYTHONW;"
+                    "$s.Arguments='-X utf8 -B '+[char]34+$env:DS_MEMU_ENTRY+[char]34;"
+                    "$s.WorkingDirectory=(Split-Path $env:DS_MEMU_ENTRY);$s.Save()"],
+                   env=env,check=True)
+    with (root/'startup.log').open('ab') as log:
+        process=subprocess.Popen([str(pythonw),'-X','utf8','-B',str(entry)],cwd=root,
+                                 stdin=subprocess.DEVNULL,stdout=log,stderr=log)
+        try:
+            process.wait(timeout=1.5)
+        except subprocess.TimeoutExpired:
+            print('Installed. Desktop shortcut: DeepSeek MEmu',flush=True)
+            return 0
+    raise RuntimeError(f'按钮启动失败，查看 {root / "startup.log"}。')
+
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--check',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--check',action='store_true')
+    parser.add_argument('--memu-install',action='store_true');args=parser.parse_args()
     package=Path(__file__).resolve().parent.parent
     root=Path(os.environ['LOCALAPPDATA'])/'DeepSeekCollector'/'App'
     stage='Package integrity';log=None
     try:
         print('[1/4] Checking complete package...',flush=True);verify(package)
+        if args.memu_install:
+            stage='MEmu installation'
+            return install_memu(package)
         stage='Writable application directory';root.mkdir(parents=True,exist_ok=True)
         log=root.parent/'startup-error.txt'
         with tempfile.NamedTemporaryFile(dir=root,prefix='write-check-'):pass

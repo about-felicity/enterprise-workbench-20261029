@@ -1,4 +1,5 @@
 "use client";
+import { beijingDate, beijingMonth } from "./beijingCalendar";
 
 import WorkbenchLogo from "./WorkbenchLogo";
 
@@ -8,6 +9,7 @@ import type { EmployeePerformance } from "./PerformanceBoard";
 import { PerformanceCenter } from "./PerformanceCenter";
 import { CaptureControl } from "./CaptureControl";
 import { CreationControl } from "./CreationControl";
+import { MonthlyKeywords } from "./MonthlyKeywords";
 import { dashboardBasePath } from "./dashboardPaths";
 
 type Source = {
@@ -392,7 +394,7 @@ function SectionTitle({
   return (
     <div className="section-title">
       <div>
-        
+
         <h2>{title}</h2>
       </div>
       {note && <small>{note}</small>}
@@ -567,7 +569,7 @@ function DailyOwnedProductBoard({
       <SectionTitle
         eyebrow="DAILY OWNED PRODUCT BOARD"
         title="我的产品每日上榜情况"
-        
+
       />
       {summary.length ? (
         <div className="owned-product-summary">
@@ -790,7 +792,7 @@ function MentionTrend({ title, days, kind }: { title: string; days: MentionDay[]
   return (
     <article className="trend-block">
       <h3>{title}</h3>
-      
+
       {rows.length ? <div className="trend-table"><table><thead><tr><th>日期</th><th>名称</th><th>提及</th><th>提及率</th><th>名次</th><th>变化</th><th>正文位次</th></tr></thead><tbody>
         {shownRows.map((row) => <tr key={`${row.date}-${row.name}`}><td>{row.date}</td><td><b>{row.name}</b></td><td>{row.mentions}/{row.runs}{kind === "product" && row.pendingRuns ? <small> · {row.pendingRuns}待解析</small> : null}</td><td>{row.mention_rate.toFixed(1)}%</td><td>{kind === "product" && row.pendingRuns ? "暂 " : ""}#{row.rank}</td><td className={(row.rank_change || 0) > 0 ? "rise" : (row.rank_change || 0) < 0 ? "fall" : ""}>{row.rank_change == null ? "新" : row.rank_change > 0 ? `↑${row.rank_change}` : row.rank_change < 0 ? `↓${Math.abs(row.rank_change)}` : "—"}</td><td>{row.average_position ? row.average_position.toFixed(1) : "—"}</td></tr>)}
       </tbody></table>{visibleRows < rows.length && <button type="button" className="trend-more" onClick={() => setVisibleRows((value) => value + 50)}>继续显示（剩余 {rows.length - visibleRows} 条）</button>}</div> : <Empty>当前范围暂无正文品牌或产品结果</Empty>}
@@ -1015,12 +1017,8 @@ export function Dashboard() {
   const [question, setQuestion] = useState("");
   // The server and browser must render the same first frame. Browser-only
   // preferences are restored after hydration to avoid a React mismatch.
-  const [date, setDate] = useState(() => new Intl.DateTimeFormat("en-CA", {
-    timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit",
-  }).format(new Date()));
-  const [summaryMonth, setSummaryMonth] = useState(() => new Intl.DateTimeFormat("en-CA", {
-    timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit",
-  }).format(new Date()));
+  const [date, setDate] = useState(() => beijingDate());
+  const [summaryMonth, setSummaryMonth] = useState(() => beijingMonth());
   const filtersReady = true;
   const [intersectionTarget, setIntersectionTarget] = useState("owned");
   const [loadedAnalytics, setAnalytics] = useState<Analytics>(emptyAnalytics);
@@ -1550,7 +1548,7 @@ export function Dashboard() {
               </defs>
             </svg>
             <b>全部模型</b>
-            
+
           </button>
           {visibleModelCatalog.map((item) => {
             const Icon = getIcon(item.tone);
@@ -1583,7 +1581,7 @@ export function Dashboard() {
               <i>{item.symbol}</i>
               <span>
                 <b>{item.label}</b>
-                
+
               </span>
             </button>
           ))}
@@ -1684,7 +1682,7 @@ export function Dashboard() {
               <article>
                 <span>有效回答</span>
                 <b>{fmt(totals.runs)}</b>
-                
+
               </article>
               <article>
                 <span>信源引用</span>
@@ -1698,14 +1696,14 @@ export function Dashboard() {
                     ? (totals.sources / totals.runs).toFixed(1)
                     : "0"}
                 </b>
-                
+
               </article>
               <article>
                 <span>有数据模型 / 设备</span>
                 <b>
                   {participatingModelCount} / {totals.devices}
                 </b>
-                
+
               </article>
             </section>
           )}
@@ -1720,11 +1718,12 @@ export function Dashboard() {
                 summaryMonths={analytics.owned_product_summary_months?.length ? analytics.owned_product_summary_months : [summaryMonth]}
                 onSummaryMonthChange={setSummaryMonth}
               />
+              <MonthlyKeywords apiBase={apiBase()} />
               <section className="panel">
                 <SectionTitle
                   eyebrow="MODEL HEALTH"
                   title="模型表现一眼看清"
-                  
+
                 />
                 <div className="model-grid">
                   {selectedModels.map((item) => {
@@ -1810,7 +1809,7 @@ export function Dashboard() {
                 <article className="panel">
                   <SectionTitle
                     title="证据结构"
-                    
+
                   />
                   {selectedModels.map((item) => (
                     <div className="model-bars" key={item.id}>
@@ -1930,7 +1929,7 @@ export function Dashboard() {
             <>
               <section className="panel intersection-target-panel">
                 <div>
-                  
+
                   <h2>跨模型共同信源</h2>
                   {sourceIntersectionPending && <p role="status">正在加载信源…</p>}
                 </div>
@@ -2125,7 +2124,7 @@ export function Dashboard() {
                 <summary>其他采集通道 · 元宝、阿福</summary>
               <section className="control-hero">
                 <div>
-                  
+
                   <h2>其他采集通道</h2>
                 </div>
                 {message && <b>{message}</b>}
@@ -2175,7 +2174,7 @@ export function Dashboard() {
                           <span className="runtime-dot" />
                           <div>
                             <b>{state.phase}</b>
-                            
+
                           </div>
                         </div>
                       )}
@@ -2263,7 +2262,7 @@ export function Dashboard() {
                       {item.ingest_only && (
                         <div className="account-result ingest-only">
                           <b>外部采集数据接收已启用</b>
-                          
+
                         </div>
                       )}
                       <div className="job-meta">

@@ -10,6 +10,7 @@ import time
 from zoneinfo import ZoneInfo
 
 from control_panel import Controller, Conflict, BUSY, atomic, read
+from capture_channels import log_channel
 
 BASE=Path('/opt/monitor/geo-capture')
 
@@ -129,7 +130,8 @@ def main(base=BASE,*,now=None,control=None):
                 result={**read(path),'day':day,'model':model,'state':'retry_pending','error_code':type(error).__name__,'last_attempt':time.time()}
             atomic(path,result);results.append(result)
         atomic(root/'status.json',{'at':time.time(),'day':day,'models':results})
-    print(json.dumps({'day':day,'models':[{k:r[k] for k in ('model','state') if k in r} for r in results]}))
+    for row in results:
+        log_channel(row['model'],'dispatch',row.get('batch'),day=day,status=row.get('state'))
     return {'day':day,'models':results}
 
 

@@ -19,6 +19,24 @@ TERMINAL = {"complete", "complete_with_unavailable", "paused", "maintenance_paus
 CONTROLLER = None
 CONTROLLER_LOCK = threading.RLock()
 SESSIONS = {}
+PANEL_LOCK = threading.Lock()
+PANEL_CACHE = {}
+
+
+def panel_snapshot(day=None):
+    from daily_tasks import today,valid_day
+    day=valid_day(day or today())
+    with PANEL_LOCK:
+        cached=PANEL_CACHE.get(day)
+        if cached and time.monotonic()<cached[0]:
+            return cached[1]
+        value=controller().all(day)
+        now=time.monotonic()
+        for key in list(PANEL_CACHE):
+            if PANEL_CACHE[key][0]<=now:
+                del PANEL_CACHE[key]
+        PANEL_CACHE[day]=(now+1,value)
+        return value
 
 
 def controller():
@@ -144,7 +162,9 @@ class Handler(BaseHTTPRequestHandler):
                 return
             if schedule:
                 from schedule_control import save
-                self.json_response(save(controller(),value,self.headers.get('X-Action-Id','')))
+                result=save(controller(),value,self.headers.get('X-Action-Id',''))
+                with PANEL_LOCK:PANEL_CACHE.clear()
+                self.json_response(result)
                 return
             if login_input:
                 from browser_backend import enabled as browser_enabled
@@ -158,6 +178,7 @@ class Handler(BaseHTTPRequestHandler):
                 self.login_response(data,mime,code)
                 return
             result=controller().action(*match.groups(),value,self.headers.get('X-Action-Id',''))
+            with PANEL_LOCK:PANEL_CACHE.clear()
             self.json_response(result)
         except PermissionError as error:self.json_response({'ok':False,'message':str(error)},403)
         except Conflict as error:self.json_response({'ok':False,'message':str(error)},409)
@@ -203,7 +224,7 @@ class Handler(BaseHTTPRequestHandler):
             if self.path.split('?')[0]=='/api/panel':
                 token=self.session(create=True)
                 day=parse_qs(urlsplit(self.path).query).get('date',[None])[0]
-                self.json_response({**controller().all(day),'csrf':token},cookie=token)
+                self.json_response({**panel_snapshot(day),'csrf':token},cookie=token)
                 return
             match = re.fullmatch(r"/api/receipts/(deepseek|wenxin|yuanbao)/([a-f0-9]{64})", self.path)
             if match:
@@ -218,7 +239,18 @@ class Handler(BaseHTTPRequestHandler):
             elif self.path.split("?")[0] in {"/api/status", "/health"}:
                 body, mime = json.dumps(status(), ensure_ascii=False).encode(), "application/json"
             elif self.path == "/":
-                body, mime = (BASE/'panel.html').read_bytes(), "text/html"
+                body = (BASE/'panel.html').read_bytes()
+                token = self.session(create=True)
+                try:
+                    snapshot = {**panel_snapshot(), 'csrf': token}
+                    payload = json.dumps(snapshot, ensure_ascii=False, separators=(',', ':')).replace('<', r'\u003c')
+                    marker = b'<script id="initial-panel" type="application/json">'
+                    body = body.replace(marker, marker + payload.encode('utf-8'), 1)
+                except Exception:
+                    # The HTML shell can still reconnect through the normal panel endpoint.
+                    pass
+                self.login_response(body, 'text/html; charset=utf-8', cookie=token)
+                return
             else:
                 self.send_error(404)
                 return
@@ -254,4 +286,6 @@ class Handler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    ThreadingHTTPServer(("0.0.0.0", 8803), Handler).serve_forever()
+    class PanelServer(ThreadingHTTPServer):
+        request_queue_size=64
+    PanelServer(("0.0.0.0", 8803), Handler).serve_forever()

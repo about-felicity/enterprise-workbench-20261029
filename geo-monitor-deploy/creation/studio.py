@@ -98,7 +98,16 @@ def complete_product_source(product, product_id, version):
  if not original or original.get('sha256')!=source.get('sha256'):raise ValueError('原始Word版本校验失败')
  return {**product,'raw_source_text':original['text'],'raw_source_sha256':original['sha256']}
 
+def strict_first_date(start,clock,frequency,enabled,old,now):
+ changed=not old or not old.get('enabled') or start!=old.get('start_date') or clock!=old.get('capture_time')
+ if enabled and changed and start==now.date().isoformat() and now>datetime.combine(now.date(),datetime.strptime(clock,'%H:%M').time(),ZONE):
+  if frequency=='once':raise ValueError('执行时间已过，请选择未来的执行时间')
+  return (now.date()+timedelta(days=1)).isoformat()
+ return start
+
 def save_plan(payload):
+ if 'schedule_paused' in payload:
+  return schedule_control(payload)
  kb=product(payload.get('product_id'));old=plan(payload['plan_id']) if payload.get('plan_id') else {}
  qs=payload.get('questions',[]);channels=payload.get('channels',[])
  if not isinstance(qs,list) or not qs or len(qs)>100 or any(not isinstance(q,str) or not q.strip() or len(q)>2000 or '\n' in q for q in qs) or len(set(q.strip() for q in qs))!=len(qs):raise ValueError('请填写不重复的问题，每行一题，最多100题')
@@ -118,6 +127,7 @@ def save_plan(payload):
  task_type=payload.get('task_type',old.get('task_type','collect_write'))
  if not isinstance(name,str) or not 1<=len(name.strip())<=120:raise ValueError('请填写任务名称，最多120字')
  if frequency not in {'daily','once'} or task_type not in {'collect_write','capture_only'}:raise ValueError('任务周期或任务类型不正确')
+ start=strict_first_date(start,collect,frequency,enabled,old,datetime.now(ZONE))
  article_target=payload.get('article_target',old.get('article_target',0))
  if type(article_target) is not int or not 0<=article_target<=100:raise ValueError('任务成稿目标应为1至100篇，留空则沿用每题每类篇数')
  from geo_source_cards.article_allocation import validate_quotas
@@ -135,6 +145,8 @@ def save_plan(payload):
  result={**old,'plan_id':value,'product_id':kb['product_id'],'product_version':kb['version'],'product':complete_product_source(kb['product'],kb['product_id'],kb['version']),
          'name':name.strip(),'frequency':frequency,'task_type':task_type,'article_target':article_target,'genre_targets':genre_targets,'writing_profile':writing_profile,**budgets,
          'questions':[q.strip() for q in qs],'channels':list(dict.fromkeys(channels)),'rounds':rounds,'capture_time':collect,'writing_time':write,'analysis_start':'after_capture','start_date':start,'enabled':enabled,'max_per_category':limit,'revision':old.get('revision',0)+1,'updated_at':time.time()}
+ if old.get('schedule_paused'):
+  if frequency!='daily' or enabled:raise ValueError('计划暂停中，请用“继续计划”恢复定时执行')
  if writing_profile:result['product']={**result['product'],'writing_profile':writing_profile}
  if old:
   today=datetime.now(ZONE).date().isoformat();captured=runtime.read(capture_root(value)/'days'/today/'config.json')
@@ -144,7 +156,7 @@ def save_plan(payload):
  with process_lock(root/'settings.lock',blocking=True):
   cfg=runtime.read(root/'settings.json')
   atomic_json(root/'settings.json',{**cfg,'enabled':enabled,'time':collect,'start_date':start,'frequency':frequency,'timezone':'Asia/Shanghai','questions':result['questions'],'channels':result['channels'],'rounds':rounds,'deepseek_interval':600,'search_interval':60,'search_pool':'creation_only','studio_plan':result})
- return {'plan_id':value,'message':'任务已保存'+('并加入队列，将按设定时间执行' if enabled else '为草稿，尚未加入执行队列')}
+ return {'plan_id':value,'message':'任务已保存'+('，首次执行 '+start+' '+collect+'（北京时间）' if enabled else '为草稿，尚未加入执行队列')}
 
 def scheduled_day(p,today):
  return p['start_date'] if p.get('frequency')=='once' else max(today,p['start_date'])
@@ -186,8 +198,44 @@ def delete_plan(payload):
    runtime.pipeline_control.pause(path.parent,'plan_deleted','任务已删除，已发送请求安全收尾；已有成稿和费用记录保留')
  return {'plan_id':value,'deleted':True,'message':'任务已删除，后续执行已停止。正在处理的请求会安全收尾，已有成稿仍可在“成稿下载”查看。'}
 
+def schedule_control(payload):
+ value=identity(payload.get('plan_id'),'plan')
+ paused=payload['schedule_paused']
+ if type(paused) is not bool:raise ValueError('计划开关无效')
+ with process_lock(ROOT/'plans'/(value+'.schedule.lock'),blocking=True):
+  p=plan(value)
+  if p.get('frequency','daily')!='daily':raise ValueError('仅每日任务可以暂停计划')
+  if not p.get('schedule_paused') and not p['enabled']:raise ValueError('请先启用每日任务')
+  root=capture_root(value)
+  def save():
+   atomic_json(ROOT/'plans'/(value+'.json'),{**p,'enabled':not paused,'schedule_paused':paused,'updated_at':time.time(),'revision':p.get('revision',0)+1})
+  if paused:save()
+  def capture_switch():
+   with process_lock(root/'settings.lock',blocking=True):
+    cfg=runtime.read(root/'settings.json')
+    cfg.update(enabled=not paused,paused=paused)
+    atomic_json(root/'settings.json',cfg)
+  if paused:capture_switch()
+  for path in (runtime.BASE/'runs').glob('*/job.json'):
+   j=runtime.read(path)
+   if j.get('studio_plan_id')!=value:continue
+   job=path.parent
+   if runtime.read(job/'days'/j['date']/'day.json').get('status') in TERMINAL_JOBS:continue
+   control=runtime.pipeline_control.state(job)
+   if paused and not control.get('paused'):
+    runtime.pipeline_control.pause(job,'schedule_paused','每日计划已暂停，等待手动继续')
+   elif not paused and control.get('paused') and control.get('reason')=='schedule_paused':
+    from . import recovery
+    if not recovery.safe_original(job):continue
+    runtime.resume(job,check_balance=False)
+  if not paused:
+   capture_switch()
+   save()
+ return {'plan_id':value,'schedule_paused':paused,'message':'每日计划已暂停，直到手动继续' if paused else '每日计划已继续'}
+
 def day_control(payload,pause):
  p=plan(payload.get('plan_id'));day=payload.get('date');day_path(p['plan_id'],day)
+ if p.get('schedule_paused'):raise ValueError('每日计划已暂停，请先继续计划')
  rows=runtime.status()['studio']['daily_tasks']
  row=next((t for t in rows if t['plan_id']==p['plan_id'] and t['date']==day),None)
  if not row or ('day_pause' if pause else 'day_resume') not in day_actions(row['status']):
@@ -318,7 +366,10 @@ def channel_verification_blocked(v):
  return v.get('id') in {'baidu_ai','wenxin_card'} and (v.get('blocked',{}).get('kind')=='verification_required' or bool(v.get('recovery',{}).get('blocked')))
 
 def advance(p,day,now):
- if plan(p['plan_id'],include_deleted=True).get('deleted_at'):return
+ current=plan(p['plan_id'],include_deleted=True)
+ if current.get('deleted_at') or current.get('schedule_paused'):return
+ if day<current['start_date'] or day>now.date().isoformat():return
+ if day==now.date().isoformat() and now.strftime('%H:%M')<current.get('writing_time',current['capture_time']):return
  task=ensure_day(p,day);path=day_path(p['plan_id'],day)
  if task.get('paused') or task.get('error'):return
  # Today's product/questions are immutable once the daily task has been created.
@@ -349,6 +400,7 @@ def advance(p,day,now):
     task=runtime.read(path);task['jobs'][question]=result['job_id'];task['status']='creating';atomic_json(path,task)
    break # Admit one job per plan per tick for fairness across ready plans.
   except Exception as error:
+   if plan(p['plan_id'],include_deleted=True).get('schedule_paused'):return
    with process_lock(path.with_suffix('.lock'),blocking=True):
     task=runtime.read(path)
     if not task.get('paused'):

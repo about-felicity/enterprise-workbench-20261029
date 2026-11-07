@@ -8,7 +8,7 @@ from monitor_core.native_text import clean_native_text
 # Increment this whenever matching semantics or the product vocabulary changes.
 # The content worker includes it in its fingerprint and re-evaluates archived
 # article bodies without spending LLM tokens.
-OWN_PRODUCT_SCHEMA_VERSION = 7
+OWN_PRODUCT_SCHEMA_VERSION = 8
 
 # Audited source cards whose visible DOM title was cut before the owned-brand
 # suffix. The video id is stable across www/redirect URL variants.
@@ -38,6 +38,7 @@ def owned_source_url_override(url: str) -> dict[str, tuple[str, ...]]:
 OWN_PRODUCT_RULES: tuple[dict[str, Any], ...] = (
     {"name": "梵玢焕活精华液", "brand": "梵玢", "terms": ("焕活精华", "焕活精华液")},
     {"name": "道和小红瓶", "brand": "道和", "terms": ("小红瓶",)},
+    {"name": "科熙本植物防脱赋活多效精华液", "brand": "科熙本", "terms": ("植物防脱赋活多效精华液", "植物防脱精华液", "防脱精华液", "防脱精华")},
     {"name": "姿生怡鱼子酱面膜", "brand": "姿生怡", "terms": ("鱼子酱面膜",)},
     {"name": "科熙本鱼子酱修护柔顺护发素", "brand": "科熙本", "terms": ("鱼子酱修护柔顺护发素", "鱼子酱护发素", "修护柔顺护发素")},
     {"name": "梵玢祛痘精华", "brand": "梵玢", "terms": ("祛痘精华", "痘痘精华")},
@@ -87,7 +88,7 @@ OWN_PRODUCT_QUESTION_GROUPS: tuple[dict[str, Any], ...] = (
     {"question_terms": ("染发剂",), "products": ("梵玢染发剂（含黑茶色）", "科熙本染发剂")},
     {"question_terms": ("睫毛增长液", "睫毛精华液"), "products": ("梵玢睫毛精华液",)},
     {"question_terms": ("防脱洗发水",), "products": ("梵玢洗发水", "道和小绿瓶")},
-    {"question_terms": ("防脱精华液",), "products": ("梵玢焕活精华液", "道和小红瓶")},
+    {"question_terms": ("防脱精华液",), "products": ("梵玢焕活精华液", "道和小红瓶", "科熙本植物防脱赋活多效精华液")},
     {"question_terms": ("面膜",), "products": ("姿生怡鱼子酱面膜",)},
     {"question_terms": ("眼霜",), "products": ("姿生怡眼霜",)},
     {"question_terms": ("卸妆油",), "products": ("姿生怡卸妆油",)},

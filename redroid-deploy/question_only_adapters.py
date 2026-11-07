@@ -183,7 +183,7 @@ def dismiss_optional_commerce_login(android,before_decline=None):
     return True
 
 
-def wait_question_only_landing(device,timeout=6,*,clock=time.monotonic,sleep=time.sleep):
+def wait_question_only_landing(device,timeout=12,*,clock=time.monotonic,sleep=time.sleep):
     """Wait through rendering only; never tap, type, relax identity, or resend."""
     end=clock()+timeout
     consecutive=0
@@ -199,7 +199,7 @@ def wait_question_only_landing(device,timeout=6,*,clock=time.monotonic,sleep=tim
         sleep(min(.5,max(0,end-clock())))
 
 
-def stabilize_question_only_send(device,question,timeout=6,clock=time.monotonic,sleep=time.sleep):
+def stabilize_question_only_send(device,question,timeout=12,clock=time.monotonic,sleep=time.sleep):
     """Verify the exact draft and a stable send target after dismissing the IME."""
     end=clock()+timeout;last=None;consecutive=0;dismissed=False
     while True:

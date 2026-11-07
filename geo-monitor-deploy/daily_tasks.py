@@ -22,18 +22,21 @@ _cache={};_lock=threading.RLock()
 
 def today():return datetime.now(ZONE).date().isoformat()
 
-def deferred_originals_allow_progress(root):
-    """Only operator-selected, bound originals may yield to independent work."""
+def deferred_originals_allow_progress(root, *, drained=False):
+    """Recognize bound exceptions that can yield to other work."""
     root=Path(root);marker=root/'deferred_originals.json'
-    if not marker.is_file():return False
     try:
-        deferred=json.loads(marker.read_text())
+        deferred=json.loads(marker.read_text()) if marker.is_file() else {}
+        unknown_path=root/'uncertain_send_quarantine.json'
+        unknown=json.loads(unknown_path.read_text()) if unknown_path.is_file() else {}
         with closing(sqlite3.connect((root/'tasks.sqlite').as_uri()+'?mode=ro',uri=True)) as db:
-            rows=db.execute("select task_id,request_id,capture_retries from tasks where state='needs_attention'").fetchall()
+            rows=db.execute("select task_id,request_id,capture_retries,prepared_at,question from tasks where state='needs_attention'").fetchall()
             pending=db.execute("select count(*) from tasks where state in ('pending','prepared')").fetchone()[0]
-        return bool(rows and pending and all(request and deferred.get(tid)==request
+        return bool(rows and (not pending if drained else pending) and all((request and deferred.get(tid)==request
             and (root/(tid+'-attempt-'+str(attempt)+'.binding.json')).is_file()
-            for tid,request,attempt in rows))
+            ) or (not request and prepared and unknown.get(tid)=={'prepared_at':prepared,
+                'question_sha256':hashlib.sha256(question.encode()).hexdigest()})
+            for tid,request,attempt,prepared,question in rows))
     except (OSError,ValueError,sqlite3.Error):return False
 
 def valid_day(day):
@@ -241,6 +244,15 @@ class DailyTasks:
                 else:raise Conflict('启动记录不完整，保留任务等待核对')
             job=c.current(db,model);snap=c.snapshot(job);cfg=json.loads(row['config'])
             if snap['service_state'] in BUSY:
+                if (model in {'doubao1','doubao2','doubao3','doubao4'}
+                        and datetime.fromtimestamp(job['created'],ZONE).date().isoformat()<day
+                        and not snap['pending_delivery'] and not snap['delivery_errors']
+                        and deferred_originals_allow_progress(c.batch_root(job),drained=True)):
+                    # Stop only a drained previous-day worker. Rollover will
+                    # archive its unresolved originals before launching today.
+                    subprocess.run(['systemctl','stop','--no-block',job['service']],
+                                   check=True,capture_output=True,timeout=10)
+                    return
                 if row['status']=='applying' and json.loads(job['config']).get('daily_revision')!=row['revision'] and not c.marker(job).exists():
                     atomic(c.marker(job),{'requested_at':time.time(),'source':'daily_tasks','action':'apply','day':day})
                 elif (row['batch']==job['batch'] and json.loads(job['config']).get('daily_revision')==row['revision']
@@ -267,6 +279,11 @@ class DailyTasks:
             if snap['needs_review']:
                 old_day=datetime.fromtimestamp(job['created'],ZONE).date().isoformat()
                 if old_day>=day:
+                    if (deferred_originals_allow_progress(c.batch_root(job),drained=True)
+                            and read(job['health']).get('next_readback_at',0)>time.time()):
+                        db.execute('update daily_tasks set status=? where model=? and day=?',
+                                   ('needs_attention',model,day))
+                        return
                     # Continue this original request through the existing strict
                     # readback path. New work remains blocked until it is known.
                     c._ensure_known(job,allow_readback=True)

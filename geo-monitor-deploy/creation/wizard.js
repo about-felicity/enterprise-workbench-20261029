@@ -191,4 +191,3 @@ planPayload=function(enable){const p=detailBasePayload(enable),r=Number($('planR
  p.writing_profile=$('planRichProduct').checked?{ranking_hanzi:Number($('planRankingDetail').value),science_hanzi:Number($('planScienceDetail').value),ranking_facts:8,science_facts:5}:{};return p;};
 detailControls.addEventListener('input',()=>{planDirty=true});
 showView('tasks',false);
-

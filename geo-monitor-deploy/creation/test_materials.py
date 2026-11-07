@@ -66,6 +66,15 @@ class MaterialTests(unittest.TestCase):
   materials.atomic_json(folder/'search_recovery.json',{'kind':'verification','status':'cooling_down','cooldown_until':123,'error':'private URL','task_id':'internal'})
   row=next(r for r in materials.progress('2026-10-20') if r['id']=='wenxin_card')
   self.assertEqual(row['recovery'],{'kind':'verification','status':'cooling_down','cooldown_until':123})
+ def test_progress_accepts_legacy_minimal_capture_schema(self):
+  import sqlite3
+  folder=materials.ROOT/'days/2026-10-17/deepseek/collector';folder.mkdir(parents=True)
+  with sqlite3.connect(folder/'tasks.sqlite') as db:
+   db.execute('create table captures(task_id text,state text,result text)')
+   db.execute("insert into captures values('legacy','pending',null)")
+  row=next(r for r in materials.progress('2026-10-17') if r['id']=='deepseek')
+  self.assertEqual(row['counts'],{'pending':1})
+  self.assertEqual(row['missing'],[])
  def test_dedicated_search_pool_isolated_without_releasing_deepseek_gate(self):
   now=datetime(2026,10,20,9,tzinfo=ZoneInfo('Asia/Shanghai'));plan={'enabled':True,'time':'09:00'}
   with patch.object(materials,'CONTENT_BASE',self.root),patch.object(materials,'SEARCH_POOL',self.root/'pool'):
@@ -108,6 +117,18 @@ class MaterialTests(unittest.TestCase):
   with self.assertRaises(ValueError):runtime.download('legacy-original','2026-10-14/排行类/01','word')
   (materials.LEGACY/'revocations/test.json').unlink();(folder/'draft.md').write_text('修改正文')
   self.assertEqual(runtime.articles(materials.LEGACY),[])
+
+ def test_single_download_does_not_scan_unrelated_receipts(self):
+  folder,_=self.approved()
+  other=materials.LEGACY/'approved/2026-10-13/排行类/99'
+  other.mkdir(parents=True);(other/'receipt.json').write_text('invalid json')
+  original=runtime.read
+  def checked(path,*args):
+   self.assertNotEqual(Path(path),other/'receipt.json')
+   return original(path,*args)
+  with patch.object(runtime,'read',side_effect=checked):
+   self.assertTrue(runtime.download('legacy-original','2026-10-14/排行类/01','word').is_file())
+  with self.assertRaises(ValueError):runtime.download('legacy-original','../../etc/passwd','package')
 
  def test_product_date_bundle_uses_archived_product_and_only_selected_articles(self):
   import shutil

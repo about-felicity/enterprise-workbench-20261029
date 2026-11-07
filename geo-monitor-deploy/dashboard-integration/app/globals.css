@@ -2077,3 +2077,131 @@ button {
 .performance-confirm [role="alert"] { color:#b33c2b; }
 .assessment-view-switch button[aria-pressed="true"] { color:#fff; border-color:#16765d; background:#16765d; }
 @media (max-width:650px) { .performance-trend { padding:13px 10px 10px; }.performance-trend > header { align-items:flex-start; flex-direction:column; }.performance-trend-readout { gap:10px 13px; }.performance-trend-readout > strong { flex-basis:100%; }.performance-trend footer span { max-width:140px; } }
+.monthly-keyword-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: end;
+  margin: 14px 0;
+}
+
+.monthly-keyword-controls label,
+.monthly-keyword-form label {
+  display: grid;
+  gap: 4px;
+}
+
+.monthly-keyword-form {
+  display: grid;
+  gap: 10px;
+  max-width: 680px;
+  margin-bottom: 14px;
+}
+
+.monthly-keyword-controls input,
+.monthly-keyword-controls select,
+.monthly-keyword-form input,
+.monthly-keyword-form textarea {
+  padding: 6px 8px;
+  font: inherit;
+  border: 1px solid #b7c9c0;
+  border-radius: 6px;
+}
+
+.monthly-keywords .monthly-keyword-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.monthly-keyword-header h3 {
+  margin: 4px 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.monthly-keyword-header p, .monthly-keyword-empty p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.monthly-keyword-eyebrow, .monthly-keyword-badge {
+  display: inline-block;
+  color: #16664f;
+  background: var(--green-soft);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.monthly-keywords button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid #d4e2db;
+  border-radius: 8px;
+  background: #fff;
+  color: #2a5144;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color .15s, border-color .15s, box-shadow .15s;
+}
+
+.monthly-keywords button svg { flex: 0 0 16px; }
+.monthly-keywords button:hover:not(:disabled) { background: #edf6f1; border-color: #a8c5b7; }
+.monthly-keywords button:focus-visible { outline: 2px solid #277b62; outline-offset: 3px; }
+.monthly-keywords button:disabled { opacity: .55; cursor: default; }
+
+.monthly-keywords .monthly-keyword-primary {
+  min-height: 38px;
+  padding-inline: 14px;
+  background: #17634e;
+  border-color: #145942;
+  color: white;
+  box-shadow: 0 1px 2px #123e3326, inset 0 1px #ffffff24;
+}
+
+.monthly-keywords .monthly-keyword-primary:hover:not(:disabled) {
+  background: #124e3d;
+  border-color: #124e3d;
+}
+
+.monthly-keywords .monthly-keyword-quiet {
+  border-color: transparent;
+  background: transparent;
+  color: #49655c;
+}
+
+.monthly-keyword-empty, .monthly-keyword-form {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+}
+
+.monthly-keyword-empty {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+}
+
+.monthly-keyword-row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  margin-top: 7px;
+}
