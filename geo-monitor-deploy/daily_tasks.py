@@ -15,12 +15,15 @@ from capture_channels import log_channel
 from control_panel import DEEPSEEK_CHANNELS,MODELS,BUSY,Conflict,atomic,read,validate
 
 ZONE=ZoneInfo('Asia/Shanghai')
+DOUBAO_CHANNELS={'doubao1','doubao2','doubao3','doubao4'}
 DEVICES={'doubao-hpe14-13-test':'doubao1','doubao-hpe14-account2':'doubao2','doubao-hpe14-account3':'doubao3','doubao-hpe14-account4':'doubao4',
          'geo-headless-deepseek':'deepseek','deepseek-hpe14-android13':'deepseek','deepseek-hpe14-account2':'deepseek2','deepseek-browser-extension':'deepseek2','geo-headless-wenxin_card':'wenxin_card',
          'geo-headless-baidu_ai':'baidu_ai','yuanbao-hpe14-android13':'yuanbao'}
 _cache={};_lock=threading.RLock()
 
 def today():return datetime.now(ZONE).date().isoformat()
+
+def question_digest(question):return hashlib.sha256(question.encode()).hexdigest()
 
 def deferred_originals_allow_progress(root, *, drained=False):
     """Recognize bound exceptions that can yield to other work."""
@@ -35,7 +38,7 @@ def deferred_originals_allow_progress(root, *, drained=False):
         return bool(rows and (not pending if drained else pending) and all((request and deferred.get(tid)==request
             and (root/(tid+'-attempt-'+str(attempt)+'.binding.json')).is_file()
             ) or (not request and prepared and unknown.get(tid)=={'prepared_at':prepared,
-                'question_sha256':hashlib.sha256(question.encode()).hexdigest()})
+                'question_sha256':question_digest(question)})
             for tid,request,attempt,prepared,question in rows))
     except (OSError,ValueError,sqlite3.Error):return False
 
@@ -244,7 +247,7 @@ class DailyTasks:
                 else:raise Conflict('启动记录不完整，保留任务等待核对')
             job=c.current(db,model);snap=c.snapshot(job);cfg=json.loads(row['config'])
             if snap['service_state'] in BUSY:
-                if (model in {'doubao1','doubao2','doubao3','doubao4'}
+                if (model in DOUBAO_CHANNELS
                         and datetime.fromtimestamp(job['created'],ZONE).date().isoformat()<day
                         and not snap['pending_delivery'] and not snap['delivery_errors']
                         and deferred_originals_allow_progress(c.batch_root(job),drained=True)):
@@ -276,7 +279,21 @@ class DailyTasks:
                         db.commit();c._login(model,job,False,active_revision)
                     db.execute('update daily_tasks set status=? where model=? and day=?',('waiting_login',model,day));return
             c._ensure_delivery(job)
-            if snap['needs_review']:
+            same_day_archive=None
+            if model in DOUBAO_CHANNELS and hasattr(c,'deferred_segments'):
+                archived=c.deferred_segments(model,day)
+                blocked={digest for questions in archived.values() for digest in questions}
+                if snap['needs_review'] and job['batch'] not in archived:
+                    candidates=c.deferable_segment(job,day,snap)
+                    if candidates and any(counts.get(model,{}).get(q,0)<cfg['rounds']
+                                          and question_digest(q) not in blocked and question_digest(q) not in candidates
+                                          for q in cfg['questions']):
+                        same_day_archive=candidates
+                        blocked.update(candidates)
+            else:
+                archived={};blocked=set()
+            skip_readback=bool(same_day_archive or job['batch'] in archived)
+            if snap['needs_review'] and not skip_readback:
                 old_day=datetime.fromtimestamp(job['created'],ZONE).date().isoformat()
                 if old_day>=day:
                     if (deferred_originals_allow_progress(c.batch_root(job),drained=True)
@@ -297,7 +314,7 @@ class DailyTasks:
                     c.system.start(job['service'])
                     db.execute('update daily_tasks set status=? where model=? and day=?',('recovering',model,day));return
             same_revision=json.loads(job['config']).get('daily_revision')==row['revision']
-            if row['batch']==job['batch'] and same_revision and snap['state'] not in {'complete','complete_with_unavailable'}:
+            if not skip_readback and row['batch']==job['batch'] and same_revision and snap['state'] not in {'complete','complete_with_unavailable'}:
                 c._ensure_known(job,allow_readback=True)
                 if not self.login_ready(db,model,job,active_revision):return
                 c.marker(job).unlink(missing_ok=True);c.system.start(job['service']);return
@@ -309,6 +326,10 @@ class DailyTasks:
             remaining={q:n for q,n in remaining.items() if n}
             if not remaining:
                 db.execute('update daily_tasks set status=?,error=null where model=? and day=?',('complete',model,day));return
+            remaining={q:n for q,n in remaining.items() if question_digest(q) not in blocked}
+            if not remaining:
+                db.execute('update daily_tasks set status=?,error=? where model=? and day=?',
+                           ('needs_attention','剩余题目有原请求待核对，已保留记录',model,day));return
             if model=='wenxin_card':
                 bcfg=self.config(db,'baidu_ai',day)
                 if any(counts.get('baidu_ai',{}).get(q,0)<bcfg['rounds'] for q in bcfg['questions']):
@@ -316,6 +337,8 @@ class DailyTasks:
             rounds=max(remaining.values())
             execution={'questions':[q for q,n in remaining.items() if n==rounds], 'rounds':rounds,'interval':cfg['interval']}
             if not self.login_ready(db,model,job,active_revision):return
+            if same_day_archive:
+                c.archive_deferred_segment(job,day,same_day_archive)
             # Each segment is immutable and only covers the remaining rounds
             # for one group. Completed observations are never copied or resent.
             signature=json.dumps([day,model,row['revision'],job['batch'],execution],sort_keys=True,ensure_ascii=False)

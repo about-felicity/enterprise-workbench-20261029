@@ -26,15 +26,47 @@ def due(plan,now):
 
 
 class DailyController(Controller):
-    """Allow a NEW day after sealing an inactive prior-day queue, never reset it."""
+    """Keep prior queues intact when handing independent work to a new batch."""
     rollover_batch=None
+
+    def deferred_segments(self,model,day):
+        return read(self.base/'daily'/day/(model+'-deferred-segments.json'))
+
+    def deferable_segment(self,job,day,snap):
+        from daily_tasks import DOUBAO_CHANNELS, deferred_originals_allow_progress, question_digest
+        if (job['model'] not in DOUBAO_CHANNELS or not job['service'].startswith('geo-native@')
+                or datetime.fromtimestamp(job['created'],ZoneInfo('Asia/Shanghai')).date().isoformat()!=day
+                or job['stop_requested'] or snap['service_state'] in BUSY or snap['pending_delivery']
+                or snap['nontext_pending'] or snap['delivery_errors'] or snap['state']!='needs_attention'
+                or not read(job['health']).get('next_readback_at')):
+            return []
+        root=self.batch_root(job)
+        if not deferred_originals_allow_progress(root,drained=True):return []
+        with closing(sqlite3.connect((root/'tasks.sqlite').as_uri()+'?mode=ro',uri=True)) as db:
+            rows=db.execute("select question,request_id from tasks where state='needs_attention'").fetchall()
+        if not all(request for _,request in rows):return []
+        return sorted({question_digest(question) for question,_ in rows})
+
+    def archive_deferred_segment(self,job,day,questions):
+        model=job['model'];segments=self.deferred_segments(model,day)
+        atomic(self.base/'daily'/day/(model+'-deferred-segments.json'),{**segments,job['batch']:questions})
 
     def _ensure_known(self,job,*,allow_readback=False):
         if job['batch']!=self.rollover_batch:return super()._ensure_known(job,allow_readback=allow_readback)
         if self.system.state(job['service']) in BUSY:raise Conflict('Previous collector is still active')
         old_day=datetime.fromtimestamp(job['created'],ZoneInfo('Asia/Shanghai')).date().isoformat()
         today=datetime.now(ZoneInfo('Asia/Shanghai')).date().isoformat()
-        if old_day>=today:return super()._ensure_known(job,allow_readback=allow_readback)
+        if old_day>=today:
+            from daily_tasks import question_digest
+            execution=getattr(self,'execution_config',None)
+            archived=self.deferred_segments(job['model'],today)
+            if execution and archived:
+                blocked={digest for questions in archived.values() for digest in questions}
+                if blocked.intersection(map(question_digest,execution['questions'])):
+                    raise Conflict('原请求待核对，补采仅允许其他题目')
+                if job['batch'] in archived and self.deferable_segment(job,today,self.snapshot(job))==archived[job['batch']]:
+                    return
+            return super()._ensure_known(job,allow_readback=allow_readback)
         root=self.base/'daily'/today/'prior-day-archives'/job['batch']
         root.mkdir(parents=True,exist_ok=True)
         task_db=self.batch_root(job)/('tasks.sqlite' if job['service'].startswith('geo-native@') else 'collector/tasks.sqlite')

@@ -54,6 +54,40 @@ class DailyTaskTests(unittest.TestCase):
         self.apply(rounds=3);self.tasks.reconcile()
         d=self.model()['daily'];self.assertEqual((d['completed'],d['target'],d['remaining']),(16,6,0))
         self.assertEqual(self.fixture.system.starts,[])
+    def test_drained_doubao_segment_leaves_original_and_runs_only_independent_questions(self):
+        from daily_dispatch import DailyController
+        model='doubao4'
+        self.c=DailyController(self.root,self.fixture.system,self.root/'native')
+        self.fixture.control=self.c
+        self.c.daily_counts=lambda day:self.counts
+        self.tasks=DailyTasks(self.c)
+        self.apply(model=model);self.tasks.reconcile()
+        with self.c.connect() as db:original=self.c.current(db,model)
+        root=self.c.batch_root(original)
+        with closing(sqlite3.connect(root/'tasks.sqlite')) as db,db:
+            db.execute('create table tasks(task_id text,question text,state text,request_id text,capture_retries int,prepared_at real)')
+            db.execute("insert into tasks values('task','问题一','needs_attention','request',0,1)")
+        atomic(root/'deferred_originals.json',{'task':'request'})
+        atomic(root/'task-attempt-0.binding.json',{'request_id':'request'})
+        health={'status':'needs_attention','tasks':{'needs_attention':1},'captured':1,'geo_processed':0,'next_readback_at':time.time()+300}
+        atomic(root/'bridge_health.json',health)
+        self.fixture.system.states[original['service']]='inactive'
+        self.tasks.reconcile()
+        self.assertEqual(self.model(model)['current']['batch'],original['batch'])
+        atomic(root/'bridge_health.json',{**health,'geo_processed':1})
+        self.tasks.reconcile()
+        current=self.model(model)['current']
+        self.assertNotEqual(current['batch'],original['batch'])
+        self.assertEqual(current['config']['questions'],['问题二'])
+        with closing(sqlite3.connect(root/'tasks.sqlite')) as db:
+            self.assertEqual(db.execute('select state,request_id from tasks').fetchone(),('needs_attention','request'))
+        self.counts[model]={'问题二':5}
+        with self.c.connect() as db:job=self.c.current(db,model)
+        atomic(self.c.batch_root(job)/'bridge_health.json',{'status':'complete','captured':5,'geo_processed':5})
+        self.fixture.system.states[job['service']]='inactive'
+        DailyTasks(self.c).reconcile()
+        self.assertEqual(self.model(model)['daily']['status'],'needs_attention')
+        self.assertEqual(len(self.fixture.system.starts),2)
     def test_added_and_removed_questions_change_only_remaining_work(self):
         self.counts={'baidu_ai':{'问题一':5,'问题二':4}}
         self.apply(questions=['问题一','新问题']);self.tasks.reconcile()
