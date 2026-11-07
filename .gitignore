@@ -25,3 +25,13 @@ vps_config.txt
 **/browser_profiles/
 **/storage_state.json
 **/cookies.json
+
+# Private business documents and internal working notes
+*.docx
+/交付文件/
+**/CURRENT_PROJECT_HANDOFF.md
+**/PROJECT_HANDOFF.md
+**/PROJECT_STATUS.md
+**/内容创作模块现状.md
+**/当前状况-20261023.md
+**/新会话接手提示.txt

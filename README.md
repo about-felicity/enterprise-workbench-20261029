@@ -402,6 +402,6 @@ curl -fsS http://127.0.0.1:8804/api/status
 4. 定点部署，观察真实入口和后续入库或成稿。
 5. 将对应源码与测试提交到 GitHub，核对远端提交编号。
 
-仓库中的 `source-snapshot/`、`PROJECT_STATUS.md` 和日期报告可用于追踪旧阶段状态。恢复时先核对文件来源、manifest、SHA 和服务版本，再选择对应组件执行。
+仓库中的 `source-snapshot/` 和技术版本记录可用于追踪旧阶段实现。恢复时先核对文件来源、manifest、SHA 和服务版本，再选择对应组件执行。
 
 更新 README、运行记录或 Git 提交后，生产页面是否已更新仍需通过实际部署与入口验证确认。
