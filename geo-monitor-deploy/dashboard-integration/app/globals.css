@@ -2235,3 +2235,20 @@ button {
 .daily-traffic-table{overflow:auto}
 .daily-traffic-missing{color:#9a875c;font-size:12px}
 @media(max-width:700px){.daily-traffic-card{padding:16px}.daily-traffic-header{align-items:flex-start;flex-direction:column}.daily-traffic-controls{width:100%}.daily-traffic-controls label{flex:1;min-width:0}.daily-traffic-controls select,.daily-traffic-controls input{width:100%;min-width:0}.daily-traffic-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.daily-traffic-summary strong{font-size:22px}.daily-traffic-card td,.daily-traffic-card th{padding:10px}}
+
+/* Full-month product traffic matrix */
+.monthly-traffic-grid { overflow: auto; border: 1px solid #dce8e1; border-radius: 10px; max-width: 100%; }
+.monthly-traffic-grid table { width: max-content; min-width: 100%; }
+.monthly-traffic-grid caption { position: sticky; left: 0; width: min(600px, 100%); box-sizing: border-box; }
+.monthly-traffic-grid th, .monthly-traffic-grid td { min-width: 74px; white-space: nowrap; text-align: right; }
+.monthly-traffic-grid .traffic-owner { position: sticky; left: 0; z-index: 2; min-width: 72px; max-width: 72px; width: 72px; box-sizing: border-box; text-align: left; background: #fff; }
+.monthly-traffic-grid .traffic-product { position: sticky; left: 72px; z-index: 2; min-width: 220px; max-width: 220px; width: 220px; box-sizing: border-box; text-align: left; white-space: normal; background: #fff; box-shadow: 5px 0 8px -8px #638476; }
+.monthly-traffic-grid thead .traffic-owner, .monthly-traffic-grid thead .traffic-product { background: #f7faf8; }
+.monthly-traffic-grid .traffic-selected { background: #eaf5ee; }
+.monthly-traffic-grid tfoot td, .monthly-traffic-grid tfoot th { background: #f0f6f2; font-weight: 600; color: #126b55; border-top: 1px solid #dce8e1; }
+.monthly-traffic-grid button:disabled { color: #9aa9a1; cursor: default; }
+.daily-traffic-grid-note { color: #72877f; font-size: 12px; margin: 12px 0 0; }
+@media (max-width: 700px) {
+ .monthly-traffic-grid .traffic-owner { min-width: 58px; max-width: 58px; width: 58px; }
+ .monthly-traffic-grid .traffic-product { left: 58px; min-width: 130px; max-width: 130px; width: 130px; }
+}
