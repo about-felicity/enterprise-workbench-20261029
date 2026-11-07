@@ -37,9 +37,16 @@ class DailyController(Controller):
         if (job['model'] not in DOUBAO_CHANNELS or not job['service'].startswith('geo-native@')
                 or datetime.fromtimestamp(job['created'],ZoneInfo('Asia/Shanghai')).date().isoformat()!=day
                 or job['stop_requested'] or snap['service_state'] in BUSY or snap['pending_delivery']
-                or snap['nontext_pending'] or snap['delivery_errors'] or snap['state']!='needs_attention'
-                or not read(job['health']).get('next_readback_at')):
+                or snap['nontext_pending'] or snap['delivery_errors']):
             return []
+        health=read(job['health'])
+        if health.get('status')!='needs_attention' or not health.get('next_readback_at'):
+            return []
+        marker=self.marker(job)
+        if marker.exists():
+            pause=read(marker)
+            if pause.get('source')!='daily_tasks' or pause.get('allow_original_readback') is not True:
+                return []
         root=self.batch_root(job)
         if not deferred_originals_allow_progress(root,drained=True):return []
         with closing(sqlite3.connect((root/'tasks.sqlite').as_uri()+'?mode=ro',uri=True)) as db:

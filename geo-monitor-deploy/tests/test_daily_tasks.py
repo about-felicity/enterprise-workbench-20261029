@@ -75,6 +75,9 @@ class DailyTaskTests(unittest.TestCase):
         self.tasks.reconcile()
         self.assertEqual(self.model(model)['current']['batch'],original['batch'])
         atomic(root/'bridge_health.json',{**health,'geo_processed':1})
+        atomic(self.c.marker(original),{'source':'control_panel','action':'pause'})
+        self.assertEqual(self.c.deferable_segment(original,self.day,self.c.snapshot(original)),[])
+        atomic(self.c.marker(original),{'source':'daily_tasks','allow_original_readback':True})
         self.tasks.reconcile()
         current=self.model(model)['current']
         self.assertNotEqual(current['batch'],original['batch'])
