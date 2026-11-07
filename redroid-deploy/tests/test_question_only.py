@@ -87,6 +87,30 @@ class Tests(unittest.TestCase):
             self.assertEqual(result['answer_id'],'a')
             db.close()
 
+    def test_only_acknowledged_terminal_empty_reply_is_archived(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'native.sqlite';db=self.fixture(path)
+            db.execute('alter table im_message add column status int');db.commit()
+            before=baseline([path],'问题')
+            db.execute('insert into im_message values(?,?,?,?,?,?,?,?,?)',('q','new-cid',1,1,blocks('问题'),None,'q-server',1,11));db.commit()
+            bound=correlate(before,'问题')
+            queue=Queue(Path(tmp)/'tasks.sqlite');queue.enqueue('empty',['问题'])
+            queue.db.row_factory=sqlite3.Row
+            task=dict(queue.db.execute('select * from tasks').fetchone())
+            queue.prepare(task['task_id'])
+            db.execute('insert into im_message values(?,?,?,?,?,?,?,?,?)',('a','new-cid',2,2,'[]',None,'a-server',2,11));db.commit()
+            with self.assertRaises(DataError):lookup_bound(task,bound)
+            db.execute("update im_message set status=21,content='{}' where local_message_id='a'");db.commit()
+            with self.assertRaises(DataError):lookup_bound(task,bound)
+            db.execute("update im_message set content='[]' where local_message_id='a'");db.commit()
+            result=lookup_bound(task,bound)
+            self.assertEqual(result['native_answer_kind'],'empty_reply')
+            self.assertFalse(result['body_capture_complete'])
+            self.assertFalse(result['source_capture_complete'])
+            queue.complete_nontext(task['task_id'],result)
+            self.assertEqual(queue.db.execute('select state from tasks').fetchone()[0],'completed_nontext')
+            queue.db.close();db.close()
+
     def test_finished_native_safety_tip_is_preserved_and_unknown_schema_still_blocks(self):
         with tempfile.TemporaryDirectory() as tmp:
             path=Path(tmp)/'native.sqlite';db=self.fixture(path);before=baseline([path],'问题')

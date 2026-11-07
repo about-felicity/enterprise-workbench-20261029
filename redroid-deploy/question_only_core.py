@@ -124,10 +124,16 @@ class Queue(LegacyQueue):
         row=self.db.execute('select * from tasks where task_id=?',(task_id,)).fetchone()
         if not row or row['state'] not in {'prepared','needs_attention'}:
             raise DataError('Non-text observation requires the original unresolved task')
-        if (result.get('status')!='nontext_complete' or result.get('native_answer_kind') not in ('video_only','applet_only')
+        kind=result.get('native_answer_kind')
+        if kind=='empty_reply':
+            nontext_proven=(result.get('native_answer_status')==21 and result.get('rich_media_capture_complete') is False
+                            and result.get('rich_cards')==[] and result.get('body_markdown')=='' and result.get('sources')==[])
+        else:
+            nontext_proven=(kind in ('video_only','applet_only') and result.get('rich_media_capture_complete') is True
+                            and bool(result.get('rich_cards')))
+        if (result.get('status')!='nontext_complete' or not nontext_proven
             or result.get('task_id')!=task_id or result.get('wire_question')!=row['question']
             or result.get('finished') is not True or result.get('native_request_confirmed') is not True
-            or result.get('rich_media_capture_complete') is not True or not result.get('rich_cards')
             or result.get('text_body_present') is not False or result.get('body_capture_complete') is not False
             or result.get('first_user_turn') is not True or result.get('prompt_protocol')!=PROTOCOL
             or not result.get('request_id') or not result.get('answer_id')
@@ -271,13 +277,26 @@ def lookup_bound(task,binding):
         answers=[]
         replies=db.execute('select * from im_message where conversation_id=? and user_type=2 and local_index>? order by local_index',
                            (binding['conversation_id'],request['local_index'])).fetchall()
+        columns=set(request.keys())
+        confirmed=bool(request['message_id'] and request['server_index']>0) if {'message_id','server_index'}.issubset(columns) else False
+        result={'status':'waiting','request_id':original_request['local_message_id'],'native_request_confirmed':confirmed}
+        if len(replies)==1 and continuation is None and confirmed and request['server_index']==1:
+            answer=replies[0]
+            # A server-acknowledged terminal empty reply is an observation,
+            # but cannot supply text or sources for the daily quota.
+            if (isinstance(answer['content'],str) and answer['content'].strip()=='[]'
+                    and 'status' in answer.keys() and answer['status']==21 and answer['server_index']==2
+                    and answer['message_id'] and answer['local_message_id']):
+                return {**result,'status':'nontext_complete','native_answer_kind':'empty_reply',
+                        'task_id':task['task_id'],'wire_question':task['question'],'answer_id':answer['local_message_id'],
+                        'conversation_id':binding['conversation_id'],'finished':True,'first_user_turn':True,
+                        'prompt_protocol':PROTOCOL,'native_answer_status':21,'rich_media_capture_complete':False,
+                        'rich_cards':[],'text_body_present':False,'body_capture_complete':False,
+                        'source_capture_complete':False,'body_markdown':'','sources':[]}
         for answer in replies:
             blocks=parse_blocks(answer['content'])
             if any('text_block' in b['content'] for b in blocks):answers.append((answer,blocks))
         if len(answers)>1:raise DataError('Multiple native answers; regeneration unsupported')
-        columns=set(request.keys())
-        confirmed=bool(request['message_id'] and request['server_index']>0) if {'message_id','server_index'}.issubset(columns) else False
-        result={'status':'waiting','request_id':original_request['local_message_id'],'native_request_confirmed':confirmed}
         if not answers:
             if len(replies)==1 and continuation is None and confirmed and request['server_index']==1:
                 answer=replies[0]
