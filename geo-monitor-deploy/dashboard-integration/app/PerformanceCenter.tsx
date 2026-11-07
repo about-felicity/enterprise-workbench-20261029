@@ -4,6 +4,7 @@ import { PerformanceEntry } from "./PerformanceEntry";
 import { PerformanceTrend } from "./PerformanceTrend";
 import { PerformanceConfirmation } from "./PerformanceConfirmation";
 import { beijingMonth } from "./beijingCalendar";
+import { DailyTrafficCard } from "./DailyTrafficCard";
 
 type Part = "traffic" | "budget" | "mention" | "values";
 type Mention = { score: number | null; observed_items: number; target_items: number; applied_weight: number; models: Array<{
@@ -105,6 +106,7 @@ export function PerformanceCenter({ apiBase }: { apiBase: string }) {
           <span className="assessment-card-link">查看每日进展与计算明细 <b>↗</b></span>
         </button>; })}
       </section>
+      <DailyTrafficCard key={payload.month} people={payload.people} month={payload.month} asOf={payload.as_of} />
       <section ref={detail}><PerformanceConfirmation apiBase={apiBase} month={payload.month} selected={selected} onStatus={setConfirmationStatus} /></section>
       {person && current && <section className="assessment-detail" aria-label={`${person.name}绩效明细`}>
         <header className="assessment-detail-heading"><div><span className="assessment-eyebrow">个人绩效明细</span><h2>{person.name}<small>{person.product_count} 个考核产品</small></h2><p>查看每天截至当日的累计变化，再核对流量、费用和模型的原始计算。</p></div><button onClick={() => setSelected(null)}>收起明细</button></header>
