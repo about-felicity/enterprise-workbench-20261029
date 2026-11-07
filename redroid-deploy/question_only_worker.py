@@ -49,6 +49,15 @@ def interrupted_original_expired(model, task, observed, now):
             and now - task['prepared_at'] > 900)
 
 
+def original_readback_limit(model, task, observed):
+    if (model in ('doubao1','doubao2','doubao3','doubao4') and task.get('request_id')
+            and observed.get('request_id')==task['request_id']
+            and observed.get('native_request_confirmed') is True
+            and observed.get('reason')=='native_reply_not_seen'):
+        return 300
+    return 900
+
+
 def defer_bound_original(root, reader, task):
     request_id=task.get('request_id')
     if not request_id:
@@ -301,7 +310,8 @@ def run_locked(config,root,capture_limit):
                 if unsent:
                     recovery_path=root/(task['task_id']+'-attempt-'+str(task.get('capture_retries',0))+'.draft-submit-recovery.json')
                     unsent=not task.get('request_id') and not (recovery_path.exists() and json.loads(recovery_path.read_text()).get('attempted'))
-                if task['state']=='prepared' and not unsent and time.time()-(task.get('prepared_at') or time.time())>900 and not stable:
+                readback_limit=original_readback_limit(config['model'],task,observed)
+                if task['state']=='prepared' and not unsent and time.time()-(task.get('prepared_at') or time.time())>readback_limit and not stable:
                     if quarantine_uncertain_send(root,queue,task,observed,time.time()):
                         continue
                     if (config['model'] in ('doubao1','doubao2','doubao3','doubao4')
@@ -389,7 +399,7 @@ def run_locked(config,root,capture_limit):
                     continue
                 if observed.get('request_id'):queue.attach_request(task['task_id'],observed['request_id'])
                 phase(observed.get('phase') or ('generating' if observed.get('native_request_confirmed') else 'awaiting_ack'),task,
-                      reason=observed.get('reason',''),deadline_at=task['prepared_at']+900)
+                      reason=observed.get('reason',''),deadline_at=task['prepared_at']+readback_limit)
                 if STOP:return 0
                 wait_seconds(3)
             except (NativeDataError,DataError) as error:

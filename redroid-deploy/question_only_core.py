@@ -280,6 +280,8 @@ def lookup_bound(task,binding):
         columns=set(request.keys())
         confirmed=bool(request['message_id'] and request['server_index']>0) if {'message_id','server_index'}.issubset(columns) else False
         result={'status':'waiting','request_id':original_request['local_message_id'],'native_request_confirmed':confirmed}
+        if not replies and confirmed and continuation is None and request['server_index']==1:
+            result['reason']='native_reply_not_seen'
         if len(replies)==1 and continuation is None and confirmed and request['server_index']==1:
             answer=replies[0]
             # A server-acknowledged terminal empty reply is an observation,

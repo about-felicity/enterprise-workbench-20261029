@@ -164,10 +164,15 @@ class Tests(unittest.TestCase):
             db.execute('insert into im_message values(?,?,?,?,?,?,?,?)',('new','new-conversation',1,1,blocks('问题'),None,'request',1));db.commit()
             bound=correlate(before,'问题')
             self.assertEqual(bound['request_id'],'new');self.assertEqual(bound['conversation_id'],'new-conversation')
+            task={'task_id':'local-only','question':'问题','wire_question':'问题'}
+            self.assertEqual(lookup_bound(task,bound)['reason'],'native_reply_not_seen')
+            db.execute('insert into im_message values(?,?,?,?,?,?,?,?)',('stream','new-conversation',2,2,blocks('部分回答',False),None,'stream',2));db.commit()
+            self.assertNotIn('reason',lookup_bound(task,bound))
+            db.execute("delete from im_message where local_message_id='stream'");db.commit()
             body=[{'is_finish':True,'content':{'text_block':{'text':'正文第一段'}}},
                   {'is_finish':True,'content':{'text_block':{'text':'正文末段'},'search_query_result_block':{'queries':['检索词'],'results':[{'text_card':{'title':'标题','url':'https://example.com/source','doc_id':'doc','index':1,'extra':'完整元数据'}}]}}}]
             db.execute('insert into im_message values(?,?,?,?,?,?,?,?)',('answer','new-conversation',2,2,json.dumps(body,ensure_ascii=False),None,'answer',2));db.commit()
-            result=lookup_bound({'task_id':'local-only','question':'问题','wire_question':'问题'},bound)
+            result=lookup_bound(task,bound)
             self.assertEqual(result['body_markdown'],'正文第一段\n\n正文末段')
             self.assertEqual(result['sources'][0]['native_source']['extra'],'完整元数据')
             self.assertEqual(result['raw_answer_blocks'],body);self.assertTrue(result['first_user_turn'])
