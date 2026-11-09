@@ -13,7 +13,7 @@ from .owned_products import OWN_PRODUCT_RULES, own_product_mentions
 
 ZONE = ZoneInfo("Asia/Shanghai")
 PRODUCTS = tuple(rule["name"] for rule in OWN_PRODUCT_RULES)
-MODELS = {"deepseek": "DeepSeek", "doubao": "豆包", "yuanbao": "元宝", "wenxin": "百度 / 文心"}
+MODELS = {"deepseek": "DeepSeek", "doubao": "豆包", "yuanbao": "元宝", "wenxin": "文心", "baidu": "百度", "wenxin_all": "百度 / 文心（合并）"}
 EDITORS = {"geo_admin", "superadmin"}
 FIRST = re.compile(r"^\s*[*#\s]*(?:首推|首选|第一名|第\s*1\s*名|TOP\s*1\b)[：:\s·、.\-]", re.I)
 DDL = """CREATE TABLE IF NOT EXISTS geo_monthly_keywords (
@@ -112,6 +112,7 @@ def save(payload):
 
 
 def samples(conn, start, end, model, questions):
+    storage_model = "wenxin" if model in {"baidu", "wenxin_all"} else model
     return conn.execute("""
         WITH originals AS MATERIALIZED (
             SELECT DISTINCT ON (e.run_id) e.run_id,e.received_at,
@@ -128,9 +129,12 @@ def samples(conn, start, end, model, questions):
         FROM originals e JOIN monitor_runs r ON r.run_id=e.run_id
         WHERE r.model_id=%s AND r.day >= %s AND r.day < %s
           AND r.status='success' AND r.answer <> ''
+          AND (%s NOT IN ('baidu','wenxin')
+               OR (%s='baidu' AND r.payload->>'capture_mode'='baidu_search_ai')
+               OR (%s='wenxin' AND COALESCE(r.payload->>'capture_mode','')<>'baidu_search_ai'))
           AND r.payload->>'body_capture_complete' IS DISTINCT FROM 'false'
           AND btrim(regexp_replace(normalize(e.prompt, NFKC), '[[:space:]]+', ' ', 'g')) = ANY(%s)
-    """, (model, model, start, end, sorted(questions)))
+    """, (storage_model, storage_model, start, end, model, model, model, sorted(questions)))
 
 
 def measure(version, runs, product):

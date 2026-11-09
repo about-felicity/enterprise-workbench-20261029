@@ -35,14 +35,24 @@ def native_tip(block):
 
 def native_code_text(block):
     code=block.get('content',{}).get('code_block')
-    allowed={'code','extend_fields','icon_url','icon_url_dark','std_out_list','summary','text','type'}
+    allowed={'code','extend_fields','icon_url','icon_url_dark','std_out_list','summary','text','tool_name','type'}
     if (block.get('block_type')!=10008 or not isinstance(code,dict) or set(code)-allowed
         or type(code.get('type')) is not int or code['type']!=1
-        or code.get('std_out_list')!=[] or code.get('extend_fields')!={}
+        or code.get('tool_name','')!='' or not isinstance(code.get('std_out_list'),list)
         or code.get('text')!='' or not isinstance(code.get('code'),str) or not code['code'].strip()
         or not isinstance(code.get('summary'),str)):
         raise DataError('Unsupported native code block; completeness unproven')
-    return '\n\n'.join(part for part in (code['code'],code['summary']) if part)
+    fields=code.get('extend_fields')
+    if fields!={} and (not isinstance(fields,dict) or set(fields)!={'thinking_idx'}
+                        or type(fields['thinking_idx']) is not int or fields['thinking_idx']<0):
+        raise DataError('Unsupported native code block; completeness unproven')
+    output=[]
+    for item in code['std_out_list']:
+        if (not isinstance(item,dict) or set(item)!={'type','content'} or type(item['type']) is not int
+                or item['type']!=1 or not isinstance(item['content'],str)):
+            raise DataError('Unsupported native code block; completeness unproven')
+        output.append(item['content'])
+    return '\n\n'.join(part for part in (code['code'],*output,code['summary']) if part)
 
 
 def source_absence_verified(result):

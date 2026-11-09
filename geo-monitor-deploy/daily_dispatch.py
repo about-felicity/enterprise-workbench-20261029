@@ -50,9 +50,8 @@ class DailyController(Controller):
         root=self.batch_root(job)
         if not deferred_originals_allow_progress(root,drained=True):return []
         with closing(sqlite3.connect((root/'tasks.sqlite').as_uri()+'?mode=ro',uri=True)) as db:
-            rows=db.execute("select question,request_id from tasks where state='needs_attention'").fetchall()
-        if not all(request for _,request in rows):return []
-        return sorted({question_digest(question) for question,_ in rows})
+            rows=db.execute("select question from tasks where state='needs_attention'").fetchall()
+        return sorted({question_digest(question) for question, in rows})
 
     def archive_deferred_segment(self,job,day,questions):
         model=job['model'];segments=self.deferred_segments(model,day)

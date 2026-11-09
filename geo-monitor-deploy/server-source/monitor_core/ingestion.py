@@ -68,6 +68,9 @@ def deepseek_source_title_is_answer_text(title: Any, answer: Any) -> bool:
     return len(source_title) >= 18 and source_title in answer_text
 
 
+from monitor_core.monitoring_scope import scope_fields
+
+
 def _question(value: Any) -> str:
     text = str(value or "").strip()
     return canonical_recommendation_question(text) or text or "未知问题"
@@ -116,6 +119,7 @@ def normalize_remote_record(model_id: str, record: dict[str, Any]) -> dict[str, 
         normalized_sources.append(source)
     return {
         "model_id": model_id,
+        **scope_fields(record),
         "run_id": run_id,
         "question": _question(record.get("question") or record.get("prompt")),
         "finished_at": finished,
@@ -173,6 +177,7 @@ def normalize_doubao_payload(payload: dict[str, Any], products: list[dict[str, A
             normalized_products.append(item)
     return {
         "model_id": "doubao",
+        **scope_fields(payload),
         "question": _question(payload.get("question") or payload.get("chatTitle")),
         "finished_at": finished,
         "day": beijing_day(finished),

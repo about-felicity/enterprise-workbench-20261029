@@ -11,6 +11,7 @@ import threading
 import time
 from zoneinfo import ZoneInfo
 
+from monthly_monitoring import target as question_target
 from capture_channels import log_channel
 from control_panel import DEEPSEEK_CHANNELS,MODELS,BUSY,Conflict,atomic,read,validate
 
@@ -48,6 +49,25 @@ def valid_day(day):
     except ValueError:raise ValueError('请选择有效日期')
     if parsed.isoformat()!=day:raise ValueError('请选择有效日期')
     return day
+
+
+def baidu_unavailable(db, day):
+    """Count only exhausted card slots, separately from ingested samples."""
+    start=datetime.strptime(valid_day(day),'%Y-%m-%d').replace(tzinfo=ZONE)
+    counts=Counter()
+    jobs=db.execute("select health,config from jobs where model='baidu_ai' and created>=? and created<?",
+                    (start.timestamp(),(start+timedelta(days=1)).timestamp()))
+    for job in jobs:
+        if json.loads(job['config']).get('daily_date')!=day:continue
+        path=Path(job['health']).parent/'collector/tasks.sqlite'
+        if not path.is_file():continue
+        with closing(sqlite3.connect(path.as_uri()+'?mode=ro',uri=True,timeout=2)) as journal:
+            if not journal.execute("select 1 from sqlite_master where name='captures'").fetchone():continue
+            for question,n in journal.execute("""select question,count(*) from captures where state='completed'
+                and json_extract(result,'$.availability')='supplement_unavailable'
+                and json_extract(result,'$.terminal_reason')='card_unavailable' group by question"""):
+                counts[question]+=n
+    return counts
 
 def installed(db):
     db.execute('''create table if not exists daily_tasks(
@@ -113,20 +133,23 @@ class DailyTasks:
 
     def snapshot(self,db,model,day,counts,error=None):
         config=self.config(db,model,day);row=self.row(db,model,day)
-        questions=[{'question':q,'target':config['rounds'],'completed':counts.get(q,0),
-                    'remaining':max(0,config['rounds']-counts.get(q,0))} for q in config['questions']]
+        unavailable=baidu_unavailable(db,day) if model=='baidu_ai' else {}
+        questions=[{'question':q,'kind':'secondary' if q in config.get('secondary_questions',[]) else 'primary','target':question_target(config,q),'completed':counts.get(q,0),
+                    'unavailable':min(unavailable.get(q,0),max(0,question_target(config,q)-counts.get(q,0))),
+                    'remaining':max(0,question_target(config,q)-counts.get(q,0)-unavailable.get(q,0))} for q in config['questions']]
         remaining=sum(q['remaining'] for q in questions)
+        missed=sum(q['unavailable'] for q in questions)
         job=self.control.current(db,model);current=self.control.snapshot(job)
         status=row['status'] if row else 'scheduled' if day>today() else 'not_started'
-        if not error and questions and not remaining:status='complete'
+        if not error and questions and not remaining:status='complete_with_unavailable' if missed else 'complete'
         elif row and row['desired']=='paused':status='pausing' if day==today() and current['service_state'] in BUSY else 'paused'
         elif day==today() and current['service_state'] in BUSY:
             status='applying' if row and row['status']=='applying' else current['state']
         elif day<today():status='incomplete' if remaining else 'complete'
         if not questions:status='not_scheduled'
         return {'date':day,'config':config,'status':status,'desired':row['desired'] if row else None,
-                'target':len(questions)*config['rounds'],'completed':sum(q['completed'] for q in questions),
-                'credited':sum(min(q['completed'],q['target']) for q in questions),'remaining':remaining,
+                'target':sum(q['target'] for q in questions),'completed':sum(q['completed'] for q in questions),
+                'credited':sum(min(q['completed'],q['target']) for q in questions),'remaining':remaining,'unavailable':missed,
                 'questions':questions,'error':error or (row['error'] if row else None),
                 'progress_available':not bool(error),
                 'updated_at':row['updated'] if row else None,'editable':day>=today(),
@@ -164,7 +187,17 @@ class DailyTasks:
 
     def reconcile(self):
         """One operator process runs this; HTTP handlers only persist intents."""
-        day=today();counts=self.counts(day)
+        day=today()
+        if (read(self.control.base/'daily_plan.json').get('secondary_monitoring_enabled')
+                and time.monotonic()-getattr(self,'last_monthly_sync',-60)>=60):
+            self.last_monthly_sync=time.monotonic()
+            from monthly_monitoring import database_questions,sync
+            try:health=sync(self.control,day,database_questions(day))
+            except Exception as exc:
+                # A source outage must not erase last-known plans or stop collectors.
+                health={'status':'retrying','checked_at':time.time(),'error_code':type(exc).__name__}
+            atomic(self.control.base/'secondary_monitoring_health.json',health)
+        counts=self.counts(day)
         order=['doubao1','doubao2','doubao3','doubao4','baidu_ai','wenxin_card','yuanbao','deepseek','deepseek2']
         for model in order:
             try:self._one(model,day,counts)
@@ -285,7 +318,7 @@ class DailyTasks:
                 blocked={digest for questions in archived.values() for digest in questions}
                 if snap['needs_review'] and job['batch'] not in archived:
                     candidates=c.deferable_segment(job,day,snap)
-                    if candidates and any(counts.get(model,{}).get(q,0)<cfg['rounds']
+                    if candidates and any(counts.get(model,{}).get(q,0)<question_target(cfg,q)
                                           and question_digest(q) not in blocked and question_digest(q) not in candidates
                                           for q in cfg['questions']):
                         same_day_archive=candidates
@@ -322,17 +355,22 @@ class DailyTasks:
             # next remaining group; never plan from a cached pre-completion count.
             with _lock:_cache.pop(day,None)
             counts=self.counts(day)
-            remaining={q:max(0,cfg['rounds']-counts.get(model,{}).get(q,0)) for q in cfg['questions']}
+            unavailable=baidu_unavailable(db,day) if model=='baidu_ai' else {}
+            remaining={q:max(0,question_target(cfg,q)-counts.get(model,{}).get(q,0)-unavailable.get(q,0)) for q in cfg['questions']}
             remaining={q:n for q,n in remaining.items() if n}
             if not remaining:
-                db.execute('update daily_tasks set status=?,error=null where model=? and day=?',('complete',model,day));return
+                status='complete_with_unavailable' if any(unavailable.get(q,0) and counts.get(model,{}).get(q,0)<question_target(cfg,q) for q in cfg['questions']) else 'complete'
+                db.execute('update daily_tasks set status=?,error=null where model=? and day=?',(status,model,day));return
             remaining={q:n for q,n in remaining.items() if question_digest(q) not in blocked}
             if not remaining:
                 db.execute('update daily_tasks set status=?,error=? where model=? and day=?',
                            ('needs_attention','剩余题目有原请求待核对，已保留记录',model,day));return
             if model=='wenxin_card':
                 bcfg=self.config(db,'baidu_ai',day)
-                if any(counts.get('baidu_ai',{}).get(q,0)<bcfg['rounds'] for q in bcfg['questions']):
+                baidu_job=c.snapshot(c.current(db,'baidu_ai'))
+                baidu_missed=baidu_unavailable(db,day)
+                if (baidu_job['service_state'] in BUSY or baidu_job['pending_delivery'] or baidu_job['delivery_errors']
+                        or any(counts.get('baidu_ai',{}).get(q,0)+baidu_missed.get(q,0)<question_target(bcfg,q) for q in bcfg['questions'])):
                     db.execute('update daily_tasks set status=? where model=? and day=?',('waiting_for_baidu',model,day));return
             rounds=max(remaining.values())
             execution={'questions':[q for q,n in remaining.items() if n==rounds], 'rounds':rounds,'interval':cfg['interval']}

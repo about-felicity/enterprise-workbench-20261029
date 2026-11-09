@@ -763,7 +763,7 @@ def load_owned_product_runs(*, day: str = "", day_from: str = "", day_to: str = 
             # for legacy brand_analysis_ready. Bodies remain authoritative.
             payload = "(" + " || ".join(
                 "CASE WHEN r.payload ? '%s' THEN jsonb_build_object('%s',r.payload->'%s') ELSE '{}'::jsonb END" % (key,key,key) for key in
-                ('brand_analysis_ready','product_review_status','body_capture_complete','capture_mode','daily_surface_target')
+                ('brand_analysis_ready','product_review_status','body_capture_complete','capture_mode','daily_surface_target','monitoring_scope')
             ) + ") AS payload"
         for row in conn.execute(
             "SELECT r.model_id,r.run_id,r.question,r.answer,r.status,r.day,r.finished_at,"

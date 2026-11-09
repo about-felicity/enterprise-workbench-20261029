@@ -1517,6 +1517,8 @@ def daily_owned_product_recommendations(
     for model_id in selected_ids:
         scoped = []
         for run in runs_by_model.get(model_id, []):
+            if run.get("monitoring_scope") == "secondary":
+                continue
             run_question = str(run.get("question") or "")
             status = str(run.get("status") or "success").casefold()
             successful = status == "success" and run.get("body_capture_complete") is not False

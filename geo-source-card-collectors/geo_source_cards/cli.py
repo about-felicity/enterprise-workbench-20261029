@@ -628,6 +628,7 @@ def _run_locked(args, root, journal):
                 ):
                     raise RuntimeError("Source completeness is not proven")
             except Exception as exc:
+                recovered = None
                 if recovery and not isinstance(exc, PipelinePaused):
                     recovery.evidence(collector, task)
                     recovered = recovery.failure(task, exc, result)
@@ -680,6 +681,8 @@ def _run_locked(args, root, journal):
                         "task_id": task["task_id"],
                         "batch": batch,
                         "availability": "supplement_unavailable",
+                        **({"terminal_reason": "card_unavailable"}
+                           if recovered and recovered.get("terminal_card_unavailable") else {}),
                         "body": "",
                         "sources": [],
                         "body_capture_complete": False,

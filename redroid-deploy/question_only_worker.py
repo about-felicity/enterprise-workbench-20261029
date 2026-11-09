@@ -410,14 +410,17 @@ def run_locked(config,root,capture_limit):
                     repeated=len(recent)==3 and all(r[0]==detail for r in recent)
                     if repeated:
                         deferred=(config['model'] in ('doubao1','doubao2','doubao3','doubao4')
-                                  and task['state']=='prepared'
-                                  and str(error)=='Message blocks must be a non-empty list'
+                                  and (str(error)=='Message blocks must be a non-empty list'
+                                       or (str(error).startswith('Unsupported native ') and 'completeness unproven' in str(error)))
                                   and defer_bound_original(root,reader,task))
-                        queue.db.execute("update tasks set state='needs_attention',error=? where task_id=?",(detail,task['task_id']))
-                        queue.event(task['task_id'],'automatic_deferred_original_readback' if deferred else 'native_validation_stopped',detail)
+                        ambiguous=(config['model'] in ('doubao1','doubao2','doubao3','doubao4')
+                                   and str(error)=='Multiple new native requests; automatic resend forbidden'
+                                   and quarantine_uncertain_send(root,queue,task,{},time.time()))
+                        if not ambiguous:
+                            queue.db.execute("update tasks set state='needs_attention',error=? where task_id=?",(detail,task['task_id']))
+                            queue.event(task['task_id'],'automatic_deferred_original_readback' if deferred else 'native_validation_stopped',detail)
                 if repeated:
-                    if deferred:continue
-                    if uncertain_quarantine_valid(root,queue,task):
+                    if deferred or ambiguous or uncertain_quarantine_valid(root,queue,task):
                         wait_seconds(5)
                         continue
                     if (task.get('request_id') and (root/'deferred_originals.json').exists()

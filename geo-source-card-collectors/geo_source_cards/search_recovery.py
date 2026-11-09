@@ -107,7 +107,13 @@ class SearchRecovery:
             optional_read = self.optional_baidu and task["model"] == "baidu_ai" and kind == "read_error"
             limit = 2 if optional_read else 5 if task["model"] == "baidu_ai" else 2
             exhausted = count >= limit * (1 if optional_read else 4)
-            if unattended and kind=='read_error':exhausted=False
+            # A specific card that stays absent or unreadable must not monopolize
+            # the browser. Transport errors remain eligible for recovery.
+            card_unavailable = optional_read and any(reason in str(error) for reason in (
+                '百度 AI 卡片未完整呈现', 'Daily Baidu card is still missing',
+                'Source completeness is not proven', 'Required source links are missing',
+            ))
+            if unattended and kind=='read_error' and not card_unavailable:exhausted=False
             streak = (
                 previous["streak"] + 1 if kind == "verification" else previous["streak"]
             )
@@ -134,6 +140,7 @@ class SearchRecovery:
             "cycle": (count - 1) // limit,
             "defer": count % limit == 0,
             "exhausted": exhausted,
+            "terminal_card_unavailable": exhausted and card_unavailable,
             "status": "waiting_verification"
             if blocked
             else "failed_deferred"

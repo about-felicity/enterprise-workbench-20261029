@@ -63,6 +63,12 @@ class Tests(unittest.TestCase):
             self.assertEqual(result['body_markdown'],native_code_text(code)+'\n\n完整正文')
             self.assertEqual(result['raw_answer_blocks'],content)
             self.assertTrue(source_absence_verified(result))
+            code['content']['code_block'].update(tool_name='',extend_fields={'thinking_idx':7},
+                                                std_out_list=[{'type':1,'content':'运行结果'}])
+            db.execute('update im_message set content=? where local_message_id=?',(json.dumps(content),'a'));db.commit()
+            result=lookup_bound({'task_id':'task','question':'问题','wire_question':'问题'},bound)
+            self.assertIn('运行结果',result['body_markdown'])
+            self.assertTrue(source_absence_verified(result))
             code['content']['code_block']['std_out_list']=[{'unknown':'output'}]
             db.execute('update im_message set content=? where local_message_id=?',(json.dumps(content),'a'));db.commit()
             with self.assertRaises(DataError):lookup_bound({'task_id':'task','question':'问题','wire_question':'问题'},bound)

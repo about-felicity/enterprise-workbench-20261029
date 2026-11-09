@@ -11,6 +11,25 @@ from geo_source_cards.search_recovery import SearchRecovery
 
 
 class UnattendedCaptureTests(unittest.TestCase):
+    def test_optional_baidu_card_exhaustion_is_recorded_and_releases_queue(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ, {'GEO_UNATTENDED': '1'}):
+            root = Path(tmp)
+            args = cli.parse_args(['--model','baidu_ai','--runtime-dir',str(root),'--batch','bounded',
+                                   '--question','q','--min-search-interval','0','--bounded-search-recovery',
+                                   '--optional-baidu','--max-new-captures','1'])
+            with patch.object(cli,'create_collector',return_value=Mock()), patch.object(cli,'collect_one',
+                side_effect=RuntimeError('百度 AI 卡片未完整呈现')), patch.object(SearchRecovery,'evidence'):
+                self.assertEqual(cli.run(args),75)
+                with closing(Journal(root/'tasks.sqlite').db) as db, db:
+                    db.execute('update search_recovery_control set cooldown_until=0')
+                self.assertEqual(cli.run(args),0)
+            with closing(Journal(root/'tasks.sqlite').db) as db:
+                state, raw = db.execute('select state,result from captures').fetchone()
+            self.assertEqual(state,'completed')
+            result=json.loads(raw)
+            self.assertEqual(result['terminal_reason'],'card_unavailable')
+            self.assertFalse(result['body_capture_complete'])
+
     def test_missing_first_card_does_not_starve_later_question(self):
         with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ, {'GEO_UNATTENDED': '1'}):
             root=Path(tmp);questions=root/'questions.txt';questions.write_text('first\nsecond\n')

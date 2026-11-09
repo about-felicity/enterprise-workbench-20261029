@@ -36,6 +36,13 @@ _ALIASES = {
     "眉毛精华液": "眉毛增长液",
     "睫毛精华液": "睫毛增长液",
     "祛痘精华": "祛痘精华液",
+    "防脱精华": "防脱精华液",
+}
+
+_QUESTION_ALIASES = {
+    "推荐一款蓬松洗发水": "控油蓬松洗发水推荐",
+    "推荐蓬松洗发水": "控油蓬松洗发水推荐",
+    "蓬松洗发水推荐": "控油蓬松洗发水推荐",
 }
 
 
@@ -46,6 +53,8 @@ def _compact(value: str) -> str:
 def canonical_recommendation_question(value: str) -> str:
     """Map prompts and generated chat titles to an allowed product bucket."""
     text = _compact(value)
+    if text in _QUESTION_ALIASES:
+        return _QUESTION_ALIASES[text]
     for alias, product in _ALIASES.items():
         text = text.replace(_compact(alias), _compact(product))
     # Longest first prevents 护发素/洗发水 fragments from stealing a match.

@@ -25,7 +25,7 @@ def valid(root, queue, task):
 
 def quarantine(root, queue, task, observed, now):
     if (task.get('request_id') or observed.get('request_id') or observed.get('native_request_confirmed')
-            or task.get('state') != 'prepared' or not task.get('prepared_at')
+            or task.get('state') not in {'prepared','needs_attention'} or not task.get('prepared_at')
             or now - task['prepared_at'] <= 900):
         return False
     boundary = queue.attempt_boundary(task['task_id'])
