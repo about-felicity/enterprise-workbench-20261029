@@ -9,7 +9,7 @@ import type { EmployeePerformance } from "./PerformanceBoard";
 import { PerformanceCenter } from "./PerformanceCenter";
 import { CaptureControl } from "./CaptureControl";
 import { CreationControl } from "./CreationControl";
-import { MonthlyKeywords } from "./MonthlyKeywords";
+import { KeywordMonitoring } from "./KeywordMonitoring";
 import { dashboardBasePath } from "./dashboardPaths";
 
 type Source = {
@@ -275,7 +275,7 @@ type RemoteActivity = {
   queue: { queued: number; processed: number; errors: number };
   events: RemoteEvent[];
 };
-type View = "overview" | "compare" | "sources" | "brands" | "runs" | "control" | "creation" | "performance";
+type View = "overview" | "compare" | "sources" | "brands" | "runs" | "control" | "creation" | "performance" | "keywords";
 type QuestionMode = "interleaved" | "sequential";
 
 const emptyAnalytics: Analytics = {
@@ -291,6 +291,7 @@ function dashboardModels<T extends { id: string }>(items: T[] = []): T[] {
 }
 const views: { id: View; label: string; hint: string; symbol: string }[] = [
   { id: "overview", label: "模型总览", hint: "先看规模与质量", symbol: "◈" },
+  { id: "keywords", label: "二级词监控", hint: "每日样本与平台对比", symbol: "▤" },
   { id: "compare", label: "问题对比", hint: "同一问题横向比较", symbol: "⇄" },
   { id: "sources", label: "信源洞察", hint: "每日链接 Top 25 与关键词", symbol: "◎" },
   { id: "brands", label: "品牌与产品", hint: "提及率、排名与自有信源", symbol: "◇" },
@@ -1048,11 +1049,13 @@ export function Dashboard() {
   const selectView = (nextView: View) => {
     if (nextView === "performance") {
       window.history.replaceState(null, "", "#performance");
+    } else if (nextView === "keywords") {
+      window.history.replaceState(null, "", "#keywords");
     } else if (nextView === "creation") {
       window.history.replaceState(null, "", "#creation");
     } else if (nextView === "control") {
       if (!window.location.hash.startsWith("#capture")) window.history.replaceState(null, "", "#capture/doubao1");
-    } else if (window.location.hash.startsWith("#capture") || window.location.hash === "#creation" || window.location.hash === "#performance") {
+    } else if (window.location.hash.startsWith("#capture") || window.location.hash === "#creation" || window.location.hash === "#performance" || window.location.hash === "#keywords") {
       window.history.replaceState(null, "", window.location.pathname + window.location.search);
     }
     if (nextView === "sources" && view !== "sources") {
@@ -1069,6 +1072,7 @@ export function Dashboard() {
       if (window.location.hash.startsWith("#capture")) setView("control");
       if (window.location.hash === "#creation") setView("creation");
       if (window.location.hash === "#performance") setView("performance");
+      if (window.location.hash === "#keywords") setView("keywords");
     };
     restoreCapture();
     window.addEventListener("hashchange", restoreCapture);
@@ -1132,7 +1136,7 @@ export function Dashboard() {
 
   const loadAnalytics = useCallback(async (force = false, silent = false) => {
     if (!filtersReady) return;
-    if (view === "control" || view === "creation" || view === "performance") {
+    if (view === "control" || view === "creation" || view === "performance" || view === "keywords") {
       setLoading(false);
       return;
     }
@@ -1528,7 +1532,7 @@ export function Dashboard() {
             </span>
           </span>
         </div>
-        {view !== "control" && view !== "creation" && view !== "performance" && <div className="scope">
+        {view !== "control" && view !== "creation" && view !== "performance" && view !== "keywords" && <div className="scope">
           <span>模型范围</span>
           <button
             className={!model ? "active" : ""}
@@ -1611,14 +1615,14 @@ export function Dashboard() {
                 : views.find((item) => item.id === view)?.label}
             </h1>
           </div>
-          {view !== "control" && view !== "creation" && view !== "performance" && (
+          {view !== "control" && view !== "creation" && view !== "performance" && view !== "keywords" && (
             <button onClick={() => loadAnalytics(true)} disabled={loading}>
               {loading ? "读取中" : "刷新数据"}
             </button>
           )}
         </header>
-        {view !== "control" && view !== "creation" && view !== "performance" && analytics.cache_status?.state !== "current" && analytics.generated_at && <p className="message" role="status">{analytics.cache_status?.message || "统计快照时间："} {analytics.generated_at}。刷新完成前请勿按此判断最新结果。</p>}
-        {view !== "control" && view !== "creation" && view !== "performance" && (
+        {view !== "control" && view !== "creation" && view !== "performance" && view !== "keywords" && analytics.cache_status?.state !== "current" && analytics.generated_at && <p className="message" role="status">{analytics.cache_status?.message || "统计快照时间："} {analytics.generated_at}。刷新完成前请勿按此判断最新结果。</p>}
+        {view !== "control" && view !== "creation" && view !== "performance" && view !== "keywords" && (
           <div className="filterbar">
             <label>
               问题
@@ -1670,14 +1674,14 @@ export function Dashboard() {
 
           </div>
         )}
-        {view !== "control" && view !== "creation" && view !== "performance" && loading && (
+        {view !== "control" && view !== "creation" && view !== "performance" && view !== "keywords" && loading && (
           <div className="filter-loading" role="status">
             正在切换数据口径，请稍候…
           </div>
         )}
 
         <div className="content">
-          {view !== "control" && view !== "creation" && view !== "performance" && (
+          {view !== "control" && view !== "creation" && view !== "performance" && view !== "keywords" && (
             <section className="kpis">
               <article>
                 <span>有效回答</span>
@@ -1718,7 +1722,6 @@ export function Dashboard() {
                 summaryMonths={analytics.owned_product_summary_months?.length ? analytics.owned_product_summary_months : [summaryMonth]}
                 onSummaryMonthChange={setSummaryMonth}
               />
-              <MonthlyKeywords apiBase={apiBase()} />
               <section className="panel">
                 <SectionTitle
                   eyebrow="MODEL HEALTH"
@@ -2115,6 +2118,7 @@ export function Dashboard() {
             </section>
           )}
 
+          {view === "keywords" && <KeywordMonitoring apiBase={apiBase()} />}
           {view === "performance" && <PerformanceCenter apiBase={apiBase()} />}
           {view === "creation" && <CreationControl />}
           {view === "control" && (

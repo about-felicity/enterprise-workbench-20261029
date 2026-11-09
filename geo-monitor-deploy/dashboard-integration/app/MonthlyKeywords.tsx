@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { beijingDate } from "./beijingCalendar";
 import { dashboardBasePath } from "./dashboardPaths";
 
-type Stats = {
+export type Stats = {
   valid: number; pending: number; mention: number; recommend: number; first: number;
   evidence: { day: string; question: string; text: string }[];
   last_received_at?: number | null;
@@ -22,7 +22,7 @@ type Board = {
 type SavedTerm = Pick<Term, "id" | "name" | "active"> & {
   versions: Pick<Version, "number" | "questions">[];
 };
-const emptyStats: Stats = { valid: 0, pending: 0, mention: 0, recommend: 0, first: 0, evidence: [] };
+export const emptyStats: Stats = { valid: 0, pending: 0, mention: 0, recommend: 0, first: 0, evidence: [] };
 type PlannedQuestion = { question: string; remaining: number; unavailable: number };
 type Lane = { id: string; daily: { date: string; progress_available: boolean; questions: PlannedQuestion[] } };
 const modelLanes: Record<string, string[]> = {
@@ -37,13 +37,43 @@ function shownStats(version: Version, day: string) {
   return day ? version.days?.[day] ?? emptyStats : version.stats;
 }
 
-function monthLastDay(month: string) {
+export function monthLastDay(month: string) {
   const [year, number] = month.split("-").map(Number);
   return `${month}-${new Date(Date.UTC(year, number, 0)).getUTCDate()}`;
 }
 
-function questionKey(question: string) {
+export function questionKey(question: string) {
   return question.normalize("NFKC").trim().replace(/\s+/g, " ");
+}
+
+export function useKeywordPlan(today: string, enabled: boolean, refresh: number) {
+  const [plan, setPlan] = useState<Lane[]>([]);
+  useEffect(() => {
+    if (!enabled) return;
+    const controller = new AbortController();
+    fetch(`${dashboardBasePath()}/api/geo-capture/panel?date=${today}`, { cache: "no-store", signal: controller.signal })
+      .then(async response => response.ok ? await response.json() : null)
+      .then(data => {
+        if (!controller.signal.aborted) setPlan(Array.isArray(data?.models) ? data.models : []);
+      })
+      .catch(() => { if (!controller.signal.aborted) setPlan([]); });
+    return () => controller.abort();
+  }, [enabled, today, refresh]);
+  return plan;
+}
+
+export function planByQuestion(lanes: Lane[], today: string, model: string) {
+  const planned = new Map<string, PlannedQuestion>();
+  for (const lane of lanes) {
+    if (!(modelLanes[model] || []).includes(lane.id) || lane.daily?.date !== today || !lane.daily.progress_available) continue;
+    for (const question of lane.daily.questions || []) {
+      const key = questionKey(question.question);
+      const previous = planned.get(key);
+      planned.set(key, { ...question, remaining: question.remaining + (previous?.remaining ?? 0),
+        unavailable: (question.unavailable ?? 0) + (previous?.unavailable ?? 0) });
+    }
+  }
+  return planned;
 }
 
 function applySave(board: Board, saved: SavedTerm, revision: number): Board {
@@ -94,17 +124,19 @@ function comparison(term: Term, stats: Stats) {
   return `${delta > 0 ? "+" : ""}${delta.toFixed(1)} 个百分点`;
 }
 
-export function MonthlyKeywords({ apiBase }: { apiBase: string }) {
+export function MonthlyKeywords({ apiBase, initialMonth, initialProduct }: {
+  apiBase: string; initialMonth?: string; initialProduct?: string;
+}) {
   const endpoint = `${apiBase}/api/performance-entry/monthly-keywords`;
   const today = beijingDate();
   const currentMonth = today.slice(0, 7);
-  const [month, setMonth] = useState(currentMonth);
+  const [month, setMonth] = useState(initialMonth ?? currentMonth);
   const [day, setDay] = useState("");
-  const [product, setProduct] = useState("");
+  const [product, setProduct] = useState(initialProduct ?? "");
   const [model, setModel] = useState("deepseek");
   const [board, setBoard] = useState<Board | null>(null);
-  const [plan, setPlan] = useState<Lane[]>([]);
   const [refresh, setRefresh] = useState(0);
+  const plan = useKeywordPlan(today, month === currentMonth, refresh);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const [saving, setSaving] = useState(false);
@@ -125,18 +157,6 @@ export function MonthlyKeywords({ apiBase }: { apiBase: string }) {
       .catch(reason => { if (!controller.signal.aborted) setError(reason.message); });
     return () => controller.abort();
   }, [endpoint, month, model, product, refresh]);
-
-  useEffect(() => {
-    if (month !== currentMonth) return;
-    const controller = new AbortController();
-    fetch(`${dashboardBasePath()}/api/geo-capture/panel?date=${today}`, { cache: "no-store", signal: controller.signal })
-      .then(async response => response.ok ? await response.json() : null)
-      .then(data => {
-        if (!controller.signal.aborted) setPlan(Array.isArray(data?.models) ? data.models : []);
-      })
-      .catch(() => { if (!controller.signal.aborted) setPlan([]); });
-    return () => controller.abort();
-  }, [currentMonth, month, today, refresh]);
 
   function reset() {
     setBoard(null);
@@ -186,18 +206,7 @@ export function MonthlyKeywords({ apiBase }: { apiBase: string }) {
       pending: total.pending + stats.pending,
     };
   }, { active: 0, valid: 0, pending: 0 });
-  const planned = new Map<string, PlannedQuestion>();
-  if (month === currentMonth && (!day || day === today)) {
-    for (const lane of plan) {
-      if (!(modelLanes[model] || []).includes(lane.id) || lane.daily?.date !== today || !lane.daily.progress_available) continue;
-      for (const question of lane.daily.questions || []) {
-        const key = questionKey(question.question);
-        const previous = planned.get(key);
-        planned.set(key, { ...question, remaining: question.remaining + (previous?.remaining ?? 0),
-          unavailable: (question.unavailable ?? 0) + (previous?.unavailable ?? 0) });
-      }
-    }
-  }
+  const planned = planByQuestion(month === currentMonth && (!day || day === today) ? plan : [], today, model);
 
   return <section className="panel monthly-keywords" aria-labelledby="monthly-keyword-title">
     <header className="monthly-keyword-header">

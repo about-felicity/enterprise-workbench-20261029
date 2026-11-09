@@ -1,12 +1,37 @@
 import unittest
+from contextlib import nullcontext
+from unittest.mock import patch
 from monitor_core.monitoring_scope import scope_fields
 from monitor_core.ingestion import normalize_remote_record, normalize_doubao_payload
 from monitor_core.analytics import daily_owned_product_recommendations
 from monitor_core.recommendation_questions import canonical_recommendation_question
-from monitor_core.monthly_keywords import measure, samples
+from monitor_core.monthly_keywords import matrix, measure, samples
 
 
 class ScopeTests(unittest.TestCase):
+    def test_matrix_reuses_shared_prompt_without_mixing_platforms(self):
+        prompt = '推荐一款植萃染发剂'
+        term = {'id': 'term', 'name': '植萃', 'active': True,
+                'versions': [{'number': 1, 'questions': [prompt], 'windows': [[1, None]]}]}
+        products = ['梵玢染发剂（含黑茶色）', '科熙本染发剂']
+        class Connection:
+            def execute(self, sql, params=()):
+                return [{'product': product, 'terms': [term]} for product in products] if params else []
+        sample = {'prompt': prompt, 'day': '2026-11-09', 'observed': 10,
+                  'answer': '完整正文', 'products': [], 'review': 'ai_verified'}
+        with patch('monitor_core.monthly_keywords.database.connection', return_value=nullcontext(Connection())), \
+             patch('monitor_core.monthly_keywords.matrix_samples', return_value=[
+                 {**sample, 'platform': 'baidu'}, {**sample, 'platform': 'wenxin', 'review': 'ai_pending'}
+             ]) as load:
+            result = matrix('2026-11')
+        self.assertEqual(load.call_args.args[-1], {prompt})
+        self.assertEqual(len(result['rows']), 2)
+        for row in result['rows']:
+            self.assertEqual(row['platforms']['baidu']['stats']['valid'], 1)
+            self.assertEqual(row['platforms']['wenxin']['stats']['pending'], 1)
+            self.assertEqual(row['platforms']['wenxin']['stats']['valid'], 0)
+            self.assertEqual(row['platforms']['doubao']['days'], {})
+
     def test_daily_totals_preserve_version_windows_and_sample_status(self):
         version = {'questions': ['实际问句'], 'windows': [[100, 400]]}
         def run(day, observed, review):

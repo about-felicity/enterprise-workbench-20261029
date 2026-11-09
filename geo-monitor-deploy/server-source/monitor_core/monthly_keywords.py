@@ -14,6 +14,7 @@ from .owned_products import OWN_PRODUCT_RULES, own_product_mentions
 ZONE = ZoneInfo("Asia/Shanghai")
 PRODUCTS = tuple(rule["name"] for rule in OWN_PRODUCT_RULES)
 MODELS = {"deepseek": "DeepSeek", "doubao": "豆包", "yuanbao": "元宝", "wenxin": "文心", "baidu": "百度", "wenxin_all": "百度 / 文心（合并）"}
+MATRIX_MODELS = {model: MODELS[model] for model in ("deepseek", "doubao", "wenxin", "baidu", "yuanbao")}
 EDITORS = {"geo_admin", "superadmin"}
 FIRST = re.compile(r"^\s*[*#\s]*(?:首推|首选|第一名|第\s*1\s*名|TOP\s*1\b)[：:\s·、.\-]", re.I)
 DDL = """CREATE TABLE IF NOT EXISTS geo_monthly_keywords (
@@ -141,7 +142,7 @@ def empty_stats():
     return dict(valid=0, pending=0, mention=0, recommend=0, first=0, evidence=[], last_received_at=None)
 
 
-def measure(version, runs, product, *, days=None):
+def measure(version, runs, product, *, days=None, evidence_details=True):
     result = empty_stats()
     for question in version["questions"]:
         for row in runs.get(question_key(question), ()):
@@ -173,13 +174,69 @@ def measure(version, runs, product, *, days=None):
                 for stats in totals:
                     stats["recommend"] += 1
                     stats["first"] += first
-                    if len(stats["evidence"]) < 8:
+                    if evidence_details and len(stats["evidence"]) < 8:
                         stats["evidence"].append({"day": day, "question": row["prompt"], "text": evidence})
                 break
     return result
 
 
+def matrix_samples(conn, start, end, questions):
+    # Start with the selected month's complete answers. For each run, pick the
+    # first receipt before matching its original prompt against the word list.
+    return conn.execute("""
+        WITH matched AS MATERIALIZED (
+            SELECT r.run_id,r.model_id,r.day,r.answer,r.payload,e.prompt,e.received_at
+            FROM monitor_runs r
+            JOIN LATERAL (
+                SELECT COALESCE(e.record->>'wire_question',e.record->>'prompt',e.record->>'question') AS prompt,
+                       e.received_at
+                FROM monitor_ingest_events e
+                WHERE e.model_id=r.model_id AND e.run_id=r.run_id AND e.run_id<>''
+                ORDER BY e.received_at,e.request_id LIMIT 1
+            ) e ON true
+            WHERE r.model_id=ANY(%s) AND r.day >= %s AND r.day < %s
+              AND r.status='success' AND r.answer <> ''
+              AND r.payload->>'body_capture_complete' IS DISTINCT FROM 'false'
+              AND btrim(regexp_replace(normalize(e.prompt, NFKC), '[[:space:]]+', ' ', 'g')) = ANY(%s)
+        )
+        SELECT r.run_id,r.day,r.answer,r.payload->>'product_review_status' AS review,r.prompt,
+               CASE WHEN r.model_id='wenxin' AND r.payload->>'capture_mode'='baidu_search_ai'
+                    THEN 'baidu' ELSE r.model_id END AS platform,
+               extract(epoch FROM r.received_at) AS observed,
+               (SELECT jsonb_agg(p.payload) FROM monitor_products p
+                WHERE p.model_id=r.model_id AND p.run_id=r.run_id) AS products
+        FROM matched r
+    """, (["deepseek", "doubao", "wenxin", "yuanbao"], start, end, sorted(questions)))
+
+
+def matrix(month):
+    start, end = scope(PRODUCTS[0], month)
+    grouped = {model: {} for model in MATRIX_MODELS}
+    with database.connection() as conn:
+        conn.execute(DDL)
+        catalog = [(row["product"], term) for row in conn.execute(
+            "SELECT product,terms FROM geo_monthly_keywords WHERE month=%s ORDER BY product", (start,)
+        ) if row["product"] in PRODUCTS for term in row["terms"] if term["versions"]]
+        questions = {question_key(q) for _, term in catalog for q in term["versions"][-1]["questions"]}
+        if questions:
+            for row in matrix_samples(conn, start, end, questions):
+                grouped[row["platform"]].setdefault(question_key(row["prompt"]), []).append(row)
+    rows = []
+    for product, term in catalog:
+        version = term["versions"][-1]
+        platforms = {}
+        for model, runs in grouped.items():
+            days = {}
+            stats = measure(version, runs, product, days=days, evidence_details=False)
+            platforms[model] = {"stats": stats, "days": days}
+        rows.append({"product": product, "id": term["id"], "name": term["name"], "active": term["active"],
+                     "version": version["number"], "questions": version["questions"], "platforms": platforms})
+    return {"month": month, "products": PRODUCTS, "models": MATRIX_MODELS, "rows": rows}
+
+
 def board(product, month, model):
+    if model == "all":
+        return matrix(month)
     start, end = scope(product, month)
     if model not in MODELS:
         raise ValueError("请选择有效模型")
