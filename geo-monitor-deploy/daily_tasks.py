@@ -17,6 +17,7 @@ from control_panel import DEEPSEEK_CHANNELS,MODELS,BUSY,Conflict,atomic,read,val
 
 ZONE=ZoneInfo('Asia/Shanghai')
 DOUBAO_CHANNELS={'doubao1','doubao2','doubao3','doubao4'}
+WEB_PEERS={'baidu_ai':'wenxin_card','wenxin_card':'baidu_ai'}
 DEVICES={'doubao-hpe14-13-test':'doubao1','doubao-hpe14-account2':'doubao2','doubao-hpe14-account3':'doubao3','doubao-hpe14-account4':'doubao4',
          'geo-headless-deepseek':'deepseek','deepseek-hpe14-android13':'deepseek','deepseek-hpe14-account2':'deepseek2','deepseek-browser-extension':'deepseek2','geo-headless-wenxin_card':'wenxin_card',
          'geo-headless-baidu_ai':'baidu_ai','yuanbao-hpe14-android13':'yuanbao'}
@@ -121,6 +122,10 @@ class DailyTasks:
         self.control=control
         self.last_logged={}
         self.counts=counts or getattr(control,'daily_counts',None) or (database_counts if control.base==Path('/opt/monitor/geo-capture') else lambda day:{})
+
+    def web_peer_busy(self,db,model):
+        peer=WEB_PEERS.get(model)
+        return bool(peer and self.control.system.state(self.control.current(db,peer)['service']) in BUSY)
 
     def row(self,db,model,day):
         found=db.execute('select * from daily_tasks where model=? and day=?',(model,day)).fetchone()
@@ -303,6 +308,12 @@ class DailyTasks:
                     db.execute('update daily_tasks set status=?,error=null where model=? and day=?',
                         ('recovering' if read(job['health']).get('status')=='running_recovery' else 'running',model,day))
                 return
+            # A later term edit can reopen Baidu while Wenxin is already in
+            # flight. Both the start and recovery paths must yield to the peer.
+            if self.web_peer_busy(db,model):
+                db.execute('update daily_tasks set status=? where model=? and day=?',
+                           ('waiting_for_wenxin' if model=='baidu_ai' else 'waiting_for_baidu',model,day))
+                return
             raw_state=read(job['health']).get('status')
             if snap['state']=='waiting_verification' or raw_state=='waiting_verification':
                 db.execute('update daily_tasks set status=? where model=? and day=?',(snap['state'],model,day));return
@@ -395,6 +406,7 @@ class DailyTasks:
 
     def launch(self,db,model,day,row,execution,key,base_batch):
         c=self.control
+        if self.web_peer_busy(db,model):raise Conflict('共享网页通道正在采集，等待当前批次结束')
         c.execution_config=execution
         c.execution_metadata={'daily_revision':row['revision'],'daily_date':day,
                               'daily_target_rounds':json.loads(row['config'])['rounds']}

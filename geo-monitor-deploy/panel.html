@@ -24,7 +24,7 @@
 let models=[],selected='',csrf='',dirty=false,working=false,editingModel='',refreshing=false,draftCache={},connected=false,viewDate='',serverToday='';
 let pendingAction=JSON.parse(sessionStorage.getItem('geo.capture.pending')||'null');
 const $=id=>document.getElementById(id);
-const labels={external:'本机插件 · 接收回传',not_scheduled:'暂无计划',checking_login:'正在校验登录',scheduled:'待定时启动',queued:'等待启动',applying:'正在应用新配置',waiting_for_baidu:'等待百度采完',recovering:'正在补读原任务',incomplete:'未完成',running_recovery:'异常自动恢复中',waiting_verification:'等待人工验证',complete:'已完成',complete_with_unavailable:'已结束 · 部分未取得完整结果',starting:'正在启动',running:'正在采集',running_delivery_backoff:'等待完整回执',running_with_errors:'采集中 · 有异常',running_backoff:'退避等待',needs_attention:'需要处理',waiting_login:'等待登录',paused:'已暂停',pausing:'正在暂停',stopping:'正在停止',stopped:'已停止',not_started:'待启动',stale:'心跳过期'};
+const labels={external:'本机插件 · 接收回传',not_scheduled:'暂无计划',checking_login:'正在校验登录',scheduled:'待定时启动',queued:'等待启动',applying:'正在应用新配置',waiting_for_baidu:'等待百度采完',waiting_for_wenxin:'等待文心采完',recovering:'正在补读原任务',incomplete:'未完成',running_recovery:'异常自动恢复中',waiting_verification:'等待人工验证',complete:'已完成',complete_with_unavailable:'已结束 · 部分未取得完整结果',starting:'正在启动',running:'正在采集',running_delivery_backoff:'等待完整回执',running_with_errors:'采集中 · 有异常',running_backoff:'退避等待',needs_attention:'需要处理',waiting_login:'等待登录',paused:'已暂停',pausing:'正在暂停',stopping:'正在停止',stopped:'已停止',not_started:'待启动',stale:'心跳过期'};
 const active=s=>['active','activating','reloading','deactivating'].includes(s);
 labels.ready_to_resume='登录已恢复，待继续';
 const current=()=>models.find(m=>m.id===selected);const draftKey=()=>selected+'@'+viewDate;

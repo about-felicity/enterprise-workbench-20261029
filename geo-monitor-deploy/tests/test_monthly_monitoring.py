@@ -100,6 +100,16 @@ class SchedulingTests(unittest.TestCase):
         self.tasks.reconcile()
         self.assertEqual(self.fixture.current('wenxin_card')['daily']['status'], 'waiting_for_baidu')
 
+    def test_baidu_yields_when_a_word_edit_reopens_its_plan_during_wenxin(self):
+        self.configure()
+        self.fixture.system.states['old-wenxin_card.service']='active'
+        self.tasks.reconcile()
+        self.assertEqual(self.fixture.current('baidu_ai')['daily']['status'],'waiting_for_wenxin')
+        self.assertEqual(self.fixture.system.starts,[])
+        self.fixture.system.states['old-wenxin_card.service']='inactive'
+        self.tasks.reconcile()
+        self.assertEqual(len(self.fixture.system.starts),1)
+
     def test_exhausted_baidu_slot_releases_wenxin_without_counting_as_sample(self):
         from pathlib import Path
         self.configure();self.configure('wenxin_card', 8)
