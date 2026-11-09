@@ -20,15 +20,12 @@ task_status_cache=LibraryCache(ttl=3,max_stale=7,wait_timeout=35)
 output_cache=LibraryCache(ttl=30,wait_timeout=40)
 panel_cache=StatusCache(ttl=10,wait_timeout=40)
 knowledge_cache=StatusCache(ttl=5)
-index_build_lock=threading.Lock()
 
 def build_tasks():
-    with index_build_lock:
-        return runtime.status(task_list=True)
+    return runtime.status(task_list=True)
 
 def build_outputs():
-    with index_build_lock:
-        return runtime.output_status()
+    return runtime.output_status()
 
 def prime_lists():
     try:

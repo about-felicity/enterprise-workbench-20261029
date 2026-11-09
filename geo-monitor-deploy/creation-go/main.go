@@ -120,7 +120,20 @@ var terminal = map[string]bool{"complete": true, "complete_with_failures": true,
 var jobID = regexp.MustCompile(`^creation-[0-9]+-[a-f0-9]{8}$`)
 var dateID = regexp.MustCompile(`^\d{4}-\d{2}-\d{2}$`)
 
+var beijing = time.FixedZone("Asia/Shanghai", 8*60*60)
+
+// Match creation.pricing_window so the supervisor only launches runnable jobs.
+func peakWritingTime(now time.Time) bool {
+	local := now.In(beijing)
+	weekday, hour := local.Weekday(), local.Hour()
+	return weekday != time.Saturday && weekday != time.Sunday &&
+		(hour >= 9 && hour < 12 || hour >= 14 && hour < 18)
+}
+
 func eligible(root string, now float64) (scope string, ok bool, err error) {
+	if peakWritingTime(time.Unix(int64(now), 0)) {
+		return "", false, nil
+	}
 	// Malformed state fails closed for this job, never for every other job.
 	defer func() {
 		if r := recover(); r != nil {
@@ -172,10 +185,12 @@ type scheduler struct {
 	active                map[string]*child
 	last, scopeLast, next map[string]time.Time
 	launch                func(string) (*exec.Cmd, error)
+	now                   func() time.Time
 }
 
 func newScheduler(root, python, socket string, limit int) *scheduler {
 	s := &scheduler{root: root, python: python, socket: socket, limit: limit, active: map[string]*child{}, last: map[string]time.Time{}, scopeLast: map[string]time.Time{}, next: map[string]time.Time{}}
+	s.now = time.Now
 	s.launch = func(root string) (*exec.Cmd, error) {
 		f, e := os.OpenFile(filepath.Join(root, "process-worker.log"), os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0600)
 		if e != nil {
@@ -191,7 +206,7 @@ func newScheduler(root, python, socket string, limit int) *scheduler {
 	return s
 }
 func (s *scheduler) tick(draining bool) error {
-	now := time.Now()
+	now := s.now()
 	issues := map[string]string{}
 	for name, c := range s.active {
 		select {
@@ -276,7 +291,7 @@ func (s *scheduler) tick(draining bool) error {
 			c := &child{cmd: cmd, scope: v.scope, done: make(chan error, 1)}
 			s.active[v.name] = c
 			go func() { c.done <- c.cmd.Wait() }()
-			s.last[v.name] = time.Now()
+			s.last[v.name] = s.now()
 			s.scopeLast[v.scope] = s.last[v.name]
 			scopes[v.scope]++
 		}

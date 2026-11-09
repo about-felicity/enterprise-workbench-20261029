@@ -266,6 +266,9 @@ def predecessor_wait(root,p,date,now):
 
 def snapshot(jobs):
  ps=plans();now=datetime.now(ZONE);day=now.date().isoformat();by_id={j['job_id']:j for j in jobs};result=[]
+ from .pricing_window import resume_at
+ low_at=resume_at(now.timestamp())
+ running_jobs={v.get('job_id') for v in runtime.read(runtime.BASE/'worker_health.json').get('active_jobs',[])}
  paths=sorted((ROOT/'days').glob('*/*.json'),reverse=True)[:500]
  active_ids={p['plan_id'] for p in ps}
  tasks=[t for p in paths if (t:=runtime.read(p))['plan']['plan_id'] in active_ids]
@@ -295,10 +298,7 @@ def snapshot(jobs):
    capture_status=runtime.read(root/'health.json').get('status','')
    state='waiting_for_geo' if capture_status.startswith('waiting_for_geo') else 'waiting_capture_capacity' if capture_status=='waiting_capture_capacity' else 'capture_retrying' if capture_status=='retrying' else 'collecting'
   elif not p['enabled'] and p.get('legacy_capture') and runtime.read(root/'settings.json').get('enabled'):state='capture_only'
-  from .pricing_window import resume_at
-  low_at=resume_at(time.time())
-  active_ids={v.get('job_id') for v in runtime.read(runtime.BASE/'worker_health.json').get('active_jobs',[])}
-  if state=='creating' and low_at and not job_ids.intersection(active_ids):
+  if state=='creating' and low_at and not job_ids.intersection(running_jobs):
    state='waiting_offpeak'
   stages={}
   for j in js:

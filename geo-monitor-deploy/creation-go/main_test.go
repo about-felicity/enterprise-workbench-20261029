@@ -87,6 +87,7 @@ func TestTenProcessesOverlapAndDrain(t *testing.T) {
 	base := t.TempDir()
 	gate := filepath.Join(base, "go")
 	s := newScheduler(base, "unused", "unused", 10)
+	s.now = func() time.Time { return time.Date(2026, 11, 7, 8, 0, 0, 0, beijing) }
 	for i := 0; i < 11; i++ {
 		fixture(t, base, i, fmt.Sprintf("plan-%d", i))
 	}
@@ -159,9 +160,28 @@ func TestEligibilityPreservesGatesAndBadState(t *testing.T) {
 		t.Fatal("malformed state admitted")
 	}
 }
+
+func TestEligibilityUsesBeijingOffPeakWindow(t *testing.T) {
+	root := fixture(t, t.TempDir(), 1, "p")
+	for _, tc := range []struct {
+		day, hour, minute int
+		allowed           bool
+	}{
+		{9, 8, 59, true}, {9, 9, 0, false}, {9, 11, 59, false}, {9, 12, 0, true},
+		{9, 14, 0, false}, {9, 18, 0, true}, {7, 10, 0, true}, {8, 15, 0, true},
+	} {
+		when := time.Date(2026, 11, tc.day, tc.hour, tc.minute, 0, 0, beijing)
+		_, allowed, err := eligible(root, float64(when.Unix()))
+		if err != nil || allowed != tc.allowed {
+			t.Fatalf("%s: eligible=%t, want %t, error=%v", when, allowed, tc.allowed, err)
+		}
+	}
+}
+
 func TestFairAdmissionAndFailedLaunchIsolation(t *testing.T) {
 	base := t.TempDir()
 	s := newScheduler(base, "", "", 2)
+	s.now = func() time.Time { return time.Date(2026, 11, 7, 8, 0, 0, 0, beijing) }
 	gate := filepath.Join(base, "go")
 	for i := 0; i < 5; i++ {
 		fixture(t, base, i, "a")
