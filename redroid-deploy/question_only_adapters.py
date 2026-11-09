@@ -233,10 +233,9 @@ class QuestionOnlyAndroid(DoubaoAndroid):
 
     def send(self,question,before_click=None):
         if not getattr(self,'_fresh_verified',False):raise DataError('Question-only new-chat preparation missing')
-        def guarded_click():
+        def stabilize_target():
             stabilize_question_only_send(self.device,question)
-            if before_click:before_click()
-        try:return super().send(question,guarded_click)
+        try:return super().send(question,before_click,before_target_check=stabilize_target)
         finally:self._fresh_verified=False
 
 

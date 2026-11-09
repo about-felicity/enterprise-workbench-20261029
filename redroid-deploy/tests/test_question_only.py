@@ -69,7 +69,20 @@ class Tests(unittest.TestCase):
             result=lookup_bound({'task_id':'task','question':'问题','wire_question':'问题'},bound)
             self.assertIn('运行结果',result['body_markdown'])
             self.assertTrue(source_absence_verified(result))
-            code['content']['code_block']['std_out_list']=[{'unknown':'output'}]
+            # The completed native tool response can contain only a summary,
+            # or stdout with a summary, without exposing the executed code.
+            payload=code['content']['code_block']
+            payload['code']=''
+            self.assertEqual(native_code_text(code),'运行结果\n\n已完成代码运行')
+            payload['std_out_list']=[]
+            self.assertEqual(native_code_text(code),'已完成代码运行')
+            db.execute('update im_message set content=? where local_message_id=?',(json.dumps(content),'a'));db.commit()
+            result=lookup_bound({'task_id':'task','question':'问题','wire_question':'问题'},bound)
+            self.assertEqual(result['body_markdown'],'已完成代码运行\n\n完整正文')
+            self.assertTrue(source_absence_verified(result))
+            payload['summary']=' '
+            with self.assertRaises(DataError):native_code_text(code)
+            payload['std_out_list']=[{'unknown':'output'}]
             db.execute('update im_message set content=? where local_message_id=?',(json.dumps(content),'a'));db.commit()
             with self.assertRaises(DataError):lookup_bound({'task_id':'task','question':'问题','wire_question':'问题'},bound)
             db.close()

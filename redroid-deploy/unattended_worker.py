@@ -89,11 +89,15 @@ class Android:
         import uiautomator2 as u2
         self.device = u2.connect(serial)
 
-    def tap(self, selector):
+    def tap(self, selector, *, before_click=None):
         if not selector.exists:
             raise DataError('Required App control is missing')
         info = selector.info['bounds']
-        self.device.shell(['input','tap',str((info['left']+info['right'])//2),str((info['top']+info['bottom'])//2)])
+        x = (info['left'] + info['right']) // 2
+        y = (info['top'] + info['bottom']) // 2
+        if before_click:
+            before_click()
+        self.device.shell(['input','tap',str(x),str(y)])
         time.sleep(.8)
 
     def wait_for_chat(self, create, timeout):
@@ -156,7 +160,7 @@ class Android:
             time.sleep(1)
             assert_fresh_chat(d.dump_hierarchy())
 
-    def send(self, question, before_click=None):
+    def send(self, question, before_click=None, *, before_target_check=None):
         from uiautomator2.exceptions import UiObjectNotFoundError
         d = self.device
         edit = d(resourceId=P+'input_text')
@@ -191,9 +195,9 @@ class Android:
         if not stable or edit.get_text(timeout=3)!=question:
             raise DataError('Send target/input did not stabilize; no click dispatched')
         assert_fresh_chat(d.dump_hierarchy())
-        if before_click:
-            before_click()
-        self.tap(button)
+        if before_target_check:
+            before_target_check()
+        self.tap(button,before_click=before_click)
 
     def evidence(self, directory, task_id):
         # Evidence failures must not invalidate an already validated answer.

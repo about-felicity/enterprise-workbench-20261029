@@ -355,12 +355,12 @@ class ReliabilityTests(unittest.TestCase):
         edit.wait.return_value=True
         edit.set_text.side_effect=[UiObjectNotFoundError('temporary input transition'),None]
         edit.get_text.return_value=self.task['wire_question']
-        android.tap=Mock()
+        edit.exists=True
         commit=Mock()
         android.send(self.task['wire_question'],commit)
         self.assertEqual(edit.set_text.call_count,2)
         commit.assert_called_once()
-        android.tap.assert_called_once()
+        android.device.shell.assert_called_once_with(['input','tap','5','5'])
 
     def test_send_click_failure_is_never_retried(self):
         from unattended_worker import Android
@@ -371,12 +371,32 @@ class ReliabilityTests(unittest.TestCase):
         android.device.return_value.get_text.return_value=self.task['wire_question']
         android.device.return_value.info={'bounds':{'left':0,'top':0,'right':10,'bottom':10},'enabled':True}
         android.device.return_value.wait.return_value=True
-        android.tap=Mock(side_effect=UiObjectNotFoundError('send outcome uncertain'))
+        android.device.return_value.exists=True
         commit=Mock()
+        def uncertain_tap(*args):
+            commit.assert_called_once()
+            raise UiObjectNotFoundError('send outcome uncertain')
+        android.device.shell.side_effect=uncertain_tap
         with self.assertRaises(UiObjectNotFoundError):
             android.send(self.task['wire_question'],commit)
         commit.assert_called_once()
-        android.tap.assert_called_once()
+        android.device.shell.assert_called_once()
+
+    def test_send_button_disappearing_after_stabilization_does_not_commit_intent(self):
+        from unattended_worker import Android
+        android=Android.__new__(Android);android.device=Mock()
+        android.device.dump_hierarchy.return_value='<hierarchy/>'
+        button=android.device.return_value
+        button.wait.return_value=True
+        button.get_text.return_value=self.task['wire_question']
+        button.info={'bounds':{'left':0,'top':0,'right':10,'bottom':10},'enabled':True}
+        button.exists=True
+        commit=Mock()
+        def after_layout_check():button.exists=False
+        with self.assertRaisesRegex(DataError,'Required App control is missing'):
+            android.send(self.task['wire_question'],commit,before_target_check=after_layout_check)
+        commit.assert_not_called()
+        android.device.shell.assert_not_called()
 
     def test_missing_send_button_does_not_commit_click_intent(self):
         from unattended_worker import Android

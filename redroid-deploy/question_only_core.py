@@ -39,7 +39,7 @@ def native_code_text(block):
     if (block.get('block_type')!=10008 or not isinstance(code,dict) or set(code)-allowed
         or type(code.get('type')) is not int or code['type']!=1
         or code.get('tool_name','')!='' or not isinstance(code.get('std_out_list'),list)
-        or code.get('text')!='' or not isinstance(code.get('code'),str) or not code['code'].strip()
+        or code.get('text')!='' or not isinstance(code.get('code'),str)
         or not isinstance(code.get('summary'),str)):
         raise DataError('Unsupported native code block; completeness unproven')
     fields=code.get('extend_fields')
@@ -52,7 +52,10 @@ def native_code_text(block):
                 or item['type']!=1 or not isinstance(item['content'],str)):
             raise DataError('Unsupported native code block; completeness unproven')
         output.append(item['content'])
-    return '\n\n'.join(part for part in (code['code'],*output,code['summary']) if part)
+    parts=(code['code'],*output,code['summary'])
+    if not any(part.strip() for part in parts):
+        raise DataError('Unsupported native code block; completeness unproven')
+    return '\n\n'.join(part for part in parts if part)
 
 
 def source_absence_verified(result):
