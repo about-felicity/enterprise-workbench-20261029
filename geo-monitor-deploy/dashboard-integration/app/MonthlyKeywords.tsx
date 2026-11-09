@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { beijingDate } from "./beijingCalendar";
+import { dashboardBasePath } from "./dashboardPaths";
 
 type Stats = {
   valid: number; pending: number; mention: number; recommend: number; first: number;
   evidence: { day: string; question: string; text: string }[];
+  last_received_at?: number | null;
 };
-type Version = { number: number; questions: string[]; stats: Stats };
+type Version = { number: number; questions: string[]; stats: Stats; days?: Record<string, Stats> };
 type Term = {
   id: string; name: string; active: boolean; versions: Version[];
   comparison: "same" | "changed" | "new"; previous_stats?: Stats;
@@ -20,6 +23,28 @@ type SavedTerm = Pick<Term, "id" | "name" | "active"> & {
   versions: Pick<Version, "number" | "questions">[];
 };
 const emptyStats: Stats = { valid: 0, pending: 0, mention: 0, recommend: 0, first: 0, evidence: [] };
+type PlannedQuestion = { question: string; remaining: number; unavailable: number };
+type Lane = { id: string; daily: { date: string; progress_available: boolean; questions: PlannedQuestion[] } };
+const modelLanes: Record<string, string[]> = {
+  doubao: ["doubao1", "doubao2", "doubao3", "doubao4"], yuanbao: ["yuanbao"],
+  baidu: ["baidu_ai"], wenxin: ["wenxin_card"], wenxin_all: ["baidu_ai", "wenxin_card"],
+};
+const receiptClock = new Intl.DateTimeFormat("zh-CN", {
+  timeZone: "Asia/Shanghai", hour: "2-digit", minute: "2-digit", hourCycle: "h23",
+});
+
+function shownStats(version: Version, day: string) {
+  return day ? version.days?.[day] ?? emptyStats : version.stats;
+}
+
+function monthLastDay(month: string) {
+  const [year, number] = month.split("-").map(Number);
+  return `${month}-${new Date(Date.UTC(year, number, 0)).getUTCDate()}`;
+}
+
+function questionKey(question: string) {
+  return question.normalize("NFKC").trim().replace(/\s+/g, " ");
+}
 
 function applySave(board: Board, saved: SavedTerm, revision: number): Board {
   const before = board.terms.find(term => term.id === saved.id);
@@ -27,7 +52,9 @@ function applySave(board: Board, saved: SavedTerm, revision: number): Board {
   const term: Term = {
     ...saved,
     versions: saved.versions.map(version => ({
-      ...version, stats: before?.versions.find(old => old.number === version.number)?.stats ?? emptyStats,
+      ...version,
+      stats: before?.versions.find(old => old.number === version.number)?.stats ?? emptyStats,
+      days: before?.versions.find(old => old.number === version.number)?.days,
     })),
     comparison: before && sameVersion ? before.comparison : "new",
     previous_stats: before && sameVersion ? before.previous_stats : undefined,
@@ -69,15 +96,14 @@ function comparison(term: Term, stats: Stats) {
 
 export function MonthlyKeywords({ apiBase }: { apiBase: string }) {
   const endpoint = `${apiBase}/api/performance-entry/monthly-keywords`;
-  const [month, setMonth] = useState(() => {
-    const parts = new Intl.DateTimeFormat("en-CA", {
-      timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit",
-    }).formatToParts(new Date());
-    return `${parts.find(part => part.type === "year")?.value}-${parts.find(part => part.type === "month")?.value}`;
-  });
+  const today = beijingDate();
+  const currentMonth = today.slice(0, 7);
+  const [month, setMonth] = useState(currentMonth);
+  const [day, setDay] = useState("");
   const [product, setProduct] = useState("");
   const [model, setModel] = useState("deepseek");
   const [board, setBoard] = useState<Board | null>(null);
+  const [plan, setPlan] = useState<Lane[]>([]);
   const [refresh, setRefresh] = useState(0);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
@@ -99,6 +125,18 @@ export function MonthlyKeywords({ apiBase }: { apiBase: string }) {
       .catch(reason => { if (!controller.signal.aborted) setError(reason.message); });
     return () => controller.abort();
   }, [endpoint, month, model, product, refresh]);
+
+  useEffect(() => {
+    if (month !== currentMonth) return;
+    const controller = new AbortController();
+    fetch(`${dashboardBasePath()}/api/geo-capture/panel?date=${today}`, { cache: "no-store", signal: controller.signal })
+      .then(async response => response.ok ? await response.json() : null)
+      .then(data => {
+        if (!controller.signal.aborted) setPlan(Array.isArray(data?.models) ? data.models : []);
+      })
+      .catch(() => { if (!controller.signal.aborted) setPlan([]); });
+    return () => controller.abort();
+  }, [currentMonth, month, today, refresh]);
 
   function reset() {
     setBoard(null);
@@ -141,13 +179,25 @@ export function MonthlyKeywords({ apiBase }: { apiBase: string }) {
   }
 
   const totals = board?.terms.reduce((total, term) => {
-    const stats = term.versions[term.versions.length - 1].stats;
+    const stats = shownStats(term.versions[term.versions.length - 1], day);
     return {
       active: total.active + Number(term.active),
       valid: total.valid + stats.valid,
       pending: total.pending + stats.pending,
     };
   }, { active: 0, valid: 0, pending: 0 });
+  const planned = new Map<string, PlannedQuestion>();
+  if (month === currentMonth && (!day || day === today)) {
+    for (const lane of plan) {
+      if (!(modelLanes[model] || []).includes(lane.id) || lane.daily?.date !== today || !lane.daily.progress_available) continue;
+      for (const question of lane.daily.questions || []) {
+        const key = questionKey(question.question);
+        const previous = planned.get(key);
+        planned.set(key, { ...question, remaining: question.remaining + (previous?.remaining ?? 0),
+          unavailable: (question.unavailable ?? 0) + (previous?.unavailable ?? 0) });
+      }
+    }
+  }
 
   return <section className="panel monthly-keywords" aria-labelledby="monthly-keyword-title">
     <header className="monthly-keyword-header">
@@ -163,7 +213,7 @@ export function MonthlyKeywords({ apiBase }: { apiBase: string }) {
     </header>
     <div className="monthly-keyword-controls">
       <label>月份 <input type="month" value={month} disabled={saving} onChange={event => {
-        if (event.target.value) { reset(); setMonth(event.target.value); }
+        if (event.target.value) { reset(); setDay(""); setMonth(event.target.value); }
       }} /></label>
       <label>产品 <select value={board?.product || product} disabled={!board || saving} onChange={event => {
         reset(); setProduct(event.target.value);
@@ -171,19 +221,27 @@ export function MonthlyKeywords({ apiBase }: { apiBase: string }) {
       <label>模型 <select value={model} disabled={!board || saving} onChange={event => {
         reset(); setModel(event.target.value);
       }}>{Object.entries(board?.models || { [model]: model }).map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select></label>
+      <label>采集日期 <input type="date" value={day} min={month + "-01"}
+        max={month === currentMonth ? today : monthLastDay(month)} disabled={!board || saving}
+        onChange={event => {
+          if (!event.target.value || (event.target.validity.valid && event.target.value.startsWith(month + "-"))) {
+            setDay(event.target.value);
+          }
+        }} /></label>
+      {day && <button type="button" onClick={() => setDay("")}>看整月</button>}
       <button type="button" disabled={saving} onClick={() => { setError(""); setRefresh(value => value + 1); }}><ActionIcon kind="refresh" />刷新</button>
     </div>
     {error && <p role="alert">{error}</p>}
     {notice && <p role="status">{notice}</p>}
     {!board && !error && <p role="status">加载词表中…</p>}
     {!!board?.terms.length && totals && <>
-      <dl className="monthly-keyword-overview" aria-label="当前产品和平台的月度样本汇总">
+      <dl className="monthly-keyword-overview" aria-label="当前产品和平台的样本汇总">
         <div><dt>已启用二级词</dt><dd>{totals.active}<small> / {board.terms.length} 个</small></dd></div>
-        <div><dt>本月有效样本</dt><dd>{totals.valid}<small> 轮</small></dd></div>
+        <div><dt>{day ? "当日有效样本" : "本月有效样本"}</dt><dd>{totals.valid}<small> 轮</small></dd></div>
         <div><dt>已回传待分析</dt><dd>{totals.pending}<small> 轮</small></dd></div>
       </dl>
       <div className="monthly-keyword-guide">
-        <p>豆包、百度、文心、元宝对当前月启用的实际问句每天安排一轮。样本回传并完成分析后计入本月统计。</p>
+        <p><strong>{day || month + " 整月"}</strong> · 北京时间。豆包、百度、文心、元宝对当前月启用的问句每日安排一轮，完成分析后计入统计。</p>
         <a href="#capture">查看采集进度 <span aria-hidden="true">→</span></a>
       </div>
     </>}
@@ -206,10 +264,15 @@ export function MonthlyKeywords({ apiBase }: { apiBase: string }) {
         onClick={() => setDraft({ name: "", questions: "" })}><ActionIcon kind="add" />添加第一个二级词</button>}
     </div>}
     {!!board?.terms.length && <div className="monthly-keyword-table"><table aria-label="二级词监控结果">
-      <thead><tr><th scope="col">二级词与问句</th><th scope="col">样本状态</th><th scope="col">正文提及率</th><th scope="col">明确推荐率</th><th scope="col">首推率</th><th scope="col">推荐率环比</th></tr></thead>
+      <thead><tr><th scope="col">二级词与问句</th><th scope="col">样本与日期</th><th scope="col">正文提及率</th><th scope="col">明确推荐率</th><th scope="col">首推率</th><th scope="col">推荐率月度环比</th></tr></thead>
       <tbody>{board.terms.map(term => {
         const version = term.versions[term.versions.length - 1];
-        const stats = version.stats;
+        const stats = shownStats(version, day);
+        const slots = term.active ? version.questions.map(q => planned.get(questionKey(q))) : [];
+        const remaining = slots.reduce((sum, slot) => sum + (slot?.remaining ?? 0), 0);
+        const unavailable = slots.reduce((sum, slot) => sum + (slot?.unavailable ?? 0), 0);
+        const receipt = stats.last_received_at ? new Date(stats.last_received_at * 1000) : null;
+        const emptyLabel = remaining ? "今日待采" : unavailable ? "今日未取得" : day ? "当天暂无回传" : "暂无回传";
         return <tr key={term.id}>
           <th scope="row">
             <div className="monthly-keyword-term">
@@ -231,11 +294,14 @@ export function MonthlyKeywords({ apiBase }: { apiBase: string }) {
                 onClick={() => void write(term.active ? "pause" : "resume", term)}>{term.active ? "停用" : "重新启用"}</button>
             </div>}
           </th>
-          <td data-label="样本状态">
+          <td data-label="样本与日期">
             {stats.valid ? <strong className="monthly-keyword-sample">{stats.valid} 轮有效</strong>
-              : <span className="monthly-keyword-sample" data-empty="true">{stats.pending ? "已回传" : "暂无回传"}</span>}
+              : <span className="monthly-keyword-sample" data-empty="true">{stats.pending ? "已回传" : emptyLabel}</span>}
             {stats.pending > 0 && <small>{stats.pending} 轮待分析</small>}
             {stats.valid > 0 && stats.valid < 10 && <small>样本较少</small>}
+            {receipt && <small className="monthly-keyword-receipt">最近回传 <time dateTime={receipt.toISOString()}>{beijingDate(receipt)} {receiptClock.format(receipt)}</time></small>}
+            {remaining > 0 && <small>今日还剩 {remaining} 轮</small>}
+            {unavailable > 0 && <small>今日未取得 {unavailable} 轮</small>}
           </td>
           <td data-label="正文提及率"><RateMetric hits={stats.mention} valid={stats.valid} /></td>
           <td data-label="明确推荐率"><RateMetric hits={stats.recommend} valid={stats.valid} />
@@ -244,14 +310,14 @@ export function MonthlyKeywords({ apiBase }: { apiBase: string }) {
             </details>}
           </td>
           <td data-label="首推率"><RateMetric hits={stats.first} valid={stats.valid} /></td>
-          <td data-label="推荐率环比"><span className="monthly-keyword-comparison">{comparison(term, stats)}</span></td>
+          <td data-label="推荐率月度环比"><span className="monthly-keyword-comparison">{comparison(term, version.stats)}</span></td>
         </tr>;
       })}</tbody>
     </table></div>}
     {!!board?.previous_only.length && <p>
       本月未配置的上月词：{board.previous_only.join("、")}{" "}
       <button type="button" disabled={saving} onClick={() => {
-        setProduct(board.product); setMonth(board.previous_month); reset();
+        setProduct(board.product); setMonth(board.previous_month); setDay(""); reset();
       }}>查看上月</button>
     </p>}
   </section>;

@@ -137,32 +137,44 @@ def samples(conn, start, end, model, questions):
     """, (storage_model, storage_model, start, end, model, model, model, sorted(questions)))
 
 
-def measure(version, runs, product):
-    result = dict(valid=0, pending=0, mention=0, recommend=0, first=0, evidence=[])
+def empty_stats():
+    return dict(valid=0, pending=0, mention=0, recommend=0, first=0, evidence=[], last_received_at=None)
+
+
+def measure(version, runs, product, *, days=None):
+    result = empty_stats()
     for question in version["questions"]:
         for row in runs.get(question_key(question), ()):
             observed = row["observed"]
             if observed is None or not any(start <= observed and (end is None or observed < end)
                                           for start, end in version["windows"]):
                 continue
-            if row["review"] not in ("ai_verified", "verified_no_products"):
-                result["pending"] += 1
+            day = str(row["day"])
+            totals = [result] if days is None else [result, days.setdefault(day, empty_stats())]
+            observed = float(observed)
+            reviewed = row["review"] in ("ai_verified", "verified_no_products")
+            for stats in totals:
+                stats["last_received_at"] = max(stats["last_received_at"] or 0, observed)
+                stats["valid" if reviewed else "pending"] += 1
+            if not reviewed:
                 continue
-            result["valid"] += 1
             body = recommendation_body(row["answer"])
             mentioned = product in own_product_mentions(body)
-            result["mention"] += int(mentioned)
             if not mentioned:
                 continue
+            for stats in totals:
+                stats["mention"] += 1
             for item in row["products"] or ():
                 brand, name, _ = _product_fields(item)
                 evidence = str(item.get("evidence") or "").strip()
                 if product not in own_product_mentions(f"{brand} {name}") or not evidence or evidence not in body:
                     continue
-                result["recommend"] += 1
-                result["first"] += int(any(FIRST.search(line) and evidence in line for line in body.splitlines()))
-                if len(result["evidence"]) < 8:
-                    result["evidence"].append({"day": str(row["day"]), "question": row["prompt"], "text": evidence})
+                first = int(any(FIRST.search(line) and evidence in line for line in body.splitlines()))
+                for stats in totals:
+                    stats["recommend"] += 1
+                    stats["first"] += first
+                    if len(stats["evidence"]) < 8:
+                        stats["evidence"].append({"day": day, "question": row["prompt"], "text": evidence})
                 break
     return result
 
@@ -186,7 +198,9 @@ def board(product, month, model):
                     group.setdefault(question_key(row["prompt"]), []).append(row)
     for term in terms:
         for version in term["versions"]:
-            version["stats"] = measure(version, runs, product)
+            days = {}
+            version["stats"] = measure(version, runs, product, days=days)
+            version["days"] = days
         current = term["versions"][-1]
         old = next((item["versions"][-1] for item in last_terms
                     if question_key(item["name"]) == question_key(term["name"])), None)

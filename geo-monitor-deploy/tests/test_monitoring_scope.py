@@ -3,10 +3,26 @@ from monitor_core.monitoring_scope import scope_fields
 from monitor_core.ingestion import normalize_remote_record, normalize_doubao_payload
 from monitor_core.analytics import daily_owned_product_recommendations
 from monitor_core.recommendation_questions import canonical_recommendation_question
-from monitor_core.monthly_keywords import samples
+from monitor_core.monthly_keywords import measure, samples
 
 
 class ScopeTests(unittest.TestCase):
+    def test_daily_totals_preserve_version_windows_and_sample_status(self):
+        version = {'questions': ['实际问句'], 'windows': [[100, 400]]}
+        def run(day, observed, review):
+            return {'day': day, 'observed': observed, 'review': review,
+                    'answer': '完整正文', 'prompt': '实际问句', 'products': []}
+        rows = {'实际问句': [run('2026-11-08', 90, 'ai_verified'),
+                          run('2026-11-09', 110, 'ai_verified'),
+                          run('2026-11-09', 130, 'ai_pending'),
+                          run('2026-11-10', 200, 'verified_no_products')]}
+        days = {}
+        monthly = measure(version, rows, '梵玢染发剂（含黑茶色）', days=days)
+        self.assertEqual(set(days), {'2026-11-09', '2026-11-10'})
+        self.assertEqual((days['2026-11-09']['valid'], days['2026-11-09']['pending']), (1, 1))
+        self.assertEqual(days['2026-11-09']['last_received_at'], 130)
+        self.assertEqual((monthly['valid'], monthly['pending'], monthly['last_received_at']), (2, 1, 200))
+
     def test_primary_and_secondary_use_original_not_canonical_category(self):
         self.assertEqual(scope_fields({'prompt':'推荐一款染发剂'})['monitoring_scope'], 'primary')
         record = {'question':'染发剂推荐', 'prompt':'推荐一款植萃染发剂'}
