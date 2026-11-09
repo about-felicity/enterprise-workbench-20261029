@@ -105,8 +105,7 @@ function KeywordTable({ rows, models, day, cutoff, metric, plans, expanded, onEx
   const countLabel = metric === "recommend" ? "累计推荐 / 有效回答" : "累计命中 / 有效回答";
   const firstColumns = monthly ? ["我的产品", "二级词与问句", "有数据天数", `平均每日${metrics[metric]}`, countLabel]
     : ["我的产品", "二级词与问句"];
-  return <div className={`owned-product-table ${monthly ? "owned-product-summary-table" : "owned-product-daily-table"} keyword-board-table`}
-    role="region" aria-label={monthly ? "月度汇总表滚动区" : "每日表现表滚动区"} tabIndex={0}>
+  return <div className={`owned-product-table ${monthly ? "owned-product-summary-table" : "owned-product-daily-table"} keyword-board-table`}>
     <table aria-label={monthly ? "二级词月度有效日汇总" : "二级词每日平台表现"}>
       <colgroup>
         {(monthly ? [13, 15, 7, 9, 9] : [16, 15]).map((width, i) => <col key={i} style={{ width: width + "%" }} />)}

@@ -181,12 +181,19 @@ def measure(version, runs, product, *, days=None, evidence_details=True):
 
 
 def matrix_samples(conn, start, end, questions):
-    # Start with the selected month's complete answers. For each run, pick the
-    # first receipt before matching its original prompt against the word list.
+    # The prompt index narrows the candidate runs. Still verify the first
+    # receipt: a later replay may carry a different prompt for the same run.
     return conn.execute("""
-        WITH matched AS MATERIALIZED (
+        WITH candidates AS MATERIALIZED (
+            SELECT DISTINCT e.model_id,e.run_id
+            FROM monitor_ingest_events e
+            WHERE e.model_id=ANY(%s) AND e.run_id<>''
+              AND md5(btrim(regexp_replace(normalize(
+                  COALESCE(e.record->>'wire_question',e.record->>'prompt',e.record->>'question'), NFKC),
+                  '[[:space:]]+', ' ', 'g'))) = ANY(ARRAY(SELECT md5(q) FROM unnest(%s::text[]) AS q))
+        ), matched AS MATERIALIZED (
             SELECT r.run_id,r.model_id,r.day,r.answer,r.payload,e.prompt,e.received_at
-            FROM monitor_runs r
+            FROM candidates c JOIN monitor_runs r USING (model_id,run_id)
             JOIN LATERAL (
                 SELECT COALESCE(e.record->>'wire_question',e.record->>'prompt',e.record->>'question') AS prompt,
                        e.received_at
@@ -194,7 +201,7 @@ def matrix_samples(conn, start, end, questions):
                 WHERE e.model_id=r.model_id AND e.run_id=r.run_id AND e.run_id<>''
                 ORDER BY e.received_at,e.request_id LIMIT 1
             ) e ON true
-            WHERE r.model_id=ANY(%s) AND r.day >= %s AND r.day < %s
+            WHERE r.day >= %s AND r.day < %s
               AND r.status='success' AND r.answer <> ''
               AND r.payload->>'body_capture_complete' IS DISTINCT FROM 'false'
               AND btrim(regexp_replace(normalize(e.prompt, NFKC), '[[:space:]]+', ' ', 'g')) = ANY(%s)
@@ -206,7 +213,7 @@ def matrix_samples(conn, start, end, questions):
                (SELECT jsonb_agg(p.payload) FROM monitor_products p
                 WHERE p.model_id=r.model_id AND p.run_id=r.run_id) AS products
         FROM matched r
-    """, (["deepseek", "doubao", "wenxin", "yuanbao"], start, end, sorted(questions)))
+    """, (["deepseek", "doubao", "wenxin", "yuanbao"], sorted(questions), start, end, sorted(questions)))
 
 
 def matrix(month):

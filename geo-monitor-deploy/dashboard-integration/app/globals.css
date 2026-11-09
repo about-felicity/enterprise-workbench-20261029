@@ -2327,11 +2327,8 @@ button {
 .keyword-owned-board .owned-product-summary-heading small { font-size: 13px; }
 .keyword-owned-board .owned-product-summary-heading b { font-size: 17px; }
 .keyword-owned-board .owned-product-summary { margin-bottom: 22px; }
-.keyword-board-table { max-height: clamp(255px, 40vh, 460px); scrollbar-color: #9ccfbd #edf7f3; }
-.keyword-board-table.owned-product-daily-table { max-height: 570px; }
 .keyword-board-table > table { font-size: 14px; }
-.keyword-board-table > table > thead th { position: sticky; top: 0; z-index: 4; font-size: 13px; text-align: left; }
-.keyword-board-table.owned-product-summary-table > table > thead th:first-child { z-index: 5; }
+.keyword-board-table > table > thead th { font-size: 13px; text-align: left; }
 .keyword-board-row > :is(th, td) { padding: 11px 10px; vertical-align: middle; overflow-wrap: anywhere; }
 .keyword-board-table .keyword-board-row > th.keyword-product { text-align: left; color: var(--ink); background: #fff; border-bottom: 1px solid #e6efeb; }
 .keyword-board-table .keyword-board-row:nth-child(even) > th.keyword-product { background: #fbfdfc; }
@@ -2373,7 +2370,7 @@ button {
 .keyword-capture-link { align-self: center; padding-top: 18px; color: #17634e; font-size: 14px; font-weight: 650; }
 
 @container keyword-board (max-width: 1040px) {
-  .keyword-board-table { max-height: 460px; border: 0; background: transparent; box-shadow: none; }
+  .keyword-board-table { border: 0; background: transparent; box-shadow: none; }
   .keyword-board-table > table, .keyword-board-table > table > tbody { display: block; }
   .keyword-board-table > table > colgroup { display: none; }
   .keyword-board-table > table > thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
