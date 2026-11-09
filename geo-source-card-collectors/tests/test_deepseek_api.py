@@ -84,6 +84,30 @@ class APIDurabilityTests(unittest.TestCase):
             "INVALID_RESPONSE",
         )
 
+    def test_rewrite_writer_keeps_intact_draft_with_empty_trailing_key(self):
+        run = self.root / 'rewrite'
+        draft = '# 独立标题\n\n完整正文。'
+        malformed = json.dumps({'draft_markdown': draft}, ensure_ascii=False)[:-1] + ',"}'
+        reply = self.session.post.return_value.json.return_value
+        reply['id'] = 'test-confirmed-answer'
+        reply['choices'][0]['message']['content'] = malformed
+        args = {'stage': 'writer', 'meta': {'workflow': 'rewrite-v2'}}
+        self.assertEqual(self.client.complete('task', run, **args), {'draft_markdown': draft})
+        self.assertEqual(json.loads((run/'answer.json').read_text('utf8'))['content'], malformed)
+        self.assertEqual(self.client.complete('task', run, **args), {'draft_markdown': draft})
+        self.session.post.assert_called_once()
+
+    def test_writer_projection_does_not_accept_incomplete_or_other_stages(self):
+        reply = self.session.post.return_value.json.return_value
+        reply['id'] = 'test-confirmed-answer'
+        choice = reply['choices'][0]
+        choice['message']['content'] = '{"draft_markdown":"# 标题\\n正文","}'
+        with self.assertRaisesRegex(APIError, 'invalid_response'):
+            self.client.complete('task', self.root/'review', stage='review', meta={'workflow':'rewrite-v2'})
+        choice['message']['content'] = '{"draft_markdown":"# 标题\\n截断正文'
+        with self.assertRaisesRegex(APIError, 'invalid_response'):
+            self.client.complete('task', self.root/'rewrite', stage='writer', meta={'workflow':'rewrite-v2'})
+
     def test_http_failure_does_not_expose_response_or_retry(self):
         self.session.post.return_value.status_code = 401
         run = self.root / "run"

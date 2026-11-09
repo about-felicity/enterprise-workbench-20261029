@@ -24,6 +24,39 @@ def request_payload(prompt,max_tokens,system_prompt=None):
         'thinking':{'type':'disabled'},'max_tokens':max_tokens}
 
 
+def project_writer_receipt(directory, receipt, stage, meta):
+    """Recover a complete rewrite-v2 draft followed by the observed empty key.
+
+    Require a finished receipt and an intact JSON string. Never guess missing
+    article text or allow a truncated generation to pass as complete.
+    """
+    if stage != 'writer' or (meta or {}).get('workflow') != 'rewrite-v2':
+        return None
+    if not isinstance(receipt, dict) or receipt.get('finish_reason') != 'stop' or not receipt.get('request_id'):
+        return None
+    raw = receipt.get('content')
+    if not isinstance(raw, str):
+        return None
+    text = raw.strip()
+    prefix = re.match(r'\{\s*"draft_markdown"\s*:\s*', text)
+    if not prefix:
+        return None
+    try:
+        draft, end = json.JSONDecoder().raw_decode(text, prefix.end())
+    except json.JSONDecodeError:
+        return None
+    if text[end:].strip() != ',"}' or not isinstance(draft, str) or not draft.lstrip().startswith('# '):
+        return None
+    if not draft.strip().partition('\n')[2].strip():
+        return None
+    atomic_json(directory / 'writer_response_projection.json', {
+        'reason': 'empty_trailing_key_after_complete_draft',
+        'content_sha256': hashlib.sha256(raw.encode('utf8')).hexdigest(),
+        'new_paid_requests': 0,
+    })
+    return {'draft_markdown': draft}
+
+
 class DeepSeekClient:
     def __init__(self, key_file, *, session=None, budget=None):
         self._key = Path(key_file).read_text("utf-8-sig").strip()
@@ -88,6 +121,17 @@ class DeepSeekClient:
                 if not isinstance(result, dict):
                     raise APIError("invalid_cached_response")
                 return result
+            answer_path = directory / 'answer.json'
+            if (stage == 'writer' and (meta or {}).get('workflow') == 'rewrite-v2'
+                    and previous.get('state') == 'INVALID_RESPONSE' and previous.get('error_type') == 'JSONDecodeError'
+                    and answer_path.is_file()):
+                receipt = json.loads(answer_path.read_text('utf8'))
+                projected = project_writer_receipt(directory, receipt, stage, meta)
+                if projected is not None:
+                    atomic_json(result_path, projected)
+                    atomic_json(state_path, {**previous, 'state': 'RESPONDED', 'finished_epoch': time.time(),
+                                            'usage': receipt.get('usage'), 'reconciled_format': True})
+                    return projected
             raise APIError("previous_request_requires_reconciliation", uncertain=True)
         if result_path.exists():
             raise APIError("orphan_cached_response")
@@ -172,16 +216,14 @@ class DeepSeekClient:
                 self.budget.settle(reservation, data.get("usage"))
             choice = data["choices"][0]
             content = choice["message"]["content"]
-            atomic_json(
-                directory / "answer.json",
-                {
-                    "content": content,
-                    "finish_reason": choice["finish_reason"],
-                    "usage": data.get("usage"),
-                    "request_id": data.get("id"),
-                    "model": data.get("model"),
-                },
-            )
+            receipt = {
+                "content": content,
+                "finish_reason": choice["finish_reason"],
+                "usage": data.get("usage"),
+                "request_id": data.get("id"),
+                "model": data.get("model"),
+            }
+            atomic_json(directory / "answer.json", receipt)
             if choice["finish_reason"] != "stop":
                 atomic_json(
                     state_path,
@@ -196,7 +238,12 @@ class DeepSeekClient:
                 # Repeating the same capped payload is unlikely to repair
                 # truncation. Keep the paid evidence and stop for inspection.
                 raise APIError("output_incomplete")
-            result = json.loads(content)
+            try:
+                result = json.loads(content)
+            except json.JSONDecodeError:
+                result = project_writer_receipt(directory, receipt, stage, meta)
+                if result is None:
+                    raise
             if not isinstance(result, dict):
                 raise TypeError("invalid_json_object")
         except (KeyError, IndexError, ValueError, TypeError) as error:
