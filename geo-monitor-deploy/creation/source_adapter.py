@@ -39,7 +39,7 @@ def channel(model,serial):
 def catalog():
     return {'dates':[r['day'] for r in query("SELECT DISTINCT day::text AS day FROM monitor_runs WHERE model_id in ('deepseek','wenxin') AND status='success' ORDER BY day DESC LIMIT 120")],
             'questions':[r['question'] for r in query("SELECT DISTINCT question FROM monitor_runs WHERE model_id in ('deepseek','wenxin') AND status='success' ORDER BY question")],
-            'channels':[{'id':'deepseek','name':'DeepSeek'},{'id':'wenxin_card','name':'文心卡片'},{'id':'baidu_ai','name':'百度卡片'}]}
+            'channels':[{'id':'deepseek','name':'DeepSeek 历史素材'},{'id':'wenxin_card','name':'文心卡片'},{'id':'baidu_ai','name':'百度卡片'}]}
 
 
 def observations(day,question,channels,limit=120):

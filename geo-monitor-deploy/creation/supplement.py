@@ -29,12 +29,13 @@ def pending(task):
 def refresh(task,question,round_root,attempt):
  from . import studio
  pid=task['plan']['plan_id'];path=studio.day_path(pid,task['date']);jid=task.get('jobs',{}).get(question)
+ channels=materials.capture_channels(task['plan'].get('channels'))
  if jid:
   root=runtime.job_root(jid)
   with process_lock(root/'api/worker.lock',blocking=False):
    day_state=runtime.read(root/'days'/task['date']/'day.json')
    if day_state.get('status') not in {'blocked_insufficient_sources','blocked_no_media_articles'} or list((root/'queue').glob('*/ticket.json')) or runtime.articles(root):return False
-   job=runtime.read(root/'job.json');rows=materials.records(task['date'],question,task['plan']['channels'],studio.capture_root(pid))
+   job=runtime.read(root/'job.json');rows=materials.records(task['date'],question,channels,studio.capture_root(pid))
    if not rows:return False
    backup=root/'supplement-history'/str(attempt);backup.mkdir(parents=True,exist_ok=True)
    for name in ['job.json','private_observations.jsonl']:
@@ -45,7 +46,7 @@ def refresh(task,question,round_root,attempt):
    atomic_json(root/'job.json',{**job,'preparation':'pending','material_shortfall':'','supplement_attempt':attempt})
    runtime.resume(root,check_balance=False)
  else:
-  if not materials.records(task['date'],question,task['plan']['channels'],studio.capture_root(pid)):return False
+  if not materials.records(task['date'],question,channels,studio.capture_root(pid)):return False
   with process_lock(path.with_suffix('.lock'),blocking=True):
    latest=runtime.read(path);latest.setdefault('skipped_questions',{}).pop(question,None);atomic_json(path,latest)
  return True
@@ -91,8 +92,7 @@ def tick(now=None):
    continue
   if s.get('status')=='waiting_verification' or s.get('next_at',0)>now or running>=2:continue
   order=p['questions'];last=s.get('question');start=(order.index(last)+1)%len(order) if last in order else 0
-  question=next(q for q in order[start:]+order[:start] if q in questions);channels=[m for m in p['channels'] if m in {'baidu_ai','wenxin_card'}]
-  if not channels:continue
+  question=next(q for q in order[start:]+order[:start] if q in questions);channels=materials.capture_channels(p.get('channels'))
   origin=studio.capture_root(p['plan_id'])
   original_progress=[v for v in materials.progress(task['date'],origin) if v['id'] in channels]
   if any(v['blocked'] or v.get('recovery',{}).get('blocked') for v in original_progress):

@@ -31,6 +31,7 @@ MODELS['deepseek']['maximum_rounds']=20
 MODELS['deepseek2']['maximum_rounds']=20
 DEEPSEEK_CHANNELS={'deepseek':('redroid-deepseek','deepseek-hpe14-android13'),
                    'deepseek2':('redroid-deepseek-account2','deepseek-hpe14-account2')}
+DEEPSEEK_DISABLED = 'DeepSeek GEO 采集已停用'
 BUSY = {'active','activating','reloading','deactivating'}
 
 def job_kind(job):
@@ -219,6 +220,7 @@ class Controller:
             daily=DailyTasks(self).view(db,day)
             result=[]
             for model,meta in MODELS.items():
+                if model in DEEPSEEK_CHANNELS:continue
                 settings=dict(db.execute('select * from settings where model=?',(model,)).fetchone())
                 job=self.current(db,model)
                 login=read_login(db,model)
@@ -284,6 +286,7 @@ class Controller:
                     'schedule':schedule_view(self.base)}
 
     def action(self,model,action,value,key):
+        if model in DEEPSEEK_CHANNELS:raise ValueError(DEEPSEEK_DISABLED)
         if model in read(self.base/'daily_plan.json').get('desktop_collectors',[]) and action!='settings':
             raise ValueError('已切换本机浏览器插件，请在本机插件中开始、暂停、继续或登录')
         if model not in MODELS or action not in {'settings','new','pause','resume','stop','login','login_sync','login_open'}:

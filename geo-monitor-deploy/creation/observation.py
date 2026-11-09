@@ -14,7 +14,7 @@ BASE = Path('/opt/monitor/geo-content')
 OUTPUT = BASE / 'observations/20261021-22'
 EXPECTED_DAY = '2026-10-22'
 END = datetime(2026, 10, 22, 17, tzinfo=ZONE)
-SERVICES = ['geo-daily-dispatch.timer', 'geo-daily-control', 'geo-creation-studio', 'geo-content-worker', 'geo-content-api', 'geo-deepseek-public-ingest', 'geo-deepseek-upload-tunnel']
+SERVICES = ['geo-daily-dispatch.timer', 'geo-daily-control', 'geo-creation-studio', 'geo-content-worker', 'geo-content-api']
 
 
 def read(path):

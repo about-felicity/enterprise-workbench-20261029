@@ -169,7 +169,7 @@ class DailyTasks:
         valid_day(day)
         try:counts=self.counts(day);error=None
         except Exception:counts={};error='当天入库进度暂不可用，后台保留原计划，请稍后重试'
-        return {model:self.snapshot(db,model,day,counts.get(model,{}),error) for model in MODELS}
+        return {model:self.snapshot(db,model,day,counts.get(model,{}),error) for model in MODELS if model not in DEEPSEEK_CHANNELS}
 
     def request(self,db,model,day,config,revision,desired,*,apply=False):
         if valid_day(day)<today():raise ValueError('历史计划只供查看，请选择今天或未来日期')
@@ -191,6 +191,7 @@ class DailyTasks:
                 'revision':revision,'daily':True}
 
     def ensure_scheduled(self,db,model,day,desired='running'):
+        if model in DEEPSEEK_CHANNELS:return
         settings=db.execute('select value,revision from settings where model=?',(model,)).fetchone()
         db.execute('insert or ignore into daily_tasks values(?,?,?,?,?,?,?,?,?)',
                    (model,day,settings[0],settings[1],desired,'queued' if desired=='running' else 'not_started',None,time.time(),None))
@@ -208,7 +209,7 @@ class DailyTasks:
                 health={'status':'retrying','checked_at':time.time(),'error_code':type(exc).__name__}
             atomic(self.control.base/'secondary_monitoring_health.json',health)
         counts=self.counts(day)
-        order=['doubao1','doubao2','doubao3','doubao4','baidu_ai','wenxin_card','yuanbao','deepseek','deepseek2']
+        order=['doubao1','doubao2','doubao3','doubao4','baidu_ai','wenxin_card','yuanbao']
         for model in order:
             try:self._one(model,day,counts)
             except Exception as exc:
@@ -220,10 +221,11 @@ class DailyTasks:
                 with self.control.connect() as db:
                     db.execute("update daily_tasks set error=null,updated=? where model=? and day=? and error like '后台正在重试：%'",(time.time(),model,day))
         with self.control.connect() as db:
-            rows=[dict(r) for r in db.execute('select model,status,batch,error,updated from daily_tasks where day=?',(day,))]
+            rows=[dict(r) for r in db.execute('select model,status,batch,error,updated from daily_tasks where day=?',(day,)) if r['model'] not in DEEPSEEK_CHANNELS]
         plan=read(self.control.base/'daily_plan.json')
         by_model={r['model']:r for r in rows}
         for model in MODELS:
+            if model in DEEPSEEK_CHANNELS:continue
             row=by_model.get(model,{})
             desktop=model in plan.get('desktop_collectors',[])
             state=row.get('status') or ('external' if desktop else 'not_scheduled')

@@ -18,9 +18,14 @@ class StudioTests(unittest.TestCase):
  def plan(self):
   kb=self.kb();return studio.save_plan({'product_id':kb['product_id'],'questions':['问题甲','问题乙'],'channels':['deepseek','baidu_ai'],'capture_time':'01:00','writing_time':'04:00','start_date':'2099-10-17','enabled':True,'rounds':1,'max_per_category':1})
  def test_plan_no_longer_requires_analysis_time(self):
-  kb=self.kb();p=studio.save_plan({'product_id':kb['product_id'],'enabled':False,'questions':['问题'],'channels':['deepseek'],'capture_time':'01:00','start_date':'2099-10-17'})
+  kb=self.kb();p=studio.save_plan({'product_id':kb['product_id'],'enabled':False,'questions':['问题'],'channels':['baidu_ai'],'capture_time':'01:00','start_date':'2099-10-17'})
   saved=studio.plan(p['plan_id']);self.assertEqual(saved['analysis_start'],'after_capture')
   self.assertEqual(saved['writing_time'],'01:00')
+ def test_deepseek_only_cannot_be_saved_as_a_capture_plan(self):
+  kb=self.kb()
+  with self.assertRaisesRegex(ValueError,'DeepSeek 采集已停用'):
+   studio.save_plan({'product_id':kb['product_id'],'enabled':True,'questions':['问题'],'channels':['deepseek']})
+
  def test_word_import_preserves_original_bytes_and_table_paragraphs(self):
   buf=io.BytesIO()
   with zipfile.ZipFile(buf,'w') as z:z.writestr('word/document.xml','<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body><w:p><w:r><w:t>产品知识</w:t></w:r></w:p><w:tbl><w:tr><w:tc><w:p><w:r><w:t>规格200ml</w:t></w:r></w:p></w:tc></w:tr></w:tbl></w:body></w:document>')
@@ -43,7 +48,10 @@ class StudioTests(unittest.TestCase):
   self.assertNotEqual(studio.capture_root(pid),materials.ROOT)
  def test_capture_completion_ignores_old_clock_and_fairly_enqueues_once(self):
   p=studio.plan(self.plan()['plan_id']);p['writing_time']='23:59';now=datetime(2099,10,17,3,tzinfo=ZoneInfo('Asia/Shanghai'))
-  progress=[{'id':'deepseek','completed':2},{'id':'baidu_ai','completed':1}]
+  self.assertEqual(p['channels'],['baidu_ai'])
+  p['channels']=['deepseek','baidu_ai']
+  runtime.atomic_json(studio.capture_root(p['plan_id'])/'days/2099-10-17/config.json',{'studio_plan':p})
+  progress=[{'id':'deepseek','completed':0,'blocked':{'kind':'login_required'}},{'id':'baidu_ai','completed':1}]
   with patch.object(materials,'progress',return_value=progress),patch.object(runtime,'action') as enqueue:
    studio.advance(p,'2099-10-17',now.replace(hour=5));enqueue.assert_not_called()
   progress[1]['completed']=2
@@ -51,7 +59,7 @@ class StudioTests(unittest.TestCase):
    studio.advance(p,'2099-10-17',now);self.assertEqual(enqueue.call_count,1)
    studio.advance(p,'2099-10-17',now.replace(hour=4));self.assertEqual(enqueue.call_count,2)
    studio.advance(p,'2099-10-17',now.replace(hour=6));self.assertEqual(enqueue.call_count,2)
-   self.assertTrue(all(c.args[1]['studio_plan_id']==p['plan_id'] for c in enqueue.call_args_list))
+   self.assertTrue(all(c.args[1]['studio_plan_id']==p['plan_id'] and c.args[1]['channels']==['baidu_ai'] for c in enqueue.call_args_list))
  def test_enqueue_error_is_durable_and_not_retried_without_operator(self):
   p=studio.plan(self.plan()['plan_id']);progress=[{'id':m,'completed':2} for m in p['channels']]
   with patch.object(materials,'progress',return_value=progress),patch.object(runtime,'action',side_effect=ValueError('余额不可用')) as enqueue:
@@ -77,7 +85,7 @@ class StudioTests(unittest.TestCase):
 
  def test_cross_midnight_capture_keeps_unfinished_original_batch(self):
   runtime.atomic_json(materials.ROOT/'days/2099-10-16/config.json',{'questions':['甲'],'channels':['deepseek'],'rounds':1})
-  with patch.object(materials,'progress',return_value=[{'id':'deepseek','completed':0}]):
+  with patch.object(materials,'progress',return_value=[{'id':'baidu_ai','completed':0},{'id':'wenxin_card','completed':0}]):
    self.assertEqual(materials.next_day({},'2099-10-17'),'2099-10-16')
    self.assertEqual(materials.next_day({'paused_day':'2099-10-16'},'2099-10-17'),'2099-10-17')
 

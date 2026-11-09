@@ -192,14 +192,19 @@ class DailyTaskTests(unittest.TestCase):
         self.assertEqual(self.model()['daily']['desired'],'paused')
         self.assertEqual(self.model()['daily']['config']['rounds'],8)
 
-    def test_confirmed_login_loss_waits_for_manual_check_without_probe_loop(self):
-        self.apply('deepseek',rounds=3)
+    def test_old_deepseek_row_never_probes_or_blocks_other_channels(self):
         with self.c.connect() as db:
-            db.execute('update daily_tasks set status=? where model=?',('waiting_login','deepseek'))
-            db.execute('insert or replace into logins values(?,?)',('deepseek',json.dumps({'status':'login_required','checked_at':0})))
+            cfg=self.tasks.config(db,'deepseek',self.day)
+            db.execute('insert into daily_tasks values(?,?,?,?,?,?,?,?,?)',
+                       ('deepseek',self.day,json.dumps(cfg),1,'running','waiting_login',None,time.time(),None))
+            self.tasks.ensure_scheduled(db,'deepseek2',self.day)
+            self.assertIsNone(self.tasks.row(db,'deepseek2',self.day))
+        self.apply()
         with patch.object(self.c,'_login') as probe:
-            self.tasks.reconcile();self.tasks.reconcile();probe.assert_not_called()
-        self.assertEqual(self.model('deepseek')['daily']['status'],'waiting_login')
+            self.tasks.reconcile();probe.assert_not_called()
+        self.assertEqual(len(self.fixture.system.starts),1)
+        status=read(self.root/'daily'/self.day/'status.json')
+        self.assertEqual({row['model'] for row in status['models']},{'baidu_ai'})
 
     def test_save_replaces_uncommitted_old_launch_instead_of_starting_old_settings(self):
         self.apply()
@@ -272,18 +277,5 @@ class DailyTaskTests(unittest.TestCase):
         with self.c.connect() as db:job=self.c.current(db,'baidu_ai')
         self.assertTrue(self.c.marker(job).exists())
         self.assertEqual(self.model()['daily']['desired'],'paused')
-    def test_deepseek_continuation_carries_the_last_send_time_across_batches(self):
-        self.apply('deepseek',rounds=3)
-        old=self.model('deepseek')['current']['batch']
-        rate={'last_prompt_epoch':time.time()-20}
-        atomic(self.root/'batches'/old/'collector/deepseek_last_prompt.json',rate)
-        with self.c.connect() as db:
-            db.execute('insert or replace into logins values(?,?)',('deepseek',json.dumps(
-                {'status':'ready','checked_at':time.time(),'revision':2,'batch':old})))
-        self.tasks.reconcile()
-        batch=self.model('deepseek')['current']['batch'];self.assertNotEqual(batch,old)
-        shared=read(self.root/'deepseek_last_send.json')
-        self.assertEqual(shared['last_prompt_epoch'],rate['last_prompt_epoch'])
-        self.assertEqual(read(self.root/'batches'/old/'collector/deepseek_last_prompt.json'),rate)
 
 if __name__=='__main__':unittest.main()

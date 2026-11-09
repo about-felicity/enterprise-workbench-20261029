@@ -9,7 +9,7 @@ import sqlite3
 import time
 from zoneinfo import ZoneInfo
 
-from control_panel import Controller, Conflict, BUSY, atomic, read
+from control_panel import Controller, Conflict, BUSY, DEEPSEEK_CHANNELS, atomic, read
 from capture_channels import log_channel
 
 BASE=Path('/opt/monitor/geo-capture')
@@ -86,6 +86,7 @@ class DailyController(Controller):
 
 
 def dispatch_one(control,base,day,model):
+    if model in DEEPSEEK_CHANNELS:return {'day':day,'model':model,'state':'disabled'}
     path=base/'daily'/day/(model+'.json')
     previous=read(path)
     item=next(m for m in control.all()['models'] if m['id']==model)
@@ -121,12 +122,6 @@ def dispatch_one(control,base,day,model):
     if previous.get('state')=='waiting_login':
         login=item['login_status']
         if login.get('checked_at',0)<=previous.get('last_attempt',0) or login.get('status')!='ready':return previous
-    if model=='deepseek':
-        with control.connect() as db:job=control.current(db,model)
-        control._login(model,job,False,item['revision'])
-        item=next(m for m in control.all()['models'] if m['id']==model)
-        if item['login_status'].get('status')!='ready':
-            return {'day':day,'model':model,'state':'waiting_login' if item['login_status'].get('status')=='login_required' else 'retry_pending','last_attempt':time.time()}
     key=operation_id(day,model)
     payload=previous.get('payload') or {'revision':item['revision']}
     with control.connect() as db:
@@ -145,12 +140,13 @@ def main(base=BASE,*,now=None,control=None):
     now=now or datetime.now(ZoneInfo('Asia/Shanghai'))
     if not due(plan,now):return {'state':'not_due'}
     day=now.astimezone(ZoneInfo('Asia/Shanghai')).date().isoformat()
+    models=[model for model in plan['models'] if model not in DEEPSEEK_CHANNELS]
     if plan.get('daily_control_enabled'):
         from daily_tasks import DailyTasks
         control=control or DailyController(base)
         tasks=DailyTasks(control)
         with control.lock,control.connect() as db:
-            for model in plan['models']:tasks.ensure_scheduled(db,model,day)
+            for model in models:tasks.ensure_scheduled(db,model,day)
         return {'day':day,'state':'daily_tasks_registered'}
     root=base/'daily'/day;root.mkdir(parents=True,exist_ok=True)
     control=control or DailyController(base)
@@ -158,7 +154,6 @@ def main(base=BASE,*,now=None,control=None):
     with (base/'daily/dispatch.lock').open('a') as lock:
         try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
         except BlockingIOError:return {'state':'already_dispatching'}
-        models=list(plan['models'])
         if 'baidu_ai' in models and 'wenxin_card' in models:
             models.remove('wenxin_card');models.insert(models.index('baidu_ai')+1,'wenxin_card')
         for model in models:

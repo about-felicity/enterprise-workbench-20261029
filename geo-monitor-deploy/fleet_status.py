@@ -59,16 +59,13 @@ def status():
     fleet = read(BASE / "fleet.json")
     lanes = []
     for lane in fleet["collectors"]:
+        if 'deepseek' in lane['service'].lower():continue
         health = read(Path(lane["health"]))
         if lane['name']=='百度卡片':
             from baidu_body_delivery import merge_health
             health=merge_health(health,Path(lane['health']).parent)
         service = subprocess.run(["systemctl", "is-active", lane["service"]], capture_output=True, text=True).stdout.strip()
         state = health.get("status", "not_started")
-        if lane['name'] == 'DeepSeek' and state == 'needs_attention':
-            session = read(Path(lane['health']).parent / 'collector/deepseek_session.json')
-            if session.get('status') == 'login_required':
-                state = 'waiting_login'
         fresh = health.get("heartbeat_expires_at", 0) or 0
         if state.startswith("running") and (service != "active" or fresh < time.time()):
             state = "stopped" if service != "active" else "stale"
@@ -97,7 +94,7 @@ def status():
 
 HTML = '''<!doctype html><meta charset="utf-8"><title>GEO 采集服务</title>
 <style>body{font:16px system-ui;margin:35px;background:#f5f7fa;color:#17212c}a{color:#2866c8}table{border-collapse:collapse;background:white;margin-top:25px;width:100%}td,th{padding:14px;border-bottom:1px solid #ddd;text-align:left}small{color:#667}#error{color:#a22}</style>
-<h1>GEO 采集服务</h1><a id="panel">打开 GEO 分析面板</a><p>豆包双实例、DeepSeek、文心卡片、百度卡片统一归属 GEO。每 15 秒更新。</p>
+<h1>GEO 采集服务</h1><a id="panel">打开 GEO 分析面板</a><p>豆包、文心卡片、百度卡片、元宝统一归属 GEO。每 15 秒更新。</p>
 <p id="error"></p><table><thead><tr><th>采集通道</th><th>状态</th><th>完整采集</th><th>已确认回传的观测</th><th>唯一回传</th><th>重复 / 无卡片或不可用</th></tr></thead><tbody id="rows"></tbody></table>
 <h2>GEO 核心服务与模拟器</h2><div id="core"></div><small>processed 表示正文与信源已经入库，产品分析及信源正文分析继续由原有 GEO 服务执行。百度五轮原始观测均保留，重复正文与完整信源只回传一次。</small>
 <script>document.getElementById('panel').href=location.protocol+'//'+location.hostname+':3000';
@@ -137,13 +134,16 @@ class Handler(BaseHTTPRequestHandler):
         raise PermissionError('会话已过期，请刷新面板')
 
     def do_POST(self):
-        from control_panel import Conflict
+        from control_panel import Conflict,DEEPSEEK_DISABLED
         try:
             match=re.fullmatch(r'/api/control/(doubao[1-4]|deepseek|deepseek2|wenxin_card|baidu_ai|yuanbao)/(settings|new|pause|resume|stop|login|login_sync|login_open)',self.path)
             login_match=re.fullmatch(r'/api/login/(?:(deepseek|deepseek2|deepseek_test)/)?input',self.path)
             login_input=bool(login_match)
             test_open=self.path=='/api/login/deepseek_test/open'
             schedule=self.path=='/api/control/schedule'
+            if login_input or test_open:
+                self.json_response({'ok':False,'message':DEEPSEEK_DISABLED},410)
+                return
             if not match and not login_input and not schedule and not test_open:
                 self.json_response({'ok':False,'message':'操作不存在'},404)
                 return
@@ -156,26 +156,11 @@ class Handler(BaseHTTPRequestHandler):
                 raise ValueError('请求格式不正确')
             value=json.loads(self.rfile.read(size).decode('utf8'))
             if not isinstance(value,dict):raise ValueError('请求格式不正确')
-            if test_open:
-                from manual_login import start
-                self.json_response(start(BASE,'/home/user/redroid-deepseek-test','manual-test',0,model='deepseek_test'))
-                return
             if schedule:
                 from schedule_control import save
                 result=save(controller(),value,self.headers.get('X-Action-Id',''))
                 with PANEL_LOCK:PANEL_CACHE.clear()
                 self.json_response(result)
-                return
-            if login_input:
-                from browser_backend import enabled as browser_enabled
-                if browser_enabled(login_match[1] or 'deepseek',BASE):
-                    from urllib.request import Request,build_opener,ProxyHandler
-                    req=Request('http://127.0.0.1:8820/input',data=json.dumps(value).encode(),headers={'Content-Type':'application/json'})
-                    with build_opener(ProxyHandler({})).open(req,timeout=28) as reply:self.login_response(reply.read(),'application/json')
-                    return
-                from manual_login import relay
-                code,mime,data=relay(BASE,'input',value,model=login_match[1] or 'deepseek')
-                self.login_response(data,mime,code)
                 return
             result=controller().action(*match.groups(),value,self.headers.get('X-Action-Id',''))
             with PANEL_LOCK:PANEL_CACHE.clear()
@@ -190,36 +175,8 @@ class Handler(BaseHTTPRequestHandler):
             login_path=urlsplit(self.path)
             login_match=re.fullmatch(r'/api/login/(?:(deepseek|deepseek2|deepseek_test)/)?(ui|state|frame|stream)',login_path.path)
             if login_match:
-                model,part=login_match[1] or 'deepseek',login_match[2]
-                token=self.session(create=part=='ui')
-                from browser_backend import enabled as browser_enabled,ROOT as browser_root,read as browser_read
-                if browser_enabled(model,BASE):
-                    if part=='ui':self.login_response((browser_root/'login.html').read_bytes(),'text/html; charset=utf-8',cookie=token)
-                    elif part=='state':self.login_response(json.dumps({**browser_read(browser_root/'state.json'),'csrf':token}).encode(),'application/json')
-                    elif part=='frame':
-                        from urllib.request import build_opener,ProxyHandler
-                        with build_opener(ProxyHandler({})).open('http://127.0.0.1:8820/frame',timeout=15) as reply:self.login_response(reply.read(),'image/jpeg')
-                    else:self.json_response({'error':'unsupported_browser_route'},404)
-                    return
-                if part=='ui':
-                    self.login_response((BASE/'deepseek_login.html').read_bytes(),'text/html; charset=utf-8',cookie=token)
-                elif part=='stream':
-                    from manual_login import stream
-                    flow=parse_qs(login_path.query).get('flow',[''])[0]
-                    with stream(BASE,model,flow) as response:
-                        self.send_response(200);self.send_header('Content-Type',response.headers['Content-Type']);self.send_header('Cache-Control','no-store');self.send_header('X-Accel-Buffering','no');self.send_header('Connection','close');self.end_headers()
-                        try:
-                            while True:
-                                block=response.read1(65536)
-                                if not block:break
-                                self.wfile.write(block);self.wfile.flush()
-                        except (BrokenPipeError,ConnectionResetError):pass
-                else:
-                    from manual_login import relay
-                    code,mime,data=relay(BASE,part,model=model)
-                    if part=='state' and code==200:
-                        data=json.dumps({**json.loads(data),'csrf':token},ensure_ascii=False).encode()
-                    self.login_response(data,mime,code)
+                from control_panel import DEEPSEEK_DISABLED
+                self.json_response({'ok':False,'message':DEEPSEEK_DISABLED},410)
                 return
             if self.path.split('?')[0]=='/api/panel':
                 token=self.session(create=True)

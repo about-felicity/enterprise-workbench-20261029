@@ -111,7 +111,9 @@ def save_plan(payload):
  kb=product(payload.get('product_id'));old=plan(payload['plan_id']) if payload.get('plan_id') else {}
  qs=payload.get('questions',[]);channels=payload.get('channels',[])
  if not isinstance(qs,list) or not qs or len(qs)>100 or any(not isinstance(q,str) or not q.strip() or len(q)>2000 or '\n' in q for q in qs) or len(set(q.strip() for q in qs))!=len(qs):raise ValueError('请填写不重复的问题，每行一题，最多100题')
- if not isinstance(channels,list) or not channels or not set(channels)<=set(materials.CHANNELS):raise ValueError('请选择有效的采集模型')
+ if not isinstance(channels,list) or any(not isinstance(m,str) or m not in materials.CHANNELS for m in channels):raise ValueError('请选择有效的采集模型')
+ channels=list(dict.fromkeys(m for m in channels if m in materials.CAPTURE_CHANNELS))
+ if not channels:raise ValueError('请选择百度或文心作为素材渠道，DeepSeek 采集已停用')
  enabled=payload.get('enabled');limit=payload.get('max_per_category',1)
  if type(enabled) is not bool or type(limit) is not int or not 1<=limit<=10:raise ValueError('请确认任务开关和每类篇数（1至10）')
  collect=clock(payload.get('capture_time'));write=collect
@@ -144,7 +146,7 @@ def save_plan(payload):
  value=old.get('plan_id') or 'plan-'+uuid.uuid4().hex
  result={**old,'plan_id':value,'product_id':kb['product_id'],'product_version':kb['version'],'product':complete_product_source(kb['product'],kb['product_id'],kb['version']),
          'name':name.strip(),'frequency':frequency,'task_type':task_type,'article_target':article_target,'genre_targets':genre_targets,'writing_profile':writing_profile,**budgets,
-         'questions':[q.strip() for q in qs],'channels':list(dict.fromkeys(channels)),'rounds':rounds,'capture_time':collect,'writing_time':write,'analysis_start':'after_capture','start_date':start,'enabled':enabled,'max_per_category':limit,'revision':old.get('revision',0)+1,'updated_at':time.time()}
+         'questions':[q.strip() for q in qs],'channels':channels,'rounds':rounds,'capture_time':collect,'writing_time':write,'analysis_start':'after_capture','start_date':start,'enabled':enabled,'max_per_category':limit,'revision':old.get('revision',0)+1,'updated_at':time.time()}
  if old.get('schedule_paused'):
   if frequency!='daily' or enabled:raise ValueError('计划暂停中，请用“继续计划”恢复定时执行')
  if writing_profile:result['product']={**result['product'],'writing_profile':writing_profile}
@@ -155,7 +157,7 @@ def save_plan(payload):
  root=capture_root(value)
  with process_lock(root/'settings.lock',blocking=True):
   cfg=runtime.read(root/'settings.json')
-  atomic_json(root/'settings.json',{**cfg,'enabled':enabled,'time':collect,'start_date':start,'frequency':frequency,'timezone':'Asia/Shanghai','questions':result['questions'],'channels':result['channels'],'rounds':rounds,'deepseek_interval':600,'search_interval':60,'search_pool':'creation_only','studio_plan':result})
+  atomic_json(root/'settings.json',{**cfg,'enabled':enabled,'time':collect,'start_date':start,'frequency':frequency,'timezone':'Asia/Shanghai','questions':result['questions'],'channels':result['channels'],'rounds':rounds,'search_interval':60,'search_pool':'creation_only','studio_plan':result})
  return {'plan_id':value,'message':'任务已保存'+('，首次执行 '+start+' '+collect+'（北京时间）' if enabled else '为草稿，尚未加入执行队列')}
 
 def scheduled_day(p,today):
@@ -265,7 +267,7 @@ def predecessor_wait(root,p,date,now):
  return ''
 
 def snapshot(jobs):
- ps=plans();now=datetime.now(ZONE);day=now.date().isoformat();by_id={j['job_id']:j for j in jobs};result=[]
+ ps=[{**p,'channels':materials.capture_channels(p.get('channels'))} for p in plans()];now=datetime.now(ZONE);day=now.date().isoformat();by_id={j['job_id']:j for j in jobs};result=[]
  from .pricing_window import resume_at
  low_at=resume_at(now.timestamp())
  running_jobs={v.get('job_id') for v in runtime.read(runtime.BASE/'worker_health.json').get('active_jobs',[])}
@@ -278,7 +280,7 @@ def snapshot(jobs):
   if (p['plan_id'],candidate) not in known:tasks.append({'date':candidate,'plan':p,'jobs':{},'paused':False,'status':'scheduled' if p['enabled'] else 'not_enabled'})
  for t in tasks:
   p=t['plan'];root=capture_root(p['plan_id']);capture_cfg=runtime.read(root/'days'/t['date']/'config.json') or p
-  target=len(capture_cfg['questions'])*capture_cfg.get('rounds',1);progress=[v for v in materials.progress(t['date'],store_root=root) if v['id'] in p['channels']]
+  target=len(capture_cfg['questions'])*capture_cfg.get('rounds',1);progress=[v for v in materials.progress(t['date'],store_root=root) if v['id'] in materials.capture_channels(p.get('channels'))]
   job_ids=set(t.get('jobs',{}).values())|{j['job_id'] for j in jobs if j.get('studio_plan_id')==p['plan_id'] and j['date']==t['date']}
   js=[by_id[jid] for jid in job_ids if jid in by_id];complete=sum(j.get('day',{}).get('status')=='complete' for j in js)
   state=t.get('status','scheduled')
@@ -374,11 +376,12 @@ def advance(p,day,now):
  if task.get('paused') or task.get('error'):return
  # Today's product/questions are immutable once the daily task has been created.
  p=task['plan'];root=capture_root(p['plan_id']);target=len(p['questions'])*p.get('rounds',1)
+ channels=materials.capture_channels(p.get('channels'))
  if not p.get('enabled') or p.get('task_type')=='capture_only':return
  progress={v['id']:v for v in materials.progress(day,store_root=root)}
- blocked=any(channel_verification_blocked(progress.get(m,{})) for m in p['channels'])
- if not all(progress.get(m,{}).get('settled',progress.get(m,{}).get('completed',0))>=target or channel_verification_blocked(progress.get(m,{})) for m in p['channels']):return
- partial=blocked or any(progress.get(m,{}).get('failed',0) for m in p['channels'])
+ blocked=any(channel_verification_blocked(progress.get(m,{})) for m in channels)
+ if not all(progress.get(m,{}).get('settled',progress.get(m,{}).get('completed',0))>=target or channel_verification_blocked(progress.get(m,{})) for m in channels):return
+ partial=blocked or any(progress.get(m,{}).get('failed',0) for m in channels)
  questions_to_create=['任务问题汇总'] if p.get('article_target') else p['questions']
  for question in questions_to_create:
   task=runtime.read(path)
@@ -386,13 +389,13 @@ def advance(p,day,now):
   if question in task['jobs'] or question in task.get('skipped_questions',{}):continue
   if partial:
    selected=p['questions'] if p.get('article_target') else [question]
-   rows=[r for q in selected for r in materials.records(day,q,p['channels'],store_root=root)]
+   rows=[r for q in selected for r in materials.records(day,q,channels,store_root=root)]
    if not rows:
     if blocked:continue # Keep this question eligible after manual verification; never fake a capture.
     with process_lock(path.with_suffix('.lock'),blocking=True):
      task=runtime.read(path);task.setdefault('skipped_questions',{})[question]='没有带完整来源的采集结果';atomic_json(path,task)
     continue
-  payload={'material_source':'dedicated','studio_plan_id':p['plan_id'],'task_name':p.get('name',p['product']['name']+'创作任务'),'budget_limits':{k:p[k] for k in ('article_budget_cny','task_budget_cny') if k in p},'date':day,'question':question,'channels':p['channels'],'max_per_category':p['max_per_category'],'product':p['product']}
+  payload={'material_source':'dedicated','studio_plan_id':p['plan_id'],'task_name':p.get('name',p['product']['name']+'创作任务'),'budget_limits':{k:p[k] for k in ('article_budget_cny','task_budget_cny') if k in p},'date':day,'question':question,'channels':channels,'max_per_category':p['max_per_category'],'product':p['product']}
   if p.get('article_target'):payload.update(questions=p['questions'],article_target=p['article_target'],genre_targets=p.get('genre_targets',{}))
   try:
    result=runtime.action('new',payload,runtime.digest({'daily_task':task['daily_task_id'],'question':question})[:32])
@@ -416,7 +419,7 @@ def initialize():
    pid='product-'+uuid.uuid4().hex;version=runtime.digest(original);kb={'product_id':pid,'version':version,'product':original,'word_source':{},'updated_at':time.time()}
    atomic_json(ROOT/'products'/(pid+'.json'),kb);atomic_json(ROOT/'versions'/pid/(version+'.json'),kb)
    value='plan-'+uuid.uuid4().hex
-   atomic_json(ROOT/'plans'/(value+'.json'),{'plan_id':value,'product_id':pid,'product_version':version,'product':original,'questions':cfg['questions'],'channels':list(materials.CHANNELS),'rounds':cfg.get('rounds',1),'capture_time':cfg.get('time','01:00'),'writing_time':'04:00','start_date':cfg.get('start_date',datetime.now(ZONE).date().isoformat()),'enabled':False,'legacy_capture':True,'max_per_category':1,'revision':1,'updated_at':time.time()})
+   atomic_json(ROOT/'plans'/(value+'.json'),{'plan_id':value,'product_id':pid,'product_version':version,'product':original,'questions':cfg['questions'],'channels':list(materials.CAPTURE_CHANNELS),'rounds':cfg.get('rounds',1),'capture_time':cfg.get('time','01:00'),'writing_time':'04:00','start_date':cfg.get('start_date',datetime.now(ZONE).date().isoformat()),'enabled':False,'legacy_capture':True,'max_per_category':1,'revision':1,'updated_at':time.time()})
   atomic_json(ROOT/'initialized.json',{'at':time.time()})
 def run():
  import pwd

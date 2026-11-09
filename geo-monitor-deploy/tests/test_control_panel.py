@@ -170,88 +170,17 @@ class ControlTests(unittest.TestCase):
             self.assertEqual(db.execute('select state from captures').fetchone()[0],'capturing')
         with self.assertRaises(Conflict):self.act('baidu_ai','new',{'revision':1})
 
-    def test_deepseek_requires_fresh_login_and_search_has_no_login_action(self):
-        with self.assertRaises(Conflict):self.act('deepseek','new',{'revision':1})
+    def test_deepseek_is_hidden_and_all_manual_controls_are_disabled(self):
+        for model in ('deepseek','deepseek2'):
+            self.assertNotIn(model,{m['id'] for m in self.control.all()['models']})
+            for action in ('settings','new','resume','login','login_sync','login_open'):
+                with self.assertRaisesRegex(ValueError,'采集已停用'):
+                    self.act(model,action,{'revision':1})
+        self.assertEqual(self.system.starts,[])
+
+    def test_search_has_no_login_action(self):
         with self.assertRaises(ValueError):self.act('wenxin_card','login')
         with self.assertRaises(ValueError):self.act('baidu_ai','login')
-
-    def set_deepseek_ready(self, **changes):
-        import time
-        current=self.current('deepseek')
-        value={'status':'ready','checked_at':time.time(),'batch':current['current']['batch'],'revision':current['revision']}
-        value.update(changes)
-        with self.control.connect() as db:
-            db.execute('insert or replace into logins values(?,?)',('deepseek',json.dumps(value)))
-
-    def test_deepseek_gate_requires_fresh_matching_batch_and_settings(self):
-        import time
-        self.assertFalse(self.current('deepseek')['readiness']['can_start'])
-        self.set_deepseek_ready()
-        self.assertTrue(self.current('deepseek')['readiness']['can_start'])
-        self.set_deepseek_ready(checked_at=time.time()-301)
-        self.assertFalse(self.current('deepseek')['readiness']['can_start'])
-        with self.assertRaises(Conflict):self.act('deepseek','new',{'revision':1})
-        self.set_deepseek_ready(batch='another-batch')
-        with self.assertRaises(Conflict):self.act('deepseek','new',{'revision':1})
-        self.set_deepseek_ready()
-        self.act('deepseek','settings',{'questions':['新的问题'],'rounds':3,'interval':750,'revision':1})
-        self.assertFalse(self.current('deepseek')['readiness']['can_start'])
-        with self.assertRaises(Conflict):self.act('deepseek','new',{'revision':2})
-
-    def test_login_success_never_bypasses_unknown_result_or_starts_tasks(self):
-        self.set_deepseek_ready()
-        current=self.current('deepseek')['current']
-        path=self.root/'batches'/current['batch']/'collector/tasks.sqlite'
-        path.parent.mkdir(parents=True,exist_ok=True)
-        with closing(sqlite3.connect(path)) as db:
-            with db:
-                db.execute('create table captures(state text)')
-                db.execute("insert into captures values('capturing')")
-        gate=self.current('deepseek')['readiness']
-        self.assertFalse(gate['can_start'])
-        self.assertFalse(gate['can_resume'])
-        self.assertEqual(self.system.starts,[])
-
-    def test_manual_login_ready_is_bound_to_flow_batch_and_revision(self):
-        import time
-        import manual_login
-        current=self.current('deepseek')
-        flow={'id':'test-flow','status':'ready','batch':current['current']['batch'],
-              'revision':1,'updated_at':time.time(),'expires_at':time.time()+900}
-        with patch.object(manual_login,'state',return_value=flow):
-            self.assertTrue(self.current('deepseek')['readiness']['can_start'])
-            self.assertEqual(self.system.starts,[])
-        self.act('deepseek','settings',{'questions':['不同问题'],'rounds':3,'interval':750,'revision':1})
-        with patch.object(manual_login,'state',return_value=flow):
-            self.assertFalse(self.current('deepseek')['readiness']['can_start'])
-
-    def test_login_recovery_replaces_old_waiting_state_in_task_and_daily(self):
-        import time
-        current=self.current('deepseek')['current']
-        path=self.root/'batches'/current['batch']/'bridge_health.json'
-        atomic(path,{'status':'waiting_login','captured':1,'processed':1,'time':time.time()-60})
-        self.set_deepseek_ready()
-        actual=self.current('deepseek')
-        self.assertEqual(actual['current']['state'],'ready_to_resume')
-        self.assertEqual(actual['daily']['status'],'ready_to_resume')
-        self.assertTrue(actual['readiness']['can_resume'])
-        self.assertEqual(self.system.starts,[])
-        self.system.states['old-deepseek.service']='active'
-        self.assertEqual(self.current('deepseek')['current']['state'],'starting')
-        atomic(path,{'status':'waiting_login','time':time.time()+1})
-        self.assertEqual(self.current('deepseek')['current']['state'],'waiting_login')
-
-    def test_fresh_login_cannot_bypass_pending_delivery_on_backend(self):
-        self.set_deepseek_ready()
-        current=self.current('deepseek')['current']
-        atomic(self.root/'batches'/current['batch']/'bridge_health.json',
-               {'status':'stopped','captured':2,'processed':1})
-        self.assertFalse(self.current('deepseek')['readiness']['can_start'])
-        with self.assertRaisesRegex(Conflict,'回传'):
-            self.act('deepseek','new',{'revision':1})
-        with self.assertRaisesRegex(Conflict,'回传'):
-            self.act('deepseek','resume')
-        self.assertEqual(self.system.starts,[])
 
     def test_validation_and_reused_action_key_reject_different_input(self):
         for value in ({'questions':['x','x'],'rounds':1,'interval':60},

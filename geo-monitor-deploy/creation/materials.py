@@ -10,7 +10,12 @@ LEGACY=Path('/home/user/geo-editorial/runtime-api')
 GEO=Path('/opt/monitor/geo-capture');ZONE=ZoneInfo('Asia/Shanghai')
 CONTENT_BASE=Path('/opt/monitor/geo-content')
 SEARCH_POOL=CONTENT_BASE/'search-pool'
-CHANNELS={'deepseek':'DeepSeek','baidu_ai':'百度卡片','wenxin_card':'文心卡片'}
+CAPTURE_CHANNELS={'baidu_ai':'百度卡片','wenxin_card':'文心卡片'}
+CHANNELS={'deepseek':'DeepSeek',**CAPTURE_CHANNELS}  # Historical observations remain readable.
+
+def capture_channels(configured=None):
+ channels=CAPTURE_CHANNELS if configured is None else configured
+ return list(dict.fromkeys(m for m in channels if m in CAPTURE_CHANNELS)) or list(CAPTURE_CHANNELS)
 
 def collector_directory(path,owner):
  """Collector user must traverse every private ancestor, including UMask=0077 parents."""
@@ -54,11 +59,8 @@ def control(action,store_root=None,day=None):
  with process_lock(root/'settings.lock',blocking=True):
   cfg=read(root/'settings.json')
   if action=='resume':
-   for path in (root/'days').glob('*/blocked-*.json'):
-    block=read(path)
-    session=read(GEO/'deepseek_app_session.json') if read(GEO/'deepseek_backend.json').get('backend')=='android' else read(GEO/'profiles/deepseek/geo-session-health.json')
-    if block.get('kind')=='login_required' and session.get('last_checkpoint',0)<=block.get('at',0):raise ValueError('请先在GEO采集页完成DeepSeek登录，再继续专用采集')
-   for path in (root/'days').glob('*/blocked-*.json'):path.unlink()
+   for channel in CAPTURE_CHANNELS:
+    for path in (root/'days').glob('*/blocked-'+channel+'.json'):path.unlink(missing_ok=True)
   if day is None:cfg['paused']=action=='pause'
   else:
    cfg['paused_day']=day if action=='pause' else ''
@@ -88,11 +90,11 @@ def catalog():
  dates=set()
  for base in (LEGACY/'captures',ROOT/'days'):
   if base.exists():dates.update(p.name for p in base.iterdir() if p.is_dir() and re.fullmatch(r'\d{4}-\d{2}-\d{2}',p.name))
- return {'dates':sorted(dates,reverse=True),'questions':settings().get('questions',[]),'channels':[{'id':k,'name':v} for k,v in CHANNELS.items()]}
+ return {'dates':sorted(dates,reverse=True),'questions':settings().get('questions',[]),'channels':[{'id':k,'name':v if k in CAPTURE_CHANNELS else v+' 历史素材'} for k,v in CHANNELS.items()]}
 def progress(day,store_root=None):
  root=Path(store_root) if store_root is not None else ROOT
  result=[]
- for model,label in CHANNELS.items():
+ for model,label in CAPTURE_CHANNELS.items():
   dbpath=root/'days'/day/model/'collector/tasks.sqlite';counts={};missing=[]
   if dbpath.exists():
    with sqlite3.connect(dbpath.as_uri()+'?mode=ro',uri=True) as db:
@@ -222,7 +224,7 @@ def usable_source_rows(rows):
 def read_lines(path):return [json.loads(line) for line in Path(path).read_text().split('\n') if line.strip()]
 
 def main_busy():
- with sqlite3.connect((GEO/'panel/control.sqlite').as_uri()+'?mode=ro',uri=True) as db:services=[r[0] for r in db.execute('select service from jobs where batch in (select current_batch from settings)')]
+ with sqlite3.connect((GEO/'panel/control.sqlite').as_uri()+'?mode=ro',uri=True) as db:services=[r[0] for r in db.execute("select service from jobs where model not in ('deepseek','deepseek2') and batch in (select current_batch from settings)")]
  for service in services:
   value=subprocess.run(['systemctl','is-active',service],capture_output=True,text=True,timeout=8).stdout.strip()
   if value in {'active','activating','deactivating','reloading'}:return True
@@ -235,7 +237,7 @@ def next_day(cfg,today,now=None):
   day=path.parent.name
   if day>today or cfg.get('paused_day')==day:continue
   plan=read(path);counts={v['id']:v.get('settled',v['completed']) for v in progress(day)}
-  if any(counts[m]<len(plan['questions'])*plan.get('rounds',1) for m in plan.get('channels',CHANNELS)):return day
+  if any(counts[m]<len(plan['questions'])*plan.get('rounds',1) for m in capture_channels(plan.get('channels'))):return day
  return cfg['start_date'] if cfg.get('frequency')=='once' else today
 
 def capture_snapshot(target,cfg,owner):
@@ -257,9 +259,9 @@ def run():
     process,log,child_day=child
     if process.poll() is None:continue
     code=process.returncode;log.close();del children[model]
-    if code==77:atomic_json(ROOT/'days'/child_day/('blocked-'+model+'.json'),{'at':time.time(),'kind':'login_required' if model=='deepseek' else 'verification_required'})
+    if code==77:atomic_json(ROOT/'days'/child_day/('blocked-'+model+'.json'),{'at':time.time(),'kind':'verification_required'})
     elif code:
-     attempts[model]=time.time()+(5 if code==75 and model!='deepseek' else 60)
+     attempts[model]=time.time()+(5 if code==75 else 60)
      if code!=75:atomic_json(ROOT/'days'/child_day/('error-'+model+'.json'),{'at':time.time(),'exit_code':code,'retry_at':attempts[model],'message':'采集进程异常退出，正在自动重试'})
     else:(ROOT/'days'/child_day/('error-'+model+'.json')).unlink(missing_ok=True)
    try:
@@ -268,42 +270,31 @@ def run():
     if due and not paused:
      target=ROOT/'days'/day;private_dir(target)
      capture_snapshot(target,cfg,owner)
-     plan=read(target/'config.json');questions=plan['questions'];rounds=plan.get('rounds',1);channels=plan.get('channels',list(CHANNELS));progress_by={v['id']:v for v in progress(day)}
+     plan=read(target/'config.json');questions=plan['questions'];rounds=plan.get('rounds',1);channels=capture_channels(plan.get('channels'));progress_by={v['id']:v for v in progress(day)}
      busy=main_busy();health['status']='running';health['geo_ingest_enabled']=False
      health['search_resource_pool']='creation_only' if dedicated_search('baidu_ai') else 'shared_geo'
-     for model in CHANNELS:
+     for model in CAPTURE_CHANNELS:
       if model not in channels or model in children or progress_by[model].get('settled',progress_by[model]['completed'])>=len(questions)*rounds:continue
       if progress_by[model]['blocked']:
-       block=progress_by[model]['blocked'];session=read(GEO/'deepseek_app_session.json')
-       if (model=='deepseek' and read(GEO/'deepseek_backend.json').get('backend')=='android'
-           and block.get('kind')=='login_required' and session.get('status')=='ready'
-           and session.get('last_checkpoint',0)>block.get('at',0)):
-        (target/('blocked-'+model+'.json')).unlink(missing_ok=True);progress_by[model]['blocked']={}
-       else:health['status']='waiting_login_or_verification';continue
+       health['status']='waiting_login_or_verification';continue
       resources=search_resources(model)
       reason=conflict(now,model,read(GEO/'daily_plan.json'),busy,dedicated=resources['dedicated'])
       if reason:health['status']=reason;continue
       if attempts.get(model,0)>time.time():continue
-      if model!='deepseek' and any(m!='deepseek' for m in children):continue
+      if children:continue
       lane=target/model;private_dir(lane);runtime=lane/'collector';private_dir(runtime)
       qfile=lane/'questions.txt';atomic_write(qfile,'\n'.join(questions)+'\n');os.chown(qfile,owner.pw_uid,owner.pw_gid)
-      env={**os.environ,'PYTHONPATH':'','GEO_COLLECTOR_RUNTIME':str(runtime),'GEO_DEEPSEEK_PROFILE_DIR':str(GEO/'profiles/deepseek'),'GEO_DEEPSEEK_PORT':'9514','GEO_DEEPSEEK_RATE_STATE':str(GEO/'deepseek_last_send.json'),'GEO_SEARCH_RATE_STATE':str(resources['rate']),'GEO_UNATTENDED':'1'}
+      env={**os.environ,'PYTHONPATH':'','GEO_COLLECTOR_RUNTIME':str(runtime),'GEO_SEARCH_RATE_STATE':str(resources['rate']),'GEO_UNATTENDED':'1'}
       env.pop('GEO_PIPELINE_ROOT',None)
-      env['GEO_DEEPSEEK_SEED_ROOT']=str(GEO/'batches')
-      lock=GEO/'deepseek_account.lock' if model=='deepseek' else resources['lock']
-      command=['/usr/sbin/runuser','-u','user','--','/usr/bin/flock','-n',str(lock),'/opt/monitor/geo-capture/venv/bin/python','-m','geo_source_cards.cli','--model',model,'--runtime-dir',str(runtime),'--batch','creation-material-'+day+'-'+model,'--questions-file',str(qfile),'--rounds',str(rounds),'--output',str(lane/'results.jsonl'),'--require-sources','--require-complete-sources','--min-deepseek-interval','600','--min-search-interval','60','--max-new-captures','1']
+      lock=resources['lock']
+      command=['/usr/sbin/runuser','-u','user','--','/usr/bin/flock','-n',str(lock),'/opt/monitor/geo-capture/venv/bin/python','-m','geo_source_cards.cli','--model',model,'--runtime-dir',str(runtime),'--batch','creation-material-'+day+'-'+model,'--questions-file',str(qfile),'--rounds',str(rounds),'--output',str(lane/'results.jsonl'),'--require-sources','--require-complete-sources','--min-search-interval','60','--max-new-captures','1']
       if resources['dedicated']:
        if supplement_origin(ROOT)==ROOT:private_dir(resources['lock'].parent)
        elif not resources['lock'].parent.is_dir():raise ValueError('Original capture profile has not been initialized')
        adapter=command.index('geo_source_cards.cli');command[adapter-1:adapter+1]=['/opt/monitor/geo-content/bin/search_capture.py']
        command=command[:4]+['/opt/monitor/geo-content/bin/creation-runner','capture',str(SEARCH_POOL/'slots'),str(resources['lock']),'--']+command[7:]
-      if model!='deepseek':command+=['--bounded-search-recovery']
+      command+=['--bounded-search-recovery']
       if model=='baidu_ai':command+=['--optional-baidu']
-      if model=='deepseek' and read(GEO/'deepseek_backend.json').get('backend')=='android':
-       command=['/home/user/redroid-doubao/worker-venv/bin/python','-B','/home/user/redroid-deepseek/code/private_capture.py','--lane',str(lane),'--batch','creation-material-'+day+'-'+model,'--rounds',str(rounds)]
-      if model=='deepseek' and read(Path('/opt/monitor/geo-deepseek-browser-test/production.json')).get('enabled') is True:
-       command=['/home/user/geo-editorial/venv/bin/python','-B','-m','creation.browser_capture','--lane',str(lane),'--batch','creation-material-'+day+'-'+model,'--rounds',str(rounds)]
-       env['PYTHONPATH']='/opt/monitor/geo-content:/opt/monitor/geo-content/engine'
       log=(lane/'capture.log').open('ab');children[model]=(subprocess.Popen(command,env=env,stdout=log,stderr=subprocess.STDOUT),log,day)
      if not children and any(attempts.get(m,0)>time.time() and read(target/('error-'+m+'.json')) for m in channels):health['status']='retrying'
      if not children and any(read(Path(str(search_resources(m)['lock'])+'.waiting.json')) for m in channels if dedicated_search(m)):

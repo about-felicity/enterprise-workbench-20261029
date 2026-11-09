@@ -133,7 +133,7 @@ def resume(root,*,check_balance=True,allow_http_recovery=False):
 
 def create(payload):
     day=payload.get('date','');question=payload.get('question','')
-    channels=payload.get('channels',['deepseek','wenxin_card','baidu_ai'])
+    channels=payload.get('channels',['wenxin_card','baidu_ai'])
     limit=payload.get('max_per_category',10)
     if type(limit) is not int or not 1<=limit<=10:raise ValueError('每类篇数须为1至10')
     product=payload.get('product') or read(SHARED/'product.json')

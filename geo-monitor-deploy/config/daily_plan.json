@@ -18,15 +18,11 @@
     "doubao2": 10,
     "wenxin_card": 8,
     "baidu_ai": 5,
-    "yuanbao": 8,
-    "deepseek": 3,
-    "deepseek2": 3
+    "yuanbao": 8
   },
   "daily_control_enabled": true,
   "schedule_revision": 2,
   "schedule_action": "75d3363faac44a87b04cead555f06b90",
   "schedule_hash": "bfa09c34efcd6ac4c7ca010f24407ecc29d2567dbb4e2ea33b6f4a0169b312b1",
-  "desktop_collectors": [
-    "deepseek2"
-  ]
+  "desktop_collectors": []
 }

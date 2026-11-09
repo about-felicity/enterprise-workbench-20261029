@@ -55,16 +55,14 @@ class DailyTests(unittest.TestCase):
         self.assertEqual(dispatch_one(control,self.root,day,'wenxin_card')['state'],'running')
         control.action.assert_called_once()
 
-    def test_login_failure_does_not_block_other_models_or_repeat_probes(self):
-        atomic(self.root/'daily_plan.json',{**self.plan,'models':['deepseek','baidu_ai']})
-        with self.control.connect() as db:
-            db.execute('insert or replace into logins values(?,?)',('deepseek',json.dumps({'status':'login_required','checked_at':0})))
+    def test_disabled_channels_in_a_saved_dispatch_do_not_block_baidu(self):
+        atomic(self.root/'daily_plan.json',{**self.plan,'models':['deepseek','baidu_ai','deepseek2']})
         with patch.object(self.control,'_login') as probe:
             first=main(self.root,now=self.now,control=self.control)
-            self.assertEqual(first['models'][0]['state'],'waiting_login')
-            self.assertEqual(first['models'][1]['state'],'running')
+            self.assertEqual([(r['model'],r['state']) for r in first['models']],[('baidu_ai','running')])
             main(self.root,now=self.now,control=self.control)
-            self.assertEqual(probe.call_count,1)
+            probe.assert_not_called()
+        self.assertEqual(len(self.fixture.system.starts),1)
 
     def test_prior_day_rollover_archives_unknown_rows_without_reset_or_resend(self):
         model='baidu_ai';old=self.fixture.current(model)['current'];batch=old['batch']
