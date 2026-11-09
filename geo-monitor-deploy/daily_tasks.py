@@ -51,21 +51,26 @@ def valid_day(day):
     return day
 
 
-def baidu_unavailable(db, day):
-    """Count only exhausted card slots, separately from ingested samples."""
+def daily_unavailable(db, model, day):
+    """Read terminal non-samples from today's immutable collector journals."""
+    if model not in DOUBAO_CHANNELS and model!='baidu_ai':return {}
     start=datetime.strptime(valid_day(day),'%Y-%m-%d').replace(tzinfo=ZONE)
     counts=Counter()
-    jobs=db.execute("select health,config from jobs where model='baidu_ai' and created>=? and created<?",
-                    (start.timestamp(),(start+timedelta(days=1)).timestamp()))
+    native=model in DOUBAO_CHANNELS
+    table='tasks' if native else 'captures'
+    jobs=db.execute("select health,config from jobs where model=? and created>=? and created<?",
+                    (model,start.timestamp(),(start+timedelta(days=1)).timestamp()))
     for job in jobs:
         if json.loads(job['config']).get('daily_date')!=day:continue
-        path=Path(job['health']).parent/'collector/tasks.sqlite'
+        path=Path(job['health']).parent/('tasks.sqlite' if native else 'collector/tasks.sqlite')
         if not path.is_file():continue
         with closing(sqlite3.connect(path.as_uri()+'?mode=ro',uri=True,timeout=2)) as journal:
-            if not journal.execute("select 1 from sqlite_master where name='captures'").fetchone():continue
-            for question,n in journal.execute("""select question,count(*) from captures where state='completed'
-                and json_extract(result,'$.availability')='supplement_unavailable'
-                and json_extract(result,'$.terminal_reason')='card_unavailable' group by question"""):
+            if not journal.execute('select 1 from sqlite_master where name=?',(table,)).fetchone():continue
+            sql=("select question,count(*) from tasks where state='completed_nontext' group by question"
+                 if native else """select question,count(*) from captures where state='completed'
+                 and json_extract(result,'$.availability')='supplement_unavailable'
+                 and json_extract(result,'$.terminal_reason')='card_unavailable' group by question""")
+            for question,n in journal.execute(sql):
                 counts[question]+=n
     return counts
 
@@ -133,7 +138,7 @@ class DailyTasks:
 
     def snapshot(self,db,model,day,counts,error=None):
         config=self.config(db,model,day);row=self.row(db,model,day)
-        unavailable=baidu_unavailable(db,day) if model=='baidu_ai' else {}
+        unavailable=daily_unavailable(db,model,day)
         questions=[{'question':q,'kind':'secondary' if q in config.get('secondary_questions',[]) else 'primary','target':question_target(config,q),'completed':counts.get(q,0),
                     'unavailable':min(unavailable.get(q,0),max(0,question_target(config,q)-counts.get(q,0))),
                     'remaining':max(0,question_target(config,q)-counts.get(q,0)-unavailable.get(q,0))} for q in config['questions']]
@@ -312,13 +317,14 @@ class DailyTasks:
                         db.commit();c._login(model,job,False,active_revision)
                     db.execute('update daily_tasks set status=? where model=? and day=?',('waiting_login',model,day));return
             c._ensure_delivery(job)
+            unavailable=daily_unavailable(db,model,day)
             same_day_archive=None
             if model in DOUBAO_CHANNELS and hasattr(c,'deferred_segments'):
                 archived=c.deferred_segments(model,day)
                 blocked={digest for questions in archived.values() for digest in questions}
                 if snap['needs_review'] and job['batch'] not in archived:
                     candidates=c.deferable_segment(job,day,snap)
-                    if candidates and any(counts.get(model,{}).get(q,0)<question_target(cfg,q)
+                    if candidates and any(counts.get(model,{}).get(q,0)+unavailable.get(q,0)<question_target(cfg,q)
                                           and question_digest(q) not in blocked and question_digest(q) not in candidates
                                           for q in cfg['questions']):
                         same_day_archive=candidates
@@ -355,7 +361,6 @@ class DailyTasks:
             # next remaining group; never plan from a cached pre-completion count.
             with _lock:_cache.pop(day,None)
             counts=self.counts(day)
-            unavailable=baidu_unavailable(db,day) if model=='baidu_ai' else {}
             remaining={q:max(0,question_target(cfg,q)-counts.get(model,{}).get(q,0)-unavailable.get(q,0)) for q in cfg['questions']}
             remaining={q:n for q,n in remaining.items() if n}
             if not remaining:
@@ -368,7 +373,7 @@ class DailyTasks:
             if model=='wenxin_card':
                 bcfg=self.config(db,'baidu_ai',day)
                 baidu_job=c.snapshot(c.current(db,'baidu_ai'))
-                baidu_missed=baidu_unavailable(db,day)
+                baidu_missed=daily_unavailable(db,'baidu_ai',day)
                 if (baidu_job['service_state'] in BUSY or baidu_job['pending_delivery'] or baidu_job['delivery_errors']
                         or any(counts.get('baidu_ai',{}).get(q,0)+baidu_missed.get(q,0)<question_target(bcfg,q) for q in bcfg['questions'])):
                     db.execute('update daily_tasks set status=? where model=? and day=?',('waiting_for_baidu',model,day));return

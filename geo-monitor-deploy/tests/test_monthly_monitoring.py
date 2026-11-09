@@ -120,6 +120,22 @@ class SchedulingTests(unittest.TestCase):
         self.assertEqual(len(self.fixture.system.starts),1)
         self.assertIn('wenxin-card',self.fixture.system.starts[0])
 
+    def test_doubao_nontext_slot_does_not_trigger_a_replacement_or_count_as_sample(self):
+        from pathlib import Path
+        model='doubao4';self.configure(model,1)
+        with self.c.connect() as db:
+            job=self.c.current(db,model)
+            config={**json.loads(job['config']),'daily_date':self.day}
+            db.execute('update jobs set config=? where batch=?',(json.dumps(config),job['batch']))
+        path=Path(job['health']).parent/'tasks.sqlite'
+        with sqlite3.connect(path) as db:
+            db.execute('create table tasks(question,state)')
+            db.execute('insert into tasks values(?,?)',('大词','completed_nontext'))
+        self.tasks.reconcile()
+        daily=self.fixture.current(model)['daily']
+        self.assertEqual((daily['status'],daily['completed'],daily['unavailable']),('complete_with_unavailable',0,1))
+        self.assertEqual(self.fixture.system.starts,[])
+
     def test_source_failure_does_not_clear_plan_or_interrupt_worker(self):
         from control_panel import atomic, read
         self.configure()

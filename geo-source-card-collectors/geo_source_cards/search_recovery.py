@@ -118,6 +118,7 @@ class SearchRecovery:
                 previous["streak"] + 1 if kind == "verification" else previous["streak"]
             )
             delay = security_backoff_seconds(streak) if kind == "verification" else min(300,20*2**min(4,(count-1)//limit)) if unattended else 20
+            if exhausted and card_unavailable:delay=0  # The next question follows the normal search interval.
             # Persistent challenge requires operator handling, not endless probing.
             blocked = streak >= 4
             until = max(previous["cooldown_until"], self.clock() + delay)
