@@ -50,6 +50,14 @@ function rate(hits: number, valid: number) {
   return valid ? `${(100 * hits / valid).toFixed(1)}%（${hits}/${valid}）` : "—";
 }
 
+function RateMetric({ hits, valid }: { hits: number; valid: number }) {
+  if (!valid) return <span className="monthly-keyword-no-rate" aria-label="暂无有效样本">—</span>;
+  return <div className="monthly-keyword-rate">
+    <strong>{(100 * hits / valid).toFixed(1)}%</strong>
+    <small>{hits} / {valid} 轮</small>
+  </div>;
+}
+
 function comparison(term: Term, stats: Stats) {
   if (term.comparison === "new") return "上月无同名词";
   if (term.comparison === "changed") return "问句已换，暂不比较";
@@ -132,12 +140,21 @@ export function MonthlyKeywords({ apiBase }: { apiBase: string }) {
     }
   }
 
-  return <section className="panel monthly-keywords">
+  const totals = board?.terms.reduce((total, term) => {
+    const stats = term.versions[term.versions.length - 1].stats;
+    return {
+      active: total.active + Number(term.active),
+      valid: total.valid + stats.valid,
+      pending: total.pending + stats.pending,
+    };
+  }, { active: 0, valid: 0, pending: 0 });
+
+  return <section className="panel monthly-keywords" aria-labelledby="monthly-keyword-title">
     <header className="monthly-keyword-header">
       <div>
         <span className="monthly-keyword-eyebrow">GEO 监控 · 月度词表</span>
-        <h3>产品月度二级词</h3>
-        <p>管理每月监控问句，查看提及、推荐与首推表现。</p>
+        <h3 id="monthly-keyword-title">产品月度二级词</h3>
+        <p>按产品和平台查看实际问句，以及本月的提及、推荐和首推表现。</p>
       </div>
       {board && (board.can_edit
         ? <button className="monthly-keyword-primary" type="button" disabled={saving || !!draft}
@@ -159,6 +176,17 @@ export function MonthlyKeywords({ apiBase }: { apiBase: string }) {
     {error && <p role="alert">{error}</p>}
     {notice && <p role="status">{notice}</p>}
     {!board && !error && <p role="status">加载词表中…</p>}
+    {!!board?.terms.length && totals && <>
+      <dl className="monthly-keyword-overview" aria-label="当前产品和平台的月度样本汇总">
+        <div><dt>已启用二级词</dt><dd>{totals.active}<small> / {board.terms.length} 个</small></dd></div>
+        <div><dt>本月有效样本</dt><dd>{totals.valid}<small> 轮</small></dd></div>
+        <div><dt>已回传待分析</dt><dd>{totals.pending}<small> 轮</small></dd></div>
+      </dl>
+      <div className="monthly-keyword-guide">
+        <p>豆包、百度、文心、元宝对当前月启用的实际问句每天安排一轮。样本回传并完成分析后计入本月统计。</p>
+        <a href="#capture">查看采集进度 <span aria-hidden="true">→</span></a>
+      </div>
+    </>}
     {draft && board?.can_edit && <form className="monthly-keyword-form" onSubmit={event => {
       event.preventDefault(); void write("save");
     }}>
@@ -177,14 +205,19 @@ export function MonthlyKeywords({ apiBase }: { apiBase: string }) {
       {board.can_edit && <button className="monthly-keyword-primary" type="button"
         onClick={() => setDraft({ name: "", questions: "" })}><ActionIcon kind="add" />添加第一个二级词</button>}
     </div>}
-    {!!board?.terms.length && <div className="trend-table"><table>
-      <thead><tr><th>二级词与问句</th><th>有效样本</th><th>正文提及率</th><th>明确推荐率</th><th>首推率</th><th>推荐率环比</th></tr></thead>
+    {!!board?.terms.length && <div className="monthly-keyword-table"><table aria-label="二级词监控结果">
+      <thead><tr><th scope="col">二级词与问句</th><th scope="col">样本状态</th><th scope="col">正文提及率</th><th scope="col">明确推荐率</th><th scope="col">首推率</th><th scope="col">推荐率环比</th></tr></thead>
       <tbody>{board.terms.map(term => {
         const version = term.versions[term.versions.length - 1];
         const stats = version.stats;
         return <tr key={term.id}>
-          <td><strong>{term.name}</strong> · v{version.number}{!term.active && " · 已停用"}
-            <details><summary>查看问句</summary>{version.questions.map(q => <div key={q}>{q}</div>)}</details>
+          <th scope="row">
+            <div className="monthly-keyword-term">
+              <strong>{term.name}</strong>
+              <span className="monthly-keyword-version">v{version.number}</span>
+              <span className="monthly-keyword-state" data-active={term.active}>{term.active ? "已启用" : "已停用"}</span>
+            </div>
+            <ul className="monthly-keyword-questions">{version.questions.map(q => <li key={q}>{q}</li>)}</ul>
             {term.versions.length > 1 && <details><summary>旧版本记录</summary>
               {term.versions.slice(0, -1).map(old => <div key={old.number}>
                 v{old.number} · {old.questions.join(" / ")} · 推荐率 {rate(old.stats.recommend, old.stats.valid)}
@@ -197,16 +230,21 @@ export function MonthlyKeywords({ apiBase }: { apiBase: string }) {
               <button className="monthly-keyword-quiet" type="button" disabled={saving || !!draft}
                 onClick={() => void write(term.active ? "pause" : "resume", term)}>{term.active ? "停用" : "重新启用"}</button>
             </div>}
+          </th>
+          <td data-label="样本状态">
+            {stats.valid ? <strong className="monthly-keyword-sample">{stats.valid} 轮有效</strong>
+              : <span className="monthly-keyword-sample" data-empty="true">{stats.pending ? "已回传" : "暂无回传"}</span>}
+            {stats.pending > 0 && <small>{stats.pending} 轮待分析</small>}
+            {stats.valid > 0 && stats.valid < 10 && <small>样本较少</small>}
           </td>
-          <td>{stats.valid} 轮 · {stats.pending} 待分析{stats.valid > 0 && stats.valid < 10 && " · 样本较少"}</td>
-          <td>{rate(stats.mention, stats.valid)}</td>
-          <td><strong>{rate(stats.recommend, stats.valid)}</strong>
+          <td data-label="正文提及率"><RateMetric hits={stats.mention} valid={stats.valid} /></td>
+          <td data-label="明确推荐率"><RateMetric hits={stats.recommend} valid={stats.valid} />
             {!!stats.evidence.length && <details><summary>查看命中证据</summary>
               {stats.evidence.map((item, index) => <blockquote key={index}>{item.day} · {item.question}<br />{item.text}</blockquote>)}
             </details>}
           </td>
-          <td>{rate(stats.first, stats.valid)}</td>
-          <td>{comparison(term, stats)}</td>
+          <td data-label="首推率"><RateMetric hits={stats.first} valid={stats.valid} /></td>
+          <td data-label="推荐率环比"><span className="monthly-keyword-comparison">{comparison(term, stats)}</span></td>
         </tr>;
       })}</tbody>
     </table></div>}
