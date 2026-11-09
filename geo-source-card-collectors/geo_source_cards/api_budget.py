@@ -9,9 +9,10 @@ from pathlib import Path
 
 from .pipeline_control import BEIJING, event, settings
 
-# Verified from official Chinese pricing 2026-10-08. Peak prices are used even
+# Verified from https://api-docs.deepseek.com/zh-cn/quick_start/pricing/ on 2026-11-09.
+# Peak prices are used even
 # off peak, so reported amounts are conservative estimates, not billing claims.
-PRICE_DATE = "2026-10-08"
+PRICE_DATE = "2026-11-09"
 INPUT_MISS, INPUT_HIT, OUTPUT = 2.0, 0.04, 8.0
 LIMITS = {"taxonomy": 6000, "research": 4800, "writer": 8000, "review": 3500}
 
