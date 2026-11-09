@@ -2322,55 +2322,65 @@ button {
   cursor: pointer;
 }
 .keyword-monitor-tabs button[aria-pressed="true"] { background: #17634e; border-color: #17634e; color: #fff; }
-.keyword-matrix { container-type: inline-size; }
-.keyword-matrix > table { width: 100%; table-layout: fixed; border-spacing: 0; text-align: left; font-size: 14px; line-height: 1.5; }
-.keyword-matrix > table > thead th { padding: 12px 9px; background: #edf4ef; color: #315447; font-weight: 700; }
-.keyword-matrix > table > thead th:nth-child(1) { width: 13%; border-radius: 9px 0 0 0; }
-.keyword-matrix > table > thead th:nth-child(2) { width: 16%; }
-.keyword-matrix > table > thead th:nth-child(3) { width: 6%; }
-.keyword-matrix > table > thead th:nth-child(4) { width: 10%; }
-.keyword-matrix > table > thead th:nth-child(5) { width: 8%; }
-.keyword-matrix > table > thead th:last-child { border-radius: 0 9px 0 0; }
-.keyword-matrix-row > :is(td, th) { padding: 12px 8px; border-bottom: 1px solid #e2eae5; vertical-align: middle; overflow-wrap: anywhere; }
-.keyword-matrix-row:nth-of-type(even) { background: #f8fbf9; }
-.keyword-product, .keyword-question > strong { color: #173e33; font-size: 15px; font-weight: 700; }
-.keyword-question > span { display: inline-block; margin: 3px 0 0 5px; }
-.keyword-matrix-rate { color: #17634e; font-size: 22px; font-variant-numeric: tabular-nums; }
-.keyword-matrix-row small { display: block; color: #49645a; font-size: 13px; }
-.keyword-platform { min-height: 86px; padding: 9px; border: 1px solid transparent; border-left: 3px solid #a8b8b2; border-radius: 8px; background: #eef2f1; }
-.keyword-platform[data-state="ready"] { color: #11654e; border-left-color: #1b9671; background: #e5f4ec; }
-.keyword-platform[data-state="miss"] { color: #922d37; border-left-color: #d76570; background: #fcf0f1; }
-.keyword-platform[data-state="pending"] { color: #7b510f; border-left-color: #d7a045; background: #fcf4e3; }
-.keyword-platform-value { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 2px 6px; }
-.keyword-platform-value strong { font-size: 18px; font-variant-numeric: tabular-nums; }
-.keyword-delta { display: inline-block; margin-top: 6px; padding: 2px 5px; border-radius: 5px; background: #eaeaf4; color: #4f4778; font-size: 12px; }
-.keyword-delta[data-direction="1"] { background: #dff2e8; color: #156349; }
-.keyword-delta[data-direction="-1"] { background: #fbe8ec; color: #912a3b; }
-.keyword-delta-missing { margin-top: 5px; }
+.keyword-owned-board { container-name: keyword-board; }
+.keyword-owned-board .owned-product-summary-heading > span { font-size: 13px; }
+.keyword-owned-board .owned-product-summary-heading small { font-size: 13px; }
+.keyword-owned-board .owned-product-summary-heading b { font-size: 17px; }
+.keyword-owned-board .owned-product-summary { margin-bottom: 22px; }
+.keyword-board-table { max-height: clamp(255px, 40vh, 460px); scrollbar-color: #9ccfbd #edf7f3; }
+.keyword-board-table.owned-product-daily-table { max-height: 570px; }
+.keyword-board-table > table { font-size: 14px; }
+.keyword-board-table > table > thead th { position: sticky; top: 0; z-index: 4; font-size: 13px; text-align: left; }
+.keyword-board-table.owned-product-summary-table > table > thead th:first-child { z-index: 5; }
+.keyword-board-row > :is(th, td) { padding: 11px 10px; vertical-align: middle; overflow-wrap: anywhere; }
+.keyword-board-table .keyword-board-row > th.keyword-product { text-align: left; color: var(--ink); background: #fff; border-bottom: 1px solid #e6efeb; }
+.keyword-board-table .keyword-board-row:nth-child(even) > th.keyword-product { background: #fbfdfc; }
+.keyword-board-table .keyword-board-row:hover > th.keyword-product { background: #f3faf7; }
+.keyword-board-row > .keyword-product > b, .keyword-term-title > b { color: var(--ink); font-size: 15px; }
+.keyword-term-title { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; }
+.keyword-question .monthly-keyword-questions { margin-block: 4px; }
+.keyword-board-row .owned-product-model-cell > span { min-height: 100px; }
+.keyword-board-row .owned-product-state-head { flex-wrap: wrap; gap: 3px 5px; }
+.keyword-board-row .owned-product-state-head b { font-size: 13px; }
+.keyword-board-row .owned-product-rate { font-size: 17px; }
+.keyword-board-row small, .keyword-board-row .rate-delta { font-size: 12px; }
+.keyword-board-row .rate-delta { white-space: normal; overflow-wrap: anywhere; font-size: 11px; }
 .monthly-keywords .keyword-detail-toggle {
-  display: block;
-  min-height: 28px;
-  margin-top: 3px;
+  display: inline-flex;
+  min-height: 26px;
+  margin-top: 2px;
   padding: 0;
   border: 0;
   background: transparent;
-  color: #17634e;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  color: #2f6a58;
+  font-size: 13px;
 }
+.keyword-detail-toggle > span { width: 0; height: 0; border-block: 4px solid transparent; border-left: 5px solid currentColor; }
+.keyword-detail-toggle[aria-expanded="true"] > span { transform: rotate(90deg); }
 .keyword-sample-row > td { padding: 10px 14px 16px; background: #f5f9f6; border-bottom: 1px solid #dbe8e1; }
 .keyword-sample-row p { margin: 4px 0; }
 .keyword-detail-scroll { overflow-x: auto; }
-.keyword-detail-scroll table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 14px; }
-.keyword-detail-scroll :is(th, td) { padding: 8px 10px; border-bottom: 1px solid #dfebe3; }
+.keyword-board-table .keyword-detail-scroll table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 14px; }
+.keyword-board-table .keyword-detail-scroll :is(th, td) { position: static; padding: 8px 10px; border-bottom: 1px solid #dfebe3; text-align: left; }
+.keyword-daily-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 9px; }
+.keyword-daily-heading h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0; font-size: 14px; }
+.keyword-daily-heading time { padding: 5px 9px; border-radius: 7px; background: #176c56; color: #fff; }
+.keyword-daily-heading h3 span { color: #446258; }
+.keyword-date-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.keyword-date-actions label { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; color: #446258; font-size: 14px; }
+.keyword-date-actions input { min-height: 36px; padding: 5px 8px; border: 1px solid #b7c9c0; border-radius: 6px; font: inherit; }
+.monthly-keywords .keyword-date-actions button { min-height: 36px; }
+.keyword-capture-link { align-self: center; padding-top: 18px; color: #17634e; font-size: 14px; font-weight: 650; }
 
-@container (max-width: 1080px) {
-  .keyword-matrix > table, .keyword-matrix > table > tbody { display: block; }
-  .keyword-matrix > table > thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-  .keyword-matrix-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-bottom: 12px; padding: 12px; border: 1px solid #dbe7df; border-radius: 10px; }
-  .keyword-matrix-row > :is(td, th) { padding: 0; border: 0; }
-  .keyword-product, .keyword-question { grid-column: 1 / -1; }
-  .keyword-matrix-row td[data-label]::before { content: attr(data-label); display: block; margin-bottom: 4px; color: #49645a; font-size: 13px; font-weight: 700; }
+@container keyword-board (max-width: 1040px) {
+  .keyword-board-table { max-height: 460px; border: 0; background: transparent; box-shadow: none; }
+  .keyword-board-table > table, .keyword-board-table > table > tbody { display: block; }
+  .keyword-board-table > table > colgroup { display: none; }
+  .keyword-board-table > table > thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .keyword-board-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-bottom: 10px; padding: 10px; border: 1px solid #dbe9e3; border-radius: 10px; background: #fff; }
+  .keyword-board-table .keyword-board-row > :is(th, td) { position: static; padding: 0; border: 0; box-shadow: none; background: transparent; }
+  .keyword-board-row > :is(.keyword-product, .keyword-question) { grid-column: 1 / -1; }
+  .keyword-board-row > td[data-label]::before { content: attr(data-label); display: block; margin-bottom: 4px; color: #49645a; font-size: 13px; font-weight: 700; }
   .keyword-sample-row, .keyword-sample-row > td { display: block; }
 }
 

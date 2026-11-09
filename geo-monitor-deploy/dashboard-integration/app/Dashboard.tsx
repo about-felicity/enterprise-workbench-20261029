@@ -10,6 +10,7 @@ import { PerformanceCenter } from "./PerformanceCenter";
 import { CaptureControl } from "./CaptureControl";
 import { CreationControl } from "./CreationControl";
 import { KeywordMonitoring } from "./KeywordMonitoring";
+import { DeltaIndicator, OwnedProductAverageCard, OwnedProductStateCard } from "./OwnedProductBoardCards";
 import { dashboardBasePath } from "./dashboardPaths";
 
 type Source = {
@@ -462,14 +463,6 @@ function OwnedVideoCategoryShare({ data }: { data: NonNullable<Analytics["doubao
   );
 }
 
-function DeltaIndicator({ value, unavailable = "昨日无数据" }: { value?: number | null; unavailable?: string }) {
-  if (value === undefined || value === null) return <small className="rate-delta unavailable">{unavailable}</small>;
-  const normalized = Math.abs(value) < 0.005 ? 0 : value;
-  const className = normalized > 0 ? "increase" : normalized < 0 ? "decrease" : "unchanged";
-  const prefix = normalized > 0 ? "↑ +" : normalized < 0 ? "↓ " : "→ ";
-  return <small className={`rate-delta ${className}`}>较昨日 {prefix}{normalized.toFixed(1)} 个百分点</small>;
-}
-
 function DailyOwnedProductBoard({
   rows,
   summary,
@@ -536,7 +529,7 @@ function DailyOwnedProductBoard({
           return <td className="owned-product-model-cell" data-label={label} key={surfaceId}><span className="owned-product-surface empty"><b>{emptyLabel}</b><small>{emptyDetail}</small></span></td>;
         }
         const display = stateText(surface);
-        return <td className="owned-product-model-cell" data-label={label} key={surfaceId}><span className={`owned-product-surface ${display.className}`}><span className="owned-product-state-head"><b>{display.label}</b><strong className="owned-product-rate">{display.rate}</strong></span><small>{display.detail}</small><DeltaIndicator value={surface.day_over_day_change} /></span></td>;
+        return <td className="owned-product-model-cell" data-label={label} key={surfaceId}><OwnedProductStateCard {...display} surface change={<DeltaIndicator value={surface.day_over_day_change} />} /></td>;
       })}
     </>
   );
@@ -546,9 +539,9 @@ function DailyOwnedProductBoard({
         const surface = status?.surfaces?.[surfaceId];
         const label = surface?.surface_label || fallbackLabel;
         if (!surface?.observed_days) {
-          return <td className="owned-product-model-cell" data-label={`${label} 日均`} key={surfaceId}><span className="owned-product-model-average owned-product-surface empty"><b>—</b><small>{surface?.availability_note || "暂无有效数据"}</small></span></td>;
+          return <td className="owned-product-model-cell" data-label={`${label} 日均`} key={surfaceId}><OwnedProductAverageCard surface rate={null} detail={surface?.availability_note || "暂无有效数据"} /></td>;
         }
-        return <td className="owned-product-model-cell" data-label={`${label} 日均`} key={surfaceId}><span className="owned-product-model-average owned-product-surface"><b>{surface.average_daily_mention_rate.toFixed(1)}%</b><small>{surface.observed_days}天 · {surface.total_recommendation_runs}/{surface.total_eligible_runs} 样本</small><DeltaIndicator value={surface.day_over_day_change} unavailable="暂无昨日基准" /></span></td>;
+        return <td className="owned-product-model-cell" data-label={`${label} 日均`} key={surfaceId}><OwnedProductAverageCard surface rate={`${surface.average_daily_mention_rate.toFixed(1)}%`} detail={`${surface.observed_days}天 · ${surface.total_recommendation_runs}/${surface.total_eligible_runs} 样本`} change={<DeltaIndicator value={surface.day_over_day_change} unavailable="暂无昨日基准" />} /></td>;
       })}
     </>
   );
@@ -598,7 +591,7 @@ function DailyOwnedProductBoard({
                   {models.map((item) => {
                     const status = row.models[item.id];
                     if (item.id === "wenxin") return <Fragment key={item.id}>{summarySurfaceCells(status)}</Fragment>;
-                    return <td className="owned-product-model-cell" data-label={`${item.name} 日均`} key={item.id}>{status?.observed_days ? <span className="owned-product-model-average"><b>{status.average_daily_mention_rate.toFixed(1)}%</b><small>{status.observed_days} 个有数据日 · {status.total_recommendation_runs}/{status.total_eligible_runs} 轮</small><DeltaIndicator value={status.day_over_day_change} unavailable="暂无昨日基准" /></span> : <span className="owned-product-model-average empty"><b>—</b><small>暂无有效数据</small></span>}</td>;
+                    return <td className="owned-product-model-cell" data-label={`${item.name} 日均`} key={item.id}>{status?.observed_days ? <OwnedProductAverageCard rate={`${status.average_daily_mention_rate.toFixed(1)}%`} detail={`${status.observed_days} 个有数据日 · ${status.total_recommendation_runs}/${status.total_eligible_runs} 轮`} change={<DeltaIndicator value={status.day_over_day_change} unavailable="暂无昨日基准" />} /> : <OwnedProductAverageCard rate={null} detail="暂无有效数据" />}</td>;
                   })}
                 </tr>
               ))}</tbody>
@@ -623,7 +616,7 @@ function DailyOwnedProductBoard({
                   {models.map((item) => {
                     const display = stateText(row.models[item.id]);
                     if (item.id === "wenxin") return <Fragment key={item.id}>{dailySurfaceCells(row.models[item.id])}</Fragment>;
-                    return <td data-label={item.name} className="owned-product-model-cell" key={item.id}><span className={`owned-product-state ${display.className}`}><span className="owned-product-state-head"><b>{display.label}</b>{display.rate !== null ? <strong className="owned-product-rate" aria-label={`提及率 ${display.rate}`}>{display.rate}</strong> : null}</span><small>{display.detail}</small>{day === groups[0]?.[0] && display.rate !== null ? <DeltaIndicator value={row.models[item.id]?.day_over_day_change} /> : null}</span></td>;
+                    return <td data-label={item.name} className="owned-product-model-cell" key={item.id}><OwnedProductStateCard {...display} rateLabel="提及率" change={day === groups[0]?.[0] && display.rate !== null ? <DeltaIndicator value={row.models[item.id]?.day_over_day_change} /> : null} /></td>;
                   })}
                 </tr>
               ))}</tbody>
