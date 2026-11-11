@@ -1,4 +1,6 @@
 /** Fixed creation-only upstream. Public authentication remains at the GEO mount. */
+import { themedDocument } from "../../../workbenchTheme.mjs";
+
 const upstream="http://127.0.0.1:8804";
 const prefix="/api/geo-creation/";
 function error(status:number,message:string){return Response.json({ok:false,message},{status,headers:{"Cache-Control":"no-store"}})}
@@ -26,7 +28,13 @@ async function proxy(request:Request){
     const setCookie=response.headers.get("Set-Cookie")?.match(/(?:^|;\s*)geo_creation=([a-f0-9]{64})(?:;|$)/);
     if(setCookie)output.set("Set-Cookie",`geo_dashboard_creation=${setCookie[1]}; HttpOnly; SameSite=Strict; Path=${mount}/api/geo-creation; Max-Age=21600${publicMount?"; Secure":""}`);
     for(const name of ["Content-Disposition","X-Content-SHA256"])if(response.headers.has(name))output.set(name,response.headers.get(name)!);
-    if(path==="ui"&&response.ok){const html=(await response.text()).replace("const API='/api/';",`const API='${mount}/api/geo-creation/';`);return new Response(html,{status:response.status,headers:output})}
+    if(path==="ui"&&response.ok){
+      const html=(await response.text()).replace("const API='/api/';",`const API='${mount}/api/geo-creation/';`)
+        .replace("暂时无法获取最新状态，已保留输入与进度，正在自动重连。后台任务继续执行。", "连接中断，正在重连。后台任务继续执行。")
+        .replace(".docx，最大5MB，支持正文与表格；保留原文件和原文依据。", ".docx · 最大 5 MB")
+        .replace("筛选后新任务成稿", "新任务成稿").replace("筛选后历史成稿", "历史成稿");
+      return new Response(themedDocument(html,"creation",request.url),{status:response.status,headers:output});
+    }
     // DOCX must stay byte-for-byte identical; text decoding corrupts ZIP bytes.
     return new Response(await response.arrayBuffer(),{status:response.status,headers:output});
   }catch{return error(503,"创作服务暂时不可用；后台任务保留，请稍后刷新")}

@@ -1,14 +1,14 @@
 "use client";
-import { beijingDate, beijingMonth } from "./beijingCalendar";
 
 import WorkbenchLogo from "./WorkbenchLogo";
 
-import { Fragment, type CSSProperties, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Fragment, type CSSProperties, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { getIcon } from "./ModelIcon";
 import type { EmployeePerformance } from "./PerformanceBoard";
 import { PerformanceCenter } from "./PerformanceCenter";
 import { CaptureControl } from "./CaptureControl";
 import { CreationControl } from "./CreationControl";
+import CreatorVideos from "./CreatorVideos";
 import { KeywordMonitoring } from "./KeywordMonitoring";
 import { DeltaIndicator, OwnedProductAverageCard, OwnedProductStateCard } from "./OwnedProductBoardCards";
 import { dashboardBasePath } from "./dashboardPaths";
@@ -276,7 +276,7 @@ type RemoteActivity = {
   queue: { queued: number; processed: number; errors: number };
   events: RemoteEvent[];
 };
-type View = "overview" | "compare" | "sources" | "brands" | "runs" | "control" | "creation" | "performance" | "keywords";
+type View = "overview" | "compare" | "sources" | "brands" | "runs" | "control" | "creation" | "performance" | "keywords" | "creator-videos" | "employee-videos" | "paid-media-videos";
 type QuestionMode = "interleaved" | "sequential";
 
 const emptyAnalytics: Analytics = {
@@ -290,17 +290,21 @@ const emptyAnalytics: Analytics = {
 function dashboardModels<T extends { id: string }>(items: T[] = []): T[] {
   return items.filter((item) => item.id !== "quark");
 }
-const views: { id: View; label: string; hint: string; symbol: string }[] = [
-  { id: "overview", label: "模型总览", hint: "先看规模与质量", symbol: "◈" },
-  { id: "keywords", label: "二级词监控", hint: "每日样本与平台对比", symbol: "▤" },
-  { id: "compare", label: "问题对比", hint: "同一问题横向比较", symbol: "⇄" },
-  { id: "sources", label: "信源洞察", hint: "每日链接 Top 25 与关键词", symbol: "◎" },
-  { id: "brands", label: "品牌与产品", hint: "提及率、排名与自有信源", symbol: "◇" },
-  { id: "performance", label: "绩效考核", hint: "员工卡片与每日计算明细", symbol: "▥" },
-  { id: "runs", label: "回答审计", hint: "逐轮查看原始证据", symbol: "≡" },
-  { id: "control", label: "采集控制", hint: "问题、账号与任务", symbol: "▶" },
-  { id: "creation", label: "内容创作中心", hint: "专用素材与成稿下载", symbol: "✎" },
+const views: { id: View; label: string; hint: string; icon: string }[] = [
+  { id: "overview", label: "模型总览", hint: "先看规模与质量", icon: "M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z" },
+  { id: "keywords", label: "二级词监控", hint: "每日样本与平台对比", icon: "M4 5h16v14H4z M4 10h16 M9 10v9 M9 14h11" },
+  { id: "compare", label: "问题对比", hint: "同一问题横向比较", icon: "M4 7h16m-4-4 4 4-4 4 M20 17H4m4-4-4 4 4 4" },
+  { id: "sources", label: "信源洞察", hint: "每日链接 Top 25 与关键词", icon: "M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6-2 4 4 M7 12l3-3 2 2 3-3" },
+  { id: "brands", label: "品牌与产品", hint: "提及率、排名与自有信源", icon: "M3 4h8l10 10-7 7L4 11z M8 8h.01" },
+  { id: "performance", label: "绩效考核", hint: "员工卡片与每日计算明细", icon: "M3 3v18h18 M8 16v-4m5 4V7m5 9v-6" },
+  { id: "runs", label: "回答审计", hint: "逐轮查看原始证据", icon: "M6 3h9l3 3v15H6z M14 3v4h4 M9 11h6m-6 4h6" },
+  { id: "control", label: "采集控制", hint: "问题、账号与任务", icon: "M3 6h18 M3 12h18 M3 18h18 M8 4v4m8 2v4m-5 2v4" },
+  { id: "creation", label: "内容创作中心", hint: "专用素材与成稿下载", icon: "m5 15 11-11 4 4L9 19l-5 1z M13 7l4 4 M12 20h8" },
+  { id: "creator-videos", label: "达人视频数据", hint: "查看抖音作品互动数据", icon: "M3 5h18v14H3z M10 9l5 3-5 3z" },
+  { id: "paid-media-videos", label: "付费媒体视频数据", hint: "付费媒体作品费用与互动", icon: "M3 5h18v14H3z M7 9l5 3-5 3z M15 10h3m-3 4h3" },
+  { id: "employee-videos", label: "自有员工视频数据", hint: "员工上传记录与作品互动", icon: "M3 5h18v14H3z M8 11a2 2 0 1 0 4 0 2 2 0 1 0-4 0 M7 16c1-3 5-3 6 0 M15 10h3m-3 4h3" },
 ];
+const hashViews: View[] = ["creation", "performance", "keywords", "creator-videos", "paid-media-videos", "employee-videos"];
 
 function apiBase() {
   if (typeof window === "undefined") return "http://127.0.0.1:8765";
@@ -509,6 +513,11 @@ function DailyOwnedProductBoard({
     return { label: "未上榜", detail: `0/${status.eligible_runs} 轮推荐`, rate: mentionRateText, className: "not-listed" };
   };
   const surfaceOrder: [string, string][] = [["wenxin_card", "文心卡片"], ["baidu_card", "百度卡片"]];
+  const platformColumns = models.flatMap((model) => model.id === "wenxin" ? surfaceOrder : [[model.id, model.name]]);
+  const summaryWidths = [154, 124, 110, 122, 130];
+  const summaryPlatformWidth = 112;
+  const dailyWidths = [184, 160];
+  const dailyPlatformWidth = 148;
   const dailySurfaceCells = (status?: OwnedProductModelStatus) => (
     <>
       {surfaceOrder.map(([surfaceId, fallbackLabel]) => {
@@ -541,7 +550,7 @@ function DailyOwnedProductBoard({
         if (!surface?.observed_days) {
           return <td className="owned-product-model-cell" data-label={`${label} 日均`} key={surfaceId}><OwnedProductAverageCard surface rate={null} detail={surface?.availability_note || "暂无有效数据"} /></td>;
         }
-        return <td className="owned-product-model-cell" data-label={`${label} 日均`} key={surfaceId}><OwnedProductAverageCard surface rate={`${surface.average_daily_mention_rate.toFixed(1)}%`} detail={`${surface.observed_days}天 · ${surface.total_recommendation_runs}/${surface.total_eligible_runs} 样本`} change={<DeltaIndicator value={surface.day_over_day_change} unavailable="暂无昨日基准" />} /></td>;
+        return <td className="owned-product-model-cell" data-label={`${label} 日均`} key={surfaceId}><OwnedProductAverageCard surface rate={surface.average_daily_mention_rate} detail={`${surface.observed_days}天 · ${surface.total_recommendation_runs}/${surface.total_eligible_runs} 样本`} change={<DeltaIndicator value={surface.day_over_day_change} unavailable="暂无昨日基准" />} /></td>;
       })}
     </>
   );
@@ -574,13 +583,13 @@ function DailyOwnedProductBoard({
               <span>{summary.length} 个产品</span>
             </div>
           </div>
-          <div className="owned-product-table owned-product-summary-table">
-            <table style={{ minWidth: 860 + models.reduce((width, item) => width + (item.id === "wenxin" ? 320 : 160), 0) }}>
+          <div className="owned-product-table owned-product-summary-table" tabIndex={0} role="region" aria-label="产品月均提及率">
+            <table aria-label="产品月均提及率" style={{ minWidth: summaryWidths.reduce((sum, width) => sum + width, 0) + platformColumns.length * summaryPlatformWidth }}>
               <colgroup>
-                {[190, 160, 160, 170, 180].map((width, index) => <col key={index} style={{ width }} />)}
-                {models.flatMap((item) => item.id === "wenxin" ? surfaceOrder.map(([id]) => <col key={id} style={{ width: 160 }} />) : [<col key={item.id} style={{ width: 160 }} />])}
+                {summaryWidths.map((width, index) => <col key={index} style={{ width }} />)}
+                {platformColumns.map(([id]) => <col key={id} style={{ width: summaryPlatformWidth }} />)}
               </colgroup>
-              <thead><tr><th>我的产品</th><th>对应问题</th><th>有数据天数</th><th>平均每天提及率</th><th>累计推荐 / 有效回答</th>{models.flatMap((item) => item.id === "wenxin" ? surfaceOrder.map(([id, label]) => <th key={id}>{label} 日均</th>) : [<th key={item.id}>{item.name} 日均</th>])}</tr></thead>
+              <thead><tr><th scope="col">我的产品</th><th scope="col">对应问题</th><th scope="col">有数据天数</th><th scope="col">平均每天提及率</th><th scope="col">累计推荐 / 有效回答</th>{platformColumns.map(([id, label]) => <th scope="col" key={id}>{label} 日均</th>)}</tr></thead>
               <tbody>{summary.map((row) => (
                 <tr key={`${row.question}-${row.product}`}>
                   <td data-label="我的产品"><b>{row.product}</b><small>{row.brand}</small></td>
@@ -591,7 +600,7 @@ function DailyOwnedProductBoard({
                   {models.map((item) => {
                     const status = row.models[item.id];
                     if (item.id === "wenxin") return <Fragment key={item.id}>{summarySurfaceCells(status)}</Fragment>;
-                    return <td className="owned-product-model-cell" data-label={`${item.name} 日均`} key={item.id}>{status?.observed_days ? <OwnedProductAverageCard rate={`${status.average_daily_mention_rate.toFixed(1)}%`} detail={`${status.observed_days} 个有数据日 · ${status.total_recommendation_runs}/${status.total_eligible_runs} 轮`} change={<DeltaIndicator value={status.day_over_day_change} unavailable="暂无昨日基准" />} /> : <OwnedProductAverageCard rate={null} detail="暂无有效数据" />}</td>;
+                    return <td className="owned-product-model-cell" data-label={`${item.name} 日均`} key={item.id}>{status?.observed_days ? <OwnedProductAverageCard rate={status.average_daily_mention_rate} detail={`${status.observed_days} 个有数据日 · ${status.total_recommendation_runs}/${status.total_eligible_runs} 轮`} change={<DeltaIndicator value={status.day_over_day_change} unavailable="暂无昨日基准" />} /> : <OwnedProductAverageCard rate={null} detail="暂无有效数据" />}</td>;
                   })}
                 </tr>
               ))}</tbody>
@@ -602,13 +611,13 @@ function DailyOwnedProductBoard({
       {groups.length ? groups.map(([day, dayRows]) => (
         <div className="owned-product-day" key={day}>
           <h3><time>{day}</time><span>{dayRows.filter((row) => models.some((item) => row.models[item.id]?.state === "listed")).length}/{dayRows.length} 个产品至少在一个模型上榜</span></h3>
-          <div className="owned-product-table owned-product-daily-table">
-            <table style={{ minWidth: 380 + models.reduce((width, item) => width + (item.id === "wenxin" ? 360 : 180), 0) }}>
+          <div className="owned-product-table owned-product-daily-table" tabIndex={0} role="region" aria-label={`${day} 产品上榜情况`}>
+            <table aria-label={`${day} 产品上榜情况`} style={{ minWidth: dailyWidths.reduce((sum, width) => sum + width, 0) + platformColumns.length * dailyPlatformWidth }}>
               <colgroup>
-                <col style={{ width: 200 }} /><col style={{ width: 180 }} />
-                {models.flatMap((item) => item.id === "wenxin" ? surfaceOrder.map(([id]) => <col key={id} style={{ width: 180 }} />) : [<col key={item.id} style={{ width: 180 }} />])}
+                {dailyWidths.map((width, index) => <col key={index} style={{ width }} />)}
+                {platformColumns.map(([id]) => <col key={id} style={{ width: dailyPlatformWidth }} />)}
               </colgroup>
-              <thead><tr><th>我的产品</th><th>对应问题</th>{models.flatMap((item) => item.id === "wenxin" ? surfaceOrder.map(([id, label]) => <th key={id}>{label}</th>) : [<th key={item.id}>{item.name}</th>])}</tr></thead>
+              <thead><tr><th scope="col">我的产品</th><th scope="col">对应问题</th>{platformColumns.map(([id, label]) => <th scope="col" key={id}>{label}</th>)}</tr></thead>
               <tbody>{dayRows.map((row) => (
                 <tr key={`${row.date}-${row.question}-${row.product}`}>
                   <td data-label="我的产品"><b>{row.product}</b><small>{row.brand}</small></td>
@@ -933,7 +942,7 @@ function BrandProductTrendExplorer({ model, question, focusDate, ownedBrands, lo
   return <section className="brand-trend-explorer">
     <div className="trend-explorer-head"><div><h3>品牌提及与信源</h3>{historyLoading && <small role="status">趋势加载中…</small>}</div>{loadHistory && !historicalModel && <button type="button" className="trend-more" disabled={historyLoading} onClick={() => { setHistoryLoading(true); setHistoryRequested(true); }}>{historyLoading ? "趋势加载中…" : "加载14日趋势"}</button>}</div>
     <div className="trend-selectors brand-only"><label>选择品牌<select value={activeBrand} onChange={(event) => setBrand(event.target.value)}>{brandOptions.map((name) => <option key={name}>{name}</option>)}</select></label></div>
-    {activeBrand ? <div className="interactive-chart-card"><h4>{activeBrand} · 回答与信源变化</h4><RateLineChart dates={allDates} selectedDate={activeDate} onSelectDate={setSelectedDate} series={[{ label: "回答提及率", color: "#17a77b", values: brandAnswer }, { label: "信源提及率", color: "#f59e42", values: brandSources }]} /></div> : <Empty>暂无品牌趋势</Empty>}
+    {activeBrand ? <div className="interactive-chart-card"><h4>{activeBrand} · 回答与信源变化</h4><RateLineChart dates={allDates} selectedDate={activeDate} onSelectDate={setSelectedDate} series={[{ label: "回答提及率", color: "#4338ca", values: brandAnswer }, { label: "信源提及率", color: "#b45309", values: brandSources }]} /></div> : <Empty>暂无品牌趋势</Empty>}
     {!!productSeries.length && <div className="interactive-chart-card"><h4>{activeBrand} · 各产品回答提及率</h4><RateLineChart dates={allDates} series={productSeries} /></div>}
     <div className="competitor-links"><div className="competitor-links-head"><div><b>{activeBrand || "品牌"}信源链接</b><small>{activeDate || "请选择折线日期"} · {selectedSourceEligible ? `${selectedSourceMentions}/${selectedSourceEligible} 个已分析唯一信源提及（${selectedSourceRate.toFixed(1)}%） · 共观测 ${selectedSourceObserved} 个${selectedSourcePending ? `，${selectedSourcePending} 个待正文分析` : ""}${selectedSourceFailed ? `，${selectedSourceFailed} 个抓取失败` : ""}${selectedLinks ? ` · ${selectedLinks.links.length} 条可查看链接` : ""}` : selectedSourceObserved ? `共观测 ${selectedSourceObserved} 个${selectedSourcePending ? `，${selectedSourcePending} 个待正文分析` : ""}${selectedSourceFailed ? `，${selectedSourceFailed} 个抓取失败` : ""}` : "该日无信源"}</small></div>{linkLoading && <em>读取中…</em>}</div>
       {!!linkDays.length && <div className="link-date-tabs" aria-label="选择品牌信源日期">{linkDays.map((day) => <button key={day.date} type="button" className={activeDate === day.date ? "active" : ""} onClick={() => setSelectedDate(day.date)}><span>{day.date.slice(5)}</span><b>{day.mentions}</b></button>)}</div>}
@@ -1005,20 +1014,54 @@ function RemoteTransferLog({ activity }: { activity?: RemoteActivity }) {
   );
 }
 
+function SidebarSelection({ activeKey }: { activeKey: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    const indicator = ref.current;
+    const group = indicator?.parentElement;
+    if (!indicator || !group) return;
+    const button = group.querySelector<HTMLButtonElement>(":scope > button.active");
+    if (!button) {
+      indicator.removeAttribute("style");
+      return;
+    }
+
+    const update = () => {
+      indicator.style.transform = `translate(${button.offsetLeft}px, ${button.offsetTop}px)`;
+      indicator.style.width = `${button.offsetWidth}px`;
+      indicator.style.height = `${button.offsetHeight}px`;
+    };
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(group);
+    observer.observe(button);
+    return () => observer.disconnect();
+  }, [activeKey]);
+
+  return <div ref={ref} className="sidebar-selection" aria-hidden="true" />;
+}
+
 export function Dashboard() {
   const [view, setView] = useState<View>("overview");
+  const showAnalytics = view !== "control" && !hashViews.includes(view);
   const [model, setModel] = useState("");
   const [question, setQuestion] = useState("");
   // The server and browser must render the same first frame. Browser-only
   // preferences are restored after hydration to avoid a React mismatch.
-  const [date, setDate] = useState(() => beijingDate());
-  const [summaryMonth, setSummaryMonth] = useState(() => beijingMonth());
+  const [date, setDate] = useState(() => new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit",
+  }).format(new Date()));
+  const [summaryMonth, setSummaryMonth] = useState(() => new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit",
+  }).format(new Date()));
   const filtersReady = true;
   const [intersectionTarget, setIntersectionTarget] = useState("owned");
   const [loadedAnalytics, setAnalytics] = useState<Analytics>(emptyAnalytics);
   const [sourceIntersections, setSourceIntersections] = useState<Analytics | null>(null);
   const [sourceIntersectionLoading, setSourceIntersectionLoading] = useState(false);
   const [control, setControl] = useState<Record<string, ControlState>>({});
+  const [sidebarCatalog, setSidebarCatalog] = useState<CatalogModel[]>([]);
   const [drafts, setDrafts] = useState<Record<string, string>>({});
   const [accounts, setAccounts] = useState<Record<string, AccountState>>({});
   const [startingModels, setStartingModels] = useState<Record<string, boolean>>({});
@@ -1040,15 +1083,11 @@ export function Dashboard() {
   const sourceEntryDate = useRef("");
 
   const selectView = (nextView: View) => {
-    if (nextView === "performance") {
-      window.history.replaceState(null, "", "#performance");
-    } else if (nextView === "keywords") {
-      window.history.replaceState(null, "", "#keywords");
-    } else if (nextView === "creation") {
-      window.history.replaceState(null, "", "#creation");
+    if (hashViews.includes(nextView)) {
+      window.history.replaceState(null, "", `#${nextView}`);
     } else if (nextView === "control") {
       if (!window.location.hash.startsWith("#capture")) window.history.replaceState(null, "", "#capture/doubao1");
-    } else if (window.location.hash.startsWith("#capture") || window.location.hash === "#creation" || window.location.hash === "#performance" || window.location.hash === "#keywords") {
+    } else if (window.location.hash.startsWith("#capture") || hashViews.some(item => window.location.hash === `#${item}`)) {
       window.history.replaceState(null, "", window.location.pathname + window.location.search);
     }
     if (nextView === "sources" && view !== "sources") {
@@ -1063,9 +1102,8 @@ export function Dashboard() {
   useEffect(() => {
     const restoreCapture = () => {
       if (window.location.hash.startsWith("#capture")) setView("control");
-      if (window.location.hash === "#creation") setView("creation");
-      if (window.location.hash === "#performance") setView("performance");
-      if (window.location.hash === "#keywords") setView("keywords");
+      const restored = hashViews.find(item => window.location.hash === `#${item}`);
+      if (restored) setView(restored);
     };
     restoreCapture();
     window.addEventListener("hashchange", restoreCapture);
@@ -1073,7 +1111,8 @@ export function Dashboard() {
   }, []);
 
   useEffect(() => {
-    if (view !== "control" && view !== "creation" || loadedAnalytics.model_catalog.length) return;
+    const loadCaptureDrafts = view === "control" || view === "creation";
+    if (loadedAnalytics.model_catalog.length || (!loadCaptureDrafts && sidebarCatalog.length)) return;
     let active = true;
     void (async () => {
       try {
@@ -1082,6 +1121,10 @@ export function Dashboard() {
         const payload = await response.json();
         const catalog = dashboardModels<CatalogModel>(payload.models);
         if (!active) return;
+        if (!loadCaptureDrafts) {
+          setSidebarCatalog(catalog);
+          return;
+        }
         for (const item of catalog.filter((entry) => !["doubao", "deepseek", "wenxin"].includes(entry.id))) {
           const plan = await fetch(`${apiBase()}/api/models/${item.id}/questions`, { cache: "no-store" });
           if (!plan.ok || !active) continue;
@@ -1092,7 +1135,7 @@ export function Dashboard() {
       } catch { /* The independent capture controls can still operate. */ }
     })();
     return () => { active = false; };
-  }, [view, loadedAnalytics.model_catalog.length]);
+  }, [view, loadedAnalytics.model_catalog.length, sidebarCatalog.length]);
 
   // A filter label must never be paired with the previous filter's rows. Derive
   // an empty result immediately from the selected filter while retaining the
@@ -1129,7 +1172,7 @@ export function Dashboard() {
 
   const loadAnalytics = useCallback(async (force = false, silent = false) => {
     if (!filtersReady) return;
-    if (view === "control" || view === "creation" || view === "performance" || view === "keywords") {
+    if (view === "control" || hashViews.includes(view)) {
       setLoading(false);
       return;
     }
@@ -1372,6 +1415,7 @@ export function Dashboard() {
   // Keep every active dashboard model visible even with zero rows so "未采集" is
   // represented explicitly and cross-model comparisons keep stable columns.
   const visibleModelCatalog = analytics.model_catalog;
+  const sidebarModels = visibleModelCatalog.length ? visibleModelCatalog : sidebarCatalog;
   const selectedModels = analytics.models.filter((item) => !model || item.id === model);
   const participatingModelCount = selectedModels.filter(
     (item) => item.runs > 0 || item.sources > 0,
@@ -1525,7 +1569,8 @@ export function Dashboard() {
             </span>
           </span>
         </div>
-        {view !== "control" && view !== "creation" && view !== "performance" && view !== "keywords" && <div className="scope">
+        <div className="scope">
+          <SidebarSelection activeKey={[model, ...sidebarModels.map(item => item.id)].join(":")} />
           <span>模型范围</span>
           <button
             className={!model ? "active" : ""}
@@ -1539,15 +1584,15 @@ export function Dashboard() {
               <circle cx="19" cy="19" r="3" fill="white" opacity="0.9" />
               <defs>
                 <linearGradient id="all-grad" x1="0" y1="0" x2="29" y2="29" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#34C298" />
-                  <stop offset="1" stopColor="#128062" />
+                  <stop stopColor="#3b82f6" />
+                  <stop offset="1" stopColor="#2563eb" />
                 </linearGradient>
               </defs>
             </svg>
             <b>全部模型</b>
 
           </button>
-          {visibleModelCatalog.map((item) => {
+          {sidebarModels.map((item) => {
             const Icon = getIcon(item.tone);
             return (
               <button
@@ -1567,15 +1612,20 @@ export function Dashboard() {
               </button>
             );
           })}
-        </div>}
+        </div>
         <nav>
+          <SidebarSelection activeKey={view} />
           {views.map((item) => (
             <button
               key={item.id}
               className={view === item.id ? "active" : ""}
               onClick={() => selectView(item.id)}
             >
-              <i>{item.symbol}</i>
+              <i aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                  <path d={item.icon} />
+                </svg>
+              </i>
               <span>
                 <b>{item.label}</b>
 
@@ -1584,7 +1634,16 @@ export function Dashboard() {
           ))}
         </nav>
         <div className="sidebar-tools">
-          <a className="asset-entry" href={`${dashboardBasePath()}/asset-management`}>
+          <a className="asset-entry" href="./material-library">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="16" rx="2" />
+              <circle cx="8.5" cy="9" r="1.5" />
+              <path d="m3 17 5-4 3 2 4-5 6 7" />
+            </svg>
+            <span>素材库</span>
+            <svg className="asset-entry-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
+          </a>
+          <a className="asset-entry" href="./asset-management">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z" />
               <path d="m4 7.5 8 4.5 8-4.5M12 12v9M8 5.25l8 4.5" />
@@ -1608,14 +1667,14 @@ export function Dashboard() {
                 : views.find((item) => item.id === view)?.label}
             </h1>
           </div>
-          {view !== "control" && view !== "creation" && view !== "performance" && view !== "keywords" && (
+          {showAnalytics && (
             <button onClick={() => loadAnalytics(true)} disabled={loading}>
               {loading ? "读取中" : "刷新数据"}
             </button>
           )}
         </header>
-        {view !== "control" && view !== "creation" && view !== "performance" && view !== "keywords" && analytics.cache_status?.state !== "current" && analytics.generated_at && <p className="message" role="status">{analytics.cache_status?.message || "统计快照时间："} {analytics.generated_at}。刷新完成前请勿按此判断最新结果。</p>}
-        {view !== "control" && view !== "creation" && view !== "performance" && view !== "keywords" && (
+        {showAnalytics && analytics.cache_status?.state === "refreshing" && analytics.generated_at && <p className="message" role="status">统计更新中 · 上次快照 {timeText(analytics.generated_at)}</p>}
+        {showAnalytics && (
           <div className="filterbar">
             <label>
               问题
@@ -1667,14 +1726,14 @@ export function Dashboard() {
 
           </div>
         )}
-        {view !== "control" && view !== "creation" && view !== "performance" && view !== "keywords" && loading && (
+        {showAnalytics && loading && (
           <div className="filter-loading" role="status">
             正在切换数据口径，请稍候…
           </div>
         )}
 
         <div className="content">
-          {view !== "control" && view !== "creation" && view !== "performance" && view !== "keywords" && (
+          {showAnalytics && (
             <section className="kpis">
               <article>
                 <span>有效回答</span>
@@ -2021,7 +2080,7 @@ export function Dashboard() {
             <>
               {selectedModels.map((item) => (
                 <section className="panel brand-section" key={item.id}>
-                  <SectionTitle eyebrow={item.name.toUpperCase()} title={`${question || "全部问题"} · 品牌与产品每日表现`} note={date || (model ? "最近 2 日首屏 · 可按需加载 14 日趋势" : "最近 2 个有效自然日")} />
+                  <SectionTitle eyebrow={item.name.toUpperCase()} title={`${question || "全部问题"} · 品牌与产品每日表现`} note={date || (model ? "最近 2 日" : "最近 2 个有效自然日")} />
                   {!!item.analysis_pending_runs && (
                     <div className="analysis-note pending-note">
                       <b>产品解析进度</b>
@@ -2059,7 +2118,6 @@ export function Dashboard() {
               <SectionTitle
                 eyebrow="ANSWER AUDIT"
                 title="逐轮回答与信源审计"
-                note="按完成时间倒序"
               />
               <div className="run-list">
                 {selectedModels
@@ -2114,6 +2172,7 @@ export function Dashboard() {
           {view === "keywords" && <KeywordMonitoring apiBase={apiBase()} />}
           {view === "performance" && <PerformanceCenter apiBase={apiBase()} />}
           {view === "creation" && <CreationControl />}
+          {(view === "creator-videos" || view === "paid-media-videos" || view === "employee-videos") && <CreatorVideos key={view} ledger={view} />}
           {view === "control" && (
             <>
               <CaptureControl />

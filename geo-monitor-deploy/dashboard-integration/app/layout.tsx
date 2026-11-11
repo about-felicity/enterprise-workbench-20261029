@@ -8,7 +8,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="zh-CN" data-workbench="shell">
+      <head><link rel="stylesheet" href="./workbench-theme.css?v=sidebar-motion-20261110" /></head>
       <body>{children}</body>
     </html>
   );

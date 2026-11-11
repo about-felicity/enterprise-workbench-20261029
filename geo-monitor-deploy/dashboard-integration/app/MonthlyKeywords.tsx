@@ -124,8 +124,8 @@ function comparison(term: Term, stats: Stats) {
   return `${delta > 0 ? "+" : ""}${delta.toFixed(1)} 个百分点`;
 }
 
-export function MonthlyKeywords({ apiBase, initialMonth, initialProduct }: {
-  apiBase: string; initialMonth?: string; initialProduct?: string;
+export function MonthlyKeywords({ apiBase, initialMonth, initialProduct, initialModel }: {
+  apiBase: string; initialMonth?: string; initialProduct?: string; initialModel?: string;
 }) {
   const endpoint = `${apiBase}/api/performance-entry/monthly-keywords`;
   const today = beijingDate();
@@ -133,7 +133,7 @@ export function MonthlyKeywords({ apiBase, initialMonth, initialProduct }: {
   const [month, setMonth] = useState(initialMonth ?? currentMonth);
   const [day, setDay] = useState("");
   const [product, setProduct] = useState(initialProduct ?? "");
-  const [model, setModel] = useState("deepseek");
+  const [model, setModel] = useState(initialModel ?? "doubao");
   const [board, setBoard] = useState<Board | null>(null);
   const [refresh, setRefresh] = useState(0);
   const plan = useKeywordPlan(today, month === currentMonth, refresh);
@@ -211,9 +211,7 @@ export function MonthlyKeywords({ apiBase, initialMonth, initialProduct }: {
   return <section className="panel monthly-keywords" aria-labelledby="monthly-keyword-title">
     <header className="monthly-keyword-header">
       <div>
-        <span className="monthly-keyword-eyebrow">GEO 监控 · 月度词表</span>
         <h3 id="monthly-keyword-title">产品月度二级词</h3>
-        <p>按产品和平台查看实际问句，以及本月的提及、推荐和首推表现。</p>
       </div>
       {board && (board.can_edit
         ? <button className="monthly-keyword-primary" type="button" disabled={saving || !!draft}
@@ -239,6 +237,7 @@ export function MonthlyKeywords({ apiBase, initialMonth, initialProduct }: {
         }} /></label>
       {day && <button type="button" onClick={() => setDay("")}>看整月</button>}
       <button type="button" disabled={saving} onClick={() => { setError(""); setRefresh(value => value + 1); }}><ActionIcon kind="refresh" />刷新</button>
+      <a className="keyword-capture-link" href="#capture">采集进度 →</a>
     </div>
     {error && <p role="alert">{error}</p>}
     {notice && <p role="status">{notice}</p>}
@@ -249,10 +248,6 @@ export function MonthlyKeywords({ apiBase, initialMonth, initialProduct }: {
         <div><dt>{day ? "当日有效样本" : "本月有效样本"}</dt><dd>{totals.valid}<small> 轮</small></dd></div>
         <div><dt>已回传待分析</dt><dd>{totals.pending}<small> 轮</small></dd></div>
       </dl>
-      <div className="monthly-keyword-guide">
-        <p><strong>{day || month + " 整月"}</strong> · 北京时间。豆包、百度、文心、元宝对当前月启用的问句每日安排一轮，完成分析后计入统计。</p>
-        <a href="#capture">查看采集进度 <span aria-hidden="true">→</span></a>
-      </div>
     </>}
     {draft && board?.can_edit && <form className="monthly-keyword-form" onSubmit={event => {
       event.preventDefault(); void write("save");
@@ -268,7 +263,6 @@ export function MonthlyKeywords({ apiBase, initialMonth, initialProduct }: {
     </form>}
     {board?.terms.length === 0 && !draft && <div className="monthly-keyword-empty">
       <strong>本月还没有二级词</strong>
-      <p>{board.can_edit ? "先添加一个二级词和实际问句，后续可在词表里逐条编辑。" : "切换月份或产品，可查看其他已配置的词表。"}</p>
       {board.can_edit && <button className="monthly-keyword-primary" type="button"
         onClick={() => setDraft({ name: "", questions: "" })}><ActionIcon kind="add" />添加第一个二级词</button>}
     </div>}

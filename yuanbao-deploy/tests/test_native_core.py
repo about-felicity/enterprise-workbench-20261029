@@ -42,6 +42,22 @@ class NativeCaptureTests(unittest.TestCase):
                 source={**self.source,key:''};self.raw['entities'][0]['searchEntity']['docsJson']=json.dumps([source])
                 with self.assertRaises(NativeDataError):self.result()
 
+    def test_final_disabled_plugin_is_audited_without_inventing_a_link(self):
+        plugin={'index':2,'docId':'doc-2','sourceType':'plugin','isDisable':1,'url':''}
+        search=self.raw['entities'][0]['searchEntity']
+        search.update(docsJson=json.dumps([self.source,plugin]),docs=[{}, {'sourceType':'plugin'}],title='引用 2 篇资料作为参考')
+        self.assertEqual(self.result()['reason'],'disabled_plugin_source_pending')
+        self.raw['render_snapshot_final']=True
+        result=self.result()
+        self.assertEqual(result['status'],'complete')
+        self.assertEqual(result['expected_source_count'],1)
+        self.assertEqual(result['native_declared_source_count'],2)
+        self.assertEqual(result['disabled_plugin_source_count'],1)
+        self.assertEqual(result['raw_source_entries'],[self.source,plugin])
+        self.assertEqual(result['citations'][0]['url'],self.source['url'])
+        self.raw['entities'][1]['textEntity']['text']='正文[citation:2]'
+        self.assertEqual(self.result()['reason'],'citation_source_pending')
+
     def test_interrupted_idle_answer_is_original_history_pending_never_complete(self):
         self.raw['message']['state']='INTERRUPTED';self.raw['content']['state']='INTERRUPTED'
         self.raw['content']['isEof']=False

@@ -33,8 +33,8 @@ class DailyController(Controller):
         return read(self.base/'daily'/day/(model+'-deferred-segments.json'))
 
     def deferable_segment(self,job,day,snap):
-        from daily_tasks import DOUBAO_CHANNELS, deferred_originals_allow_progress, question_digest
-        if (job['model'] not in DOUBAO_CHANNELS or not job['service'].startswith('geo-native@')
+        from daily_tasks import QUESTION_ONLY_CHANNELS, deferred_originals_allow_progress, question_digest
+        if (job['model'] not in QUESTION_ONLY_CHANNELS or not job['service'].startswith('geo-native@')
                 or datetime.fromtimestamp(job['created'],ZoneInfo('Asia/Shanghai')).date().isoformat()!=day
                 or job['stop_requested'] or snap['service_state'] in BUSY or snap['pending_delivery']
                 or snap['nontext_pending'] or snap['delivery_errors']):

@@ -82,6 +82,8 @@ test('embedded UI uses same-origin commands and is only framed by itself', async
   assert.match(html,/fetch\('\/api\/geo-capture\/panel'\)/);
   assert.match(html,/\/api\/geo-capture\/control\//);
   assert.match(html,/geo-capture:layout/);
+  assert.match(html,/data-workbench="capture"/);
+  assert.match(html,/href="\.\.\/\.\.\/workbench-theme\.css"/);
   assert.equal(response.headers.get('X-Frame-Options'),'SAMEORIGIN');
   assert.equal(response.headers.get('Content-Security-Policy'),"frame-ancestors 'self'");
 });

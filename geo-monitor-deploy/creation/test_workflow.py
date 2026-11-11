@@ -50,7 +50,7 @@ class WorkflowTests(unittest.TestCase):
   v=self.payload();v['article_target']=15
   p=studio.plan(studio.save_plan(v)['plan_id']);studio.ensure_day(p,'2099-10-20')
   v.update(plan_id=p['plan_id'],article_target=7);studio.save_plan(v)
-  with patch.object(materials,'progress',return_value=[{'id':'baidu_ai','completed':0,'blocked':0}]):
+  with patch.object(materials,'progress',return_value=[{'id':'baidu_ai','completed':0,'blocked':{}}]):
    rows=studio.snapshot([])['daily_tasks']
   day=next(row for row in rows if row['plan_id']==p['plan_id'] and row['date']=='2099-10-20')
   self.assertEqual(day['article_target'],15)
@@ -112,17 +112,39 @@ class WorkflowTests(unittest.TestCase):
   b.reserve(payload,root/'second',{**meta,'number':2},'writer')
   self.assertEqual(b.db.execute('select count(*) from costs').fetchone()[0],2);b.db.close()
  def test_package_has_task_date_category_provenance_logs_and_original_word(self):
+  from io import BytesIO
+  from docx import Document
+  from docx.opc.constants import RELATIONSHIP_TYPE
+  from geo_source_cards.word_export import export_docx
+
   root=runtime.SHARED;folder=root/'approved/2026-10-19/排行类/01';folder.mkdir(parents=True)
-  (folder/'draft.md').write_text('# 测试文章\n直接面向读者的正文',encoding='utf8');original=b'PK-test-original-word';(folder/'article.docx').write_bytes(original)
+  draft='# 二硫化硒洗发水测试文章\n直接面向读者的正文'
+  (folder/'draft.md').write_text(draft,encoding='utf8')
+  export_docx(draft,folder/'article.docx');original=(folder/'article.docx').read_bytes()
   atomic_json(folder/'provenance.json',{'primary_reference':{'primary_url':'https://example.org/original','primary_title':'原文标题'}})
-  atomic_json(folder/'category.json',{'source_urls':['https://example.org/original']})
+  atomic_json(folder/'category.json',{'source_urls':['https://example.org/original','https://example.org/unused']})
   atomic_json(root/'days/2026-10-19/product.json',{'name':'产品甲','brand':'品牌甲'})
   atomic_json(root/'days/2026-10-19/sources.json',[{'url':'https://example.org/original','article':{'author':'作者甲','site_name':'来源媒体'}}])
   atomic_json(folder/'receipt.json',{'status':'accepted_for_user_review','files':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in folder.iterdir()}})
   path=runtime.download('legacy-original','2026-10-19/排行类/01','package')
+  without=runtime.download('legacy-original','2026-10-19/排行类/01','package',include_references=False)
+  self.assertNotEqual(path,without)
+  with zipfile.ZipFile(without) as z:
+   word=next(n for n in z.namelist() if n.endswith('.docx'))
+   self.assertEqual(z.read(word),original)
+   self.assertEqual(z.read(word.removesuffix('.docx')+'.md').decode('utf8'),draft)
+   self.assertTrue(any(n.endswith('审核与溯源/provenance.json') for n in z.namelist()))
   with zipfile.ZipFile(path) as z:
    names=z.namelist();self.assertTrue(any('历史创作任务_2026-10-19/排行类/' in n for n in names))
-   word=next(n for n in names if n.endswith('.docx'));self.assertEqual(z.read(word),original)
+   word=next(n for n in names if n.endswith('.docx'));document=Document(BytesIO(z.read(word)))
+   self.assertEqual([p.text for p in document.paragraphs[:3]],['二硫化硒洗发水测试文章','直接面向读者的正文','参考信源'])
+   self.assertEqual([rel.target_ref for rel in document.part.rels.values() if rel.reltype==RELATIONSHIP_TYPE.HYPERLINK],['https://dermnetnz.org/topics/selenium-sulfide'])
+   self.assertEqual([node.text for node in document.element.xpath('.//w:hyperlink//w:t')],['https://dermnetnz.org/topics/selenium-sulfide'])
+   markdown=z.read(next(n for n in names if n.endswith('/二硫化硒洗发水测试文章.md'))).decode('utf8')
+   self.assertIn('## 参考信源\n\n1. DermNet《二硫化硒的用途与使用注意事项》  \n   <https://dermnetnz.org/topics/selenium-sulfide>',markdown)
+   self.assertNotIn('https://example.org/original',markdown)
+   self.assertNotIn('https://example.org/unused',markdown)
+   self.assertEqual((folder/'article.docx').read_bytes(),original)
    m=json.loads(z.read(next(n for n in names if n.endswith('文章信息.json'))));self.assertEqual(m['primary_reference']['author'],'作者甲');self.assertIn('未核实',m['primary_reference']['official_account'])
    self.assertTrue(any(n.endswith('执行日志.json') for n in names));self.assertTrue(any(n.endswith('审核与溯源/provenance.json') for n in names))
    self.assertEqual(json.loads(z.read('导出清单.json'))['count'],1)

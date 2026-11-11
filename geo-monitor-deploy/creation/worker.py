@@ -23,7 +23,10 @@ def execute(root,job,retry):
         client=CreationClient(KEY,budget=budget)
         from .owned_sources import guard_prepared
         guard_prepared(root)
+        started_at_ns=time.time_ns()
         result=Worker(root,client).once(job['date'])
+        from .article_references import prepare_created
+        prepare_created(root,job['date'],started_at_ns)
         if result.get('status')=='blocked_unknown_execution' or (result.get('status')=='needs_attention' and 'failed_tickets' in result):
             pause(root,result['status'],'执行需要核对，保留请求和质量证据；不会重发未知请求')
         atomic_json(root/'geo_worker.json',{'at':time.time(),'result':result})

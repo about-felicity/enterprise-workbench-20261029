@@ -110,6 +110,7 @@ def parse_result(task, binding, native):
     if not body.strip() or not content.get('traceId') or not content.get('contentId'):
         raise NativeDataError('Missing complete body or native identity')
     sources, raw_docs, headers, declared_counts = [], [], [], []
+    disabled_plugins = 0
     for entity in entities:
         if enum(entity['type']) != 'SEARCH_GUIDE':continue
         search = entity['searchEntity']
@@ -123,9 +124,17 @@ def parse_result(task, binding, native):
             return hydrating('displayed_source_count_pending')
         declared_counts.append(len(search['docs']))
         headers.append(search['title'])
-        for doc in docs:
+        for doc, typed_doc in zip(docs, search['docs']):
+            raw_docs.append(doc)
             url = urlsplit(doc.get('url') or '')
             if url.scheme not in ('http','https') or not url.netloc or not doc.get('docId'):
+                if (doc.get('url') == '' and doc.get('docId') and doc.get('isDisable') == 1
+                        and doc.get('sourceType') == 'plugin' and isinstance(typed_doc, dict)
+                        and enum(typed_doc.get('sourceType')) == 'plugin'):
+                    if not native.get('render_snapshot_final'):
+                        return hydrating('disabled_plugin_source_pending')
+                    disabled_plugins += 1
+                    continue
                 raise NativeDataError('Incomplete source metadata')
             original_title=doc.get('title')
             missing_title=not isinstance(original_title,str) or not original_title.strip()
@@ -135,7 +144,6 @@ def parse_result(task, binding, native):
             sources.append({'title':label if missing_title else original_title,'url':doc['url'],'doc_id':doc['docId'],
                             **({'title_missing':True,'original_title':original_title,'title_origin':'explicit_missing_title_label'} if missing_title else {}),
                             'index':doc['index'],'quote':doc.get('quote',''),'native_source':doc})
-            raw_docs.append(doc)
     if not sources:
         video=video_only_answer(task,binding,native,body,parts)
         if video is not None:return video
@@ -143,7 +151,7 @@ def parse_result(task, binding, native):
             return hydrating('native_answer_fetch_failed')
         return hydrating('required_sources_pending')
     indices = {int(source['index']):source for source in sources}
-    if len(indices) != len(sources):
+    if len({int(doc['index']) for doc in raw_docs}) != len(raw_docs):
         raise NativeDataError('Ambiguous native source indices')
     citations = []
     for marker in re.finditer(r'\[citation:(\d+)\]',body):
@@ -157,7 +165,9 @@ def parse_result(task, binding, native):
             'answer_id':message['serverId'],'question_id':question['serverId'],
             'body_markdown':body,'body_parts':parts,'sources':sources,'citations':citations,
             'search_queries':[],'search_queries_exposed':False,
-            'expected_source_count':sum(declared_counts),'source_headers':headers,
+            'expected_source_count':len(sources),'source_headers':headers,
+            **({'native_declared_source_count':sum(declared_counts),'disabled_plugin_source_count':disabled_plugins}
+               if disabled_plugins else {}),
             'native_request_confirmed':True,'body_capture_complete':True,'source_capture_complete':True,
             'native_snapshot':native,'raw_source_entries':raw_docs,
             'capture_mode':'android_app_dtmp_native'}

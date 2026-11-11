@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { beijingDate } from "./beijingCalendar";
 
 type Field = "traffic" | "expenses" | "traffic_target" | "budget_limit";
-type Row = { product: string; owner: string; priority: string; fields: Record<Field, { value: number | null; revision: number; updated_by: string | null; updated_at: string | null }> };
+type Row = { product: string; owner: string; fields: Record<Field, { value: number | null; revision: number; updated_by: string | null; updated_at: string | null }> };
 type EntryData = { rows: Row[]; targets_confirmed: boolean; history: Array<{ product: string; day: string; field: Field; old_value: number | null; new_value: number | null; actor: string; at: string }> };
 type Values = Record<string, Record<Field, string>>;
 const labels: Record<Field, string> = { traffic: "每日流量", expenses: "累计实际花费", traffic_target: "每日流量目标", budget_limit: "整月预算" };
@@ -48,6 +48,7 @@ export function PerformanceEntry({ apiBase, month, csrf, onSaved, onClose }: { a
       const text = values[row.product]?.[field]?.trim() || "";
       const value = text === "" ? null : Number(text);
       if (value !== null && (!Number.isFinite(value) || value < 0 || (field === "traffic" || field === "traffic_target") && !Number.isInteger(value))) { setError(`${row.product}：请输入非负数字，流量须为整数`); return; }
+      if (value === null && row.fields[field].value === null) continue;
       if (mode === "targets" && value === null) { setError(`${row.product}：月度目标不能为空`); return; }
       if (value === row.fields[field].value && row.fields[field].revision > 0 || value === null && row.fields[field].revision === 0) continue;
       changes.push({ product: row.product, field, date: mode === "targets" ? `${month}-01` : selectedDate, value, expected_revision: row.fields[field].revision });

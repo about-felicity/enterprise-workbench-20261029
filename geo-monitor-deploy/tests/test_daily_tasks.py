@@ -1,5 +1,6 @@
 from contextlib import closing
 import json
+from pathlib import Path
 import sqlite3
 import time
 import unittest
@@ -91,6 +92,56 @@ class DailyTaskTests(unittest.TestCase):
         DailyTasks(self.c).reconcile()
         self.assertEqual(self.model(model)['daily']['status'],'needs_attention')
         self.assertEqual(len(self.fixture.system.starts),2)
+    def test_native_validation_stop_waits_before_retrying_original_batch(self):
+        model='yuanbao'
+        self.apply(model=model);self.tasks.reconcile()
+        with self.c.connect() as db:job=self.c.current(db,model)
+        health={'status':'needs_attention','tasks':{'needs_attention':1},'time':time.time(),
+                'progress':{'phase':'native_validation_stopped'}}
+        atomic(Path(job['health']),health)
+        self.fixture.system.states[job['service']]='inactive'
+        self.tasks.reconcile();self.tasks.reconcile()
+        self.assertEqual(len(self.fixture.system.starts),1)
+        self.assertEqual(self.model(model)['daily']['status'],'needs_attention')
+        atomic(Path(job['health']),{**health,'time':time.time()-301})
+        self.tasks.reconcile()
+        self.assertEqual(len(self.fixture.system.starts),2)
+        self.assertEqual(self.model(model)['current']['batch'],job['batch'])
+
+
+    def test_drained_yuanbao_segment_preserves_uncertain_send_and_counts_nontext(self):
+        from daily_dispatch import DailyController
+        from daily_tasks import question_digest
+        model='yuanbao'
+        self.c=DailyController(self.root,self.fixture.system,self.root/'native')
+        self.fixture.control=self.c
+        self.c.daily_counts=lambda day:self.counts
+        self.tasks=DailyTasks(self.c)
+        self.apply(model,questions=['待核对','无正文','下一题'],rounds=1)
+        self.tasks.reconcile()
+        with self.c.connect() as db:original=self.c.current(db,model)
+        root=self.c.batch_root(original)
+        with closing(sqlite3.connect(root/'tasks.sqlite')) as db,db:
+            db.execute('create table tasks(task_id text,question text,state text,request_id text,capture_retries int,prepared_at real)')
+            db.execute("insert into tasks values('uncertain','待核对','needs_attention',null,0,1)")
+            db.execute("insert into tasks values('nontext','无正文','completed_nontext','original',0,2)")
+        atomic(root/'uncertain_send_quarantine.json',{
+            'uncertain':{'prepared_at':1,'question_sha256':question_digest('待核对')},
+        })
+        atomic(Path(original['health']),{'status':'needs_attention','tasks':{'needs_attention':1},
+                                         'next_readback_at':time.time()+300})
+        self.fixture.system.states[original['service']]='inactive'
+        self.tasks.reconcile()
+        current=self.model(model)
+        self.assertNotEqual(current['current']['batch'],original['batch'])
+        self.assertEqual(current['current']['config']['questions'],['下一题'])
+        self.assertEqual(current['daily']['unavailable'],1)
+        self.assertEqual(self.c.deferred_segments(model,self.day),{original['batch']:[question_digest('待核对')]})
+        with closing(sqlite3.connect(root/'tasks.sqlite')) as db:
+            self.assertEqual(db.execute("select state,request_id from tasks where task_id='uncertain'").fetchone(),
+                             ('needs_attention',None))
+
+
     def test_added_and_removed_questions_change_only_remaining_work(self):
         self.counts={'baidu_ai':{'问题一':5,'问题二':4}}
         self.apply(questions=['问题一','新问题']);self.tasks.reconcile()

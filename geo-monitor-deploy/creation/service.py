@@ -161,7 +161,10 @@ class Handler(BaseHTTPRequestHandler):
                         snapshot=output_cache.get(build_outputs)
                         response=packed_outputs.response(snapshot,get('version')) if get('packed')=='1' else snapshot
                     return self.send({**response,'csrf':session['csrf']},cookie=token)
-                file=runtime.download(get('job'),get('article'),get('kind'),{k:get(k) for k in ('date','product','source','search','plan') if get(k)})
+                references=query.get('references',['1'])
+                if references not in (['1'],['0']):raise ValueError('参考链接选项不正确')
+                filters={k:get(k) for k in ('date','product','source','search','plan') if get(k)}
+                file=runtime.download(get('job'),get('article'),get('kind'),filters,include_references=references==['1'])
                 mime='application/json; charset=utf-8' if file.suffix=='.json' else 'application/zip' if file.suffix=='.zip' else 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' if file.suffix=='.docx' else 'text/markdown; charset=utf-8'
                 body=file.read_bytes()
                 # Hash and deliver the exact same snapshot even during concurrent exports.

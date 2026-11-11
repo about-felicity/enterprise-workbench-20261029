@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN" data-workbench="login">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>员工登录 · 企业工作台</title>
+  <style>
+    {theme}
+
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      background: var(--wb-bg);
+      color: var(--wb-ink);
+      font: 14px/1.6 "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    }
+    .login-shell {
+      width: min(100%, 880px);
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      overflow: hidden;
+      background: var(--wb-surface);
+      border: 1px solid var(--wb-border);
+      border-radius: var(--wb-card-radius);
+    }
+    .identity, .login { padding: clamp(28px, 5vw, 52px); }
+    .identity {
+      display: grid;
+      align-content: center;
+      gap: 28px;
+      background: var(--wb-blue-soft);
+      border-inline-end: 1px solid var(--wb-border);
+    }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      background: var(--wb-blue);
+      color: white;
+      border-radius: 10px;
+    }
+    .brand-mark svg { width: 30px; height: 30px; }
+    h1 { margin: 16px 0 4px; font-size: 34px; line-height: 1.2; }
+    .identity p { margin: 0; color: var(--wb-muted); }
+    .preview { display: block; width: 100%; height: auto; }
+    .login { align-self: center; }
+    h2 { margin: 0 0 24px; font-size: 25px; line-height: 1.25; }
+    .field { display: grid; gap: 6px; margin-bottom: 16px; }
+    .field label { font-weight: 600; }
+    input, button { font: inherit; }
+    .field input {
+      width: 100%;
+      min-height: 46px;
+      padding: 9px 12px;
+      border: 1px solid var(--wb-control-border);
+      border-radius: var(--wb-control-radius);
+      background: var(--wb-surface);
+      color: var(--wb-ink);
+      font-size: 16px;
+      transition: border-color 160ms ease, box-shadow 160ms ease;
+    }
+    .field input:focus {
+      outline: none;
+      border-color: var(--wb-blue);
+      box-shadow: 0 0 0 3px var(--wb-blue-soft);
+    }
+    .button {
+      width: 100%;
+      min-height: 46px;
+      margin-top: 4px;
+      border: 0;
+      border-radius: var(--wb-control-radius);
+      background: var(--wb-blue);
+      color: white;
+      font-weight: 650;
+      cursor: pointer;
+      transition: background-color 160ms ease;
+    }
+    .button:hover { background: var(--wb-blue-ink); }
+    .button:focus-visible { outline: 2px solid var(--wb-blue); outline-offset: 3px; }
+    .error {
+      margin: 0 0 16px;
+      padding: 8px 12px;
+      border: 1px solid #fecaca;
+      border-radius: var(--wb-control-radius);
+      background: #fef2f2;
+      color: #991b1b;
+    }
+    .note {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      margin: 16px 0 0;
+      color: var(--wb-muted);
+      font-size: 12px;
+    }
+    .note svg { flex-shrink: 0; margin-top: 2px; }
+
+    @media (max-width: 680px) {
+      .login-shell { width: min(100%, 420px); grid-template-columns: minmax(0, 1fr); }
+      .identity {
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: center;
+        gap: 12px;
+        padding: 20px;
+        border-inline-end: 0;
+        border-bottom: 1px solid var(--wb-border);
+      }
+      .identity h1 { margin: 0 0 2px; font-size: 21px; }
+      .identity p { font-size: 12px; }
+      .preview { display: none; }
+      .login { padding: 24px 20px; }
+      h2 { margin-bottom: 20px; font-size: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .field input, .button { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="login-shell">
+    <section class="identity" aria-labelledby="workbench-title">
+      <div class="brand-mark">{logo}</div>
+      <div>
+        <h1 id="workbench-title">企业工作台</h1>
+        <p>GEO 监测、内容创作与资产管理</p>
+      </div>
+      <svg class="preview" viewBox="0 0 332 138" fill="none" aria-hidden="true" focusable="false">
+        <rect x=".5" y=".5" width="331" height="137" rx="11.5" fill="white" stroke="var(--wb-blue-line)" />
+        <path d="M1 29.5h330M53.5 30v107M220.5 42v83" stroke="var(--wb-border)" />
+        <rect x="13" y="11" width="44" height="7" rx="3.5" fill="var(--wb-blue-line)" />
+        <rect x="11" y="42" width="32" height="15" rx="4" fill="var(--wb-blue-soft)" />
+        <path d="M17 49.5h18m-18 20h16m-16 14h12m-12 14h16m-16 14h14" stroke="var(--wb-blue-line)" stroke-width="3" stroke-linecap="round" />
+        <path d="M67 73h139m-139 22h139m-139 22h139" stroke="var(--wb-border)" />
+        <path d="m69 110 29-13 27 5 25-22 24 4 28-18" stroke="var(--wb-blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="202" cy="66" r="3.5" fill="var(--wb-blue)" />
+        <rect x="67" y="44" width="61" height="7" rx="3.5" fill="var(--wb-blue-line)" />
+        <rect x="234" y="42" width="83" height="24" rx="5" fill="var(--wb-indigo-soft)" />
+        <rect x="234" y="72" width="83" height="24" rx="5" fill="var(--wb-blue-soft)" />
+        <rect x="234" y="102" width="83" height="24" rx="5" fill="var(--wb-subtle)" />
+        <path d="M243 54h34m-34 30h43m-43 30h27" stroke="var(--wb-blue-line)" stroke-width="3.5" stroke-linecap="round" />
+      </svg>
+    </section>
+    <section class="login" aria-labelledby="login-title">
+      <h2 id="login-title">员工登录</h2>
+      <div aria-live="polite">{error}</div>
+      <form method="post" action="/geo_monitor/login">
+        <input type="hidden" name="next" value="{next}">
+        <div class="field">
+          <label for="username">员工账号</label>
+          <input id="username" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="64" required>
+        </div>
+        <div class="field">
+          <label for="password">密码</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" maxlength="128" required>
+        </div>
+        <button class="button" type="submit">登录工作台</button>
+      </form>
+      <p class="note">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <rect x="4" y="10" width="16" height="11" rx="2" />
+          <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+        </svg>
+        公共设备请勿保存密码。
+      </p>
+    </section>
+  </main>
+</body>
+</html>

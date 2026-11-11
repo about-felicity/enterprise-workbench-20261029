@@ -1,0 +1,133 @@
+[
+  {
+    "url": "https://dermnetnz.org/topics/selenium-sulfide",
+    "label": "DermNet《二硫化硒的用途与使用注意事项》",
+    "kind": "ingredient",
+    "topics": [["二硫化硒", "硫化硒", "selenium sulfide"]]
+  },
+  {
+    "url": "https://www.aad.org/public/everyday-care/hair-scalp-care/scalp/treat-dandruff",
+    "label": "美国皮肤科学会《头屑护理与去屑洗发水常见成分》",
+    "topics": [["头皮屑", "头屑", "去屑", "脂溢性皮炎"]]
+  },
+  {
+    "url": "https://dermnetnz.org/topics/shampoo",
+    "label": "DermNet《洗发水的清洁与调理成分》",
+    "topics": [["洗发水", "洗发露", "洗发乳", "洗护"], ["表面活性剂", "表活", "清洁体系", "硫酸盐", "硅油", "无硅", "控油"]]
+  },
+  {
+    "url": "https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202608/t20260827_4839678.html",
+    "label": "国家卫生健康委员会《洗头频率与头皮出油》",
+    "topics": [["头油", "油头", "油性头皮", "头皮出油", "大油头"], ["洗头", "洗发", "清洁"]]
+  },
+  {
+    "url": "https://www.aad.org/public/everyday-care/hair-scalp-care/hair/leave-in-conditioner-tips/",
+    "label": "美国皮肤科学会《免洗护发产品与干枯毛躁发丝的护理》",
+    "topics": [["护发精油", "发油", "免洗护发", "免洗护发素", "摩洛哥坚果油", "阿甘油"]]
+  },
+  {
+    "url": "https://www.aad.org/public/everyday-care/hair-scalp-care/hair/healthy-hair-tips",
+    "label": "美国皮肤科学会《洗护、发梢护理与热损伤预防》",
+    "topics": [["护发精油", "护发素", "发膜", "发梢护理", "受损发质", "干枯毛躁"], ["热损伤", "热保护", "吹风机", "高温", "发尾", "发梢", "护发素"]]
+  },
+  {
+    "url": "https://www.aad.org/public/diseases/hair-loss/causes/18-causes",
+    "label": "美国皮肤科学会《常见脱发原因》",
+    "topics": [["脱发", "掉发", "防脱固发", "发际线后移", "休止期脱发"]]
+  },
+  {
+    "url": "https://www.aad.org/public/diseases/hair-loss/treatment/diagnosis-treat",
+    "label": "美国皮肤科学会《脱发的诊断与治疗》",
+    "topics": [["脱发", "掉发", "防脱固发"], ["米诺地尔", "非那雄胺", "斑秃", "雄激素性脱发"]]
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19239555/",
+    "label": "PubMed《外用腺苷用于女性型脱发的小样本随机试验》",
+    "kind": "ingredient",
+    "topics": [["腺苷", "adenosine"], ["女性型脱发", "女性雄激素性脱发", "女性雄脱"]]
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29055953/",
+    "label": "PubMed《外用咖啡因溶液用于男性雄激素性脱发的开放标签试验》",
+    "kind": "ingredient",
+    "topics": [["咖啡因", "caffeine"], ["男性雄激素性脱发", "男性型脱发", "男性雄脱"]]
+  },
+  {
+    "url": "https://www.aad.org/public/diseases/hair-loss/insider/new-moms",
+    "label": "美国皮肤科学会《产后掉发及日常护理》",
+    "topics": [["产后脱发", "产后掉发", "生完孩子掉发", "产后大量掉发"]]
+  },
+  {
+    "url": "https://scjgj.gz.gov.cn/zmhd/cjwt/pthzpba/content/post_10607886.html",
+    "label": "广州市市场监督管理局《防脱发与防断发化妆品的功效区别》",
+    "topics": [["脱发", "防脱", "掉发"], ["防断发", "国妆特字", "国妆特证", "特殊化妆品", "特妆证", "特证"]]
+  },
+  {
+    "url": "https://www.fda.gov/cosmetics/cosmetic-products/hair-dyes",
+    "label": "美国食品药品监督管理局《染发剂、对苯二胺与使用安全》",
+    "topics": [["染发", "染膏", "染发剂", "染头发"], ["对苯二胺", "苯二胺", "PPD", "皮试", "过敏", "氧化剂", "居家染发"]]
+  },
+  {
+    "url": "https://yjj.sh.gov.cn/yzaq/20210517/e4ad781e37924e5e8e28852c988779f8.html",
+    "label": "上海市药品监督管理局《染发类化妆品选购及使用注意事项》",
+    "topics": [["染发剂", "染发膏", "染发产品", "染发", "染膏"]]
+  },
+  {
+    "url": "https://www.aad.org/public/diseases/acne/derm-treat/treat/",
+    "label": "美国皮肤科学会《痤疮诊疗与水杨酸、壬二酸等外用成分》",
+    "kind": "ingredient",
+    "topics": [["痤疮", "祛痘", "长痘", "闭口", "粉刺"], ["水杨酸", "壬二酸", "过氧化苯甲酰", "阿达帕林"]]
+  },
+  {
+    "url": "https://mpa.jl.gov.cn/gzfw/kpzs/hzpaqzs/twzs4/202108/t20210826_8196587.html",
+    "label": "国家药品监督管理局《刷酸与日常含酸化妆品的区别》",
+    "topics": [["刷酸", "化学换肤", "化学剥脱", "果酸换肤"]]
+  },
+  {
+    "url": "https://www.aad.org/public/diseases/acne/skin-care/tips",
+    "label": "美国皮肤科学会《痤疮皮肤的日常护理》",
+    "topics": [["痤疮", "祛痘", "长痘", "痘肌", "粉刺", "痘痘"]]
+  },
+  {
+    "url": "https://www.aad.org/public/everyday-care/skin-care-secrets/routine/fade-dark-spots",
+    "label": "美国皮肤科学会《色素沉着、淡斑成分与防晒》",
+    "topics": [["淡斑", "美白", "色素沉着", "晒斑", "祛斑", "痘印", "色斑"]]
+  },
+  {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/12100180/",
+    "label": "英国皮肤病学杂志《烟酰胺与皮肤色素沉着的研究》",
+    "kind": "ingredient",
+    "topics": [["烟酰胺", "niacinamide"], ["色素沉着", "黑色素", "淡斑", "美白", "色斑"]]
+  },
+  {
+    "url": "https://wjw.beijing.gov.cn/bmfw_20143/jkzs/jksh/202411/t20241111_3938264.html",
+    "label": "北京中医医院怀柔医院《黄褐斑的成因与日常防护》",
+    "topics": [["黄褐斑"]]
+  },
+  {
+    "url": "https://dermnetnz.org/topics/emollients-and-moisturisers",
+    "label": "DermNet《保湿剂的吸湿、润肤与封闭成分》",
+    "topics": [["皮肤保湿", "保湿面霜", "手部保湿", "护手霜", "润肤", "皮肤屏障"], ["保湿剂", "保湿成分", "甘油", "尿素", "封闭剂", "吸湿剂", "凡士林"]]
+  },
+  {
+    "url": "https://www.aad.org/public/everyday-care/skin-care-secrets/anti-aging/retinoid-retinol/",
+    "label": "美国皮肤科学会《视黄醇和维A类成分的用法与注意事项》",
+    "kind": "ingredient",
+    "topics": [["视黄醇", "维a醇", "维a酸", "维a类", "retinol"]]
+  },
+  {
+    "url": "https://yjj.sh.gov.cn/yzaq/20210916/2686844fa55f477e828b732ad3763e27.html",
+    "label": "国家药品监督管理局《睫毛液的功效宣称与成分安全》",
+    "topics": [["睫毛液", "睫毛精华", "睫毛增长", "睫毛滋养", "养睫", "比马前列素"]]
+  },
+  {
+    "url": "https://dermnetnz.org/topics/madarosis",
+    "label": "DermNet《眉毛与睫毛脱落的常见原因》",
+    "topics": [["眉毛脱落", "眉毛稀疏", "眉毛变稀", "眉毛越来越稀", "掉眉毛", "眉毛增长", "睫毛脱落", "掉睫毛"]]
+  },
+  {
+    "url": "https://www.fda.gov/cosmetics/cosmetic-products/eye-cosmetic-safety",
+    "label": "美国食品药品监督管理局《眼周化妆品的使用安全》",
+    "topics": [["睫毛精华", "睫毛增长液", "睫毛液", "眉毛精华", "眉毛增长液", "眼霜", "眼周化妆品"], ["眼周", "眼部", "眼睑", "入眼", "刺激", "过敏", "卸妆"]]
+  }
+]

@@ -66,13 +66,13 @@ function PlatformCard({ series, day, cutoff, metric, remaining, unavailable }: {
   const detail = [
     result.valid ? `${day ? "" : result.days.length + " 个有效日 · "}${result.hits}/${result.valid} 轮${metric === "recommend" ? "推荐" : ""}` : "",
     result.pending ? `${result.pending} 轮待分析` : "",
-    remaining ? `今日还剩 ${remaining} 轮` : "",
-    unavailable ? `今日未取得 ${unavailable} 轮` : "",
+    remaining ? `当日还剩 ${remaining} 轮` : "",
+    unavailable ? `当日未取得 ${unavailable} 轮` : "",
   ].filter(Boolean).join(" · ");
-  if (!day) return <OwnedProductAverageCard rate={rate} detail={detail || "暂无有效数据"} change={change} />;
-  const state = result.valid ? (result.hits ? "listed" : "not-listed") : result.pending ? "pending" : "not-collected";
+  if (!day) return <OwnedProductAverageCard rate={result.rate} detail={detail || "暂无有效数据"} change={change} />;
+  const state = result.valid ? (result.hits ? "listed" : "not-listed") : result.pending || remaining ? "pending" : "not-collected";
   const label = result.valid ? dailyLabels[metric][result.hits ? 0 : 1]
-    : result.pending ? "待分析" : remaining ? "今日待采" : unavailable ? "未取得" : "未采集";
+    : result.pending ? "待分析" : remaining ? "当日待采" : unavailable ? "未取得" : "未采集";
   return <OwnedProductStateCard className={state} label={label} rate={rate} rateLabel={metrics[metric]}
     detail={detail || "当日暂无有效样本"} change={change} />;
 }
@@ -174,7 +174,6 @@ export function KeywordMonitoring({ apiBase }: { apiBase: string }) {
   const [error, setError] = useState("");
   const [refresh, setRefresh] = useState(0);
   const [expanded, setExpanded] = useState("");
-  const plan = useKeywordPlan(today, tab === "monitor" && month === currentMonth, refresh);
   const cutoff = month === currentMonth ? today : monthLastDay(month);
 
   useEffect(() => {
@@ -202,10 +201,16 @@ export function KeywordMonitoring({ apiBase }: { apiBase: string }) {
   }, "");
   const day = selectedDay || (month === currentMonth ? today : lastObserved || cutoff);
   const firstDay = month + "-01";
-  const plans = new Map(models.map(([model]) => [model, planByQuestion(day === today ? plan : [], today, model)]));
+  const plan = useKeywordPlan(day, tab === "monitor", refresh);
+  const plans = new Map(models.map(([model]) => [model, planByQuestion(plan, day, model)]));
   const hitsToday = rows.filter(row => models.some(([id]) => (row.platforms[id]?.days[day]?.[metric] || 0) > 0)).length;
+  const managementProduct = product || rows[0]?.product || "";
+  const managementRows = rows.filter(row => row.product === managementProduct);
+  const preferredModel = models.find(([id]) => managementRows.some(row => row.platforms[id]?.days[day]?.valid))?.[0]
+    ?? models.find(([id]) => managementRows.some(row => inPeriod(row.platforms[id], "", cutoff).some(([, stats]) => stats.valid)))?.[0]
+    ?? models[0]?.[0];
   const manage = () => {
-    setManageProduct(product || board?.rows[0]?.product || "");
+    setManageProduct(managementProduct);
     setTab("manage");
   };
   const selectDay = (date: string) => { setDay(date); setExpanded(""); };
@@ -216,12 +221,11 @@ export function KeywordMonitoring({ apiBase }: { apiBase: string }) {
       <button type="button" aria-pressed={tab === "monitor"} onClick={() => setTab("monitor")}>监控看板</button>
       <button type="button" aria-pressed={tab === "manage"} onClick={manage}>词表管理</button>
     </nav>
-    {tab === "manage" ? <MonthlyKeywords apiBase={apiBase} initialMonth={month} initialProduct={manageProduct} /> :
+    {tab === "manage" ? <MonthlyKeywords apiBase={apiBase} initialMonth={month} initialProduct={manageProduct} initialModel={preferredModel} /> :
       <section className="panel monthly-keywords owned-product-board keyword-owned-board" aria-labelledby="keyword-matrix-title">
         <header className="monthly-keyword-header">
           <div>
             <h3 id="keyword-matrix-title">我的产品二级词每日上榜情况</h3>
-            <p>推荐率按已分析的有效回答计算，日均只计入有有效样本的日期。北京时间，按当前问句版本统计。</p>
           </div>
           <button className="monthly-keyword-primary" type="button" onClick={manage}>管理二级词</button>
         </header>
@@ -245,7 +249,7 @@ export function KeywordMonitoring({ apiBase }: { apiBase: string }) {
         {board?.month === month && (rows.length ? <>
           <section className="owned-product-summary" aria-labelledby="keyword-monthly-heading">
             <div className="owned-product-summary-heading">
-              <div><b id="keyword-monthly-heading">{month} 月度有效日汇总</b><small>先算各平台每日{metrics[metric]}，再对有效平台日取平均。</small></div>
+              <div><b id="keyword-monthly-heading">{month} 月度有效日汇总</b></div>
               <span>{new Set(rows.map(row => row.product)).size} 个产品 · {rows.length} 个二级词</span>
             </div>
             <KeywordTable {...table} day="" />

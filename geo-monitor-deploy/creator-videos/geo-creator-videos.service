@@ -1,0 +1,18 @@
+[Unit]
+Description=GEO creator video statistics
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=user
+WorkingDirectory=/opt/monitor/geo-creator-videos
+StateDirectory=geo-creator-videos geo-video-checks
+Environment=CREATOR_VIDEO_SLOT_DIR=/var/lib/geo-video-checks
+Environment=CREATOR_VIDEO_LEDGER=creator
+ExecStart=/opt/monitor/geo-capture/venv/bin/python -B /opt/monitor/geo-creator-videos/service.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

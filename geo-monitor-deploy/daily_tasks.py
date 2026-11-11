@@ -17,7 +17,9 @@ from control_panel import DEEPSEEK_CHANNELS,MODELS,BUSY,Conflict,atomic,read,val
 
 ZONE=ZoneInfo('Asia/Shanghai')
 DOUBAO_CHANNELS={'doubao1','doubao2','doubao3','doubao4'}
+QUESTION_ONLY_CHANNELS=DOUBAO_CHANNELS|{'yuanbao'}
 WEB_PEERS={'baidu_ai':'wenxin_card','wenxin_card':'baidu_ai'}
+NATIVE_VALIDATION_RETRY_SECONDS=300
 DEVICES={'doubao-hpe14-13-test':'doubao1','doubao-hpe14-account2':'doubao2','doubao-hpe14-account3':'doubao3','doubao-hpe14-account4':'doubao4',
          'geo-headless-deepseek':'deepseek','deepseek-hpe14-android13':'deepseek','deepseek-hpe14-account2':'deepseek2','deepseek-browser-extension':'deepseek2','geo-headless-wenxin_card':'wenxin_card',
          'geo-headless-baidu_ai':'baidu_ai','yuanbao-hpe14-android13':'yuanbao'}
@@ -54,10 +56,10 @@ def valid_day(day):
 
 def daily_unavailable(db, model, day):
     """Read terminal non-samples from today's immutable collector journals."""
-    if model not in DOUBAO_CHANNELS and model!='baidu_ai':return {}
+    native=model in QUESTION_ONLY_CHANNELS
+    if not native and model!='baidu_ai':return {}
     start=datetime.strptime(valid_day(day),'%Y-%m-%d').replace(tzinfo=ZONE)
     counts=Counter()
-    native=model in DOUBAO_CHANNELS
     table='tasks' if native else 'captures'
     jobs=db.execute("select health,config from jobs where model=? and created>=? and created<?",
                     (model,start.timestamp(),(start+timedelta(days=1)).timestamp()))
@@ -332,7 +334,7 @@ class DailyTasks:
             c._ensure_delivery(job)
             unavailable=daily_unavailable(db,model,day)
             same_day_archive=None
-            if model in DOUBAO_CHANNELS and hasattr(c,'deferred_segments'):
+            if model in QUESTION_ONLY_CHANNELS and hasattr(c,'deferred_segments'):
                 archived=c.deferred_segments(model,day)
                 blocked={digest for questions in archived.values() for digest in questions}
                 if snap['needs_review'] and job['batch'] not in archived:
@@ -348,8 +350,12 @@ class DailyTasks:
             if snap['needs_review'] and not skip_readback:
                 old_day=datetime.fromtimestamp(job['created'],ZONE).date().isoformat()
                 if old_day>=day:
-                    if (deferred_originals_allow_progress(c.batch_root(job),drained=True)
-                            and read(job['health']).get('next_readback_at',0)>time.time()):
+                    health=read(job['health'])
+                    now=time.time()
+                    validation_stopped=(health.get('progress') or {}).get('phase')=='native_validation_stopped'
+                    validation_cooling=validation_stopped and health.get('time',0)+NATIVE_VALIDATION_RETRY_SECONDS>now
+                    if (validation_cooling or (health.get('next_readback_at',0)>now
+                            and deferred_originals_allow_progress(c.batch_root(job),drained=True))):
                         db.execute('update daily_tasks set status=? where model=? and day=?',
                                    ('needs_attention',model,day))
                         return

@@ -16,6 +16,27 @@ def blocks(text,finished=True):
 
 
 class Tests(unittest.TestCase):
+    def test_uncertain_send_quarantine_only_records_the_transition_once(self):
+        from uncertain_send_quarantine import quarantine,valid
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            queue=Queue(root/'tasks.sqlite')
+            with closing(queue.db):
+                queue.enqueue('batch',['问题'])
+                task_id=queue.next_task()['task_id']
+                queue.prepare(task_id,protocol='phase-v2')
+                task=queue.next_task()
+                self.assertFalse(quarantine(root,queue,task,{},task['prepared_at']+901))
+                queue.click_attempt(task_id)
+                task=queue.next_task()
+                self.assertTrue(quarantine(root,queue,task,{},task['prepared_at']+901))
+                saved=dict(queue.db.execute('select * from tasks where task_id=?',(task_id,)).fetchone())
+                self.assertTrue(valid(root,queue,saved))
+                self.assertFalse(quarantine(root,queue,saved,{},saved['prepared_at']+902))
+                self.assertEqual(queue.db.execute("select count(*) from events where event='uncertain_send_quarantined'").fetchone()[0],1)
+                self.assertFalse(queue.may_finish_unsent(task_id))
+
+
     def test_authorized_single_retry_cannot_trigger_unbounded_transient_retry(self):
         with tempfile.TemporaryDirectory() as tmp:
             q=Queue(Path(tmp)/'tasks.sqlite');q.enqueue('one-retry',['问题'])

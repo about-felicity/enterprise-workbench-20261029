@@ -34,7 +34,10 @@ def quarantine(root, queue, task, observed, now):
         return False
     path = root / 'uncertain_send_quarantine.json'
     saved = json.loads(path.read_text()) if path.exists() else {}
-    saved[task['task_id']] = identity(task)
+    proof = identity(task)
+    if saved.get(task['task_id']) == proof and task['state'] == 'needs_attention':
+        return False
+    saved[task['task_id']] = proof
     atomic_json(path, saved)
     with queue.db:
         queue.db.execute("update tasks set state='needs_attention',error=? where task_id=?",

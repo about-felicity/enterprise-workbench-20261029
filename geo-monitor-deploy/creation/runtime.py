@@ -133,7 +133,7 @@ def resume(root,*,check_balance=True,allow_http_recovery=False):
 
 def create(payload):
     day=payload.get('date','');question=payload.get('question','')
-    channels=payload.get('channels',['wenxin_card','baidu_ai'])
+    channels=payload.get('channels',['deepseek','wenxin_card','baidu_ai'])
     limit=payload.get('max_per_category',10)
     if type(limit) is not int or not 1<=limit<=10:raise ValueError('每类篇数须为1至10')
     product=payload.get('product') or read(SHARED/'product.json')
@@ -315,12 +315,13 @@ def articles(root, *, summary=False, article_id=None, listing=False, date_filter
         from .article_export import info
         metadata=info(root,folder,lookup_source=not listing)
         from geo_source_cards.consumer_voice import issues as voice_issues
+        draft_text=draft.read_text('utf8')
         direct=receipt.get('delivery_mode')=='direct'
-        quality_issues=[] if direct or receipt.get('workflow')=='rewrite-v2' else voice_issues(draft.read_text('utf8'))
+        quality_issues=[] if direct or receipt.get('workflow')=='rewrite-v2' else voice_issues(draft_text)
         if receipt.get('workflow')=='rewrite-v2' and not direct:
             from geo_source_cards.rewrite_v2.quality_reviewer import verify_final
             try:
-                verify_final(read(folder/'semantic_review.json'),read(folder/'rewrite_context.json'),read(folder/'rewrite_material.json'),draft.read_text('utf8'))
+                verify_final(read(folder/'semantic_review.json'),read(folder/'rewrite_context.json'),read(folder/'rewrite_material.json'),draft_text)
             except (ValueError,KeyError,TypeError) as error:quality_issues.append('V2审核尚未通过：'+str(error)[:350])
         elif not direct and read(root/'logic_policy.json').get('required'):
             from geo_source_cards.article_logic import enforce
@@ -332,12 +333,23 @@ def articles(root, *, summary=False, article_id=None, listing=False, date_filter
                     from geo_source_cards.article_compiler import verify_inputs
                     knowledge=semantic['arbitration']['input']['knowledge']
                     verify_inputs(read(folder/'compilation.json'),knowledge,product)
-                    arb=enforce_arbitration(semantic,draft.read_text('utf8'),knowledge,product)
-                enforce(read(folder/'logic_review.json'),draft.read_text('utf8'),product,arbitration=arb)
+                    arb=enforce_arbitration(semantic,draft_text,knowledge,product)
+                enforce(read(folder/'logic_review.json'),draft_text,product,arbitration=arb)
             except (ValueError,KeyError,TypeError) as error:quality_issues.append('全文逻辑尚未通过复核：'+str(error)[:350])
         from geo_source_cards.article_title import display_title
-        result.append({'id':folder.relative_to(root/'approved').as_posix(),'date':folder.parent.parent.name,'product':product_label(root,folder.parent.parent.name),'title':display_title(draft.read_text('utf8'),metadata['product'],{'category':metadata['category']}) if draft.is_file() else folder.name,
-            'quality_status':'needs_revision' if quality_issues else 'ready_with_disputes' if receipt.get('quality_status')=='ready_with_disputes' or receipt.get('logic_status')=='needs_revision' else 'ready','quality_issues':quality_issues,
+        from .article_format import contract_issues, publication
+        published_text,format_issues=publication(folder,draft_text)
+        format_warnings=[]
+        writer_done=read(folder/'writer_done.json') if 'writer_done.json' in files else {}
+        if writer_done.get('publication_checks_version'):
+            quality_issues.extend(format_issues)
+            if not format_issues:
+                quality_issues.extend(contract_issues(published_text,folder.parent.name))
+        else:
+            format_warnings=list(format_issues)
+        title=display_title(published_text,metadata['product'],{'category':metadata['category']})
+        result.append({'id':folder.relative_to(root/'approved').as_posix(),'date':folder.parent.parent.name,'product':product_label(root,folder.parent.parent.name),'title':title,
+            'quality_status':'needs_revision' if quality_issues else 'ready_with_disputes' if format_warnings or receipt.get('quality_status')=='ready_with_disputes' or receipt.get('logic_status')=='needs_revision' else 'ready','quality_issues':quality_issues,'format_warnings':format_warnings,
             'review_disputes':receipt.get('review_disputes',[]),
             'markdown':draft.is_file(),'word':word.is_file(),'receipt':receipt,'task_name':metadata['task_name'],'category':metadata['category'],'primary_reference':metadata['primary_reference']})
     return result
@@ -345,7 +357,7 @@ def articles(root, *, summary=False, article_id=None, listing=False, date_filter
 def output_status():
     """Only the fields needed by the article library; no task queues or knowledge bodies."""
     def compact(root):
-        keys={'id','date','product','title','quality_status','markdown','word','task_name','category','primary_reference'}
+        keys={'id','date','product','title','quality_status','quality_issues','format_warnings','markdown','word','task_name','category','primary_reference'}
         return [{**{k:v for k,v in a.items() if k in keys},'receipt':{'delivery_mode':a['receipt'].get('delivery_mode')}} for a in articles(root,listing=True)]
     jobs=[]
     for path in sorted((BASE/'runs').glob('*/job.json'),reverse=True):
@@ -380,7 +392,14 @@ def status(*, task_list=False):
             'legacy_approved_articles':len(list((SHARED/'approved').glob('*/*/*/receipt.json'))),
             'source':'专用素材独立保存；可选择只读GEO已有素材','worker':read(BASE/'worker_health.json')}
 
-def download(identity,article_id,kind,filters=None):
+def require_publishable(article):
+    if article.get('quality_status')=='needs_revision':
+        issues=article.get('quality_issues') or []
+        message='；'.join(issues) if issues else '完成后可下载'
+        raise ValueError('文章待修订。'+message)
+
+
+def download(identity,article_id,kind,filters=None,*,include_references=True):
     root=SHARED if identity=='legacy-original' else None if identity=='all-approved' else job_root(identity)
     if kind in {'bundle','package'}:
         import zipfile
@@ -390,8 +409,15 @@ def download(identity,article_id,kind,filters=None):
         if source not in {'all','new','legacy-original'} or not isinstance(search,str) or len(search)>200:raise ValueError('筛选条件不正确')
         plan=filters.get('plan','')
         if plan and not re.fullmatch(r'plan-[a-f0-9]{32}',plan):raise ValueError('任务筛选不正确')
-        if kind=='package' and (root is None or not re.fullmatch(r'[^/\\.][^/\\]*/[^/\\.][^/\\]*/[^/\\.][^/\\]*',article_id) or article_id not in {a['id'] for a in articles(root,article_id=article_id)}):raise ValueError('请选择有效成稿')
-        suffix='-'+digest({'filters':filters,'article':article_id if kind=='package' else ''})[:24]
+        if kind=='package':
+            if root is None or not re.fullmatch(r'[^/\\.][^/\\]*/[^/\\.][^/\\]*/[^/\\.][^/\\]*',article_id):
+                raise ValueError('请选择有效成稿')
+            matching=articles(root,article_id=article_id,listing=True)
+            if not matching:
+                raise ValueError('请选择有效成稿')
+            require_publishable(matching[0])
+        suffix='-'+digest({'filters':filters,'article':article_id if kind=='package' else '',
+                           'include_references':include_references})[:24]
         path=BASE/'exports'/(identity+suffix+'.zip');path.parent.mkdir(parents=True,exist_ok=True)
         temporary=path.with_name(path.name+'.'+uuid.uuid4().hex+'.tmp')
         roots=[SHARED]+[p.parent for p in (BASE/'runs').glob('*/job.json')] if root is None else [root]
@@ -407,7 +433,7 @@ def download(identity,article_id,kind,filters=None):
                     if date and item['date']!=date or product and item['product']['id']!=product or search.strip().lower() not in item['title'].lower():continue
                     folder=current/'approved'/item['id']
                     if current.resolve() not in folder.resolve().parents:raise ValueError('成稿路径不正确')
-                    manifest.append(write_article(archive,current,item))
+                    manifest.append(write_article(archive,current,item,include_references=include_references))
             archive.writestr('导出清单.json',json.dumps({'articles':manifest,'count':len(manifest)},ensure_ascii=False,indent=2))
         temporary.replace(path)
         with zipfile.ZipFile(path) as checked:
@@ -421,7 +447,8 @@ def download(identity,article_id,kind,filters=None):
     if root.resolve() not in folder.parents or not (folder/'receipt.json').is_file():raise ValueError('成稿不存在')
     available={a['id']:a for a in articles(root,article_id=article_id,listing=True)}
     if article_id not in available:raise ValueError('成稿已撤回或文件校验未通过，不作为可下载成稿')
-    if kind not in {'info','info-json'} and available[article_id].get('quality_status')=='needs_revision':raise ValueError('这篇旧稿未通过正文质量复核，已停止下载，修订通过后恢复')
+    if kind not in {'info','info-json'}:
+        require_publishable(available[article_id])
     if kind in {'info','info-json'}:
         from .article_export import info,describe,logs
         metadata=info(root,folder);path=BASE/'exports'/('info-'+digest([identity,article_id])[:24]+'.md')
@@ -434,4 +461,4 @@ def download(identity,article_id,kind,filters=None):
     path=folder/('draft.md' if kind=='markdown' else 'article.docx')
     if not path.is_file():raise ValueError('文件不存在')
     from .article_images import project
-    return project(root,folder)[kind]
+    return project(root,folder,include_references=include_references)[kind]

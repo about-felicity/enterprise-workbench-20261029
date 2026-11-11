@@ -1,4 +1,6 @@
 /** Fixed local control gateway. Credentials stay in the original receiver. */
+import { themedDocument } from "../../../workbenchTheme.mjs";
+
 const upstream = "http://127.0.0.1:8803";
 const prefix = "/api/geo-capture/";
 const cookieName = "geo_dashboard_capture";
@@ -75,6 +77,7 @@ async function proxy(request: Request) {
     if (path === "ui" && response.ok) {
       output = output.replaceAll("'/api/panel'", `'${mount}/api/geo-capture/panel'`).replaceAll("'/api/control/'", `'${mount}/api/geo-capture/control/'`).replaceAll("'/api/login/'", `'${mount}/api/geo-capture/login/'`).replaceAll("'/api/login/ui'", `'${mount}/api/geo-capture/login/ui'`)
         .replace("</head>", `<style>${embedStyle}</style></head>`).replace("</body>", embedScript + "</body>");
+      output = themedDocument(output.replace("手动暂停后不会自动恢复。点击继续将执行今天剩余的采集，已完成数据保留。", "暂停后需手动继续。"), "capture", request.url);
     }
     return new Response(output, { status: response.status, headers: outputHeaders });
   } catch {

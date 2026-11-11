@@ -21,8 +21,10 @@ export function OwnedProductStateCard({ label, className, rate, rateLabel, detai
 }
 
 export function OwnedProductAverageCard({ rate, detail, change, surface }: {
-  rate: string | null; detail: ReactNode; change?: ReactNode; surface?: boolean;
+  rate: number | null; detail: ReactNode; change?: ReactNode; surface?: boolean;
 }) {
-  const className = ["owned-product-model-average", surface && "owned-product-surface", rate === null && "empty"].filter(Boolean).join(" ");
-  return <span className={className}><b>{rate ?? "—"}</b><small>{detail}</small>{change}</span>;
+  const display = rate?.toFixed(1);
+  const state = display === undefined ? "empty" : Number(display) === 0 ? "zero" : "";
+  const className = ["owned-product-model-average", surface && "owned-product-surface", state].filter(Boolean).join(" ");
+  return <span className={className}><b>{display === undefined ? "—" : `${display}%`}</b><small>{detail}</small>{change}</span>;
 }

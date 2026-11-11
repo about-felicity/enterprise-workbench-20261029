@@ -106,12 +106,14 @@ def describe(metadata):
       '原文作为体裁、主题和证据参考，文章须独立表述；缺失的作者、日期或账号身份不作推断。',''])
 
 
-def write_article(archive,root,item):
+def write_article(archive,root,item,*,include_references=True):
     folder=Path(root)/'approved'/item['id'];m=info(root,folder)
+    if item.get('format_warnings'):
+        m['publication_format_warnings']=item['format_warnings']
     suffix=hashlib.sha256((str(root)+item['id']).encode()).hexdigest()[:8]
     base=f"{safe(m['task_name'])}_{m['task_date']}/{safe(m['category'])}/{safe(m['number']+'_'+item['title'])}_{suffix}"
     from .article_images import project
-    illustrated=project(root,folder)
+    illustrated=project(root,folder,include_references=include_references)
     exported_hashes={}
     for name,new in [('draft.md',item['title']+'.md'),('article.docx',item['title']+'.docx')]:
         file=illustrated['markdown' if name=='draft.md' else 'word']

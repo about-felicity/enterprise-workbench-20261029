@@ -16,7 +16,7 @@ type Snapshot = { date: string; score: number | null; coefficient: number | null
   traffic: { actual: number; target: number; daily_target: number; observed_days: number; missing_days: string[]; latest_date: string | null; today_actual: number | null };
   budget: { monthly: number; planned: number | null; actual: number | null; latest_date: string | null; raw_score: number | null; floor: number; cap: number; checkpoint_days: number | null; month_days: number; daily_expense: number | null };
   mention: Mention;
-  products: Array<{ product: string; priority: string; traffic_today: number | null; traffic_total: number; daily_target: number; monthly_budget: number; expense_total: number | null; expense_checkpoints: Record<string, number> }>;
+  products: Array<{ product: string; priority: string | null; traffic_today: number | null; traffic_total: number; daily_target: number | null; monthly_budget: number | null; expense_total: number | null; expense_checkpoints: Record<string, number> }>;
 };
 type Person = { name: string; product_count: number; current: Snapshot; daily: Snapshot[] };
 type Assessment = { month: string; as_of: string; max_as_of: string; generated_at: string; available_months: string[]; product_count: number;
@@ -109,7 +109,7 @@ export function PerformanceCenter({ apiBase }: { apiBase: string }) {
       <DailyTrafficCard key={payload.month} people={payload.people} month={payload.month} asOf={payload.as_of} />
       <section ref={detail}><PerformanceConfirmation apiBase={apiBase} month={payload.month} selected={selected} onStatus={setConfirmationStatus} /></section>
       {person && current && <section className="assessment-detail" aria-label={`${person.name}绩效明细`}>
-        <header className="assessment-detail-heading"><div><span className="assessment-eyebrow">个人绩效明细</span><h2>{person.name}<small>{person.product_count} 个考核产品</small></h2><p>查看每天截至当日的累计变化，再核对流量、费用和模型的原始计算。</p></div><button onClick={() => setSelected(null)}>收起明细</button></header>
+        <header className="assessment-detail-heading"><div><span className="assessment-eyebrow">个人绩效明细</span><h2>{person.name}<small>{person.product_count} 个考核产品</small></h2></div><button onClick={() => setSelected(null)}>收起明细</button></header>
         <div className="assessment-view-switch" role="group" aria-label="每日绩效显示方式">
           <button type="button" aria-pressed={dailyView === "chart"} onClick={() => setDailyView("chart")}>折线图</button>
           <button type="button" aria-pressed={dailyView === "table"} onClick={() => setDailyView("table")}>表格</button>
@@ -129,7 +129,7 @@ export function PerformanceCenter({ apiBase }: { apiBase: string }) {
           <article><span>04 / 价值观 · {payload.component_weights.values}%</span><h3>{percent(current.scores.values)}</h3><p>工作态度、主动性、响应速度、团队配合</p><b>100% × 10% ＝ 10 分</b><small>按你确认的“直接打满”执行，不从模型或流量推算。</small></article>
         </div>
         <h3 className="assessment-subheading">产品流量与费用核对</h3>
-        <div className="assessment-table-wrap"><table className="assessment-products"><thead><tr><th>考核产品</th><th>当日搜索数</th><th>累计搜索数</th><th>每日目标</th><th>月预算</th><th>累计花费<small>至 {shortDate(current.budget.latest_date)}</small></th></tr></thead><tbody>{current.products.map(p => <tr key={p.product}><td>{p.product}<small>优先级 {p.priority}</small></td><td>{number(p.traffic_today, 0)}</td><td>{number(p.traffic_total, 0)}</td><td>{number(p.daily_target, 0)}</td><td>{money(p.monthly_budget)}</td><td>{money(p.expense_total)}</td></tr>)}</tbody></table></div>
+        <div className="assessment-table-wrap"><table className="assessment-products"><thead><tr><th>考核产品</th><th>当日搜索数</th><th>累计搜索数</th><th>每日目标</th><th>月预算</th><th>累计花费<small>至 {shortDate(current.budget.latest_date)}</small></th></tr></thead><tbody>{current.products.map(p => <tr key={p.product}><td>{p.product}{p.priority && <small>优先级 {p.priority}</small>}</td><td>{number(p.traffic_today, 0)}</td><td>{number(p.traffic_total, 0)}</td><td>{number(p.daily_target, 0)}</td><td>{money(p.monthly_budget)}</td><td>{money(p.expense_total)}</td></tr>)}</tbody></table></div>
         <details className="assessment-checkpoints"><summary>查看费用累计节点原始数据</summary><div className="assessment-table-wrap"><table><thead><tr><th>产品</th>{Object.keys(current.products[0]?.expense_checkpoints || {}).map(d => <th key={d}>{shortDate(d)}</th>)}</tr></thead><tbody>{current.products.map(p => <tr key={p.product}><td>{p.product}</td>{Object.entries(p.expense_checkpoints).map(([d, v]) => <td key={d}>{money(v)}</td>)}</tr>)}</tbody></table></div><p>这是各节点的累计花费，不将两个节点的差额平均分摊成每日费用。</p></details>
         <h3 className="assessment-subheading">提及率逐模型计算</h3>
         <div className="assessment-mention-models">{current.mention.models.map(m => <section key={m.model_id}><header><h4>{m.model}<small>权重 {m.weight}%</small></h4><strong>{percent(m.score)}</strong></header><p>模型分＝有效产品达成率平均；{m.observed_items}/{m.target_items} 项有有效数据。</p>

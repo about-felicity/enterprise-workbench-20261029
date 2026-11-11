@@ -55,9 +55,12 @@ test('write preserves idempotency and rejects foreign origin',async()=>{
   assert.equal((await POST(request('control/new',write({Origin:'https://evil.test'})))).status,403);assert.equal(calls,1);
 });
 test('public prefix and HttpOnly cookie are retained',async()=>{
-  globalThis.fetch=async()=>new Response("const API='/api/';",{headers:{'Content-Type':'text/html','Set-Cookie':`geo_creation=${token}; HttpOnly`}});
+  globalThis.fetch=async()=>new Response("<html><head></head><body><script>const API='/api/';</script></body></html>",{headers:{'Content-Type':'text/html','Set-Cookie':`geo_creation=${token}; HttpOnly`}});
   const response=await GET(new Request('https://1any.top/api/geo-creation/ui',{headers:{'X-Forwarded-Prefix':'/geo_monitor','X-Forwarded-Proto':'https'}}));
-  assert.match(await response.text(),/\/geo_monitor\/api\/geo-creation\//);assert.match(response.headers.get('Set-Cookie'),/Path=\/geo_monitor\/api\/geo-creation.*Secure/);
+  const html=await response.text();
+  assert.match(html,/\/geo_monitor\/api\/geo-creation\//);assert.match(response.headers.get('Set-Cookie'),/Path=\/geo_monitor\/api\/geo-creation.*Secure/);
+  assert.match(html,/data-workbench="creation"/);
+  assert.match(html,/href="\.\.\/\.\.\/workbench-theme\.css"/);
 });
 test('arbitrary proxy paths and malformed writes never reach upstream',async()=>{
   globalThis.fetch=()=>{throw Error('must not reach upstream')};
