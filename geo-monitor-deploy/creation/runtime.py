@@ -400,6 +400,10 @@ def require_publishable(article):
 
 
 def download(identity,article_id,kind,filters=None,*,include_references=True):
+    return download_with_title(identity,article_id,kind,filters,include_references=include_references)[0]
+
+
+def download_with_title(identity,article_id,kind,filters=None,*,include_references=True):
     root=SHARED if identity=='legacy-original' else None if identity=='all-approved' else job_root(identity)
     if kind in {'bundle','package'}:
         import zipfile
@@ -409,6 +413,7 @@ def download(identity,article_id,kind,filters=None,*,include_references=True):
         if source not in {'all','new','legacy-original'} or not isinstance(search,str) or len(search)>200:raise ValueError('筛选条件不正确')
         plan=filters.get('plan','')
         if plan and not re.fullmatch(r'plan-[a-f0-9]{32}',plan):raise ValueError('任务筛选不正确')
+        title=None
         if kind=='package':
             if root is None or not re.fullmatch(r'[^/\\.][^/\\]*/[^/\\.][^/\\]*/[^/\\.][^/\\]*',article_id):
                 raise ValueError('请选择有效成稿')
@@ -416,6 +421,7 @@ def download(identity,article_id,kind,filters=None,*,include_references=True):
             if not matching:
                 raise ValueError('请选择有效成稿')
             require_publishable(matching[0])
+            title=matching[0]['title']
         suffix='-'+digest({'filters':filters,'article':article_id if kind=='package' else '',
                            'include_references':include_references})[:24]
         path=BASE/'exports'/(identity+suffix+'.zip');path.parent.mkdir(parents=True,exist_ok=True)
@@ -439,7 +445,7 @@ def download(identity,article_id,kind,filters=None,*,include_references=True):
         with zipfile.ZipFile(path) as checked:
             if checked.testzip() is not None:raise ValueError('压缩包完整性检查失败，请重新下载')
             if not json.loads(checked.read('导出清单.json')).get('count'):raise ValueError('当前筛选没有可下载的成稿，请调整筛选后重试')
-        return path
+        return path,title
     if root is None:raise ValueError('请选择成稿')
     if kind not in {'markdown','word','info','info-json'}:raise ValueError('文件类型不正确')
     if not re.fullmatch(r'[^/\\.][^/\\]*/[^/\\.][^/\\]*/[^/\\.][^/\\]*',article_id):raise ValueError('成稿编号不正确')
@@ -455,10 +461,10 @@ def download(identity,article_id,kind,filters=None,*,include_references=True):
         if kind=='info-json':
             path=path.with_suffix('.json')
             atomic_json(path,{'metadata':metadata,'execution':logs(root,metadata)})
-            return path
+            return path,None
         atomic_write(path,describe(metadata)+'\n## 执行日志\n\n```json\n'+json.dumps(logs(root,metadata),ensure_ascii=False,indent=2)+'\n```\n')
-        return path
+        return path,None
     path=folder/('draft.md' if kind=='markdown' else 'article.docx')
     if not path.is_file():raise ValueError('文件不存在')
     from .article_images import project
-    return project(root,folder,include_references=include_references)[kind]
+    return project(root,folder,include_references=include_references)[kind],available[article_id]['title']

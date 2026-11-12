@@ -13,6 +13,7 @@ import time
 import logging
 from urllib.parse import parse_qs,urlsplit,quote
 from . import runtime,source_adapter
+from .article_export import article_filename
 from .status_cache import StatusCache,LibraryCache
 
 sessions={};lock=threading.Lock()
@@ -164,11 +165,14 @@ class Handler(BaseHTTPRequestHandler):
                 references=query.get('references',['1'])
                 if references not in (['1'],['0']):raise ValueError('参考链接选项不正确')
                 filters={k:get(k) for k in ('date','product','source','search','plan') if get(k)}
-                file=runtime.download(get('job'),get('article'),get('kind'),filters,include_references=references==['1'])
+                file,title=runtime.download_with_title(get('job'),get('article'),get('kind'),filters,include_references=references==['1'])
                 mime='application/json; charset=utf-8' if file.suffix=='.json' else 'application/zip' if file.suffix=='.zip' else 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' if file.suffix=='.docx' else 'text/markdown; charset=utf-8'
                 body=file.read_bytes()
                 # Hash and deliver the exact same snapshot even during concurrent exports.
-                return self.send(body,content_type=mime,extra={'Content-Disposition':'attachment; filename="creation-articles'+file.suffix+'"','X-Content-SHA256':hashlib.sha256(body).hexdigest(),'X-Download-Bytes':str(len(body))})
+                disposition=f'attachment; filename="creation-articles{file.suffix}"'
+                if title:
+                    disposition+="; filename*=UTF-8''"+quote(article_filename(title,file.suffix),safe='')
+                return self.send(body,content_type=mime,extra={'Content-Disposition':disposition,'X-Content-SHA256':hashlib.sha256(body).hexdigest(),'X-Download-Bytes':str(len(body))})
             self.send({'ok':False,'message':'接口不存在'},404)
         except (ValueError,KeyError) as error:self.send({'ok':False,'message':str(error)},400)
         except Exception as error:self.send({'ok':False,'message':'服务检查失败：'+type(error).__name__},503)

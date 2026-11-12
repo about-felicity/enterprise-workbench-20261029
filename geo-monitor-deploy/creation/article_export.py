@@ -9,6 +9,19 @@ from . import runtime
 def safe(value):
     return re.sub(r'[<>:"/\\|?*\x00-\x1f]','_',str(value)).strip(' .')[:80] or '未命名'
 
+_FILENAME_PUNCTUATION = str.maketrans('<>:"/\\|?*', '＜＞：＂／＼｜？＊')
+_WINDOWS_DEVICE_NAME = re.compile(r'(?:CON|PRN|AUX|NUL|COM[1-9¹²³]|LPT[1-9¹²³])(?:\.|$)', re.IGNORECASE)
+
+
+def article_filename(title, extension):
+    """Keep the displayed title readable on Windows, macOS and Linux."""
+    stem = re.sub(r'[\x00-\x1f\x7f]', ' ', title.translate(_FILENAME_PUNCTUATION)).strip(' .')
+    stem = stem.encode('utf-8')[:240 - len(extension)].decode('utf-8', errors='ignore').rstrip(' .') or '未命名'
+    if _WINDOWS_DEVICE_NAME.match(stem):
+        stem = '_' + stem
+    return stem + extension
+
+
 _metadata_lock=threading.RLock()
 
 def _signature(path):
@@ -115,9 +128,9 @@ def write_article(archive,root,item,*,include_references=True):
     from .article_images import project
     illustrated=project(root,folder,include_references=include_references)
     exported_hashes={}
-    for name,new in [('draft.md',item['title']+'.md'),('article.docx',item['title']+'.docx')]:
+    for name,extension in [('draft.md','.md'),('article.docx','.docx')]:
         file=illustrated['markdown' if name=='draft.md' else 'word']
-        destination=base+'/'+safe(Path(new).stem)+Path(new).suffix
+        destination=base+'/'+article_filename(item['title'],extension)
         if name=='draft.md' and illustrated['image']:
             body=file.read_text('utf8').replace('/api/geo-creation/product_image?id='+illustrated['image_id'],'product.png').encode('utf8')
         else:body=file.read_bytes()
