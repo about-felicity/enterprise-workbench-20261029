@@ -12,7 +12,7 @@ from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 import service
-from collector import rate_limit_error
+from collector import rate_limit_error, snapshot
 
 
 class VideoServiceTests(unittest.TestCase):
@@ -122,6 +122,69 @@ class VideoServiceTests(unittest.TestCase):
                 with self.assertRaises(service.CheckError):
                     service.check_work(self.row, Mock())
                 read.assert_called_once()
+
+    def test_single_unavailable_page_uses_the_share_link_before_changing_status(self):
+        row = {**self.row, "availability": "available", "pending": 0, "post_id": "1234567890123456789",
+               "url": self.row["input_url"], "input_url": "https://v.douyin.com/original/"}
+        context, retry_context = Mock(), Mock()
+        context.browser.new_context.return_value = nullcontext(retry_context)
+        unavailable = service.CheckError("你要观看的图文不存在", "unavailable", category="page_unavailable")
+        result = self.accessible_result()
+        with patch.object(service.time, "sleep"), patch.object(service, "read_work", side_effect=[unavailable, result]) as read:
+            self.assertEqual(service.check_work(row, context), result)
+        self.assertEqual([call.args for call in read.call_args_list],
+                         [(context, row["url"], row["post_id"]), (retry_context, row["input_url"], row["post_id"])])
+
+    def test_only_the_fallback_saying_unavailable_keeps_the_last_confirmation(self):
+        row = {**self.row, "availability": "available", "pending": 0}
+        context = Mock()
+        context.browser.new_context.return_value = nullcontext(Mock())
+        incomplete = service.CheckError("抖音未返回作品详情", category="detail")
+        unavailable = service.CheckError("你要观看的图文不存在", "unavailable", category="page_unavailable")
+        with patch.object(service.time, "sleep"), patch.object(service, "read_work", side_effect=[incomplete, unavailable]):
+            with self.assertRaises(service.CheckError) as caught:
+                service.check_work(row, context)
+        self.assertEqual(caught.exception.availability, "unknown")
+
+    def test_confirmed_unavailable_works_keep_one_regular_page_check(self):
+        row = {**self.row, "availability": "unavailable", "pending": 0}
+        unavailable = service.CheckError("你要观看的图文不存在", "unavailable", category="page_unavailable")
+        with patch.object(service, "read_work", side_effect=unavailable) as read:
+            with self.assertRaises(service.CheckError) as caught:
+                service.check_work(row, Mock())
+        self.assertIs(caught.exception, unavailable)
+        read.assert_called_once()
+
+    def test_two_unavailable_pages_confirm_the_change(self):
+        row = {**self.row, "availability": "available", "pending": 0}
+        context = Mock()
+        context.browser.new_context.return_value = nullcontext(Mock())
+        unavailable = service.CheckError("你要观看的图文不存在", "unavailable", category="page_unavailable")
+        with patch.object(service.time, "sleep"), patch.object(service, "read_work", side_effect=[unavailable, unavailable]) as read:
+            with self.assertRaises(service.CheckError) as caught:
+                service.check_work(row, context)
+        self.assertEqual(caught.exception.availability, "unavailable")
+        self.assertEqual(read.call_count, 2)
+
+    def test_platform_cooldown_leaves_a_single_unavailable_page_unconfirmed(self):
+        row = {**self.row, "availability": "available", "pending": 0}
+        unavailable = service.CheckError("你要观看的图文不存在", "unavailable", category="page_unavailable")
+        with patch.object(service.time, "sleep"), patch.object(service.BROWSER_BUDGET, "paused_until", return_value=float("inf")):
+            with patch.object(service, "read_work", side_effect=unavailable) as read:
+                with self.assertRaises(service.CheckError) as caught:
+                    service.check_work(row, Mock())
+        self.assertEqual(caught.exception.availability, "unknown")
+        read.assert_called_once()
+
+    def test_matched_photo_metadata_proves_access_without_metrics(self):
+        page = Mock()
+        page.url = "https://www.douyin.com/note/1234567890123456789"
+        page.goto.return_value = Mock(status=200, url=page.url)
+        with patch("collector.work_props", return_value={"images": [{}], "desc": "测试图文"}):
+            result = snapshot(page, page.url)
+        self.assertEqual(result["post_id"], "1234567890123456789")
+        self.assertNotIn("likes", result)
+        self.assertFalse(any(call.args == ("body",) for call in page.locator.call_args_list))
 
     def test_rate_limit_uses_retry_after_with_safe_default(self):
         self.assertEqual(rate_limit_error(Mock(headers={"retry-after": "180"})).retry_after, 180)

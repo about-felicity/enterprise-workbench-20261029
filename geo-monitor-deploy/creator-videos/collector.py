@@ -22,11 +22,12 @@ CHINA = timezone(timedelta(hours=8))
 
 
 class CheckError(ValueError):
-    def __init__(self, message, availability="unknown", *, category=None, retry_after=None):
+    def __init__(self, message, availability="unknown", *, category=None, retry_after=None, post_id=None):
         super().__init__(message)
         self.availability = availability
         self.category = category
         self.retry_after = retry_after
+        self.post_id = post_id
 
 
 def rate_limit_error(response):
@@ -189,7 +190,7 @@ def snapshot(page, link, expected_post_id=None):
         if response and canonical_link(response.url) == final and response.status >= 400:
             message = f"抖音作品页返回 HTTP {response.status}"
             if response.status in (404, 410):
-                raise CheckError(message, "unavailable")
+                raise CheckError(message, "unavailable", category="page_unavailable", post_id=post[2])
             category = "transport" if response.status >= 500 or response.status == 403 else None
             raise CheckError(f"{message}，待确认", category=category)
         script_selector = "script"
@@ -210,11 +211,11 @@ def snapshot(page, link, expected_post_id=None):
             raise CheckError("抖音返回作品为私密", "unavailable")
         metrics = work_metrics(props)
         if len(metrics) != len(FIELDS):
-            body = page.locator("body").inner_text(timeout=4000)
-            for line in body.splitlines():
-                if UNAVAILABLE.fullmatch(line.strip()):
-                    raise CheckError(line.strip(), "unavailable")
-            if not props or not (props.get("video") or props.get("images")):
+            if not (props.get("video") or props.get("images")):
+                body = page.locator("body").inner_text(timeout=4000)
+                for line in body.splitlines():
+                    if UNAVAILABLE.fullmatch(line.strip()):
+                        raise CheckError(line.strip(), "unavailable", category="page_unavailable", post_id=post[2])
                 raise CheckError("抖音未返回作品详情，待确认", category="detail")
             metrics = {}
         author = props.get("authorInfo") or {}

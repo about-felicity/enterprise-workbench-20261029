@@ -490,19 +490,30 @@ def check_work(row, context):
     expected_post_id = row["post_id"]
     try:
         return read_work(context, link, expected_post_id)
-    except CheckError as exc:
-        if exc.availability != "unknown" or exc.category in {"transport", "timeout", "rate_limit"}:
+    except CheckError as first:
+        page_unavailable = first.category == "page_unavailable"
+        confirm_change = row["pending"] or row["availability"] != "unavailable"
+        if first.category in {"transport", "timeout", "rate_limit"}:
             raise
-        LOG.info("Video check retry for work %s: %s", row["id"], exc)
-        if expected_post_id and exc.category in ("navigation", "detail"):
+        if first.availability != "unknown" and not (page_unavailable and confirm_change):
+            raise
+        LOG.info("Video check retry for work %s: %s", row["id"], first)
+        expected_post_id = expected_post_id or first.post_id
+        if expected_post_id and first.category in {"navigation", "detail", "page_unavailable"}:
             link = row["input_url"]
         time.sleep(2)
         if time.time() < BROWSER_BUDGET.paused_until():
+            if page_unavailable:
+                raise CheckError(f"{first}，待复核", category="detail") from first
             raise
-
-    # Retain the existing full-page read as a bounded fallback for incomplete pages.
-    with context.browser.new_context(**BROWSER_CONTEXT_OPTIONS) as retry_context:
-        return read_work(retry_context, link, expected_post_id)
+        # Use a fresh full context to confirm an unavailable page or recover incomplete details.
+        with context.browser.new_context(**BROWSER_CONTEXT_OPTIONS) as retry_context:
+            try:
+                return read_work(retry_context, link, expected_post_id)
+            except CheckError as retry:
+                if confirm_change and retry.category == "page_unavailable" and not page_unavailable:
+                    raise CheckError(f"{retry}，待复核", category="detail") from retry
+                raise
 
 
 def save_check_error(row, error):
@@ -519,6 +530,8 @@ def save_check_error(row, error):
     elif error.availability == "unavailable":
         with CLAIM_LOCK:
             TRANSPORT_COOLDOWN.record_success()
+        if row["availability"] != "unavailable":
+            LOG.info("Video unavailable confirmed for work %s: %s", row["id"], error)
     save(row, error=str(error), availability=error.availability)
 
 
