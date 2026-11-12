@@ -19,6 +19,11 @@ CSP_HEADER = re.compile(
 )
 
 
+def data_uri(path: Path, media_type: str) -> str:
+    encoded = base64.b64encode(path.read_bytes()).decode("ascii")
+    return f"data:{media_type};base64,{encoded}"
+
+
 def render_page(template: str, dashboard: Path) -> str:
     theme = (dashboard / "public/workbench-theme.css").read_text(encoding="utf-8")
     logo = (dashboard / "app/WorkbenchLogo.tsx").read_text(encoding="utf-8")
@@ -26,10 +31,17 @@ def render_page(template: str, dashboard: Path) -> str:
     svg = re.search(r"<svg\b.*?</svg>", logo, re.DOTALL)
     if not tokens or not svg:
         raise ValueError("Workbench theme tokens or logo are missing")
-    for field in ("theme", "logo", "error", "next"):
+    for field in ("theme", "logo", "error", "next", "avatar", "script_font", "wave_font"):
         if template.count("{" + field + "}") != 1:
             raise ValueError(f"Expected one login template field for {field}")
-    return template.replace("{theme}", tokens[0]).replace("{logo}", svg[0].replace("className=", "class="))
+    assets = dashboard / "login-assets"
+    return (
+        template.replace("{theme}", tokens[0])
+        .replace("{logo}", svg[0].replace("className=", "class="))
+        .replace("{avatar}", data_uri(assets / "login-avatar.webp", "image/webp"))
+        .replace("{script_font}", data_uri(assets / "caveat-bold.woff2", "font/woff2"))
+        .replace("{wave_font}", data_uri(assets / "noto-wave.woff2", "font/woff2"))
+    )
 
 
 def update_source(source: str, page: str) -> str:
@@ -52,7 +64,7 @@ def update_source(source: str, page: str) -> str:
     if len(scripts) != 1:
         raise ValueError("Expected one inline login script")
     script_hash = base64.b64encode(hashlib.sha256(scripts[0].encode("utf-8")).digest()).decode("ascii")
-    policy = f"{LOGIN_POLICY}; script-src 'sha256-{script_hash}'; img-src data:"
+    policy = f"{LOGIN_POLICY}; script-src 'sha256-{script_hash}'; img-src data:; font-src data:"
     headers = list(CSP_HEADER.finditer(source))
     if len(headers) != 1 or not ast.literal_eval(headers[0][2]).startswith(LOGIN_POLICY):
         raise ValueError("Unexpected edge login Content Security Policy")

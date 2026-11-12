@@ -8,6 +8,20 @@
   <style>
     {theme}
 
+    @font-face {
+      font-family: Caveat;
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+      src: url("{script_font}") format("woff2");
+    }
+    @font-face {
+      font-family: "Noto Color Emoji";
+      font-display: swap;
+      src: url("{wave_font}") format("woff2");
+      unicode-range: U+1F44B;
+    }
+
     :root {
       color-scheme: light;
       --bg-top: #f5faff;
@@ -117,10 +131,11 @@
     .sky {
       position: relative;
       min-height: 146px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 22px 24px 35px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 24px 27px;
       color: #fff;
       background:
         radial-gradient(circle at 82% 18%, #fff6 0, #fff0 38%),
@@ -134,15 +149,42 @@
       height: 27px;
       background: linear-gradient(transparent, var(--card));
     }
-    h1 {
+    .sky-copy, .sky-avatar {
       position: relative;
       z-index: 1;
+    }
+    .sky-avatar {
+      display: block;
+      width: clamp(62px, 23vw, 92px);
+      height: auto;
+      margin-inline-end: 2px;
+      filter: drop-shadow(0 6px 10px #1237653d);
+      pointer-events: none;
+    }
+    .sky-greeting {
+      margin: 0 0 3px;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+    .sky-wave {
+      font-family: "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+      font-weight: 400;
+    }
+    h1 {
       margin: 0;
       font-size: clamp(28px, 7vw, 34px);
       font-weight: 650;
       line-height: 1.12;
       letter-spacing: -.035em;
       text-shadow: 0 2px 12px #12376555;
+    }
+    .sky-subtitle {
+      margin: 0 0 0 3px;
+      font-family: Caveat, "Segoe Script", cursive;
+      font-size: clamp(22px, 6vw, 28px);
+      font-weight: 700;
+      line-height: 1.12;
     }
 
     form {
@@ -262,7 +304,14 @@
     <div class="brand"><span class="brand-mark">{logo}</span>企业工作台</div>
     <div class="stage" id="stage">
       <section class="card" id="card" aria-labelledby="login-title">
-        <header class="sky"><h1 id="login-title">欢迎回来</h1></header>
+        <header class="sky">
+          <div class="sky-copy">
+            <p class="sky-greeting" lang="en"><span class="sky-wave" aria-hidden="true">👋</span> Hey, welcome back</p>
+            <h1 id="login-title">欢迎回来</h1>
+            <p class="sky-subtitle" lang="en">sign in to continue</p>
+          </div>
+          <img class="sky-avatar" src="{avatar}" alt="" width="204" height="240" draggable="false">
+        </header>
         <form method="post" action="/geo_monitor/login">
           <input type="hidden" name="next" value="{next}">
           <div class="login-message" role="alert">{error}</div>
