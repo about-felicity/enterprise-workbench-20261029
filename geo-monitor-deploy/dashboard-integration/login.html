@@ -2,176 +2,403 @@
 <html lang="zh-CN" data-workbench="login">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="robots" content="noindex,nofollow">
   <title>员工登录 · 企业工作台</title>
   <style>
     {theme}
 
-    :root { color-scheme: light; }
-    * { box-sizing: border-box; }
+    :root {
+      color-scheme: light;
+      --bg-top: #f5faff;
+      --bg-middle: #dce9f8;
+      --bg-bottom: #c8ddf5;
+      --card: #fff;
+      --ink: #0b1b33;
+      --muted: #50617b;
+      --line: #c9daee;
+      --field: #f3f7fd;
+      --accent: var(--wb-blue);
+      --button-start: #2362c4;
+      --button-end: #2875ca;
+      --toggle: #ffffffa6;
+      --shadow: #143c785c;
+      --error-bg: #fff1f2;
+      --error-ink: #a21b39;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        color-scheme: dark;
+        --bg-top: #172842;
+        --bg-middle: #0d1829;
+        --bg-bottom: #08111f;
+        --card: #14233a;
+        --ink: #eaf2ff;
+        --muted: #b0c2db;
+        --line: #385274;
+        --field: #0f1c30;
+        --accent: #8dbfff;
+        --toggle: #162842c7;
+        --shadow: #0009;
+        --error-bg: #3c2030;
+        --error-ink: #ffc2cc;
+      }
+    }
+
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg-top: #172842;
+      --bg-middle: #0d1829;
+      --bg-bottom: #08111f;
+      --card: #14233a;
+      --ink: #eaf2ff;
+      --muted: #b0c2db;
+      --line: #385274;
+      --field: #0f1c30;
+      --accent: #8dbfff;
+      --toggle: #162842c7;
+      --shadow: #0009;
+      --error-bg: #3c2030;
+      --error-ink: #ffc2cc;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
     body {
       margin: 0;
       min-height: 100vh;
       min-height: 100svh;
       display: grid;
       place-items: center;
-      padding: 20px;
-      background: var(--wb-bg);
-      color: var(--wb-ink);
-      font: 14px/1.6 "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+      padding: max(24px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom));
+      color: var(--ink);
+      background: radial-gradient(ellipse at 50% 35%, var(--bg-top), var(--bg-middle) 62%, var(--bg-bottom));
+      font-family: Inter, system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
     }
-    .login-shell {
-      width: min(100%, 880px);
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      overflow: hidden;
-      background: var(--wb-surface);
-      border: 1px solid var(--wb-border);
-      border-radius: var(--wb-card-radius);
-    }
-    .identity, .login { padding: clamp(28px, 5vw, 52px); }
-    .identity {
-      display: grid;
-      align-content: center;
-      gap: 28px;
-      background: var(--wb-blue-soft);
-      border-inline-end: 1px solid var(--wb-border);
+
+    main { display: grid; justify-items: center; gap: 16px; width: min(100%, 400px); }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .09em;
+      color: var(--muted);
     }
     .brand-mark {
       display: grid;
+      width: 26px;
+      height: 26px;
       place-items: center;
-      width: 46px;
-      height: 46px;
+      border-radius: 7px;
       background: var(--wb-blue);
-      color: white;
-      border-radius: 10px;
+      color: #fff;
     }
-    .brand-mark svg { width: 30px; height: 30px; }
-    h1 { margin: 16px 0 4px; font-size: 34px; line-height: 1.2; }
-    .identity p { margin: 0; color: var(--wb-muted); }
-    .preview { display: block; width: 100%; height: auto; }
-    .login { align-self: center; }
-    h2 { margin: 0 0 24px; font-size: 25px; line-height: 1.25; }
-    .field { display: grid; gap: 6px; margin-bottom: 16px; }
-    .field label { font-weight: 600; }
-    input, button { font: inherit; }
+    .brand-mark svg { width: 18px; height: 18px; }
+    .stage { width: 100%; perspective: 1200px; }
+    .card {
+      --mx: 50%;
+      --my: 50%;
+      --rx: 0deg;
+      --ry: 0deg;
+      --scale: 1;
+      --holo: .16;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--card);
+      box-shadow: 0 30px 60px -22px var(--shadow), 0 4px 14px #143c7824;
+      transform: rotateX(var(--rx)) rotateY(var(--ry)) scale(var(--scale));
+      transition: transform 150ms ease;
+    }
+    .sky {
+      position: relative;
+      min-height: 146px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 22px 24px 35px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 82% 18%, #fff6 0, #fff0 38%),
+        radial-gradient(ellipse at 12% 116%, #7cc0f5 0, #7cc0f500 65%),
+        linear-gradient(160deg, #245fbf, #3888dc 62%, #83c1f2);
+    }
+    .sky::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 -1px;
+      height: 27px;
+      background: linear-gradient(transparent, var(--card));
+    }
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: clamp(28px, 7vw, 34px);
+      font-weight: 650;
+      line-height: 1.12;
+      letter-spacing: -.035em;
+      text-shadow: 0 2px 12px #12376555;
+    }
+
+    form {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 14px;
+      padding: 8px 24px 24px;
+    }
+    .field { display: grid; gap: 6px; }
+    label { color: var(--muted); font-size: 13px; font-weight: 600; }
+    .input-wrap { position: relative; }
     .field input {
+      display: block;
       width: 100%;
-      min-height: 46px;
-      padding: 9px 12px;
-      border: 1px solid var(--wb-control-border);
-      border-radius: var(--wb-control-radius);
-      background: var(--wb-surface);
-      color: var(--wb-ink);
+      min-height: 44px;
+      padding: 10px 12px;
+      color: var(--ink);
+      background: var(--field);
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      font: inherit;
       font-size: 16px;
-      transition: border-color 160ms ease, box-shadow 160ms ease;
+      transition: border-color .15s, box-shadow .15s;
     }
+    .field input::placeholder { color: var(--muted); opacity: .88; }
     .field input:focus {
-      outline: none;
-      border-color: var(--wb-blue);
-      box-shadow: 0 0 0 3px var(--wb-blue-soft);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 23%, transparent);
     }
-    .button {
-      width: 100%;
-      min-height: 46px;
-      margin-top: 4px;
+    .input-wrap:has(.eye:not([hidden])) input { padding-inline-end: 62px; }
+    .eye {
+      position: absolute;
+      inset-inline-end: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      min-width: 44px;
+      min-height: 36px;
+      padding: 6px;
       border: 0;
-      border-radius: var(--wb-control-radius);
-      background: var(--wb-blue);
-      color: white;
+      border-radius: 8px;
+      color: var(--muted);
+      background: transparent;
+      font: inherit;
+      font-size: 12px;
       font-weight: 650;
       cursor: pointer;
-      transition: background-color 160ms ease;
     }
-    .button:hover { background: var(--wb-blue-ink); }
-    .button:focus-visible { outline: 2px solid var(--wb-blue); outline-offset: 3px; }
+    .go {
+      min-height: 44px;
+      padding: 10px 14px;
+      color: #fff;
+      border: 0;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--button-start), var(--button-end));
+      box-shadow: 0 8px 18px -8px var(--button-start);
+      font: inherit;
+      font-size: 15px;
+      font-weight: 650;
+      cursor: pointer;
+      transition: transform .15s, filter .15s;
+    }
+    .go:hover { filter: brightness(1.08); }
+    .go:active { transform: scale(.985); }
     .error {
-      margin: 0 0 16px;
-      padding: 8px 12px;
-      border: 1px solid #fecaca;
-      border-radius: var(--wb-control-radius);
-      background: #fef2f2;
-      color: #991b1b;
+      padding: 8px 10px;
+      border-radius: 9px;
+      color: var(--error-ink);
+      background: var(--error-bg);
+      font-size: 13px;
+      line-height: 1.5;
     }
-    .note {
-      display: flex;
-      align-items: flex-start;
-      gap: 7px;
-      margin: 16px 0 0;
-      color: var(--wb-muted);
-      font-size: 12px;
-    }
-    .note svg { flex-shrink: 0; margin-top: 2px; }
+    .login-message:empty { display: none; }
+    .eye:hover, .theme:hover { color: var(--ink); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
-    @media (max-width: 680px) {
-      .login-shell { width: min(100%, 420px); grid-template-columns: minmax(0, 1fr); }
-      .identity {
-        grid-template-columns: auto minmax(0, 1fr);
-        align-items: center;
-        gap: 12px;
-        padding: 20px;
-        border-inline-end: 0;
-        border-bottom: 1px solid var(--wb-border);
-      }
-      .identity h1 { margin: 0 0 2px; font-size: 21px; }
-      .identity p { font-size: 12px; }
-      .preview { display: none; }
-      .login { padding: 24px 20px; }
-      h2 { margin-bottom: 20px; font-size: 22px; }
+    .foil, .glare { position: absolute; inset: 0; pointer-events: none; }
+    .foil {
+      opacity: calc(var(--holo) * .58);
+      background-image: linear-gradient(#5a5a5a, #5a5a5a),
+        repeating-linear-gradient(125deg, #99f5ff 0%, #a3ffd1 5%, #d9b5ff 10%, #ffaee7 15%, #fff3a3 20%, #99f5ff 25%),
+        var(--shards, none);
+      background-blend-mode: screen, difference, normal;
+      background-size: auto, 300% 300%, 170px 170px;
+      background-position: 0 0, var(--mx) var(--my), 0 0;
+      mask-image: radial-gradient(farthest-corner circle at var(--mx) var(--my), #000, #0005 52%, transparent);
+    }
+    .glare {
+      opacity: var(--holo);
+      background: radial-gradient(farthest-corner circle at var(--mx) var(--my), #fff4 0%, #fff1 28%, transparent 62%);
+    }
+    .theme {
+      min-height: 36px;
+      padding: 5px 12px;
+      color: var(--muted);
+      background: var(--toggle);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 650;
+      cursor: pointer;
+    }
+    @media (max-width: 360px) {
+      .sky { min-height: 126px; padding-inline: 20px; }
+      form { padding-inline: 20px; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .field input, .button { transition: none; }
+      .card { transform: none; }
+      .card, .field input, .go { transition: none; }
+      .go:active { transform: none; }
     }
   </style>
 </head>
 <body>
-  <main class="login-shell">
-    <section class="identity" aria-labelledby="workbench-title">
-      <div class="brand-mark">{logo}</div>
-      <div>
-        <h1 id="workbench-title">企业工作台</h1>
-        <p>GEO 监测、内容创作与资产管理</p>
-      </div>
-      <svg class="preview" viewBox="0 0 332 138" fill="none" aria-hidden="true" focusable="false">
-        <rect x=".5" y=".5" width="331" height="137" rx="11.5" fill="white" stroke="var(--wb-blue-line)" />
-        <path d="M1 29.5h330M53.5 30v107M220.5 42v83" stroke="var(--wb-border)" />
-        <rect x="13" y="11" width="44" height="7" rx="3.5" fill="var(--wb-blue-line)" />
-        <rect x="11" y="42" width="32" height="15" rx="4" fill="var(--wb-blue-soft)" />
-        <path d="M17 49.5h18m-18 20h16m-16 14h12m-12 14h16m-16 14h14" stroke="var(--wb-blue-line)" stroke-width="3" stroke-linecap="round" />
-        <path d="M67 73h139m-139 22h139m-139 22h139" stroke="var(--wb-border)" />
-        <path d="m69 110 29-13 27 5 25-22 24 4 28-18" stroke="var(--wb-blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-        <circle cx="202" cy="66" r="3.5" fill="var(--wb-blue)" />
-        <rect x="67" y="44" width="61" height="7" rx="3.5" fill="var(--wb-blue-line)" />
-        <rect x="234" y="42" width="83" height="24" rx="5" fill="var(--wb-indigo-soft)" />
-        <rect x="234" y="72" width="83" height="24" rx="5" fill="var(--wb-blue-soft)" />
-        <rect x="234" y="102" width="83" height="24" rx="5" fill="var(--wb-subtle)" />
-        <path d="M243 54h34m-34 30h43m-43 30h27" stroke="var(--wb-blue-line)" stroke-width="3.5" stroke-linecap="round" />
-      </svg>
-    </section>
-    <section class="login" aria-labelledby="login-title">
-      <h2 id="login-title">员工登录</h2>
-      <div aria-live="polite">{error}</div>
-      <form method="post" action="/geo_monitor/login">
-        <input type="hidden" name="next" value="{next}">
-        <div class="field">
-          <label for="username">员工账号</label>
-          <input id="username" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="64" required>
-        </div>
-        <div class="field">
-          <label for="password">密码</label>
-          <input id="password" name="password" type="password" autocomplete="current-password" maxlength="128" required>
-        </div>
-        <button class="button" type="submit">登录工作台</button>
-      </form>
-      <p class="note">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-          <rect x="4" y="10" width="16" height="11" rx="2" />
-          <path d="M8 10V7a4 4 0 0 1 8 0v3" />
-        </svg>
-        公共设备请勿保存密码。
-      </p>
-    </section>
+  <main>
+    <div class="brand"><span class="brand-mark">{logo}</span>企业工作台</div>
+    <div class="stage" id="stage">
+      <section class="card" id="card" aria-labelledby="login-title">
+        <header class="sky"><h1 id="login-title">欢迎回来</h1></header>
+        <form method="post" action="/geo_monitor/login">
+          <input type="hidden" name="next" value="{next}">
+          <div class="login-message" role="alert">{error}</div>
+          <div class="field">
+            <label for="username">员工账号</label>
+            <input id="username" name="username" autocomplete="username" autocapitalize="none"
+              spellcheck="false" maxlength="64" placeholder="请输入员工账号" required>
+          </div>
+          <div class="field">
+            <label for="password">密码</label>
+            <div class="input-wrap">
+              <input id="password" name="password" type="password" autocomplete="current-password"
+                maxlength="128" placeholder="请输入密码" required>
+              <button class="eye" id="password-toggle" type="button" aria-controls="password" hidden>显示</button>
+            </div>
+          </div>
+          <button class="go" type="submit">登录工作台</button>
+        </form>
+        <span class="foil" aria-hidden="true"></span>
+        <span class="glare" aria-hidden="true"></span>
+      </section>
+    </div>
+    <button class="theme" id="theme-toggle" type="button" hidden></button>
   </main>
+  <script>
+    const password = document.getElementById('password');
+    const passwordToggle = document.getElementById('password-toggle');
+    passwordToggle.hidden = false;
+    passwordToggle.addEventListener('click', () => {
+      const show = password.type === 'password';
+      password.type = show ? 'text' : 'password';
+      passwordToggle.textContent = show ? '隐藏' : '显示';
+    });
+
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDark = matchMedia('(prefers-color-scheme: dark)');
+    const themeKey = 'workbench-login-theme';
+    try {
+      const saved = localStorage.getItem(themeKey);
+      if (saved === 'dark' || saved === 'light') root.dataset.theme = saved;
+    } catch {}
+    const currentTheme = () => root.dataset.theme || (prefersDark.matches ? 'dark' : 'light');
+    function updateThemeLabel() {
+      themeToggle.textContent = currentTheme() === 'dark' ? '切换浅色' : '切换深色';
+    }
+    themeToggle.addEventListener('click', () => {
+      const theme = currentTheme() === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = theme;
+      try { localStorage.setItem(themeKey, theme); } catch {}
+      updateThemeLabel();
+    });
+    prefersDark.addEventListener('change', updateThemeLabel);
+    updateThemeLabel();
+    themeToggle.hidden = false;
+
+    const stage = document.getElementById('stage');
+    const card = document.getElementById('card');
+    const motion = matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
+    const clamp = value => Math.max(0, Math.min(1, value));
+    let frame = 0;
+    let textureReady = false;
+
+    function paintTexture() {
+      const size = 128;
+      const canvas = document.createElement('canvas');
+      canvas.width = canvas.height = size;
+      const context = canvas.getContext('2d');
+      if (!context) return;
+
+      let seed = 7;
+      const random = () => ((seed = seed * 16807 % 2147483647) / 2147483647);
+      const cells = Array.from({ length: 48 }, (_, index) => {
+        const row = Math.floor(index / 6);
+        const x = (index % 6 + (row % 2) / 2 + random()) * size / 6;
+        const y = (row + random()) * size / 8;
+        return { x: x % size, y, gray: 70 + random() * 150 };
+      });
+      const pixels = context.createImageData(size, size);
+      for (let y = 0; y < size; y++) {
+        for (let x = 0; x < size; x++) {
+          let first = Infinity;
+          let second = Infinity;
+          let gray = 0;
+          for (const cell of cells) {
+            const dx = Math.abs(cell.x - x);
+            const dy = Math.abs(cell.y - y);
+            const distance = Math.hypot(Math.min(dx, size - dx), Math.min(dy, size - dy));
+            if (distance < first) {
+              second = first;
+              first = distance;
+              gray = cell.gray;
+            } else if (distance < second) {
+              second = distance;
+            }
+          }
+          const pixel = (y * size + x) * 4;
+          const shade = second - first < .8 ? 250 : gray;
+          pixels.data[pixel] = pixels.data[pixel + 1] = pixels.data[pixel + 2] = shade;
+          pixels.data[pixel + 3] = 255;
+        }
+      }
+      context.putImageData(pixels, 0, 0);
+      card.style.setProperty('--shards', 'url(' + canvas.toDataURL('image/png') + ')');
+    }
+
+    function resetTilt() {
+      cancelAnimationFrame(frame);
+      frame = 0;
+      for (const property of ['--mx', '--my', '--rx', '--ry', '--scale', '--holo']) {
+        card.style.removeProperty(property);
+      }
+    }
+
+    stage.addEventListener('pointermove', event => {
+      if (!motion.matches || event.pointerType !== 'mouse') return;
+      if (!textureReady) {
+        textureReady = true;
+        paintTexture();
+      }
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const rect = stage.getBoundingClientRect();
+        const x = clamp((event.clientX - rect.left) / rect.width);
+        const y = clamp((event.clientY - rect.top) / rect.height);
+        card.style.setProperty('--mx', x * 100 + '%');
+        card.style.setProperty('--my', y * 100 + '%');
+        card.style.setProperty('--rx', (.5 - y) * 14 + 'deg');
+        card.style.setProperty('--ry', (x - .5) * 14 + 'deg');
+        card.style.setProperty('--scale', '1.015');
+        card.style.setProperty('--holo', '1');
+      });
+    });
+    stage.addEventListener('pointerleave', resetTilt);
+    stage.addEventListener('pointercancel', resetTilt);
+    motion.addEventListener('change', resetTilt);
+  </script>
 </body>
 </html>
