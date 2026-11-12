@@ -12,6 +12,7 @@ from . import runtime
 
 
 HEADING = re.compile(r'(?:#{1,6}\s+)?(?:参考信源|参考资料|参考链接|参考文献|参考来源)\s*[:：]?')
+DISPLAY_HEADING = '参考资料'
 LIBRARY = Path(__file__).with_name('reference_library.json')
 LOG = logging.getLogger(__name__)
 
@@ -84,7 +85,7 @@ def prepare_footer(markdown, references):
     for number, url, label in entries:
         label = re.sub(r'([\\\[\]<>*_`])', r'\\\1', label)
         items.append(f'{number}. {label}  \n   <{url}>')
-    prefix = '## 参考信源\n\n' if heading else ''
+    prefix = f'## {DISPLAY_HEADING}\n\n' if heading else ''
     return markdown.rstrip() + '\n\n' + prefix + '\n\n'.join(items) + '\n', entries, heading
 
 
@@ -95,7 +96,7 @@ def append_word(document, entries, heading):
     from docx.shared import Pt, RGBColor
 
     if heading:
-        document.add_heading('参考信源', level=1)
+        document.add_heading(DISPLAY_HEADING, level=1)
     for number, url, label in entries:
         paragraph = document.add_paragraph(f'{number}. {label}')
         paragraph.paragraph_format.left_indent = Pt(24)

@@ -137,11 +137,11 @@ class WorkflowTests(unittest.TestCase):
   with zipfile.ZipFile(path) as z:
    names=z.namelist();self.assertTrue(any('历史创作任务_2026-10-19/排行类/' in n for n in names))
    word=next(n for n in names if n.endswith('.docx'));document=Document(BytesIO(z.read(word)))
-   self.assertEqual([p.text for p in document.paragraphs[:3]],['二硫化硒洗发水测试文章','直接面向读者的正文','参考信源'])
+   self.assertEqual([p.text for p in document.paragraphs[:3]],['二硫化硒洗发水测试文章','直接面向读者的正文','参考资料'])
    self.assertEqual([rel.target_ref for rel in document.part.rels.values() if rel.reltype==RELATIONSHIP_TYPE.HYPERLINK],['https://dermnetnz.org/topics/selenium-sulfide'])
    self.assertEqual([node.text for node in document.element.xpath('.//w:hyperlink//w:t')],['https://dermnetnz.org/topics/selenium-sulfide'])
    markdown=z.read(next(n for n in names if n.endswith('/二硫化硒洗发水测试文章.md'))).decode('utf8')
-   self.assertIn('## 参考信源\n\n1. DermNet《二硫化硒的用途与使用注意事项》  \n   <https://dermnetnz.org/topics/selenium-sulfide>',markdown)
+   self.assertIn('## 参考资料\n\n1. DermNet《二硫化硒的用途与使用注意事项》  \n   <https://dermnetnz.org/topics/selenium-sulfide>',markdown)
    self.assertNotIn('https://example.org/original',markdown)
    self.assertNotIn('https://example.org/unused',markdown)
    self.assertEqual((folder/'article.docx').read_bytes(),original)
