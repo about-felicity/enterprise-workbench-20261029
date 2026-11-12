@@ -35,14 +35,13 @@
       --accent: var(--wb-blue);
       --button-start: #2362c4;
       --button-end: #2875ca;
-      --toggle: #ffffffa6;
       --shadow: #143c785c;
       --error-bg: #fff1f2;
       --error-ink: #a21b39;
     }
 
     @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) {
+      :root {
         color-scheme: dark;
         --bg-top: #172842;
         --bg-middle: #0d1829;
@@ -53,28 +52,10 @@
         --line: #385274;
         --field: #0f1c30;
         --accent: #8dbfff;
-        --toggle: #162842c7;
         --shadow: #0009;
         --error-bg: #3c2030;
         --error-ink: #ffc2cc;
       }
-    }
-
-    :root[data-theme="dark"] {
-      color-scheme: dark;
-      --bg-top: #172842;
-      --bg-middle: #0d1829;
-      --bg-bottom: #08111f;
-      --card: #14233a;
-      --ink: #eaf2ff;
-      --muted: #b0c2db;
-      --line: #385274;
-      --field: #0f1c30;
-      --accent: #8dbfff;
-      --toggle: #162842c7;
-      --shadow: #0009;
-      --error-bg: #3c2030;
-      --error-ink: #ffc2cc;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -258,7 +239,7 @@
       line-height: 1.5;
     }
     .login-message:empty { display: none; }
-    .eye:hover, .theme:hover { color: var(--ink); }
+    .eye:hover { color: var(--ink); }
     :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
     .foil, .glare { position: absolute; inset: 0; pointer-events: none; }
@@ -275,18 +256,6 @@
     .glare {
       opacity: var(--holo);
       background: radial-gradient(farthest-corner circle at var(--mx) var(--my), #fff4 0%, #fff1 28%, transparent 62%);
-    }
-    .theme {
-      min-height: 36px;
-      padding: 5px 12px;
-      color: var(--muted);
-      background: var(--toggle);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      font: inherit;
-      font-size: 12px;
-      font-weight: 650;
-      cursor: pointer;
     }
     @media (max-width: 360px) {
       .sky { min-height: 126px; padding-inline: 20px; }
@@ -334,7 +303,6 @@
         <span class="glare" aria-hidden="true"></span>
       </section>
     </div>
-    <button class="theme" id="theme-toggle" type="button" hidden></button>
   </main>
   <script>
     const password = document.getElementById('password');
@@ -345,28 +313,6 @@
       password.type = show ? 'text' : 'password';
       passwordToggle.textContent = show ? '隐藏' : '显示';
     });
-
-    const root = document.documentElement;
-    const themeToggle = document.getElementById('theme-toggle');
-    const prefersDark = matchMedia('(prefers-color-scheme: dark)');
-    const themeKey = 'workbench-login-theme';
-    try {
-      const saved = localStorage.getItem(themeKey);
-      if (saved === 'dark' || saved === 'light') root.dataset.theme = saved;
-    } catch {}
-    const currentTheme = () => root.dataset.theme || (prefersDark.matches ? 'dark' : 'light');
-    function updateThemeLabel() {
-      themeToggle.textContent = currentTheme() === 'dark' ? '切换浅色' : '切换深色';
-    }
-    themeToggle.addEventListener('click', () => {
-      const theme = currentTheme() === 'dark' ? 'light' : 'dark';
-      root.dataset.theme = theme;
-      try { localStorage.setItem(themeKey, theme); } catch {}
-      updateThemeLabel();
-    });
-    prefersDark.addEventListener('change', updateThemeLabel);
-    updateThemeLabel();
-    themeToggle.hidden = false;
 
     const stage = document.getElementById('stage');
     const card = document.getElementById('card');
