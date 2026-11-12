@@ -42,6 +42,48 @@ test('a forged superadmin header cannot replace the signed employee identity', a
   assert.equal((await postVideos(deletion({ 'X-Geo-User': 'superadmin' }))).status, 403);
 });
 
+test('the secondary workbench verifies its own signed session for video reads and deletions', async () => {
+  const secondaryOrigin = 'https://1any.top';
+  const secondaryUrl = secondaryOrigin + '/geo_monitor/api/geo-capture/creator-videos';
+  const methods = [];
+  globalThis.fetch = async (address, options) => {
+    if (address.endsWith('/auth')) {
+      assert.equal(options.headers.Cookie, 'geo_monitor_session=secondary');
+      if (address === 'http://127.0.0.1:19766/auth') return new Response(null, { status: 401 });
+      assert.equal(address, 'http://127.0.0.1:19767/auth');
+      return new Response(null, { status: 204, headers: { 'X-Geo-User': 'superadmin' } });
+    }
+    assert.equal(address, 'http://127.0.0.1:8812/works');
+    assert.equal(options.headers.get('X-Geo-User'), 'superadmin');
+    methods.push(options.method);
+    return Response.json({ can_delete: true });
+  };
+  const headers = { Host: '1any.top', Cookie: 'geo_monitor_session=secondary' };
+  const listing = await getVideos(new Request(secondaryUrl, { headers: { ...headers, 'X-Forwarded-Host': 'ifbcy.com' } }));
+  assert.equal((await listing.json()).can_delete, true);
+  const response = await postVideos(new Request(secondaryUrl, {
+    method: 'POST', body, headers: { ...headers, Origin: secondaryOrigin,
+      'Content-Type': 'application/json', 'Content-Length': String(Buffer.byteLength(body)) },
+  }));
+  assert.equal(response.status, 200);
+  assert.deepEqual(methods, ['GET', 'POST']);
+});
+
+test('a primary session remains valid when the reverse proxy rewrites the host', async () => {
+  globalThis.fetch = async (address, options) => {
+    if (address.endsWith('/auth')) {
+      assert.equal(address, 'http://127.0.0.1:19766/auth');
+      return new Response(null, { status: 204, headers: { 'X-Geo-User': 'superadmin' } });
+    }
+    assert.equal(options.headers.get('X-Geo-User'), 'superadmin');
+    return Response.json({ can_delete: true });
+  };
+  const response = await getVideos(new Request(url, {
+    headers: { Host: '1any.top', Cookie: 'geo_monitor_session=primary' },
+  }));
+  assert.equal((await response.json()).can_delete, true);
+});
+
 test('cross-origin deletion is rejected before any upstream request', async () => {
   globalThis.fetch = () => { throw Error('unexpected upstream request'); };
   assert.equal((await postVideos(deletion({ Origin: 'https://foreign.example' }))).status, 403);

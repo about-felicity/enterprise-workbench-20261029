@@ -19,5 +19,6 @@ export default async function Home() {
     }
   }
   if (employee) redirect("/geo_monitor/employee-videos");
-  return <Dashboard />;
+  const host = requestHeaders.get("host")?.split(":")[0].toLowerCase();
+  return <Dashboard showLogout={host === "ifbcy.com" || host === "1any.top"} />;
 }

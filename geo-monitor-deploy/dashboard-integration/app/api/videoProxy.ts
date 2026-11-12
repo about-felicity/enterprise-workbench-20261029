@@ -11,19 +11,26 @@ function error(status: number, message: string) {
 }
 
 async function proxy(request: Request, ledger: VideoLedger, body?: ArrayBuffer) {
-  const day = new URL(request.url).searchParams.get("day");
+  const url = new URL(request.url);
+  const day = url.searchParams.get("day");
   if (day && !/^\d{4}-\d{2}-\d{2}$/.test(day)) return error(400, "数据日期格式不正确");
   const headers = new Headers(body ? { "Content-Type": "application/json" } : undefined);
   try {
-    // Read the signed session at the auth service. Ignore identity headers supplied by clients.
-    const identity = await fetch(process.env.GEO_VIDEO_AUTH_URL || "http://127.0.0.1:19766/auth", {
+    // The primary gateway can forward with the secondary Host for compatibility.
+    const host = (request.headers.get("host") || url.host).split(":")[0].toLowerCase();
+    const cookie = request.headers.get("cookie") || "";
+    const verify = (verifier: string) => fetch(verifier, {
       headers: {
-        Cookie: request.headers.get("cookie") || "",
+        Cookie: cookie,
         "X-Original-URI": `/geo_monitor/api/geo-capture/${ledger}`,
       },
       cache: "no-store",
       signal: AbortSignal.timeout(3000),
     });
+    let identity = await verify(process.env.GEO_VIDEO_AUTH_URL || "http://127.0.0.1:19766/auth");
+    if (identity.status === 401 && host === "1any.top" && /(?:^|;\s*)geo_monitor_session=[^;]+/.test(cookie)) {
+      identity = await verify(process.env.GEO_SECONDARY_VIDEO_AUTH_URL || "http://127.0.0.1:19767/auth");
+    }
     const username = identity.headers.get("x-geo-user");
     if (identity.status === 204 && username) {
       headers.set("X-Geo-User", username);

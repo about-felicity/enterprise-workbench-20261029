@@ -1042,7 +1042,7 @@ function SidebarSelection({ activeKey }: { activeKey: string }) {
   return <div ref={ref} className="sidebar-selection" aria-hidden="true" />;
 }
 
-export function Dashboard() {
+export function Dashboard({ showLogout = false }: { showLogout?: boolean }) {
   const [view, setView] = useState<View>("overview");
   const showAnalytics = view !== "control" && !hashViews.includes(view);
   const [model, setModel] = useState("");
@@ -1651,6 +1651,7 @@ export function Dashboard() {
             <span>资产管理</span>
             <svg className="asset-entry-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg>
           </a>
+          {showLogout && <a className="asset-entry" href="/geo_monitor/logout"><span>退出登录</span></a>}
         </div>
         <div className="sidebar-foot">
           <span>最近更新</span>

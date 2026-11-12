@@ -1,0 +1,13 @@
+[Unit]
+Description=Loopback relay for the secondary GEO video authentication gateway
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ssh -NT -p 22 -i /etc/monitor-vps2-tunnel/id_ed25519 -o BatchMode=yes -o PreferredAuthentications=publickey -o GSSAPIAuthentication=no -o ConnectTimeout=10 -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -o StrictHostKeyChecking=yes -o UserKnownHostsFile=/etc/monitor-vps2-tunnel/known_hosts -L 127.0.0.1:19767:127.0.0.1:18766 root@117.55.234.72
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
