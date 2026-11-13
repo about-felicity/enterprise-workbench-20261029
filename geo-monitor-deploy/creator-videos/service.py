@@ -14,7 +14,8 @@ import threading
 import time
 from urllib.parse import parse_qs, urlsplit
 
-from collector import CHINA, CheckError, canonical_link, links_from_text, snapshot
+from collector import (CHINA, CheckError, canonical_link, links_from_text, platform_from_link,
+                       snapshot, xhs_has_token, xhs_post_id)
 from check_budget import CheckBudget
 
 
@@ -34,6 +35,8 @@ CHECK_TIMES = deque(maxlen=256)
 BROWSER_BUDGET = CheckBudget(os.environ.get("CREATOR_VIDEO_SLOT_DIR"),
                              os.environ.get("CREATOR_VIDEO_LEDGER", "creator"))
 CHECK_WORKERS = len(BROWSER_BUDGET.slots)
+PLATFORMS = ("douyin", "xiaohongshu")
+METRICS = ("likes", "comments", "favorites", "shares")
 
 
 class TransportCooldown:
@@ -60,6 +63,20 @@ class TransportCooldown:
 
 
 TRANSPORT_COOLDOWN = TransportCooldown()
+XHS_TRANSPORT_COOLDOWN = TransportCooldown()
+
+
+def transport_cooldown(platform):
+    return XHS_TRANSPORT_COOLDOWN if platform == "xiaohongshu" else TRANSPORT_COOLDOWN
+
+
+def stored_post_id(platform, post_id):
+    # The existing unique index also protects legacy Douyin IDs.
+    return f"xhs:{post_id}" if platform == "xiaohongshu" and post_id else post_id
+
+
+def public_post_id(post_id):
+    return post_id.removeprefix("xhs:") if post_id else None
 
 
 def fee_in_cents(value):
@@ -107,8 +124,8 @@ def initialize():
             );
             CREATE TABLE IF NOT EXISTS snapshots (
                 work_id INTEGER NOT NULL REFERENCES works(id) ON DELETE CASCADE,
-                day TEXT NOT NULL, captured_at TEXT NOT NULL, likes INTEGER NOT NULL,
-                comments INTEGER NOT NULL, favorites INTEGER NOT NULL, shares INTEGER NOT NULL,
+                day TEXT NOT NULL, captured_at TEXT NOT NULL, likes INTEGER,
+                comments INTEGER, favorites INTEGER, shares INTEGER, metric_labels TEXT,
                 PRIMARY KEY(work_id, day)
             );
             CREATE TABLE IF NOT EXISTS work_imports (
@@ -130,6 +147,21 @@ def initialize():
         """)
         db.execute("BEGIN IMMEDIATE")
         columns = {row["name"] for row in db.execute("PRAGMA table_info(works)")}
+        if "platform" not in columns:
+            db.execute("ALTER TABLE works ADD COLUMN platform TEXT NOT NULL DEFAULT 'douyin' CHECK (platform IN ('douyin', 'xiaohongshu'))")
+        if "metric_labels" not in {row["name"] for row in db.execute("PRAGMA table_info(snapshots)")}:
+            db.execute("""
+                CREATE TABLE snapshots_v2 (
+                    work_id INTEGER NOT NULL REFERENCES works(id) ON DELETE CASCADE,
+                    day TEXT NOT NULL, captured_at TEXT NOT NULL, likes INTEGER,
+                    comments INTEGER, favorites INTEGER, shares INTEGER, metric_labels TEXT,
+                    PRIMARY KEY(work_id, day)
+                )
+            """)
+            db.execute("INSERT INTO snapshots_v2 SELECT *, NULL FROM snapshots")
+            db.execute("DROP TABLE snapshots")
+            db.execute("ALTER TABLE snapshots_v2 RENAME TO snapshots")
+            db.execute("CREATE INDEX snapshots_by_day ON snapshots(day, work_id)")
         if "record_key" not in columns:
             db.execute("ALTER TABLE works ADD COLUMN record_key TEXT")
         db.execute("UPDATE works SET record_key = lower(hex(randomblob(16))) WHERE record_key IS NULL")
@@ -233,9 +265,11 @@ def import_records(workbook, records):
                 if existing and existing["input_url"] == link:
                     work_id = existing["work_id"]
                 if work_id is None:
-                    db.execute("INSERT OR IGNORE INTO works(input_url, entry_day, next_check_at) VALUES (?, ?, ?)",
-                               (link, record["day"], due))
-                    work_id = db.execute("SELECT id FROM works WHERE input_url = ?", (link,)).fetchone()["id"]
+                    platform = platform_from_link(link)
+                    post_id = stored_post_id(platform, xhs_post_id(link))
+                    db.execute("INSERT OR IGNORE INTO works(input_url, entry_day, next_check_at, platform, post_id) VALUES (?, ?, ?, ?, ?)",
+                               (link, record["day"], due, platform, post_id))
+                    work_id = db.execute("SELECT id FROM works WHERE input_url = ? OR post_id = ?", (link, post_id)).fetchone()["id"]
                 db.execute("""
                     UPDATE works SET entry_day = min(coalesce(entry_day, ?), ?),
                         fee_cents = coalesce(fee_cents, ?) WHERE id = ?
@@ -279,6 +313,11 @@ def failure_rates(db):
 
 
 def works(day=None):
+    def snapshot_data(item):
+        result = dict(item)
+        result["metric_labels"] = json.loads(result["metric_labels"] or "{}")
+        return result
+
     with CLAIM_LOCK:
         checking = CLAIMED.copy()
     with closing(connect()) as db:
@@ -286,16 +325,17 @@ def works(day=None):
         for record in import_rows(db):
             sources.setdefault(record["work_id"], []).append(record)
         rows = db.execute("SELECT * FROM works ORDER BY id DESC").fetchall()
-        selected = {item["work_id"]: dict(item) for item in db.execute("""
-            SELECT work_id, day, captured_at, likes, comments, favorites, shares
+        selected = {item["work_id"]: snapshot_data(item) for item in db.execute("""
+            SELECT work_id, day, captured_at, likes, comments, favorites, shares, metric_labels
             FROM snapshots WHERE day = ?
         """, (day,))} if day else {}
         return {"works": [
             {**{key: row[key] for key in row.keys() if key not in {"check_failures", "next_check_at"}},
+             "post_id": public_post_id(row["post_id"]),
              "checking": row["id"] in checking, "imports": sources.get(row["id"], []),
              "day_snapshot": selected.get(row["id"]), "history": [
-                dict(item) for item in db.execute("""
-                    SELECT day, captured_at, likes, comments, favorites, shares
+                snapshot_data(item) for item in db.execute("""
+                    SELECT day, captured_at, likes, comments, favorites, shares, metric_labels
                     FROM snapshots WHERE work_id = ? ORDER BY day DESC LIMIT 31
                 """, (row["id"],))
             ]} for row in rows
@@ -305,23 +345,28 @@ def works(day=None):
 def add(text, fee="", uploader=None):
     links = links_from_text(text)
     if not 1 <= len(links) <= 50:
-        raise ValueError("请粘贴 1–50 条抖音作品链接或完整分享文案")
+        raise ValueError("请粘贴 1–50 条抖音或小红书作品链接，也可粘贴完整分享文案")
     with closing(connect()) as db, db:
         uploaded = now()
         day = uploaded.date().isoformat()
         due = int(uploaded.timestamp())
-        if EMPLOYEE_MODE:
-            db.executemany("""
-                INSERT INTO works(input_url, entry_day, uploader, uploaded_at, next_check_at) VALUES (?, ?, ?, ?, ?)
-                ON CONFLICT(input_url) DO NOTHING
-            """, ((link, day, uploader, uploaded.isoformat(timespec="microseconds"), due) for link in links))
-            return
-        cents = fee_in_cents(fee)
-        db.executemany("""
-            INSERT INTO works(input_url, entry_day, fee_cents, next_check_at) VALUES (?, ?, ?, ?)
-            ON CONFLICT(input_url) DO UPDATE SET fee_cents = excluded.fee_cents
-            WHERE works.fee_cents IS NULL AND excluded.fee_cents IS NOT NULL
-        """, ((link, day, cents, due) for link in links))
+        fields = "uploader, uploaded_at" if EMPLOYEE_MODE else "fee_cents"
+        extra = (uploader, uploaded.isoformat(timespec="microseconds")) if EMPLOYEE_MODE else (fee_in_cents(fee),)
+        for link in links:
+            platform = platform_from_link(link)
+            post_id = stored_post_id(platform, xhs_post_id(link))
+            db.execute(f"""
+                INSERT OR IGNORE INTO works(input_url, entry_day, next_check_at, platform, post_id, {fields})
+                VALUES (?, ?, ?, ?, ?, {','.join('?' for _ in extra)})
+            """, (link, day, due, platform, post_id, *extra))
+            if not EMPLOYEE_MODE and extra[0] is not None:
+                db.execute("UPDATE works SET fee_cents = ? WHERE fee_cents IS NULL AND (input_url = ? OR post_id = ?)",
+                           (extra[0], link, post_id))
+            if post_id and xhs_has_token(link):
+                db.execute("""
+                    UPDATE works SET input_url = ?, url = ?, pending = 1, next_check_at = min(next_check_at, ?)
+                    WHERE post_id = ? AND input_url <> ?
+                """, (link, link, due, post_id, link))
 
 
 def set_fee(work_id, fee):
@@ -362,22 +407,26 @@ def delete_work(work_id, record_key, actor):
         db.execute("DELETE FROM works WHERE id = ? AND record_key = ?", (work_id, record_key))
 
 
-def next_work(excluded=()):
+def next_work(excluded=(), platforms=PLATFORMS):
+    if not platforms:
+        return None
     placeholders = ",".join("?" for _ in excluded)
+    platform_params = ",".join("?" for _ in platforms)
     exclude = f"AND id NOT IN ({placeholders})" if excluded else ""
     with closing(connect()) as db:
         return db.execute(f"""
             SELECT * FROM works
-            WHERE next_check_at <= ? {exclude}
+            WHERE next_check_at <= ? AND platform IN ({platform_params}) {exclude}
             ORDER BY next_check_at, id LIMIT 1
-        """, (int(now().timestamp()), *excluded)).fetchone()
+        """, (int(now().timestamp()), *platforms, *excluded)).fetchone()
 
 
 def claim_work():
     with CLAIM_LOCK:
-        if time.monotonic() < TRANSPORT_COOLDOWN.until or time.time() < BROWSER_BUDGET.paused_until():
-            return None
-        row = next_work(tuple(CLAIMED))
+        platforms = tuple(platform for platform in PLATFORMS
+                          if time.monotonic() >= transport_cooldown(platform).until
+                          and time.time() >= BROWSER_BUDGET.paused_until(platform))
+        row = next_work(tuple(CLAIMED), platforms)
         if row:
             CLAIMED.add(row["id"])
         return row
@@ -387,10 +436,14 @@ def save(row, result=None, error=None, availability="unknown"):
     at = now()
     with closing(connect()) as db, db:
         db.execute("BEGIN IMMEDIATE")
-        if not db.execute("SELECT 1 FROM works WHERE id = ? AND record_key = ?", (row["id"], row["record_key"])).fetchone():
+        current = db.execute("SELECT * FROM works WHERE id = ? AND record_key = ?",
+                             (row["id"], row["record_key"])).fetchone()
+        if not current or current["input_url"] != row["input_url"]:
             return
+        platform = current["platform"]
         if result:
-            other = db.execute("SELECT id, entry_day FROM works WHERE post_id = ? AND id <> ?",
+            result = {**result, "post_id": stored_post_id(platform, result["post_id"])}
+            other = db.execute("SELECT id, entry_day, url FROM works WHERE post_id = ? AND id <> ?",
                                (result["post_id"], row["id"])).fetchone()
             if other:
                 days = [day for day in (row["entry_day"], other["entry_day"]) if day]
@@ -422,6 +475,17 @@ def save(row, result=None, error=None, availability="unknown"):
                        OR (excluded.checked_at > availability_checks.checked_at
                            AND (excluded.availability <> 'unknown' OR availability_checks.availability = 'unknown'))
                 """, (other["id"], row["id"]))
+                db.execute("""
+                    INSERT INTO snapshots
+                    SELECT ?, day, captured_at, likes, comments, favorites, shares, metric_labels
+                    FROM snapshots WHERE work_id = ?
+                    ON CONFLICT(work_id, day) DO UPDATE SET captured_at = excluded.captured_at,
+                        likes = excluded.likes, comments = excluded.comments, favorites = excluded.favorites,
+                        shares = excluded.shares, metric_labels = excluded.metric_labels
+                    WHERE excluded.captured_at > snapshots.captured_at
+                """, (other["id"], row["id"]))
+                if platform == "xiaohongshu" and other["url"] and not xhs_has_token(result["url"]):
+                    result["url"] = other["url"]
                 db.execute("DELETE FROM works WHERE id = ?", (row["id"],))
                 row = other
             db.execute("""
@@ -431,15 +495,16 @@ def save(row, result=None, error=None, availability="unknown"):
                 WHERE id = :id
             """, {"creator_id": None, "creator_uid": None, "published_at": None, **result, "id": row["id"]})
             availability = "available"
-            if "likes" in result:
+            if any(key in result for key in METRICS):
                 db.execute("""
-                    INSERT INTO snapshots VALUES (:id, :day, :at, :likes, :comments, :favorites, :shares)
+                    INSERT INTO snapshots VALUES (:id, :day, :at, :likes, :comments, :favorites, :shares, :labels)
                     ON CONFLICT(work_id, day) DO UPDATE SET captured_at = excluded.captured_at,
                         likes = excluded.likes, comments = excluded.comments,
-                        favorites = excluded.favorites, shares = excluded.shares
-                """, {**result, "id": row["id"], "day": at.date().isoformat(), "at": at.isoformat(timespec="seconds")})
+                        favorites = excluded.favorites, shares = excluded.shares, metric_labels = excluded.metric_labels
+                """, {**{key: result.get(key) for key in METRICS}, "id": row["id"], "day": at.date().isoformat(),
+                      "at": at.isoformat(timespec="seconds"), "labels": json.dumps(result.get("metric_labels", {}), ensure_ascii=False)})
             else:
-                error = "作品可访问，抖音暂未返回完整互动数据"
+                error = "作品可访问，平台暂未返回互动数据"
         checked_at = at.isoformat(timespec="seconds")
         failures = 0
         if availability == "unknown":
@@ -487,7 +552,8 @@ def check_context(browser):
 
 def check_work(row, context):
     link = row["url"] or row["input_url"]
-    expected_post_id = row["post_id"]
+    platform = row["platform"]
+    expected_post_id = public_post_id(row["post_id"])
     try:
         return read_work(context, link, expected_post_id)
     except CheckError as first:
@@ -502,7 +568,7 @@ def check_work(row, context):
         if expected_post_id and first.category in {"navigation", "detail", "page_unavailable"}:
             link = row["input_url"]
         time.sleep(2)
-        if time.time() < BROWSER_BUDGET.paused_until():
+        if time.time() < BROWSER_BUDGET.paused_until(platform):
             if page_unavailable:
                 raise CheckError(f"{first}，待复核", category="detail") from first
             raise
@@ -517,19 +583,21 @@ def check_work(row, context):
 
 
 def save_check_error(row, error):
+    platform = row["platform"]
+    cooldown = transport_cooldown(platform)
     if error.availability == "unknown":
         LOG.warning("Video check unresolved for work %s: %s", row["id"], error)
     if error.category == "rate_limit":
-        BROWSER_BUDGET.pause(error.retry_after or TRANSPORT_PAUSE_SECONDS)
+        BROWSER_BUDGET.pause(error.retry_after or TRANSPORT_PAUSE_SECONDS, platform)
     elif error.category == "transport":
         with CLAIM_LOCK:
-            paused = TRANSPORT_COOLDOWN.record_failure(row["id"], time.monotonic())
+            paused = cooldown.record_failure(row["id"], time.monotonic())
         if paused:
             LOG.warning("Pausing new video checks for %s seconds after repeated connection failures",
                         TRANSPORT_PAUSE_SECONDS)
     elif error.availability == "unavailable":
         with CLAIM_LOCK:
-            TRANSPORT_COOLDOWN.record_success()
+            cooldown.record_success()
         if row["availability"] != "unavailable":
             LOG.info("Video unavailable confirmed for work %s: %s", row["id"], error)
     save(row, error=str(error), availability=error.availability)
@@ -545,7 +613,7 @@ def collect_batch(chromium):
             headless=True,
         ) as browser, check_context(browser) as context:
             for index in range(20):
-                if time.time() < BROWSER_BUDGET.paused_until():
+                if time.time() < BROWSER_BUDGET.paused_until(row["platform"]):
                     break
                 started = time.monotonic()
                 try:
@@ -555,7 +623,7 @@ def collect_batch(chromium):
                 else:
                     save(row, result=result)
                     with CLAIM_LOCK:
-                        TRANSPORT_COOLDOWN.record_success()
+                        transport_cooldown(row["platform"]).record_success()
                 with CLAIM_LOCK:
                     CLAIMED.discard(row["id"])
                     CHECK_TIMES.append(round(time.monotonic() - started, 2))

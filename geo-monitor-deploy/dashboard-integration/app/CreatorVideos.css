@@ -111,7 +111,7 @@ button.cv-stat:hover, .cv-stat[aria-pressed="true"] {
 }
 
 .cv-pagination div { display: flex; align-items: center; gap: 8px; }
-.cv-filters { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); width: 100%; gap: 8px; }
+.cv-filters { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); width: 100%; gap: 8px; }
 .cv-filters label { display: grid; gap: 4px; min-width: 0; color: var(--cv-muted); font-size: 12px; }
 .cv-filters input, .cv-filters select { width: 100%; height: 40px; }
 .cv-dayNotice { margin: 0; padding: 7px 20px; background: #eff6ff; color: var(--cv-accent); font-size: 13px; }
@@ -147,6 +147,10 @@ button.cv-stat:hover, .cv-stat[aria-pressed="true"] {
 }
 
 .cv-workCell a:hover, .cv-details a:hover { text-decoration: underline; }
+.cv-workAuthor { display: flex; align-items: center; gap: 6px; margin-top: 3px; color: var(--cv-muted); font-size: 12px; }
+.cv-workAuthor > :last-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cv-platform { flex: none; padding: 1px 6px; border-radius: 5px; background: #e8eef8; color: #314b70; font-size: 11px; font-weight: 650; }
+.cv-platform[data-platform="xiaohongshu"] { background: #fff0f2; color: #a61d49; }
 .cv-workCell > span, .cv-statusCell small, .cv-timeCell small {
   display: block;
   overflow: hidden;

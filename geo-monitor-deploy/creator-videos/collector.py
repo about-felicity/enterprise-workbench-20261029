@@ -3,12 +3,16 @@ from email.utils import parsedate_to_datetime
 import json
 import re
 import time
-from urllib.parse import urlsplit
+from urllib.parse import parse_qsl, urlencode, urlsplit
 
 
 POST = re.compile(r"/(note|video)/(\d{15,24})/?")
 SHORT = re.compile(r"/[a-zA-Z0-9_-]{3,40}/?")
 URL = re.compile(r"https://[^\s<>，。；、\]\)]+")
+XHS_HOSTS = {"www.xiaohongshu.com", "xiaohongshu.com", "m.xiaohongshu.com"}
+XHS_SHORT_HOSTS = {"xhslink.com", "www.xhslink.com"}
+XHS_POST = re.compile(r"/(?:explore|discovery/item)/([0-9a-fA-F]{24})/?")
+XHS_SHORT = re.compile(r"/(?:[a-zA-Z]/)?[a-zA-Z0-9_-]{3,40}/?")
 FIELDS = {
     "likes": "diggCount",
     "comments": "commentCount",
@@ -30,7 +34,7 @@ class CheckError(ValueError):
         self.post_id = post_id
 
 
-def rate_limit_error(response):
+def rate_limit_error(response, label="抖音"):
     value = response.headers.get("retry-after", "").strip()
     try:
         if re.fullmatch(r"[0-9]{1,9}", value):
@@ -42,7 +46,7 @@ def rate_limit_error(response):
             seconds = retry_at.timestamp() - time.time()
     except (ValueError, TypeError, OverflowError, OSError):
         seconds = 0
-    return CheckError("抖音限流，待恢复后核查", category="rate_limit", retry_after=max(60, seconds))
+    return CheckError(f"{label}限流，待恢复后核查", category="rate_limit", retry_after=max(60, seconds))
 
 
 def canonical_link(value):
@@ -57,13 +61,40 @@ def canonical_link(value):
     post = POST.fullmatch(parts.path)
     if parts.netloc == "www.douyin.com" and post:
         return f"https://www.douyin.com/{post[1]}/{post[2]}"
+    host = parts.netloc.lower()
+    if host in XHS_SHORT_HOSTS and XHS_SHORT.fullmatch(parts.path):
+        return f"https://xhslink.com/{parts.path.strip('/')}"
+    note = XHS_POST.fullmatch(parts.path)
+    if host in XHS_HOSTS and note:
+        # Keep the share credentials needed to open a note. Tracking fields
+        # are irrelevant and would give the same note multiple URL identities.
+        query = dict(parse_qsl(parts.query, max_num_fields=100)) if parts.query.count("&") < 100 else {}
+        share = {key: query[key] for key in ("xsec_token", "xsec_source") if query.get(key)}
+        path = "discovery/item" if parts.path.startswith("/discovery/") else "explore"
+        url = f"https://www.xiaohongshu.com/{path}/{note[1].lower()}"
+        return f"{url}?{urlencode(share)}" if share else url
     return None
 
 
 def links_from_text(text):
+    text = re.sub(r"\\(?=[:/.?&=_-])", "", text)
     return list(dict.fromkeys(
-        link for raw in URL.findall(text) if (link := canonical_link(raw))
+        link for raw in URL.findall(text) if (link := canonical_link(raw.rstrip(".,;!?}'\"")))
     ))
+
+
+def platform_from_link(link):
+    return "xiaohongshu" if urlsplit(link).netloc.lower() in XHS_HOSTS | XHS_SHORT_HOSTS else "douyin"
+
+
+def xhs_post_id(link):
+    parts = urlsplit(link)
+    note = XHS_POST.fullmatch(parts.path) if parts.netloc.lower() in XHS_HOSTS else None
+    return note[1].lower() if note else None
+
+
+def xhs_has_token(link):
+    return urlsplit(link).query.startswith("xsec_token=")
 
 
 def work_props(scripts, post_id):
@@ -164,6 +195,10 @@ def post_from_url(url):
 
 
 def snapshot(page, link, expected_post_id=None):
+    if platform_from_link(link) == "xiaohongshu":
+        from xiaohongshu import note_snapshot
+
+        return note_snapshot(page, link, expected_post_id)
     from playwright.sync_api import Error, TimeoutError
 
     try:

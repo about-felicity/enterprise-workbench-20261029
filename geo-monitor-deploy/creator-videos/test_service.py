@@ -12,7 +12,8 @@ from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 import service
-from collector import rate_limit_error, snapshot
+from collector import links_from_text, rate_limit_error, snapshot
+from xiaohongshu import note_from_html, note_metrics
 
 
 class VideoServiceTests(unittest.TestCase):
@@ -46,6 +47,48 @@ class VideoServiceTests(unittest.TestCase):
     def accessible_result(self):
         return {"post_id": "1234567890123456789", "url": self.row["input_url"], "title": "测试作品",
                 "author": "测试作者", "likes": 10, "comments": 3, "favorites": 2, "shares": 0}
+
+    def test_xiaohongshu_share_text_preserves_token_and_deduplicates_by_note_id(self):
+        note_id = "6acd9cc7000000001500aee2"
+        escaped = rf"笔记链接 https\://www\.xiaohongshu.com/discovery/item/{note_id}?source=webshare&xsec_token=token%2Bvalue=&xsec_source=pc_share。"
+        note_url = f"https://www.xiaohongshu.com/discovery/item/{note_id}?xsec_token=token%2Bvalue%3D&xsec_source=pc_share"
+        self.assertEqual(links_from_text(escaped), [note_url])
+        service.add(escaped)
+        service.add(f"https://www.xiaohongshu.com/explore/{note_id}", "1.50")
+        note, douyin = service.works()["works"]
+        self.assertEqual((note["platform"], note["post_id"], note["input_url"], note["fee_cents"]),
+                         ("xiaohongshu", note_id, note_url, 150))
+        self.assertEqual(douyin["platform"], "douyin")
+        self.assertEqual(links_from_text("https://xhslink.com/a/AbCd https://www.xiaohongshu.com.evil/explore/" + note_id),
+                         ["https://xhslink.com/a/AbCd"])
+
+    def test_xiaohongshu_snapshot_preserves_rounded_labels_and_nullable_counts(self):
+        note_id = "6acd9cc7000000001500aee2"
+        service.add(f"https://www.xiaohongshu.com/explore/{note_id}")
+        row = self.work()
+        raw = {"noteId": note_id, "type": "normal", "desc": "undefined inside a string",
+               "user": {"userId": "someone"}, "interactInfo": {"likedCount": "2.5万", "commentCount": "0", "collectedCount": "2.6万"}}
+        payload = json.dumps({"note": {"noteDetailMap": {note_id: {"note": raw}}}}, ensure_ascii=False)
+        html = '<script>window.__INITIAL_STATE__=' + payload[:-1] + ',"optional":undefined}</script>'
+        self.assertEqual(note_from_html(html, note_id), raw)
+        self.assertIsNone(note_from_html(html, "0" * 24))
+        at = datetime.fromisoformat("2026-11-11T10:00:00+08:00")
+        with patch.object(service, "now", return_value=at):
+            service.save(row, result={"post_id": note_id, "url": row["input_url"], "author": "作者", "title": "笔记", **note_metrics(raw)})
+        note = service.works(day=at.date().isoformat())["works"][0]
+        data = note["day_snapshot"]
+        self.assertEqual((data["likes"], data["favorites"], data["comments"], data["shares"]), (25000, 26000, 0, None))
+        self.assertEqual(data["metric_labels"], {"likes": "2.5万", "favorites": "2.6万"})
+        self.assertEqual(note["availability"], "available")
+        self.assertEqual(self.work()["next_check_at"], int((at + timedelta(minutes=15)).timestamp()))
+
+    def test_xiaohongshu_cooldown_does_not_block_douyin(self):
+        service.add("https://xhslink.com/a/AbCd")
+        budget = service.CheckBudget()
+        with patch.object(service, "BROWSER_BUDGET", budget):
+            budget.pause(60, "xiaohongshu")
+            self.assertEqual(service.claim_work()["id"], self.row["id"])
+            self.assertIsNone(service.claim_work())
 
     def test_transient_failure_preserves_last_verified_state_and_daily_result(self):
         confirmed = datetime.fromisoformat("2026-11-11T11:30:00+08:00")
@@ -293,7 +336,7 @@ class VideoServiceTests(unittest.TestCase):
 
     def test_delete_archives_and_removes_linked_records(self):
         with closing(service.connect()) as db, db:
-            db.execute("INSERT INTO snapshots VALUES (?, '2026-11-11', 'now', 10, 3, 2, 0)", (self.row["id"],))
+            db.execute("INSERT INTO snapshots(work_id, day, captured_at, likes, comments, favorites, shares) VALUES (?, '2026-11-11', 'now', 10, 3, 2, 0)", (self.row["id"],))
             db.execute("INSERT INTO availability_checks VALUES (?, '2026-11-11', 'now', 'available')", (self.row["id"],))
             db.execute("INSERT INTO work_imports VALUES ('test.xlsx', 'sheet', 1, '2026-11-11', ?, ?, '{}')", (self.row["input_url"], self.row["id"]))
         self.delete()

@@ -7,10 +7,11 @@ import { dashboardBasePath } from "./dashboardPaths";
 type Snapshot = {
   day: string;
   captured_at: string;
-  likes: number;
-  comments: number;
-  favorites: number;
-  shares: number;
+  likes: number | null;
+  comments: number | null;
+  favorites: number | null;
+  shares: number | null;
+  metric_labels?: Partial<Record<keyof typeof metricLabels, string>>;
 };
 
 type SourceRecord = {
@@ -44,6 +45,7 @@ type Work = {
   id: number;
   record_key: string;
   input_url: string;
+  platform?: Platform;
   url: string | null;
   title: string | null;
   author: string | null;
@@ -70,6 +72,8 @@ type WriteRequest = { text: string; fee: string } | { refresh: number } | { fee_
 type FeeFeedback = { id: number; message: string; error?: boolean };
 
 const metricLabels = { likes: "点赞", comments: "评论", favorites: "收藏", shares: "转发" } as const;
+const platformLabels = { douyin: "抖音", xiaohongshu: "小红书" } as const;
+type Platform = keyof typeof platformLabels;
 const feePattern = "[0-9]{1,7}([.][0-9]{1,2})?";
 const feeFormat = new Intl.NumberFormat("zh-CN", { style: "currency", currency: "CNY" });
 const pageSize = 20;
@@ -93,7 +97,7 @@ function metrics(snapshot?: Snapshot, source?: SourceRecord) {
   const result = values(snapshot, source);
   return (Object.keys(metricLabels) as (keyof typeof metricLabels)[]).map((key) => (
     <td className="cv-metric" key={key} data-label={metricLabels[key]}>
-      {result[key]?.toLocaleString("zh-CN") ?? "—"}
+      {snapshot?.metric_labels?.[key] ?? result[key]?.toLocaleString("zh-CN") ?? "—"}
     </td>
   ));
 }
@@ -131,6 +135,7 @@ export default function CreatorVideos({ ledger = "creator-videos" }: { ledger?: 
   const [unlinked, setUnlinked] = useState<SourceRecord[]>([]);
   const [failureRates, setFailureRates] = useState<Record<RateMode, DailyRate[]>>({ entry: [], check: [] });
   const [filter, setFilter] = useState<Availability | "">("");
+  const [platformFilter, setPlatformFilter] = useState<Platform | "">("");
   const [search, setSearch] = useState("");
   const [creatorId, setCreatorId] = useState("");
   const [entryDay, setEntryDay] = useState("");
@@ -224,6 +229,7 @@ export default function CreatorVideos({ ledger = "creator-videos" }: { ledger?: 
   const idTerm = creatorId.trim().toLocaleLowerCase();
   const loadingDay = loadedDay !== dataDay;
   const visible = (loadingDay ? [] : works)?.filter((work) => (!filter || (work.availability ?? "unchecked") === filter) &&
+    (!platformFilter || (work.platform ?? "douyin") === platformFilter) &&
     (!entryDay || work.entry_day === entryDay) &&
     (!dataDay || work.day_snapshot?.day === dataDay || work.imports.some((record) => record.day === dataDay)) &&
     (!idTerm || accountIds(work).some((id) => id.toLocaleLowerCase().includes(idTerm))) &&
@@ -259,9 +265,9 @@ export default function CreatorVideos({ ledger = "creator-videos" }: { ledger?: 
           {employee && uploader && <span>上传账号 <strong>{uploader}</strong></span>}
         </div>
         <div className="cv-formInput">
-          <label className="cv-srOnly" htmlFor="creator-video-links">抖音分享文案或作品链接</label>
+          <label className="cv-srOnly" htmlFor="creator-video-links">抖音或小红书分享文案及作品链接</label>
           <textarea id="creator-video-links" rows={2} value={text} maxLength={10000}
-            placeholder="粘贴分享文案或链接，多条可分行粘贴"
+            placeholder="粘贴抖音或小红书分享文案或链接，多条可分行粘贴"
             onChange={(event) => setText(event.target.value)} />
           {!employee && <label className="cv-feeField">每条应付费用（元）
             <input inputMode="decimal" pattern={feePattern} maxLength={10} placeholder="选填"
@@ -280,8 +286,12 @@ export default function CreatorVideos({ ledger = "creator-videos" }: { ledger?: 
           <div className="cv-filters">
             <label>搜索作品或{employee ? "上传人" : authorLabel}<input type="search" placeholder={`作品标题、${employee ? "上传人" : `${authorLabel}名`}`}
               value={search} onChange={(event) => { setSearch(event.target.value); setPage(1); }} /></label>
-            <label>{authorLabel} ID / 抖音号<input type="search" placeholder="输入 ID 或抖音号" value={creatorId}
+            <label>{authorLabel} ID / 平台账号<input type="search" placeholder="输入 ID 或平台账号" value={creatorId}
               onChange={(event) => { setCreatorId(event.target.value); setPage(1); }} /></label>
+            <label>平台<select aria-label="平台" value={platformFilter} onChange={(event) => { setPlatformFilter(event.target.value as Platform | ""); setPage(1); }}>
+              <option value="">全部平台</option>
+              {Object.entries(platformLabels).map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+            </select></label>
             <label>录入日期<input type="date" value={entryDay} onChange={(event) => { setEntryDay(event.target.value); setPage(1); }} /></label>
             <label>数据日期<input type="date" value={dataDay} onChange={(event) => { setDataDay(event.target.value); setPage(1); }} /></label>
             <label>作品状态<select value={filter} onChange={(event) => changeFilter(event.target.value as Availability | "")}>
@@ -311,6 +321,8 @@ export default function CreatorVideos({ ledger = "creator-videos" }: { ledger?: 
                   const statusLabel = checkFailed && (status === "available" || status === "unavailable")
                     ? `上次${availabilityLabels[status]}` : availabilityLabels[status];
                   const author = work.author || work.imports[0]?.source_data["用户名"];
+                  const platform = work.platform ?? "douyin";
+                  const platformLabel = platformLabels[platform];
                   const timestamp = work.published_at;
                   const open = selected === work.id;
                   return (
@@ -318,9 +330,12 @@ export default function CreatorVideos({ ledger = "creator-videos" }: { ledger?: 
                       <tr className="cv-workRow" data-open={open}>
                         <td className="cv-workCell">
                           <a href={work.url || work.input_url} target="_blank" rel="noreferrer" title={work.title || undefined}>
-                            {work.title || (author ? `${author}的抖音作品` : "抖音作品")}
+                            {work.title || (author ? `${author}的${platformLabel}作品` : `${platformLabel}作品`)}
                           </a>
-                          <span>{author || `${authorLabel}待识别`}</span>
+                          <div className="cv-workAuthor">
+                            <span className="cv-platform" data-platform={platform}>{platformLabel}</span>
+                            <span>{author || `${authorLabel}待识别`}</span>
+                          </div>
                           <span>{work.entry_day ? `录入 ${work.entry_day}` : "录入日期不详"}{accountIds(work)[0] && ` · ID ${accountIds(work)[0]}`}</span>
                         </td>
                         <td className="cv-statusCell">
@@ -380,7 +395,7 @@ export default function CreatorVideos({ ledger = "creator-videos" }: { ledger?: 
               <a href={work.url || work.input_url} target="_blank" rel="noreferrer">
                 {work.title || work.author || work.imports[0]?.source_data["用户名"] || work.input_url}
               </a>
-              <small>{work.last_check_status === "unknown" ? "上次确认不可用，复核失败" : work.last_error || "抖音作品不可访问"}{work.entry_day && ` · 录入 ${work.entry_day}`}</small>
+              <small>{work.last_check_status === "unknown" ? "上次确认不可用，复核失败" : work.last_error || "作品不可访问"}{work.entry_day && ` · 录入 ${work.entry_day}`}</small>
             </div>
           ))}
           {!!unlinked.length && <SourceRecords title={`缺少可核查链接（${unlinked.length} 条）`} records={unlinked} />}
@@ -426,6 +441,7 @@ function WorkDetails({ work, employee, busy, authorLabel, feeLabel, feeFeedback,
   feeFeedback: FeeFeedback | null; onFeeSave: (fee: string) => void;
 }) {
   const capturedAt = work.history[0]?.captured_at;
+  const platform = work.platform ?? "douyin";
   return (
     <section className="cv-details" aria-label="作品详情">
       <h3>作品详情</h3>
@@ -434,11 +450,11 @@ function WorkDetails({ work, employee, busy, authorLabel, feeLabel, feeFeedback,
         {work.entry_day && <span>录入日期 {work.entry_day}</span>}
         {capturedAt && <span>最近采集 {capturedAt.slice(0, 16).replace("T", " ")}</span>}
         {employee && work.uploader && <span>上传人 {work.uploader}</span>}
-        {!!accountIds(work).length && <span>{authorLabel} ID / 抖音号 {accountIds(work).join(" / ")}</span>}
+        {!!accountIds(work).length && <span>{authorLabel} ID / {platform === "douyin" ? "抖音号" : "小红书号"} {accountIds(work).join(" / ")}</span>}
         {work.last_check_status === "unknown" && work.last_confirmed_at && <span>上次确认 {work.last_confirmed_at.slice(0, 16).replace("T", " ")}</span>}
         {work.last_attempt && <span>{work.last_check_status === "unknown" ? "核查失败" : "核查时间"} {work.last_attempt.slice(0, 16).replace("T", " ")}</span>}
         {work.last_error && <span>{work.last_error}</span>}
-        <a href={work.url || work.input_url} target="_blank" rel="noreferrer">打开抖音 ↗</a>
+        <a href={work.url || work.input_url} target="_blank" rel="noreferrer">打开{platformLabels[platform]} ↗</a>
       </p>
       {!employee && <form className="cv-feeEditor" onSubmit={(event) => {
         event.preventDefault();
