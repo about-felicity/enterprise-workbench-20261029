@@ -19,4 +19,11 @@ class Formats(unittest.TestCase):
   self.assertIn('draft_markdown_note',x)
   for value in [dict(x,unexpected=True),dict(x,draft_markdown_note={}),dict(x,_note='extra')]:
    self.assertEqual(normalize_answer(value),value)
+ def test_writer_discards_only_a_text_comment_after_a_titled_body(self):
+  value={'draft_markdown':'# 完整标题\n\n完整正文。','_comment':'internal'}
+  self.assertEqual(normalize_answer(value),{'draft_markdown':value['draft_markdown']})
+  self.assertIn('_comment',value)
+  for malformed in [dict(value,_comment={}),dict(value,unexpected=True),
+                    dict(value,draft_markdown='# 完整标题'),dict(value,draft_markdown='# \n正文')]:
+   self.assertEqual(normalize_answer(malformed),malformed)
 if __name__=='__main__':unittest.main()

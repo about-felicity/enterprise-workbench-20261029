@@ -55,6 +55,13 @@ def output_limit(client, prompt, directory, meta, system_prompt=None):
 
 def normalize_answer(answer):
     if isinstance(answer, dict):
+        if set(answer) == {'draft_markdown', '_comment'}:
+            draft = answer['draft_markdown']
+            if isinstance(draft, str) and isinstance(answer['_comment'], str):
+                heading, _, body = draft.lstrip().partition('\n')
+                if heading.startswith('# ') and heading[2:].strip() and body.strip():
+                    return {'draft_markdown': draft}
+            return answer
         for note in ('_note', 'draft_markdown_note'):
             if set(answer) == {'draft_markdown', note} and isinstance(answer[note], str):
                 return {'draft_markdown': answer['draft_markdown']}

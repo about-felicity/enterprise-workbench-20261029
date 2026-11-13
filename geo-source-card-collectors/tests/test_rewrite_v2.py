@@ -33,6 +33,38 @@ def verdict(passed=True):
 
 
 class MaterialWhitespaceTests(unittest.TestCase):
+    def test_research_stages_share_full_reference_prefix_and_pin_wire_format(self):
+        source = REFERENCE + '\n\n原文示例："引用"\\路径'
+        with tempfile.TemporaryDirectory() as tmp:
+            directory = Path(tmp)
+            parser = directory / 'parser'
+            review = directory / 'review'
+            parse_prompt = structure_parser.parser_prompt(source, parser)
+            review_prompt = structure_parser.review_prompt(source, SKELETON, review)
+            prefix = structure_parser.source_prefix(source)
+            self.assertEqual(json.loads(prefix.split('\n')[1]), source)
+            self.assertEqual(parse_prompt, prefix + structure_parser.PROMPT)
+            self.assertTrue(review_prompt.startswith(prefix + structure_parser.REVIEW_PROMPT))
+            self.assertEqual(json.loads(review_prompt.rsplit('\n', 1)[1]), SKELETON)
+            for stage in (parser, review):
+                atomic_json(stage / 'api_state.json', {'state': 'REQUESTING'})
+            self.assertEqual(structure_parser.parser_prompt(source, parser), parse_prompt)
+            self.assertEqual(structure_parser.review_prompt(source, SKELETON, review), review_prompt)
+
+    def test_research_replay_keeps_both_historical_review_formats(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            directory = Path(tmp)
+            atomic_json(directory / 'api_state.json', {'state': 'REQUESTING'})
+            self.assertEqual(structure_parser.parser_prompt(REFERENCE, directory),
+                             structure_parser.PROMPT + '\n原文：\n' + REFERENCE)
+            data = {'reference': REFERENCE, 'proposed_skeleton': SKELETON}
+            self.assertEqual(structure_parser.review_prompt(REFERENCE, SKELETON, directory),
+                             structure_parser.REVIEW_PROMPT + json.dumps(data, ensure_ascii=False))
+            atomic_json(directory / 'review_prompt_format.json', {'protocol': 'compact-json-v1'})
+            self.assertEqual(structure_parser.review_prompt(REFERENCE, SKELETON, directory),
+                             structure_parser.REVIEW_PROMPT + json.dumps(data, ensure_ascii=False, separators=(',', ':')))
+            self.assertFalse((directory / 'source_prompt_format.json').exists())
+
     def test_source_once_projection_keeps_full_original_and_additional_facts(self):
         from geo_source_cards.rewrite_v2.common import evidence_product
         material = {'raw_product': {'name':'甲','raw_source_text':'规格5ml\n价格369元',
