@@ -40,6 +40,10 @@ def note_metrics(note):
         value = stats.get(key)
         if type(value) is int and 0 <= value < 2**53:
             result[name] = value
+        elif value == "":
+            # The public note payload uses an empty string for an undisplayed
+            # count. A missing field or failed note read has no such evidence.
+            result[name] = 0
         elif isinstance(value, str) and (match := COUNT.fullmatch(value.strip().replace(",", ""))):
             number, unit, plus = match.groups()
             count = Decimal(number) * UNITS[unit.lower()]

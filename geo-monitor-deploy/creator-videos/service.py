@@ -495,6 +495,8 @@ def save(row, result=None, error=None, availability="unknown"):
                 WHERE id = :id
             """, {"creator_id": None, "creator_uid": None, "published_at": None, **result, "id": row["id"]})
             availability = "available"
+            missing_metrics = [label for key, label in zip(METRICS, ("点赞", "评论", "收藏", "转发"))
+                               if key not in result]
             if any(key in result for key in METRICS):
                 db.execute("""
                     INSERT INTO snapshots VALUES (:id, :day, :at, :likes, :comments, :favorites, :shares, :labels)
@@ -505,6 +507,8 @@ def save(row, result=None, error=None, availability="unknown"):
                       "at": at.isoformat(timespec="seconds"), "labels": json.dumps(result.get("metric_labels", {}), ensure_ascii=False)})
             else:
                 error = "作品可访问，平台暂未返回互动数据"
+            if platform == "xiaohongshu" and 0 < len(missing_metrics) < len(METRICS):
+                error = f"小红书暂未返回{'、'.join(missing_metrics)}数据"
         checked_at = at.isoformat(timespec="seconds")
         failures = 0
         if availability == "unknown":

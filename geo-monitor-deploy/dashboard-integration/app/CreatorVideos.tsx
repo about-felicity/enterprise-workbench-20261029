@@ -96,7 +96,8 @@ function values(snapshot?: Snapshot, source?: SourceRecord) {
 function metrics(snapshot?: Snapshot, source?: SourceRecord) {
   const result = values(snapshot, source);
   return (Object.keys(metricLabels) as (keyof typeof metricLabels)[]).map((key) => (
-    <td className="cv-metric" key={key} data-label={metricLabels[key]}>
+    <td className="cv-metric" key={key} data-label={metricLabels[key]}
+      title={result[key] == null ? `暂无${metricLabels[key]}数据` : undefined}>
       {snapshot?.metric_labels?.[key] ?? result[key]?.toLocaleString("zh-CN") ?? "—"}
     </td>
   ));
@@ -323,6 +324,8 @@ export default function CreatorVideos({ ledger = "creator-videos" }: { ledger?: 
                   const author = work.author || work.imports[0]?.source_data["用户名"];
                   const platform = work.platform ?? "douyin";
                   const platformLabel = platformLabels[platform];
+                  const unavailableMetrics = platform === "xiaohongshu" && status === "available" && !checkFailed &&
+                    !dataDay && work.last_error?.includes("未返回");
                   const timestamp = work.published_at;
                   const open = selected === work.id;
                   return (
@@ -340,7 +343,8 @@ export default function CreatorVideos({ ledger = "creator-videos" }: { ledger?: 
                         </td>
                         <td className="cv-statusCell">
                           <span className="cv-badge" data-tone={status}>{statusLabel}</span>
-                          {work.checking ? <small>正在核查</small> : !!work.pending ? <small>等待核查</small> :
+                          {work.checking ? <small>正在核查</small> : !!work.pending ? <small>等待核查</small> : unavailableMetrics ?
+                            <small title={work.last_error ?? undefined}>互动数据未完整返回</small> :
                             work.last_attempt && <small title={checkFailed && work.last_error ? work.last_error : work.last_attempt.slice(0, 16).replace("T", " ")}>
                               {checkFailed ? "核查失败" : "核查"} {work.last_attempt.slice(5, 16).replace("T", " ")}
                             </small>}

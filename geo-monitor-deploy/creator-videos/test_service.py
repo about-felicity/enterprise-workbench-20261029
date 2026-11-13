@@ -90,6 +90,13 @@ class VideoServiceTests(unittest.TestCase):
             self.assertEqual(service.claim_work()["id"], self.row["id"])
             self.assertIsNone(service.claim_work())
 
+    def test_xiaohongshu_uses_zero_for_explicit_empty_counts_only(self):
+        self.assertEqual(note_metrics({"interactInfo": {"likedCount": "1", "commentCount": "",
+                                                       "collectedCount": "", "shareCount": ""}}),
+                         {"likes": 1, "comments": 0, "favorites": 0, "shares": 0})
+        self.assertEqual(note_metrics({"interactInfo": {"likedCount": "", "shareCount": None}}), {"likes": 0})
+        self.assertEqual(note_metrics({}), {})
+
     def test_transient_failure_preserves_last_verified_state_and_daily_result(self):
         confirmed = datetime.fromisoformat("2026-11-11T11:30:00+08:00")
         failed = confirmed + timedelta(minutes=15)
