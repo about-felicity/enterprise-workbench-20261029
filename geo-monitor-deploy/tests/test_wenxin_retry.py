@@ -2,7 +2,7 @@ import sys,unittest,tempfile,sqlite3,time,json,os
 from unittest.mock import patch,Mock
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from wenxin_retry import due,failed,clear_verified,browser_lock
+from wenxin_retry import due,failed,clear_verified,browser_lock,retry_state
 class RetryTests(unittest.TestCase):
  def test_first_probe_due(self):self.assertTrue(due({},100))
  def test_browser_lock_prevents_parallel_profile_use_and_releases(self):
@@ -21,6 +21,17 @@ class RetryTests(unittest.TestCase):
  def test_increasing_cooldown(self):
   s=failed({},100,'read_error');self.assertEqual(s['next_at'],1000)
   s=failed(s,1000,'read_error');self.assertEqual(s['next_at'],2800)
+ def test_retry_budget_is_preserved_for_current_batch_and_renewed_for_next_batch(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   path=Path(tmp)/'retry.json'
+   path.write_text(json.dumps({'attempts':3,'at':120,'next_at':900}))
+   current={'state':path,'batch':'today','created_at':100}
+   self.assertFalse(due(retry_state(current),2000))
+   path.write_text(json.dumps(failed(retry_state(current),2000,'verification_required')))
+   self.assertEqual(retry_state(current)['batch'],'today')
+   tomorrow={**current,'batch':'tomorrow','created_at':3000}
+   self.assertEqual(retry_state(tomorrow),{'batch':'tomorrow'})
+   self.assertTrue(due(retry_state(tomorrow),3000))
  def test_no_clear_for_challenge_or_stale_proof(self):
   for proof in ({'status':'verification_required','at':time.time()},{'status':'ready','at':0}):
    with self.assertRaises(AssertionError):clear_verified({},proof)

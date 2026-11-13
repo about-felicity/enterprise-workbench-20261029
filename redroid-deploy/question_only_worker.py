@@ -58,6 +58,12 @@ def original_readback_limit(model, task, observed):
     return 900
 
 
+def yuanbao_readback_window(previous, rows, now):
+    originals={row['task_id']:[row.get('prepared_at'),row.get('request_id')] for row in rows}
+    attempts=min(previous.get('attempts',0)+1,4) if previous.get('originals')==originals else 1
+    return {'originals':originals,'attempts':attempts,'next_at':now+(300,900,1800,3600)[attempts-1]}
+
+
 def defer_bound_original(root, reader, task):
     request_id=task.get('request_id')
     if not request_id:
@@ -129,6 +135,9 @@ def run_locked(config,root,capture_limit):
         with queue.db:queue.event(task_id,name,detail)
     read_failures=0
     attention_started={}
+    previous_health=root/'bridge_health.json'
+    retry_window=(json.loads(previous_health.read_text()).get('original_readback',{})
+                  if config['model']=='yuanbao' and previous_health.exists() else {})
     progress={'phase':'starting','changed_at':time.time()}
     def phase(name,task=None,**details):
         nonlocal progress
@@ -140,6 +149,7 @@ def run_locked(config,root,capture_limit):
         health.update(progress=progress,time=time.time(),heartbeat_expires_at=max(time.time()+150,details.get('next_at',0)+30))
         atomic_json(root/'bridge_health.json',health)
     health={'batch':config['batch'],'planned':len(config['questions'])*config['rounds'],'prompt_mode':'question_only','model':config['model']}
+    if retry_window:health['original_readback']=retry_window
     terminal='stopped'
     try:
         while True:
@@ -201,9 +211,12 @@ def run_locked(config,root,capture_limit):
                 started=attention_started.setdefault(task['task_id'],time.time())
                 if time.time()-started>=120:
                     terminal='needs_attention'
-                    health['next_readback_at']=time.time()+300
+                    now=time.time()
+                    if config['model']=='yuanbao':
+                        health['original_readback']=yuanbao_readback_window(retry_window,attention_rows,now)
+                    health['next_readback_at']=health.get('original_readback',{}).get('next_at',now+300)
                     phase('original_readback_cooldown',task,next_at=health['next_readback_at'],
-                          reason='bound_original_still_incomplete')
+                          reason='original_request_still_unresolved')
                     return 0
             if (paused or STOP) and task['state']=='pending':
                 terminal='maintenance_paused' if paused else 'stopped';return 0
@@ -280,9 +293,12 @@ def run_locked(config,root,capture_limit):
                     if recovery:
                         health['status']='running_recovery';phase(recovery.pop('phase'),task,**recovery)
                         wait_seconds(3);continue
+                if (config['model']=='yuanbao' and observed.get('status')=='absent'
+                        and (task['state']=='prepared' or uncertain_quarantine_valid(root,queue,task))):
                     from unbound_history import recover as recover_unbound
                     recovery=recover_unbound(root,task,observed,android,reader.close,recovery_event,
-                        paused=paused and pause_blocks_readback(marker),stopping=STOP)
+                        paused=paused and pause_blocks_readback(marker),stopping=STOP,
+                        quarantined=task['state']=='needs_attention')
                     if recovery:
                         health['status']='running_recovery';phase(recovery.pop('phase'),task,**recovery)
                         wait_seconds(3);continue

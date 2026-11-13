@@ -25,16 +25,23 @@ def due(state,now):
  return state.get('attempts',0)<LIMIT and now>=state.get('next_at',0)
 def failed(state,now,status):
  n=state.get('attempts',0)+1
- return {'attempts':n,'next_at':now+DELAYS[min(n-1,2)],'status':status if n<LIMIT else 'needs_attention','last_status':status,'at':now}
+ return {**state,'attempts':n,'next_at':now+DELAYS[min(n-1,2)],'status':status if n<LIMIT else 'needs_attention','last_status':status,'at':now}
+def retry_state(item):
+ state=read(item['state']);batch=item.get('batch')
+ if not batch or state.get('batch')==batch:return state
+ # Upgrade legacy state in place only when it came from this blocked batch.
+ if not state.get('batch') and state.get('at',0)>=item['created_at']:
+  return {**state,'batch':batch}
+ return {'batch':batch}
 def candidates():
  manifests=[]
  for p in (GEO/'batches').glob('*/manifest.json'):
   v=read(p)
   if v.get('model')=='wenxin_card':manifests.append((v.get('created_at',0),p.parent))
  if manifests:
-  root=max(manifests)[1]
+  created_at,root=max(manifests)
   if read(root/'bridge_health.json').get('status')=='waiting_verification' and not (root/'pause.json').exists():
-   yield {'name':'GEO文心','runtimes':[root/'collector'],'blocks':[],'lock':GEO/'search_browser.lock','state':GEO/'profiles/search/wenxin_card/verification_retry.json','service':'geo-web@'+root.name+'.service','pause':root/'pause.json','settings':None}
+   yield {'name':'GEO文心','runtimes':[root/'collector'],'blocks':[],'lock':GEO/'search_browser.lock','state':GEO/'profiles/search/wenxin_card/verification_retry.json','service':'geo-web@'+root.name+'.service','pause':root/'pause.json','settings':None,'batch':root.name,'created_at':created_at}
  for root in (STUDIO/'capture').glob('plan-*'):
   cfg=read(root/'settings.json');plan=read(STUDIO/'plans'/(root.name+'.json'))
   if not cfg.get('enabled') or cfg.get('paused') or plan.get('deleted_at') or not plan.get('enabled'):continue
@@ -74,7 +81,7 @@ def clear_verified(item,proof):
 def run():
  results=[]
  for item in candidates():
-  state=read(item['state']);now=time.time()
+  state=retry_state(item);now=time.time()
   if not due(state,now):
    results.append({'name':item['name'],**state});continue
   target=probe_target(item)

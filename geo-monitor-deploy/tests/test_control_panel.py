@@ -9,6 +9,7 @@ from contextlib import closing
 from pathlib import Path
 import sqlite3
 import tempfile
+import time
 import unittest
 import uuid
 from http.server import ThreadingHTTPServer
@@ -55,6 +56,16 @@ class ControlTests(unittest.TestCase):
         memory=self.current('doubao2')['current']['memory']
         self.assertEqual(memory['java_alloc_kib'],204800);self.assertEqual(memory['pending'],'java_fraction')
         self.assertNotIn('raw_private_data',memory)
+
+    def test_internal_native_readback_does_not_display_as_operator_pause(self):
+        with self.control.connect() as db:job=self.control.current(db,'yuanbao')
+        atomic(Path(job['health']),{'status':'running_recovery','time':time.time(),'heartbeat_expires_at':time.time()+60})
+        marker=self.control.marker(job)
+        self.system.states[job['service']]='active'
+        atomic(marker,{'source':'daily_tasks','action':'apply','allow_original_readback':True})
+        self.assertEqual(self.control.snapshot(job)['state'],'running_recovery')
+        atomic(marker,{'source':'operator','action':'pause'})
+        self.assertEqual(self.control.snapshot(job)['state'],'pausing')
 
     def test_delivery_diagnostics_are_actionable_and_redacted(self):
         c=self.current('wenxin_card')['current']

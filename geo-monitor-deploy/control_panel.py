@@ -176,8 +176,12 @@ class Controller:
             health=merge_health(health,self.batch_root(job))
         service=self.system.state(job['service'])
         state=health.get('status','not_started')
-        marker=self.marker(job).exists()
-        if marker and state not in {'waiting_login','waiting_verification'}:
+        marker_path=self.marker(job)
+        marker=read(marker_path) if job_kind(job)=='native' and marker_path.exists() else {}
+        readback=(not job['stop_requested'] and marker.get('source')=='daily_tasks'
+                  and marker.get('action')=='apply' and marker.get('allow_original_readback') is True
+                  and state in {'running_recovery','needs_attention'})
+        if marker_path.exists() and not readback and state not in {'waiting_login','waiting_verification'}:
             state=('stopping' if job['stop_requested'] else 'pausing') if service in BUSY else ('stopped' if job['stop_requested'] else 'paused')
         elif service in BUSY and state in {'paused','stopped','not_started'}:
             state='starting'

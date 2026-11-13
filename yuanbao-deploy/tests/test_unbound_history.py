@@ -2,7 +2,7 @@ import json,sqlite3,sys,tempfile,unittest
 from pathlib import Path
 from unittest.mock import Mock,patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from unbound_history import candidate,recover,send_proof
+from unbound_history import candidate,recover,send_proof,visible_history_choice
 
 class RecoveryTests(unittest.TestCase):
  def setUp(self):
@@ -34,6 +34,27 @@ class RecoveryTests(unittest.TestCase):
  def test_bound_request_retry_or_other_task_state_never_uses_unbound_recovery(self):
   for changes in ({'request_id':'trace'},{'capture_retries':1},{'state':'pending'}):self.assertIsNone(send_proof(self.root,{**self.task,**changes}))
   (self.root/'task.binding.json').write_text('{}');self.assertIsNone(send_proof(self.root,self.task))
+ def test_quarantined_original_can_only_reopen_history_when_explicitly_authorized(self):
+  task={**self.task,'state':'needs_attention'}
+  self.assertIsNone(send_proof(self.root,task))
+  self.assertIsNotNone(send_proof(self.root,task,quarantined=True))
+  android=self.device()
+  result=recover(self.root,task,{'status':'absent'},android,Mock(),Mock(),quarantined=True,
+                 index=lambda:[self.rows],clock=lambda:130,sleep=lambda _:None)
+  self.assertEqual(result['phase'],'reloading_original_history')
+  self.assertEqual(android.tap.call_count,2)
+  self.assertFalse((self.root/'task.binding.json').exists())
+ def test_history_scroll_requires_contiguous_overlapping_rows(self):
+  rows=[{'title':str(i)} for i in range(12)]
+  def drawer(start):
+   return '<node scrollable="true" bounds="[0,0][400,600]">'+''.join(f'<node text="{i}"/>' for i in range(start,start+5))+'</node>'
+  choice=Mock(count=1)
+  device=Mock(return_value=choice)
+  device.dump_hierarchy.side_effect=[drawer(0),drawer(3),drawer(6)]
+  self.assertIs(visible_history_choice(device,{'rows':rows,'title':'10'},allow_scroll=True,sleep=lambda _:None),choice)
+  self.assertEqual(device.swipe.call_count,2)
+  device.dump_hierarchy.side_effect=[drawer(0),drawer(5)]
+  self.assertIsNone(visible_history_choice(device,{'rows':rows,'title':'10'},allow_scroll=True,sleep=lambda _:None))
  def test_normal_slow_response_or_relaunch_before_send_never_navigates(self):
   with sqlite3.connect(self.root/'tasks.sqlite') as db:db.execute("update events set time=90 where event='native_app_relaunch_for_readback'")
   self.assertIsNone(send_proof(self.root,self.task))

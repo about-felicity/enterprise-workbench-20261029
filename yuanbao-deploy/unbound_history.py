@@ -4,7 +4,7 @@ History title/time authorize read-only navigation, not answer acceptance. The
 normal reader must still prove the exact question, first pair and creation time.
 """
 from contextlib import closing
-import json,sqlite3,time,xml.etree.ElementTree as ET
+import json,re,sqlite3,time,xml.etree.ElementTree as ET
 from pathlib import Path
 from native_storage import app_directory,open_readonly
 
@@ -18,8 +18,9 @@ def history_index():
             groups.append(rows)
     return groups
 
-def send_proof(root,task):
-    if task.get('state')!='prepared' or task.get('request_id') or task.get('capture_retries',0):return None
+def send_proof(root,task,*,quarantined=False):
+    allowed={'prepared','needs_attention'} if quarantined else {'prepared'}
+    if task.get('state') not in allowed or task.get('request_id') or task.get('capture_retries',0):return None
     if any((root/(task['task_id']+'.'+suffix+'.json')).exists() for suffix in ('binding','native')):return None
     before=root/(task['task_id']+'.pre-send.json')
     if not before.exists():return None
@@ -44,10 +45,44 @@ def candidate(groups,base,sent,claimed):
             matches.append({'conversation_id':row['id'],'title':row['title'],'rows':rows})
     return matches[0] if len(matches)==1 else None
 
-def recover(root,task,observed,android,close_reader,event,*,paused=False,stopping=False,index=history_index,clock=time.time,sleep=time.sleep):
+def visible_history_choice(device, chosen, *, allow_scroll, sleep):
+    rows=chosen['rows'];titles=[r['title'] for r in rows if r['title']]
+    if titles.count(chosen['title'])!=1:return None
+    known=set(titles);target=titles.index(chosen['title']);previous=-1;previous_size=0
+    for _ in range(11 if allow_scroll else 1):
+        nodes=list(ET.fromstring(device.dump_hierarchy()).iter('node'))
+        visible=[n.get('text') for n in nodes if n.get('text') in known]
+        if len(visible)<min(3,len(titles)):return None
+        start=previous+1
+        if previous<0:
+            if visible!=titles[:len(visible)]:return None
+            start=0
+        else:
+            matches=[i for i in range(start,min(previous+previous_size,len(titles)))
+                     if titles[i:i+len(visible)]==visible]
+            if len(matches)!=1:return None
+            start=matches[0]
+        if start<=target<start+len(visible):
+            choice=device(text=chosen['title'])
+            return choice if choice.count==1 else None
+        if not allow_scroll or start>target:return None
+        bounds={n.get('bounds','') for n in nodes if n.get('scrollable')=='true'
+                and any(child.get('text') in known for child in n.iter())}
+        if len(bounds)!=1:return None
+        box=re.fullmatch(r'\[(\d+),(\d+)\]\[(\d+),(\d+)\]',bounds.pop())
+        if not box:return None
+        left,top,right,bottom=map(int,box.groups())
+        height=bottom-top
+        if height<100 or right<=left:return None
+        x=(left+right)//2
+        device.swipe(x,top+int(height*.75),x,top+int(height*.28),.5);sleep(.8)
+        previous,previous_size=start,len(visible)
+    return None
+
+def recover(root,task,observed,android,close_reader,event,*,paused=False,stopping=False,quarantined=False,index=history_index,clock=time.time,sleep=time.sleep):
     root=Path(root)
     if paused or stopping or observed.get('status')!='absent':return None
-    proof=send_proof(root,task)
+    proof=send_proof(root,task,quarantined=quarantined)
     if not proof:return None
     base,sent=proof;now=clock();path=root/(task['task_id']+'.unbound-history.json')
     state=json.loads(path.read_text()) if path.exists() else {}
@@ -65,7 +100,10 @@ def recover(root,task,observed,android,close_reader,event,*,paused=False,stoppin
     if device.app_current().get('package')!='com.tencent.hunyuan.app.chat':return None
     nodes=list(ET.fromstring(device.dump_hierarchy()).iter('node'))
     if any(n.get('class')=='android.widget.EditText' and n.get('text','') not in ('','发消息或按住说话...') for n in nodes):return None
-    if not any(n.get('text','').startswith('Hi，') or n.get('text')==task['wire_question'] for n in nodes):return None
+    if not any(n.get('text','').startswith('Hi，') or n.get('text')==task['wire_question'] for n in nodes):
+        # A drained queue can be on the last completed chat. An empty
+        # composer and the normal new-chat control allow read-only history.
+        if not quarantined or not any(n.get('content-desc')=='新建对话' for n in nodes):return None
     drawer=device(description='抽屉页入口')
     if drawer.count!=1:return None
     # Commit before touching UI. Navigation is bounded and survives restarts.
@@ -73,13 +111,9 @@ def recover(root,task,observed,android,close_reader,event,*,paused=False,stoppin
         'candidate_title':chosen['title'],'sent_at':sent,'baseline_at':base['created_at'],
         'original_request_confirmed':False,'new_questions_sent':0,'status':'navigation_intent'}
     atomic_json(path,record);close_reader();android.tap(drawer);sleep(2)
-    titles={r['title'] for r in chosen['rows'] if r['title']}
-    visible=[n.get('text') for n in ET.fromstring(device.dump_hierarchy()).iter('node') if n.get('text') in titles]
-    expected=[r['title'] for r in chosen['rows'][:len(visible)]]
-    if len(visible)<min(3,len(chosen['rows'])) or visible!=expected or visible.count(chosen['title'])!=1:
+    target=visible_history_choice(device,chosen,allow_scroll=quarantined,sleep=sleep)
+    if target is None:
         device.press('back');return {'phase':'original_history_not_visible','reason':'unbound_drawer_order_unproven','next_at':now+600}
-    target=device(text=chosen['title'])
-    if target.count!=1:device.press('back');return None
     android.tap(target);sleep(2);close_reader();atomic_json(path,{**record,'status':'opened_for_identity_check'})
     event(task['task_id'],'native_unbound_history_opened',json.dumps({'conversation_id':chosen['conversation_id'],'original_request_confirmed':False,'questions_sent':0}))
     return {'phase':'reloading_original_history','reason':'unbound_request_identity_pending','next_at':now+3}
