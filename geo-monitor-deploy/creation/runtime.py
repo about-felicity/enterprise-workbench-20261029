@@ -366,21 +366,46 @@ def output_status():
     return {'ok':True,'at':time.time(),'jobs':jobs,'legacy_articles':compact(SHARED)}
 
 def status(*, task_list=False):
+    from . import materials, studio
+    from datetime import datetime
+
+    visible_tasks = None
+    visible_job_ids = set()
+    if task_list:
+        today = datetime.now(studio.ZONE).date().isoformat()
+        plans = {p['plan_id']: p for p in studio.plans()}
+        visible_tasks = {(pid, studio.scheduled_day(plan, today)) for pid, plan in plans.items()}
+        for path in sorted((studio.ROOT/'days').glob('*/*.json'), reverse=True)[:500]:
+            task = read(path)
+            pid = task.get('plan', {}).get('plan_id')
+            if pid in plans:
+                visible_tasks.add((pid, task['date']))
+                visible_job_ids.update(task.get('jobs', {}).values())
     jobs=[]
     for path in sorted((BASE/'runs').glob('*/job.json'),reverse=True):
-        root=path.parent;job=read(path);tickets=[read(p) for p in (root/'queue').glob('*/ticket.json')]
+        root=path.parent;job=read(path)
+        if (visible_tasks is not None and job.get('job_id') not in visible_job_ids
+                and (job.get('studio_plan_id'), job.get('date')) not in visible_tasks):
+            continue
+        tickets=[read(p) for p in (root/'queue').glob('*/ticket.json')]
         counts={}
         for ticket in tickets:
             key=ticket.get('stage','')+':'+ticket.get('state','');counts[key]=counts.get(key,0)+1
         day=read(root/'days'/job['date']/'day.json')
         from .editorial_status import blocks,execution_health
         health=execution_health(root,tickets,day)
-        jobs.append({**job,'quality_blocks':blocks(root,tickets),'product':product_label(root,job['date']),'control':pipeline_control.state(root),'health':health,
-            'worker':read(root/'geo_worker.json'),'queue':counts,'articles':articles(root,summary=True) if task_list else articles(root),
+        if (task_list and job['date'] < today and day.get('status') in studio.TERMINAL_JOBS
+                and type(day.get('accepted_articles')) is int and day['accepted_articles'] >= 0
+                and not any((root/'revocations').glob('*.json'))):
+            article_count = day['accepted_articles']
+        else:
+            article_count = None
+        details={} if task_list else {'product':product_label(root,job['date']),'worker':read(root/'geo_worker.json')}
+        jobs.append({**job,**details,'quality_blocks':blocks(root,tickets),'control':pipeline_control.state(root),'health':health,
+            'queue':counts,'article_count':article_count,
+            'articles':[] if article_count is not None else articles(root,summary=task_list),
             'day':day})
     legacy=[] if task_list else articles(SHARED)
-    from . import materials
-    from . import studio
     studio_state=studio.snapshot(jobs)
     if task_list:
         # Task cards and editors only need the archived product name in each plan.

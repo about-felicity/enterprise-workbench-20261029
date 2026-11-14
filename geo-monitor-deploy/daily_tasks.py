@@ -107,17 +107,18 @@ def database_counts(day):
         return result
 
 def belongs_to_daily_plan(model,batch,day,base=Path('/opt/monitor/geo-capture')):
-    """A late Doubao receipt cannot satisfy a different day's task target."""
-    if model not in {'doubao1','doubao2','doubao3','doubao4'}:return True
+    """Late receipts from a managed batch cannot satisfy a different day's target."""
+    if model not in QUESTION_ONLY_CHANNELS|WEB_PEERS.keys():return True
     # Exact server-generated identities only; never interpret input as a path.
     import re
-    if not re.fullmatch(r'[A-Za-z0-9_-]{1,180}',batch):return False
+    if not re.fullmatch(r'[A-Za-z0-9_-]{1,180}',batch):return model not in DOUBAO_CHANNELS
     config=read(base/'panel/jobs'/(batch+'.json'))
     assigned=config.get('daily_date')
     if assigned:return assigned==day
     # Preserve older server jobs created before daily_date was added.
-    match=re.fullmatch(r'geo-panel-doubao[1-4]-(\d{4})(\d{2})(\d{2})-.*',batch)
-    return bool(match and '-'.join(match.groups())==day)
+    channel=model.replace('_','-')
+    match=re.fullmatch(rf'geo-panel-{re.escape(channel)}-(\d{{4}})(\d{{2}})(\d{{2}})-.*',batch)
+    return '-'.join(match.groups())==day if match else model not in DOUBAO_CHANNELS
 
 class DailyTasks:
     def __init__(self,control,counts=None):
@@ -319,7 +320,11 @@ class DailyTasks:
                            ('waiting_for_wenxin' if model=='baidu_ai' else 'waiting_for_baidu',model,day))
                 return
             raw_state=read(job['health']).get('status')
-            if snap['state']=='waiting_verification' or raw_state=='waiting_verification':
+            assigned_day=json.loads(job['config']).get('daily_date')
+            previous_wenxin=(model=='wenxin_card' and job['service'].startswith('geo-web@')
+                             and assigned_day and assigned_day<day
+                             and not job['stop_requested'] and not c.marker(job).exists())
+            if not previous_wenxin and (snap['state']=='waiting_verification' or raw_state=='waiting_verification'):
                 db.execute('update daily_tasks set status=? where model=? and day=?',(snap['state'],model,day));return
             if snap['state']=='waiting_login' or raw_state=='waiting_login' or row['status']=='waiting_login':
                 from control_panel import read_login

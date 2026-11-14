@@ -90,12 +90,18 @@ def tick(now=None):
   if s.get('attempt',0)>=attempt_limit(cfg):
    if s.get('status')!='needs_materials':save(task,{**s,'status':'needs_materials','message':'已达到'+str(attempt_limit(cfg))+'轮补采上限，仍缺少合格原文；请补充有效来源后处理'})
    continue
-  if s.get('status')=='waiting_verification' or s.get('next_at',0)>now or running>=2:continue
+  if s.get('next_at',0)>now or running>=2:continue
   order=p['questions'];last=s.get('question');start=(order.index(last)+1)%len(order) if last in order else 0
-  question=next(q for q in order[start:]+order[:start] if q in questions);channels=materials.capture_channels(p.get('channels'))
+  question=next(q for q in order[start:]+order[:start] if q in questions);channels=[m for m in p['channels'] if m in {'baidu_ai','wenxin_card'}]
+  if not channels:continue
   origin=studio.capture_root(p['plan_id'])
   original_progress=[v for v in materials.progress(task['date'],origin) if v['id'] in channels]
-  if any(v['blocked'] or v.get('recovery',{}).get('blocked') for v in original_progress):
+  blocked={v['id'] for v in original_progress if v['blocked'] or v.get('recovery',{}).get('blocked')}
+  if s.get('status')=='waiting_verification' and s.get('root'):
+   blocked.update(v['id'] for v in materials.progress(task['date'],Path(s['root']))
+                  if v['id'] in channels and (v['blocked'] or v.get('recovery',{}).get('blocked')))
+  channels=[m for m in channels if m not in blocked]
+  if not channels:
    save(task,{**s,'status':'waiting_verification','message':'采集通道需要处理平台验证，保留原会话'})
    continue
   attempt=s.get('attempt',0)+1;key=runtime.digest(question)[:12]

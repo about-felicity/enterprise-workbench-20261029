@@ -212,6 +212,26 @@ class DailyTaskTests(unittest.TestCase):
         self.counts['baidu_ai']['问题二']=5
         self.finish('baidu_ai',1);self.tasks.reconcile()
         self.assertEqual(self.model('wenxin_card')['current']['config']['rounds'],8)
+    def test_stopped_yesterday_wenxin_verification_does_not_block_today_after_baidu(self):
+        from daily_dispatch import DailyController
+        self.c=DailyController(self.root,self.fixture.system,self.root/'native')
+        self.fixture.control=self.c
+        self.c.daily_counts=lambda day:self.counts
+        self.tasks=DailyTasks(self.c)
+        self.apply('baidu_ai');self.apply('wenxin_card')
+        yesterday=(datetime.now()-timedelta(days=1)).date().isoformat()
+        with self.c.connect() as db:
+            job=self.c.current(db,'wenxin_card')
+            cfg={**json.loads(job['config']),'daily_date':yesterday}
+            db.execute('update jobs set config=?,service=?,created=? where batch=?',
+                       (json.dumps(cfg),'geo-web@old.service',time.time()-86400,job['batch']))
+        atomic(Path(job['health']),{'status':'waiting_verification','captured':1,'geo_processed':1})
+        self.tasks.reconcile()
+        self.assertEqual(self.model('wenxin_card')['daily']['status'],'waiting_for_baidu')
+        self.counts={'baidu_ai':{'问题一':5,'问题二':5}}
+        self.finish('baidu_ai',10);self.tasks.reconcile()
+        self.assertNotEqual(self.model('wenxin_card')['current']['batch'],job['batch'])
+        self.assertEqual(read(job['health'])['status'],'waiting_verification')
     def test_pg_failure_cannot_create_or_restart_work(self):
         self.apply()
         self.tasks.counts=lambda day:(_ for _ in ()).throw(OSError('database unavailable'))

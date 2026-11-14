@@ -25,5 +25,13 @@ class BatchDateTests(unittest.TestCase):
     def test_other_models_keep_existing_attribution(self):
         self.assertTrue(belongs_to_daily_plan('deepseek2','old-batch','2026-10-19',Path('/missing')))
 
+    def test_managed_web_and_yuanbao_batches_obey_their_plan_dates(self):
+        for model in ('wenxin_card','baidu_ai','yuanbao'):
+            with self.subTest(model=model):
+                batch=f"geo-panel-{model.replace('_','-')}-20261018-090003-abc"
+                self.assertFalse(belongs_to_daily_plan(model,batch,'2026-10-19',Path('/missing')))
+                self.assertTrue(belongs_to_daily_plan(model,batch,'2026-10-18',Path('/missing')))
+                self.assertTrue(belongs_to_daily_plan(model,'manual-batch','2026-10-19',Path('/missing')))
+
 
 if __name__=='__main__':unittest.main()
