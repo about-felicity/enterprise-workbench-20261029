@@ -2,7 +2,7 @@ import sys,unittest,tempfile,sqlite3,time,json,os
 from unittest.mock import patch,Mock
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from wenxin_retry import due,failed,clear_verified,browser_lock,retry_state,reusable_probe
+from wenxin_retry import due,failed,clear_verified,browser_lock,retry_state,reusable_probe,candidates
 class RetryTests(unittest.TestCase):
  def test_first_probe_due(self):self.assertTrue(due({},100))
  def test_browser_lock_prevents_parallel_profile_use_and_releases(self):
@@ -43,6 +43,16 @@ class RetryTests(unittest.TestCase):
    for timestamp,expected in ((110,False),(120,False),(121,True),(160,False)):
     proof.write_text(json.dumps({'status':'ready','at':timestamp}))
     self.assertEqual(bool(reusable_probe([root],150)),expected)
+ def test_geo_probe_waits_for_the_collector_cooldown(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   geo=Path(tmp); batch=geo/'batches'/'today'; runtime=batch/'collector'; runtime.mkdir(parents=True)
+   (batch/'manifest.json').write_text(json.dumps({'model':'wenxin_card','created_at':100}))
+   (batch/'bridge_health.json').write_text(json.dumps({'status':'waiting_verification'}))
+   (runtime/'search_recovery.json').write_text(json.dumps({'cooldown_until':300}))
+   with patch('wenxin_retry.GEO',geo), patch('wenxin_retry.STUDIO',geo/'studio'):
+    for now,expected in ((299,0),(300,1)):
+     with patch('wenxin_retry.time.time',return_value=now):
+      self.assertEqual(len(list(candidates())),expected)
  def test_pause_wins_over_successful_probe(self):
   with tempfile.TemporaryDirectory() as tmp:
    root=Path(tmp);(root/'pause').touch()

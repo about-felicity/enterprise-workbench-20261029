@@ -41,7 +41,10 @@ def candidates():
  if manifests:
   created_at,root=max(manifests)
   if read(root/'bridge_health.json').get('status')=='waiting_verification' and not (root/'pause.json').exists():
-   yield {'name':'GEO文心','runtimes':[root/'collector'],'blocks':[],'lock':GEO/'search_browser.lock','state':GEO/'profiles/search/wenxin_card/verification_retry.json','service':'geo-web@'+root.name+'.service','pause':root/'pause.json','settings':None,'batch':root.name,'created_at':created_at}
+   runtime = root/'collector'
+   cooldown_until = read(runtime/'search_recovery.json').get('cooldown_until', 0)
+   if time.time() >= cooldown_until:
+    yield {'name':'GEO文心','runtimes':[runtime],'blocks':[],'lock':GEO/'search_browser.lock','state':GEO/'profiles/search/wenxin_card/verification_retry.json','service':'geo-web@'+root.name+'.service','pause':root/'pause.json','settings':None,'batch':root.name,'created_at':created_at}
  for root in (STUDIO/'capture').glob('plan-*'):
   cfg=read(root/'settings.json');plan=read(STUDIO/'plans'/(root.name+'.json'))
   if not cfg.get('enabled') or cfg.get('paused') or plan.get('deleted_at') or not plan.get('enabled'):continue
