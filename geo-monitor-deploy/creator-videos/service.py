@@ -27,10 +27,12 @@ UNRESOLVED_RETRY_INTERVAL = timedelta(minutes=5)
 MANUAL_PRIORITY_SECONDS = 60
 TRANSPORT_FAILURE_WINDOW = 90
 TRANSPORT_PAUSE_SECONDS = 60
+BROWSER_STALL_SECONDS = 120
 BROWSER_CONTEXT_OPTIONS = {"locale": "zh-CN", "timezone_id": "Asia/Shanghai"}
 LOG = logging.getLogger(__name__)
 CLAIM_LOCK = threading.Lock()
 CLAIMED = set()
+BROWSER_PROGRESS = {}
 CHECK_TIMES = deque(maxlen=256)
 BROWSER_BUDGET = CheckBudget(os.environ.get("CREATOR_VIDEO_SLOT_DIR"),
                              os.environ.get("CREATOR_VIDEO_LEDGER", "creator"))
@@ -563,13 +565,15 @@ def check_work(row, context):
     except CheckError as first:
         page_unavailable = first.category == "page_unavailable"
         confirm_change = row["pending"] or row["availability"] != "unavailable"
+        if first.category == "share_unavailable" and link == row["input_url"]:
+            raise
         if first.category in {"transport", "timeout", "rate_limit"}:
             raise
         if first.availability != "unknown" and not (page_unavailable and confirm_change):
             raise
         LOG.info("Video check retry for work %s: %s", row["id"], first)
         expected_post_id = expected_post_id or first.post_id
-        if expected_post_id and first.category in {"navigation", "detail", "page_unavailable"}:
+        if expected_post_id and first.category in {"navigation", "detail", "page_unavailable", "share_unavailable"}:
             link = row["input_url"]
         time.sleep(2)
         if time.time() < BROWSER_BUDGET.paused_until(platform):
@@ -607,10 +611,33 @@ def save_check_error(row, error):
     save(row, error=str(error), availability=error.availability)
 
 
+def mark_browser_progress(work_id):
+    with CLAIM_LOCK:
+        BROWSER_PROGRESS[threading.get_ident()] = (time.monotonic(), work_id)
+
+
+def stalled_browser_work(at):
+    with CLAIM_LOCK:
+        return [work_id for started, work_id in BROWSER_PROGRESS.values()
+                if at - started >= BROWSER_STALL_SECONDS]
+
+
+def watch_browsers():
+    while True:
+        time.sleep(5)
+        stalled = stalled_browser_work(time.monotonic())
+        if stalled:
+            LOG.error("Video browser stalled for %s; restarting collector to release its slots", stalled)
+            # The work stays due in SQLite. systemd stops all Chrome children
+            # and restarts this ledger, releasing its advisory browser locks.
+            os._exit(1)
+
+
 def collect_batch(chromium):
     row = claim_work()
     if row is None:
         return
+    mark_browser_progress(row["id"])
     try:
         with chromium.launch(
             executable_path=os.environ.get("CREATOR_VIDEO_CHROME", "/usr/bin/google-chrome"),
@@ -634,13 +661,16 @@ def collect_batch(chromium):
                 row = None
                 if index == 19:
                     break
+                mark_browser_progress(None)
                 time.sleep(3)
                 row = claim_work()
                 if row is None:
                     break
+                mark_browser_progress(row["id"])
     finally:
-        if row is not None:
-            with CLAIM_LOCK:
+        with CLAIM_LOCK:
+            BROWSER_PROGRESS.pop(threading.get_ident(), None)
+            if row is not None:
                 CLAIMED.discard(row["id"])
 
 
@@ -763,4 +793,5 @@ if __name__ == "__main__":
         raise SystemExit(0)
     for index in range(CHECK_WORKERS):
         threading.Thread(target=collect, name=f"creator-check-{index + 1}", daemon=True).start()
+    threading.Thread(target=watch_browsers, name="video-browser-watchdog", daemon=True).start()
     ThreadingHTTPServer(("127.0.0.1", PORT), Handler).serve_forever()

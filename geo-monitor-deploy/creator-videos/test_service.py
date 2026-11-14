@@ -13,7 +13,7 @@ from urllib.request import Request, urlopen
 
 import service
 from collector import links_from_text, rate_limit_error, snapshot
-from xiaohongshu import note_from_html, note_metrics
+from xiaohongshu import note_from_html, note_metrics, share_error
 
 
 class VideoServiceTests(unittest.TestCase):
@@ -96,6 +96,27 @@ class VideoServiceTests(unittest.TestCase):
                          {"likes": 1, "comments": 0, "favorites": 0, "shares": 0})
         self.assertEqual(note_metrics({"interactInfo": {"likedCount": "", "shareCount": None}}), {"likes": 0})
         self.assertEqual(note_metrics({}), {})
+
+    def test_xiaohongshu_share_error_is_scoped_and_preserves_unknown_availability(self):
+        note_id = '6acd9cc7000000001500aee2'
+        url = f'https://www.xiaohongshu.com/404?source=note&noteId={note_id}&errorCode=-510001'
+        error = share_error(url, note_id)
+        self.assertEqual((error.availability, error.category, error.post_id), ('unknown', 'share_unavailable', note_id))
+        self.assertIn('重新复制分享链接', str(error))
+        self.assertEqual(share_error(url, '0' * 24).category, 'navigation')
+        self.assertIsNone(share_error(url.replace('source=note', 'source=other'), note_id))
+        self.assertIsNone(share_error(url.replace('xiaohongshu.com', 'xiaohongshu.com.example.org'), note_id))
+        row = {**self.row, 'platform': 'xiaohongshu', 'url': None, 'post_id': 'xhs:' + note_id}
+        with patch.object(service, 'read_work', side_effect=error) as read:
+            with self.assertRaises(service.CheckError):
+                service.check_work(row, Mock())
+            read.assert_called_once()
+
+    def test_browser_watchdog_detects_stalled_checks_and_browser_cleanup(self):
+        with patch.object(service, 'BROWSER_PROGRESS', {1: (100, 262), 2: (170, None), 3: (200, 12)}):
+            self.assertEqual(service.stalled_browser_work(219), [])
+            self.assertEqual(service.stalled_browser_work(220), [262])
+            self.assertEqual(service.stalled_browser_work(290), [262, None])
 
     def test_transient_failure_preserves_last_verified_state_and_daily_result(self):
         confirmed = datetime.fromisoformat("2026-11-11T11:30:00+08:00")

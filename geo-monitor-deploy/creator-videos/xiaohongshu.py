@@ -2,7 +2,7 @@
 from decimal import Decimal
 import json
 import re
-from urllib.parse import urlsplit
+from urllib.parse import parse_qs, urlsplit
 
 from collector import (CheckError, XHS_HOSTS, XHS_SHORT_HOSTS, canonical_link,
                        publication_time, rate_limit_error, xhs_post_id)
@@ -13,6 +13,25 @@ JS_UNDEFINED = re.compile(r'("(?:[^"\\]|\\.)*")|\bundefined\b')
 COUNT = re.compile(r"([0-9]{1,15}(?:\.[0-9]{1,6})?)\s*([万亿wWkK]?)\s*(\+?)")
 UNITS = {"": 1, "万": 10_000, "w": 10_000, "k": 1_000, "亿": 100_000_000}
 FIELDS = {"likes": "likedCount", "comments": "commentCount", "favorites": "collectedCount", "shares": "shareCount"}
+
+
+def share_error(url, expected_post_id):
+    parts = urlsplit(url)
+    if parts.scheme != 'https' or parts.netloc not in XHS_HOSTS or parts.path.rstrip('/') != '/404':
+        return None
+    try:
+        query = parse_qs(parts.query, max_num_fields=100)
+    except ValueError:
+        return None
+    notes = query.get('noteId', [])
+    if query.get('source') != ['note'] or len(notes) != 1 or not re.fullmatch(r'[0-9a-f]{24}', notes[0]):
+        return None
+    if expected_post_id and notes[0] != expected_post_id:
+        return CheckError('小红书跳转到其他笔记，待确认', category='navigation')
+    codes = query.get('errorCode', [])
+    suffix = f'（平台代码 {codes[0]}）' if len(codes) == 1 and re.fullmatch(r'-?[0-9]{1,10}', codes[0]) else ''
+    return CheckError(f'小红书提示页面不见了，请从 App 重新复制分享链接{suffix}',
+                      category='share_unavailable', post_id=notes[0])
 
 
 def note_from_html(html, post_id):
@@ -80,16 +99,23 @@ def note_snapshot(page, link, expected_post_id=None):
     page.route("**/*", restrict)
     try:
         page.goto(link, wait_until="commit", timeout=18000)
-        if not any(xhs_post_id(item.url) or item.status == 429 for item in responses):
+        if not any(xhs_post_id(item.url) or share_error(item.url, expected_post_id) or item.status == 429 for item in responses):
             try:
-                page.wait_for_url(lambda url: xhs_post_id(url) is not None, wait_until="commit", timeout=5000)
+                page.wait_for_url(lambda url: bool(xhs_post_id(url) or share_error(url, expected_post_id)),
+                                  wait_until="commit", timeout=5000)
             except TimeoutError:
                 pass
+        unavailable_share = None
         for response in responses:
             if response.status == 429:
                 raise rate_limit_error(response, "小红书")
+            if response.status in (200, 404) and (error := share_error(response.url, expected_post_id)):
+                unavailable_share = error
+                continue
             post_id = xhs_post_id(response.url)
             if not post_id:
+                continue
+            if 300 <= response.status < 400:
                 continue
             if expected_post_id and post_id != expected_post_id:
                 raise CheckError("小红书跳转到其他笔记，待确认", category="navigation")
@@ -109,6 +135,8 @@ def note_snapshot(page, link, expected_post_id=None):
                         "creator_uid": str(user["userId"])[:100],
                         "title": str(note.get("title") or note.get("desc") or "")[:400],
                         "published_at": publication_time(note.get("time")), **note_metrics(note)}
+        if unavailable_share:
+            raise unavailable_share
         raise CheckError("小红书未返回对应笔记详情，可能需要登录或新的分享链接，待确认", category="detail")
     except TimeoutError as exc:
         raise CheckError("小红书读取超时，待确认", category="timeout") from exc
