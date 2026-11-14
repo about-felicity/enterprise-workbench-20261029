@@ -42,6 +42,33 @@ def receipt(item):
 
 
 class CaptureBridgeTests(unittest.TestCase):
+    def test_restart_waits_for_collector_verification_cooldown(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            base = Path(temporary)
+            config = {**self.config, 'model': 'wenxin_card', 'batch': 'cooldown',
+                      'rounds': 1, 'questions': ['测试问题']}
+            config_path = base / 'config.json'
+            bridge.atomic_json(config_path, config)
+            lane = base / 'batches' / 'cooldown'
+            (lane / 'collector').mkdir(parents=True)
+            bridge.atomic_json(lane / 'collector/search_recovery.json',
+                               {'kind': 'verification', 'cooldown_until': 1200})
+            delivery = Mock()
+            delivery.sync.return_value = {'captured': 0, 'processed': 0, 'unavailable': 0, 'errors': []}
+
+            def check_cooldown(_):
+                health = bridge.load(lane / 'bridge_health.json')
+                self.assertEqual(health['status'], 'running_recovery')
+                self.assertEqual(health['progress']['next_at'], 1200)
+                self.assertIn('百度安全验证', health['progress']['reason'])
+                bridge.STOP = True
+
+            with patch.object(bridge, 'STOP', False), patch.object(bridge, 'Delivery', return_value=delivery), \
+                    patch.object(bridge.subprocess, 'Popen') as start, patch.object(bridge.time, 'time', return_value=1000), \
+                    patch.object(bridge.time, 'sleep', side_effect=check_cooldown):
+                self.assertEqual(bridge.run(config_path, base, base), 0)
+            start.assert_not_called()
+
     def test_apply_drain_can_finish_unknown_original_without_unpausing_new_sends(self):
         from geo_source_cards.journal import Journal
         with tempfile.TemporaryDirectory() as temporary:

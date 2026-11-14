@@ -335,13 +335,15 @@ def run(config_path, base, receiver_root):
                 backlog = summary['captured'] > summary['processed'] or bool(body_delivery.get('pending_delivery'))
                 if any(e.get('retryable') is False for e in body_delivery.get('errors', [])):
                     blocked = True
-                recovering=blocked or (child is None and (retry.get('attempt') or counts.get('needs_attention') or counts.get('failed_deferred')))
+                now = time.time()
+                cooldown_until = search_recovery.get('cooldown_until', 0)
+                next_attempt_at = max(retry.get('next_at', 0), cooldown_until)
+                recovering=blocked or (child is None and (now < next_attempt_at or retry.get('attempt') or counts.get('needs_attention') or counts.get('failed_deferred')))
                 status = "complete_with_unavailable" if terminal and summary["unavailable"] else "complete" if terminal else "running_delivery_backoff" if backlog else 'running_recovery' if recovering else "running"
                 if any(e.get('retryable') is False for e in summary['errors']):status='running_delivery_backoff'
                 # Keep a receiver outage from accumulating more model answers.
                 drain_readback=bool(load(root/'pause.json').get('allow_original_readback') and counts.get('needs_attention'))
-                next_attempt_at = max(retry.get('next_at', 0), search_recovery.get('cooldown_until', 0))
-                if not terminal and not blocked and not backlog and child is None and not completed and time.time()>=next_attempt_at and (not (root / "pause.json").exists() or drain_readback):
+                if not terminal and not blocked and not backlog and child is None and not completed and now>=next_attempt_at and (not (root / "pause.json").exists() or drain_readback):
                     child = subprocess.Popen(command, env=env, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
                     child_started, child_completed_at = time.monotonic(), None
                     child_completed_count = counts.get("completed", 0)
@@ -356,7 +358,7 @@ def run(config_path, base, receiver_root):
                     health['progress'].update(load(root/'collector_progress.json'))
                 elif recovering and not backlog:
                     health['progress'].update(phase='automatic_backoff',attempt=retry.get('attempt',0),next_at=next_attempt_at)
-                    if search_recovery.get('kind') == 'verification':
+                    if now < cooldown_until and search_recovery.get('kind') == 'verification':
                         health['progress']['reason'] = '百度安全验证，冷却后复查'
                 atomic_json(root / "bridge_health.json", health)
                 if terminal or status == "paused":
