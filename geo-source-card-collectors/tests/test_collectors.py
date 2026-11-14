@@ -8,7 +8,7 @@ from pathlib import Path
 from unittest.mock import Mock, patch
 
 from geo_source_cards import cli
-from wenxin_monitor.controller import WenxinWebCollector
+from wenxin_monitor.controller import SecurityVerificationError, WenxinWebCollector
 
 
 class FakeCollector:
@@ -41,6 +41,22 @@ class FakeCollector:
 
 
 class CollectorTests(unittest.TestCase):
+    def test_wenxin_rechecks_navigation_for_verification_before_source_controls(self):
+        with patch.object(WenxinWebCollector, '__init__', return_value=None):
+            collector = WenxinWebCollector()
+        collector.page = Mock(is_stealth=False)
+        collector.page.evaluate.side_effect = [
+            {'query': '问题', 'url': 'https://wenxin.baidu.com/search/1'},
+            {'url': 'https://wappass.baidu.com/static/captcha/'},
+        ]
+        collector._navigate_fresh = Mock(return_value='document')
+        collector._wenxin_question_matches = Mock(return_value=True)
+        collector._expand_wenxin_sources = Mock(side_effect=RuntimeError('Execution context was destroyed'))
+        with patch.object(cli.time, 'sleep'), self.assertRaises(SecurityVerificationError):
+            collector.collect_wenxin_search('问题')
+        collector._expand_wenxin_sources.assert_called_once()
+        self.assertEqual(collector.page.evaluate.call_count, 2)
+
     def test_baidu_complete_prose_without_public_references_is_a_body_only_observation(self):
         with patch.object(WenxinWebCollector,'__init__',return_value=None):
             collector=cli.create_collector('baidu_ai')

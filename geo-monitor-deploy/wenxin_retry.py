@@ -78,6 +78,16 @@ def clear_verified(item,proof):
   os.chown(state,owner.pw_uid,owner.pw_gid)
  for path in item['blocks']:path.unlink(missing_ok=True)
  return True
+def reusable_probe(runtimes, now):
+ cached = max((read(root/'verification_probe_latest.json') for root in runtimes),
+              key=lambda value: value.get('at', 0), default={})
+ last_challenge = max((state.get('checked_epoch', 0) for root in runtimes
+                       if (state := read(root/'search_recovery.json')).get('kind') == 'verification'),
+                      default=0)
+ if cached.get('status') == 'ready' and last_challenge < cached.get('at', 0) <= now and now-cached['at'] < 300:
+  return cached
+ return {}
+
 def run():
  results=[]
  for item in candidates():
@@ -94,8 +104,8 @@ def run():
     reserved=failed(state,now,'checking');atomic_json(item['state'],reserved)
     cmd=['/usr/sbin/runuser','-u','user','--',str(GEO/'venv/bin/python'),str(GEO/'wenxin_readiness_probe.py'),'--runtime',str(root),'--question',question]
     try:
-     cached=max([read(r/'verification_probe_latest.json') for r in item['runtimes']],key=lambda v:v.get('at',0),default={})
-     if cached.get('status')=='ready' and now-cached.get('at',0)<300:
+     cached = reusable_probe(item['runtimes'], now)
+     if cached:
       proof=cached;code=0;fresh=True
      else:
       process=subprocess.Popen(cmd,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,start_new_session=True)

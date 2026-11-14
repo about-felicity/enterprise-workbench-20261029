@@ -2,7 +2,7 @@ import sys,unittest,tempfile,sqlite3,time,json,os
 from unittest.mock import patch,Mock
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from wenxin_retry import due,failed,clear_verified,browser_lock,retry_state
+from wenxin_retry import due,failed,clear_verified,browser_lock,retry_state,reusable_probe
 class RetryTests(unittest.TestCase):
  def test_first_probe_due(self):self.assertTrue(due({},100))
  def test_browser_lock_prevents_parallel_profile_use_and_releases(self):
@@ -35,6 +35,14 @@ class RetryTests(unittest.TestCase):
  def test_no_clear_for_challenge_or_stale_proof(self):
   for proof in ({'status':'verification_required','at':time.time()},{'status':'ready','at':0}):
    with self.assertRaises(AssertionError):clear_verified({},proof)
+ def test_cached_success_must_be_newer_than_the_last_challenge(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp)
+   (root/'search_recovery.json').write_text(json.dumps({'kind':'verification','checked_epoch':120}))
+   proof=root/'verification_probe_latest.json'
+   for timestamp,expected in ((110,False),(120,False),(121,True),(160,False)):
+    proof.write_text(json.dumps({'status':'ready','at':timestamp}))
+    self.assertEqual(bool(reusable_probe([root],150)),expected)
  def test_pause_wins_over_successful_probe(self):
   with tempfile.TemporaryDirectory() as tmp:
    root=Path(tmp);(root/'pause').touch()

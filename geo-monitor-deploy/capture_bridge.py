@@ -320,7 +320,8 @@ def run(config_path, base, receiver_root):
                         continue
                 summary = delivery.sync(rows)
                 blocked = any(e['kind'] in {'ValueError','KeyError','TypeError'} for e in summary['errors'])
-                auth_stop=(last_exit==77 or load(runtime/'search_recovery.json').get('blocked'))
+                search_recovery = load(runtime / 'search_recovery.json') if config['model'] != 'deepseek' else {}
+                auth_stop = last_exit == 77 or search_recovery.get('blocked')
                 if auth_stop and child is None:
                     waiting='waiting_login' if config['model']=='deepseek' else 'waiting_verification'
                     health={**summary,'time':time.time(),'status':waiting,'model':config['model'],'batch':config['batch'],
@@ -339,7 +340,8 @@ def run(config_path, base, receiver_root):
                 if any(e.get('retryable') is False for e in summary['errors']):status='running_delivery_backoff'
                 # Keep a receiver outage from accumulating more model answers.
                 drain_readback=bool(load(root/'pause.json').get('allow_original_readback') and counts.get('needs_attention'))
-                if not terminal and not blocked and not backlog and child is None and not completed and time.time()>=retry.get('next_at',0) and (not (root / "pause.json").exists() or drain_readback):
+                next_attempt_at = max(retry.get('next_at', 0), search_recovery.get('cooldown_until', 0))
+                if not terminal and not blocked and not backlog and child is None and not completed and time.time()>=next_attempt_at and (not (root / "pause.json").exists() or drain_readback):
                     child = subprocess.Popen(command, env=env, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
                     child_started, child_completed_at = time.monotonic(), None
                     child_completed_count = counts.get("completed", 0)
@@ -353,7 +355,9 @@ def run(config_path, base, receiver_root):
                 if child and not backlog:
                     health['progress'].update(load(root/'collector_progress.json'))
                 elif recovering and not backlog:
-                    health['progress'].update(phase='automatic_backoff',attempt=retry.get('attempt',0),next_at=retry.get('next_at',0))
+                    health['progress'].update(phase='automatic_backoff',attempt=retry.get('attempt',0),next_at=next_attempt_at)
+                    if search_recovery.get('kind') == 'verification':
+                        health['progress']['reason'] = '百度安全验证，冷却后复查'
                 atomic_json(root / "bridge_health.json", health)
                 if terminal or status == "paused":
                     code = 0

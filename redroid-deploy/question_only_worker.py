@@ -464,9 +464,19 @@ def run_locked(config,root,capture_limit):
                                   and (str(error)=='Message blocks must be a non-empty list'
                                        or (str(error).startswith('Unsupported native ') and 'completeness unproven' in str(error)))
                                   and defer_bound_original(root,reader,task))
-                        ambiguous=(config['model'] in ('doubao1','doubao2','doubao3','doubao4')
-                                   and str(error)=='Multiple new native requests; automatic resend forbidden'
-                                   and quarantine_uncertain_send(root,queue,task,{},time.time()))
+                        ambiguous_identity = (
+                            config['model'] in ('doubao1','doubao2','doubao3','doubao4')
+                            and str(error) == 'Multiple new native requests; automatic resend forbidden'
+                        ) or (
+                            config['model'] == 'yuanbao' and str(error) in {
+                                'Initial native request identity is not proven',
+                                'Multiple new native conversations match the exact question',
+                            }
+                        )
+                        ambiguous = ambiguous_identity and (
+                            uncertain_quarantine_valid(root, queue, task)
+                            or quarantine_uncertain_send(root, queue, task, {}, time.time())
+                        )
                         if not ambiguous:
                             queue.db.execute("update tasks set state='needs_attention',error=? where task_id=?",(detail,task['task_id']))
                             queue.event(task['task_id'],'automatic_deferred_original_readback' if deferred else 'native_validation_stopped',detail)

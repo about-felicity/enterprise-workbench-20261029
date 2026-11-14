@@ -863,13 +863,24 @@ class WenxinWebCollector:
         expansions = 0
         last: dict[str, Any] = {}
         while time.monotonic() < deadline:
-            if expansions < 3 and self._expand_wenxin_sources():
-                expansions += 1
-                time.sleep(0.5)
             value = self.page.evaluate(WENXIN_SEARCH_SNAPSHOT_JS, timeout=30)
             last = value if isinstance(value, dict) else {}
             if self._is_security_verification(last):
                 raise SecurityVerificationError("检测到百度安全验证，立即关闭当前页面")
+            if expansions < 3 and self._wenxin_question_matches(last, question):
+                try:
+                    expanded = self._expand_wenxin_sources()
+                except Exception as error:
+                    if "Execution context was destroyed" not in str(error) and "Cannot find context with specified id" not in str(error):
+                        raise
+                    # Recheck the new document before looking for controls again.
+                    stable = 0
+                    time.sleep(0.5)
+                    continue
+                if expanded:
+                    expansions += 1
+                    time.sleep(0.5)
+                    continue
             body = str(last.get("body") or "")
             sources = list(last.get("sources") or [])
             expected = int(last.get("expectedSourceCount") or 0)
