@@ -81,4 +81,22 @@ class Tests(unittest.TestCase):
             with self.assertRaises(Exception):assert_question_only_composer(xml.replace('</hierarchy>','<node resource-id="'+prefix+extra+'"/></hierarchy>'),landing=True)
         with self.assertRaises(Exception):assert_question_only_composer(xml.replace('返回','对话列表'))
 
+    def test_mode_switch_landing_requires_empty_list_and_placeholder(self):
+        xml = '''<hierarchy>
+          <node resource-id="com.larus.nova:id/back_icon" content-desc="返回"/>
+          <node resource-id="com.larus.nova:id/message_list" class="androidx.recyclerview.widget.RecyclerView"/>
+          <node resource-id="com.larus.nova:id/larus_mode_switch_welcome_title" text="有什么我能帮你的吗？"/>
+          <node resource-id="com.larus.nova:id/larus_mode_switch_labels"><node/><node/></node>
+          <node resource-id="com.larus.nova:id/input_text" class="android.widget.EditText" text="发消息或按住说话"/>
+        </hierarchy>'''
+        assert_question_only_composer(xml, landing=True)
+        for wrong in (
+            xml.replace('发消息或按住说话', '未发送草稿'),
+            xml.replace('RecyclerView"/>', 'RecyclerView"><node text="历史消息"/></node>'),
+            xml.replace('</hierarchy>', '<node resource-id="com.larus.nova:id/action_send"/></hierarchy>'),
+            xml.replace('</hierarchy>', '<node resource-id="com.larus.nova:id/larus_chat_top_left_create_new_cvs"/></hierarchy>'),
+        ):
+            with self.assertRaises(DataError):
+                assert_question_only_composer(wrong, landing=True)
+
 if __name__=='__main__':unittest.main()

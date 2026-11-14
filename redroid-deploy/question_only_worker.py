@@ -94,6 +94,28 @@ def native_auth_required(android,model):
     return any(bool(device(text=text).exists) for text in ('登录','手机号登录','微信扫码登录','安全验证'))
 
 
+def recycle_failed_preparation(queue, task, android, marker, record, *, now=None):
+    """Recycle the App only while holding its device lock and before a send click."""
+    now = time.time() if now is None else now
+    failures = task.get('attempts', 0) + 1
+    if failures < 3 or task.get('request_id'):
+        return False
+    if task['state'] not in ('pending', 'prepared'):
+        return False
+    if task['state'] == 'prepared' and not queue.may_finish_unsent(task['task_id']):
+        return False
+    if marker.exists() and now < json.loads(marker.read_text())['time'] + 300:
+        return False
+    atomic_json(marker, {'time': now, 'task_id': task['task_id']})
+    record(task['task_id'], 'native_preparation_recycle_intent', 'Repeated Android preparation failures before send')
+    with deadline(12):
+        result = android.device.shell(['am', 'force-stop', 'com.larus.nova'])
+    if result.exit_code:
+        raise RuntimeError('Could not close Doubao after repeated preparation failures')
+    record(task['task_id'], 'native_preparation_recycled', 'Doubao will open again on the next preparation')
+    return True
+
+
 def load_config(path):
     value=json.loads(path.read_text('utf-8-sig'))
     model=value.get('model')
@@ -369,6 +391,7 @@ def run_locked(config,root,capture_limit):
                         phase('rate_wait',task,next_at=last+config['interval'])
                         wait_seconds(min(remaining,3));continue
                     if android is None:android=make_android(config['model'],config['serial'],ADB)
+                    preparing_ui = False
                     try:
                         phase('preparing',task)
                         with deadline(75):
@@ -376,18 +399,30 @@ def run_locked(config,root,capture_limit):
                             # Do not call ready() first: it creates a new conversation.
                             if config['model']=='yuanbao':android.ensure_open()
                             reader.before_new_chat(task)
+                            preparing_ui = True
                             android.ready()
                     except Exception as error:
                         print(json.dumps({**log_fields,'event':'preparation_failed','ordinal':task['ordinal'],
                             'error':type(error).__name__,'detail':str(error)[:240] if isinstance(error,(DataError,NativeDataError)) else ''},ensure_ascii=False),flush=True)
                         reason=type(error).__name__+(': '+str(error)[:240] if isinstance(error,(DataError,NativeDataError)) else '')
                         queue.retry_preparation(task['task_id'],reason,limit=None)
-                        if native_auth_required(android,config['model']):
-                            terminal='waiting_login';return 77
+                        if STOP:return 0
+                        try:
+                            with deadline(10):
+                                login_required = native_auth_required(android,config['model'])
+                            if login_required:
+                                terminal='waiting_login';return 77
+                            if preparing_ui and config['model'] != 'yuanbao' and not (STOP or (root/'maintenance_pause.json').exists()):
+                                marker = root.parent.parent / ('last-preparation-recycle-' + config['container'] + '.json')
+                                recycle_failed_preparation(queue, task, android, marker, recovery_event)
+                        except Exception as recovery_error:
+                            recovery_event(task['task_id'], 'native_preparation_recovery_failed', type(recovery_error).__name__)
                         android=None
                         health['status']='running_recovery'
                         phase('preparation_backoff',task,next_at=time.time()+30)
                         wait_seconds(30);continue
+                    if STOP or (root/'maintenance_pause.json').exists():
+                        continue
                     if task['state']=='pending':queue.prepare(task['task_id'],protocol='phase-v2')
                     def commit_click():
                         queue.click_attempt(task['task_id'])

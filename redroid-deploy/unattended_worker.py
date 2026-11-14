@@ -100,6 +100,9 @@ class Android:
         self.device.shell(['input','tap',str(x),str(y)])
         time.sleep(.8)
 
+    def is_empty_landing(self, hierarchy):
+        return is_blank_landing(hierarchy)
+
     def wait_for_chat(self, create, timeout):
         end = time.monotonic() + timeout
         while time.monotonic() < end:
@@ -113,7 +116,7 @@ class Android:
                         continue
             if create.exists:
                 return True
-            if is_blank_landing(self.device.dump_hierarchy()):
+            if self.is_empty_landing(self.device.dump_hierarchy()):
                 return True
             time.sleep(.5)
         return False
@@ -147,7 +150,7 @@ class Android:
             self.tap(tts)
         if create.exists:
             self.tap(create)
-        elif not is_blank_landing(d.dump_hierarchy()):
+        elif not self.is_empty_landing(d.dump_hierarchy()):
             raise DataError('New-chat control missing and empty landing page not verified')
         edit = d(resourceId=P+'input_text')
         if not edit.exists:

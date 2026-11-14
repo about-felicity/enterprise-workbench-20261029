@@ -156,6 +156,28 @@ def yuanbao_reader(root):
     return Reader(Path(root))
 
 
+def empty_mode_switch_landing(nodes, prefix):
+    """Recognize the verified empty home screen with model tabs and no recommendations."""
+    elements = {}
+    for node in nodes:
+        elements.setdefault(node.get('resource-id', ''), []).append(node)
+    def unique(name):
+        matches = elements.get(prefix + name, [])
+        return matches[0] if len(matches) == 1 else None
+
+    messages = unique('message_list')
+    title = unique('larus_mode_switch_welcome_title')
+    labels = unique('larus_mode_switch_labels')
+    edit = unique('input_text')
+    return (messages is not None and messages.get('class') == 'androidx.recyclerview.widget.RecyclerView'
+            and len(messages) == 0
+            and title is not None and title.get('text') == '有什么我能帮你的吗？'
+            and labels is not None and len(labels) == 2
+            and edit is not None and edit.get('class') == 'android.widget.EditText'
+            and edit.get('text') == '发消息或按住说话'
+            and prefix + 'action_send' not in elements)
+
+
 def assert_question_only_composer(hierarchy,*,landing=False):
     nodes=list(ET.fromstring(hierarchy).iter('node'))
     prefix='com.larus.nova:id/'
@@ -163,9 +185,12 @@ def assert_question_only_composer(hierarchy,*,landing=False):
         raise DataError('Fresh question-only composer identity not verified')
     for n in nodes:
         rid=n.get('resource-id','')
-        if rid in (prefix+'side_bar_merged_main_title',prefix+'larus_chat_top_left_create_new_cvs') or rid.startswith((prefix+'msg_action_',prefix+'md_')):
+        if (rid in (prefix+'side_bar_merged_main_title',prefix+'larus_chat_top_left_create_new_cvs')
+                or rid.startswith((prefix+'msg_action_',prefix+'md_'))
+                or (rid != prefix+'input_text' and '采集任务编号：' in n.get('text', ''))):
             raise DataError('Existing conversation or drawer remains visible; send forbidden')
-    if landing and not is_blank_landing(hierarchy):raise DataError('Empty question-only landing not verified')
+    if landing and not (is_blank_landing(hierarchy) or empty_mode_switch_landing(nodes, prefix)):
+        raise DataError('Empty question-only landing not verified')
 
 
 def optional_commerce_login(xml):
@@ -222,9 +247,15 @@ def stabilize_question_only_send(device,question,timeout=12,clock=time.monotonic
 
 
 class QuestionOnlyAndroid(DoubaoAndroid):
+    def is_empty_landing(self, hierarchy):
+        try:
+            assert_question_only_composer(hierarchy, landing=True)
+        except DataError:
+            return False
+        return True
+
     def ready(self):
         self._fresh_verified=False
-        self.device.shell(['am','start','-W','-n','com.larus.nova/com.larus.home.impl.alias.AliasActivity1'])
         if self.device(resourceId='com.larus.nova:id/side_bar_merged_main_title').exists:
             self.device.press('back')
         super().ready()
