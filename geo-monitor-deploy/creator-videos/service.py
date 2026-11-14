@@ -556,7 +556,7 @@ def check_context(browser):
         yield context
 
 
-def check_work(row, context):
+def check_work(row, context, mobile_options=None):
     link = row["url"] or row["input_url"]
     platform = row["platform"]
     expected_post_id = public_post_id(row["post_id"])
@@ -565,8 +565,6 @@ def check_work(row, context):
     except CheckError as first:
         page_unavailable = first.category == "page_unavailable"
         confirm_change = row["pending"] or row["availability"] != "unavailable"
-        if first.category == "share_unavailable" and link == row["input_url"]:
-            raise
         if first.category in {"transport", "timeout", "rate_limit"}:
             raise
         if first.availability != "unknown" and not (page_unavailable and confirm_change):
@@ -580,8 +578,9 @@ def check_work(row, context):
             if page_unavailable:
                 raise CheckError(f"{first}，待复核", category="detail") from first
             raise
-        # Use a fresh full context to confirm an unavailable page or recover incomplete details.
-        with context.browser.new_context(**BROWSER_CONTEXT_OPTIONS) as retry_context:
+        # Xiaohongshu can serve a different public note document to mobile browsers.
+        retry_options = mobile_options if platform == "xiaohongshu" and mobile_options else BROWSER_CONTEXT_OPTIONS
+        with context.browser.new_context(**retry_options) as retry_context:
             try:
                 return read_work(retry_context, link, expected_post_id)
             except CheckError as retry:
@@ -633,7 +632,7 @@ def watch_browsers():
             os._exit(1)
 
 
-def collect_batch(chromium):
+def collect_batch(chromium, mobile_options):
     row = claim_work()
     if row is None:
         return
@@ -648,7 +647,7 @@ def collect_batch(chromium):
                     break
                 started = time.monotonic()
                 try:
-                    result = check_work(row, context)
+                    result = check_work(row, context, mobile_options)
                 except CheckError as exc:
                     save_check_error(row, exc)
                 else:
@@ -680,10 +679,11 @@ def collect():
     while True:
         try:
             with sync_playwright() as p:
+                mobile_options = {**p.devices["Pixel 7"], **BROWSER_CONTEXT_OPTIONS}
                 while True:
                     with BROWSER_BUDGET.browser_slot() as slot:
                         if slot:
-                            collect_batch(p.chromium)
+                            collect_batch(p.chromium, mobile_options)
                     time.sleep(3)
         except Exception:
             LOG.exception("Creator video collection failed")

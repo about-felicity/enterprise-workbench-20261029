@@ -102,15 +102,25 @@ class VideoServiceTests(unittest.TestCase):
         url = f'https://www.xiaohongshu.com/404?source=note&noteId={note_id}&errorCode=-510001'
         error = share_error(url, note_id)
         self.assertEqual((error.availability, error.category, error.post_id), ('unknown', 'share_unavailable', note_id))
-        self.assertIn('重新复制分享链接', str(error))
+        self.assertIn('待复查', str(error))
         self.assertEqual(share_error(url, '0' * 24).category, 'navigation')
         self.assertIsNone(share_error(url.replace('source=note', 'source=other'), note_id))
         self.assertIsNone(share_error(url.replace('xiaohongshu.com', 'xiaohongshu.com.example.org'), note_id))
-        row = {**self.row, 'platform': 'xiaohongshu', 'url': None, 'post_id': 'xhs:' + note_id}
-        with patch.object(service, 'read_work', side_effect=error) as read:
-            with self.assertRaises(service.CheckError):
-                service.check_work(row, Mock())
-            read.assert_called_once()
+        link = f'https://www.xiaohongshu.com/discovery/item/{note_id}'
+        row = {**self.row, 'platform': 'xiaohongshu', 'input_url': link, 'url': None, 'post_id': 'xhs:' + note_id}
+        note = {'noteId': note_id, 'type': 'normal', 'user': {'userId': 'author', 'nickName': '作者'},
+                'interactInfo': {'likedCount': '1', 'commentCount': '', 'collectedCount': '', 'shareCount': ''}}
+        html = '<script>window.__INITIAL_STATE__=' + json.dumps({'noteData': {'data': {'noteData': note}}}) + '</script>'
+        self.assertIsNone(note_from_html(html, '0' * 24))
+        self.assertEqual(note_metrics(note_from_html(html, note_id)),
+                         {'likes': 1, 'comments': 0, 'favorites': 0, 'shares': 0})
+        context, mobile = Mock(), Mock()
+        context.browser.new_context.return_value = nullcontext(mobile)
+        mobile_options = {'is_mobile': True}
+        with patch.object(service.time, 'sleep'), patch.object(service, 'read_work', side_effect=[error, note]) as read:
+            self.assertEqual(service.check_work(row, context, mobile_options), note)
+        context.browser.new_context.assert_called_once_with(**mobile_options)
+        self.assertEqual([call.args for call in read.call_args_list], [(context, link, note_id), (mobile, link, note_id)])
 
     def test_browser_watchdog_detects_stalled_checks_and_browser_cleanup(self):
         with patch.object(service, 'BROWSER_PROGRESS', {1: (100, 262), 2: (170, None), 3: (200, 12)}):

@@ -30,7 +30,7 @@ def share_error(url, expected_post_id):
         return CheckError('小红书跳转到其他笔记，待确认', category='navigation')
     codes = query.get('errorCode', [])
     suffix = f'（平台代码 {codes[0]}）' if len(codes) == 1 and re.fullmatch(r'-?[0-9]{1,10}', codes[0]) else ''
-    return CheckError(f'小红书提示页面不见了，请从 App 重新复制分享链接{suffix}',
+    return CheckError(f'小红书当前网页未返回笔记详情{suffix}，待复查',
                       category='share_unavailable', post_id=notes[0])
 
 
@@ -40,9 +40,15 @@ def note_from_html(html, post_id):
         return None
     try:
         payload = json.loads(JS_UNDEFINED.sub(lambda item: item[1] or "null", match[1].strip().removesuffix(";")))
-        note = payload["note"]["noteDetailMap"][post_id]["note"]
-    except (KeyError, TypeError, ValueError):
+    except (TypeError, ValueError):
         return None
+    try:
+        note = payload["note"]["noteDetailMap"][post_id]["note"]
+    except (KeyError, TypeError):
+        try:
+            note = payload["noteData"]["data"]["noteData"]
+        except (KeyError, TypeError):
+            return None
     if (isinstance(note, dict) and note.get("noteId") == post_id
             and isinstance(note.get("user"), dict) and note["user"].get("userId")
             and note.get("type") in {"normal", "video"}):
@@ -130,7 +136,7 @@ def note_snapshot(page, link, expected_post_id=None):
             if note is not None:
                 user = note["user"]
                 return {"post_id": post_id, "url": canonical_link(response.url),
-                        "author": str(user.get("nickname") or "")[:100],
+                        "author": str(user.get("nickname") or user.get("nickName") or "")[:100],
                         "creator_id": str(user["redId"])[:100] if user.get("redId") else None,
                         "creator_uid": str(user["userId"])[:100],
                         "title": str(note.get("title") or note.get("desc") or "")[:400],
