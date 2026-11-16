@@ -27,6 +27,12 @@ PLAYER_COUNTERS = {
     "favorites": "video-player-collect",
     "shares": "video-player-share",
 }
+EMPTY_COUNTER_LABELS = {
+    "likes": "赞",
+    "comments": "抢首评",
+    "favorites": "收藏",
+    "shares": "分享",
+}
 VERIFICATION_TITLES = {"验证码中间页", "抖音安全验证", "安全验证 - 抖音"}
 UNAVAILABLE = re.compile(
     r"(?:你要观看的|您要观看的|该)?(?:作品|视频|图文)(?:已被删除|已删除|不存在|已下架|已失效|已设为私密|仅作者可见|仅自己可见|已不可见)[。！!]?"
@@ -146,32 +152,52 @@ def work_metrics(props):
             if type(stats.get(key)) is int and 0 <= stats[key] < 2**63}
 
 
-def player_metrics(page):
-    counts = page.evaluate("""(selectors) => {
+def player_metrics(page, post_id):
+    counts = page.evaluate(r"""({selectors, postId}) => {
         const visible = (node) => node.getClientRects().length > 0 && getComputedStyle(node).visibility === 'visible';
-        const players = [...document.querySelectorAll('[data-xgplayerid]')].filter(visible);
+        const controlsIn = (scope) => Object.entries(selectors).map(([name, selector]) =>
+            [name, [...scope.querySelectorAll(`[data-e2e="${selector}"]`)].filter(visible)]);
+        const countsFrom = (nodes) => Object.fromEntries(
+            nodes.map(([name, [node]]) => [name, node.innerText.trim()]));
+        const details = [...document.querySelectorAll('[data-e2e="video-detail"]')];
+        const matchingDetails = details.filter(scope =>
+            scope.querySelector(`[data-e2e="player-container"].video_${postId}`));
+        if (matchingDetails.length === 1) {
+            const nodes = controlsIn(matchingDetails[0]);
+            if (nodes.every(([, controls]) => controls.length === 1)) return countsFrom(nodes);
+        }
+        const playerNodes = [...document.querySelectorAll('[data-xgplayerid]')].filter(visible);
+        const players = playerNodes.filter(player => {
+            const container = player.closest('[data-e2e="player-container"]');
+            const knownId = [...(container?.classList || [])].find(name => /^video_\d+$/.test(name));
+            return (!knownId || knownId === `video_${postId}`) &&
+                !playerNodes.some(other => other !== player && other.contains(player));
+        });
         const matches = [];
         for (const player of players) {
             let scope = player;
             for (let depth = 0; depth < 3 && scope && scope !== document.body; depth++, scope = scope.parentElement) {
                 if (players.some(other => other !== player && scope.contains(other))) break;
-                const nodes = Object.entries(selectors).map(([name, selector]) =>
-                    [name, [...scope.querySelectorAll(`[data-e2e="${selector}"]`)].filter(visible)]);
+                const nodes = controlsIn(scope);
                 if (nodes.some(([, controls]) => controls.length > 1)) break;
                 if (nodes.every(([, controls]) => controls.length === 1)) {
-                    matches.push(Object.fromEntries(nodes.map(([name, [node]]) => [name, node.innerText.trim()])));
+                    matches.push(countsFrom(nodes));
                     break;
                 }
             }
         }
         return matches.length === 1 ? matches[0] : {};
-    }""", PLAYER_COUNTERS)
+    }""", {"selectors": PLAYER_COUNTERS, "postId": post_id})
+    return parse_player_metrics(counts)
+
+
+def parse_player_metrics(counts):
     if not isinstance(counts, dict):
         return {}, {}
     metrics, labels = {}, {}
     for name in PLAYER_COUNTERS:
         label = counts.get(name, "")
-        if name == "comments" and label == "抢首评":
+        if label == EMPTY_COUNTER_LABELS[name]:
             metrics[name] = 0
             continue
         match = re.fullmatch(r"(\d{1,15}(?:\.\d{1,4})?)\s*([万亿]?)\s*(\+?)", label.replace(",", ""))
@@ -345,7 +371,10 @@ def snapshot(page, link, expected_post_id=None):
                 raise CheckError(message, "unavailable", category="page_unavailable", post_id=post[2])
             category = "transport" if response.status >= 500 or response.status == 403 else None
             raise CheckError(f"{message}，待确认", category=category)
-        page.locator("body").wait_for(state="attached", timeout=4000)
+        try:
+            page.locator("body").wait_for(state="attached", timeout=7000)
+        except TimeoutError as exc:
+            raise CheckError("抖音已响应，作品正文加载超时，待复查", category="timeout") from exc
         dismiss_douyin_login(page)
         page_title = page.title().strip()
         script_selector = "script:not([src])"
@@ -360,7 +389,7 @@ def snapshot(page, link, expected_post_id=None):
             props = work_props(page.locator(script_selector).evaluate_all(read_scripts), post[2]) or props
             page_title = page.title().strip()
         metrics = work_metrics(props)
-        visible, labels = player_metrics(page) if len(metrics) != len(FIELDS) else ({}, {})
+        visible, labels = player_metrics(page, post[2]) if len(metrics) != len(FIELDS) else ({}, {})
         if page_title in VERIFICATION_TITLES and not props and len(visible) != len(FIELDS):
             raise CheckError("抖音要求安全验证，互动数据待复查", category="verification", post_id=post[2], post_url=final)
         if (not props and len(visible) != len(FIELDS) and (post[1] == "video" or detail_requests)):
@@ -368,7 +397,7 @@ def snapshot(page, link, expected_post_id=None):
             metrics = work_metrics(props)
             if len(metrics) != len(FIELDS):
                 dismiss_douyin_login(page)
-                visible, labels = player_metrics(page)
+                visible, labels = player_metrics(page, post[2])
         if any(key not in metrics and key not in visible for key in FIELDS):
             labels = {}
         else:
