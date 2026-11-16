@@ -153,18 +153,36 @@ def work_metrics(props):
 
 
 def player_metrics(page, post_id):
-    counts = page.evaluate(r"""({selectors, postId}) => {
+    counts = page.evaluate(r"""({selectors, emptyLabels, postId}) => {
         const visible = (node) => node.getClientRects().length > 0 && getComputedStyle(node).visibility === 'visible';
         const controlsIn = (scope) => Object.entries(selectors).map(([name, selector]) =>
             [name, [...scope.querySelectorAll(`[data-e2e="${selector}"]`)].filter(visible)]);
         const countsFrom = (nodes) => Object.fromEntries(
             nodes.map(([name, [node]]) => [name, node.innerText.trim()]));
+        const textCountsIn = (scope) => {
+            const normalized = (text) => text.replace(/\s+/g, "");
+            const title = normalized(document.title.replace(/ - 抖音$/, ""));
+            if (title.length < 6) return {};
+            const lines = scope.innerText.split("\n").map(line => line.trim()).filter(Boolean);
+            const dates = lines.map((line, index) =>
+                /^发布时间[：:]\s*\d{4}-\d\d-\d\d \d\d:\d\d(?::\d\d)?$/.test(line) ? index : -1
+            ).filter(index => index >= 6);
+            if (dates.length !== 1) return {};
+            const date = dates[0];
+            if (lines[date - 1] !== "举报" ||
+                !normalized(lines.slice(0, date - 5).join("")).includes(title.slice(0, 48))) return {};
+            const entries = Object.keys(selectors).map((name, index) => [name, lines[date - 5 + index]]);
+            return entries.every(([name, value]) => value === emptyLabels[name] ||
+                /^[0-9][0-9,]*(?:\.\d+)?[万亿]?\+?$/.test(value)) ? Object.fromEntries(entries) : {};
+        };
         const details = [...document.querySelectorAll('[data-e2e="video-detail"]')];
         const matchingDetails = details.filter(scope =>
             scope.querySelector(`[data-e2e="player-container"].video_${postId}`));
         if (matchingDetails.length === 1) {
             const nodes = controlsIn(matchingDetails[0]);
             if (nodes.every(([, controls]) => controls.length === 1)) return countsFrom(nodes);
+            const textCounts = textCountsIn(matchingDetails[0]);
+            if (Object.keys(textCounts).length) return textCounts;
         }
         const playerNodes = [...document.querySelectorAll('[data-xgplayerid]')].filter(visible);
         const players = playerNodes.filter(player => {
@@ -187,7 +205,7 @@ def player_metrics(page, post_id):
             }
         }
         return matches.length === 1 ? matches[0] : {};
-    }""", {"selectors": PLAYER_COUNTERS, "postId": post_id})
+    }""", {"selectors": PLAYER_COUNTERS, "emptyLabels": EMPTY_COUNTER_LABELS, "postId": post_id})
     return parse_player_metrics(counts)
 
 
