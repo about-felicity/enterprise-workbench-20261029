@@ -237,8 +237,8 @@ async function refresh(){
  if(refreshing)return refreshing;
  const requestedView=activeView;
  refreshing=(async()=>{try{await Promise.resolve();if(activeView==='knowledge'){await refreshUploads();return true}if(activeView==='outputs'){
+ if(!data?.outputsLoaded)renderOutputLoading();
  if(!data){data=await request('status');csrf=data.csrf}
- if(!data.outputsLoaded)$('library').innerHTML='<div class="empty">正在读取成稿列表…</div>';
  const incoming=await readSharedView('library','download?kind=library');data={...data,...incoming,outputsLoaded:true};csrf=data.csrf;
  connected=true;$('connectionNotice').hidden=true;$('connection').textContent='已连接 · '+dt(data.at);
  renderFilterOptions();renderArticleLibrary();buttons();return true
@@ -292,6 +292,7 @@ let activeView='tasks';
 async function showView(view,scroll=true){
  if(view==='editor'&&!knowledgeDataLoaded){try{await ensureEditorData()}catch(e){message(e.message,true);return}}
  activeView=view;
+ if(view==='outputs'&&!data?.outputsLoaded)renderOutputLoading();
  if(view==='knowledge'){
   refreshUploads().catch(e=>message(e.message,true));
  }else if(data)refresh();
@@ -447,7 +448,15 @@ function renderDailyTasks(){
  document.querySelectorAll('[data-plan-switch]').forEach(b=>b.onclick=()=>act('plan_save',{plan_id:b.dataset.planSwitch,schedule_paused:b.dataset.paused!=='true'}));document.querySelectorAll('[data-delete-plan]').forEach(b=>b.onclick=()=>askDelete(b.dataset.deletePlan));bindDeleteControls();buttons();
 }
 let articleLimit=60,articlePageKey="";
+function renderOutputLoading(){
+ for(const id of ['totalArticles','newArticles','legacyCount'])$(id).textContent='—';
+ const download=$('downloadAll');
+ download.removeAttribute('href');download.textContent='打包下载筛选结果';
+ $('filterSummary').textContent='';
+ $('library').innerHTML='<div class="empty" role="status">正在读取成稿列表…</div>';
+}
 function renderArticleLibrary(){
+ if(activeView==='outputs'&&!data?.outputsLoaded){renderOutputLoading();return}
  const raw=library(),held=raw.filter(a=>a.quality_status==='needs_revision'),all=raw.filter(a=>a.quality_status!=='needs_revision'),term=$('search').value.trim().toLowerCase(),filter=$('outputFilter').value;
  const rows=all.filter(a=>matchesTask(a)&&(!term||a.title.toLowerCase().includes(term))&&(filter==='all'||(filter==='new'?a.job!=='legacy-original':a.job==='legacy-original')));
  const pageKey=[$('productFilter').value,$('dateFilter').value,term,filter].join('|');if(articlePageKey!==pageKey){articlePageKey=pageKey;articleLimit=60}
