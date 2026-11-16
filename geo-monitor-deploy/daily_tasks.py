@@ -257,6 +257,41 @@ class DailyTasks:
                    ('waiting_login' if login.get('status')=='login_required' else 'queued' if login.get('status')=='ready' else 'checking_login',time.time(),model,today()))
         return False
 
+    def deferred_jobs(self,db,model,day):
+        c=self.control
+        if model not in QUESTION_ONLY_CHANNELS or not hasattr(c,'deferred_segments'):return []
+        jobs=[]
+        for batch,digests in c.deferred_segments(model,day).items():
+            row=db.execute('select * from jobs where batch=? and model=?',(batch,model)).fetchone()
+            if row:jobs.append((dict(row),set(digests)))
+        return jobs
+
+    def resume_deferred_readback(self,db,model,day,jobs,missing):
+        c=self.control
+        now=time.time()
+        for job,digests in jobs:
+            if not missing.intersection(digests):continue
+            if json.loads(job['config']).get('daily_date')!=day:continue
+            marker=c.marker(job)
+            pause=read(marker)
+            scheduler_pause=(pause.get('source')=='daily_tasks'
+                             and pause.get('allow_original_readback') is True)
+            superseded=(pause.get('source')=='control_panel'
+                        and pause.get('action')=='superseded_by_new_task')
+            if not (scheduler_pause or superseded or (not marker.exists() and not job['stop_requested'])):continue
+            health=read(job['health'])
+            next_at=health.get('next_readback_at',0)
+            if health.get('status')!='needs_attention' or not next_at or next_at>now:continue
+            if not deferred_originals_allow_progress(c.batch_root(job),drained=True):continue
+            c._ensure_delivery(job)
+            c._ensure_known(job,allow_readback=True)
+            atomic(marker,{'requested_at':now,'source':'daily_tasks','action':'apply',
+                           'allow_original_readback':True,'day':day})
+            c.system.start(job['service'])
+            db.execute('update daily_tasks set status=?,error=null where model=? and day=?',('recovering',model,day))
+            return True
+        return False
+
     def _one(self,model,day,counts):
         c=self.control
         with c.lock,c.connect() as db:
@@ -314,6 +349,10 @@ class DailyTasks:
                       and not snap['pending_delivery'] and not snap['delivery_errors']):
                     db.execute('update daily_tasks set status=?,error=null where model=? and day=?',
                         ('recovering' if read(job['health']).get('status')=='running_recovery' else 'running',model,day))
+                return
+            deferred_jobs=self.deferred_jobs(db,model,day)
+            if any(c.system.state(old['service']) in BUSY for old,_ in deferred_jobs):
+                db.execute('update daily_tasks set status=?,error=null where model=? and day=?',('recovering',model,day))
                 return
             # A later term edit can reopen Baidu while Wenxin is already in
             # flight. Both the start and recovery paths must yield to the peer.
@@ -392,8 +431,10 @@ class DailyTasks:
             if not remaining:
                 status='complete_with_unavailable' if any(unavailable.get(q,0) and counts.get(model,{}).get(q,0)<question_target(cfg,q) for q in cfg['questions']) else 'complete'
                 db.execute('update daily_tasks set status=?,error=null where model=? and day=?',(status,model,day));return
+            missing={question_digest(q) for q in remaining}
             remaining={q:n for q,n in remaining.items() if question_digest(q) not in blocked}
             if not remaining:
+                if self.resume_deferred_readback(db,model,day,deferred_jobs,missing):return
                 db.execute('update daily_tasks set status=?,error=? where model=? and day=?',
                            ('needs_attention','剩余题目有原请求待核对，已保留记录',model,day));return
             if model=='wenxin_card':

@@ -92,6 +92,14 @@ class DailyTaskTests(unittest.TestCase):
         DailyTasks(self.c).reconcile()
         self.assertEqual(self.model(model)['daily']['status'],'needs_attention')
         self.assertEqual(len(self.fixture.system.starts),2)
+        atomic(Path(original['health']),{**health,'geo_processed':1,'next_readback_at':time.time()-1})
+        DailyTasks(self.c).reconcile()
+        self.assertEqual(self.fixture.system.starts[-1],original['service'])
+        self.assertEqual(len(self.fixture.system.starts),3)
+        self.assertEqual(self.model(model)['current']['batch'],job['batch'])
+        self.assertTrue(json.loads(self.c.marker(original).read_text())['allow_original_readback'])
+        DailyTasks(self.c).reconcile()
+        self.assertEqual(len(self.fixture.system.starts),3)
     def test_native_validation_stop_waits_before_retrying_original_batch(self):
         model='yuanbao'
         self.apply(model=model);self.tasks.reconcile()
