@@ -23,7 +23,9 @@ class Tests(unittest.TestCase):
         self.assertEqual(native_search_source({'video_card':card}),{
             'url':card['main_site_url'],'index':2,'doc_id':'42','title':'试用对比','native_source':card})
         with self.assertRaises(DataError):
-            native_search_source({'video_card':{'app_jump_url':'snssdk://video/42'}})
+            native_search_source({'video_card':{'app_jump_url':'snssdk://video/42','video_captions':'试用对比'}})
+        with self.assertRaises(DataError):
+            native_search_source({'video_card':{'main_site_url':card['main_site_url']}})
 
     def test_uncertain_send_quarantine_only_records_the_transition_once(self):
         from uncertain_send_quarantine import quarantine,valid

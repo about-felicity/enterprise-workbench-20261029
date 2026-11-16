@@ -13,11 +13,14 @@ from unattended_core import Queue as LegacyQueue, DataError, parse_blocks, unpac
 PROTOCOL='question-only-v1'
 
 def native_search_source(item):
+    if not isinstance(item, dict):
+        raise DataError('Unsupported source card')
     card = item.get('text_card')
     if isinstance(card, dict):
         return {**{key: card.get(key) for key in ('index', 'title', 'url', 'doc_id')}, 'native_source': card}
     card = item.get('video_card')
-    if isinstance(card, dict):
+    caption = card.get('video_captions') if isinstance(card, dict) else None
+    if isinstance(caption, str) and caption.strip():
         for key in ('main_site_url', 'host_page_url'):
             url = card.get(key)
             if not isinstance(url, str):
@@ -25,8 +28,7 @@ def native_search_source(item):
             try:
                 parsed = urlsplit(url)
                 if parsed.scheme in ('http', 'https') and parsed.hostname:
-                    caption = card.get('video_captions')
-                    return {'index': card.get('index'), 'title': caption if isinstance(caption, str) else '',
+                    return {'index': card.get('index'), 'title': caption,
                             'url': url, 'doc_id': card.get('item_id') or card.get('id'), 'native_source': card}
             except ValueError:
                 continue

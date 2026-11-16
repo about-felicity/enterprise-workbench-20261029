@@ -461,7 +461,7 @@ def run_locked(config,root,capture_limit):
                     repeated=len(recent)==3 and all(r[0]==detail for r in recent)
                     if repeated:
                         deferred=(config['model'] in ('doubao1','doubao2','doubao3','doubao4')
-                                  and (str(error)=='Message blocks must be a non-empty list'
+                                  and (str(error) in {'Message blocks must be a non-empty list','Unsupported source card'}
                                        or (str(error).startswith('Unsupported native ') and 'completeness unproven' in str(error)))
                                   and defer_bound_original(root,reader,task))
                         ambiguous_identity = (
