@@ -12,7 +12,7 @@ from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 import service
-from collector import links_from_text, rate_limit_error, snapshot
+from collector import dismiss_douyin_login, links_from_text, rate_limit_error, snapshot
 from xiaohongshu import note_from_html, note_metrics, share_error
 
 
@@ -215,11 +215,10 @@ class VideoServiceTests(unittest.TestCase):
         page.url = self.row["input_url"]
         page.goto.return_value = Mock(status=200, url=page.url)
         page.title.return_value = "验证码中间页"
-        with self.assertRaises(service.CheckError) as caught:
+        with patch("collector.work_props", return_value={}), self.assertRaises(service.CheckError) as caught:
             snapshot(page, page.url)
         self.assertEqual(caught.exception.category, "verification")
         self.assertEqual(caught.exception.availability, "unknown")
-        page.locator.assert_not_called()
         at = service.now()
         self.check(at, result=self.accessible_result())
         with patch.object(service, "now", return_value=at):
@@ -227,6 +226,42 @@ class VideoServiceTests(unittest.TestCase):
         row = self.work()
         self.assertEqual(row["availability"], "available")
         self.assertEqual(row["next_check_at"], int((at + service.CHECK_INTERVAL).timestamp()))
+
+    def test_login_dismissal_clicks_only_one_known_close_button(self):
+        page = Mock()
+        header = page.locator.return_value.filter.return_value
+        button = header.locator.return_value
+        button.count.return_value = 1
+        self.assertTrue(dismiss_douyin_login(page))
+        button.click.assert_called_once_with(timeout=1500)
+        header.wait_for.assert_called_once_with(state="hidden", timeout=1500)
+        button.reset_mock()
+        button.count.return_value = 2
+        self.assertFalse(dismiss_douyin_login(page))
+        button.click.assert_not_called()
+
+    def test_login_dismissal_retries_when_the_modal_has_not_hydrated(self):
+        from playwright.sync_api import TimeoutError
+
+        page = Mock()
+        header = page.locator.return_value.filter.return_value
+        button = header.locator.return_value
+        button.count.return_value = 1
+        header.wait_for.side_effect = [TimeoutError("still visible"), None]
+        self.assertTrue(dismiss_douyin_login(page))
+        self.assertEqual(button.click.call_count, 2)
+
+    def test_player_counts_are_used_when_structured_work_data_is_missing(self):
+        page = Mock()
+        page.url = self.row["input_url"]
+        page.goto.return_value = Mock(status=200, url=page.url)
+        page.title.return_value = "真实作品 - 抖音"
+        page.evaluate.return_value = {"likes": "125", "comments": "2", "favorites": "24", "shares": "2"}
+        with patch("collector.work_props", return_value={}), patch("collector.video_props") as api:
+            result = snapshot(page, page.url)
+        self.assertEqual({key: result[key] for key in service.METRICS},
+                         {"likes": 125, "comments": 2, "favorites": 24, "shares": 2})
+        api.assert_not_called()
 
     def test_single_unavailable_page_uses_the_share_link_before_changing_status(self):
         row = {**self.row, "availability": "available", "pending": 0, "post_id": "1234567890123456789",
@@ -289,7 +324,7 @@ class VideoServiceTests(unittest.TestCase):
             result = snapshot(page, page.url)
         self.assertEqual(result["post_id"], "1234567890123456789")
         self.assertNotIn("likes", result)
-        self.assertFalse(any(call.args == ("body",) for call in page.locator.call_args_list))
+        page.locator.return_value.inner_text.assert_not_called()
 
     def test_rate_limit_uses_retry_after_with_safe_default(self):
         self.assertEqual(rate_limit_error(Mock(headers={"retry-after": "180"})).retry_after, 180)

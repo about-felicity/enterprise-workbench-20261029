@@ -491,7 +491,8 @@ def save(row, result=None, error=None, availability="unknown", *, retry_interval
                 db.execute("DELETE FROM works WHERE id = ?", (row["id"],))
                 row = other
             db.execute("""
-                UPDATE works SET post_id = :post_id, url = :url, author = :author, title = :title,
+                UPDATE works SET post_id = :post_id, url = :url,
+                    author = coalesce(nullif(:author, ''), author), title = coalesce(nullif(:title, ''), title),
                     published_at = coalesce(:published_at, published_at),
                     creator_id = coalesce(:creator_id, creator_id), creator_uid = coalesce(:creator_uid, creator_uid)
                 WHERE id = :id

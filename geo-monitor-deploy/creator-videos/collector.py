@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta, timezone
+from decimal import Decimal
 from email.utils import parsedate_to_datetime
 import json
 import re
@@ -19,6 +20,13 @@ FIELDS = {
     "favorites": "collectCount",
     "shares": "shareCount",
 }
+PLAYER_COUNTERS = {
+    "likes": "video-player-digg",
+    "comments": "feed-comment-icon",
+    "favorites": "video-player-collect",
+    "shares": "video-player-share",
+}
+VERIFICATION_TITLES = {"验证码中间页", "抖音安全验证", "安全验证 - 抖音"}
 UNAVAILABLE = re.compile(
     r"(?:你要观看的|您要观看的|该)?(?:作品|视频|图文)(?:已被删除|已删除|不存在|已下架|已失效|已设为私密|仅作者可见|仅自己可见|已不可见)[。！!]?"
 )
@@ -136,6 +144,45 @@ def work_metrics(props):
             if type(stats.get(key)) is int and 0 <= stats[key] < 2**63}
 
 
+def player_metrics(page):
+    counts = page.evaluate("""(selectors) => {
+        const visible = (node) => node.getClientRects().length > 0 && getComputedStyle(node).visibility === 'visible';
+        const players = [...document.querySelectorAll('[data-xgplayerid]')].filter(visible);
+        const matches = [];
+        for (const player of players) {
+            let scope = player;
+            for (let depth = 0; depth < 3 && scope && scope !== document.body; depth++, scope = scope.parentElement) {
+                if (players.some(other => other !== player && scope.contains(other))) break;
+                const nodes = Object.entries(selectors).map(([name, selector]) =>
+                    [name, [...scope.querySelectorAll(`[data-e2e="${selector}"]`)].filter(visible)]);
+                if (nodes.some(([, controls]) => controls.length > 1)) break;
+                if (nodes.every(([, controls]) => controls.length === 1)) {
+                    matches.push(Object.fromEntries(nodes.map(([name, [node]]) => [name, node.innerText.trim()])));
+                    break;
+                }
+            }
+        }
+        return matches.length === 1 ? matches[0] : {};
+    }""", PLAYER_COUNTERS)
+    if not isinstance(counts, dict):
+        return {}, {}
+    metrics, labels = {}, {}
+    for name in PLAYER_COUNTERS:
+        label = counts.get(name, "")
+        if name == "comments" and label == "抢首评":
+            metrics[name] = 0
+            continue
+        match = re.fullmatch(r"(\d{1,15}(?:\.\d{1,4})?)\s*([万亿]?)\s*(\+?)", label.replace(",", ""))
+        if match:
+            number, unit, plus = match.groups()
+            value = Decimal(number) * {"": 1, "万": 10_000, "亿": 100_000_000}[unit]
+            if value == value.to_integral_value() and 0 <= value < 2**53:
+                metrics[name] = int(value)
+                if unit or plus:
+                    labels[name] = label
+    return metrics, labels
+
+
 def publication_time(value):
     if isinstance(value, str) and re.fullmatch(r"[0-9]{1,13}", value):
         value = int(value)
@@ -198,6 +245,25 @@ def post_from_url(url):
     return POST.fullmatch(urlsplit(canonical_link(url) or "").path)
 
 
+def dismiss_douyin_login(page):
+    from playwright.sync_api import TimeoutError
+
+    header = page.locator("#login-panel-new #douyin_login_comp_flat_panel_header:visible").filter(
+        has_text="登录后免费畅享高清视频"
+    )
+    close = header.locator("div:has(> svg):visible")
+    for attempt in range(2):
+        if close.count() != 1:
+            return bool(attempt and not header.is_visible())
+        try:
+            close.click(timeout=1500)
+            header.wait_for(state="hidden", timeout=1500)
+            return True
+        except TimeoutError:
+            continue
+    return False
+
+
 def snapshot(page, link, expected_post_id=None):
     if platform_from_link(link) == "xiaohongshu":
         from xiaohongshu import note_snapshot
@@ -208,14 +274,14 @@ def snapshot(page, link, expected_post_id=None):
     try:
         detail_requests = []
         page.on("requestfinished", lambda request: detail_requests.append(request) if video_detail_request(request) else None)
-        response = page.goto(link, wait_until="domcontentloaded", timeout=22000)
+        response = page.goto(link, wait_until="commit", timeout=22000)
         if (response and response.status == 429
                 and urlsplit(response.url).hostname in {"www.douyin.com", "v.douyin.com"}):
             raise rate_limit_error(response)
         post = post_from_url(page.url)
         if not post:
             try:
-                page.wait_for_url(lambda url: post_from_url(url) is not None, wait_until="domcontentloaded", timeout=5000)
+                page.wait_for_url(lambda url: post_from_url(url) is not None, wait_until="commit", timeout=5000)
             except TimeoutError as exc:
                 raise CheckError("抖音页面暂未定位到作品，待确认", category="navigation") from exc
             post = post_from_url(page.url)
@@ -232,25 +298,43 @@ def snapshot(page, link, expected_post_id=None):
                 raise CheckError(message, "unavailable", category="page_unavailable", post_id=post[2])
             category = "transport" if response.status >= 500 or response.status == 403 else None
             raise CheckError(f"{message}，待确认", category=category)
-        if page.title().strip() in {"验证码中间页", "抖音安全验证", "安全验证 - 抖音"}:
-            raise CheckError("抖音要求安全验证，等待下次核查", category="verification")
+        page.locator("body").wait_for(state="attached", timeout=4000)
+        dismiss_douyin_login(page)
+        page_title = page.title().strip()
         script_selector = "script:not([src])"
         read_scripts = "(nodes) => nodes.map(n => n.textContent.trimStart()).filter(s => s.startsWith('self.__pace_f.push(') && s.includes('awemeId'))"
         props = work_props(page.locator(script_selector).evaluate_all(read_scripts), post[2])
-        if not props:
+        if len(work_metrics(props)) != len(FIELDS) and page_title not in VERIFICATION_TITLES:
             try:
-                page.get_by_text(UNAVAILABLE).or_(page.locator('[data-e2e="video-player-digg"]')).first.wait_for(timeout=3000)
+                page.get_by_text(UNAVAILABLE).or_(page.locator('[data-e2e="video-player-digg"]')).first.wait_for(timeout=8000)
             except TimeoutError:
                 pass
-            props = work_props(page.locator(script_selector).evaluate_all(read_scripts), post[2])
-        if not props and (post[1] == "video" or detail_requests):
+            dismiss_douyin_login(page)
+            props = work_props(page.locator(script_selector).evaluate_all(read_scripts), post[2]) or props
+            page_title = page.title().strip()
+        metrics = work_metrics(props)
+        visible, labels = player_metrics(page) if len(metrics) != len(FIELDS) else ({}, {})
+        if page_title in VERIFICATION_TITLES and not props and len(visible) != len(FIELDS):
+            raise CheckError("抖音要求安全验证，等待下次核查", category="verification")
+        if (not props and len(visible) != len(FIELDS) and (post[1] == "video" or detail_requests)):
             props = video_props(page, detail_requests, post[2])
+            metrics = work_metrics(props)
+            if len(metrics) != len(FIELDS):
+                dismiss_douyin_login(page)
+                visible, labels = player_metrics(page)
+        if any(key not in metrics and key not in visible for key in FIELDS):
+            labels = {}
+        else:
+            labels = {key: label for key, label in labels.items() if key not in metrics}
+            metrics = {**visible, **metrics}
+        current = post_from_url(page.url)
+        if not current or current[2] != post[2]:
+            raise CheckError("抖音跳转到其他作品，待确认", category="navigation")
         status = props.get("status") or {}
         if status.get("isDelete") is True or status.get("isDeleted") is True:
             raise CheckError("抖音返回作品已删除", "unavailable")
         if props.get("isPrivate") is True or status.get("isPrivate") is True:
             raise CheckError("抖音返回作品为私密", "unavailable")
-        metrics = work_metrics(props)
         if len(metrics) != len(FIELDS):
             if not (props.get("video") or props.get("images")):
                 body = page.locator("body").inner_text(timeout=4000)
@@ -262,13 +346,14 @@ def snapshot(page, link, expected_post_id=None):
         author = props.get("authorInfo") or {}
         account = author.get("uniqueId") or author.get("unique_id") or author.get("shortId") or author.get("short_id")
         uid = author.get("uid")
-        title = props.get("desc") or page.title().removesuffix(" - 抖音")
+        title = props.get("desc") or (page_title.removesuffix(" - 抖音") if page_title not in VERIFICATION_TITLES else "")
         return {
             "post_id": post[2], "url": final, "title": title[:400],
             "published_at": publication_time(props.get("createTime")),
             "author": (author.get("nickname") or "")[:100],
             "creator_id": str(account)[:100] if account and str(account) != "0" else None,
             "creator_uid": str(uid)[:100] if uid and str(uid) != "0" else None,
+            **({"metric_labels": labels} if labels else {}),
             **metrics,
         }
     except TimeoutError as exc:
