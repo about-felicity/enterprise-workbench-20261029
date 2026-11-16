@@ -6,10 +6,32 @@ from pathlib import Path
 import sqlite3
 import time
 import uuid
+from urllib.parse import urlsplit
 
 from unattended_core import Queue as LegacyQueue, DataError, parse_blocks, unpack_meta, is_transient_error
 
 PROTOCOL='question-only-v1'
+
+def native_search_source(item):
+    card = item.get('text_card')
+    if isinstance(card, dict):
+        return {**{key: card.get(key) for key in ('index', 'title', 'url', 'doc_id')}, 'native_source': card}
+    card = item.get('video_card')
+    if isinstance(card, dict):
+        for key in ('main_site_url', 'host_page_url'):
+            url = card.get(key)
+            if not isinstance(url, str):
+                continue
+            try:
+                parsed = urlsplit(url)
+                if parsed.scheme in ('http', 'https') and parsed.hostname:
+                    caption = card.get('video_captions')
+                    return {'index': card.get('index'), 'title': caption if isinstance(caption, str) else '',
+                            'url': url, 'doc_id': card.get('item_id') or card.get('id'), 'native_source': card}
+            except ValueError:
+                continue
+    raise DataError('Unsupported source card')
+
 
 def optional_auth_widget(block):
     """Recognize the finished native account-link UI, never a citation or prose."""
@@ -347,10 +369,7 @@ def lookup_bound(task,binding):
                 if not isinstance(text,str):raise DataError('Invalid text block')
                 body.append(text)
             search=content.get('search_query_result_block',{});queries.extend(search.get('queries',[]))
-            for item in search.get('results',[]):
-                card=item.get('text_card')
-                if not isinstance(card,dict):raise DataError('Unsupported source card')
-                sources.append({**{k:card.get(k) for k in ('index','title','url','doc_id')},'native_source':card})
+            sources.extend(native_search_source(item) for item in search.get('results',[]))
             for meta in block.get('meta_info',[]):
                 info=unpack_meta(meta.get('info',''))
                 if info.get('url'):citations.append({k:info.get(k) for k in ('pos','title','url','doc_id','insert_text','summary')})

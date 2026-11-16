@@ -106,14 +106,8 @@ class Android:
     def wait_for_chat(self, create, timeout):
         end = time.monotonic() + timeout
         while time.monotonic() < end:
-            message = self.device(resourceId='com.android.permissioncontroller:id/permission_message')
-            if message.exists:
-                text = message.get_text()
-                # Only dismiss this observed optional notification prompt.
-                # Login/verification and other permissions require attention.
-                if '豆包' in text and ('notifications' in text.lower() or '通知' in text):
-                    if self.dismiss_notification_prompt():
-                        continue
+            if self.dismiss_optional_permission_prompt():
+                continue
             if create.exists:
                 return True
             if self.is_empty_landing(self.device.dump_hierarchy()):
@@ -121,11 +115,13 @@ class Android:
             time.sleep(.5)
         return False
 
-    def dismiss_notification_prompt(self):
+    def dismiss_optional_permission_prompt(self):
         message=self.device(resourceId='com.android.permissioncontroller:id/permission_message')
         if not message.exists:return False
         text=message.get_text()
-        if '豆包' not in text or not ('notifications' in text.lower() or '通知' in text):return False
+        # Text-only collection needs neither notifications nor microphone access.
+        if '豆包' not in text or not any(label in text.lower() for label in ('notifications', '通知', 'record audio', '录制音频')):
+            return False
         for name in ('permission_deny_button','permission_deny_and_dont_ask_again_button'):
             button=self.device(resourceId='com.android.permissioncontroller:id/'+name)
             if button.exists:

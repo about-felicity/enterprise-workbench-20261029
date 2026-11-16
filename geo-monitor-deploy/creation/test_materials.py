@@ -58,6 +58,19 @@ class MaterialTests(unittest.TestCase):
   now=datetime(2026,10,20,2,tzinfo=materials.ZONE)
   self.assertEqual(materials.next_day(cfg,'2026-10-20',now),'2026-10-20')
   self.assertTrue((materials.ROOT/'days/2026-10-19/config.json').exists())
+ def test_old_verification_does_not_block_due_daily_capture(self):
+  old='2026-10-19';today='2026-10-20';folder=materials.ROOT/'days'/old
+  materials.atomic_json(folder/'config.json',{'questions':['旧问题'],'channels':['wenxin_card']})
+  blocked=folder/'blocked-wenxin_card.json'
+  materials.atomic_json(blocked,{'kind':'verification_required'})
+  cfg={'enabled':True,'frequency':'daily','start_date':old,'time':'01:00'}
+  now=datetime(2026,10,20,2,tzinfo=materials.ZONE)
+  self.assertEqual(materials.next_day(cfg,today,now),today)
+  self.assertEqual(materials.next_day(cfg,today,now.replace(hour=0)),old)
+  self.assertEqual(materials.next_day({**cfg,'requested_day':old},today,now),old)
+  blocked.unlink()
+  self.assertEqual(materials.next_day(cfg,today,now),old)
+
  def test_recovery_progress_reports_safe_fields_without_captcha_urls(self):
   import sqlite3
   folder=materials.ROOT/'days/2026-10-20/wenxin_card/collector';folder.mkdir(parents=True)

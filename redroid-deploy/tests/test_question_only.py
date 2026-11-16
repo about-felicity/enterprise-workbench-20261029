@@ -16,6 +16,15 @@ def blocks(text,finished=True):
 
 
 class Tests(unittest.TestCase):
+    def test_native_video_source_keeps_the_public_page_and_original_card(self):
+        from question_only_core import native_search_source
+        card={'main_site_url':'https://www.iesdouyin.com/share/video/42/',
+              'index':2,'item_id':'42','video_captions':'试用对比'}
+        self.assertEqual(native_search_source({'video_card':card}),{
+            'url':card['main_site_url'],'index':2,'doc_id':'42','title':'试用对比','native_source':card})
+        with self.assertRaises(DataError):
+            native_search_source({'video_card':{'app_jump_url':'snssdk://video/42'}})
+
     def test_uncertain_send_quarantine_only_records_the_transition_once(self):
         from uncertain_send_quarantine import quarantine,valid
         with tempfile.TemporaryDirectory() as tmp:

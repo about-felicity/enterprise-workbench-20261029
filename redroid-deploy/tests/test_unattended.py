@@ -61,7 +61,11 @@ class FreshChatTests(unittest.TestCase):
                    'permission_deny_and_dont_ask_again_button':permanent}
         android.device=lambda **kwargs:selectors[kwargs['resourceId'].rsplit('/',1)[1]]
         android.tap=Mock()
-        self.assertTrue(android.dismiss_notification_prompt())
+        self.assertTrue(android.dismiss_optional_permission_prompt())
+        android.tap.assert_called_once_with(permanent)
+        message.get_text.return_value='Allow 豆包 to record audio?'
+        android.tap.reset_mock()
+        self.assertTrue(android.dismiss_optional_permission_prompt())
         android.tap.assert_called_once_with(permanent)
 
     def test_old_failed_chat_with_input_is_rejected(self):

@@ -91,11 +91,13 @@ def database_counts(day):
     with _lock:
         cached=_cache.get(day)
         if cached and time.time()-cached[0]<3:return cached[1]
+        batch_day=day.replace('-','')
         sql="""select coalesce(json_agg(t),'[]') from (
           select e.source_device,coalesce(nullif(e.record->>'prompt',''),e.record->'capture_result'->>'question',e.record->>'question') question,coalesce(e.record->>'batch_id','') batch,count(*) n
           from monitor_ingest_events e join monitor_runs r on r.model_id=e.model_id and r.run_id=e.run_id
-          where e.run_id<>'' and r.day='%s' and r.status='success' and coalesce(r.payload->>'body_capture_complete','true')='true'
-          and e.source_device in (%s) group by 1,2,3)t"""%(day,','.join("'"+s+"'" for s in DEVICES))
+          where e.run_id<>'' and (r.day='%s' or (r.day>'%s' and e.record->>'batch_id' ~ '^geo-panel-[a-z0-9-]+-%s-'))
+          and r.status='success' and coalesce(r.payload->>'body_capture_complete','true')='true'
+          and e.source_device in (%s) group by 1,2,3)t"""%(day,day,batch_day,','.join("'"+s+"'" for s in DEVICES))
         rows=json.loads(subprocess.check_output(['docker','exec','monitor-postgres','psql','-U','monitor_app','-d','monitor','-Atc',sql],text=True,timeout=12))
         result={model:{} for model in MODELS}
         for row in rows:

@@ -232,12 +232,20 @@ def main_busy():
 
 def next_day(cfg,today,now=None):
  if cfg.get('requested_day'):return cfg['requested_day']
- if cfg.get('day_policy')=='today_first' and cfg.get('frequency')=='daily' and today>=cfg['start_date'] and (now or datetime.now(ZONE)).strftime('%H:%M')>=cfg.get('time','01:00'):return today
+ daily_due=(cfg.get('frequency')=='daily' and today>=cfg['start_date']
+            and (now or datetime.now(ZONE)).strftime('%H:%M')>=cfg.get('time','01:00'))
+ if cfg.get('day_policy')=='today_first' and daily_due:return today
  for path in sorted((ROOT/'days').glob('*/config.json')):
   day=path.parent.name
   if day>today or cfg.get('paused_day')==day:continue
-  plan=read(path);counts={v['id']:v.get('settled',v['completed']) for v in progress(day)}
-  if any(counts[m]<len(plan['questions'])*plan.get('rounds',1) for m in capture_channels(plan.get('channels'))):return day
+  plan=read(path)
+  target=len(plan['questions'])*plan.get('rounds',1)
+  channels=plan.get('channels',CHANNELS)
+  pending=[lane for lane in progress(day) if lane['id'] in channels and lane.get('settled',lane['completed'])<target]
+  if not pending:continue
+  # A past day that requires human verification cannot block a new daily run.
+  if day<today and cfg.get('enabled') and daily_due and all(lane.get('blocked') for lane in pending):continue
+  return day
  return cfg['start_date'] if cfg.get('frequency')=='once' else today
 
 def capture_snapshot(target,cfg,owner):
