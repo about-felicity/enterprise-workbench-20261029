@@ -12,7 +12,7 @@ from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 import service
-from collector import dismiss_douyin_login, links_from_text, rate_limit_error, snapshot
+from collector import dismiss_douyin_login, links_from_text, rate_limit_error, resolve_douyin_short, snapshot
 from xiaohongshu import note_from_html, note_metrics, share_error
 
 
@@ -226,6 +226,59 @@ class VideoServiceTests(unittest.TestCase):
         row = self.work()
         self.assertEqual(row["availability"], "available")
         self.assertEqual(row["next_check_at"], int((at + service.CHECK_INTERVAL).timestamp()))
+
+    def test_redirect_identity_is_saved_without_confirming_video_availability(self):
+        short = "https://v.douyin.com/shareTest/"
+        post_id = "1234567890123456790"
+        address = f"https://www.douyin.com/video/{post_id}"
+        service.add(short)
+        row = self.work()
+        context = Mock()
+        redirect = context.request.get.return_value
+        redirect.status = 302
+        redirect.headers = {"location": f"https://www.iesdouyin.com/share/video/{post_id}/?from=share"}
+        blocked = service.CheckError("抖音要求安全验证", category="verification")
+        with patch.object(service, "read_work", side_effect=blocked) as read:
+            with self.assertRaises(service.CheckError) as checked:
+                service.check_work(row, context)
+        context.request.get.assert_called_once_with(short, max_redirects=0, timeout=5000)
+        read.assert_called_once_with(context, address, post_id)
+        service.save_check_error(row, checked.exception)
+        saved = self.work()
+        self.assertEqual((saved["post_id"], saved["url"]), (post_id, address))
+        self.assertEqual(saved["availability"], "unknown")
+        with closing(service.connect()) as db:
+            self.assertEqual(db.execute("SELECT count(*) FROM snapshots WHERE work_id=?", (row["id"],)).fetchone()[0], 0)
+
+    def test_site_redirect_cannot_bind_a_third_party_url(self):
+        context = Mock()
+        response = context.request.get.return_value
+        response.status = 302
+        response.headers = {"location": "https://example.com/share/video/1234567890123456789/"}
+        self.assertIsNone(resolve_douyin_short(context, "https://v.douyin.com/example/"))
+
+    def test_navigation_timeout_keeps_known_short_link_redirect(self):
+        from playwright.sync_api import TimeoutError
+
+        short = "https://v.douyin.com/shareTest/"
+        post_id = "1234567890123456790"
+        page = Mock()
+        listeners = {}
+        page.on.side_effect = listeners.__setitem__
+
+        def redirect_then_timeout(*args, **kwargs):
+            response = Mock(url=short, status=302)
+            response.request.frame = page.main_frame
+            response.request.is_navigation_request.return_value = True
+            response.headers = {"location": f"https://www.iesdouyin.com/share/video/{post_id}/"}
+            listeners["response"](response)
+            raise TimeoutError("destination did not load")
+
+        page.goto.side_effect = redirect_then_timeout
+        with self.assertRaises(service.CheckError) as checked:
+            snapshot(page, short)
+        self.assertEqual(checked.exception.category, "timeout")
+        self.assertEqual(checked.exception.post_url, f"https://www.douyin.com/video/{post_id}")
 
     def test_login_dismissal_clicks_only_one_known_close_button(self):
         page = Mock()

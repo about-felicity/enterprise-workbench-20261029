@@ -16,7 +16,7 @@ import time
 from urllib.parse import parse_qs, urlsplit
 
 from collector import (CHINA, CheckError, canonical_link, links_from_text, platform_from_link,
-                       snapshot, xhs_has_token, xhs_post_id)
+                       post_from_url, resolve_douyin_short, snapshot, xhs_has_token, xhs_post_id)
 from check_budget import CheckBudget
 
 
@@ -434,7 +434,7 @@ def claim_work():
         return row
 
 
-def save(row, result=None, error=None, availability="unknown", *, retry_interval=None):
+def save(row, result=None, error=None, availability="unknown", *, retry_interval=None, resolved_url=None):
     at = now()
     with closing(connect()) as db, db:
         db.execute("BEGIN IMMEDIATE")
@@ -443,6 +443,12 @@ def save(row, result=None, error=None, availability="unknown", *, retry_interval
         if not current or current["input_url"] != row["input_url"]:
             return
         platform = current["platform"]
+        if not result and resolved_url and platform == "douyin" and (post := post_from_url(resolved_url)):
+            db.execute("""
+                UPDATE OR IGNORE works
+                SET post_id = ?, url = ?
+                WHERE id = ? AND (post_id IS NULL OR post_id = ?)
+            """, (post[2], canonical_link(resolved_url), current["id"], post[2]))
         if result:
             result = {**result, "post_id": stored_post_id(platform, result["post_id"])}
             other = db.execute("SELECT id, entry_day, url FROM works WHERE post_id = ? AND id <> ?",
@@ -562,9 +568,19 @@ def check_work(row, context, mobile_options=None):
     link = row["url"] or row["input_url"]
     platform = row["platform"]
     expected_post_id = public_post_id(row["post_id"])
+    resolved_url = None
+    if platform == "douyin" and not row["url"] and urlsplit(link).netloc == "v.douyin.com":
+        resolved_url = resolve_douyin_short(context, link)
+        if resolved_url:
+            resolved_id = post_from_url(resolved_url)[2]
+            if expected_post_id and expected_post_id != resolved_id:
+                raise CheckError("抖音短链跳转到其他作品，待确认", category="navigation")
+            link, expected_post_id = resolved_url, resolved_id
     try:
         return read_work(context, link, expected_post_id)
     except CheckError as first:
+        resolved_url = resolved_url or first.post_url
+        first.post_url = resolved_url
         page_unavailable = first.category == "page_unavailable"
         confirm_change = row["pending"] or row["availability"] != "unavailable"
         if first.category in {"transport", "timeout", "rate_limit", "verification"}:
@@ -572,9 +588,10 @@ def check_work(row, context, mobile_options=None):
         if first.availability != "unknown" and not (page_unavailable and confirm_change):
             raise
         LOG.info("Video check retry for work %s: %s", row["id"], first)
-        expected_post_id = expected_post_id or first.post_id
+        resolved_post = post_from_url(resolved_url) if resolved_url else None
+        expected_post_id = expected_post_id or first.post_id or (resolved_post[2] if resolved_post else None)
         if expected_post_id and first.category in {"navigation", "detail", "page_unavailable", "share_unavailable"}:
-            link = row["input_url"]
+            link = resolved_url if first.category == "navigation" and resolved_url else row["input_url"]
         time.sleep(2)
         if time.time() < BROWSER_BUDGET.paused_until(platform):
             if page_unavailable:
@@ -586,8 +603,10 @@ def check_work(row, context, mobile_options=None):
             try:
                 return read_work(retry_context, link, expected_post_id)
             except CheckError as retry:
+                if resolved_url:
+                    retry.post_url = resolved_url
                 if confirm_change and retry.category == "page_unavailable" and not page_unavailable:
-                    raise CheckError(f"{retry}，待复核", category="detail") from retry
+                    raise CheckError(f"{retry}，待复核", category="detail", post_url=resolved_url) from retry
                 raise
 
 
@@ -610,7 +629,7 @@ def save_check_error(row, error):
         if row["availability"] != "unavailable":
             LOG.info("Video unavailable confirmed for work %s: %s", row["id"], error)
     interval = CHECK_INTERVAL if error.category == "verification" else None
-    save(row, error=str(error), availability=error.availability, retry_interval=interval)
+    save(row, error=str(error), availability=error.availability, retry_interval=interval, resolved_url=error.post_url)
 
 
 class BrowserCheckInterrupted(RuntimeError):
@@ -630,7 +649,7 @@ def browser_process(connection):
             try:
                 connection.send((check_work(row, context, mobile_options), None))
             except CheckError as exc:
-                connection.send((None, (str(exc), exc.availability, exc.category, exc.retry_after)))
+                connection.send((None, (str(exc), exc.availability, exc.category, exc.retry_after, exc.post_url)))
 
 
 @contextmanager
@@ -669,8 +688,8 @@ def checked_by_browser(connection, row):
     except (EOFError, OSError) as exc:
         raise BrowserCheckInterrupted("无头浏览器连接中断，等待下次核查") from exc
     if error:
-        message, availability, category, retry_after = error
-        raise CheckError(message, availability, category=category, retry_after=retry_after)
+        message, availability, category, retry_after, post_url = error
+        raise CheckError(message, availability, category=category, retry_after=retry_after, post_url=post_url)
     return result
 
 

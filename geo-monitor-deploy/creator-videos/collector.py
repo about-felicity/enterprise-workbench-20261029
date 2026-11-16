@@ -9,6 +9,7 @@ from urllib.parse import parse_qsl, urlencode, urlsplit
 
 POST = re.compile(r"/(note|video)/(\d{15,24})/?")
 SHORT = re.compile(r"/[a-zA-Z0-9_-]{3,40}/?")
+DOUYIN_SHARE_POST = re.compile(r"/share/(note|video)/(\d{15,24})/?")
 URL = re.compile(r"https://[^\s<>，。；、\]\)]+")
 XHS_HOSTS = {"www.xiaohongshu.com", "xiaohongshu.com", "m.xiaohongshu.com"}
 XHS_SHORT_HOSTS = {"xhslink.com", "www.xhslink.com"}
@@ -34,12 +35,13 @@ CHINA = timezone(timedelta(hours=8))
 
 
 class CheckError(ValueError):
-    def __init__(self, message, availability="unknown", *, category=None, retry_after=None, post_id=None):
+    def __init__(self, message, availability="unknown", *, category=None, retry_after=None, post_id=None, post_url=None):
         super().__init__(message)
         self.availability = availability
         self.category = category
         self.retry_after = retry_after
         self.post_id = post_id
+        self.post_url = post_url
 
 
 def rate_limit_error(response, label="抖音"):
@@ -245,6 +247,38 @@ def post_from_url(url):
     return POST.fullmatch(urlsplit(canonical_link(url) or "").path)
 
 
+def douyin_redirect(response):
+    if response.status not in (301, 302, 303, 307, 308):
+        return None
+    target = response.headers.get("location", "")
+    if post_from_url(target):
+        return canonical_link(target)
+    try:
+        url = urlsplit(target)
+    except ValueError:
+        return None
+    shared = DOUYIN_SHARE_POST.fullmatch(url.path)
+    if url.scheme == "https" and url.netloc == "www.iesdouyin.com" and shared:
+        return f"https://www.douyin.com/{shared[1]}/{shared[2]}"
+    return None
+
+
+def resolve_douyin_short(context, link):
+    """Read the short link's first redirect without loading the destination page."""
+    from playwright.sync_api import Error
+
+    try:
+        response = context.request.get(link, max_redirects=0, timeout=5000)
+    except Error:
+        return None
+    try:
+        if response.status == 429:
+            raise rate_limit_error(response)
+        return douyin_redirect(response)
+    finally:
+        response.dispose()
+
+
 def dismiss_douyin_login(page):
     from playwright.sync_api import TimeoutError
 
@@ -271,6 +305,19 @@ def snapshot(page, link, expected_post_id=None):
         return note_snapshot(page, link, expected_post_id)
     from playwright.sync_api import Error, TimeoutError
 
+    redirected_url = None
+    if urlsplit(link).netloc == "v.douyin.com":
+        def record_redirect(response):
+            nonlocal redirected_url
+            if canonical_link(response.url) != link or not response.request.is_navigation_request():
+                return
+            if response.request.frame != page.main_frame:
+                return
+            target = douyin_redirect(response)
+            if target and (not expected_post_id or post_from_url(target)[2] == expected_post_id):
+                redirected_url = target
+
+        page.on("response", record_redirect)
     try:
         detail_requests = []
         page.on("requestfinished", lambda request: detail_requests.append(request) if video_detail_request(request) else None)
@@ -288,7 +335,7 @@ def snapshot(page, link, expected_post_id=None):
             if not post:
                 raise CheckError("抖音页面暂未定位到作品，待确认", category="navigation")
         final = canonical_link(page.url)
-        requested_post = post_from_url(link)
+        requested_post = post_from_url(redirected_url or link)
         expected_post_id = expected_post_id or (requested_post[2] if requested_post else None)
         if expected_post_id and post[2] != expected_post_id:
             raise CheckError("抖音跳转到其他作品，待确认", category="navigation")
@@ -315,7 +362,7 @@ def snapshot(page, link, expected_post_id=None):
         metrics = work_metrics(props)
         visible, labels = player_metrics(page) if len(metrics) != len(FIELDS) else ({}, {})
         if page_title in VERIFICATION_TITLES and not props and len(visible) != len(FIELDS):
-            raise CheckError("抖音要求安全验证，等待下次核查", category="verification")
+            raise CheckError("抖音要求安全验证，互动数据待复查", category="verification", post_id=post[2], post_url=final)
         if (not props and len(visible) != len(FIELDS) and (post[1] == "video" or detail_requests)):
             props = video_props(page, detail_requests, post[2])
             metrics = work_metrics(props)
@@ -356,10 +403,14 @@ def snapshot(page, link, expected_post_id=None):
             **({"metric_labels": labels} if labels else {}),
             **metrics,
         }
+    except CheckError as exc:
+        if not exc.post_url:
+            exc.post_url = redirected_url
+        raise
     except TimeoutError as exc:
-        raise CheckError("无头浏览器读取超时，待确认", category="timeout") from exc
+        raise CheckError("无头浏览器读取超时，待确认", category="timeout", post_url=redirected_url) from exc
     except Error as exc:
         network_error = re.search(r"\bnet::(ERR_[A-Z0-9_]+)\b", str(exc).partition("\n")[0])
         if network_error:
-            raise CheckError(f"抖音页面连接失败（{network_error[1]}），待确认", category="transport") from exc
-        raise CheckError("无头浏览器读取失败，待确认", category="transport") from exc
+            raise CheckError(f"抖音页面连接失败（{network_error[1]}），待确认", category="transport", post_url=redirected_url) from exc
+        raise CheckError("无头浏览器读取失败，待确认", category="transport", post_url=redirected_url) from exc
