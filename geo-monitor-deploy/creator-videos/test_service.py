@@ -122,11 +122,17 @@ class VideoServiceTests(unittest.TestCase):
         context.browser.new_context.assert_called_once_with(**mobile_options)
         self.assertEqual([call.args for call in read.call_args_list], [(context, link, note_id), (mobile, link, note_id)])
 
-    def test_browser_watchdog_detects_stalled_checks_and_browser_cleanup(self):
-        with patch.object(service, 'BROWSER_PROGRESS', {1: (100, 262), 2: (170, None), 3: (200, 12)}):
-            self.assertEqual(service.stalled_browser_work(219), [])
-            self.assertEqual(service.stalled_browser_work(220), [262])
-            self.assertEqual(service.stalled_browser_work(290), [262, None])
+    def test_browser_timeout_records_only_the_claimed_work_and_releases_it(self):
+        self.check(service.now(), result=self.accessible_result())
+        service.refresh(self.row["id"])
+        connection = Mock()
+        connection.poll.return_value = False
+        with patch.object(service, "browser_session", return_value=nullcontext(connection)):
+            service.collect_batch()
+        self.assertEqual(service.CLAIMED, set())
+        self.assertEqual(self.work()["availability"], "available")
+        self.assertEqual(self.work()["last_check_status"], "unknown")
+        self.assertIn("超时", self.work()["last_error"])
 
     def test_transient_failure_preserves_last_verified_state_and_daily_result(self):
         confirmed = datetime.fromisoformat("2026-11-11T11:30:00+08:00")
@@ -197,12 +203,30 @@ class VideoServiceTests(unittest.TestCase):
                                  [(context, row["url"], row["post_id"]), (retry_context, row["input_url"], row["post_id"])])
 
     def test_transport_timeout_and_rate_limit_do_not_immediately_open_another_page(self):
-        for category in ("transport", "timeout", "rate_limit"):
+        for category in ("transport", "timeout", "rate_limit", "verification"):
             with self.subTest(category=category), patch.object(service, "read_work", side_effect=
                     service.CheckError("temporary failure", category=category)) as read:
                 with self.assertRaises(service.CheckError):
                     service.check_work(self.row, Mock())
                 read.assert_called_once()
+
+    def test_douyin_verification_page_preserves_availability_and_waits_for_regular_recheck(self):
+        page = Mock()
+        page.url = self.row["input_url"]
+        page.goto.return_value = Mock(status=200, url=page.url)
+        page.title.return_value = "验证码中间页"
+        with self.assertRaises(service.CheckError) as caught:
+            snapshot(page, page.url)
+        self.assertEqual(caught.exception.category, "verification")
+        self.assertEqual(caught.exception.availability, "unknown")
+        page.locator.assert_not_called()
+        at = service.now()
+        self.check(at, result=self.accessible_result())
+        with patch.object(service, "now", return_value=at):
+            service.save_check_error(self.row, caught.exception)
+        row = self.work()
+        self.assertEqual(row["availability"], "available")
+        self.assertEqual(row["next_check_at"], int((at + service.CHECK_INTERVAL).timestamp()))
 
     def test_single_unavailable_page_uses_the_share_link_before_changing_status(self):
         row = {**self.row, "availability": "available", "pending": 0, "post_id": "1234567890123456789",

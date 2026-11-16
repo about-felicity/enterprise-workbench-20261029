@@ -6,6 +6,7 @@ from pathlib import Path
 import json
 import logging
 from math import ceil
+import multiprocessing
 import os
 import re
 import sqlite3
@@ -27,12 +28,11 @@ UNRESOLVED_RETRY_INTERVAL = timedelta(minutes=5)
 MANUAL_PRIORITY_SECONDS = 60
 TRANSPORT_FAILURE_WINDOW = 90
 TRANSPORT_PAUSE_SECONDS = 60
-BROWSER_STALL_SECONDS = 120
+BROWSER_CHECK_SECONDS = 75
 BROWSER_CONTEXT_OPTIONS = {"locale": "zh-CN", "timezone_id": "Asia/Shanghai"}
 LOG = logging.getLogger(__name__)
 CLAIM_LOCK = threading.Lock()
 CLAIMED = set()
-BROWSER_PROGRESS = {}
 CHECK_TIMES = deque(maxlen=256)
 BROWSER_BUDGET = CheckBudget(os.environ.get("CREATOR_VIDEO_SLOT_DIR"),
                              os.environ.get("CREATOR_VIDEO_LEDGER", "creator"))
@@ -434,7 +434,7 @@ def claim_work():
         return row
 
 
-def save(row, result=None, error=None, availability="unknown"):
+def save(row, result=None, error=None, availability="unknown", *, retry_interval=None):
     at = now()
     with closing(connect()) as db, db:
         db.execute("BEGIN IMMEDIATE")
@@ -516,7 +516,8 @@ def save(row, result=None, error=None, availability="unknown"):
         if availability == "unknown":
             previous = db.execute("SELECT check_failures FROM works WHERE id = ?", (row["id"],)).fetchone()[0]
             failures = min(previous + 1, CHECK_INTERVAL // UNRESOLVED_RETRY_INTERVAL)
-        interval = min(CHECK_INTERVAL, UNRESOLVED_RETRY_INTERVAL * failures) if failures else CHECK_INTERVAL
+        interval = retry_interval or (min(CHECK_INTERVAL, UNRESOLVED_RETRY_INTERVAL * failures)
+                                      if failures else CHECK_INTERVAL)
         db.execute("""
             UPDATE works SET pending = 0, last_attempt = :at, last_error = :error,
                 last_check_status = :status, check_failures = :failures, next_check_at = :next_at,
@@ -550,8 +551,8 @@ def route_check_request(route):
 
 
 @contextmanager
-def check_context(browser):
-    with browser.new_context(**BROWSER_CONTEXT_OPTIONS) as context:
+def check_context(browser, options=None):
+    with browser.new_context(**(options if options is not None else BROWSER_CONTEXT_OPTIONS)) as context:
         context.route("**/*", route_check_request)
         yield context
 
@@ -565,7 +566,7 @@ def check_work(row, context, mobile_options=None):
     except CheckError as first:
         page_unavailable = first.category == "page_unavailable"
         confirm_change = row["pending"] or row["availability"] != "unavailable"
-        if first.category in {"transport", "timeout", "rate_limit"}:
+        if first.category in {"transport", "timeout", "rate_limit", "verification"}:
             raise
         if first.availability != "unknown" and not (page_unavailable and confirm_change):
             raise
@@ -580,7 +581,7 @@ def check_work(row, context, mobile_options=None):
             raise
         # Xiaohongshu can serve a different public note document to mobile browsers.
         retry_options = mobile_options if platform == "xiaohongshu" and mobile_options else BROWSER_CONTEXT_OPTIONS
-        with context.browser.new_context(**retry_options) as retry_context:
+        with check_context(context.browser, retry_options) as retry_context:
             try:
                 return read_work(retry_context, link, expected_post_id)
             except CheckError as retry:
@@ -607,47 +608,86 @@ def save_check_error(row, error):
             cooldown.record_success()
         if row["availability"] != "unavailable":
             LOG.info("Video unavailable confirmed for work %s: %s", row["id"], error)
-    save(row, error=str(error), availability=error.availability)
+    interval = CHECK_INTERVAL if error.category == "verification" else None
+    save(row, error=str(error), availability=error.availability, retry_interval=interval)
 
 
-def mark_browser_progress(work_id):
-    with CLAIM_LOCK:
-        BROWSER_PROGRESS[threading.get_ident()] = (time.monotonic(), work_id)
+class BrowserCheckInterrupted(RuntimeError):
+    pass
 
 
-def stalled_browser_work(at):
-    with CLAIM_LOCK:
-        return [work_id for started, work_id in BROWSER_PROGRESS.values()
-                if at - started >= BROWSER_STALL_SECONDS]
+def browser_process(connection):
+    from playwright.sync_api import sync_playwright
+
+    with connection, sync_playwright() as p, p.chromium.launch(
+        executable_path=os.environ.get("CREATOR_VIDEO_CHROME", "/usr/bin/google-chrome"),
+        headless=True,
+        timeout=20000,
+    ) as browser, check_context(browser) as context:
+        mobile_options = {**p.devices["Pixel 7"], **BROWSER_CONTEXT_OPTIONS}
+        while (row := connection.recv()) is not None:
+            try:
+                connection.send((check_work(row, context, mobile_options), None))
+            except CheckError as exc:
+                connection.send((None, (str(exc), exc.availability, exc.category, exc.retry_after)))
 
 
-def watch_browsers():
-    while True:
-        time.sleep(5)
-        stalled = stalled_browser_work(time.monotonic())
-        if stalled:
-            LOG.error("Video browser stalled for %s; restarting collector to release its slots", stalled)
-            # The work stays due in SQLite. systemd stops all Chrome children
-            # and restarts this ledger, releasing its advisory browser locks.
-            os._exit(1)
+@contextmanager
+def browser_session():
+    # Keep the HTTP service and other browser slots independent of a hung browser.
+    # Use spawn so that no HTTP or SQLite thread locks are inherited by the child.
+    context = multiprocessing.get_context("spawn")
+    parent, child = context.Pipe()
+    process = context.Process(target=browser_process, args=(child,), daemon=True)
+    with parent, child:
+        process.start()
+        child.close()
+        try:
+            yield parent
+        finally:
+            try:
+                parent.send(None)
+            except (EOFError, OSError):
+                pass
+            process.join(3)
+            if process.is_alive():
+                process.terminate()
+                process.join(3)
+            if process.is_alive():
+                process.kill()
+                process.join()
+            process.close()
 
 
-def collect_batch(chromium, mobile_options):
+def checked_by_browser(connection, row):
+    try:
+        connection.send(dict(row))
+        if not connection.poll(BROWSER_CHECK_SECONDS):
+            raise BrowserCheckInterrupted("无头浏览器核查超时，已重启当前核查进程")
+        result, error = connection.recv()
+    except (EOFError, OSError) as exc:
+        raise BrowserCheckInterrupted("无头浏览器连接中断，等待下次核查") from exc
+    if error:
+        message, availability, category, retry_after = error
+        raise CheckError(message, availability, category=category, retry_after=retry_after)
+    return result
+
+
+def collect_batch():
     row = claim_work()
     if row is None:
         return
-    mark_browser_progress(row["id"])
     try:
-        with chromium.launch(
-            executable_path=os.environ.get("CREATOR_VIDEO_CHROME", "/usr/bin/google-chrome"),
-            headless=True,
-        ) as browser, check_context(browser) as context:
+        with browser_session() as connection:
             for index in range(20):
                 if time.time() < BROWSER_BUDGET.paused_until(row["platform"]):
                     break
                 started = time.monotonic()
                 try:
-                    result = check_work(row, context, mobile_options)
+                    result = checked_by_browser(connection, row)
+                except BrowserCheckInterrupted as exc:
+                    save_check_error(row, CheckError(str(exc), category="timeout"))
+                    return
                 except CheckError as exc:
                     save_check_error(row, exc)
                 else:
@@ -660,31 +700,23 @@ def collect_batch(chromium, mobile_options):
                 row = None
                 if index == 19:
                     break
-                mark_browser_progress(None)
                 time.sleep(3)
                 row = claim_work()
                 if row is None:
                     break
-                mark_browser_progress(row["id"])
     finally:
         with CLAIM_LOCK:
-            BROWSER_PROGRESS.pop(threading.get_ident(), None)
             if row is not None:
                 CLAIMED.discard(row["id"])
 
 
 def collect():
-    from playwright.sync_api import sync_playwright
-
     while True:
         try:
-            with sync_playwright() as p:
-                mobile_options = {**p.devices["Pixel 7"], **BROWSER_CONTEXT_OPTIONS}
-                while True:
-                    with BROWSER_BUDGET.browser_slot() as slot:
-                        if slot:
-                            collect_batch(p.chromium, mobile_options)
-                    time.sleep(3)
+            with BROWSER_BUDGET.browser_slot() as slot:
+                if slot:
+                    collect_batch()
+            time.sleep(3)
         except Exception:
             LOG.exception("Creator video collection failed")
             time.sleep(30)
@@ -793,5 +825,4 @@ if __name__ == "__main__":
         raise SystemExit(0)
     for index in range(CHECK_WORKERS):
         threading.Thread(target=collect, name=f"creator-check-{index + 1}", daemon=True).start()
-    threading.Thread(target=watch_browsers, name="video-browser-watchdog", daemon=True).start()
     ThreadingHTTPServer(("127.0.0.1", PORT), Handler).serve_forever()

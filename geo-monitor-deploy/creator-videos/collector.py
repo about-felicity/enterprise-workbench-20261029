@@ -99,6 +99,7 @@ def xhs_has_token(link):
 
 def work_props(scripts, post_id):
     for script in scripts:
+        script = script.lstrip()
         if not script.startswith("self.__pace_f.push("):
             continue
         try:
@@ -124,8 +125,8 @@ def work_props(scripts, post_id):
     return {}
 
 
-def video_detail_response(response):
-    url = urlsplit(response.url)
+def video_detail_request(request):
+    url = urlsplit(request.url)
     return url.netloc.endswith(".douyin.com") and url.path.rstrip("/") == "/aweme/v1/web/aweme/detail"
 
 
@@ -147,21 +148,24 @@ def publication_time(value):
     return datetime.fromtimestamp(value, CHINA).isoformat(timespec="seconds")
 
 
-def video_props(page, responses, post_id):
+def video_props(page, requests, post_id):
     from playwright.sync_api import Error, TimeoutError
 
     deadline = time.monotonic() + 12
     read = 0
     fallback = {}
     while (remaining := deadline - time.monotonic()) > 0:
-        if read == len(responses):
+        if read == len(requests):
             try:
-                page.wait_for_event("response", predicate=video_detail_response, timeout=max(1, int(remaining * 1000)))
+                page.wait_for_event("requestfinished", predicate=video_detail_request,
+                                    timeout=max(1, int(remaining * 1000)))
             except TimeoutError:
                 break
             continue
-        response = responses[read]
+        response = requests[read].response()
         read += 1
+        if not response:
+            continue
         if response.status == 429:
             raise rate_limit_error(response)
         try:
@@ -202,8 +206,8 @@ def snapshot(page, link, expected_post_id=None):
     from playwright.sync_api import Error, TimeoutError
 
     try:
-        detail_responses = []
-        page.on("response", lambda response: detail_responses.append(response) if video_detail_response(response) else None)
+        detail_requests = []
+        page.on("requestfinished", lambda request: detail_requests.append(request) if video_detail_request(request) else None)
         response = page.goto(link, wait_until="domcontentloaded", timeout=22000)
         if (response and response.status == 429
                 and urlsplit(response.url).hostname in {"www.douyin.com", "v.douyin.com"}):
@@ -228,8 +232,10 @@ def snapshot(page, link, expected_post_id=None):
                 raise CheckError(message, "unavailable", category="page_unavailable", post_id=post[2])
             category = "transport" if response.status >= 500 or response.status == 403 else None
             raise CheckError(f"{message}，待确认", category=category)
-        script_selector = "script"
-        read_scripts = "(nodes) => nodes.map(n => n.textContent).filter(s => s.startsWith('self.__pace_f.push(') && s.includes('awemeId'))"
+        if page.title().strip() in {"验证码中间页", "抖音安全验证", "安全验证 - 抖音"}:
+            raise CheckError("抖音要求安全验证，等待下次核查", category="verification")
+        script_selector = "script:not([src])"
+        read_scripts = "(nodes) => nodes.map(n => n.textContent.trimStart()).filter(s => s.startsWith('self.__pace_f.push(') && s.includes('awemeId'))"
         props = work_props(page.locator(script_selector).evaluate_all(read_scripts), post[2])
         if not props:
             try:
@@ -237,8 +243,8 @@ def snapshot(page, link, expected_post_id=None):
             except TimeoutError:
                 pass
             props = work_props(page.locator(script_selector).evaluate_all(read_scripts), post[2])
-        if not props and post[1] == "video":
-            props = video_props(page, detail_responses, post[2])
+        if not props and (post[1] == "video" or detail_requests):
+            props = video_props(page, detail_requests, post[2])
         status = props.get("status") or {}
         if status.get("isDelete") is True or status.get("isDeleted") is True:
             raise CheckError("抖音返回作品已删除", "unavailable")
