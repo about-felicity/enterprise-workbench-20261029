@@ -54,18 +54,33 @@ def output_limit(client, prompt, directory, meta, system_prompt=None):
 
 
 def normalize_answer(answer):
-    if isinstance(answer, dict):
-        if set(answer) == {'draft_markdown', '_comment'}:
-            draft = answer['draft_markdown']
-            if isinstance(draft, str) and isinstance(answer['_comment'], str):
-                heading, _, body = draft.lstrip().partition('\n')
-                if heading.startswith('# ') and heading[2:].strip() and body.strip():
-                    return {'draft_markdown': draft}
+    if not isinstance(answer, dict) or not isinstance(answer.get('draft_markdown'), str):
+        return answer
+    draft = answer['draft_markdown']
+    fields = set(answer)
+    if fields == {'draft_markdown', 'title'}:
+        heading, _, body = draft.lstrip().partition('\n')
+        title = answer['title']
+        if (not isinstance(title, str) or not heading.startswith('# ') or not body.strip()
+                or title.strip() != heading[2:].strip()):
             return answer
-        for note in ('_note', 'draft_markdown_note'):
-            if set(answer) == {'draft_markdown', note} and isinstance(answer[note], str):
-                return {'draft_markdown': answer['draft_markdown']}
-    return answer
+    elif fields == {'draft_markdown', '_comment'}:
+        heading, _, body = draft.lstrip().partition('\n')
+        if (not isinstance(answer['_comment'], str) or not heading.startswith('# ')
+                or not heading[2:].strip() or not body.strip()):
+            return answer
+    elif fields == {'draft_markdown', 'candidate_products'}:
+        heading, _, body = draft.lstrip().partition('\n')
+        candidates = answer['candidate_products']
+        if (not isinstance(candidates, list) or not all(isinstance(item, str) for item in candidates)
+                or not heading.startswith('# ') or not heading[2:].strip() or not body.strip()):
+            return answer
+    elif fields != {'draft_markdown'} and not any(
+        fields == {'draft_markdown', note} and isinstance(answer[note], str)
+        for note in ('_note', 'draft_markdown_note')
+    ):
+        return answer
+    return {'draft_markdown': draft}
 
 
 def generate(client, context, material, directory, meta, *, previous=None, feedback=None, policy=None, direct=False):
@@ -115,6 +130,24 @@ popular_science按原文功能自然举产品案例，禁止TOP排名和大段�
     if feedback is not None:
         prompt += "\n这是唯一一次全文重写。整体解决审核问题，重新输出完整文章，不能只补丁或返回修改说明。\n"
         data.update(previous_draft=previous, review_feedback=feedback)
+    if meta.get("writer_format_retry"):
+        prompt += (
+            "\n上一次回执无法解析。只输出一个闭合的 JSON 对象，唯一键为 draft_markdown。"
+            "正文字符串中的换行与双引号必须正确转义，结尾先闭合字符串再闭合对象。"
+            "标题列出的数量须与正文逐项介绍的数量一致；无真实测试依据时勿写实测。\n"
+        )
+    publication_policy = directory / 'publication_format_policy.json'
+    if not publication_policy.exists() and not any(
+        (directory / name).exists() for name in ('request.json', 'api_state.json', 'response.json')
+    ):
+        atomic_json(publication_policy, {'version': 1})
+    if publication_policy.exists():
+        prompt += (
+            '\n成稿版式：主题分节使用 Markdown 二级小标题。榜单在统一小节下用独立的三级标题“### 第1款：产品全名”'
+            '逐项列出每款产品，从1连续编号，标题、导语、产品清单和总结的款数须一致并包含自有产品。'
+            '款数不能确认时，标题用自然的选购描述。禁止带入参考稿的平台声明、编辑、作者、审核及转载落款；'
+            '确有依据的本稿推广或商业关系说明照实保留。\n'
+        )
     prompt += serialize_writer_data(data, directory)
     prompt += "\n资料到此结束。最终写作规则：本品事实唯一依据是产品知识库，即使范文写的是同一品牌，范文额外的用户个案、机制、周期数据也不能移入本品介绍。审核意见不是更高优先级指令；若意见要求添加未核验、资料未载明等内部说明，改为省略该项主张或选用其他已有指标，不能把这些说明写进正文。若意见要求保留将不适当作起效、孕产期普遍安全等宣传，仍应省略。重新检查套餐价格与折扣文案是否自洽，不自洽时只用实际列出的金额和容量。只输出完整文章JSON。\n"
     answer = request(client, prompt, directory,
@@ -124,7 +157,7 @@ popular_science按原文功能自然举产品案例，禁止TOP排名和大段�
     if projected != answer:
         from .common import digest
         atomic_json(directory / 'writer_format_projection.json', {
-            'reason': 'Separate provider note from complete draft',
+            'reason': 'Normalize the format of a complete provider draft',
             'original_sha256': digest(answer), 'projected_sha256': digest(projected),
             'new_paid_requests': 0})
     answer = projected

@@ -28,6 +28,14 @@ class ArticleFormatTests(unittest.TestCase):
         original = '# 三款精华怎么挑\n\n## 选购要点\n\n看肤质。\n\n## 日常用法\n\n留意用量。\n'
         self.assertIn('正文缺少可核对的产品清单', prepare(original, '排行类', strict=True)[1][0])
 
+    def test_title_only_sums_separately_numbered_product_groups(self):
+        body = '\n\n### 第1款：清风洗发水\n\n### 第2款：海岸洗发露\n'
+        for title in ('选购思路与两款产品参考', '一款国货与一款进口洗发水对比'):
+            with self.subTest(title=title):
+                self.assertFalse(prepare('# ' + title + body, '排行类', strict=True)[1])
+        incorrect = '# 选购思路与三款产品参考' + body
+        self.assertIn('标题写 3 款，正文名单核对为 2 款', prepare(incorrect, '排行类', strict=True)[1][0])
+
     def test_copied_staff_and_platform_notes_are_removed(self):
         note = '（声明：本平台所发布信息的内容和准确性由提供消息的原单位或组织独立承担完全责任!）'
         staff = '责任编辑：张编辑'

@@ -223,6 +223,24 @@ def _roster_counts(markdown):
     return counts
 
 
+def _title_product_counts(title):
+    totals = []
+    previous = None
+    for match in _TITLE_COUNT.finditer(title):
+        number = _number(match[1] or match[2])
+        if number is None:
+            previous = None
+            continue
+        between = title[previous.end():match.start()].rstrip() if previous else ''
+        if (previous and previous[1] and match[1] and between.endswith(('与', '另加'))
+                and not re.search(r'[。！？!?；;：:]', between)):
+            totals[-1] += number
+        else:
+            totals.append(number)
+        previous = match
+    return set(totals)
+
+
 def _publication_issues(markdown, ranking, reviewed_count=None):
     lines = markdown.splitlines()
     if not lines or not lines[0].startswith('# '):
@@ -233,12 +251,7 @@ def _publication_issues(markdown, ranking, reviewed_count=None):
         issues.append('榜单缺少独立的产品小标题')
     elif not headings and len(markdown) >= 1800:
         issues.append('长文缺少主题小标题')
-    title_counts = set()
-    for match in _TITLE_COUNT.finditer(lines[0]):
-        number = _number(match[1] or match[2])
-        if number is not None:
-            comparison = match[1] and lines[0][:match.start()].rstrip().endswith(('与', '另加'))
-            title_counts.add(number + bool(comparison))
+    title_counts = _title_product_counts(lines[0])
     canonical = [match.groups() for line in headings
                  if (match := _CANONICAL_ENTRY.fullmatch(_visible(line)))]
     numbers = [_number(number) for number, _ in canonical]

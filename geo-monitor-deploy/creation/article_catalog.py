@@ -11,7 +11,7 @@ from .article_format import revision_path
 
 
 # Bump the version when listing inputs or validation rules change.
-CATALOG_VERSION = 1
+CATALOG_VERSION = 2
 
 
 def stat_signature(info):

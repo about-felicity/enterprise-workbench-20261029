@@ -13,6 +13,13 @@ class Formats(unittest.TestCase):
   x={'draft_markdown':'# title\n\nbody','_note':'internal'}
   self.assertEqual(normalize_answer(x),{'draft_markdown':x['draft_markdown']});self.assertIn('_note',x)
   for value in [dict(x,unexpected=True),dict(x,_note={})]:self.assertEqual(normalize_answer(value),value)
+ def test_writer_keeps_complete_draft_and_drops_candidate_list(self):
+  value={'draft_markdown':'# 完整标题\n\n完整正文。','candidate_products':['候选甲','候选乙']}
+  self.assertEqual(normalize_answer(value),{'draft_markdown':value['draft_markdown']})
+  self.assertEqual(len(value['candidate_products']),2)
+  for malformed in (dict(value,unexpected=True),dict(value,candidate_products={'name':'候选甲'}),
+                    dict(value,draft_markdown='# 只有标题')):
+   self.assertEqual(normalize_answer(malformed),malformed)
  def test_writer_draft_note(self):
   x={'draft_markdown':'# title\n\nbody','draft_markdown_note':'internal'}
   self.assertEqual(normalize_answer(x),{'draft_markdown':x['draft_markdown']})
