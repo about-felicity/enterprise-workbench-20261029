@@ -34,6 +34,7 @@ EMPTY_COUNTER_LABELS = {
     "shares": "分享",
 }
 VERIFICATION_TITLES = {"验证码中间页", "抖音安全验证", "安全验证 - 抖音"}
+DOUYIN_BODY_TIMEOUT_MS = 15000
 UNAVAILABLE = re.compile(
     r"(?:你要观看的|您要观看的|该)?(?:作品|视频|图文)(?:已被删除|已删除|不存在|已下架|已失效|已设为私密|仅作者可见|仅自己可见|已不可见)[。！!]?"
 )
@@ -241,6 +242,21 @@ def publication_time(value):
     return datetime.fromtimestamp(value, CHINA).isoformat(timespec="seconds")
 
 
+def douyin_detail_props(detail):
+    stats = detail.get("statistics") or {}
+    status = detail.get("status") or {}
+    return {
+        "desc": detail.get("desc"), "authorInfo": detail.get("author"),
+        "video": detail.get("video"), "images": detail.get("images"),
+        "createTime": detail.get("create_time"),
+        "stats": {
+            "diggCount": stats.get("digg_count"), "commentCount": stats.get("comment_count"),
+            "collectCount": stats.get("collect_count"), "shareCount": stats.get("share_count"),
+        },
+        "status": {"isDelete": status.get("is_delete"), "isPrivate": status.get("is_private")},
+    }
+
+
 def video_props(page, requests, post_id):
     from playwright.sync_api import Error, TimeoutError
 
@@ -268,27 +284,84 @@ def video_props(page, requests, post_id):
         detail = payload.get("aweme_detail") if isinstance(payload, dict) else None
         if not isinstance(detail, dict) or detail.get("aweme_id") != post_id:
             continue
-        stats = detail.get("statistics") or {}
-        status = detail.get("status") or {}
-        props = {
-            "desc": detail.get("desc"), "authorInfo": detail.get("author"),
-            "video": detail.get("video"),
-            "createTime": detail.get("create_time"),
-            "stats": {
-                "diggCount": stats.get("digg_count"), "commentCount": stats.get("comment_count"),
-                "collectCount": stats.get("collect_count"), "shareCount": stats.get("share_count"),
-            },
-            "status": {"isDelete": status.get("is_delete"), "isPrivate": status.get("is_private")},
-        }
-        if status.get("is_delete") is True or status.get("is_private") is True or len(work_metrics(props)) == len(FIELDS):
+        props = douyin_detail_props(detail)
+        if any(value is True for value in props["status"].values()) or len(work_metrics(props)) == len(FIELDS):
             return props
-        if props["video"]:
+        if props["video"] or props["images"]:
             fallback = props
     return fallback
 
 
+def merge_douyin_props(page_props, network_props):
+    if not network_props:
+        return page_props
+    combined = {**page_props, **{key: value for key, value in network_props.items() if value}}
+    combined["stats"] = {
+        **(page_props.get("stats") or {}),
+        **{key: value for key, value in (network_props.get("stats") or {}).items()
+           if type(value) is int and 0 <= value < 2**63},
+    }
+    status = {**(page_props.get("status") or {}), **(network_props.get("status") or {})}
+    for key in ("isDelete", "isDeleted", "isPrivate"):
+        if (page_props.get("status") or {}).get(key) is True:
+            status[key] = True
+    combined["status"] = status
+    return combined
+
+
 def post_from_url(url):
     return POST.fullmatch(urlsplit(canonical_link(url) or "").path)
+
+
+def douyin_result(post_id, url, props, fallback_title, metrics, labels=None):
+    author = props.get("authorInfo") or {}
+    account = author.get("uniqueId") or author.get("unique_id") or author.get("shortId") or author.get("short_id")
+    uid = author.get("uid")
+    return {
+        "post_id": post_id, "url": url, "title": (props.get("desc") or fallback_title)[:400],
+        "published_at": publication_time(props.get("createTime")),
+        "author": (author.get("nickname") or "")[:100],
+        "creator_id": str(account)[:100] if account and str(account) != "0" else None,
+        "creator_uid": str(uid)[:100] if uid and str(uid) != "0" else None,
+        **({"metric_labels": labels} if labels else {}),
+        **metrics,
+    }
+
+
+def mobile_douyin_snapshot(page, link, post_id):
+    """Read the official mobile document reached from the canonical work link."""
+    from playwright.sync_api import Error
+
+    post = post_from_url(link)
+    if not post or post[2] != post_id:
+        return None
+    try:
+        response = page.goto(link, wait_until="domcontentloaded", timeout=14000)
+        if response and response.status == 429 and urlsplit(response.url).hostname in {"www.douyin.com", "m.douyin.com"}:
+            error = rate_limit_error(response)
+            error.post_url = link
+            raise error
+        detail = page.wait_for_function(r"""id => {
+            if (location.protocol !== "https:" || location.host !== "m.douyin.com" ||
+                !new RegExp("^/share/(video|note|slides)/" + id + "/?$").test(location.pathname)) return false;
+            for (const loader of Object.values(window._ROUTER_DATA?.loaderData ?? {})) {
+                const payload = loader?.videoInfoRes;
+                if (String(loader?.itemId) !== id || payload?.status_code !== 0 ||
+                    !Array.isArray(payload.item_list)) continue;
+                const items = payload.item_list.filter(item => item?.aweme_id === id);
+                if (items.length === 1) return items[0];
+            }
+            return false;
+        }""", arg=post_id, timeout=9500).json_value()
+    except Error:
+        return None
+    if not isinstance(detail, dict) or detail.get("aweme_id") != post_id:
+        return None
+    props = douyin_detail_props(detail)
+    metrics = work_metrics(props)
+    if len(metrics) != len(FIELDS) or any(value is True for value in props["status"].values()):
+        return None
+    return douyin_result(post_id, link, props, "", metrics)
 
 
 def douyin_redirect(response):
@@ -390,15 +463,16 @@ def snapshot(page, link, expected_post_id=None):
             category = "transport" if response.status >= 500 or response.status == 403 else None
             raise CheckError(f"{message}，待确认", category=category)
         try:
-            page.locator("body").wait_for(state="attached", timeout=7000)
+            page.locator("body").wait_for(state="attached", timeout=DOUYIN_BODY_TIMEOUT_MS)
         except TimeoutError as exc:
-            raise CheckError("抖音已响应，作品正文加载超时，待复查", category="timeout") from exc
-        dismiss_douyin_login(page)
+            raise CheckError("抖音已响应，作品正文加载超时，待复查",
+                             category="timeout", post_id=post[2], post_url=final) from exc
         page_title = page.title().strip()
         script_selector = "script:not([src])"
         read_scripts = "(nodes) => nodes.map(n => n.textContent.trimStart()).filter(s => s.startsWith('self.__pace_f.push(') && s.includes('awemeId'))"
         props = work_props(page.locator(script_selector).evaluate_all(read_scripts), post[2])
         if len(work_metrics(props)) != len(FIELDS) and page_title not in VERIFICATION_TITLES:
+            dismiss_douyin_login(page)
             try:
                 page.get_by_text(UNAVAILABLE).or_(page.locator('[data-e2e="video-player-digg"]')).first.wait_for(timeout=8000)
             except TimeoutError:
@@ -410,8 +484,10 @@ def snapshot(page, link, expected_post_id=None):
         visible, labels = player_metrics(page, post[2]) if len(metrics) != len(FIELDS) else ({}, {})
         if page_title in VERIFICATION_TITLES and not props and len(visible) != len(FIELDS):
             raise CheckError("抖音要求安全验证，互动数据待复查", category="verification", post_id=post[2], post_url=final)
-        if (not props and len(visible) != len(FIELDS) and (post[1] == "video" or detail_requests)):
-            props = video_props(page, detail_requests, post[2])
+        if (page_title not in VERIFICATION_TITLES
+                and len({**visible, **metrics}) != len(FIELDS)
+                and (post[1] == "video" or detail_requests)):
+            props = merge_douyin_props(props, video_props(page, detail_requests, post[2]))
             metrics = work_metrics(props)
             if len(metrics) != len(FIELDS):
                 dismiss_douyin_login(page)
@@ -437,19 +513,8 @@ def snapshot(page, link, expected_post_id=None):
                         raise CheckError(line.strip(), "unavailable", category="page_unavailable", post_id=post[2])
                 raise CheckError("抖音未返回作品详情，待确认", category="detail")
             metrics = {}
-        author = props.get("authorInfo") or {}
-        account = author.get("uniqueId") or author.get("unique_id") or author.get("shortId") or author.get("short_id")
-        uid = author.get("uid")
-        title = props.get("desc") or (page_title.removesuffix(" - 抖音") if page_title not in VERIFICATION_TITLES else "")
-        return {
-            "post_id": post[2], "url": final, "title": title[:400],
-            "published_at": publication_time(props.get("createTime")),
-            "author": (author.get("nickname") or "")[:100],
-            "creator_id": str(account)[:100] if account and str(account) != "0" else None,
-            "creator_uid": str(uid)[:100] if uid and str(uid) != "0" else None,
-            **({"metric_labels": labels} if labels else {}),
-            **metrics,
-        }
+        title = page_title.removesuffix(" - 抖音") if page_title not in VERIFICATION_TITLES else ""
+        return douyin_result(post[2], final, props, title, metrics, labels)
     except CheckError as exc:
         if not exc.post_url:
             exc.post_url = redirected_url

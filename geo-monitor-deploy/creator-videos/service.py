@@ -1,5 +1,5 @@
 from collections import deque
-from contextlib import closing, contextmanager
+from contextlib import closing, contextmanager, nullcontext
 from datetime import date, datetime, timedelta
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -15,7 +15,7 @@ import threading
 import time
 from urllib.parse import parse_qs, urlsplit
 
-from collector import (CHINA, CheckError, canonical_link, links_from_text, platform_from_link,
+from collector import (CHINA, CheckError, canonical_link, links_from_text, mobile_douyin_snapshot, platform_from_link,
                        post_from_url, resolve_douyin_short, snapshot, xhs_has_token, xhs_post_id)
 from check_budget import CheckBudget
 
@@ -564,7 +564,7 @@ def check_context(browser, options=None):
         yield context
 
 
-def check_work(row, context, mobile_options=None):
+def check_work(row, context, mobile_options=None, douyin_mobile_context=None):
     link = row["url"] or row["input_url"]
     platform = row["platform"]
     expected_post_id = public_post_id(row["post_id"])
@@ -583,6 +583,23 @@ def check_work(row, context, mobile_options=None):
         first.post_url = resolved_url
         page_unavailable = first.category == "page_unavailable"
         confirm_change = row["pending"] or row["availability"] != "unavailable"
+        if first.category in {"timeout", "verification", "detail", "navigation", "share_unavailable"}:
+            fallback_url = resolved_url or canonical_link(link)
+            fallback_post = post_from_url(fallback_url) if fallback_url else None
+            if (platform == "douyin" and (mobile_options or douyin_mobile_context) and fallback_post
+                    and (not expected_post_id or fallback_post[2] == expected_post_id)
+                    and time.time() >= BROWSER_BUDGET.paused_until(platform)):
+                mobile_session = (nullcontext(douyin_mobile_context) if douyin_mobile_context
+                                  else check_context(context.browser, mobile_options))
+                with mobile_session as retry_context:
+                    page = retry_context.new_page()
+                    try:
+                        result = mobile_douyin_snapshot(page, fallback_url, fallback_post[2])
+                        if result:
+                            LOG.info("Douyin mobile page recovered work %s after %s", row["id"], first.category)
+                            return result
+                    finally:
+                        page.close()
         if first.category in {"transport", "timeout", "rate_limit", "verification"}:
             raise
         if first.availability != "unknown" and not (page_unavailable and confirm_change):
@@ -645,11 +662,12 @@ def browser_process(connection):
         timeout=20000,
     ) as browser, check_context(browser) as context:
         mobile_options = {**p.devices["Pixel 7"], **BROWSER_CONTEXT_OPTIONS}
-        while (row := connection.recv()) is not None:
-            try:
-                connection.send((check_work(row, context, mobile_options), None))
-            except CheckError as exc:
-                connection.send((None, (str(exc), exc.availability, exc.category, exc.retry_after, exc.post_url)))
+        with check_context(browser, mobile_options) as douyin_mobile_context:
+            while (row := connection.recv()) is not None:
+                try:
+                    connection.send((check_work(row, context, mobile_options, douyin_mobile_context), None))
+                except CheckError as exc:
+                    connection.send((None, (str(exc), exc.availability, exc.category, exc.retry_after, exc.post_url)))
 
 
 @contextmanager

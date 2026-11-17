@@ -12,7 +12,8 @@ from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 import service
-from collector import dismiss_douyin_login, links_from_text, rate_limit_error, resolve_douyin_short, snapshot
+from collector import (dismiss_douyin_login, links_from_text, mobile_douyin_snapshot,
+                       rate_limit_error, resolve_douyin_short, snapshot)
 from xiaohongshu import note_from_html, note_metrics, share_error
 
 
@@ -315,6 +316,61 @@ class VideoServiceTests(unittest.TestCase):
         self.assertEqual({key: result[key] for key in service.METRICS},
                          {"likes": 125, "comments": 2, "favorites": 24, "shares": 2})
         api.assert_not_called()
+
+    def test_douyin_slow_body_keeps_verified_url(self):
+        from playwright.sync_api import TimeoutError
+
+        page = Mock()
+        page.url = self.row["input_url"]
+        page.goto.return_value = Mock(status=200, url=page.url)
+        body = page.locator.return_value
+        body.wait_for.side_effect = TimeoutError("body not attached")
+        with self.assertRaises(service.CheckError) as caught:
+            snapshot(page, page.url)
+        body.wait_for.assert_called_once_with(state="attached", timeout=15000)
+        self.assertEqual(caught.exception.category, "timeout")
+        self.assertEqual(caught.exception.post_url, page.url)
+
+    def test_douyin_network_detail_completes_partial_page_counts(self):
+        page = Mock()
+        page.url = self.row["input_url"]
+        page.goto.return_value = Mock(status=200, url=page.url)
+        page.title.return_value = "真实作品 - 抖音"
+        page.evaluate.return_value = {}
+        props = {"video": {}, "stats": {"diggCount": 9},
+                 "authorInfo": {"nickname": "原页面作者"}}
+        network = {"stats": {"diggCount": None, "commentCount": 2,
+                             "collectCount": 3, "shareCount": 0}}
+        with patch("collector.work_props", return_value=props), patch("collector.video_props", return_value=network):
+            result = snapshot(page, page.url)
+        self.assertEqual({key: result[key] for key in service.METRICS},
+                         {"likes": 9, "comments": 2, "favorites": 3, "shares": 0})
+        self.assertEqual(result["author"], "原页面作者")
+
+    def test_douyin_mobile_detail_requires_same_work_and_complete_counts(self):
+        page = Mock()
+        page.goto.return_value.status = 200
+        payload = {"aweme_id": "1234567890123456789", "desc": "移动端作品",
+                   "statistics": {"digg_count": 5, "comment_count": 2, "collect_count": 3, "share_count": 0}}
+        detail = page.wait_for_function.return_value
+        detail.json_value.return_value = payload
+        self.assertEqual(mobile_douyin_snapshot(page, self.row["input_url"], payload["aweme_id"])["likes"], 5)
+        detail.json_value.return_value = {**payload, "aweme_id": "1234567890123456788"}
+        self.assertIsNone(mobile_douyin_snapshot(page, self.row["input_url"], payload["aweme_id"]))
+        detail.json_value.return_value = {**payload, "statistics": {"digg_count": 5}}
+        self.assertIsNone(mobile_douyin_snapshot(page, self.row["input_url"], payload["aweme_id"]))
+
+    def test_verification_uses_mobile_result_without_erasing_prior_evidence_on_failure(self):
+        context, retry_context = Mock(), Mock()
+        context.browser.new_context.return_value = nullcontext(retry_context)
+        blocked = service.CheckError("验证", category="verification", post_url=self.row["input_url"])
+        with patch.object(service, "read_work", side_effect=blocked):
+            with patch.object(service, "mobile_douyin_snapshot", return_value=self.accessible_result()):
+                self.assertEqual(service.check_work(self.row, context, {"is_mobile": True}), self.accessible_result())
+            with patch.object(service, "mobile_douyin_snapshot", return_value=None):
+                with self.assertRaises(service.CheckError) as caught:
+                    service.check_work(self.row, context, {"is_mobile": True})
+                self.assertIs(caught.exception, blocked)
 
     def test_single_unavailable_page_uses_the_share_link_before_changing_status(self):
         row = {**self.row, "availability": "available", "pending": 0, "post_id": "1234567890123456789",
