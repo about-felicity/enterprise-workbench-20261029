@@ -434,13 +434,16 @@ def claim_work():
         return row
 
 
-def save(row, result=None, error=None, availability="unknown", *, retry_interval=None, resolved_url=None):
+def save(row, result=None, error=None, availability="unknown", *, retry_interval=None, resolved_url=None,
+         expected_attempt=None):
     at = now()
     with closing(connect()) as db, db:
         db.execute("BEGIN IMMEDIATE")
         current = db.execute("SELECT * FROM works WHERE id = ? AND record_key = ?",
                              (row["id"], row["record_key"])).fetchone()
         if not current or current["input_url"] != row["input_url"]:
+            return
+        if expected_attempt is not None and current["last_attempt"] != expected_attempt:
             return
         platform = current["platform"]
         if not result and resolved_url and platform == "douyin" and (post := post_from_url(resolved_url)):

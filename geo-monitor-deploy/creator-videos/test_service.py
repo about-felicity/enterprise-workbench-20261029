@@ -152,6 +152,14 @@ class VideoServiceTests(unittest.TestCase):
         with patch.object(service, "now", return_value=failed + timedelta(minutes=5)):
             self.assertEqual(service.next_work()["id"], self.row["id"])
 
+    def test_recovery_cannot_replace_a_newer_check(self):
+        at = service.now()
+        self.check(at, result=self.accessible_result())
+        previous = (at - timedelta(minutes=15)).isoformat(timespec="seconds")
+        service.save(self.work(), result={**self.accessible_result(), "likes": 1},
+                     expected_attempt=previous)
+        self.assertEqual(service.works()["works"][0]["history"][0]["likes"], 10)
+
     def test_confirmation_can_change_in_both_directions_after_read_failure(self):
         at = datetime.fromisoformat("2026-11-11T11:30:00+08:00")
         self.check(at, result=self.accessible_result())
@@ -283,7 +291,10 @@ class VideoServiceTests(unittest.TestCase):
 
     def test_login_dismissal_clicks_only_one_known_close_button(self):
         page = Mock()
+        page.title.return_value = "作品 - 抖音"
         header = page.locator.return_value.filter.return_value
+        header.count.return_value = 1
+        header.get_by_role.return_value.count.return_value = 0
         button = header.locator.return_value
         button.count.return_value = 1
         self.assertTrue(dismiss_douyin_login(page))
@@ -298,12 +309,34 @@ class VideoServiceTests(unittest.TestCase):
         from playwright.sync_api import TimeoutError
 
         page = Mock()
+        page.title.return_value = "作品 - 抖音"
         header = page.locator.return_value.filter.return_value
+        header.count.return_value = 1
+        header.get_by_role.return_value.count.return_value = 0
         button = header.locator.return_value
         button.count.return_value = 1
         header.wait_for.side_effect = [TimeoutError("still visible"), None]
         self.assertTrue(dismiss_douyin_login(page))
         self.assertEqual(button.click.call_count, 2)
+
+    def test_login_dismissal_can_use_a_dialog_role_without_the_legacy_header(self):
+        page, header, dialog = Mock(), Mock(), Mock()
+        page.title.return_value = "作品 - 抖音"
+        page.locator.side_effect = [header, dialog]
+        header.filter.return_value.count.return_value = 0
+        modal = dialog.filter.return_value
+        modal.count.return_value = 1
+        close = modal.get_by_role.return_value
+        close.count.return_value = 1
+        self.assertTrue(dismiss_douyin_login(page))
+        close.click.assert_called_once_with(timeout=1500)
+        modal.wait_for.assert_called_once_with(state="hidden", timeout=1500)
+
+    def test_verification_is_not_treated_as_a_login_dialog(self):
+        page = Mock()
+        page.title.return_value = "验证码中间页"
+        self.assertFalse(dismiss_douyin_login(page))
+        page.locator.assert_not_called()
 
     def test_player_counts_are_used_when_structured_work_data_is_missing(self):
         page = Mock()

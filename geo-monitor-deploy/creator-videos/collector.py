@@ -33,6 +33,8 @@ EMPTY_COUNTER_LABELS = {
     "favorites": "收藏",
     "shares": "分享",
 }
+DOUYIN_LOGIN_PROMPT = re.compile(r"登录后(?:免费)?畅享高清视频|登录后继续观看")
+DOUYIN_LOGIN_CLOSE = re.compile(r"^(?:关闭(?:登录(?:窗口|弹窗)?)?|Close|[×✕✖])$", re.IGNORECASE)
 VERIFICATION_TITLES = {"验证码中间页", "抖音安全验证", "安全验证 - 抖音"}
 DOUYIN_BODY_TIMEOUT_MS = 15000
 UNAVAILABLE = re.compile(
@@ -156,8 +158,8 @@ def work_metrics(props):
 def player_metrics(page, post_id):
     counts = page.evaluate(r"""({selectors, emptyLabels, postId}) => {
         const visible = (node) => node.getClientRects().length > 0 && getComputedStyle(node).visibility === 'visible';
-        const controlsIn = (scope) => Object.entries(selectors).map(([name, selector]) =>
-            [name, [...scope.querySelectorAll(`[data-e2e="${selector}"]`)].filter(visible)]);
+        const controlsIn = (scope, visibilityRequired = true) => Object.entries(selectors).map(([name, selector]) =>
+            [name, [...scope.querySelectorAll(`[data-e2e="${selector}"]`)].filter(node => !visibilityRequired || visible(node))]);
         const countsFrom = (nodes) => Object.fromEntries(
             nodes.map(([name, [node]]) => [name, node.innerText.trim()]));
         const textCountsIn = (scope) => {
@@ -184,6 +186,10 @@ def player_metrics(page, post_id):
             if (nodes.every(([, controls]) => controls.length === 1)) return countsFrom(nodes);
             const textCounts = textCountsIn(matchingDetails[0]);
             if (Object.keys(textCounts).length) return textCounts;
+            // The guest login dialog can hide the controls without removing their text.
+            // Only read these labels when the detail container is tied to the requested work.
+            const underlying = controlsIn(matchingDetails[0], false);
+            if (underlying.every(([, controls]) => controls.length === 1)) return countsFrom(underlying);
         }
         const playerNodes = [...document.querySelectorAll('[data-xgplayerid]')].filter(visible);
         const players = playerNodes.filter(player => {
@@ -399,16 +405,26 @@ def resolve_douyin_short(context, link):
 def dismiss_douyin_login(page):
     from playwright.sync_api import TimeoutError
 
+    if page.title().strip() in VERIFICATION_TITLES:
+        return False
     header = page.locator("#login-panel-new #douyin_login_comp_flat_panel_header:visible").filter(
-        has_text="登录后免费畅享高清视频"
+        has_text=DOUYIN_LOGIN_PROMPT
     )
-    close = header.locator("div:has(> svg):visible")
+    legacy = header.count() == 1
+    modal = header if legacy else page.locator(
+        '[role="dialog"]:visible, [aria-modal="true"]:visible'
+    ).filter(has_text=DOUYIN_LOGIN_PROMPT)
+    if modal.count() != 1:
+        return False
+    close = modal.get_by_role("button", name=DOUYIN_LOGIN_CLOSE)
+    if legacy and close.count() == 0:
+        close = header.locator("div:has(> svg):visible")
     for attempt in range(2):
         if close.count() != 1:
-            return bool(attempt and not header.is_visible())
+            return bool(attempt and not modal.is_visible())
         try:
             close.click(timeout=1500)
-            header.wait_for(state="hidden", timeout=1500)
+            modal.wait_for(state="hidden", timeout=1500)
             return True
         except TimeoutError:
             continue
