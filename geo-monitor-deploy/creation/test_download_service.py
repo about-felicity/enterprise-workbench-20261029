@@ -27,6 +27,13 @@ class DownloadTests(unittest.TestCase):
    with self.assertRaises(HTTPError) as result:urlopen(self.url)
    r=result.exception;self.assertEqual(r.code,400);self.assertNotIn('Content-Disposition',r.headers);self.assertIn('没有可下载',json.loads(r.read())['message'])
 
+ def test_page_can_open_before_the_task_cache_is_ready(self):
+  from .service import task_status_cache
+  with patch.object(task_status_cache,'value',None),patch.object(task_status_cache,'get',side_effect=AssertionError('HTML waited for tasks')):
+   with urlopen(self.url.split('/api/')[0]+'/',timeout=3) as response:
+    html=response.read()
+   self.assertIn(b"let initialTasks='';",html)
+
  def test_single_article_attachment_uses_the_display_title(self):
   with tempfile.TemporaryDirectory() as directory:
    title='防脱/养发怎么选? 2026 实测'

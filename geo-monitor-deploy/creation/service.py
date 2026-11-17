@@ -28,10 +28,9 @@ def build_tasks():
 def build_outputs():
     return runtime.output_status()
 
-def prime_lists():
+def prime_list(cache, build):
     try:
-        task_status_cache.get(build_tasks)
-        output_cache.get(build_outputs)
+        cache.get(build)
     except Exception:
         logging.exception('Creation list warmup failed')
 
@@ -90,12 +89,11 @@ class Handler(BaseHTTPRequestHandler):
                     # retains its short freshness limit, including after any mutation.
                     with task_status_cache.condition:
                         previous=task_status_cache.value
+                    bootstrap=b''
                     if previous and 0 <= time.time()-previous['at'] < 3600:
-                        snapshot=previous
-                    else:
-                        snapshot=task_status_cache.get(build_tasks)
-                    payload=json.dumps({**snapshot,'csrf':session['csrf']},ensure_ascii=False,separators=(',',':')).encode()
-                    html=html.replace(b'__TASK_BOOTSTRAP__',base64.b64encode(gzip.compress(payload,compresslevel=1)),1)
+                        payload=json.dumps({**previous,'csrf':session['csrf']},ensure_ascii=False,separators=(',',':')).encode()
+                        bootstrap=base64.b64encode(gzip.compress(payload,compresslevel=1))
+                    html=html.replace(b'__TASK_BOOTSTRAP__',bootstrap,1)
                 except Exception:
                     logging.exception('Task bootstrap unavailable')
                     html=html.replace(b'__TASK_BOOTSTRAP__',b'',1)
@@ -214,5 +212,6 @@ if __name__=='__main__':
     class CreationServer(ThreadingHTTPServer):
         request_queue_size=64
     server=CreationServer(('127.0.0.1',8804),Handler)
-    threading.Thread(target=prime_lists,daemon=True).start()
+    threading.Thread(target=prime_list,args=(output_cache,build_outputs),daemon=True).start()
+    threading.Thread(target=prime_list,args=(task_status_cache,build_tasks),daemon=True).start()
     server.serve_forever()

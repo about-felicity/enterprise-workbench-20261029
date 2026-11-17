@@ -131,6 +131,28 @@ class MaterialTests(unittest.TestCase):
   (materials.LEGACY/'revocations/test.json').unlink();(folder/'draft.md').write_text('修改正文')
   self.assertEqual(runtime.articles(materials.LEGACY),[])
 
+ def test_catalog_reuses_checked_files_and_invalidates_revisions_and_revocations(self):
+  from .article_format import revision_path
+  folder,hashes=self.approved()
+  first=runtime.output_status()['legacy_articles']
+  self.assertEqual(len(first),1)
+  with patch.object(runtime,'articles',side_effect=AssertionError('Unchanged articles were rechecked')):
+   self.assertEqual(runtime.output_status()['legacy_articles'],first)
+  draft=(folder/'draft.md').read_text()
+  revised='# 人工更新后的标题\n原始成稿'
+  materials.atomic_json(revision_path(folder),{
+   'markdown':revised,'source_sha256':hashlib.sha256(draft.encode()).hexdigest(),
+   'revision_sha256':hashlib.sha256(revised.encode()).hexdigest(),
+  })
+  self.assertEqual(runtime.output_status()['legacy_articles'][0]['title'],'人工更新后的标题')
+  revoked=materials.LEGACY/'revocations/test.json'
+  materials.atomic_json(revoked,{'word_sha256':hashes['article.docx']})
+  self.assertEqual(runtime.output_status()['legacy_articles'],[])
+  revoked.unlink()
+  self.assertEqual(len(runtime.output_status()['legacy_articles']),1)
+  (folder/'article.docx').write_bytes(b'invalid')
+  self.assertEqual(runtime.output_status()['legacy_articles'],[])
+
  def test_single_download_does_not_scan_unrelated_receipts(self):
   folder,_=self.approved()
   other=materials.LEGACY/'approved/2026-10-13/排行类/99'

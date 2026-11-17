@@ -356,14 +356,21 @@ def articles(root, *, summary=False, article_id=None, listing=False, date_filter
 
 def output_status():
     """Only the fields needed by the article library; no task queues or knowledge bodies."""
+    from .article_catalog import ArticleCatalog
+
+    catalog = ArticleCatalog(BASE / 'article-catalog.json')
     def compact(root):
         keys={'id','date','product','title','quality_status','quality_issues','format_warnings','markdown','word','task_name','category','primary_reference'}
         return [{**{k:v for k,v in a.items() if k in keys},'receipt':{'delivery_mode':a['receipt'].get('delivery_mode')}} for a in articles(root,listing=True)]
     jobs=[]
     for path in sorted((BASE/'runs').glob('*/job.json'),reverse=True):
-        job=read(path);rows=compact(path.parent)
-        if rows:jobs.append({'job_id':job['job_id'],'date':job['date'],'material_source':job.get('material_source'),'articles':rows})
-    return {'ok':True,'at':time.time(),'jobs':jobs,'legacy_articles':compact(SHARED)}
+        rows=catalog.articles(path.parent,compact)
+        if rows:
+            job=read(path)
+            jobs.append({'job_id':job['job_id'],'date':job['date'],'material_source':job.get('material_source'),'articles':rows})
+    legacy=catalog.articles(SHARED,compact)
+    catalog.save()
+    return {'ok':True,'at':time.time(),'jobs':jobs,'legacy_articles':legacy}
 
 def status(*, task_list=False):
     from . import materials, studio
